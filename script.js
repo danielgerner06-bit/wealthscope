@@ -11,6 +11,7 @@ let activeInsetLayers = [];
 let countryFeatures = [];
 let cityMarkers = [];
 let waterMarkers = [];
+let landmarkMarkers = [];
 
 let pendingLaenderMode = null;
 
@@ -32,14 +33,15 @@ const QUIZ_CONFIG = {
   flaggen: { title: "Flaggenquiz", description: "Klicke das Land zur angezeigten Flagge.", promptLabel: "Klicke das Land:", count: 20 },
   staedte: { title: "Städtequiz", description: "Klicke die gefragte Stadt auf der Karte.", promptLabel: "Klicke die Stadt:", count: 20 },
   wasser:  { title: "Wasserquiz", description: "Klicke das gefragte Gewässer.", promptLabel: "Klicke das Gewässer:", count: 20 },
+  sehenswuerdigkeiten: { title: "Sehenswürdigkeiten", description: "Klicke die gefragte Sehenswürdigkeit auf der Karte.", promptLabel: "Klicke:", count: 20 },
 };
 
 // ---- LÄNDER-MODI ----
 const LAENDER_MODES = {
-  world_easy:    { label: 'Welt — 100 größte',         filter: (p, iso2) => TOP_100_AREA.has((iso2 || '').toUpperCase()),  bounds: WORLD_BOUNDS },
-  world_medium:  { label: 'Welt — 196 anerkannte',     filter: (p, iso2) => RECOGNIZED_196.has((iso2 || '').toUpperCase()),bounds: WORLD_BOUNDS },
-  world_hard:    { label: 'Welt — Alle Länder',        filter: (p) => isCountryType(p.TYPE),                                bounds: WORLD_BOUNDS },
-  world_expert:  { label: 'Welt — Alle 258',           filter: () => true,                                                  bounds: WORLD_BOUNDS },
+  world_easy:    { label: 'Welt — 100 größte',     filter: (p, iso2) => TOP_100_AREA.has((iso2 || '').toUpperCase()),    bounds: WORLD_BOUNDS },
+  world_medium:  { label: 'Welt — 196 anerkannte', filter: (p, iso2) => RECOGNIZED_196.has((iso2 || '').toUpperCase()),  bounds: WORLD_BOUNDS },
+  world_hard:    { label: 'Welt — Alle Länder',    filter: (p) => isCountryType(p.TYPE),                                  bounds: WORLD_BOUNDS },
+  world_expert:  { label: 'Welt — Alle 258',       filter: () => true,                                                    bounds: WORLD_BOUNDS },
 };
 ['Europe','Asia','Africa','North America','South America','Oceania'].forEach(cont => {
   const k = cont.toLowerCase().replace(' ', '');
@@ -65,6 +67,7 @@ const IS_TOUCH = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
+  document.body.classList.toggle('locked', id !== 'homeScreen');
 }
 
 function chooseLaenderDifficulty() {
@@ -214,6 +217,9 @@ async function beginQuiz() {
     } else if (type === 'wasser') {
       await renderCountries(false);
       renderWaters();
+    } else if (type === 'sehenswuerdigkeiten') {
+      await renderCountries(false);
+      renderLandmarks();
     }
   } catch (e) {
     return;
@@ -253,7 +259,6 @@ async function renderCountries(interactive) {
       const props = feature.properties || {};
       const nameEn = props.NAME_LONG || props.NAME || 'Unknown';
       const nameDe = DE_NAME_OVERRIDES[nameEn] || props.NAME_DE || nameEn;
-
       const iso2raw = props.ISO_A2_EH || props.ISO_A2 || '';
       const iso2 = (iso2raw && iso2raw !== '-99' && iso2raw.length === 2) ? iso2raw.toLowerCase() : '';
 
@@ -275,7 +280,6 @@ async function renderCountries(interactive) {
   }).addTo(map);
   activeLayers.push(layer);
 
-  // Tiny country dots (only for interactive quizzes)
   if (interactive) {
     countryFeatures.forEach(entry => {
       try {
@@ -321,7 +325,6 @@ function renderCities() {
     const entry = { name, lat, lng, marker: m, insetMarker: null };
     cityMarkers.push(entry);
     activeLayers.push(m);
-
     m.on('click', () => handleClick(entry));
     m.on('mouseover', () => {
       if (!quizState.active || m._isHighlighted) return;
@@ -346,7 +349,6 @@ function renderWaters() {
     const entry = { name, lat, lng, type, marker: m, insetMarker: null };
     waterMarkers.push(entry);
     activeLayers.push(m);
-
     m.on('click', () => handleClick(entry));
     m.on('mouseover', () => {
       if (!quizState.active || m._isHighlighted) return;
@@ -366,11 +368,32 @@ function waterDefaultStyle(type) {
   return {
     radius: sizes[type] || 6,
     fillColor: colors[type] || MAP_COLORS.sea,
-    color: '#fff',
-    weight: 1.5,
-    opacity: 1,
-    fillOpacity: 0.85,
+    color: '#fff', weight: 1.5, opacity: 1, fillOpacity: 0.85,
   };
+}
+
+// ---- LANDMARKS ----
+function renderLandmarks() {
+  landmarkMarkers = [];
+  LANDMARKS.forEach(([name, lat, lng]) => {
+    const m = L.circleMarker([lat, lng], landmarkDefaultStyle()).addTo(map);
+    const entry = { name, lat, lng, marker: m, insetMarker: null };
+    landmarkMarkers.push(entry);
+    activeLayers.push(m);
+    m.on('click', () => handleClick(entry));
+    m.on('mouseover', () => {
+      if (!quizState.active || m._isHighlighted) return;
+      m.setStyle({ radius: 9, fillOpacity: 1 });
+    });
+    m.on('mouseout', () => {
+      if (!quizState.active || m._isHighlighted) return;
+      m.setStyle(landmarkDefaultStyle());
+    });
+  });
+}
+
+function landmarkDefaultStyle() {
+  return { radius: 6, fillColor: MAP_COLORS.landmark, color: MAP_COLORS.landmarkBorder, weight: 1.5, opacity: 1, fillOpacity: 0.9 };
 }
 
 // ---- INSET (Karibik) ----
@@ -380,7 +403,7 @@ function setupCaribbeanInset(quizType) {
     if (quizType === 'laender' || quizType === 'flaggen') {
       return CARIBBEAN_ISO_HINT.has((q.iso2 || '').toUpperCase());
     }
-    if (quizType === 'staedte' || quizType === 'wasser') {
+    if (typeof q.lat === 'number' && typeof q.lng === 'number') {
       return isInBounds([q.lat, q.lng], CARIBBEAN_BOUNDS);
     }
     return false;
@@ -398,6 +421,7 @@ function setupCaribbeanInset(quizType) {
   renderInsetCountries(interactive);
   if (quizType === 'staedte') renderInsetCities();
   if (quizType === 'wasser') renderInsetWaters();
+  if (quizType === 'sehenswuerdigkeiten') renderInsetLandmarks();
 
   showInset();
   setTimeout(() => {
@@ -409,12 +433,10 @@ function setupCaribbeanInset(quizType) {
 
 function renderInsetCountries(interactive) {
   if (!geoCountriesData) return;
-
   const features = geoCountriesData.features.filter(f => {
     const b = computeFeatureBounds(f);
     return boundsIntersect(b, CARIBBEAN_BOUNDS);
   });
-
   const layer = L.geoJSON({ type: 'FeatureCollection', features }, {
     style: () => countryDefaultStyle(),
     interactive: interactive,
@@ -422,7 +444,6 @@ function renderInsetCountries(interactive) {
       const entry = countryFeatures.find(e => e.props === feature.properties);
       if (!entry) return;
       entry.insetLayer = lyr;
-
       if (interactive) {
         lyr.on('click', () => handleClick(entry));
         lyr.on('mouseover', () => {
@@ -476,6 +497,24 @@ function renderInsetWaters() {
   });
 }
 
+function renderInsetLandmarks() {
+  landmarkMarkers.forEach(entry => {
+    if (!isInBounds([entry.lat, entry.lng], CARIBBEAN_BOUNDS)) return;
+    const m = L.circleMarker([entry.lat, entry.lng], landmarkDefaultStyle()).addTo(insetMap);
+    entry.insetMarker = m;
+    activeInsetLayers.push(m);
+    m.on('click', () => handleClick(entry));
+    m.on('mouseover', () => {
+      if (!quizState.active || m._isHighlighted) return;
+      m.setStyle({ radius: 9, fillOpacity: 1 });
+    });
+    m.on('mouseout', () => {
+      if (!quizState.active || m._isHighlighted) return;
+      m.setStyle(landmarkDefaultStyle());
+    });
+  });
+}
+
 // ---- GEOMETRY HELPERS ----
 function computeFeatureBounds(feature) {
   let minLat = 90, maxLat = -90, minLng = 180, maxLng = -180;
@@ -518,6 +557,7 @@ function clearMarkers() {
   countryFeatures = [];
   cityMarkers = [];
   waterMarkers = [];
+  landmarkMarkers = [];
 }
 
 function clearInsetLayers() {
@@ -528,6 +568,7 @@ function clearInsetLayers() {
   countryFeatures.forEach(c => c.insetLayer = null);
   cityMarkers.forEach(c => c.insetMarker = null);
   waterMarkers.forEach(w => w.insetMarker = null);
+  landmarkMarkers.forEach(l => l.insetMarker = null);
 }
 
 // ---- QUESTIONS ----
@@ -545,6 +586,8 @@ function buildQuestions(type) {
     pool = [...cityMarkers];
   } else if (type === 'wasser') {
     pool = [...waterMarkers];
+  } else if (type === 'sehenswuerdigkeiten') {
+    pool = [...landmarkMarkers];
   }
   const cfg = QUIZ_CONFIG[type];
   quizState.questions = shuffle(pool).slice(0, Math.min(cfg.count, pool.length));
@@ -645,6 +688,11 @@ function resetHighlights() {
       if (m) { m.setStyle(waterDefaultStyle(w.type)); m._isHighlighted = false; }
     });
   });
+  landmarkMarkers.forEach(l => {
+    [l.marker, l.insetMarker].forEach(m => {
+      if (m) { m.setStyle(landmarkDefaultStyle()); m._isHighlighted = false; }
+    });
+  });
 }
 
 function flashFeedback(entry, correct) {
@@ -709,7 +757,7 @@ document.addEventListener('mousemove', (e) => {
 // ---- CONTINENT LIST ----
 function populateContinentList() {
   const list = document.getElementById('continentList');
-  if (list.children.length > 0) return; // Already populated
+  if (list.children.length > 0) return;
 
   Object.entries(CONTINENT_DE).forEach(([engName, deName]) => {
     const key = engName.toLowerCase().replace(' ', '');
@@ -730,21 +778,37 @@ function populateContinentList() {
   });
 }
 
+// ---- SCROLL ANIMATIONS ----
+function setupScrollAnimations() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '-50px 0px -50px 0px' });
+
+  document.querySelectorAll('.feature').forEach(s => observer.observe(s));
+}
+
 // ---- EVENT WIRING ----
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
-      const q = card.dataset.quiz;
+  // Quiz buttons on the landing page
+  document.querySelectorAll('.feature-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const q = btn.dataset.quiz;
       if (q === 'laender') chooseLaenderDifficulty();
       else openQuiz(q);
     });
   });
 
+  // Difficulty cards
   document.querySelectorAll('#diffScreen .diff-card').forEach(card => {
     card.addEventListener('click', () => startLaenderWith(card.dataset.mode));
   });
 
   populateContinentList();
+  setupScrollAnimations();
 });
 
 window.addEventListener('resize', () => {
