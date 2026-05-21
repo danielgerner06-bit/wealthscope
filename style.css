@@ -79,7 +79,7 @@ a { text-decoration: none; color: inherit; }
   position: fixed;
   top: 24px;
   right: 32px;
-  z-index: 999;
+  z-index: 9999;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -91,6 +91,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.9rem;
   transition: all 0.2s;
   box-shadow: 0 6px 20px rgba(99,102,241,0.35);
+  pointer-events: auto;
 }
 
 .portfolio-fixed:hover {
