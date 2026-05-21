@@ -660,6 +660,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto;
   padding: 48px 36px 40px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .diff-head { text-align: center; margin-bottom: 48px; }
@@ -691,7 +692,7 @@ a { text-decoration: none; color: inherit; }
 
 .diff-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   gap: 14px;
 }
 
