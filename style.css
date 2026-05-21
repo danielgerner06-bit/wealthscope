@@ -69,37 +69,17 @@ a { text-decoration: none; color: inherit; }
 #diffScreen.active, #quizScreen.active { display: flex; flex-direction: column; height: 100vh; }
 #quizScreen.active { display: block; height: 100vh; }
 
-/* === STICKY TOPNAV (Home) === */
+/* === STICKY TOPNAV (Home) - HIDDEN === */
 .topnav {
+  display: none;
+}
+
+/* === FIXED PORTFOLIO BUTTON === */
+.portfolio-fixed {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 90;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 32px;
-  background: rgba(10,14,26,0.65);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(38,45,68,0.5);
-  transition: padding 0.3s, background 0.3s;
-}
-
-.topnav-brand {
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-}
-
-.brand-accent, .grad {
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.topnav-app {
+  top: 24px;
+  right: 32px;
+  z-index: 999;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -113,12 +93,15 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 6px 20px rgba(99,102,241,0.35);
 }
 
-.topnav-app:hover {
+.portfolio-fixed:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(99,102,241,0.5);
 }
 
-.topnav-app svg { width: 14px; height: 14px; }
+.portfolio-fixed svg {
+  width: 14px;
+  height: 14px;
+}
 
 /* === LANDING === */
 .landing { padding-top: 0; }
