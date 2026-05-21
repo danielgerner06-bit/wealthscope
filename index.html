@@ -3,101 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WealthScope — Quiz</title>
+  <title>WealthScope</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- =========== AUSWAHLSEITE =========== -->
+  <!-- ============ AUSWAHL-SCREEN ============ -->
   <div class="screen active" id="homeScreen">
-    <header class="top-bar">
-      <div class="brand">Wealth<span>Scope</span></div>
-      <a href="https://portfolio-app-e2144.web.app" target="_blank" rel="noopener" class="app-btn">
-        <span class="app-btn-icon">📊</span>
-        <span class="app-btn-text">Meine App</span>
+    <header class="topbar">
+      <div class="brand">Wealth<span class="brand-accent">Scope</span></div>
+      <a href="https://portfolio-app-e2144.web.app" target="_blank" rel="noopener" class="topbar-btn" aria-label="Portfolio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7" rx="1"/>
+          <rect x="14" y="3" width="7" height="7" rx="1"/>
+          <rect x="3" y="14" width="7" height="7" rx="1"/>
+          <rect x="14" y="14" width="7" height="7" rx="1"/>
+        </svg>
       </a>
     </header>
 
-    <main class="home-main">
-      <div class="home-intro">
-        <h1>Wähle dein <span class="gradient-text">Quiz</span></h1>
-        <p>Teste dein Weltwissen — vier Themen, eine Karte, viele Fragen.</p>
+    <main class="home">
+      <div class="home-head">
+        <h1>Wähle dein <span class="grad">Quiz</span></h1>
+        <p>Vier Kategorien, eine Weltkarte — wie weit kommst du?</p>
       </div>
 
-      <div class="quiz-grid">
-        <button class="quiz-card" data-quiz="laender">
-          <div class="card-glow"></div>
-          <div class="card-icon">🌍</div>
-          <h2>Länderquiz</h2>
-          <p>Erkenne Länder und ihre Hauptstädte</p>
-          <div class="card-arrow">→</div>
+      <div class="card-grid">
+        <button class="card" data-quiz="laender">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="12" cy="12" r="9"/>
+              <ellipse cx="12" cy="12" rx="4" ry="9"/>
+              <path d="M3 12h18"/>
+            </svg>
+          </div>
+          <h3>Länderquiz</h3>
+          <p>Finde Länder auf der Weltkarte</p>
+          <span class="card-arrow">→</span>
         </button>
 
-        <button class="quiz-card" data-quiz="flaggen">
-          <div class="card-glow"></div>
-          <div class="card-icon">🚩</div>
-          <h2>Flaggenquiz</h2>
-          <p>Welche Flagge gehört zu welchem Land?</p>
-          <div class="card-arrow">→</div>
+        <button class="card" data-quiz="flaggen">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 21V4"/>
+              <path d="M5 4h11l-2 4 2 4H5"/>
+            </svg>
+          </div>
+          <h3>Flaggenquiz</h3>
+          <p>Welches Land gehört zur Flagge?</p>
+          <span class="card-arrow">→</span>
         </button>
 
-        <button class="quiz-card" data-quiz="staedte">
-          <div class="card-glow"></div>
-          <div class="card-icon">🏙️</div>
-          <h2>Städtequiz</h2>
-          <p>Wo liegen die größten Städte der Welt?</p>
-          <div class="card-arrow">→</div>
+        <button class="card" data-quiz="staedte">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21V8l5-3v16"/>
+              <path d="M8 21V11l6-3v13"/>
+              <path d="M14 21V13l6-2v10"/>
+              <path d="M3 21h18"/>
+            </svg>
+          </div>
+          <h3>Städtequiz</h3>
+          <p>Wo liegen die großen Städte?</p>
+          <span class="card-arrow">→</span>
         </button>
 
-        <button class="quiz-card" data-quiz="wasser">
-          <div class="card-glow"></div>
-          <div class="card-icon">💧</div>
-          <h2>Wasserquiz</h2>
-          <p>Meere, Flüsse und Seen der Erde</p>
-          <div class="card-arrow">→</div>
+        <button class="card" data-quiz="wasser">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z"/>
+            </svg>
+          </div>
+          <h3>Wasserquiz</h3>
+          <p>Meere, Seen und Flüsse erkennen</p>
+          <span class="card-arrow">→</span>
         </button>
       </div>
     </main>
 
-    <footer class="footer">
-      <p>&copy; 2026 WealthScope</p>
-    </footer>
+    <footer class="home-foot">© 2026 WealthScope</footer>
   </div>
 
-  <!-- =========== QUIZ-SCREEN (für alle Quizze) =========== -->
-  <div class="screen" id="quizScreen">
-    <header class="top-bar">
-      <button class="back-btn" onclick="goHome()">
-        <span>←</span> Zurück
-      </button>
-      <div class="brand quiz-brand" id="quizTitle">Quiz</div>
-      <a href="https://portfolio-app-e2144.web.app" target="_blank" rel="noopener" class="app-btn">
-        <span class="app-btn-icon">📊</span>
-        <span class="app-btn-text">Meine App</span>
-      </a>
-    </header>
+  <!-- ============ QUIZ-SCREEN (immersiv) ============ -->
+  <div class="screen quiz-screen" id="quizScreen">
+    <div id="map"></div>
 
-    <main class="quiz-main">
-      <div class="map-wrapper">
-        <div id="map"></div>
-        <div class="map-overlay" id="mapOverlay">
-          <div class="overlay-content">
-            <div class="overlay-icon" id="overlayIcon">🌍</div>
-            <h2 id="overlayTitle">Bereit?</h2>
-            <p id="overlayText">Klicke auf "Quiz starten" um loszulegen.</p>
-            <button class="start-btn" onclick="startQuiz()">Quiz starten</button>
-          </div>
+    <!-- HUD -->
+    <div class="hud">
+      <button class="hud-close" onclick="exitQuiz()" aria-label="Schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+
+      <div class="hud-stats" id="hudStats">
+        <div class="hud-stat">
+          <span class="hud-stat-label">Frage</span>
+          <span class="hud-stat-value"><span id="qNum">0</span>/<span id="qTotal">20</span></span>
+        </div>
+
+        <div class="hud-prompt">
+          <span class="hud-prompt-label" id="promptLabel">Klicke:</span>
+          <span class="hud-prompt-value" id="promptText">—</span>
+          <img class="hud-prompt-flag" id="promptFlag" alt="" />
+        </div>
+
+        <div class="hud-stat">
+          <span class="hud-stat-label">Punkte</span>
+          <span class="hud-stat-value" id="scoreVal">0</span>
         </div>
       </div>
+    </div>
 
-      <div class="quiz-panel" id="quizPanel" style="display:none;">
-        <p class="placeholder-text">Quiz-Inhalt folgt in Kürze…</p>
+    <!-- Floating cursor tip -->
+    <div class="cursor-tip" id="cursorTip">
+      <span id="cursorTipText"></span>
+      <img id="cursorTipFlag" alt="" />
+    </div>
+
+    <!-- Start-Overlay -->
+    <div class="overlay" id="startOverlay">
+      <div class="overlay-card">
+        <h2 id="startTitle">Quiz</h2>
+        <p id="startDesc">Beschreibung</p>
+        <div class="overlay-actions">
+          <button class="btn btn-primary" onclick="beginQuiz()">Starten</button>
+          <button class="btn btn-ghost" onclick="exitQuiz()">Abbrechen</button>
+        </div>
       </div>
-    </main>
+    </div>
+
+    <!-- Result-Overlay -->
+    <div class="overlay hidden" id="resultOverlay">
+      <div class="overlay-card">
+        <div class="result-icon-wrap" id="resultIcon"></div>
+        <h2>Quiz beendet</h2>
+        <div class="result-score" id="resultScore">0 / 20</div>
+        <p id="resultMsg"></p>
+        <div class="result-stats">
+          <div><b id="resultCorrect">0</b><span>Richtig</span></div>
+          <div><b id="resultWrong">0</b><span>Falsch</span></div>
+          <div><b id="resultPercent">0%</b><span>Genauigkeit</span></div>
+        </div>
+        <div class="overlay-actions">
+          <button class="btn btn-primary" onclick="beginQuiz()">Nochmal</button>
+          <button class="btn btn-ghost" onclick="exitQuiz()">Zurück</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading -->
+    <div class="overlay hidden" id="loadingOverlay">
+      <div class="overlay-card">
+        <div class="spinner"></div>
+        <p>Karte wird geladen…</p>
+      </div>
+    </div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
