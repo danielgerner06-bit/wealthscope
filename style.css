@@ -70,6 +70,10 @@ a { text-decoration: none; color: inherit; }
 #diffScreen.active, #quizScreen.active { display: flex; flex-direction: column; height: 100vh; }
 #quizScreen.active { display: block; height: 100vh; }
 
+#diffScreen .topbar {
+  display: none;
+}
+
 /* === STICKY TOPNAV (Home) - HIDDEN === */
 .topnav {
   display: none;
@@ -96,6 +100,13 @@ a { text-decoration: none; color: inherit; }
   white-space: nowrap;
   width: auto;
   height: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.portfolio-fixed.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .portfolio-fixed:hover {
@@ -322,7 +333,7 @@ a { text-decoration: none; color: inherit; }
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   font-weight: 900;
   letter-spacing: -1.8px;
-  line-height: 1.05;
+  line-height: 1.2;
   margin-bottom: 22px;
   background: linear-gradient(180deg, #fff 0%, #cbd5e1 100%);
   -webkit-background-clip: text;
@@ -728,7 +739,7 @@ a { text-decoration: none; color: inherit; }
 .diff-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; position: relative; }
 .diff-card p { color: var(--text-muted); font-size: 0.86rem; position: relative; }
 
-.continent-list { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.continent-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 
 .continent-row {
   display: flex;

@@ -68,6 +68,16 @@ function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   document.body.classList.toggle('locked', id !== 'homeScreen');
+  
+  // Show portfolio button only on home screen
+  const portfolioBtn = document.querySelector('.portfolio-fixed');
+  if (portfolioBtn) {
+    if (id === 'homeScreen') {
+      portfolioBtn.classList.add('visible');
+    } else {
+      portfolioBtn.classList.remove('visible');
+    }
+  }
 }
 
 function chooseLaenderDifficulty() {
@@ -809,6 +819,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   populateContinentList();
   setupScrollAnimations();
+  
+  // Show portfolio button on initial load (home screen is active)
+  const portfolioBtn = document.querySelector('.portfolio-fixed');
+  if (portfolioBtn) {
+    portfolioBtn.classList.add('visible');
+  }
 });
 
 window.addEventListener('resize', () => {
