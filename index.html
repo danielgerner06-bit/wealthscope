@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WealthScope</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Wealth<span>Scope</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Start</a></li>
+        <li><a href="#projects">Projekte</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#home" onclick="toggleMenu()">Start</a></li>
+      <li><a href="#projects" onclick="toggleMenu()">Projekte</a></li>
+      <li><a href="#quiz" onclick="toggleMenu()">Quiz</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Willkommen bei <span>WealthScope</span></h1>
+      <p>Deine Anlaufstelle für spannende Webprojekte und interaktive Inhalte.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">Meine Projekte</a>
+        <a href="#quiz" class="btn btn-outline">Zum Quiz</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="globe">🌍</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-container">
+      <h2>Meine <span>Projekte</span></h2>
+      <p class="section-sub">Eine Übersicht meiner Websites und Projekte</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon">🌐</div>
+          <h3>Projekt 1</h3>
+          <p>Beschreibung deines ersten Projekts. Was macht es? Was ist der Zweck?</p>
+          <a href="#" class="btn btn-sm">Ansehen →</a>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">📊</div>
+          <h3>Projekt 2</h3>
+          <p>Beschreibung deines zweiten Projekts. Was macht es? Was ist der Zweck?</p>
+          <a href="#" class="btn btn-sm">Ansehen →</a>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">🚀</div>
+          <h3>Projekt 3</h3>
+          <p>Beschreibung deines dritten Projekts. Was macht es? Was ist der Zweck?</p>
+          <a href="#" class="btn btn-sm">Ansehen →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz -->
+  <section id="quiz">
+    <div class="section-container">
+      <h2>Länder<span>Quiz</span></h2>
+      <p class="section-sub">Wie gut kennst du die Hauptstädte der Welt?</p>
+
+      <div class="quiz-wrapper">
+        <!-- Start Screen -->
+        <div class="quiz-screen" id="startScreen">
+          <div class="quiz-start-icon">🌍</div>
+          <h3>Hauptstädte-Quiz</h3>
+          <p>Teste dein Wissen über die Hauptstädte der Welt! 20 Fragen warten auf dich.</p>
+          <div class="quiz-rules">
+            <div class="rule"><span>❓</span> 20 Fragen</div>
+            <div class="rule"><span>🏆</span> Punkte sammeln</div>
+            <div class="rule"><span>⚡</span> Sofortiges Feedback</div>
+          </div>
+          <button class="btn btn-primary btn-large" onclick="startQuiz()">Quiz starten</button>
+        </div>
+
+        <!-- Question Screen -->
+        <div class="quiz-screen hidden" id="questionScreen">
+          <div class="quiz-progress">
+            <div class="progress-text">Frage <span id="currentQ">1</span> von 20</div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="score-display">Punkte: <span id="scoreDisplay">0</span></div>
+          </div>
+
+          <div class="question-card">
+            <div class="flag-display" id="flagDisplay"></div>
+            <h3 id="questionText"></h3>
+            <div class="options-grid" id="optionsGrid"></div>
+          </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="quiz-screen hidden" id="resultScreen">
+          <div class="result-icon" id="resultIcon"></div>
+          <h3 id="resultTitle"></h3>
+          <p id="resultMessage"></p>
+          <div class="result-score">
+            <span id="finalScore">0</span>
+            <span class="score-label">/ 20 Punkte</span>
+          </div>
+          <div class="result-stats">
+            <div class="stat">
+              <span class="stat-number" id="correctCount">0</span>
+              <span class="stat-label">Richtig</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="wrongCount">0</span>
+              <span class="stat-label">Falsch</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="accuracyDisplay">0%</span>
+              <span class="stat-label">Genauigkeit</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-large" onclick="restartQuiz()">Nochmal spielen</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-container">
+      <h2>Kontakt</h2>
+      <p class="section-sub">Hast du Fragen oder möchtest du zusammenarbeiten?</p>
+      <div class="contact-card">
+        <p>Schreib mir eine E-Mail und ich melde mich so schnell wie möglich.</p>
+        <a href="mailto:deine@email.de" class="btn btn-primary">E-Mail schreiben</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">Wealth<span>Scope</span></div>
+      <p>&copy; 2026 WealthScope. Alle Rechte vorbehalten.</p>
+      <div class="footer-links">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
