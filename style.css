@@ -32,8 +32,8 @@
 html {
   scroll-behavior: smooth;
   background: var(--bg);
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 1px;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 0;
 }
 
 body {
@@ -82,9 +82,9 @@ a { text-decoration: none; color: inherit; }
 
 /* === FIXED PORTFOLIO BUTTON === */
 .portfolio-fixed {
-  position: fixed;
-  top: 24px;
-  right: 32px;
+  position: fixed !important;
+  top: 24px !important;
+  right: 32px !important;
   z-index: 9999;
   display: inline-flex;
   align-items: center;
@@ -97,17 +97,18 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.9rem;
   transition: all 0.2s;
   box-shadow: 0 6px 20px rgba(99,102,241,0.35);
-  pointer-events: auto;
   white-space: nowrap;
   width: auto;
   height: auto;
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .portfolio-fixed.visible {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .portfolio-fixed:hover {
@@ -118,6 +119,8 @@ a { text-decoration: none; color: inherit; }
 .portfolio-fixed svg {
   width: 14px !important;
   height: 14px !important;
+  flex-shrink: 0;
+}
   flex-shrink: 0;
 }
 
@@ -334,7 +337,7 @@ a { text-decoration: none; color: inherit; }
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   font-weight: 900;
   letter-spacing: -1.8px;
-  line-height: 1.2;
+  line-height: 1.3;
   margin-bottom: 22px;
   background: linear-gradient(180deg, #fff 0%, #cbd5e1 100%);
   -webkit-background-clip: text;
@@ -660,13 +663,16 @@ a { text-decoration: none; color: inherit; }
   flex: 1;
   width: 100%;
   margin: 0;
-  padding: 48px 36px 40px;
+  padding: 40px 24px;
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.diff-head { text-align: center; margin-bottom: 48px; }
+.diff-head { text-align: center; margin-bottom: 40px; width: 100%; max-width: 100%; }
 
 .diff-head h1 {
   font-size: clamp(2rem, 4.5vw, 3rem);
@@ -681,7 +687,7 @@ a { text-decoration: none; color: inherit; }
 
 .diff-head p { color: var(--text-muted); font-size: 1.05rem; }
 
-.diff-section { margin-bottom: 40px; }
+.diff-section { margin-bottom: 40px; width: 100%; max-width: 800px; }
 
 .diff-section-title {
   font-size: 0.78rem;
