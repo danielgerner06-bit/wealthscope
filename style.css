@@ -93,6 +93,9 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.2s;
   box-shadow: 0 6px 20px rgba(99,102,241,0.35);
   pointer-events: auto;
+  white-space: nowrap;
+  width: auto;
+  height: auto;
 }
 
 .portfolio-fixed:hover {
@@ -101,8 +104,9 @@ a { text-decoration: none; color: inherit; }
 }
 
 .portfolio-fixed svg {
-  width: 14px;
-  height: 14px;
+  width: 14px !important;
+  height: 14px !important;
+  flex-shrink: 0;
 }
 
 /* === LANDING === */
