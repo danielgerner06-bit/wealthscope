@@ -4,11 +4,15 @@
 
 // ---- STATE ----
 let map = null;
+let insetMap = null;
 let geoCountriesData = null;
-let activeLayers = [];        // Layer references for cleanup
-let countryFeatures = [];     // [{name, nameEn, iso2, layer, dotMarker}]
-let cityMarkers = [];         // [{name, lat, lng, marker}]
-let waterMarkers = [];        // [{name, type, lat, lng, marker}]
+let activeLayers = [];
+let activeInsetLayers = [];
+let countryFeatures = [];
+let cityMarkers = [];
+let waterMarkers = [];
+
+let pendingLaenderMode = null;
 
 const quizState = {
   type: null,
@@ -18,35 +22,42 @@ const quizState = {
   wrong: 0,
   active: false,
   current: null,
+  modeFilter: null,
+  modeBounds: null,
 };
 
 // ---- CONFIG ----
 const QUIZ_CONFIG = {
-  laender: {
-    title: "Länderquiz",
-    description: "Klicke das Land, das oben angezeigt wird. 20 zufällige Länder.",
-    promptLabel: "Klicke das Land:",
-    count: 20,
-  },
-  flaggen: {
-    title: "Flaggenquiz",
-    description: "Klicke das Land zur angezeigten Flagge. 20 Fragen.",
-    promptLabel: "Klicke das Land:",
-    count: 20,
-  },
-  staedte: {
-    title: "Städtequiz",
-    description: "Klicke die gefragte Stadt auf der Karte. 20 Städte.",
-    promptLabel: "Klicke die Stadt:",
-    count: 20,
-  },
-  wasser: {
-    title: "Wasserquiz",
-    description: "Klicke das gefragte Gewässer. 20 Meere, Seen und Flüsse.",
-    promptLabel: "Klicke das Gewässer:",
-    count: 20,
-  },
+  laender: { title: "Länderquiz", description: "Klicke das gefragte Land. 20 Fragen.", promptLabel: "Klicke das Land:", count: 20 },
+  flaggen: { title: "Flaggenquiz", description: "Klicke das Land zur angezeigten Flagge.", promptLabel: "Klicke das Land:", count: 20 },
+  staedte: { title: "Städtequiz", description: "Klicke die gefragte Stadt auf der Karte.", promptLabel: "Klicke die Stadt:", count: 20 },
+  wasser:  { title: "Wasserquiz", description: "Klicke das gefragte Gewässer.", promptLabel: "Klicke das Gewässer:", count: 20 },
 };
+
+// ---- LÄNDER-MODI ----
+const LAENDER_MODES = {
+  world_easy:    { label: 'Welt — 100 größte',         filter: (p, iso2) => TOP_100_AREA.has((iso2 || '').toUpperCase()),  bounds: WORLD_BOUNDS },
+  world_medium:  { label: 'Welt — 196 anerkannte',     filter: (p, iso2) => RECOGNIZED_196.has((iso2 || '').toUpperCase()),bounds: WORLD_BOUNDS },
+  world_hard:    { label: 'Welt — Alle Länder',        filter: (p) => isCountryType(p.TYPE),                                bounds: WORLD_BOUNDS },
+  world_expert:  { label: 'Welt — Alle 258',           filter: () => true,                                                  bounds: WORLD_BOUNDS },
+};
+['Europe','Asia','Africa','North America','South America','Oceania'].forEach(cont => {
+  const k = cont.toLowerCase().replace(' ', '');
+  LAENDER_MODES[`${k}_c`] = {
+    label: `${CONTINENT_DE[cont]} — Länder`,
+    filter: (p) => p.CONTINENT === cont && isCountryType(p.TYPE),
+    bounds: CONTINENT_BOUNDS[cont],
+  };
+  LAENDER_MODES[`${k}_t`] = {
+    label: `${CONTINENT_DE[cont]} — alle`,
+    filter: (p) => p.CONTINENT === cont,
+    bounds: CONTINENT_BOUNDS[cont],
+  };
+});
+
+function isCountryType(type) {
+  return ['Sovereign country', 'Country', 'Disputed'].includes(type);
+}
 
 const IS_TOUCH = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
@@ -56,12 +67,34 @@ function showScreen(id) {
   document.getElementById(id).classList.add('active');
 }
 
+function chooseLaenderDifficulty() {
+  populateContinentList();
+  showScreen('diffScreen');
+}
+
+function startLaenderWith(mode) {
+  pendingLaenderMode = mode;
+  openQuiz('laender');
+}
+
 function openQuiz(quizType) {
+  if (quizType === 'laender' && !pendingLaenderMode) {
+    chooseLaenderDifficulty();
+    return;
+  }
+
   quizState.type = quizType;
   const cfg = QUIZ_CONFIG[quizType];
 
-  document.getElementById('startTitle').textContent = cfg.title;
-  document.getElementById('startDesc').textContent = cfg.description;
+  let title = cfg.title;
+  let desc = cfg.description;
+  if (quizType === 'laender' && pendingLaenderMode) {
+    title = cfg.title + ' — ' + LAENDER_MODES[pendingLaenderMode].label.replace(/^.*— /, '');
+    desc = `Modus: ${LAENDER_MODES[pendingLaenderMode].label}`;
+  }
+
+  document.getElementById('startTitle').textContent = title;
+  document.getElementById('startDesc').textContent = desc;
   document.getElementById('qTotal').textContent = cfg.count;
   document.getElementById('scoreVal').textContent = 0;
   document.getElementById('qNum').textContent = 0;
@@ -77,11 +110,13 @@ function openQuiz(quizType) {
 function exitQuiz() {
   quizState.active = false;
   hideCursorTip();
+  hideInset();
   clearMarkers();
+  pendingLaenderMode = null;
   showScreen('homeScreen');
 }
 
-// ---- MAP ----
+// ---- MAP INIT ----
 function initMap() {
   if (map) {
     map.invalidateSize();
@@ -99,16 +134,38 @@ function initMap() {
     zoomSnap: 0,
     zoomDelta: 0,
     minZoom: 1,
-    maxZoom: 8,
+    maxZoom: 10,
     worldCopyJump: false,
   });
   map.setView([20, 0], 2);
-  fitWorldBounds();
 }
 
-function fitWorldBounds() {
-  if (!map) return;
-  map.fitBounds([[-58, -170], [78, 180]], { animate: false, padding: [10, 10] });
+function initInsetMap() {
+  if (insetMap) {
+    insetMap.invalidateSize();
+    return;
+  }
+  insetMap = L.map('insetCaribbeanMap', {
+    zoomControl: false,
+    attributionControl: false,
+    dragging: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    touchZoom: false,
+    boxZoom: false,
+    keyboard: false,
+    zoomSnap: 0,
+    zoomDelta: 0,
+  });
+}
+
+function showInset() {
+  document.getElementById('insetCaribbean').classList.remove('hidden');
+  setTimeout(() => insetMap && insetMap.invalidateSize(), 100);
+}
+
+function hideInset() {
+  document.getElementById('insetCaribbean').classList.add('hidden');
 }
 
 // ---- DATA LOADING ----
@@ -139,20 +196,34 @@ async function beginQuiz() {
 
   const type = quizState.type;
 
+  if (type === 'laender' && pendingLaenderMode) {
+    const mode = LAENDER_MODES[pendingLaenderMode];
+    quizState.modeFilter = mode.filter;
+    quizState.modeBounds = mode.bounds;
+  } else {
+    quizState.modeFilter = null;
+    quizState.modeBounds = WORLD_BOUNDS;
+  }
+
   try {
     if (type === 'laender' || type === 'flaggen') {
-      await renderCountries();
+      await renderCountries(true);
     } else if (type === 'staedte') {
+      await renderCountries(false);
       renderCities();
     } else if (type === 'wasser') {
+      await renderCountries(false);
       renderWaters();
     }
   } catch (e) {
     return;
   }
 
-  fitWorldBounds();
   buildQuestions(type);
+  setupCaribbeanInset(type);
+
+  map.invalidateSize();
+  map.fitBounds(quizState.modeBounds, { animate: false, padding: [10, 10] });
 
   quizState.idx = 0;
   quizState.score = 0;
@@ -170,13 +241,14 @@ async function beginQuiz() {
   nextQuestion();
 }
 
-// ---- RENDER: COUNTRIES ----
-async function renderCountries() {
+// ---- COUNTRIES ----
+async function renderCountries(interactive) {
   const data = await ensureCountriesLoaded();
   countryFeatures = [];
 
   const layer = L.geoJSON(data, {
     style: () => countryDefaultStyle(),
+    interactive: interactive,
     onEachFeature: (feature, lyr) => {
       const props = feature.properties || {};
       const nameEn = props.NAME_LONG || props.NAME || 'Unknown';
@@ -185,73 +257,68 @@ async function renderCountries() {
       const iso2raw = props.ISO_A2_EH || props.ISO_A2 || '';
       const iso2 = (iso2raw && iso2raw !== '-99' && iso2raw.length === 2) ? iso2raw.toLowerCase() : '';
 
-      const entry = { name: nameDe, nameEn, iso2, layer: lyr, dotMarker: null };
+      const entry = { name: nameDe, nameEn, iso2, layer: lyr, dotMarker: null, insetLayer: null, props };
       countryFeatures.push(entry);
 
-      lyr.on('click', () => handleClick(entry));
-      lyr.on('mouseover', () => {
-        if (!quizState.active || lyr._isHighlighted) return;
-        lyr.setStyle({ fillColor: '#3a4364', fillOpacity: 0.7 });
-      });
-      lyr.on('mouseout', () => {
-        if (!quizState.active || lyr._isHighlighted) return;
-        lyr.setStyle(countryDefaultStyle());
-      });
+      if (interactive) {
+        lyr.on('click', () => handleClick(entry));
+        lyr.on('mouseover', () => {
+          if (!quizState.active || lyr._isHighlighted) return;
+          lyr.setStyle({ fillColor: MAP_COLORS.landHover });
+        });
+        lyr.on('mouseout', () => {
+          if (!quizState.active || lyr._isHighlighted) return;
+          lyr.setStyle(countryDefaultStyle());
+        });
+      }
     },
-  });
-  layer.addTo(map);
+  }).addTo(map);
   activeLayers.push(layer);
 
-  // Add dots for tiny countries (Vatican, Monaco, Singapore, etc.)
-  countryFeatures.forEach(entry => {
-    try {
-      const bounds = entry.layer.getBounds();
-      const w = bounds.getEast() - bounds.getWest();
-      const h = bounds.getNorth() - bounds.getSouth();
-      if (Math.max(w, h) < 1.2) {
-        const center = bounds.getCenter();
-        const dot = L.circleMarker(center, {
-          radius: 5,
-          fillColor: '#818cf8',
-          color: '#fff',
-          weight: 2,
-          opacity: 0.95,
-          fillOpacity: 0.9,
-        }).addTo(map);
-        dot.on('click', (e) => {
-          L.DomEvent.stopPropagation(e);
-          handleClick(entry);
-        });
-        dot.on('mouseover', () => {
-          if (!quizState.active) return;
-          dot.setStyle({ radius: 7 });
-        });
-        dot.on('mouseout', () => {
-          if (!quizState.active || dot._isHighlighted) return;
-          dot.setStyle({ radius: 5 });
-        });
-        entry.dotMarker = dot;
-        activeLayers.push(dot);
-      }
-    } catch (e) { /* skip */ }
-  });
+  // Tiny country dots (only for interactive quizzes)
+  if (interactive) {
+    countryFeatures.forEach(entry => {
+      try {
+        const bounds = entry.layer.getBounds();
+        const w = bounds.getEast() - bounds.getWest();
+        const h = bounds.getNorth() - bounds.getSouth();
+        if (Math.max(w, h) < 1.2) {
+          const center = bounds.getCenter();
+          const dot = L.circleMarker(center, tinyDotStyle()).addTo(map);
+          dot.on('click', (e) => {
+            L.DomEvent.stopPropagation(e);
+            handleClick(entry);
+          });
+          dot.on('mouseover', () => {
+            if (!quizState.active || dot._isHighlighted) return;
+            dot.setStyle({ radius: 7 });
+          });
+          dot.on('mouseout', () => {
+            if (!quizState.active || dot._isHighlighted) return;
+            dot.setStyle(tinyDotStyle());
+          });
+          entry.dotMarker = dot;
+          activeLayers.push(dot);
+        }
+      } catch (e) { /* skip */ }
+    });
+  }
 }
 
 function countryDefaultStyle() {
-  return {
-    fillColor: '#1c2238',
-    color: '#3a4364',
-    weight: 0.6,
-    fillOpacity: 0.95,
-  };
+  return { fillColor: MAP_COLORS.land, color: MAP_COLORS.landBorder, weight: 0.6, fillOpacity: 1 };
 }
 
-// ---- RENDER: CITIES ----
+function tinyDotStyle() {
+  return { radius: 5, fillColor: MAP_COLORS.dot, color: MAP_COLORS.dotBorder, weight: 2, opacity: 0.95, fillOpacity: 0.95 };
+}
+
+// ---- CITIES ----
 function renderCities() {
   cityMarkers = [];
   CITIES.forEach(([name, lat, lng]) => {
     const m = L.circleMarker([lat, lng], cityDefaultStyle()).addTo(map);
-    const entry = { name, lat, lng, marker: m };
+    const entry = { name, lat, lng, marker: m, insetMarker: null };
     cityMarkers.push(entry);
     activeLayers.push(m);
 
@@ -268,22 +335,15 @@ function renderCities() {
 }
 
 function cityDefaultStyle() {
-  return {
-    radius: 5,
-    fillColor: '#cbd5e1',
-    color: '#fff',
-    weight: 1.5,
-    opacity: 0.85,
-    fillOpacity: 0.75,
-  };
+  return { radius: 5, fillColor: MAP_COLORS.city, color: MAP_COLORS.cityBorder, weight: 1.5, opacity: 1, fillOpacity: 0.9 };
 }
 
-// ---- RENDER: WATERS ----
+// ---- WATERS ----
 function renderWaters() {
   waterMarkers = [];
   WATERS.forEach(([name, lat, lng, type]) => {
     const m = L.circleMarker([lat, lng], waterDefaultStyle(type)).addTo(map);
-    const entry = { name, lat, lng, type, marker: m };
+    const entry = { name, lat, lng, type, marker: m, insetMarker: null };
     waterMarkers.push(entry);
     activeLayers.push(m);
 
@@ -291,7 +351,7 @@ function renderWaters() {
     m.on('mouseover', () => {
       if (!quizState.active || m._isHighlighted) return;
       const s = waterDefaultStyle(type);
-      m.setStyle({ ...s, radius: s.radius + 3, fillOpacity: 0.9 });
+      m.setStyle({ ...s, radius: s.radius + 3, fillOpacity: 0.95 });
     });
     m.on('mouseout', () => {
       if (!quizState.active || m._isHighlighted) return;
@@ -301,35 +361,184 @@ function renderWaters() {
 }
 
 function waterDefaultStyle(type) {
-  const colors = { ocean: '#0ea5e9', sea: '#22d3ee', lake: '#06b6d4', river: '#0891b2' };
+  const colors = { ocean: MAP_COLORS.ocean, sea: MAP_COLORS.sea, lake: MAP_COLORS.lake, river: MAP_COLORS.river };
   const sizes  = { ocean: 11, sea: 9, lake: 7, river: 6 };
   return {
-    radius: sizes[type],
-    fillColor: colors[type],
+    radius: sizes[type] || 6,
+    fillColor: colors[type] || MAP_COLORS.sea,
     color: '#fff',
     weight: 1.5,
-    opacity: 0.85,
-    fillOpacity: 0.65,
+    opacity: 1,
+    fillOpacity: 0.85,
   };
+}
+
+// ---- INSET (Karibik) ----
+function setupCaribbeanInset(quizType) {
+  const pool = quizState.questions;
+  const shouldShow = pool.some(q => {
+    if (quizType === 'laender' || quizType === 'flaggen') {
+      return CARIBBEAN_ISO_HINT.has((q.iso2 || '').toUpperCase());
+    }
+    if (quizType === 'staedte' || quizType === 'wasser') {
+      return isInBounds([q.lat, q.lng], CARIBBEAN_BOUNDS);
+    }
+    return false;
+  });
+
+  if (!shouldShow) {
+    hideInset();
+    return;
+  }
+
+  initInsetMap();
+  clearInsetLayers();
+
+  const interactive = (quizType === 'laender' || quizType === 'flaggen');
+  renderInsetCountries(interactive);
+  if (quizType === 'staedte') renderInsetCities();
+  if (quizType === 'wasser') renderInsetWaters();
+
+  showInset();
+  setTimeout(() => {
+    if (!insetMap) return;
+    insetMap.invalidateSize();
+    insetMap.fitBounds(CARIBBEAN_BOUNDS, { padding: [4, 4], animate: false });
+  }, 60);
+}
+
+function renderInsetCountries(interactive) {
+  if (!geoCountriesData) return;
+
+  const features = geoCountriesData.features.filter(f => {
+    const b = computeFeatureBounds(f);
+    return boundsIntersect(b, CARIBBEAN_BOUNDS);
+  });
+
+  const layer = L.geoJSON({ type: 'FeatureCollection', features }, {
+    style: () => countryDefaultStyle(),
+    interactive: interactive,
+    onEachFeature: (feature, lyr) => {
+      const entry = countryFeatures.find(e => e.props === feature.properties);
+      if (!entry) return;
+      entry.insetLayer = lyr;
+
+      if (interactive) {
+        lyr.on('click', () => handleClick(entry));
+        lyr.on('mouseover', () => {
+          if (!quizState.active || lyr._isHighlighted) return;
+          lyr.setStyle({ fillColor: MAP_COLORS.landHover });
+        });
+        lyr.on('mouseout', () => {
+          if (!quizState.active || lyr._isHighlighted) return;
+          lyr.setStyle(countryDefaultStyle());
+        });
+      }
+    },
+  }).addTo(insetMap);
+  activeInsetLayers.push(layer);
+}
+
+function renderInsetCities() {
+  cityMarkers.forEach(entry => {
+    if (!isInBounds([entry.lat, entry.lng], CARIBBEAN_BOUNDS)) return;
+    const m = L.circleMarker([entry.lat, entry.lng], cityDefaultStyle()).addTo(insetMap);
+    entry.insetMarker = m;
+    activeInsetLayers.push(m);
+    m.on('click', () => handleClick(entry));
+    m.on('mouseover', () => {
+      if (!quizState.active || m._isHighlighted) return;
+      m.setStyle({ radius: 8, fillOpacity: 1 });
+    });
+    m.on('mouseout', () => {
+      if (!quizState.active || m._isHighlighted) return;
+      m.setStyle(cityDefaultStyle());
+    });
+  });
+}
+
+function renderInsetWaters() {
+  waterMarkers.forEach(entry => {
+    if (!isInBounds([entry.lat, entry.lng], CARIBBEAN_BOUNDS)) return;
+    const m = L.circleMarker([entry.lat, entry.lng], waterDefaultStyle(entry.type)).addTo(insetMap);
+    entry.insetMarker = m;
+    activeInsetLayers.push(m);
+    m.on('click', () => handleClick(entry));
+    m.on('mouseover', () => {
+      if (!quizState.active || m._isHighlighted) return;
+      const s = waterDefaultStyle(entry.type);
+      m.setStyle({ ...s, radius: s.radius + 3 });
+    });
+    m.on('mouseout', () => {
+      if (!quizState.active || m._isHighlighted) return;
+      m.setStyle(waterDefaultStyle(entry.type));
+    });
+  });
+}
+
+// ---- GEOMETRY HELPERS ----
+function computeFeatureBounds(feature) {
+  let minLat = 90, maxLat = -90, minLng = 180, maxLng = -180;
+  const visit = (coords) => {
+    if (typeof coords[0] === 'number') {
+      const [lng, lat] = coords;
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+      if (lng < minLng) minLng = lng;
+      if (lng > maxLng) maxLng = lng;
+    } else {
+      coords.forEach(visit);
+    }
+  };
+  try { visit(feature.geometry.coordinates); }
+  catch (e) { return [[0, 0], [0, 0]]; }
+  return [[minLat, minLng], [maxLat, maxLng]];
+}
+
+function boundsIntersect(a, b) {
+  const [[s1, w1], [n1, e1]] = a;
+  const [[s2, w2], [n2, e2]] = b;
+  return !(n1 < s2 || s1 > n2 || e1 < w2 || w1 > e2);
+}
+
+function isInBounds([lat, lng], [[s, w], [n, e]]) {
+  return lat >= s && lat <= n && lng >= w && lng <= e;
 }
 
 // ---- CLEANUP ----
 function clearMarkers() {
-  if (!map) return;
-  activeLayers.forEach(l => {
-    try { map.removeLayer(l); } catch (e) { /* ignore */ }
-  });
+  if (map) {
+    activeLayers.forEach(l => { try { map.removeLayer(l); } catch (e) {} });
+  }
+  if (insetMap) {
+    activeInsetLayers.forEach(l => { try { insetMap.removeLayer(l); } catch (e) {} });
+  }
   activeLayers = [];
+  activeInsetLayers = [];
   countryFeatures = [];
   cityMarkers = [];
   waterMarkers = [];
+}
+
+function clearInsetLayers() {
+  if (insetMap) {
+    activeInsetLayers.forEach(l => { try { insetMap.removeLayer(l); } catch (e) {} });
+  }
+  activeInsetLayers = [];
+  countryFeatures.forEach(c => c.insetLayer = null);
+  cityMarkers.forEach(c => c.insetMarker = null);
+  waterMarkers.forEach(w => w.insetMarker = null);
 }
 
 // ---- QUESTIONS ----
 function buildQuestions(type) {
   let pool = [];
   if (type === 'laender') {
-    pool = countryFeatures.filter(c => c.name && c.name !== 'Unknown');
+    pool = countryFeatures.filter(c => {
+      if (!c.name || c.name === 'Unknown') return false;
+      if (!quizState.modeFilter) return true;
+      return quizState.modeFilter(c.props, c.iso2);
+    });
   } else if (type === 'flaggen') {
     pool = countryFeatures.filter(c => c.iso2 && c.name && c.name !== 'Unknown');
   } else if (type === 'staedte') {
@@ -393,60 +602,48 @@ function handleClick(entry) {
 
   quizState.idx++;
   hideCursorTip();
-  setTimeout(() => {
-    if (quizState.active) nextQuestion();
-  }, 1100);
+  setTimeout(() => { if (quizState.active) nextQuestion(); }, 1100);
 }
 
 // ---- HIGHLIGHTS ----
+function applyHighlight(target, fill, border) {
+  if (!target || !target.setStyle) return;
+  if (target instanceof L.CircleMarker) {
+    target.setStyle({ fillColor: fill, color: border, fillOpacity: 0.95, weight: 2, radius: 9 });
+  } else {
+    target.setStyle({ fillColor: fill, color: border, fillOpacity: 0.85, weight: 1.8 });
+  }
+  target._isHighlighted = true;
+}
+
 function highlightCorrect(entry) {
-  if (entry.layer) {
-    entry.layer.setStyle({ fillColor: '#10b981', fillOpacity: 0.8, color: '#34d399', weight: 1.5 });
-    entry.layer._isHighlighted = true;
-  }
-  if (entry.dotMarker) {
-    entry.dotMarker.setStyle({ fillColor: '#10b981', color: '#34d399', radius: 7 });
-    entry.dotMarker._isHighlighted = true;
-  }
-  if (entry.marker) {
-    entry.marker.setStyle({ fillColor: '#10b981', color: '#34d399', radius: 10, fillOpacity: 0.95 });
-    entry.marker._isHighlighted = true;
-  }
+  [entry.layer, entry.insetLayer, entry.dotMarker, entry.marker, entry.insetMarker].forEach(t => {
+    if (t) applyHighlight(t, MAP_COLORS.correct, MAP_COLORS.correctBorder);
+  });
 }
 
 function highlightWrong(entry) {
-  if (entry.layer) {
-    entry.layer.setStyle({ fillColor: '#ef4444', fillOpacity: 0.8, color: '#f87171', weight: 1.5 });
-    entry.layer._isHighlighted = true;
-  }
-  if (entry.dotMarker) {
-    entry.dotMarker.setStyle({ fillColor: '#ef4444', color: '#f87171', radius: 7 });
-    entry.dotMarker._isHighlighted = true;
-  }
-  if (entry.marker) {
-    entry.marker.setStyle({ fillColor: '#ef4444', color: '#f87171', radius: 10, fillOpacity: 0.95 });
-    entry.marker._isHighlighted = true;
-  }
+  [entry.layer, entry.insetLayer, entry.dotMarker, entry.marker, entry.insetMarker].forEach(t => {
+    if (t) applyHighlight(t, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
+  });
 }
 
 function resetHighlights() {
   countryFeatures.forEach(c => {
-    if (c.layer) {
-      c.layer.setStyle(countryDefaultStyle());
-      c.layer._isHighlighted = false;
-    }
-    if (c.dotMarker) {
-      c.dotMarker.setStyle({ radius: 5, fillColor: '#818cf8', color: '#fff', weight: 2, fillOpacity: 0.9 });
-      c.dotMarker._isHighlighted = false;
-    }
+    [c.layer, c.insetLayer].forEach(l => {
+      if (l) { l.setStyle(countryDefaultStyle()); l._isHighlighted = false; }
+    });
+    if (c.dotMarker) { c.dotMarker.setStyle(tinyDotStyle()); c.dotMarker._isHighlighted = false; }
   });
   cityMarkers.forEach(c => {
-    c.marker.setStyle(cityDefaultStyle());
-    c.marker._isHighlighted = false;
+    [c.marker, c.insetMarker].forEach(m => {
+      if (m) { m.setStyle(cityDefaultStyle()); m._isHighlighted = false; }
+    });
   });
   waterMarkers.forEach(w => {
-    w.marker.setStyle(waterDefaultStyle(w.type));
-    w.marker._isHighlighted = false;
+    [w.marker, w.insetMarker].forEach(m => {
+      if (m) { m.setStyle(waterDefaultStyle(w.type)); m._isHighlighted = false; }
+    });
   });
 }
 
@@ -509,18 +706,56 @@ document.addEventListener('mousemove', (e) => {
   tip.style.top = e.clientY + 'px';
 });
 
+// ---- CONTINENT LIST ----
+function populateContinentList() {
+  const list = document.getElementById('continentList');
+  if (list.children.length > 0) return; // Already populated
+
+  Object.entries(CONTINENT_DE).forEach(([engName, deName]) => {
+    const key = engName.toLowerCase().replace(' ', '');
+    const row = document.createElement('div');
+    row.className = 'continent-row';
+    row.innerHTML = `
+      <span class="cont-name">${deName}</span>
+      <div class="cont-btns">
+        <button class="cont-btn" data-mode="${key}_c">Länder</button>
+        <button class="cont-btn" data-mode="${key}_t">+ Territorien</button>
+      </div>
+    `;
+    list.appendChild(row);
+  });
+
+  list.querySelectorAll('[data-mode]').forEach(btn => {
+    btn.addEventListener('click', () => startLaenderWith(btn.dataset.mode));
+  });
+}
+
 // ---- EVENT WIRING ----
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => openQuiz(card.dataset.quiz));
+    card.addEventListener('click', () => {
+      const q = card.dataset.quiz;
+      if (q === 'laender') chooseLaenderDifficulty();
+      else openQuiz(q);
+    });
   });
+
+  document.querySelectorAll('#diffScreen .diff-card').forEach(card => {
+    card.addEventListener('click', () => startLaenderWith(card.dataset.mode));
+  });
+
+  populateContinentList();
 });
 
 window.addEventListener('resize', () => {
   if (map && document.getElementById('quizScreen').classList.contains('active')) {
     setTimeout(() => {
       map.invalidateSize();
-      fitWorldBounds();
+      if (quizState.modeBounds) map.fitBounds(quizState.modeBounds, { animate: false, padding: [10, 10] });
+      if (insetMap && !document.getElementById('insetCaribbean').classList.contains('hidden')) {
+        insetMap.invalidateSize();
+        insetMap.fitBounds(CARIBBEAN_BOUNDS, { padding: [4, 4], animate: false });
+      }
     }, 50);
   }
 });

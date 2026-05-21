@@ -1,5 +1,98 @@
-// === STÄDTE (Hauptstädte + große Metropolen weltweit) ===
-// [name, lat, lng]
+// ===========================================================================
+// WealthScope — Quiz Data
+// ===========================================================================
+
+// === LÄNDER-DATENQUELLE ===
+const COUNTRY_GEOJSON_URL = 'https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@v5.1.2/geojson/ne_50m_admin_0_countries.geojson';
+
+// === Deutsche Namen-Overrides (für Fälle, wo NAME_DE veraltet / fehlt) ===
+const DE_NAME_OVERRIDES = {
+  "United States of America": "Vereinigte Staaten",
+  "United Kingdom": "Vereinigtes Königreich",
+  "Czechia": "Tschechien",
+  "Türkiye": "Türkei",
+  "Republic of Serbia": "Serbien",
+  "Côte d'Ivoire": "Elfenbeinküste",
+  "Federated States of Micronesia": "Mikronesien",
+  "Saint Vincent and the Grenadines": "St. Vincent und die Grenadinen",
+  "Saint Kitts and Nevis": "St. Kitts und Nevis",
+  "Saint Lucia": "St. Lucia",
+  "Antigua and Barbuda": "Antigua und Barbuda",
+  "Trinidad and Tobago": "Trinidad und Tobago",
+  "São Tomé and Principe": "São Tomé und Príncipe",
+  "Republic of the Congo": "Republik Kongo",
+  "Democratic Republic of the Congo": "DR Kongo",
+  "Equatorial Guinea": "Äquatorialguinea",
+  "Solomon Islands": "Salomonen",
+  "Marshall Islands": "Marshallinseln",
+  "Papua New Guinea": "Papua-Neuguinea",
+  "New Zealand": "Neuseeland",
+};
+
+// === TOP 100 LÄNDER NACH FLÄCHE (ISO_A2) ===
+const TOP_100_AREA = new Set([
+  "RU","CA","US","CN","BR","AU","IN","AR","KZ","DZ",
+  "CD","SA","MX","ID","SD","LY","IR","MN","PE","TD",
+  "NE","AO","ML","ZA","CO","ET","BO","MR","EG","TZ",
+  "NG","VE","NA","MZ","PK","TR","CL","ZM","MM","AF",
+  "SO","CF","UA","MG","BW","KE","FR","YE","TH","ES",
+  "TM","CM","PG","SE","UZ","MA","IQ","PY","ZW","JP",
+  "DE","CG","FI","VN","MY","NO","CI","PL","OM","IT",
+  "PH","EC","BF","NZ","GA","EH","GN","GB","UG","GH",
+  "RO","LA","GY","BY","KG","SN","SY","KH","UY","SR",
+  "TN","BD","NP","TJ","GR","NI","KP","MW","ER","BJ"
+]);
+
+// === 196 ANERKANNTE LÄNDER (193 UN-Mitglieder + Vatikan + Palästina + Taiwan) ===
+const RECOGNIZED_196 = new Set([
+  "AF","AL","DZ","AD","AO","AG","AR","AM","AU","AT",
+  "AZ","BS","BH","BD","BB","BY","BE","BZ","BJ","BT",
+  "BO","BA","BW","BR","BN","BG","BF","BI","CV","KH",
+  "CM","CA","CF","TD","CL","CN","CO","KM","CG","CD",
+  "CR","CI","HR","CU","CY","CZ","DK","DJ","DM","DO",
+  "EC","EG","SV","GQ","ER","EE","SZ","ET","FJ","FI",
+  "FR","GA","GM","GE","DE","GH","GR","GD","GT","GN",
+  "GW","GY","HT","HN","HU","IS","IN","ID","IR","IQ",
+  "IE","IL","IT","JM","JP","JO","KZ","KE","KI","KP",
+  "KR","KW","KG","LA","LV","LB","LS","LR","LY","LI",
+  "LT","LU","MG","MW","MY","MV","ML","MT","MH","MR",
+  "MU","MX","FM","MD","MC","MN","ME","MA","MZ","MM",
+  "NA","NR","NP","NL","NZ","NI","NE","NG","MK","NO",
+  "OM","PK","PW","PA","PG","PY","PE","PH","PL","PT",
+  "QA","RO","RU","RW","KN","LC","VC","WS","SM","ST",
+  "SA","SN","RS","SC","SL","SG","SK","SI","SB","SO",
+  "ZA","SS","ES","LK","SD","SR","SE","CH","SY","TJ",
+  "TZ","TH","TL","TG","TO","TT","TN","TR","TM","TV",
+  "UG","UA","AE","GB","US","UY","UZ","VU","VE","VN",
+  "YE","ZM","ZW","VA","PS","TW"
+]);
+
+// === KARIBIK-BOUNDS für Inset ===
+const CARIBBEAN_BOUNDS = [[10, -88], [27, -59]];
+const CARIBBEAN_ISO_HINT = new Set(["BS","CU","JM","HT","DO","PR","TT","BB","GD","LC","VC","DM","AG","KN","CW","AW","KY","TC","VG","VI","MQ","GP","BL","MF","MS","AI","SX","BQ"]);
+
+// === KONTINENT-BOUNDS und deutsche Namen ===
+const CONTINENT_BOUNDS = {
+  'Europe':        [[34, -12], [72, 45]],
+  'Asia':          [[-12, 25], [55, 180]],
+  'Africa':        [[-37, -20], [38, 55]],
+  'North America': [[7, -170], [83, -50]],
+  'South America': [[-58, -85], [13, -34]],
+  'Oceania':       [[-50, 110], [10, 180]],
+};
+
+const CONTINENT_DE = {
+  'Europe':        'Europa',
+  'Asia':          'Asien',
+  'Africa':        'Afrika',
+  'North America': 'Nordamerika',
+  'South America': 'Südamerika',
+  'Oceania':       'Ozeanien',
+};
+
+const WORLD_BOUNDS = [[-58, -170], [78, 180]];
+
+// === STÄDTE ===
 const CITIES = [
   // Europa
   ["Berlin", 52.520, 13.405], ["Hamburg", 53.551, 9.993], ["München", 48.137, 11.575],
@@ -10,15 +103,15 @@ const CITIES = [
   ["Kopenhagen", 55.676, 12.568], ["Stockholm", 59.329, 18.069], ["Oslo", 59.913, 10.752],
   ["Helsinki", 60.169, 24.938], ["Reykjavik", 64.146, -21.942], ["Dublin", 53.350, -6.260],
   ["Warschau", 52.230, 21.012], ["Prag", 50.075, 14.437], ["Budapest", 47.498, 19.040],
-  ["Wien", 48.209, 16.373], ["Bukarest", 44.426, 26.103], ["Sofia", 42.698, 23.319],
-  ["Athen", 37.984, 23.728], ["Belgrad", 44.787, 20.457], ["Zagreb", 45.815, 15.982],
-  ["Sarajevo", 43.857, 18.413], ["Skopje", 41.998, 21.426], ["Tirana", 41.328, 19.819],
-  ["Podgorica", 42.444, 19.260], ["Ljubljana", 46.056, 14.506], ["Bratislava", 48.146, 17.107],
-  ["Vilnius", 54.687, 25.280], ["Riga", 56.950, 24.106], ["Tallinn", 59.437, 24.754],
-  ["Minsk", 53.902, 27.560], ["Kiew", 50.450, 30.524], ["Chisinau", 47.011, 28.864],
-  ["Moskau", 55.756, 37.617], ["Sankt Petersburg", 59.934, 30.336], ["Istanbul", 41.008, 28.978],
-  ["Ankara", 39.933, 32.860], ["Luxemburg", 49.612, 6.130], ["Monaco", 43.738, 7.424],
-  ["Valletta", 35.899, 14.515], ["Vatikanstadt", 41.903, 12.453], ["Andorra la Vella", 42.506, 1.521],
+  ["Bukarest", 44.426, 26.103], ["Sofia", 42.698, 23.319], ["Athen", 37.984, 23.728],
+  ["Belgrad", 44.787, 20.457], ["Zagreb", 45.815, 15.982], ["Sarajevo", 43.857, 18.413],
+  ["Skopje", 41.998, 21.426], ["Tirana", 41.328, 19.819], ["Podgorica", 42.444, 19.260],
+  ["Ljubljana", 46.056, 14.506], ["Bratislava", 48.146, 17.107], ["Vilnius", 54.687, 25.280],
+  ["Riga", 56.950, 24.106], ["Tallinn", 59.437, 24.754], ["Minsk", 53.902, 27.560],
+  ["Kiew", 50.450, 30.524], ["Chisinau", 47.011, 28.864], ["Moskau", 55.756, 37.617],
+  ["Sankt Petersburg", 59.934, 30.336], ["Istanbul", 41.008, 28.978], ["Ankara", 39.933, 32.860],
+  ["Luxemburg", 49.612, 6.130], ["Monaco", 43.738, 7.424], ["Valletta", 35.899, 14.515],
+  ["Vatikanstadt", 41.903, 12.453], ["Andorra la Vella", 42.506, 1.521],
 
   // Asien
   ["Tokio", 35.689, 139.692], ["Osaka", 34.694, 135.502], ["Peking", 39.904, 116.407],
@@ -81,109 +174,66 @@ const CITIES = [
 ];
 
 // === GEWÄSSER ===
-// type: ocean | sea | lake | river
-// [name, lat, lng, type, radius] — radius in km für die Klickfläche
 const WATERS = [
-  // Ozeane (Klickbereiche grob im Zentrum)
-  ["Pazifik", 0, -150, "ocean", 1500],
-  ["Atlantik", 0, -30, "ocean", 1200],
-  ["Indischer Ozean", -20, 75, "ocean", 1200],
-  ["Arktischer Ozean", 85, 0, "ocean", 1000],
-  ["Südpolarmeer", -65, 0, "ocean", 1000],
+  // Ozeane
+  ["Pazifik", 0, -150, "ocean"], ["Atlantik", 0, -30, "ocean"],
+  ["Indischer Ozean", -20, 75, "ocean"], ["Arktischer Ozean", 85, 0, "ocean"],
+  ["Südpolarmeer", -65, 0, "ocean"],
 
   // Meere & Golfe
-  ["Mittelmeer", 35.5, 18, "sea", 400],
-  ["Schwarzes Meer", 43.5, 34, "sea", 300],
-  ["Rotes Meer", 20, 38, "sea", 350],
-  ["Ostsee", 58, 20, "sea", 400],
-  ["Nordsee", 56, 3, "sea", 300],
-  ["Karibisches Meer", 15, -75, "sea", 500],
-  ["Arabisches Meer", 15, 65, "sea", 500],
-  ["Golf von Bengalen", 14, 88, "sea", 500],
-  ["Südchinesisches Meer", 13, 115, "sea", 500],
-  ["Ostchinesisches Meer", 29, 125, "sea", 300],
-  ["Japanisches Meer", 40, 134, "sea", 400],
-  ["Beringmeer", 58, -178, "sea", 500],
-  ["Ochotskisches Meer", 55, 150, "sea", 400],
-  ["Golf von Mexiko", 25, -90, "sea", 500],
-  ["Hudson Bay", 60, -85, "sea", 500],
-  ["Persischer Golf", 27, 51, "sea", 300],
-  ["Korallenmeer", -18, 152, "sea", 400],
-  ["Tasmansee", -40, 160, "sea", 400],
-  ["Kaspisches Meer", 42, 51, "sea", 400],
-  ["Adriatisches Meer", 43, 16, "sea", 200],
-  ["Ägäisches Meer", 39, 25, "sea", 200],
-  ["Karasee", 75, 65, "sea", 400],
+  ["Mittelmeer", 35.5, 18, "sea"], ["Schwarzes Meer", 43.5, 34, "sea"],
+  ["Rotes Meer", 20, 38, "sea"], ["Ostsee", 58, 20, "sea"],
+  ["Nordsee", 56, 3, "sea"], ["Karibisches Meer", 15, -75, "sea"],
+  ["Arabisches Meer", 15, 65, "sea"], ["Golf von Bengalen", 14, 88, "sea"],
+  ["Südchinesisches Meer", 13, 115, "sea"], ["Ostchinesisches Meer", 29, 125, "sea"],
+  ["Japanisches Meer", 40, 134, "sea"], ["Beringmeer", 58, -178, "sea"],
+  ["Ochotskisches Meer", 55, 150, "sea"], ["Golf von Mexiko", 25, -90, "sea"],
+  ["Hudson Bay", 60, -85, "sea"], ["Persischer Golf", 27, 51, "sea"],
+  ["Korallenmeer", -18, 152, "sea"], ["Tasmansee", -40, 160, "sea"],
+  ["Kaspisches Meer", 42, 51, "sea"], ["Adriatisches Meer", 43, 16, "sea"],
+  ["Ägäisches Meer", 39, 25, "sea"], ["Karasee", 75, 65, "sea"],
 
   // Seen
-  ["Oberer See", 47.7, -88, "lake", 200],
-  ["Huronsee", 45, -82.4, "lake", 200],
-  ["Michigansee", 44, -87, "lake", 200],
-  ["Eriesee", 42.2, -81, "lake", 150],
-  ["Ontariosee", 43.7, -77.9, "lake", 150],
-  ["Großer Bärensee", 65.9, -120.6, "lake", 200],
-  ["Großer Sklavensee", 61.7, -114, "lake", 200],
-  ["Viktoriasee", -1, 33, "lake", 250],
-  ["Tanganjikasee", -6, 29.5, "lake", 200],
-  ["Malawisee", -12, 34.5, "lake", 200],
-  ["Tschadsee", 13, 14, "lake", 150],
-  ["Bajkalsee", 53.5, 108, "lake", 200],
-  ["Ladogasee", 60.8, 31.5, "lake", 150],
-  ["Onegasee", 61.7, 35.4, "lake", 150],
-  ["Aralsee", 45, 60, "lake", 150],
-  ["Bodensee", 47.6, 9.4, "lake", 80],
-  ["Genfersee", 46.4, 6.5, "lake", 80],
-  ["Vänern", 58.9, 13.3, "lake", 120],
-  ["Titicacasee", -15.8, -69.3, "lake", 120],
+  ["Oberer See", 47.7, -88, "lake"], ["Huronsee", 45, -82.4, "lake"],
+  ["Michigansee", 44, -87, "lake"], ["Eriesee", 42.2, -81, "lake"],
+  ["Ontariosee", 43.7, -77.9, "lake"], ["Großer Bärensee", 65.9, -120.6, "lake"],
+  ["Großer Sklavensee", 61.7, -114, "lake"], ["Viktoriasee", -1, 33, "lake"],
+  ["Tanganjikasee", -6, 29.5, "lake"], ["Malawisee", -12, 34.5, "lake"],
+  ["Tschadsee", 13, 14, "lake"], ["Bajkalsee", 53.5, 108, "lake"],
+  ["Ladogasee", 60.8, 31.5, "lake"], ["Onegasee", 61.7, 35.4, "lake"],
+  ["Aralsee", 45, 60, "lake"], ["Bodensee", 47.6, 9.4, "lake"],
+  ["Genfersee", 46.4, 6.5, "lake"], ["Vänern", 58.9, 13.3, "lake"],
+  ["Titicacasee", -15.8, -69.3, "lake"],
 
-  // Flüsse (Klickpunkt mittig)
-  ["Nil", 17, 32, "river", 400],
-  ["Amazonas", -3, -60, "river", 400],
-  ["Jangtsekiang", 30, 112, "river", 400],
-  ["Mississippi", 36, -91, "river", 400],
-  ["Jenissei", 65, 86, "river", 400],
-  ["Gelber Fluss", 35, 110, "river", 400],
-  ["Ob", 62, 70, "river", 400],
-  ["Paraná", -27, -57, "river", 300],
-  ["Kongo", -2, 22, "river", 400],
-  ["Amur", 50, 130, "river", 400],
-  ["Lena", 65, 125, "river", 400],
-  ["Mekong", 18, 104, "river", 300],
-  ["Niger", 13, 0, "river", 400],
-  ["Murray", -35, 144, "river", 300],
-  ["Ganges", 25, 85, "river", 300],
-  ["Donau", 45, 22, "river", 400],
-  ["Rhein", 50, 7.5, "river", 300],
-  ["Wolga", 50, 47, "river", 400],
-  ["Indus", 27, 68, "river", 300],
+  // Flüsse
+  ["Nil", 17, 32, "river"], ["Amazonas", -3, -60, "river"],
+  ["Jangtsekiang", 30, 112, "river"], ["Mississippi", 36, -91, "river"],
+  ["Jenissei", 65, 86, "river"], ["Gelber Fluss", 35, 110, "river"],
+  ["Ob", 62, 70, "river"], ["Paraná", -27, -57, "river"],
+  ["Kongo", -2, 22, "river"], ["Amur", 50, 130, "river"],
+  ["Lena", 65, 125, "river"], ["Mekong", 18, 104, "river"],
+  ["Niger", 13, 0, "river"], ["Murray", -35, 144, "river"],
+  ["Ganges", 25, 85, "river"], ["Donau", 45, 22, "river"],
+  ["Rhein", 50, 7.5, "river"], ["Wolga", 50, 47, "river"],
+  ["Indus", 27, 68, "river"],
 ];
 
-// === LÄNDER-DATENQUELLE ===
-// Natural Earth via jsDelivr — sehr umfangreich (~258 Länder/Territorien)
-const COUNTRY_GEOJSON_URL = 'https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@v5.1.2/geojson/ne_50m_admin_0_countries.geojson';
-
-// Optionale deutsche Namen-Mappings (falls NAME_DE im Datensatz fehlt oder veraltet ist)
-const DE_NAME_OVERRIDES = {
-  "United States of America": "Vereinigte Staaten",
-  "United Kingdom": "Vereinigtes Königreich",
-  "Czechia": "Tschechien",
-  "Türkiye": "Türkei",
-  "Bahamas": "Bahamas",
-  "Republic of Serbia": "Serbien",
-  "Côte d'Ivoire": "Elfenbeinküste",
-  "Eswatini": "Eswatini",
-  "Federated States of Micronesia": "Mikronesien",
-  "Saint Vincent and the Grenadines": "St. Vincent und die Grenadinen",
-  "Saint Kitts and Nevis": "St. Kitts und Nevis",
-  "Saint Lucia": "St. Lucia",
-  "Antigua and Barbuda": "Antigua und Barbuda",
-  "Trinidad and Tobago": "Trinidad und Tobago",
-  "São Tomé and Principe": "São Tomé und Príncipe",
-  "Republic of the Congo": "Republik Kongo",
-  "Democratic Republic of the Congo": "DR Kongo",
-  "Equatorial Guinea": "Äquatorialguinea",
-  "Solomon Islands": "Salomonen",
-  "Marshall Islands": "Marshallinseln",
-  "Papua New Guinea": "Papua-Neuguinea",
-  "New Zealand": "Neuseeland",
+// === MAP-FARBEN (Seterra-Stil) ===
+const MAP_COLORS = {
+  water:        '#a6d8e8',
+  land:         '#cbdba2',
+  landBorder:   '#7d9462',
+  landHover:    '#a8c477',
+  correct:      '#22c55e',
+  correctBorder:'#15803d',
+  wrong:        '#ef4444',
+  wrongBorder:  '#991b1b',
+  dot:          '#4338ca',
+  dotBorder:    '#fff',
+  city:         '#0f172a',
+  cityBorder:   '#fff',
+  ocean:        '#1d4ed8',
+  sea:          '#0284c7',
+  lake:         '#0891b2',
+  river:        '#0d9488',
 };
