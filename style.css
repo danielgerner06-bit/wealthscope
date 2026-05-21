@@ -41,6 +41,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   min-height: 100vh;
+  scroll-snap-type: y mandatory;
 }
 
 body.locked {
@@ -117,6 +118,8 @@ a { text-decoration: none; color: inherit; }
   padding: 100px 32px 80px;
   overflow: hidden;
   text-align: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .hero-content {
@@ -246,6 +249,8 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   padding: 100px 32px;
   perspective: 1500px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .feature-inner {
