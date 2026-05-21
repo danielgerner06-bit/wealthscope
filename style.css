@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   background: var(--bg);
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -41,7 +42,6 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   min-height: 100vh;
-  scroll-snap-type: y mandatory;
 }
 
 body.locked {
