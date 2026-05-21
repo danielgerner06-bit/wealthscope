@@ -652,15 +652,18 @@ a { text-decoration: none; color: inherit; }
 .topbar-btn:hover { background: var(--bg3); border-color: var(--primary); color: var(--primary-bright); }
 .topbar-btn-back:hover { background: var(--bg3); color: var(--text); transform: translateX(-2px); }
 
-/* === DIFFICULTY SCREEN === */
+#diffScreen {
+  width: 100vw;
+  overflow: hidden;
+}
 .diff-main {
   flex: 1;
-  max-width: 1100px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding: 48px 36px 40px;
   overflow-y: auto;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .diff-head { text-align: center; margin-bottom: 48px; }
