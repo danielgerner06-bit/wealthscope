@@ -33,6 +33,7 @@ html {
   scroll-behavior: smooth;
   background: var(--bg);
   scroll-snap-type: y mandatory;
+  scroll-padding-top: 1px;
 }
 
 body {
