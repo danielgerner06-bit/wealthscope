@@ -67,18 +67,14 @@ const RECOGNIZED_196 = new Set([
   "YE","ZM","ZW","VA","PS","TW"
 ]);
 
-// === KARIBIK-BOUNDS für Inset ===
-const CARIBBEAN_BOUNDS = [[10, -88], [27, -59]];
-const CARIBBEAN_ISO_HINT = new Set(["BS","CU","JM","HT","DO","PR","TT","BB","GD","LC","VC","DM","AG","KN","CW","AW","KY","TC","VG","VI","MQ","GP","BL","MF","MS","AI","SX","BQ"]);
-
 // === KONTINENT-BOUNDS und deutsche Namen ===
 const CONTINENT_BOUNDS = {
   'Europe':        [[34, -12], [72, 45]],
-  'Asia':          [[-12, 25], [55, 180]],
+  'Asia':          [[-12, 25], [78, 180]],
   'Africa':        [[-37, -20], [38, 55]],
   'North America': [[7, -170], [83, -50]],
   'South America': [[-58, -85], [13, -34]],
-  'Oceania':       [[-50, 110], [10, 180]],
+  'Oceania':       [[-50, 110], [5, 220]],
 };
 
 const CONTINENT_DE = {
@@ -90,7 +86,21 @@ const CONTINENT_DE = {
   'Oceania':       'Ozeanien',
 };
 
-const WORLD_BOUNDS = [[-58, -170], [78, 180]];
+const WORLD_BOUNDS = [[-58, -160], [78, 215]];
+
+// === REGION-BOUNDS für Wheel-Zoom ===
+const REGION_BOUNDS = {
+  'Ozeanien':       [[-50, 110], [5, 220]],
+  'Zentralamerika': [[5, -120], [33, -55]],
+  'Europa':         [[34, -25], [72, 45]],
+  'Afrika':         [[-37, -20], [38, 55]],
+  'Südamerika':     [[-58, -85], [13, -34]],
+  'Nordamerika':    [[14, -170], [78, -10]],
+  'Asien':          [[-12, 25], [78, 180]],
+};
+
+// Reihenfolge: spezifischere/küstennahe Regionen zuerst
+const REGION_ORDER = ['Ozeanien', 'Zentralamerika', 'Europa', 'Afrika', 'Südamerika', 'Nordamerika', 'Asien'];
 
 // === STÄDTE ===
 const CITIES = [
@@ -224,6 +234,8 @@ const MAP_COLORS = {
   land:         '#cbdba2',
   landBorder:   '#7d9462',
   landHover:    '#a8c477',
+  landFaded:    '#b7c2a3',
+  landFadedBorder: '#9aa68b',
   correct:      '#22c55e',
   correctBorder:'#15803d',
   wrong:        '#ef4444',

@@ -389,11 +389,6 @@
   <div class="screen quiz-screen" id="quizScreen">
     <div id="map"></div>
 
-    <div class="inset hidden" id="insetCaribbean">
-      <div class="inset-label">Karibik</div>
-      <div class="inset-map" id="insetCaribbeanMap"></div>
-    </div>
-
     <div class="hud">
       <button class="hud-close" onclick="exitQuiz()" aria-label="Schließen">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -403,16 +398,12 @@
       <div class="hud-stats" id="hudStats">
         <div class="hud-stat">
           <span class="hud-stat-label">Frage</span>
-          <span class="hud-stat-value"><span id="qNum">0</span>/<span id="qTotal">20</span></span>
+          <span class="hud-stat-value"><span id="qNum">0</span>/<span id="qTotal">0</span></span>
         </div>
         <div class="hud-prompt">
           <span class="hud-prompt-label" id="promptLabel">Klicke:</span>
           <span class="hud-prompt-value" id="promptText">—</span>
           <img class="hud-prompt-flag" id="promptFlag" alt="" />
-        </div>
-        <div class="hud-stat">
-          <span class="hud-stat-label">Punkte</span>
-          <span class="hud-stat-value" id="scoreVal">0</span>
         </div>
       </div>
     </div>
@@ -445,13 +436,10 @@
     <div class="overlay hidden" id="resultOverlay">
       <div class="overlay-card">
         <h2>Quiz beendet</h2>
-        <div class="result-score" id="resultScore">0 / 20</div>
+        <div class="result-percent" id="resultPercent">0%</div>
+        <p class="result-quote-label">Trefferquote</p>
         <p id="resultMsg"></p>
-        <div class="result-stats">
-          <div><b id="resultCorrect">0</b><span>Richtig</span></div>
-          <div><b id="resultWrong">0</b><span>Falsch</span></div>
-          <div><b id="resultPercent">0%</b><span>Genauigkeit</span></div>
-        </div>
+        <p class="result-tally"><span id="resultCorrect">0</span> von <span id="resultTotal">0</span> richtig</p>
         <div class="overlay-actions">
           <button class="btn btn-primary" onclick="beginQuiz()">Nochmal</button>
           <button class="btn btn-ghost" onclick="exitQuiz()">Zurück</button>

@@ -4,38 +4,39 @@
 
 // ---- STATE ----
 let map = null;
-let insetMap = null;
 let geoCountriesData = null;
 let activeLayers = [];
-let activeInsetLayers = [];
 let countryFeatures = [];
 let cityMarkers = [];
 let waterMarkers = [];
 let landmarkMarkers = [];
 
 let pendingLaenderMode = null;
+let hoverLatLng = null;
+let wheelLock = false;
 
 const quizState = {
   type: null,
   questions: [],
   idx: 0,
-  score: 0,
-  wrong: 0,
+  correctCount: 0,
+  wrongCount: 0,
   active: false,
   current: null,
   modeFilter: null,
   modeBounds: null,
   showGuessed: true,
   answeredCorrectly: new Set(),
+  answeredWrongly: new Set(),
 };
 
 // ---- CONFIG ----
 const QUIZ_CONFIG = {
-  laender: { title: "Länderquiz", description: "Klicke das gefragte Land. 20 Fragen.", promptLabel: "Klicke das Land:", count: 20 },
-  flaggen: { title: "Flaggenquiz", description: "Klicke das Land zur angezeigten Flagge.", promptLabel: "Klicke das Land:", count: 20 },
-  staedte: { title: "Städtequiz", description: "Klicke die gefragte Stadt auf der Karte.", promptLabel: "Klicke die Stadt:", count: 20 },
-  wasser:  { title: "Wasserquiz", description: "Klicke das gefragte Gewässer.", promptLabel: "Klicke das Gewässer:", count: 20 },
-  sehenswuerdigkeiten: { title: "Sehenswürdigkeiten", description: "Klicke die gefragte Sehenswürdigkeit auf der Karte.", promptLabel: "Klicke:", count: 20 },
+  laender: { title: "Länderquiz", description: "Klicke das gefragte Land.", promptLabel: "Klicke das Land:" },
+  flaggen: { title: "Flaggenquiz", description: "Klicke das Land zur angezeigten Flagge.", promptLabel: "Klicke das Land:" },
+  staedte: { title: "Städtequiz", description: "Klicke die gefragte Stadt auf der Karte.", promptLabel: "Klicke die Stadt:" },
+  wasser:  { title: "Wasserquiz", description: "Klicke das gefragte Gewässer.", promptLabel: "Klicke das Gewässer:" },
+  sehenswuerdigkeiten: { title: "Sehenswürdigkeiten", description: "Klicke die gefragte Sehenswürdigkeit auf der Karte.", promptLabel: "Klicke:" },
 };
 
 // ---- LÄNDER-MODI ----
@@ -64,21 +65,17 @@ function isCountryType(type) {
 }
 
 const IS_TOUCH = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+const FIT_PADDING = { paddingTopLeft: [40, 90], paddingBottomRight: [40, 40] };
 
 // ---- SCREEN NAV ----
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   document.body.classList.toggle('locked', id !== 'homeScreen');
-  
-  // Show portfolio button only on home screen
+
   const portfolioBtn = document.querySelector('.portfolio-fixed');
   if (portfolioBtn) {
-    if (id === 'homeScreen') {
-      portfolioBtn.classList.add('visible');
-    } else {
-      portfolioBtn.classList.remove('visible');
-    }
+    portfolioBtn.classList.toggle('visible', id === 'homeScreen');
   }
 }
 
@@ -110,9 +107,8 @@ function openQuiz(quizType) {
 
   document.getElementById('startTitle').textContent = title;
   document.getElementById('startDesc').textContent = desc;
-  document.getElementById('qTotal').textContent = cfg.count;
-  document.getElementById('scoreVal').textContent = 0;
   document.getElementById('qNum').textContent = 0;
+  document.getElementById('qTotal').textContent = 0;
 
   document.getElementById('startOverlay').classList.remove('hidden');
   document.getElementById('resultOverlay').classList.add('hidden');
@@ -125,7 +121,6 @@ function openQuiz(quizType) {
 function exitQuiz() {
   quizState.active = false;
   hideCursorTip();
-  hideInset();
   clearMarkers();
   pendingLaenderMode = null;
   showScreen('homeScreen');
@@ -151,36 +146,100 @@ function initMap() {
     minZoom: 1,
     maxZoom: 10,
     worldCopyJump: false,
+    inertia: false,
   });
-  map.setView([20, 0], 2);
+  map.setView([20, 25], 2);
+  setupMapInteractions();
 }
 
-function initInsetMap() {
-  if (insetMap) {
-    insetMap.invalidateSize();
-    return;
+function setupMapInteractions() {
+  if (!map || map._interactionsSetup) return;
+  map._interactionsSetup = true;
+
+  map.on('mousemove', (e) => { hoverLatLng = e.latlng; });
+
+  const container = map.getContainer();
+  container.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    if (wheelLock) return;
+    wheelLock = true;
+    setTimeout(() => { wheelLock = false; }, 450);
+
+    if (e.deltaY < 0) {
+      const region = findRegionAt(hoverLatLng);
+      if (region && REGION_BOUNDS[region]) {
+        map.fitBounds(REGION_BOUNDS[region], { animate: true, duration: 0.4, ...FIT_PADDING });
+      }
+    } else {
+      map.fitBounds(quizState.modeBounds || WORLD_BOUNDS, { animate: true, duration: 0.4, ...FIT_PADDING });
+    }
+  }, { passive: false });
+
+  // Prevent browser pinch/ctrl-zoom
+  container.addEventListener('gesturestart', (e) => e.preventDefault());
+}
+
+function findRegionAt(latlng) {
+  if (!latlng) return null;
+  for (const name of REGION_ORDER) {
+    const b = REGION_BOUNDS[name];
+    if (latlng.lat >= b[0][0] && latlng.lat <= b[1][0] && latlng.lng >= b[0][1] && latlng.lng <= b[1][1]) {
+      return name;
+    }
   }
-  insetMap = L.map('insetCaribbeanMap', {
-    zoomControl: false,
-    attributionControl: false,
-    dragging: false,
-    scrollWheelZoom: false,
-    doubleClickZoom: false,
-    touchZoom: false,
-    boxZoom: false,
-    keyboard: false,
-    zoomSnap: 0,
-    zoomDelta: 0,
+  return null;
+}
+
+// ---- GEOJSON HELPERS ----
+function visitCoords(coords, fn) {
+  if (typeof coords[0] === 'number') {
+    fn(coords);
+  } else {
+    coords.forEach(c => visitCoords(c, fn));
+  }
+}
+
+function applyCoordTransform(geometry, transform) {
+  if (!geometry || !geometry.coordinates) return;
+  const t = geometry.type;
+  if (t === 'Polygon') {
+    geometry.coordinates = geometry.coordinates.map(ring => ring.map(transform));
+  } else if (t === 'MultiPolygon') {
+    geometry.coordinates = geometry.coordinates.map(poly => poly.map(ring => ring.map(transform)));
+  }
+}
+
+// Shift datelining/Pacific features so each continent renders as one piece.
+function preprocessPacific(geojson) {
+  geojson.features.forEach(f => {
+    const props = f.properties || {};
+    const continent = props.CONTINENT || '';
+
+    let lngMin = 180, lngMax = -180;
+    let eastCount = 0, westCount = 0;
+    try {
+      visitCoords(f.geometry.coordinates, ([lng]) => {
+        if (lng < lngMin) lngMin = lng;
+        if (lng > lngMax) lngMax = lng;
+        if (lng > 0) eastCount++; else westCount++;
+      });
+    } catch (e) { return; }
+
+    let transform = null;
+    if (lngMax - lngMin > 180) {
+      // crosses dateline — unify halves
+      if (eastCount >= westCount) {
+        transform = ([lng, lat]) => [lng < 0 ? lng + 360 : lng, lat];
+      } else {
+        transform = ([lng, lat]) => [lng > 0 ? lng - 360 : lng, lat];
+      }
+    } else if (continent === 'Oceania' && lngMin < -100) {
+      // Pacific Oceania islands entirely on the left of the world map
+      transform = ([lng, lat]) => [lng + 360, lat];
+    }
+
+    if (transform) applyCoordTransform(f.geometry, transform);
   });
-}
-
-function showInset() {
-  document.getElementById('insetCaribbean').classList.remove('hidden');
-  setTimeout(() => insetMap && insetMap.invalidateSize(), 100);
-}
-
-function hideInset() {
-  document.getElementById('insetCaribbean').classList.add('hidden');
 }
 
 // ---- DATA LOADING ----
@@ -191,6 +250,7 @@ async function ensureCountriesLoaded() {
     const res = await fetch(COUNTRY_GEOJSON_URL);
     if (!res.ok) throw new Error('Fetch failed: ' + res.status);
     geoCountriesData = await res.json();
+    preprocessPacific(geoCountriesData);
   } catch (e) {
     console.error('Failed to load countries:', e);
     alert('Karte konnte nicht geladen werden. Bitte prüfe deine Internetverbindung.');
@@ -209,6 +269,9 @@ async function beginQuiz() {
   const toggle = document.getElementById('showGuessedToggle');
   quizState.showGuessed = toggle ? toggle.checked : true;
   quizState.answeredCorrectly = new Set();
+  quizState.answeredWrongly = new Set();
+  quizState.correctCount = 0;
+  quizState.wrongCount = 0;
 
   clearMarkers();
   initMap();
@@ -224,17 +287,19 @@ async function beginQuiz() {
     quizState.modeBounds = WORLD_BOUNDS;
   }
 
+  const isInPoolFn = buildIsInPool(type);
+
   try {
     if (type === 'laender' || type === 'flaggen') {
-      await renderCountries(true);
+      await renderCountries(true, isInPoolFn);
     } else if (type === 'staedte') {
-      await renderCountries(false);
+      await renderCountries(false, null);
       renderCities();
     } else if (type === 'wasser') {
-      await renderCountries(false);
+      await renderCountries(false, null);
       renderWaters();
     } else if (type === 'sehenswuerdigkeiten') {
-      await renderCountries(false);
+      await renderCountries(false, null);
       renderLandmarks();
     }
   } catch (e) {
@@ -242,14 +307,11 @@ async function beginQuiz() {
   }
 
   buildQuestions(type);
-  setupCaribbeanInset(type);
 
   map.invalidateSize();
-  map.fitBounds(quizState.modeBounds, { animate: false, padding: [10, 10] });
+  map.fitBounds(quizState.modeBounds, { animate: false, ...FIT_PADDING });
 
   quizState.idx = 0;
-  quizState.score = 0;
-  quizState.wrong = 0;
   quizState.active = true;
 
   const hudPrompt = document.querySelector('.hud-prompt');
@@ -257,18 +319,52 @@ async function beginQuiz() {
   document.getElementById('cursorTip').classList.toggle('flag-mode', type === 'flaggen');
 
   document.getElementById('promptLabel').textContent = QUIZ_CONFIG[type].promptLabel;
-  document.getElementById('scoreVal').textContent = 0;
   document.getElementById('qTotal').textContent = quizState.questions.length;
 
   nextQuestion();
 }
 
+function buildIsInPool(type) {
+  if (type === 'laender') {
+    return (f) => {
+      const props = f.properties || {};
+      const iso2raw = props.ISO_A2_EH || props.ISO_A2 || '';
+      const iso2 = (iso2raw && iso2raw !== '-99' && iso2raw.length === 2) ? iso2raw : '';
+      if (!quizState.modeFilter) return true;
+      return quizState.modeFilter(props, iso2);
+    };
+  }
+  if (type === 'flaggen') {
+    return (f) => {
+      const props = f.properties || {};
+      const iso2raw = props.ISO_A2_EH || props.ISO_A2 || '';
+      const iso2 = (iso2raw && iso2raw !== '-99' && iso2raw.length === 2) ? iso2raw : '';
+      const nameEn = props.NAME_LONG || props.NAME || 'Unknown';
+      return !!(iso2 && nameEn && nameEn !== 'Unknown');
+    };
+  }
+  return null;
+}
+
 // ---- COUNTRIES ----
-async function renderCountries(interactive) {
+async function renderCountries(interactive, isInPool) {
   const data = await ensureCountriesLoaded();
   countryFeatures = [];
 
-  const layer = L.geoJSON(data, {
+  const poolFeatures = isInPool ? data.features.filter(f => isInPool(f)) : data.features;
+  const fadedFeatures = isInPool ? data.features.filter(f => !isInPool(f)) : [];
+
+  // Faded layer (under the active layer)
+  if (fadedFeatures.length > 0) {
+    const fadedLayer = L.geoJSON({ type: 'FeatureCollection', features: fadedFeatures }, {
+      style: () => countryFadedStyle(),
+      interactive: false,
+    }).addTo(map);
+    activeLayers.push(fadedLayer);
+  }
+
+  // Active layer
+  const layer = L.geoJSON({ type: 'FeatureCollection', features: poolFeatures }, {
     style: () => countryDefaultStyle(),
     interactive: interactive,
     onEachFeature: (feature, lyr) => {
@@ -278,7 +374,7 @@ async function renderCountries(interactive) {
       const iso2raw = props.ISO_A2_EH || props.ISO_A2 || '';
       const iso2 = (iso2raw && iso2raw !== '-99' && iso2raw.length === 2) ? iso2raw.toLowerCase() : '';
 
-      const entry = { name: nameDe, nameEn, iso2, layer: lyr, dotMarker: null, insetLayer: null, props };
+      const entry = { name: nameDe, nameEn, iso2, layer: lyr, dotMarker: null, props };
       countryFeatures.push(entry);
 
       if (interactive) {
@@ -311,7 +407,7 @@ async function renderCountries(interactive) {
           });
           dot.on('mouseover', () => {
             if (!quizState.active || dot._isHighlighted) return;
-            dot.setStyle({ radius: 7 });
+            dot.setStyle({ radius: 5 });
           });
           dot.on('mouseout', () => {
             if (!quizState.active || dot._isHighlighted) return;
@@ -329,8 +425,12 @@ function countryDefaultStyle() {
   return { fillColor: MAP_COLORS.land, color: MAP_COLORS.landBorder, weight: 0.6, fillOpacity: 1 };
 }
 
+function countryFadedStyle() {
+  return { fillColor: MAP_COLORS.landFaded, color: MAP_COLORS.landFadedBorder, weight: 0.4, fillOpacity: 0.55 };
+}
+
 function tinyDotStyle() {
-  return { radius: 5, fillColor: MAP_COLORS.dot, color: MAP_COLORS.dotBorder, weight: 2, opacity: 0.95, fillOpacity: 0.95 };
+  return { radius: 3, fillColor: MAP_COLORS.dot, color: MAP_COLORS.dotBorder, weight: 1.2, opacity: 0.95, fillOpacity: 0.95 };
 }
 
 // ---- CITIES ----
@@ -338,13 +438,13 @@ function renderCities() {
   cityMarkers = [];
   CITIES.forEach(([name, lat, lng]) => {
     const m = L.circleMarker([lat, lng], cityDefaultStyle()).addTo(map);
-    const entry = { name, lat, lng, marker: m, insetMarker: null };
+    const entry = { name, lat, lng, marker: m };
     cityMarkers.push(entry);
     activeLayers.push(m);
     m.on('click', () => handleClick(entry));
     m.on('mouseover', () => {
       if (!quizState.active || m._isHighlighted) return;
-      m.setStyle({ radius: 8, fillOpacity: 1 });
+      m.setStyle({ radius: 7, fillOpacity: 1 });
     });
     m.on('mouseout', () => {
       if (!quizState.active || m._isHighlighted) return;
@@ -354,7 +454,7 @@ function renderCities() {
 }
 
 function cityDefaultStyle() {
-  return { radius: 5, fillColor: MAP_COLORS.city, color: MAP_COLORS.cityBorder, weight: 1.5, opacity: 1, fillOpacity: 0.9 };
+  return { radius: 4, fillColor: MAP_COLORS.city, color: MAP_COLORS.cityBorder, weight: 1.2, opacity: 1, fillOpacity: 0.9 };
 }
 
 // ---- WATERS ----
@@ -362,7 +462,7 @@ function renderWaters() {
   waterMarkers = [];
   WATERS.forEach(([name, lat, lng, type]) => {
     const m = L.circleMarker([lat, lng], waterDefaultStyle(type)).addTo(map);
-    const entry = { name, lat, lng, type, marker: m, insetMarker: null };
+    const entry = { name, lat, lng, type, marker: m };
     waterMarkers.push(entry);
     activeLayers.push(m);
     m.on('click', () => handleClick(entry));
@@ -380,11 +480,11 @@ function renderWaters() {
 
 function waterDefaultStyle(type) {
   const colors = { ocean: MAP_COLORS.ocean, sea: MAP_COLORS.sea, lake: MAP_COLORS.lake, river: MAP_COLORS.river };
-  const sizes  = { ocean: 11, sea: 9, lake: 7, river: 6 };
+  const sizes  = { ocean: 10, sea: 8, lake: 6, river: 5 };
   return {
-    radius: sizes[type] || 6,
+    radius: sizes[type] || 5,
     fillColor: colors[type] || MAP_COLORS.sea,
-    color: '#fff', weight: 1.5, opacity: 1, fillOpacity: 0.85,
+    color: '#fff', weight: 1.2, opacity: 1, fillOpacity: 0.85,
   };
 }
 
@@ -393,13 +493,13 @@ function renderLandmarks() {
   landmarkMarkers = [];
   LANDMARKS.forEach(([name, lat, lng]) => {
     const m = L.circleMarker([lat, lng], landmarkDefaultStyle()).addTo(map);
-    const entry = { name, lat, lng, marker: m, insetMarker: null };
+    const entry = { name, lat, lng, marker: m };
     landmarkMarkers.push(entry);
     activeLayers.push(m);
     m.on('click', () => handleClick(entry));
     m.on('mouseover', () => {
       if (!quizState.active || m._isHighlighted) return;
-      m.setStyle({ radius: 9, fillOpacity: 1 });
+      m.setStyle({ radius: 8, fillOpacity: 1 });
     });
     m.on('mouseout', () => {
       if (!quizState.active || m._isHighlighted) return;
@@ -409,155 +509,7 @@ function renderLandmarks() {
 }
 
 function landmarkDefaultStyle() {
-  return { radius: 6, fillColor: MAP_COLORS.landmark, color: MAP_COLORS.landmarkBorder, weight: 1.5, opacity: 1, fillOpacity: 0.9 };
-}
-
-// ---- INSET (Karibik) ----
-function setupCaribbeanInset(quizType) {
-  const pool = quizState.questions;
-  const shouldShow = pool.some(q => {
-    if (quizType === 'laender' || quizType === 'flaggen') {
-      return CARIBBEAN_ISO_HINT.has((q.iso2 || '').toUpperCase());
-    }
-    if (typeof q.lat === 'number' && typeof q.lng === 'number') {
-      return isInBounds([q.lat, q.lng], CARIBBEAN_BOUNDS);
-    }
-    return false;
-  });
-
-  if (!shouldShow) {
-    hideInset();
-    return;
-  }
-
-  initInsetMap();
-  clearInsetLayers();
-
-  const interactive = (quizType === 'laender' || quizType === 'flaggen');
-  renderInsetCountries(interactive);
-  if (quizType === 'staedte') renderInsetCities();
-  if (quizType === 'wasser') renderInsetWaters();
-  if (quizType === 'sehenswuerdigkeiten') renderInsetLandmarks();
-
-  showInset();
-  setTimeout(() => {
-    if (!insetMap) return;
-    insetMap.invalidateSize();
-    insetMap.fitBounds(CARIBBEAN_BOUNDS, { padding: [4, 4], animate: false });
-  }, 60);
-}
-
-function renderInsetCountries(interactive) {
-  if (!geoCountriesData) return;
-  const features = geoCountriesData.features.filter(f => {
-    const b = computeFeatureBounds(f);
-    return boundsIntersect(b, CARIBBEAN_BOUNDS);
-  });
-  const layer = L.geoJSON({ type: 'FeatureCollection', features }, {
-    style: () => countryDefaultStyle(),
-    interactive: interactive,
-    onEachFeature: (feature, lyr) => {
-      const entry = countryFeatures.find(e => e.props === feature.properties);
-      if (!entry) return;
-      entry.insetLayer = lyr;
-      if (interactive) {
-        lyr.on('click', () => handleClick(entry));
-        lyr.on('mouseover', () => {
-          if (!quizState.active || lyr._isHighlighted) return;
-          lyr.setStyle({ fillColor: MAP_COLORS.landHover });
-        });
-        lyr.on('mouseout', () => {
-          if (!quizState.active || lyr._isHighlighted) return;
-          lyr.setStyle(countryDefaultStyle());
-        });
-      }
-    },
-  }).addTo(insetMap);
-  activeInsetLayers.push(layer);
-}
-
-function renderInsetCities() {
-  cityMarkers.forEach(entry => {
-    if (!isInBounds([entry.lat, entry.lng], CARIBBEAN_BOUNDS)) return;
-    const m = L.circleMarker([entry.lat, entry.lng], cityDefaultStyle()).addTo(insetMap);
-    entry.insetMarker = m;
-    activeInsetLayers.push(m);
-    m.on('click', () => handleClick(entry));
-    m.on('mouseover', () => {
-      if (!quizState.active || m._isHighlighted) return;
-      m.setStyle({ radius: 8, fillOpacity: 1 });
-    });
-    m.on('mouseout', () => {
-      if (!quizState.active || m._isHighlighted) return;
-      m.setStyle(cityDefaultStyle());
-    });
-  });
-}
-
-function renderInsetWaters() {
-  waterMarkers.forEach(entry => {
-    if (!isInBounds([entry.lat, entry.lng], CARIBBEAN_BOUNDS)) return;
-    const m = L.circleMarker([entry.lat, entry.lng], waterDefaultStyle(entry.type)).addTo(insetMap);
-    entry.insetMarker = m;
-    activeInsetLayers.push(m);
-    m.on('click', () => handleClick(entry));
-    m.on('mouseover', () => {
-      if (!quizState.active || m._isHighlighted) return;
-      const s = waterDefaultStyle(entry.type);
-      m.setStyle({ ...s, radius: s.radius + 3 });
-    });
-    m.on('mouseout', () => {
-      if (!quizState.active || m._isHighlighted) return;
-      m.setStyle(waterDefaultStyle(entry.type));
-    });
-  });
-}
-
-function renderInsetLandmarks() {
-  landmarkMarkers.forEach(entry => {
-    if (!isInBounds([entry.lat, entry.lng], CARIBBEAN_BOUNDS)) return;
-    const m = L.circleMarker([entry.lat, entry.lng], landmarkDefaultStyle()).addTo(insetMap);
-    entry.insetMarker = m;
-    activeInsetLayers.push(m);
-    m.on('click', () => handleClick(entry));
-    m.on('mouseover', () => {
-      if (!quizState.active || m._isHighlighted) return;
-      m.setStyle({ radius: 9, fillOpacity: 1 });
-    });
-    m.on('mouseout', () => {
-      if (!quizState.active || m._isHighlighted) return;
-      m.setStyle(landmarkDefaultStyle());
-    });
-  });
-}
-
-// ---- GEOMETRY HELPERS ----
-function computeFeatureBounds(feature) {
-  let minLat = 90, maxLat = -90, minLng = 180, maxLng = -180;
-  const visit = (coords) => {
-    if (typeof coords[0] === 'number') {
-      const [lng, lat] = coords;
-      if (lat < minLat) minLat = lat;
-      if (lat > maxLat) maxLat = lat;
-      if (lng < minLng) minLng = lng;
-      if (lng > maxLng) maxLng = lng;
-    } else {
-      coords.forEach(visit);
-    }
-  };
-  try { visit(feature.geometry.coordinates); }
-  catch (e) { return [[0, 0], [0, 0]]; }
-  return [[minLat, minLng], [maxLat, maxLng]];
-}
-
-function boundsIntersect(a, b) {
-  const [[s1, w1], [n1, e1]] = a;
-  const [[s2, w2], [n2, e2]] = b;
-  return !(n1 < s2 || s1 > n2 || e1 < w2 || w1 > e2);
-}
-
-function isInBounds([lat, lng], [[s, w], [n, e]]) {
-  return lat >= s && lat <= n && lng >= w && lng <= e;
+  return { radius: 5, fillColor: MAP_COLORS.landmark, color: MAP_COLORS.landmarkBorder, weight: 1.2, opacity: 1, fillOpacity: 0.9 };
 }
 
 // ---- CLEANUP ----
@@ -565,39 +517,18 @@ function clearMarkers() {
   if (map) {
     activeLayers.forEach(l => { try { map.removeLayer(l); } catch (e) {} });
   }
-  if (insetMap) {
-    activeInsetLayers.forEach(l => { try { insetMap.removeLayer(l); } catch (e) {} });
-  }
   activeLayers = [];
-  activeInsetLayers = [];
   countryFeatures = [];
   cityMarkers = [];
   waterMarkers = [];
   landmarkMarkers = [];
 }
 
-function clearInsetLayers() {
-  if (insetMap) {
-    activeInsetLayers.forEach(l => { try { insetMap.removeLayer(l); } catch (e) {} });
-  }
-  activeInsetLayers = [];
-  countryFeatures.forEach(c => c.insetLayer = null);
-  cityMarkers.forEach(c => c.insetMarker = null);
-  waterMarkers.forEach(w => w.insetMarker = null);
-  landmarkMarkers.forEach(l => l.insetMarker = null);
-}
-
 // ---- QUESTIONS ----
 function buildQuestions(type) {
   let pool = [];
-  if (type === 'laender') {
-    pool = countryFeatures.filter(c => {
-      if (!c.name || c.name === 'Unknown') return false;
-      if (!quizState.modeFilter) return true;
-      return quizState.modeFilter(c.props, c.iso2);
-    });
-  } else if (type === 'flaggen') {
-    pool = countryFeatures.filter(c => c.iso2 && c.name && c.name !== 'Unknown');
+  if (type === 'laender' || type === 'flaggen') {
+    pool = countryFeatures.filter(c => c.name && c.name !== 'Unknown' && (type !== 'flaggen' || c.iso2));
   } else if (type === 'staedte') {
     pool = [...cityMarkers];
   } else if (type === 'wasser') {
@@ -605,8 +536,7 @@ function buildQuestions(type) {
   } else if (type === 'sehenswuerdigkeiten') {
     pool = [...landmarkMarkers];
   }
-  const cfg = QUIZ_CONFIG[type];
-  quizState.questions = shuffle(pool).slice(0, Math.min(cfg.count, pool.length));
+  quizState.questions = shuffle(pool);
 }
 
 function shuffle(arr) {
@@ -648,101 +578,80 @@ function handleClick(entry) {
   const correct = entry === quizState.current;
 
   if (correct) {
-    quizState.score++;
-    highlightCorrect(entry);
-    flashFeedback(entry, true);
+    quizState.correctCount++;
     quizState.answeredCorrectly.add(entry);
+    quizState.answeredWrongly.delete(entry);
+    highlightCorrect(entry);
   } else {
-    quizState.wrong++;
+    quizState.wrongCount++;
+    if (!quizState.answeredCorrectly.has(entry)) {
+      quizState.answeredWrongly.add(entry);
+    }
+    quizState.answeredCorrectly.add(quizState.current);
+    quizState.answeredWrongly.delete(quizState.current);
     highlightWrong(entry);
     highlightCorrect(quizState.current);
-    flashFeedback(entry, false);
-    quizState.answeredCorrectly.add(quizState.current);
   }
-  document.getElementById('scoreVal').textContent = quizState.score;
 
   quizState.idx++;
   hideCursorTip();
-  setTimeout(() => { if (quizState.active) nextQuestion(); }, 1100);
+  setTimeout(() => { if (quizState.active) nextQuestion(); }, 600);
 }
 
 // ---- HIGHLIGHTS ----
 function applyHighlight(target, fill, border) {
   if (!target || !target.setStyle) return;
   if (target instanceof L.CircleMarker) {
-    target.setStyle({ fillColor: fill, color: border, fillOpacity: 0.95, weight: 2, radius: 9 });
+    target.setStyle({ fillColor: fill, color: border, fillOpacity: 0.95, weight: 1.4, radius: 5 });
   } else {
-    target.setStyle({ fillColor: fill, color: border, fillOpacity: 0.85, weight: 1.8 });
+    target.setStyle({ fillColor: fill, color: border, fillOpacity: 0.85, weight: 0.9 });
   }
   target._isHighlighted = true;
 }
 
 function highlightCorrect(entry) {
-  [entry.layer, entry.insetLayer, entry.dotMarker, entry.marker, entry.insetMarker].forEach(t => {
+  [entry.layer, entry.dotMarker, entry.marker].forEach(t => {
     if (t) applyHighlight(t, MAP_COLORS.correct, MAP_COLORS.correctBorder);
   });
 }
 
 function highlightWrong(entry) {
-  [entry.layer, entry.insetLayer, entry.dotMarker, entry.marker, entry.insetMarker].forEach(t => {
+  [entry.layer, entry.dotMarker, entry.marker].forEach(t => {
     if (t) applyHighlight(t, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
   });
 }
 
 function resetHighlights() {
   const keepGreen = (entry) => quizState.showGuessed && quizState.answeredCorrectly.has(entry);
+  const keepRed   = (entry) => quizState.showGuessed && quizState.answeredWrongly.has(entry);
 
   countryFeatures.forEach(c => {
     if (keepGreen(c)) {
-      [c.layer, c.insetLayer].forEach(l => {
-        if (l) applyHighlight(l, MAP_COLORS.correct, MAP_COLORS.correctBorder);
-      });
+      if (c.layer) applyHighlight(c.layer, MAP_COLORS.correct, MAP_COLORS.correctBorder);
       if (c.dotMarker) applyHighlight(c.dotMarker, MAP_COLORS.correct, MAP_COLORS.correctBorder);
+    } else if (keepRed(c)) {
+      if (c.layer) applyHighlight(c.layer, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
+      if (c.dotMarker) applyHighlight(c.dotMarker, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
     } else {
-      [c.layer, c.insetLayer].forEach(l => {
-        if (l) { l.setStyle(countryDefaultStyle()); l._isHighlighted = false; }
-      });
+      if (c.layer) { c.layer.setStyle(countryDefaultStyle()); c.layer._isHighlighted = false; }
       if (c.dotMarker) { c.dotMarker.setStyle(tinyDotStyle()); c.dotMarker._isHighlighted = false; }
     }
   });
-  cityMarkers.forEach(c => {
-    if (keepGreen(c)) {
-      [c.marker, c.insetMarker].forEach(m => { if (m) applyHighlight(m, MAP_COLORS.correct, MAP_COLORS.correctBorder); });
-    } else {
-      [c.marker, c.insetMarker].forEach(m => { if (m) { m.setStyle(cityDefaultStyle()); m._isHighlighted = false; } });
-    }
-  });
-  waterMarkers.forEach(w => {
-    if (keepGreen(w)) {
-      [w.marker, w.insetMarker].forEach(m => { if (m) applyHighlight(m, MAP_COLORS.correct, MAP_COLORS.correctBorder); });
-    } else {
-      [w.marker, w.insetMarker].forEach(m => { if (m) { m.setStyle(waterDefaultStyle(w.type)); m._isHighlighted = false; } });
-    }
-  });
-  landmarkMarkers.forEach(l => {
-    if (keepGreen(l)) {
-      [l.marker, l.insetMarker].forEach(m => { if (m) applyHighlight(m, MAP_COLORS.correct, MAP_COLORS.correctBorder); });
-    } else {
-      [l.marker, l.insetMarker].forEach(m => { if (m) { m.setStyle(landmarkDefaultStyle()); m._isHighlighted = false; } });
-    }
-  });
-}
-
-function flashFeedback(entry, correct) {
-  let latlng;
-  if (entry.layer) latlng = entry.layer.getBounds().getCenter();
-  else if (entry.marker) latlng = entry.marker.getLatLng();
-  else if (entry.dotMarker) latlng = entry.dotMarker.getLatLng();
-  else return;
-
-  const pt = map.latLngToContainerPoint(latlng);
-  const pop = document.createElement('div');
-  pop.className = 'feedback-pop ' + (correct ? 'ok' : 'bad');
-  pop.textContent = correct ? '+1' : '✕';
-  pop.style.left = pt.x + 'px';
-  pop.style.top = pt.y + 'px';
-  document.body.appendChild(pop);
-  setTimeout(() => pop.remove(), 900);
+  const resetMarkerPool = (pool, styleFn) => {
+    pool.forEach(e => {
+      if (keepGreen(e)) {
+        if (e.marker) applyHighlight(e.marker, MAP_COLORS.correct, MAP_COLORS.correctBorder);
+      } else if (keepRed(e)) {
+        if (e.marker) applyHighlight(e.marker, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
+      } else if (e.marker) {
+        e.marker.setStyle(styleFn(e));
+        e.marker._isHighlighted = false;
+      }
+    });
+  };
+  resetMarkerPool(cityMarkers, () => cityDefaultStyle());
+  resetMarkerPool(waterMarkers, (w) => waterDefaultStyle(w.type));
+  resetMarkerPool(landmarkMarkers, () => landmarkDefaultStyle());
 }
 
 // ---- END ----
@@ -751,14 +660,12 @@ function endQuiz() {
   hideCursorTip();
 
   const total = quizState.questions.length;
-  const correct = quizState.score;
-  const wrong = quizState.wrong;
+  const correct = quizState.correctCount;
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
 
-  document.getElementById('resultScore').textContent = `${correct} / ${total}`;
-  document.getElementById('resultCorrect').textContent = correct;
-  document.getElementById('resultWrong').textContent = wrong;
   document.getElementById('resultPercent').textContent = pct + '%';
+  document.getElementById('resultCorrect').textContent = correct;
+  document.getElementById('resultTotal').textContent = total;
 
   let msg;
   if (pct >= 90) msg = 'Weltklasse! Du kennst die Welt wie deine Westentasche.';
@@ -826,7 +733,6 @@ function setupScrollAnimations() {
 
 // ---- EVENT WIRING ----
 document.addEventListener('DOMContentLoaded', () => {
-  // Quiz buttons on the landing page
   document.querySelectorAll('.feature-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const q = btn.dataset.quiz;
@@ -835,30 +741,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Difficulty cards
   document.querySelectorAll('#diffScreen .diff-card').forEach(card => {
     card.addEventListener('click', () => startLaenderWith(card.dataset.mode));
   });
 
   populateContinentList();
   setupScrollAnimations();
-  
-  // Show portfolio button on initial load (home screen is active)
+
   const portfolioBtn = document.querySelector('.portfolio-fixed');
-  if (portfolioBtn) {
-    portfolioBtn.classList.add('visible');
-  }
+  if (portfolioBtn) portfolioBtn.classList.add('visible');
 });
 
 window.addEventListener('resize', () => {
   if (map && document.getElementById('quizScreen').classList.contains('active')) {
     setTimeout(() => {
       map.invalidateSize();
-      if (quizState.modeBounds) map.fitBounds(quizState.modeBounds, { animate: false, padding: [10, 10] });
-      if (insetMap && !document.getElementById('insetCaribbean').classList.contains('hidden')) {
-        insetMap.invalidateSize();
-        insetMap.fitBounds(CARIBBEAN_BOUNDS, { padding: [4, 4], animate: false });
-      }
+      if (quizState.modeBounds) map.fitBounds(quizState.modeBounds, { animate: false, ...FIT_PADDING });
     }, 50);
   }
 });
