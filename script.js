@@ -25,6 +25,8 @@ const quizState = {
   current: null,
   modeFilter: null,
   modeBounds: null,
+  showGuessed: true,
+  answeredCorrectly: new Set(),
 };
 
 // ---- CONFIG ----
@@ -203,6 +205,10 @@ async function ensureCountriesLoaded() {
 async function beginQuiz() {
   document.getElementById('startOverlay').classList.add('hidden');
   document.getElementById('resultOverlay').classList.add('hidden');
+
+  const toggle = document.getElementById('showGuessedToggle');
+  quizState.showGuessed = toggle ? toggle.checked : true;
+  quizState.answeredCorrectly = new Set();
 
   clearMarkers();
   initMap();
@@ -645,11 +651,13 @@ function handleClick(entry) {
     quizState.score++;
     highlightCorrect(entry);
     flashFeedback(entry, true);
+    quizState.answeredCorrectly.add(entry);
   } else {
     quizState.wrong++;
     highlightWrong(entry);
     highlightCorrect(quizState.current);
     flashFeedback(entry, false);
+    quizState.answeredCorrectly.add(quizState.current);
   }
   document.getElementById('scoreVal').textContent = quizState.score;
 
@@ -682,26 +690,41 @@ function highlightWrong(entry) {
 }
 
 function resetHighlights() {
+  const keepGreen = (entry) => quizState.showGuessed && quizState.answeredCorrectly.has(entry);
+
   countryFeatures.forEach(c => {
-    [c.layer, c.insetLayer].forEach(l => {
-      if (l) { l.setStyle(countryDefaultStyle()); l._isHighlighted = false; }
-    });
-    if (c.dotMarker) { c.dotMarker.setStyle(tinyDotStyle()); c.dotMarker._isHighlighted = false; }
+    if (keepGreen(c)) {
+      [c.layer, c.insetLayer].forEach(l => {
+        if (l) applyHighlight(l, MAP_COLORS.correct, MAP_COLORS.correctBorder);
+      });
+      if (c.dotMarker) applyHighlight(c.dotMarker, MAP_COLORS.correct, MAP_COLORS.correctBorder);
+    } else {
+      [c.layer, c.insetLayer].forEach(l => {
+        if (l) { l.setStyle(countryDefaultStyle()); l._isHighlighted = false; }
+      });
+      if (c.dotMarker) { c.dotMarker.setStyle(tinyDotStyle()); c.dotMarker._isHighlighted = false; }
+    }
   });
   cityMarkers.forEach(c => {
-    [c.marker, c.insetMarker].forEach(m => {
-      if (m) { m.setStyle(cityDefaultStyle()); m._isHighlighted = false; }
-    });
+    if (keepGreen(c)) {
+      [c.marker, c.insetMarker].forEach(m => { if (m) applyHighlight(m, MAP_COLORS.correct, MAP_COLORS.correctBorder); });
+    } else {
+      [c.marker, c.insetMarker].forEach(m => { if (m) { m.setStyle(cityDefaultStyle()); m._isHighlighted = false; } });
+    }
   });
   waterMarkers.forEach(w => {
-    [w.marker, w.insetMarker].forEach(m => {
-      if (m) { m.setStyle(waterDefaultStyle(w.type)); m._isHighlighted = false; }
-    });
+    if (keepGreen(w)) {
+      [w.marker, w.insetMarker].forEach(m => { if (m) applyHighlight(m, MAP_COLORS.correct, MAP_COLORS.correctBorder); });
+    } else {
+      [w.marker, w.insetMarker].forEach(m => { if (m) { m.setStyle(waterDefaultStyle(w.type)); m._isHighlighted = false; } });
+    }
   });
   landmarkMarkers.forEach(l => {
-    [l.marker, l.insetMarker].forEach(m => {
-      if (m) { m.setStyle(landmarkDefaultStyle()); m._isHighlighted = false; }
-    });
+    if (keepGreen(l)) {
+      [l.marker, l.insetMarker].forEach(m => { if (m) applyHighlight(m, MAP_COLORS.correct, MAP_COLORS.correctBorder); });
+    } else {
+      [l.marker, l.insetMarker].forEach(m => { if (m) { m.setStyle(landmarkDefaultStyle()); m._isHighlighted = false; } });
+    }
   });
 }
 

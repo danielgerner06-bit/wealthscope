@@ -72,7 +72,7 @@ a { text-decoration: none; color: inherit; }
 #quizScreen.active { display: block; height: 100vh; }
 
 #diffScreen .topbar {
-  display: none;
+  padding: 14px 24px;
 }
 
 /* === STICKY TOPNAV (Home) - HIDDEN === */
@@ -120,10 +120,6 @@ a { text-decoration: none; color: inherit; }
 .portfolio-fixed svg {
   width: 14px !important;
   height: 14px !important;
-  flex-shrink: 0;
-}
-  flex-shrink: 0;
-}
   flex-shrink: 0;
 }
 
@@ -667,7 +663,7 @@ a { text-decoration: none; color: inherit; }
   flex: 1;
   width: 100%;
   margin: 0;
-  padding: 40px 24px;
+  padding: 20px 24px 24px;
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -676,13 +672,13 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
 }
 
-.diff-head { text-align: center; margin-bottom: 40px; width: 100%; max-width: 100%; }
+.diff-head { text-align: center; margin-bottom: 18px; width: 100%; max-width: 100%; }
 
 .diff-head h1 {
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
   font-weight: 800;
   letter-spacing: -1px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -691,7 +687,7 @@ a { text-decoration: none; color: inherit; }
 
 .diff-head p { color: var(--text-muted); font-size: 1.05rem; }
 
-.diff-section { margin-bottom: 40px; width: 100%; max-width: 800px; }
+.diff-section { margin-bottom: 18px; width: 100%; max-width: 800px; }
 
 .diff-section-title {
   font-size: 0.78rem;
@@ -705,15 +701,15 @@ a { text-decoration: none; color: inherit; }
 
 .diff-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .diff-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 22px 20px;
+  padding: 16px;
   text-align: left;
   color: var(--text);
   transition: all 0.2s;
@@ -762,9 +758,9 @@ a { text-decoration: none; color: inherit; }
   justify-content: space-between;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 14px 20px;
-  gap: 12px;
+  border-radius: 12px;
+  padding: 10px 14px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -786,6 +782,76 @@ a { text-decoration: none; color: inherit; }
 }
 
 .cont-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); transform: translateY(-1px); }
+
+/* === DIFFICULTY CARD ACCENTS === */
+.diff-card[data-mode="world_easy"]   { border-top: 3px solid #4ade80; }
+.diff-card[data-mode="world_medium"] { border-top: 3px solid #22d3ee; }
+.diff-card[data-mode="world_hard"]   { border-top: 3px solid #fbbf24; }
+.diff-card[data-mode="world_expert"] { border-top: 3px solid #f87171; }
+
+.diff-card[data-mode="world_easy"]:hover   { border-color: #4ade80; }
+.diff-card[data-mode="world_medium"]:hover { border-color: #22d3ee; }
+.diff-card[data-mode="world_hard"]:hover   { border-color: #fbbf24; }
+.diff-card[data-mode="world_expert"]:hover { border-color: #f87171; }
+
+.diff-badge { margin-bottom: 8px; }
+.diff-card h3 { font-size: 1rem; margin-bottom: 3px; }
+
+/* === TOGGLE SWITCH === */
+.toggle-row {
+  margin: 14px 0 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  user-select: none;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: var(--border-strong);
+  border-radius: 99px;
+  transition: background 0.25s;
+  cursor: pointer;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 3px;
+  left: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.25s;
+}
+
+.toggle-switch input:checked + .toggle-slider { background: var(--primary); }
+.toggle-switch input:checked + .toggle-slider::before { transform: translateX(20px); }
 
 /* === QUIZ SCREEN === */
 #quizScreen { position: relative; }
@@ -1046,8 +1112,9 @@ a { text-decoration: none; color: inherit; }
   .flag-stack { height: 280px; }
   .flag-card { width: 160px; height: 105px; margin: -52px 0 0 -80px; }
 
-  .topbar { padding: 16px 20px; }
-  .diff-main { padding: 32px 20px 24px; }
+  .topbar { padding: 12px 16px; }
+  .diff-main { padding: 14px 16px 20px; }
+  .diff-grid { grid-template-columns: 1fr; }
 
   .hud { top: 10px; gap: 8px; width: calc(100vw - 20px); }
   .hud-stats { flex: 1; }
