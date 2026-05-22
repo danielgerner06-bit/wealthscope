@@ -32,7 +32,7 @@
 html {
   scroll-behavior: smooth;
   background: var(--bg);
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   scroll-padding-top: 0;
 }
 
@@ -72,8 +72,29 @@ a { text-decoration: none; color: inherit; }
 #quizScreen.active { display: block; height: 100vh; }
 
 #diffScreen .topbar {
-  padding: 14px 24px;
+  display: none;
 }
+
+.diff-back-btn {
+  position: fixed;
+  top: 16px;
+  left: 20px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20,26,46,0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.diff-back-btn svg { width: 18px; height: 18px; }
+.diff-back-btn:hover { background: var(--bg3); color: var(--text); transform: translateX(-2px); }
 
 /* === STICKY TOPNAV (Home) - HIDDEN === */
 .topnav {
