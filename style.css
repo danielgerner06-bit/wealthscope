@@ -150,11 +150,11 @@ a { text-decoration: none; color: inherit; }
 /* === HERO === */
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 32px 80px;
+  padding: 60px 32px 60px;
   overflow: hidden;
   text-align: center;
   scroll-snap-align: start;
@@ -283,11 +283,12 @@ a { text-decoration: none; color: inherit; }
 /* === FEATURE SECTIONS === */
 .feature {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
-  padding: 100px 32px;
+  padding: 60px 32px;
   perspective: 1500px;
+  overflow: hidden;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -619,9 +620,7 @@ a { text-decoration: none; color: inherit; }
 
 /* === FOOTER === */
 .landing-foot {
-  padding: 60px 32px 40px;
-  border-top: 1px solid var(--border);
-  background: rgba(10,14,26,0.5);
+  display: none;
 }
 
 .foot-inner {
@@ -1111,7 +1110,8 @@ a { text-decoration: none; color: inherit; }
   .feature-inner { grid-template-columns: 1fr; gap: 40px; }
   .feature-inner.reverse .feature-visual { order: 0; }
   .feature-inner.reverse .feature-info { order: 1; }
-  .feature { padding: 80px 24px; min-height: auto; }
+  .feature { padding: 60px 24px; height: auto; min-height: 100vh; overflow: visible; }
+  .hero { height: auto; min-height: 100vh; }
   .feature-visual { transform: perspective(1200px) rotateX(15deg) translateY(40px); }
   .feature-inner.reverse .feature-visual { transform: perspective(1200px) rotateX(15deg) translateY(40px); }
   .feature.in-view .feature-visual { transform: perspective(1200px) rotateX(0) translateY(0); }
