@@ -22,13 +22,18 @@ const quizState = {
   correctCount: 0,
   wrongCount: 0,
   active: false,
+  answering: false,
   current: null,
   modeFilter: null,
   modeBounds: null,
   showGuessed: true,
-  answeredCorrectly: new Set(),
-  answeredWrongly: new Set(),
+  correctKeys: new Set(),
+  wrongKeys: new Set(),
 };
+
+function entryKey(entry) {
+  return entry.iso2 || entry;
+}
 
 // ---- CONFIG ----
 const QUIZ_CONFIG = {
@@ -120,10 +125,16 @@ function openQuiz(quizType) {
 
 function exitQuiz() {
   quizState.active = false;
+  quizState.answering = false;
   hideCursorTip();
   clearMarkers();
+  const wasLaender = quizState.type === 'laender';
   pendingLaenderMode = null;
-  showScreen('homeScreen');
+  if (wasLaender) {
+    showScreen('diffScreen');
+  } else {
+    showScreen('homeScreen');
+  }
 }
 
 // ---- MAP INIT ----
@@ -152,6 +163,15 @@ function initMap() {
   setupMapInteractions();
 }
 
+function getAllowedRegions() {
+  const allAll = ['Karibik', 'Nordamerika', 'Südamerika', 'Zentralamerika', 'Europa', 'Afrika', 'Asien', 'Ozeanien'];
+  if (quizState.type !== 'laender') return allAll;
+  const mode = pendingLaenderMode || '';
+  if (mode.startsWith('world_')) return allAll;
+  if (mode.startsWith('northamerica_')) return ['Karibik'];
+  return [];
+}
+
 function setupMapInteractions() {
   if (!map || map._interactionsSetup) return;
   map._interactionsSetup = true;
@@ -162,20 +182,23 @@ function setupMapInteractions() {
   container.addEventListener('wheel', (e) => {
     e.preventDefault();
     if (wheelLock) return;
-    wheelLock = true;
-    setTimeout(() => { wheelLock = false; }, 450);
 
     if (e.deltaY < 0) {
+      const allowed = getAllowedRegions();
+      if (allowed.length === 0) return;
       const region = findRegionAt(hoverLatLng);
-      if (region && REGION_BOUNDS[region]) {
-        map.fitBounds(REGION_BOUNDS[region], { animate: true, duration: 0.4, ...FIT_PADDING });
+      if (region && allowed.includes(region) && REGION_BOUNDS[region]) {
+        wheelLock = true;
+        setTimeout(() => { wheelLock = false; }, 350);
+        map.fitBounds(REGION_BOUNDS[region], { animate: false, ...FIT_PADDING });
       }
     } else {
-      map.fitBounds(quizState.modeBounds || WORLD_BOUNDS, { animate: true, duration: 0.4, ...FIT_PADDING });
+      wheelLock = true;
+      setTimeout(() => { wheelLock = false; }, 350);
+      map.fitBounds(quizState.modeBounds || WORLD_BOUNDS, { animate: false, ...FIT_PADDING });
     }
   }, { passive: false });
 
-  // Prevent browser pinch/ctrl-zoom
   container.addEventListener('gesturestart', (e) => e.preventDefault());
 }
 
@@ -268,10 +291,11 @@ async function beginQuiz() {
 
   const toggle = document.getElementById('showGuessedToggle');
   quizState.showGuessed = toggle ? toggle.checked : true;
-  quizState.answeredCorrectly = new Set();
-  quizState.answeredWrongly = new Set();
+  quizState.correctKeys = new Set();
+  quizState.wrongKeys = new Set();
   quizState.correctCount = 0;
   quizState.wrongCount = 0;
+  quizState.answering = false;
 
   clearMarkers();
   initMap();
@@ -528,7 +552,15 @@ function clearMarkers() {
 function buildQuestions(type) {
   let pool = [];
   if (type === 'laender' || type === 'flaggen') {
-    pool = countryFeatures.filter(c => c.name && c.name !== 'Unknown' && (type !== 'flaggen' || c.iso2));
+    const seen = new Set();
+    pool = countryFeatures.filter(c => {
+      if (!c.name || c.name === 'Unknown') return false;
+      if (type === 'flaggen' && !c.iso2) return false;
+      const key = c.iso2 || c.name;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
   } else if (type === 'staedte') {
     pool = [...cityMarkers];
   } else if (type === 'wasser') {
@@ -574,56 +606,75 @@ function nextQuestion() {
 
 // ---- ANSWER ----
 function handleClick(entry) {
-  if (!quizState.active) return;
-  const correct = entry === quizState.current;
+  if (!quizState.active || quizState.answering) return;
+  const cur = quizState.current;
+  if (!cur) return;
+
+  const correct = (entry.iso2 && cur.iso2)
+    ? entry.iso2 === cur.iso2
+    : entry === cur;
+
+  quizState.answering = true;
 
   if (correct) {
     quizState.correctCount++;
-    quizState.answeredCorrectly.add(entry);
-    quizState.answeredWrongly.delete(entry);
-    highlightCorrect(entry);
+    quizState.correctKeys.add(entryKey(cur));
+    quizState.wrongKeys.delete(entryKey(cur));
+    highlightCorrect(cur);
   } else {
     quizState.wrongCount++;
-    if (!quizState.answeredCorrectly.has(entry)) {
-      quizState.answeredWrongly.add(entry);
-    }
-    quizState.answeredCorrectly.add(quizState.current);
-    quizState.answeredWrongly.delete(quizState.current);
+    // Das verfehlte korrekte Land → bleibt rot (in Anzeigemodus)
+    quizState.wrongKeys.add(entryKey(cur));
+    quizState.correctKeys.delete(entryKey(cur));
+    // Kurz rot auf fälschlich geklicktem Land (nicht persistent)
     highlightWrong(entry);
-    highlightCorrect(quizState.current);
+    // Korrektes Land hervorheben (rot — wird persistent via wrongKeys)
+    highlightWrong(cur);
   }
 
   quizState.idx++;
   hideCursorTip();
-  setTimeout(() => { if (quizState.active) nextQuestion(); }, 600);
+  setTimeout(() => {
+    quizState.answering = false;
+    if (quizState.active) nextQuestion();
+  }, 600);
 }
 
 // ---- HIGHLIGHTS ----
 function applyHighlight(target, fill, border) {
   if (!target || !target.setStyle) return;
   if (target instanceof L.CircleMarker) {
-    target.setStyle({ fillColor: fill, color: border, fillOpacity: 0.95, weight: 1.4, radius: 5 });
+    target.setStyle({ fillColor: fill, color: border, fillOpacity: 0.95, weight: 1.1 });
   } else {
-    target.setStyle({ fillColor: fill, color: border, fillOpacity: 0.85, weight: 0.9 });
+    target.setStyle({ fillColor: fill, color: border, fillOpacity: 0.85, weight: 0.7 });
   }
   target._isHighlighted = true;
 }
 
+function entriesMatching(entry) {
+  if (entry.iso2) return countryFeatures.filter(e => e.iso2 === entry.iso2);
+  return [entry];
+}
+
 function highlightCorrect(entry) {
-  [entry.layer, entry.dotMarker, entry.marker].forEach(t => {
-    if (t) applyHighlight(t, MAP_COLORS.correct, MAP_COLORS.correctBorder);
+  entriesMatching(entry).forEach(e => {
+    if (e.layer) applyHighlight(e.layer, MAP_COLORS.correct, MAP_COLORS.correctBorder);
+    if (e.dotMarker) applyHighlight(e.dotMarker, MAP_COLORS.correct, MAP_COLORS.correctBorder);
+    if (e.marker) applyHighlight(e.marker, MAP_COLORS.correct, MAP_COLORS.correctBorder);
   });
 }
 
 function highlightWrong(entry) {
-  [entry.layer, entry.dotMarker, entry.marker].forEach(t => {
-    if (t) applyHighlight(t, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
+  entriesMatching(entry).forEach(e => {
+    if (e.layer) applyHighlight(e.layer, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
+    if (e.dotMarker) applyHighlight(e.dotMarker, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
+    if (e.marker) applyHighlight(e.marker, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
   });
 }
 
 function resetHighlights() {
-  const keepGreen = (entry) => quizState.showGuessed && quizState.answeredCorrectly.has(entry);
-  const keepRed   = (entry) => quizState.showGuessed && quizState.answeredWrongly.has(entry);
+  const keepGreen = (e) => quizState.showGuessed && quizState.correctKeys.has(entryKey(e));
+  const keepRed   = (e) => quizState.showGuessed && quizState.wrongKeys.has(entryKey(e));
 
   countryFeatures.forEach(c => {
     if (keepGreen(c)) {
