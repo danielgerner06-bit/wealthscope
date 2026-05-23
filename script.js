@@ -442,42 +442,19 @@ async function renderCountries(interactive, isInPool) {
       entry.dotMarkers = [];
       entry.hitMarkers = [];
       try {
+        const bounds = entry.layer.getBounds();
+        const w = bounds.getEast() - bounds.getWest();
+        const h = bounds.getNorth() - bounds.getSouth();
+        const maxDim = Math.max(w, h);
         const isOceania = entry.props && entry.props.CONTINENT === 'Oceania';
-        const polys = getPolygonCenters(entry.layer.feature.geometry);
-        polys.forEach(pc => {
-          const tiny = pc.width < 1.5 && pc.height < 1.5;
-          const oceaniaIsland = isOceania && pc.width < 10 && pc.height < 10;
-          if (tiny || oceaniaIsland) {
-            const hitRadius = tiny ? 12 : 14;
-            addCountryDot(entry, pc.center, hitRadius);
-          }
-        });
+        // Ein Punkt pro Land/Territorium am Zentroid
+        const shouldAddDot = maxDim < 1.5 || (isOceania && maxDim < 35);
+        if (shouldAddDot) {
+          addCountryDot(entry, bounds.getCenter(), isOceania ? 18 : 12);
+        }
       } catch (e) { /* skip */ }
     });
   }
-}
-
-function polygonCenter(poly) {
-  const outer = poly[0];
-  let minLat = 90, maxLat = -90, minLng = 180, maxLng = -180;
-  outer.forEach(([lng, lat]) => {
-    if (lat < minLat) minLat = lat;
-    if (lat > maxLat) maxLat = lat;
-    if (lng < minLng) minLng = lng;
-    if (lng > maxLng) maxLng = lng;
-  });
-  return {
-    center: [(minLat + maxLat) / 2, (minLng + maxLng) / 2],
-    width: maxLng - minLng,
-    height: maxLat - minLat,
-  };
-}
-
-function getPolygonCenters(geometry) {
-  if (!geometry || !geometry.coordinates) return [];
-  if (geometry.type === 'Polygon') return [polygonCenter(geometry.coordinates)];
-  if (geometry.type === 'MultiPolygon') return geometry.coordinates.map(polygonCenter);
-  return [];
 }
 
 function addCountryDot(entry, center, hitRadius) {
