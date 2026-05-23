@@ -78,7 +78,7 @@ function getModePadding() {
       return { paddingTopLeft: [40, 30], paddingBottomRight: [40, 50] };
     }
     if (pendingLaenderMode.startsWith('oceania_')) {
-      return { paddingTopLeft: [40, 130], paddingBottomRight: [40, 40] };
+      return { paddingTopLeft: [40, 100], paddingBottomRight: [40, 25] };
     }
   }
   return FIT_PADDING_DEFAULT;
@@ -86,7 +86,7 @@ function getModePadding() {
 
 function getRegionPadding(region) {
   if (region === 'Karibik')     return { paddingTopLeft: [40, 80], paddingBottomRight: [40, 80] };
-  if (region === 'Ozeanien')    return { paddingTopLeft: [40, 130], paddingBottomRight: [40, 40] };
+  if (region === 'Ozeanien')    return { paddingTopLeft: [40, 100], paddingBottomRight: [40, 25] };
   if (region === 'Nordamerika') return { paddingTopLeft: [40, 30], paddingBottomRight: [40, 50] };
   return FIT_PADDING_DEFAULT;
 }
@@ -270,7 +270,9 @@ function preprocessPacific(geojson) {
     let transform = null;
     if (lngMax - lngMin > 180) {
       // crosses dateline — unify halves
-      if (eastCount >= westCount) {
+      // For Oceania always east-shift (keeps Kiribati Phoenix/Line Islands together with Gilbert)
+      const eastShift = continent === 'Oceania' || eastCount >= westCount;
+      if (eastShift) {
         transform = ([lng, lat]) => [lng < 0 ? lng + 360 : lng, lat];
       } else {
         transform = ([lng, lat]) => [lng > 0 ? lng - 360 : lng, lat];
@@ -417,7 +419,7 @@ async function renderCountries(interactive, isInPool) {
       const iso2raw = props.ISO_A2_EH || props.ISO_A2 || '';
       const iso2 = (iso2raw && iso2raw !== '-99' && iso2raw.length === 2) ? iso2raw.toLowerCase() : '';
 
-      const entry = { name: nameDe, nameEn, iso2, layer: lyr, dotMarker: null, props };
+      const entry = { name: nameDe, nameEn, iso2, layer: lyr, dotMarkers: [], hitMarkers: [], props };
       countryFeatures.push(entry);
 
       if (interactive) {
@@ -437,24 +439,48 @@ async function renderCountries(interactive, isInPool) {
 
   if (interactive) {
     countryFeatures.forEach(entry => {
+      entry.dotMarkers = [];
+      entry.hitMarkers = [];
       try {
-        const bounds = entry.layer.getBounds();
-        const w = bounds.getEast() - bounds.getWest();
-        const h = bounds.getNorth() - bounds.getSouth();
-        const maxDim = Math.max(w, h);
         const isOceania = entry.props && entry.props.CONTINENT === 'Oceania';
-        const shouldAddDot = maxDim < 1.5 || (isOceania && maxDim < 15);
-        if (shouldAddDot) {
-          const center = bounds.getCenter();
-          addCountryDot(entry, center, isOceania ? 18 : 12);
-        }
+        const polys = getPolygonCenters(entry.layer.feature.geometry);
+        polys.forEach(pc => {
+          const tiny = pc.width < 1.5 && pc.height < 1.5;
+          const oceaniaIsland = isOceania && pc.width < 10 && pc.height < 10;
+          if (tiny || oceaniaIsland) {
+            const hitRadius = tiny ? 12 : 14;
+            addCountryDot(entry, pc.center, hitRadius);
+          }
+        });
       } catch (e) { /* skip */ }
     });
   }
 }
 
+function polygonCenter(poly) {
+  const outer = poly[0];
+  let minLat = 90, maxLat = -90, minLng = 180, maxLng = -180;
+  outer.forEach(([lng, lat]) => {
+    if (lat < minLat) minLat = lat;
+    if (lat > maxLat) maxLat = lat;
+    if (lng < minLng) minLng = lng;
+    if (lng > maxLng) maxLng = lng;
+  });
+  return {
+    center: [(minLat + maxLat) / 2, (minLng + maxLng) / 2],
+    width: maxLng - minLng,
+    height: maxLat - minLat,
+  };
+}
+
+function getPolygonCenters(geometry) {
+  if (!geometry || !geometry.coordinates) return [];
+  if (geometry.type === 'Polygon') return [polygonCenter(geometry.coordinates)];
+  if (geometry.type === 'MultiPolygon') return geometry.coordinates.map(polygonCenter);
+  return [];
+}
+
 function addCountryDot(entry, center, hitRadius) {
-  // Invisible hit area for easier clicking (incl. water between islands)
   const hit = L.circleMarker(center, {
     radius: hitRadius,
     fillColor: MAP_COLORS.dot,
@@ -464,7 +490,6 @@ function addCountryDot(entry, center, hitRadius) {
     weight: 0,
   }).addTo(map);
 
-  // Visible dot (non-interactive — clicks delegated to hit marker)
   const dot = L.circleMarker(center, { ...tinyDotStyle(), interactive: false }).addTo(map);
 
   hit.on('click', (e) => {
@@ -480,8 +505,8 @@ function addCountryDot(entry, center, hitRadius) {
     dot.setStyle(tinyDotStyle());
   });
 
-  entry.dotMarker = dot;
-  entry.hitMarker = hit;
+  entry.dotMarkers.push(dot);
+  entry.hitMarkers.push(hit);
   activeLayers.push(dot);
   activeLayers.push(hit);
 }
@@ -700,7 +725,7 @@ function entriesMatching(entry) {
 function highlightCorrect(entry) {
   entriesMatching(entry).forEach(e => {
     if (e.layer) applyHighlight(e.layer, MAP_COLORS.correct, MAP_COLORS.correctBorder);
-    if (e.dotMarker) applyHighlight(e.dotMarker, MAP_COLORS.correct, MAP_COLORS.correctBorder);
+    (e.dotMarkers || []).forEach(d => applyHighlight(d, MAP_COLORS.correct, MAP_COLORS.correctBorder));
     if (e.marker) applyHighlight(e.marker, MAP_COLORS.correct, MAP_COLORS.correctBorder);
   });
 }
@@ -708,7 +733,7 @@ function highlightCorrect(entry) {
 function highlightWrong(entry) {
   entriesMatching(entry).forEach(e => {
     if (e.layer) applyHighlight(e.layer, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
-    if (e.dotMarker) applyHighlight(e.dotMarker, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
+    (e.dotMarkers || []).forEach(d => applyHighlight(d, MAP_COLORS.wrong, MAP_COLORS.wrongBorder));
     if (e.marker) applyHighlight(e.marker, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
   });
 }
@@ -720,13 +745,13 @@ function resetHighlights() {
   countryFeatures.forEach(c => {
     if (keepGreen(c)) {
       if (c.layer) applyHighlight(c.layer, MAP_COLORS.correct, MAP_COLORS.correctBorder);
-      if (c.dotMarker) applyHighlight(c.dotMarker, MAP_COLORS.correct, MAP_COLORS.correctBorder);
+      (c.dotMarkers || []).forEach(d => applyHighlight(d, MAP_COLORS.correct, MAP_COLORS.correctBorder));
     } else if (keepRed(c)) {
       if (c.layer) applyHighlight(c.layer, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
-      if (c.dotMarker) applyHighlight(c.dotMarker, MAP_COLORS.wrong, MAP_COLORS.wrongBorder);
+      (c.dotMarkers || []).forEach(d => applyHighlight(d, MAP_COLORS.wrong, MAP_COLORS.wrongBorder));
     } else {
       if (c.layer) { c.layer.setStyle(countryDefaultStyle()); c.layer._isHighlighted = false; }
-      if (c.dotMarker) { c.dotMarker.setStyle(tinyDotStyle()); c.dotMarker._isHighlighted = false; }
+      (c.dotMarkers || []).forEach(d => { d.setStyle(tinyDotStyle()); d._isHighlighted = false; });
     }
   });
   const resetMarkerPool = (pool, styleFn) => {

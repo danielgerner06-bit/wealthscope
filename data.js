@@ -74,7 +74,7 @@ const CONTINENT_BOUNDS = {
   'Africa':        [[-37, -20], [38, 55]],
   'North America': [[7, -170], [73, -50]],
   'South America': [[-58, -85], [13, -34]],
-  'Oceania':       [[-50, 110], [22, 220]],
+  'Oceania':       [[-46, 110], [16, 220]],
 };
 
 const CONTINENT_DE = {
@@ -91,7 +91,7 @@ const WORLD_BOUNDS = [[-58, -160], [78, 215]];
 // === REGION-BOUNDS für Wheel-Zoom ===
 const REGION_BOUNDS = {
   'Karibik':        [[7, -86], [26, -59]],
-  'Ozeanien':       [[-50, 110], [22, 220]],
+  'Ozeanien':       [[-46, 110], [16, 220]],
   'Zentralamerika': [[5, -120], [33, -55]],
   'Europa':         [[34, -25], [72, 45]],
   'Afrika':         [[-37, -20], [38, 55]],
