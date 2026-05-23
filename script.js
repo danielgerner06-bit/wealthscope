@@ -70,7 +70,26 @@ function isCountryType(type) {
 }
 
 const IS_TOUCH = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-const FIT_PADDING = { paddingTopLeft: [40, 90], paddingBottomRight: [40, 40] };
+const FIT_PADDING_DEFAULT = { paddingTopLeft: [40, 90], paddingBottomRight: [40, 40] };
+
+function getModePadding() {
+  if (quizState.type === 'laender' && pendingLaenderMode) {
+    if (pendingLaenderMode.startsWith('northamerica_')) {
+      return { paddingTopLeft: [40, 30], paddingBottomRight: [40, 50] };
+    }
+    if (pendingLaenderMode.startsWith('oceania_')) {
+      return { paddingTopLeft: [40, 130], paddingBottomRight: [40, 40] };
+    }
+  }
+  return FIT_PADDING_DEFAULT;
+}
+
+function getRegionPadding(region) {
+  if (region === 'Karibik')     return { paddingTopLeft: [40, 80], paddingBottomRight: [40, 80] };
+  if (region === 'Ozeanien')    return { paddingTopLeft: [40, 130], paddingBottomRight: [40, 40] };
+  if (region === 'Nordamerika') return { paddingTopLeft: [40, 30], paddingBottomRight: [40, 50] };
+  return FIT_PADDING_DEFAULT;
+}
 
 // ---- SCREEN NAV ----
 function showScreen(id) {
@@ -190,12 +209,12 @@ function setupMapInteractions() {
       if (region && allowed.includes(region) && REGION_BOUNDS[region]) {
         wheelLock = true;
         setTimeout(() => { wheelLock = false; }, 350);
-        map.fitBounds(REGION_BOUNDS[region], { animate: false, ...FIT_PADDING });
+        map.fitBounds(REGION_BOUNDS[region], { animate: false, ...getRegionPadding(region) });
       }
     } else {
       wheelLock = true;
       setTimeout(() => { wheelLock = false; }, 350);
-      map.fitBounds(quizState.modeBounds || WORLD_BOUNDS, { animate: false, ...FIT_PADDING });
+      map.fitBounds(quizState.modeBounds || WORLD_BOUNDS, { animate: false, ...getModePadding() });
     }
   }, { passive: false });
 
@@ -333,7 +352,7 @@ async function beginQuiz() {
   buildQuestions(type);
 
   map.invalidateSize();
-  map.fitBounds(quizState.modeBounds, { animate: false, ...FIT_PADDING });
+  map.fitBounds(quizState.modeBounds, { animate: false, ...getModePadding() });
 
   quizState.idx = 0;
   quizState.active = true;
@@ -422,27 +441,49 @@ async function renderCountries(interactive, isInPool) {
         const bounds = entry.layer.getBounds();
         const w = bounds.getEast() - bounds.getWest();
         const h = bounds.getNorth() - bounds.getSouth();
-        if (Math.max(w, h) < 1.2) {
+        const maxDim = Math.max(w, h);
+        const isOceania = entry.props && entry.props.CONTINENT === 'Oceania';
+        const shouldAddDot = maxDim < 1.5 || (isOceania && maxDim < 15);
+        if (shouldAddDot) {
           const center = bounds.getCenter();
-          const dot = L.circleMarker(center, tinyDotStyle()).addTo(map);
-          dot.on('click', (e) => {
-            L.DomEvent.stopPropagation(e);
-            handleClick(entry);
-          });
-          dot.on('mouseover', () => {
-            if (!quizState.active || dot._isHighlighted) return;
-            dot.setStyle({ radius: 5 });
-          });
-          dot.on('mouseout', () => {
-            if (!quizState.active || dot._isHighlighted) return;
-            dot.setStyle(tinyDotStyle());
-          });
-          entry.dotMarker = dot;
-          activeLayers.push(dot);
+          addCountryDot(entry, center, isOceania ? 18 : 12);
         }
       } catch (e) { /* skip */ }
     });
   }
+}
+
+function addCountryDot(entry, center, hitRadius) {
+  // Invisible hit area for easier clicking (incl. water between islands)
+  const hit = L.circleMarker(center, {
+    radius: hitRadius,
+    fillColor: MAP_COLORS.dot,
+    color: 'transparent',
+    fillOpacity: 0.001,
+    opacity: 0,
+    weight: 0,
+  }).addTo(map);
+
+  // Visible dot (non-interactive — clicks delegated to hit marker)
+  const dot = L.circleMarker(center, { ...tinyDotStyle(), interactive: false }).addTo(map);
+
+  hit.on('click', (e) => {
+    L.DomEvent.stopPropagation(e);
+    handleClick(entry);
+  });
+  hit.on('mouseover', () => {
+    if (!quizState.active || dot._isHighlighted) return;
+    dot.setStyle({ radius: 5 });
+  });
+  hit.on('mouseout', () => {
+    if (!quizState.active || dot._isHighlighted) return;
+    dot.setStyle(tinyDotStyle());
+  });
+
+  entry.dotMarker = dot;
+  entry.hitMarker = hit;
+  activeLayers.push(dot);
+  activeLayers.push(hit);
 }
 
 function countryDefaultStyle() {
@@ -807,7 +848,7 @@ window.addEventListener('resize', () => {
   if (map && document.getElementById('quizScreen').classList.contains('active')) {
     setTimeout(() => {
       map.invalidateSize();
-      if (quizState.modeBounds) map.fitBounds(quizState.modeBounds, { animate: false, ...FIT_PADDING });
+      if (quizState.modeBounds) map.fitBounds(quizState.modeBounds, { animate: false, ...getModePadding() });
     }, 50);
   }
 });
