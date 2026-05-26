@@ -442,19 +442,40 @@ async function renderCountries(interactive, isInPool) {
       entry.dotMarkers = [];
       entry.hitMarkers = [];
       try {
-        const bounds = entry.layer.getBounds();
-        const w = bounds.getEast() - bounds.getWest();
-        const h = bounds.getNorth() - bounds.getSouth();
-        const maxDim = Math.max(w, h);
-        const isOceania = entry.props && entry.props.CONTINENT === 'Oceania';
-        // Ein Punkt pro Land/Territorium am Zentroid
-        const shouldAddDot = maxDim < 1.5 || (isOceania && maxDim < 35);
-        if (shouldAddDot) {
+        const geom = entry.layer.feature && entry.layer.feature.geometry;
+        const maxPolyDim = maxPolygonDim(geom);
+        // Ein Punkt pro Land — nur wenn jedes Einzelpolygon klein ist
+        // (Vatikan, Singapur, Kiribati, Marshall, FSM, Tuvalu, Malediven, …).
+        // Länder mit mindestens einem grösseren Polygon (PNG, NZ, Australien,
+        // Salomonen) brauchen keinen Punkt, das Polygon ist gross genug.
+        if (maxPolyDim < 1.5) {
+          const bounds = entry.layer.getBounds();
+          const isOceania = entry.props && entry.props.CONTINENT === 'Oceania';
           addCountryDot(entry, bounds.getCenter(), isOceania ? 18 : 12);
         }
       } catch (e) { /* skip */ }
     });
   }
+}
+
+function maxPolygonDim(geometry) {
+  if (!geometry || !geometry.coordinates) return Infinity;
+  let max = 0;
+  const check = (poly) => {
+    if (!poly || !poly[0]) return;
+    let minLat = 90, maxLat = -90, minLng = 180, maxLng = -180;
+    poly[0].forEach(([lng, lat]) => {
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+      if (lng < minLng) minLng = lng;
+      if (lng > maxLng) maxLng = lng;
+    });
+    const d = Math.max(maxLng - minLng, maxLat - minLat);
+    if (d > max) max = d;
+  };
+  if (geometry.type === 'Polygon') check(geometry.coordinates);
+  if (geometry.type === 'MultiPolygon') geometry.coordinates.forEach(check);
+  return max;
 }
 
 function addCountryDot(entry, center, hitRadius) {
