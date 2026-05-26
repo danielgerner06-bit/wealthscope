@@ -11,7 +11,7 @@ let cityMarkers = [];
 let waterMarkers = [];
 let landmarkMarkers = [];
 
-let pendingLaenderMode = null;
+let pendingMode = null;
 let hoverLatLng = null;
 let wheelLock = false;
 
@@ -69,17 +69,75 @@ function isCountryType(type) {
   return ['Sovereign country', 'Country', 'Disputed'].includes(type);
 }
 
+// Städte- und Sehenswürdigkeitenmodi: Welt + jeder Kontinent
+const STAEDTE_MODES = {
+  world: { label: 'Welt — alle Städte', filter: () => true, bounds: WORLD_BOUNDS },
+};
+const SEHENSWUERDIGKEITEN_MODES = {
+  world: { label: 'Welt — alle Sehenswürdigkeiten', filter: () => true, bounds: WORLD_BOUNDS },
+};
+['Europe', 'Asia', 'Africa', 'North America', 'South America', 'Oceania'].forEach(cont => {
+  const k = cont.toLowerCase().replace(' ', '');
+  STAEDTE_MODES[`${k}_c`] = {
+    label: `${CONTINENT_DE[cont]} — Städte`,
+    filter: (item) => item.continent === cont,
+    bounds: CONTINENT_BOUNDS[cont],
+  };
+  SEHENSWUERDIGKEITEN_MODES[`${k}_c`] = {
+    label: `${CONTINENT_DE[cont]} — Sehenswürdigkeiten`,
+    filter: (item) => item.continent === cont,
+    bounds: CONTINENT_BOUNDS[cont],
+  };
+});
+
+// Flaggenquiz nutzt die gleichen Modi wie Länderquiz (Filter sind ISO-basiert)
+const QUIZ_MODES = {
+  laender: LAENDER_MODES,
+  flaggen: LAENDER_MODES,
+  staedte: STAEDTE_MODES,
+  sehenswuerdigkeiten: SEHENSWUERDIGKEITEN_MODES,
+};
+
+let pendingQuizType = null;
+
+// Heuristische Kontinent-Zuordnung anhand lat/lng (für Städte/Sehenswürdigkeiten).
+function continentOf(lat, lng) {
+  // Pazifik-Ozeanien (positiv > 110 oder negativ < -150)
+  if ((lng > 110 || lng < -150) && lat < 16 && lat > -50) return 'Oceania';
+  // Amerikas (west von -30)
+  if (lng < -30) {
+    if (lat < 13) return 'South America';
+    return 'North America';
+  }
+  // Mittlerer Osten oberhalb Arabische Halbinsel
+  if (lat >= 25 && lat < 50 && lng >= 35 && lng <= 60) return 'Asia';
+  // Arabische Halbinsel
+  if (lat >= 12 && lat < 30 && lng >= 43 && lng <= 60) return 'Asia';
+  // Nordafrika (westlich vom Roten Meer)
+  if (lat > -37 && lat < 38 && lng > -20 && lng < 33) return 'Africa';
+  // Ostafrika (Horn etc.)
+  if (lat > -10 && lat < 22 && lng >= 33 && lng < 52) return 'Africa';
+  // Sub-Sahara / Südliches Afrika
+  if (lat <= 0 && lat > -37 && lng >= -20 && lng <= 52) return 'Africa';
+  // Europa (Russland west)
+  if (lat > 35 && lat < 72 && lng > -25 && lng < 60) return 'Europe';
+  // Asien Catch-all
+  if (lat > -12 && lng > 25 && lat < 78) return 'Asia';
+  return null;
+}
+
 const IS_TOUCH = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-const FIT_PADDING_DEFAULT = { paddingTopLeft: [40, 90], paddingBottomRight: [40, 40] };
+const FIT_PADDING_DEFAULT = { paddingTopLeft: [40, 50], paddingBottomRight: [40, 20] };
+// Länder mit klar erkennbarer Hauptinsel/-fläche, die keinen extra Dot brauchen.
+const NO_DOT_ISO = new Set(['AU', 'PG', 'NZ', 'FJ', 'NC']);
 
 function getModePadding() {
-  if (quizState.type === 'laender' && pendingLaenderMode) {
-    if (pendingLaenderMode.startsWith('northamerica_')) {
-      return { paddingTopLeft: [40, 30], paddingBottomRight: [40, 50] };
-    }
-    if (pendingLaenderMode.startsWith('oceania_')) {
-      return { paddingTopLeft: [40, 100], paddingBottomRight: [40, 25] };
-    }
+  const mode = pendingMode || '';
+  if (mode.startsWith('northamerica_')) {
+    return { paddingTopLeft: [40, 30], paddingBottomRight: [40, 50] };
+  }
+  if (mode.startsWith('oceania_')) {
+    return { paddingTopLeft: [40, 100], paddingBottomRight: [40, 25] };
   }
   return FIT_PADDING_DEFAULT;
 }
@@ -103,19 +161,19 @@ function showScreen(id) {
   }
 }
 
-function chooseLaenderDifficulty() {
-  populateContinentList();
+function chooseQuizDifficulty(quizType) {
+  populateDiffScreen(quizType);
   showScreen('diffScreen');
 }
 
-function startLaenderWith(mode) {
-  pendingLaenderMode = mode;
-  openQuiz('laender');
+function startWithMode(mode) {
+  pendingMode = mode;
+  openQuiz(pendingQuizType);
 }
 
 function openQuiz(quizType) {
-  if (quizType === 'laender' && !pendingLaenderMode) {
-    chooseLaenderDifficulty();
+  if (QUIZ_MODES[quizType] && !pendingMode) {
+    chooseQuizDifficulty(quizType);
     return;
   }
 
@@ -124,9 +182,11 @@ function openQuiz(quizType) {
 
   let title = cfg.title;
   let desc = cfg.description;
-  if (quizType === 'laender' && pendingLaenderMode) {
-    title = cfg.title + ' — ' + LAENDER_MODES[pendingLaenderMode].label.replace(/^.*— /, '');
-    desc = `Modus: ${LAENDER_MODES[pendingLaenderMode].label}`;
+  const modes = QUIZ_MODES[quizType];
+  if (modes && pendingMode && modes[pendingMode]) {
+    const modeLabel = modes[pendingMode].label;
+    title = cfg.title + ' — ' + modeLabel.replace(/^.*— /, '');
+    desc = `Modus: ${modeLabel}`;
   }
 
   document.getElementById('startTitle').textContent = title;
@@ -147,9 +207,11 @@ function exitQuiz() {
   quizState.answering = false;
   hideCursorTip();
   clearMarkers();
-  const wasLaender = quizState.type === 'laender';
-  pendingLaenderMode = null;
-  if (wasLaender) {
+  const type = quizState.type;
+  const needsModeAuswahl = QUIZ_MODES[type] !== undefined;
+  pendingMode = null;
+  if (needsModeAuswahl) {
+    populateDiffScreen(type);
     showScreen('diffScreen');
   } else {
     showScreen('homeScreen');
@@ -184,9 +246,10 @@ function initMap() {
 
 function getAllowedRegions() {
   const allAll = ['Karibik', 'Nordamerika', 'Südamerika', 'Zentralamerika', 'Europa', 'Afrika', 'Asien', 'Ozeanien'];
-  if (quizState.type !== 'laender') return allAll;
-  const mode = pendingLaenderMode || '';
-  if (mode.startsWith('world_')) return allAll;
+  const mode = pendingMode || '';
+  // Welt-Modus (oder kein Modus — z.B. Wasserquiz): alle Regionen
+  if (!mode || mode === 'world' || mode.startsWith('world_')) return allAll;
+  // Kontinent-Modi: nur Nordamerika → Karibik erlaubt
   if (mode.startsWith('northamerica_')) return ['Karibik'];
   return [];
 }
@@ -322,9 +385,9 @@ async function beginQuiz() {
   initMap();
 
   const type = quizState.type;
-
-  if (type === 'laender' && pendingLaenderMode) {
-    const mode = LAENDER_MODES[pendingLaenderMode];
+  const modes = QUIZ_MODES[type];
+  if (modes && pendingMode && modes[pendingMode]) {
+    const mode = modes[pendingMode];
     quizState.modeFilter = mode.filter;
     quizState.modeBounds = mode.bounds;
   } else {
@@ -385,7 +448,9 @@ function buildIsInPool(type) {
       const iso2raw = props.ISO_A2_EH || props.ISO_A2 || '';
       const iso2 = (iso2raw && iso2raw !== '-99' && iso2raw.length === 2) ? iso2raw : '';
       const nameEn = props.NAME_LONG || props.NAME || 'Unknown';
-      return !!(iso2 && nameEn && nameEn !== 'Unknown');
+      if (!iso2 || !nameEn || nameEn === 'Unknown') return false;
+      if (!quizState.modeFilter) return true;
+      return quizState.modeFilter(props, iso2);
     };
   }
   return null;
@@ -442,13 +507,17 @@ async function renderCountries(interactive, isInPool) {
       entry.dotMarkers = [];
       entry.hitMarkers = [];
       try {
+        const iso = (entry.iso2 || '').toUpperCase();
+        // Diese Länder haben mindestens eine klar grosse Hauptinsel —
+        // brauchen keinen extra Klick-Punkt: Australien, PNG, NZ, Fidschi, Neukaledonien.
+        if (NO_DOT_ISO.has(iso)) return;
         const geom = entry.layer.feature && entry.layer.feature.geometry;
         const maxPolyDim = maxPolygonDim(geom);
-        // Ein Punkt pro Land — nur wenn jedes Einzelpolygon klein ist
-        // (Vatikan, Singapur, Kiribati, Marshall, FSM, Tuvalu, Malediven, …).
-        // Länder mit mindestens einem grösseren Polygon (PNG, NZ, Australien,
-        // Salomonen) brauchen keinen Punkt, das Polygon ist gross genug.
-        if (maxPolyDim < 1.5) {
+        // Polygon-Schwelle 3°: deckt alle kleinen Inselstaaten ab — Kap Verde,
+        // Falkland, Bahamas, Komoren, Malediven, Marshall, Kiribati, FSM, Tonga,
+        // Tuvalu, Französisch-Polynesien usw. — und schliesst grössere Inseln
+        // (Madagaskar, Sri Lanka, Island, Britannien) aus.
+        if (maxPolyDim < 3) {
           const bounds = entry.layer.getBounds();
           const isOceania = entry.props && entry.props.CONTINENT === 'Oceania';
           addCountryDot(entry, bounds.getCenter(), isOceania ? 18 : 12);
@@ -457,6 +526,7 @@ async function renderCountries(interactive, isInPool) {
     });
   }
 }
+
 
 function maxPolygonDim(geometry) {
   if (!geometry || !geometry.coordinates) return Infinity;
@@ -525,8 +595,9 @@ function tinyDotStyle() {
 function renderCities() {
   cityMarkers = [];
   CITIES.forEach(([name, lat, lng]) => {
+    const continent = continentOf(lat, lng);
     const m = L.circleMarker([lat, lng], cityDefaultStyle()).addTo(map);
-    const entry = { name, lat, lng, marker: m };
+    const entry = { name, lat, lng, continent, marker: m };
     cityMarkers.push(entry);
     activeLayers.push(m);
     m.on('click', () => handleClick(entry));
@@ -580,8 +651,9 @@ function waterDefaultStyle(type) {
 function renderLandmarks() {
   landmarkMarkers = [];
   LANDMARKS.forEach(([name, lat, lng]) => {
+    const continent = continentOf(lat, lng);
     const m = L.circleMarker([lat, lng], landmarkDefaultStyle()).addTo(map);
-    const entry = { name, lat, lng, marker: m };
+    const entry = { name, lat, lng, continent, marker: m };
     landmarkMarkers.push(entry);
     activeLayers.push(m);
     m.on('click', () => handleClick(entry));
@@ -626,11 +698,11 @@ function buildQuestions(type) {
       return true;
     });
   } else if (type === 'staedte') {
-    pool = [...cityMarkers];
+    pool = cityMarkers.filter(c => !quizState.modeFilter || quizState.modeFilter(c));
   } else if (type === 'wasser') {
     pool = [...waterMarkers];
   } else if (type === 'sehenswuerdigkeiten') {
-    pool = [...landmarkMarkers];
+    pool = landmarkMarkers.filter(l => !quizState.modeFilter || quizState.modeFilter(l));
   }
   quizState.questions = shuffle(pool);
 }
@@ -809,27 +881,77 @@ document.addEventListener('mousemove', (e) => {
   tip.style.top = e.clientY + 'px';
 });
 
-// ---- CONTINENT LIST ----
-function populateContinentList() {
-  const list = document.getElementById('continentList');
-  if (list.children.length > 0) return;
+// ---- DIFF SCREEN ----
+function populateDiffScreen(quizType) {
+  pendingQuizType = quizType;
+  const title = QUIZ_CONFIG[quizType].title;
+  document.getElementById('diffTitle').textContent = title;
 
+  const worldCards = document.getElementById('worldModeCards');
+  const continentList = document.getElementById('continentList');
+
+  // World section
+  worldCards.innerHTML = '';
+  if (quizType === 'laender' || quizType === 'flaggen') {
+    worldCards.innerHTML = `
+      <button class="diff-card" data-mode="world_easy">
+        <div class="diff-badge diff-easy">Leicht</div>
+        <h3>100 größte</h3>
+        <p>Die größten Länder der Erde</p>
+      </button>
+      <button class="diff-card" data-mode="world_medium">
+        <div class="diff-badge diff-medium">Mittel</div>
+        <h3>196 anerkannte</h3>
+        <p>UN-anerkannte Staaten</p>
+      </button>
+      <button class="diff-card" data-mode="world_hard">
+        <div class="diff-badge diff-hard">Schwer</div>
+        <h3>Alle Länder</h3>
+        <p>Souveräne Staaten</p>
+      </button>
+      <button class="diff-card" data-mode="world_expert">
+        <div class="diff-badge diff-expert">Sehr schwer</div>
+        <h3>Alle 258</h3>
+        <p>Länder + Territorien</p>
+      </button>
+    `;
+  } else {
+    const count = quizType === 'staedte' ? CITIES.length : LANDMARKS.length;
+    const label = quizType === 'staedte' ? 'Alle Städte' : 'Alle Sehenswürdigkeiten';
+    worldCards.innerHTML = `
+      <button class="diff-card" data-mode="world">
+        <div class="diff-badge diff-medium">Welt</div>
+        <h3>${label}</h3>
+        <p>Alle ${count} Einträge</p>
+      </button>
+    `;
+  }
+
+  // Continent section
+  continentList.innerHTML = '';
   Object.entries(CONTINENT_DE).forEach(([engName, deName]) => {
     const key = engName.toLowerCase().replace(' ', '');
+    let btns;
+    if (quizType === 'laender' || quizType === 'flaggen') {
+      btns = `
+        <button class="cont-btn" data-mode="${key}_c">Länder</button>
+        <button class="cont-btn" data-mode="${key}_t">+ Territorien</button>
+      `;
+    } else {
+      btns = `<button class="cont-btn" data-mode="${key}_c">Spielen</button>`;
+    }
     const row = document.createElement('div');
     row.className = 'continent-row';
     row.innerHTML = `
       <span class="cont-name">${deName}</span>
-      <div class="cont-btns">
-        <button class="cont-btn" data-mode="${key}_c">Länder</button>
-        <button class="cont-btn" data-mode="${key}_t">+ Territorien</button>
-      </div>
+      <div class="cont-btns">${btns}</div>
     `;
-    list.appendChild(row);
+    continentList.appendChild(row);
   });
 
-  list.querySelectorAll('[data-mode]').forEach(btn => {
-    btn.addEventListener('click', () => startLaenderWith(btn.dataset.mode));
+  // Wire all data-mode buttons
+  document.querySelectorAll('#diffScreen [data-mode]').forEach(btn => {
+    btn.addEventListener('click', () => startWithMode(btn.dataset.mode));
   });
 }
 
@@ -850,17 +972,10 @@ function setupScrollAnimations() {
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.feature-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const q = btn.dataset.quiz;
-      if (q === 'laender') chooseLaenderDifficulty();
-      else openQuiz(q);
+      openQuiz(btn.dataset.quiz);
     });
   });
 
-  document.querySelectorAll('#diffScreen .diff-card').forEach(card => {
-    card.addEventListener('click', () => startLaenderWith(card.dataset.mode));
-  });
-
-  populateContinentList();
   setupScrollAnimations();
 
   const portfolioBtn = document.querySelector('.portfolio-fixed');
