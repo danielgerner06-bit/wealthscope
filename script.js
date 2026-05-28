@@ -90,11 +90,20 @@ const SEHENSWUERDIGKEITEN_MODES = {
   };
 });
 
+// Wasserquiz-Modi: Welt + nach Gewässertyp
+const WASSER_MODES = {
+  world:   { label: 'Welt — alle Gewässer', filter: () => true, bounds: WORLD_BOUNDS },
+  ozeane:  { label: 'Ozeane & Meere', filter: (w) => w.type === 'ocean' || w.type === 'sea', bounds: WORLD_BOUNDS },
+  seen:    { label: 'Seen', filter: (w) => w.type === 'lake', bounds: WORLD_BOUNDS },
+  fluesse: { label: 'Flüsse', filter: (w) => w.type === 'river', bounds: WORLD_BOUNDS },
+};
+
 // Flaggenquiz nutzt die gleichen Modi wie Länderquiz (Filter sind ISO-basiert)
 const QUIZ_MODES = {
   laender: LAENDER_MODES,
   flaggen: LAENDER_MODES,
   staedte: STAEDTE_MODES,
+  wasser: WASSER_MODES,
   sehenswuerdigkeiten: SEHENSWUERDIGKEITEN_MODES,
 };
 
@@ -613,7 +622,7 @@ function renderCities() {
 }
 
 function cityDefaultStyle() {
-  return { radius: 4, fillColor: MAP_COLORS.city, color: MAP_COLORS.cityBorder, weight: 1.2, opacity: 1, fillOpacity: 0.9 };
+  return { radius: 4, fillColor: MAP_COLORS.dot, color: MAP_COLORS.dotBorder, weight: 1.2, opacity: 1, fillOpacity: 0.95 };
 }
 
 // ---- WATERS ----
@@ -638,12 +647,11 @@ function renderWaters() {
 }
 
 function waterDefaultStyle(type) {
-  const colors = { ocean: MAP_COLORS.ocean, sea: MAP_COLORS.sea, lake: MAP_COLORS.lake, river: MAP_COLORS.river };
-  const sizes  = { ocean: 10, sea: 8, lake: 6, river: 5 };
+  const sizes = { ocean: 10, sea: 8, lake: 6, river: 5 };
   return {
     radius: sizes[type] || 5,
-    fillColor: colors[type] || MAP_COLORS.sea,
-    color: '#fff', weight: 1.2, opacity: 1, fillOpacity: 0.85,
+    fillColor: MAP_COLORS.dot,
+    color: MAP_COLORS.dotBorder, weight: 1.2, opacity: 1, fillOpacity: 0.95,
   };
 }
 
@@ -669,7 +677,7 @@ function renderLandmarks() {
 }
 
 function landmarkDefaultStyle() {
-  return { radius: 5, fillColor: MAP_COLORS.landmark, color: MAP_COLORS.landmarkBorder, weight: 1.2, opacity: 1, fillOpacity: 0.9 };
+  return { radius: 5, fillColor: MAP_COLORS.dot, color: MAP_COLORS.dotBorder, weight: 1.2, opacity: 1, fillOpacity: 0.95 };
 }
 
 // ---- CLEANUP ----
@@ -700,7 +708,7 @@ function buildQuestions(type) {
   } else if (type === 'staedte') {
     pool = cityMarkers.filter(c => !quizState.modeFilter || quizState.modeFilter(c));
   } else if (type === 'wasser') {
-    pool = [...waterMarkers];
+    pool = waterMarkers.filter(w => !quizState.modeFilter || quizState.modeFilter(w));
   } else if (type === 'sehenswuerdigkeiten') {
     pool = landmarkMarkers.filter(l => !quizState.modeFilter || quizState.modeFilter(l));
   }
@@ -884,14 +892,15 @@ document.addEventListener('mousemove', (e) => {
 // ---- DIFF SCREEN ----
 function populateDiffScreen(quizType) {
   pendingQuizType = quizType;
-  const title = QUIZ_CONFIG[quizType].title;
-  document.getElementById('diffTitle').textContent = title;
+  document.getElementById('diffTitle').textContent = QUIZ_CONFIG[quizType].title;
 
   const worldCards = document.getElementById('worldModeCards');
   const continentList = document.getElementById('continentList');
+  const continentSection = document.getElementById('continentSection');
 
-  // World section
   worldCards.innerHTML = '';
+  continentList.innerHTML = '';
+
   if (quizType === 'laender' || quizType === 'flaggen') {
     worldCards.innerHTML = `
       <button class="diff-card" data-mode="world_easy">
@@ -915,7 +924,34 @@ function populateDiffScreen(quizType) {
         <p>Länder + Territorien</p>
       </button>
     `;
+    continentSection.style.display = '';
+    populateContinentRows(continentList, true);
+  } else if (quizType === 'wasser') {
+    worldCards.innerHTML = `
+      <button class="diff-card" data-mode="world">
+        <div class="diff-badge diff-medium">Welt</div>
+        <h3>Alle Gewässer</h3>
+        <p>Alle ${WATERS.length} Gewässer</p>
+      </button>
+      <button class="diff-card" data-mode="ozeane">
+        <div class="diff-badge diff-easy">Ozeane</div>
+        <h3>Ozeane & Meere</h3>
+        <p>Die großen Gewässer</p>
+      </button>
+      <button class="diff-card" data-mode="seen">
+        <div class="diff-badge diff-medium">Seen</div>
+        <h3>Seen</h3>
+        <p>Binnengewässer</p>
+      </button>
+      <button class="diff-card" data-mode="fluesse">
+        <div class="diff-badge diff-hard">Flüsse</div>
+        <h3>Flüsse</h3>
+        <p>Die großen Ströme</p>
+      </button>
+    `;
+    continentSection.style.display = 'none';
   } else {
+    // staedte / sehenswuerdigkeiten
     const count = quizType === 'staedte' ? CITIES.length : LANDMARKS.length;
     const label = quizType === 'staedte' ? 'Alle Städte' : 'Alle Sehenswürdigkeiten';
     worldCards.innerHTML = `
@@ -925,21 +961,22 @@ function populateDiffScreen(quizType) {
         <p>Alle ${count} Einträge</p>
       </button>
     `;
+    continentSection.style.display = '';
+    populateContinentRows(continentList, false);
   }
 
-  // Continent section
-  continentList.innerHTML = '';
+  document.querySelectorAll('#diffScreen [data-mode]').forEach(btn => {
+    btn.addEventListener('click', () => startWithMode(btn.dataset.mode));
+  });
+}
+
+function populateContinentRows(continentList, isCountryQuiz) {
   Object.entries(CONTINENT_DE).forEach(([engName, deName]) => {
     const key = engName.toLowerCase().replace(' ', '');
-    let btns;
-    if (quizType === 'laender' || quizType === 'flaggen') {
-      btns = `
-        <button class="cont-btn" data-mode="${key}_c">Länder</button>
-        <button class="cont-btn" data-mode="${key}_t">+ Territorien</button>
-      `;
-    } else {
-      btns = `<button class="cont-btn" data-mode="${key}_c">Spielen</button>`;
-    }
+    const btns = isCountryQuiz
+      ? `<button class="cont-btn" data-mode="${key}_c">Länder</button>
+         <button class="cont-btn" data-mode="${key}_t">+ Territorien</button>`
+      : `<button class="cont-btn" data-mode="${key}_c">Spielen</button>`;
     const row = document.createElement('div');
     row.className = 'continent-row';
     row.innerHTML = `
@@ -947,11 +984,6 @@ function populateDiffScreen(quizType) {
       <div class="cont-btns">${btns}</div>
     `;
     continentList.appendChild(row);
-  });
-
-  // Wire all data-mode buttons
-  document.querySelectorAll('#diffScreen [data-mode]').forEach(btn => {
-    btn.addEventListener('click', () => startWithMode(btn.dataset.mode));
   });
 }
 

@@ -188,8 +188,8 @@ const CITIES = [
 const WATERS = [
   // Ozeane
   ["Pazifik", 0, -150, "ocean"], ["Atlantik", 0, -30, "ocean"],
-  ["Indischer Ozean", -20, 75, "ocean"], ["Arktischer Ozean", 85, 0, "ocean"],
-  ["Südpolarmeer", -65, 0, "ocean"],
+  ["Indischer Ozean", -20, 75, "ocean"], ["Arktischer Ozean", 70, -120, "ocean"],
+  ["Südpolarmeer", -54, 20, "ocean"],
 
   // Meere & Golfe
   ["Mittelmeer", 35.5, 18, "sea"], ["Schwarzes Meer", 43.5, 34, "sea"],
@@ -197,12 +197,12 @@ const WATERS = [
   ["Nordsee", 56, 3, "sea"], ["Karibisches Meer", 15, -75, "sea"],
   ["Arabisches Meer", 15, 65, "sea"], ["Golf von Bengalen", 14, 88, "sea"],
   ["Südchinesisches Meer", 13, 115, "sea"], ["Ostchinesisches Meer", 29, 125, "sea"],
-  ["Japanisches Meer", 40, 134, "sea"], ["Beringmeer", 58, -178, "sea"],
+  ["Japanisches Meer", 40, 134, "sea"], ["Beringmeer", 60, 187, "sea"],
   ["Ochotskisches Meer", 55, 150, "sea"], ["Golf von Mexiko", 25, -90, "sea"],
   ["Hudson Bay", 60, -85, "sea"], ["Persischer Golf", 27, 51, "sea"],
   ["Korallenmeer", -18, 152, "sea"], ["Tasmansee", -40, 160, "sea"],
   ["Kaspisches Meer", 42, 51, "sea"], ["Adriatisches Meer", 43, 16, "sea"],
-  ["Ägäisches Meer", 39, 25, "sea"], ["Karasee", 75, 65, "sea"],
+  ["Ägäisches Meer", 39, 25, "sea"], ["Karasee", 71, 68, "sea"],
 
   // Seen
   ["Oberer See", 47.7, -88, "lake"], ["Huronsee", 45, -82.4, "lake"],
