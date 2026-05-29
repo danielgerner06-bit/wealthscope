@@ -71,7 +71,8 @@ function isCountryType(type) {
 
 // Städte- und Sehenswürdigkeitenmodi: Welt + jeder Kontinent
 const STAEDTE_MODES = {
-  world: { label: 'Welt — alle Städte', filter: () => true, bounds: WORLD_BOUNDS },
+  world:   { label: 'Welt — alle Städte', filter: () => true, bounds: WORLD_BOUNDS },
+  world_h: { label: 'Welt — Hauptstädte', filter: (c) => c.isCapital, bounds: WORLD_BOUNDS },
 };
 const SEHENSWUERDIGKEITEN_MODES = {
   world: { label: 'Welt — alle Sehenswürdigkeiten', filter: () => true, bounds: WORLD_BOUNDS },
@@ -81,6 +82,11 @@ const SEHENSWUERDIGKEITEN_MODES = {
   STAEDTE_MODES[`${k}_c`] = {
     label: `${CONTINENT_DE[cont]} — Städte`,
     filter: (item) => item.continent === cont,
+    bounds: CONTINENT_BOUNDS[cont],
+  };
+  STAEDTE_MODES[`${k}_h`] = {
+    label: `${CONTINENT_DE[cont]} — Hauptstädte`,
+    filter: (item) => item.continent === cont && item.isCapital,
     bounds: CONTINENT_BOUNDS[cont],
   };
   SEHENSWUERDIGKEITEN_MODES[`${k}_c`] = {
@@ -162,12 +168,12 @@ function getRegionPadding(region) {
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  document.body.classList.toggle('locked', id !== 'homeScreen');
+  // homeScreen (Scroll-Landing), calcScreen und hubScreen brauchen Scroll
+  const scrollable = id === 'homeScreen' || id === 'calcScreen' || id === 'hubScreen';
+  document.body.classList.toggle('locked', !scrollable);
 
-  const portfolioBtn = document.querySelector('.portfolio-fixed');
-  if (portfolioBtn) {
-    portfolioBtn.classList.toggle('visible', id === 'homeScreen');
-  }
+  const hubBack = document.querySelector('.hub-back');
+  if (hubBack) hubBack.classList.toggle('visible', id === 'homeScreen');
 }
 
 function chooseQuizDifficulty(quizType) {
@@ -605,8 +611,9 @@ function renderCities() {
   cityMarkers = [];
   CITIES.forEach(([name, lat, lng]) => {
     const continent = continentOf(lat, lng);
+    const isCapital = !NON_CAPITAL_CITIES.has(name);
     const m = L.circleMarker([lat, lng], cityDefaultStyle()).addTo(map);
-    const entry = { name, lat, lng, continent, marker: m };
+    const entry = { name, lat, lng, continent, isCapital, marker: m };
     cityMarkers.push(entry);
     activeLayers.push(m);
     m.on('click', () => handleClick(entry));
@@ -925,7 +932,7 @@ function populateDiffScreen(quizType) {
       </button>
     `;
     continentSection.style.display = '';
-    populateContinentRows(continentList, true);
+    populateContinentRows(continentList, 'laender');
   } else if (quizType === 'wasser') {
     worldCards.innerHTML = `
       <button class="diff-card" data-mode="world">
@@ -950,19 +957,32 @@ function populateDiffScreen(quizType) {
       </button>
     `;
     continentSection.style.display = 'none';
-  } else {
-    // staedte / sehenswuerdigkeiten
-    const count = quizType === 'staedte' ? CITIES.length : LANDMARKS.length;
-    const label = quizType === 'staedte' ? 'Alle Städte' : 'Alle Sehenswürdigkeiten';
+  } else if (quizType === 'staedte') {
     worldCards.innerHTML = `
       <button class="diff-card" data-mode="world">
         <div class="diff-badge diff-medium">Welt</div>
-        <h3>${label}</h3>
-        <p>Alle ${count} Einträge</p>
+        <h3>Alle Städte</h3>
+        <p>Alle ${CITIES.length} Städte</p>
+      </button>
+      <button class="diff-card" data-mode="world_h">
+        <div class="diff-badge diff-easy">Hauptstädte</div>
+        <h3>Hauptstädte</h3>
+        <p>Nur Landeshauptstädte</p>
       </button>
     `;
     continentSection.style.display = '';
-    populateContinentRows(continentList, false);
+    populateContinentRows(continentList, 'staedte');
+  } else {
+    // sehenswuerdigkeiten
+    worldCards.innerHTML = `
+      <button class="diff-card" data-mode="world">
+        <div class="diff-badge diff-medium">Welt</div>
+        <h3>Alle Sehenswürdigkeiten</h3>
+        <p>Alle ${LANDMARKS.length} Einträge</p>
+      </button>
+    `;
+    continentSection.style.display = '';
+    populateContinentRows(continentList, 'sehenswuerdigkeiten');
   }
 
   document.querySelectorAll('#diffScreen [data-mode]').forEach(btn => {
@@ -970,13 +990,19 @@ function populateDiffScreen(quizType) {
   });
 }
 
-function populateContinentRows(continentList, isCountryQuiz) {
+function populateContinentRows(continentList, kind) {
   Object.entries(CONTINENT_DE).forEach(([engName, deName]) => {
     const key = engName.toLowerCase().replace(' ', '');
-    const btns = isCountryQuiz
-      ? `<button class="cont-btn" data-mode="${key}_c">Länder</button>
-         <button class="cont-btn" data-mode="${key}_t">+ Territorien</button>`
-      : `<button class="cont-btn" data-mode="${key}_c">Spielen</button>`;
+    let btns;
+    if (kind === 'laender') {
+      btns = `<button class="cont-btn" data-mode="${key}_c">Länder</button>
+              <button class="cont-btn" data-mode="${key}_t">+ Territorien</button>`;
+    } else if (kind === 'staedte') {
+      btns = `<button class="cont-btn" data-mode="${key}_c">Städte</button>
+              <button class="cont-btn" data-mode="${key}_h">Hauptstädte</button>`;
+    } else {
+      btns = `<button class="cont-btn" data-mode="${key}_c">Spielen</button>`;
+    }
     const row = document.createElement('div');
     row.className = 'continent-row';
     row.innerHTML = `
@@ -1008,10 +1034,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  setupScrollAnimations();
+  // Hub-Karten
+  document.querySelectorAll('[data-go]').forEach(el => {
+    el.addEventListener('click', () => {
+      const go = el.dataset.go;
+      if (go === 'geo') {
+        showScreen('homeScreen');
+      } else if (go === 'calc') {
+        showScreen('calcScreen');
+        if (typeof initCalc === 'function') initCalc();
+      }
+    });
+  });
 
-  const portfolioBtn = document.querySelector('.portfolio-fixed');
-  if (portfolioBtn) portfolioBtn.classList.add('visible');
+  setupScrollAnimations();
 });
 
 window.addEventListener('resize', () => {

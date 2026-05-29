@@ -103,6 +103,16 @@ const REGION_BOUNDS = {
 // Reihenfolge: spezifischere/küstennahe Regionen zuerst (Karibik vor Zentralamerika)
 const REGION_ORDER = ['Karibik', 'Ozeanien', 'Zentralamerika', 'Europa', 'Afrika', 'Südamerika', 'Nordamerika', 'Asien'];
 
+// === NICHT-HAUPTSTÄDTE (alle übrigen Städte gelten als Hauptstadt) ===
+const NON_CAPITAL_CITIES = new Set([
+  "Hamburg", "München", "Barcelona", "Mailand", "Zürich", "Sankt Petersburg", "Istanbul",
+  "Osaka", "Shanghai", "Hongkong", "Mumbai", "Kolkata", "Karatschi", "Dubai",
+  "Lagos", "Johannesburg", "Kapstadt", "Casablanca", "Daressalam",
+  "New York", "Los Angeles", "Chicago", "Houston", "Toronto", "Vancouver", "Montreal",
+  "São Paulo", "Rio de Janeiro",
+  "Sydney", "Melbourne", "Brisbane", "Perth", "Auckland",
+]);
+
 // === STÄDTE ===
 const CITIES = [
   // Europa
