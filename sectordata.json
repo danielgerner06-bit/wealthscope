@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-01",
-  "updatedAt": "2026-06-01T20:44:19.781Z",
+  "updatedAt": "2026-06-01T22:16:52.019Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -534,13 +534,17 @@
     "health": {
       "text": "Der Gesundheits- und Pharmasektor zeigt sich nach einer schwachen Sechsmonatsperformance von -5,65% in den letzten 30 Tagen mit einem Kursplus von +3,91% deutlich erholt, was signifikant über dem historischen 30-Tage-Schnitt von +0,87% liegt. Diese kurzfristige Stärke könnte auf eine Rotation in defensivere Sektoren zurückzuführen sein, da die Unsicherheiten bezüglich des globalen Wirtschaftswachstums und der Zinsentwicklung zunehmen. Trotzdem fehlen derzeit markante Analysten-Favoriten, was auf eine weiterhin selektive Betrachtung und das Ausbleiben eines breiten Investitionszyklus hindeutet.",
       "date": "2026-06-01"
+    },
+    "cons_def": {
+      "text": "Der Sektor \"Konsum defensiv\" zeigt sich am globalen Aktienmarkt aktuell stabil, jedoch mit einem leichten Rückgang von -0.2% in den letzten 30 Tagen, was unter dem historischen Durchschnitt von +0.43% liegt. Diese leicht unterdurchschnittliche Performance könnte auf die anhaltend hohen Zinsen zurückzuführen sein, die zwar primär Wachstumsunternehmen belasten, aber auch defensive Sektoren marginal beeinflussen, da Anleger höhere risikofreie Renditen finden. Über sechs Monate bleibt der Sektor mit +6.21% im positiven Bereich, was seine konjunkturunabhängige Resilienz unterstreicht. Eine fehlende Präsenz von hoch bewerteten Analysten-Favoriten deutet auf eine derzeit geringe Spekulationsfreudigkeit in diesem stabilen, aber unspektakulären Segment hin.",
+      "date": "2026-06-01"
     }
   },
   "scan": {
     "universe": 18419,
-    "scanned": 2400,
-    "lastCursor": 2400,
-    "candCursor": 12,
+    "scanned": 2700,
+    "lastCursor": 2700,
+    "candCursor": 26,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -581,7 +585,7 @@
       "Framery Group Oyj",
       "Adeia Inc."
     ],
-    "noteCursor": 6,
-    "focusCursor": 2
+    "noteCursor": 9,
+    "focusCursor": 4
   }
 }
