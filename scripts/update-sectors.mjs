@@ -6,7 +6,7 @@
 import fs from 'node:fs';
 
 const KEY = process.env.GEMINI_API_KEY;
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const OUT = 'sectordata.json';
 
 if (!KEY) {
@@ -73,12 +73,15 @@ async function callGemini() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { temperature: 0.4, responseMimeType: 'application/json' },
+      generationConfig: { temperature: 0.4, responseMimeType: 'application/json', maxOutputTokens: 16384 },
     }),
   });
   if (!res.ok) throw new Error('Gemini HTTP ' + res.status + ': ' + (await res.text()).slice(0, 500));
   const json = await res.json();
-  const text = json?.candidates?.[0]?.content?.parts?.[0]?.text;
+  const cand = json?.candidates?.[0];
+  // Reasoning-Modelle (2.5) können mehrere parts liefern; nimm den Text-Part.
+  const text = cand?.content?.parts?.map(p => p.text).filter(Boolean).join('') || '';
+  if (!text && cand?.finishReason) throw new Error('Gemini ohne Text, finishReason=' + cand.finishReason);
   if (!text) throw new Error('Leere Gemini-Antwort');
   return JSON.parse(text);
 }
