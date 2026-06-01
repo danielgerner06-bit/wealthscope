@@ -1,5 +1,5 @@
 // Finnhub-Anbindung: Sektor-Performance (ETFs) + rollierender Analysten-Scan.
-import { SECTORS, sectorForFinnhub } from './sectors.mjs';
+import { sectorForFinnhub } from './sectors.mjs';
 
 const BASE = 'https://finnhub.io/api/v1';
 
@@ -22,32 +22,6 @@ async function fh(path, key) {
   }
   if (!res.ok) throw new Error('Finnhub HTTP ' + res.status + ' (' + path.split('?')[0] + ')');
   return res.json();
-}
-
-/* ---------- Sektor-Performance (30 Tage) über Sektor-ETFs ---------- */
-export async function fetchSectorPerformance(key) {
-  const to = Math.floor(Date.now() / 1000);
-  const from = to - 40 * 24 * 3600; // ~40 Tage Puffer für 30 Handelstage
-  const out = [];
-  for (const s of SECTORS) {
-    try {
-      // /quote liefert aktuellen Kurs (c) und Vortagesschluss; für 30T brauchen wir Kerzen.
-      const candle = await fh(`/stock/candle?symbol=${s.etf}&resolution=D&from=${from}&to=${to}`, key);
-      if (candle.s === 'ok' && Array.isArray(candle.c) && candle.c.length > 1) {
-        const close = candle.c;
-        const last = close[close.length - 1];
-        // 30 Kalendertage ~ 21 Handelstage zurück
-        const refIdx = Math.max(0, close.length - 22);
-        const ref = close[refIdx];
-        out.push({ id: s.id, perf: +(((last - ref) / ref) * 100).toFixed(2) });
-      } else {
-        out.push({ id: s.id, perf: 0 });
-      }
-    } catch (e) {
-      out.push({ id: s.id, perf: 0 });
-    }
-  }
-  return out;
 }
 
 /* ---------- Aktien-Universum (US-Common-Stocks) ---------- */

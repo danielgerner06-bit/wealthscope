@@ -14,7 +14,8 @@
 import fs from 'node:fs';
 import { SECTORS } from './sectors.mjs';
 import { buildInsight } from './insight.mjs';
-import { fetchSectorPerformance, scanAnalystStocks } from './finnhub.mjs';
+import { scanAnalystStocks } from './finnhub.mjs';
+import { fetchSectorPerformance } from './prices.mjs';
 import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 
@@ -48,12 +49,10 @@ const today = () => new Date().toISOString().slice(0, 10);
     ? prev.scan.candidates.slice()
     : SEED_CANDIDATES.slice();
 
-  /* 1) Sektor-Performance (30 Tage) via Finnhub ETFs ------------------ */
+  /* 1) Sektor-Performance (30 Tage + 360-Tage-Schnitt) via Yahoo (kein Key) -- */
   let bars30 = prev?.bars30 || [];
-  if (FINNHUB_KEY) {
-    try { bars30 = await fetchSectorPerformance(FINNHUB_KEY); console.log('Performance aktualisiert.'); }
-    catch (e) { console.error('Performance-Abruf fehlgeschlagen, behalte alte:', e.message); }
-  }
+  try { bars30 = await fetchSectorPerformance(); console.log('Performance aktualisiert.'); }
+  catch (e) { console.error('Performance-Abruf fehlgeschlagen, behalte alte:', e.message); }
 
   /* 2a) Finnhub-Analysten-Scan (US, rollierend) ---------------------- */
   if (FINNHUB_KEY) {

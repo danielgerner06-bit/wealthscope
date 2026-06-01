@@ -24,28 +24,47 @@
     const rows = [...(DATA.bars30 || [])].sort((a, b) => b.perf - a.perf);
     const labels = rows.map(r => sectorById(r.id).name);
     const values = rows.map(r => +Number(r.perf).toFixed(2));
+    const avgValues = rows.map(r => (r.avg30 != null ? +Number(r.avg30).toFixed(2) : null));
+    const hasAvg = avgValues.some(v => v != null);
     const colors = rows.map(r => {
       const base = sectorById(r.id).color;
       return r.perf >= 0 ? base : mix(base, '#ef4444', 0.45);
     });
+    // blasse Referenzfarbe (Sektorfarbe stark transparent) für den 360-Tage-Schnitt
+    const avgColors = rows.map(r => hexA(sectorById(r.id).color, 0.22));
 
     const ctx = document.getElementById('sekBars');
     if (barChart) barChart.destroy();
 
+    const datasets = [];
+    // Referenz-Balken (360-Tage-Durchschnitt) zuerst -> liegt optisch hinten, breiter & blass
+    if (hasAvg) {
+      datasets.push({
+        label: 'Ø 30T über 360 Tage',
+        data: avgValues,
+        backgroundColor: avgColors,
+        borderRadius: 5,
+        borderSkipped: false,
+        barPercentage: 1.0,
+        categoryPercentage: 0.86,
+        order: 2,
+      });
+    }
+    // aktueller 30-Tage-Balken vorne, dünner
+    datasets.push({
+      label: '30 Tage aktuell',
+      data: values,
+      backgroundColor: colors,
+      borderRadius: 6,
+      borderSkipped: false,
+      barPercentage: hasAvg ? 0.5 : 0.62,
+      categoryPercentage: 0.86,
+      order: 1,
+    });
+
     barChart = new Chart(ctx, {
       type: 'bar',
-      data: {
-        labels,
-        datasets: [{
-          data: values,
-          backgroundColor: colors.map(c => c),
-          borderRadius: 7,
-          borderSkipped: false,
-          barThickness: 'flex',
-          maxBarThickness: 26,
-          categoryPercentage: 0.82,
-        }],
-      },
+      data: { labels, datasets },
       options: {
         indexAxis: 'y',
         responsive: true,
@@ -63,7 +82,9 @@
             backgroundColor: 'rgba(17,21,40,0.96)', borderColor: 'rgba(148,163,184,0.25)', borderWidth: 1,
             titleColor: '#fff', bodyColor: '#cbd5e1', padding: 11, cornerRadius: 10,
             callbacks: {
-              label: c => '  30-Tage: ' + fmtPct(c.parsed.x) + '  ·  Klick = filtern',
+              label: c => (c.datasetIndex === (hasAvg ? 1 : 0)
+                ? '  30-Tage aktuell: ' + fmtPct(c.parsed.x) + '  ·  Klick = filtern'
+                : '  Ø 30T (letzte 360 T): ' + fmtPct(c.parsed.x)),
             },
           },
         },
@@ -98,13 +119,15 @@
     },
   };
 
-  // Wert am Balkenende
+  // Wert am Balkenende — nur für den aktuellen 30-Tage-Balken
   const valueLabels = {
     id: 'valueLabels',
     afterDatasetsDraw(chart) {
       const { ctx } = chart;
-      const meta = chart.getDatasetMeta(0);
-      const data = chart.data.datasets[0].data;
+      const di = chart.data.datasets.findIndex(d => d.label === '30 Tage aktuell');
+      if (di < 0) return;
+      const meta = chart.getDatasetMeta(di);
+      const data = chart.data.datasets[di].data;
       ctx.save();
       ctx.font = '700 11px Inter, system-ui, sans-serif';
       ctx.textBaseline = 'middle';
@@ -179,6 +202,10 @@
   function h2rgb(h) {
     h = h.replace('#', '');
     return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+  }
+  function hexA(hex, a) {
+    const [r, g, b] = h2rgb(hex);
+    return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
   }
 
   /* ---------- Init ---------- */

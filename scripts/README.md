@@ -5,11 +5,18 @@ Die Seite lädt ihre Daten aus `sectordata.json` (Projekt-Root). Diese Datei wir
 
 ## Datenquellen
 
-- **Finnhub** (`FINNHUB_API_KEY`) – echte Kurse & Analystenratings
+- **Finnhub** (`FINNHUB_API_KEY`) – echte Kurse & US-Analystenratings
   - 30-Tage-Sektor-Performance über Sektor-ETFs (IGV, SOXX, XLK, XLF …)
   - Analystenratings, **rollierend** über das US-Aktien-Universum gescannt
-  - Treffer-Kriterium: **Kauf ≥ 95 %** UND **Outperform ≥ 80 %** (Strong-Buy-Anteil)
-- **Gemini** (`GEMINI_API_KEY`, optional) – kurzer Analysetext zur Marktlage
+- **Gemini + Google-Search-Grounding** (`GEMINI_API_KEY`) – findet Analysten-Perlen
+  per echter Websuche (auch für Nebenwerte wie innoscripta, die keine Gratis-API hat):
+  - prüft eine **wachsende Kandidatenliste** rollierend auf die Kriterien
+  - **entdeckt täglich neue unbekannte Werte** und kennt dabei die bereits gefundenen
+  - schreibt zusätzlich den kurzen **Marktlage-Text**
+
+Treffer-Kriterium überall: **Kauf ≥ 95 %** UND **Outperform ≥ 80 %** (Strong-Buy-Anteil).
+Alle Treffer (Finnhub + Gemini) landen in einer gemeinsamen, über Tage gepflegten DB
+(`topStocks`); jeder Eintrag trägt `via` (finnhub / gemini / gemini-discover) und `source`.
 
 ## Einrichtung (einmalig)
 
@@ -48,7 +55,9 @@ Fehlt der Finnhub-Key, bricht das Skript ab und `sectordata.json` bleibt unverä
 
 ## Dateien
 
-- `update-sectors.mjs` – Orchestrierung
-- `finnhub.mjs` – Kurse, Universum, rollierender Analysten-Scan
+- `update-sectors.mjs` – Orchestrierung aller Quellen
+- `finnhub.mjs` – Kurse, Universum, rollierender US-Analysten-Scan
+- `gemini-stocks.mjs` – Gemini-Grounding: Kandidaten prüfen + neue Werte entdecken
+- `candidates.mjs` – Startstamm der Nebenwert-Kandidatenliste (wächst zur Laufzeit)
 - `sectors.mjs` – Sektordefinition + Mapping Finnhub-Industrie → Sektor-ID
 - `insight.mjs` – Gemini-Analysetext (greift 2–3 auffällige Sektoren heraus)

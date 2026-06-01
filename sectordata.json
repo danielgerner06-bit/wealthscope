@@ -84,55 +84,68 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 0
+      "perf": 28.5,
+      "avg30": -0.96
     },
     {
       "id": "ai_semi",
-      "perf": 0
+      "perf": 24.27,
+      "avg30": 8.41
     },
     {
       "id": "hardware",
-      "perf": 0
+      "perf": 22.87,
+      "avg30": 3.71
     },
     {
       "id": "comm",
-      "perf": 0
+      "perf": -0.45,
+      "avg30": 1.04
     },
     {
       "id": "health",
-      "perf": 0
+      "perf": 1.26,
+      "avg30": 0.87
     },
     {
       "id": "finance",
-      "perf": 0
+      "perf": -1.32,
+      "avg30": 0.13
     },
     {
       "id": "cons_cycl",
-      "perf": 0
+      "perf": 0.29,
+      "avg30": 1.05
     },
     {
       "id": "cons_def",
-      "perf": 0
+      "perf": -2.81,
+      "avg30": 0.42
     },
     {
       "id": "industrial",
-      "perf": 0
+      "perf": -1.06,
+      "avg30": 1.73
     },
     {
       "id": "energy",
-      "perf": 0
+      "perf": -3.95,
+      "avg30": 3.01
     },
     {
       "id": "materials",
-      "perf": 0
+      "perf": -0.95,
+      "avg30": 1.5
     },
     {
       "id": "utilities",
-      "perf": 0
+      "perf": -7.59,
+      "avg30": 1.03
     },
     {
       "id": "realestate",
-      "perf": 0
+      "perf": -2.14,
+      "avg30": 0.58
     }
   ],
   "topStocks": [
