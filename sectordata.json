@@ -84,68 +84,81 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 28.64,
-      "avg30": -0.95
+      "perf": 24.01,
+      "avg30": -0.97,
+      "perf6m": 1.55
     },
     {
       "id": "ai_semi",
-      "perf": 24.3,
-      "avg30": 8.41
+      "perf": 23.6,
+      "avg30": 8.38,
+      "perf6m": 95.73
     },
     {
       "id": "hardware",
-      "perf": 22.92,
-      "avg30": 3.71
+      "perf": 21.24,
+      "avg30": 3.69,
+      "perf6m": 36.29
     },
     {
       "id": "comm",
-      "perf": -0.41,
-      "avg30": 1.04
+      "perf": -0.61,
+      "avg30": 1.04,
+      "perf6m": 1.17
     },
     {
       "id": "health",
-      "perf": 1.2,
-      "avg30": 0.87
+      "perf": 2.44,
+      "avg30": 0.87,
+      "perf6m": -6.13
     },
     {
       "id": "finance",
-      "perf": -1.39,
-      "avg30": 0.13
+      "perf": -0.78,
+      "avg30": 0.12,
+      "perf6m": -2.71
     },
     {
       "id": "cons_cycl",
-      "perf": 0.27,
-      "avg30": 1.05
+      "perf": 1.19,
+      "avg30": 1.05,
+      "perf6m": 1.92
     },
     {
       "id": "cons_def",
-      "perf": -2.85,
-      "avg30": 0.42
+      "perf": -2.06,
+      "avg30": 0.43,
+      "perf6m": 4.47
     },
     {
       "id": "industrial",
-      "perf": -1.12,
-      "avg30": 1.73
+      "perf": -0.03,
+      "avg30": 1.72,
+      "perf6m": 13.16
     },
     {
       "id": "energy",
-      "perf": -3.94,
-      "avg30": 3.01
+      "perf": -3.7,
+      "avg30": 3.01,
+      "perf6m": 27.34
     },
     {
       "id": "materials",
-      "perf": -0.98,
-      "avg30": 1.5
+      "perf": -0.59,
+      "avg30": 1.5,
+      "perf6m": 14.86
     },
     {
       "id": "utilities",
-      "perf": -7.66,
-      "avg30": 1.02
+      "perf": -5.86,
+      "avg30": 1.03,
+      "perf6m": -2.61
     },
     {
       "id": "realestate",
-      "perf": -2.16,
-      "avg30": 0.58
+      "perf": -1.42,
+      "avg30": 0.59,
+      "perf6m": 5.35
     }
   ],
   "topStocks": [
@@ -159,7 +172,8 @@
       "upside": 39,
       "via": "gemini-discover",
       "source": "Investing.com, MarketScreener, Fintel",
-      "seen": "2026-06-01"
+      "seen": "2026-06-01",
+      "pe": 31
     },
     {
       "ticker": "NBIS",
@@ -168,7 +182,8 @@
       "buyPct": 100,
       "outperformPct": 90,
       "analysts": 8,
-      "upside": 33
+      "upside": 33,
+      "pe": null
     },
     {
       "ticker": "KTN",
@@ -189,7 +204,8 @@
       "buyPct": 96,
       "outperformPct": 85,
       "analysts": 21,
-      "upside": 24
+      "upside": 24,
+      "pe": 42
     },
     {
       "ticker": "DEF",
@@ -201,7 +217,8 @@
       "upside": 21,
       "via": "gemini-discover",
       "source": "Investing.com, Stockopedia, Metzler Research",
-      "seen": "2026-06-01"
+      "seen": "2026-06-01",
+      "pe": 18
     },
     {
       "ticker": "TLN",
@@ -210,7 +227,8 @@
       "buyPct": 97,
       "outperformPct": 86,
       "analysts": 9,
-      "upside": 21
+      "upside": 21,
+      "pe": 22
     },
     {
       "ticker": "CLS",
@@ -219,7 +237,8 @@
       "buyPct": 100,
       "outperformPct": 91,
       "analysts": 11,
-      "upside": 19
+      "upside": 19,
+      "pe": 28
     },
     {
       "ticker": "NVDA",
@@ -228,7 +247,8 @@
       "buyPct": 97,
       "outperformPct": 88,
       "analysts": 62,
-      "upside": 18
+      "upside": 18,
+      "pe": 38
     },
     {
       "ticker": "NET",
@@ -237,7 +257,8 @@
       "buyPct": 96,
       "outperformPct": 83,
       "analysts": 30,
-      "upside": 15
+      "upside": 15,
+      "pe": 120
     },
     {
       "ticker": "GEV",
@@ -246,7 +267,8 @@
       "buyPct": 95,
       "outperformPct": 82,
       "analysts": 28,
-      "upside": 14
+      "upside": 14,
+      "pe": 45
     },
     {
       "ticker": "HOOD",
@@ -255,7 +277,8 @@
       "buyPct": 95,
       "outperformPct": 81,
       "analysts": 19,
-      "upside": 12
+      "upside": 12,
+      "pe": 55
     },
     {
       "ticker": "PLTR",
@@ -264,7 +287,8 @@
       "buyPct": 95,
       "outperformPct": 80,
       "analysts": 24,
-      "upside": 9
+      "upside": 9,
+      "pe": 180
     },
     {
       "ticker": "S92",
@@ -276,7 +300,8 @@
       "upside": null,
       "via": "gemini",
       "source": "marketscreener.com",
-      "seen": "2026-06-01"
+      "seen": "2026-06-01",
+      "pe": 26
     }
   ],
   "insight": "Die aktuelle Sektorrotation am Aktienmarkt wird deutlich von technologischen Innovationen getragen. Software & Cloud sowie KI & Halbleiter führen mit deutlichen Zuwächsen, angetrieben durch anhaltende Investitionen in digitale Transformation und künstliche Intelligenz. Gleichzeitig leiden defensive Sektoren wie Versorger und Energie unter dem zunehmenden Optimismus bezüglich einer stabilen Konjunktur und potenziellen Zinssenkungen, was ihre relative Attraktivität mindert.",
@@ -324,5 +349,6 @@
       "DEFAMA Deutsche Fachmarkt AG",
       "Framery Group Oyj"
     ]
-  }
+  },
+  "updatedAt": "2026-06-01T19:32:09.222Z"
 }

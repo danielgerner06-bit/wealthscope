@@ -2,7 +2,9 @@
 (function () {
   let DATA = null;
   let barChart = null;
-  let sectorFilter = null;   // aktiver Sektor-Filter für die Aktienliste (null = alle)
+  let sortKey = 'upside';
+  let sortDir = -1;          // -1 = absteigend, 1 = aufsteigend
+  let barRows = [];          // aktuelle Reihenfolge der Sektoren im Balkenchart
 
   function sectorById(id) { return (DATA.sectors || []).find(s => s.id === id) || { name: id, color: '#94a3b8' }; }
 
@@ -14,98 +16,74 @@
     return DATA;
   }
 
-  function fmtPct(v, dp = 1) {
-    const n = Number(v) || 0;
-    return (n > 0 ? '+' : '') + n.toFixed(dp) + '%';
-  }
+  const fmtPct = (v, dp = 1) => (Number(v) > 0 ? '+' : '') + (Number(v) || 0).toFixed(dp) + '%';
 
-  /* ---------- Balkendiagramm: 30-Tage-Performance, gerankt ---------- */
+  /* ---------- Balkendiagramm: 30-Tage-Performance + Ø-360T-Referenz ---------- */
   function renderBars() {
-    const rows = [...(DATA.bars30 || [])].sort((a, b) => b.perf - a.perf);
-    const labels = rows.map(r => sectorById(r.id).name);
-    const values = rows.map(r => +Number(r.perf).toFixed(2));
-    const avgValues = rows.map(r => (r.avg30 != null ? +Number(r.avg30).toFixed(2) : null));
+    barRows = [...(DATA.bars30 || [])].sort((a, b) => b.perf - a.perf);
+    const values = barRows.map(r => +Number(r.perf).toFixed(2));
+    const avgValues = barRows.map(r => (r.avg30 != null ? +Number(r.avg30).toFixed(2) : null));
     const hasAvg = avgValues.some(v => v != null);
-    const colors = rows.map(r => {
+    const colors = barRows.map(r => {
       const base = sectorById(r.id).color;
       return r.perf >= 0 ? base : mix(base, '#ef4444', 0.45);
     });
-    // blasse Referenzfarbe (Sektorfarbe stark transparent) für den 360-Tage-Schnitt
-    const avgColors = rows.map(r => hexA(sectorById(r.id).color, 0.22));
+    const avgColors = barRows.map(r => hexA(sectorById(r.id).color, 0.20));
+
+    renderBarNames();
 
     const ctx = document.getElementById('sekBars');
     if (barChart) barChart.destroy();
 
     const datasets = [];
-    // Referenz-Balken (360-Tage-Durchschnitt) zuerst -> liegt optisch hinten, breiter & blass
     if (hasAvg) {
       datasets.push({
-        label: 'Ø 30T über 360 Tage',
-        data: avgValues,
-        backgroundColor: avgColors,
-        borderRadius: 5,
-        borderSkipped: false,
-        barPercentage: 1.0,
-        categoryPercentage: 0.86,
-        order: 2,
+        label: 'Ø 30T über 360 Tage', data: avgValues, backgroundColor: avgColors,
+        borderRadius: 5, borderSkipped: false, barPercentage: 0.72, categoryPercentage: 0.84, order: 2,
       });
     }
-    // aktueller 30-Tage-Balken vorne, dünner
     datasets.push({
-      label: '30 Tage aktuell',
-      data: values,
-      backgroundColor: colors,
-      borderRadius: 6,
-      borderSkipped: false,
-      barPercentage: hasAvg ? 0.5 : 0.62,
-      categoryPercentage: 0.86,
-      order: 1,
+      label: '30 Tage aktuell', data: values, backgroundColor: colors,
+      borderRadius: 5, borderSkipped: false, barPercentage: 0.72, categoryPercentage: 0.84, order: 1,
     });
 
     barChart = new Chart(ctx, {
       type: 'bar',
-      data: { labels, datasets },
+      data: { labels: barRows.map(r => sectorById(r.id).name), datasets },
       options: {
         indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
-        animation: { duration: 700, easing: 'easeOutCubic' },
-        onClick: (e, els) => {
-          if (!els.length) { setSectorFilter(null); return; }
-          const id = rows[els[0].index].id;
-          setSectorFilter(sectorFilter === id ? null : id);
-        },
-        onHover: (e, els) => { e.native.target.style.cursor = els.length ? 'pointer' : 'default'; },
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: 'rgba(17,21,40,0.96)', borderColor: 'rgba(148,163,184,0.25)', borderWidth: 1,
-            titleColor: '#fff', bodyColor: '#cbd5e1', padding: 11, cornerRadius: 10,
-            callbacks: {
-              label: c => (c.datasetIndex === (hasAvg ? 1 : 0)
-                ? '  30-Tage aktuell: ' + fmtPct(c.parsed.x) + '  ·  Klick = filtern'
-                : '  Ø 30T (letzte 360 T): ' + fmtPct(c.parsed.x)),
-            },
-          },
-        },
+        animation: { duration: 650, easing: 'easeOutCubic' },
+        plugins: { legend: { display: false }, tooltip: { enabled: false } },
         scales: {
           x: {
             grid: { color: 'rgba(148,163,184,0.14)', drawTicks: false },
             border: { display: false },
             ticks: { color: '#94a3b8', callback: v => (v > 0 ? '+' : '') + v + '%', font: { size: 11 } },
           },
-          y: {
-            grid: { display: false },
-            border: { display: false },
-            ticks: { color: '#e2e8f0', font: { size: 12, weight: '600' }, crossAlign: 'far', padding: 6 },
-          },
+          y: { display: false, grid: { display: false } },
         },
+        layout: { padding: { right: 6 } },
       },
       plugins: [zeroBarLine, valueLabels],
     });
   }
 
-  // Nulllinie betonen
+  // Sektornamen als klickbare HTML-Liste links neben dem Chart (öffnet Lage-Modal)
+  function renderBarNames() {
+    const wrap = document.getElementById('sekBarsNames');
+    wrap.innerHTML = '';
+    barRows.forEach(r => {
+      const sec = sectorById(r.id);
+      const b = document.createElement('button');
+      b.className = 'sek-bar-name';
+      b.innerHTML = '<i style="background:' + sec.color + '"></i><span>' + sec.name + '</span>';
+      b.addEventListener('click', () => openSectorModal(r.id));
+      wrap.appendChild(b);
+    });
+  }
+
   const zeroBarLine = {
     id: 'zeroBarLine',
     afterDraw(chart) {
@@ -114,12 +92,11 @@
       const { ctx, chartArea } = chart;
       ctx.save();
       ctx.beginPath(); ctx.moveTo(xPos, chartArea.top); ctx.lineTo(xPos, chartArea.bottom);
-      ctx.lineWidth = 1.5; ctx.strokeStyle = 'rgba(148,163,184,0.5)'; ctx.setLineDash([3, 3]); ctx.stroke();
+      ctx.lineWidth = 1.5; ctx.strokeStyle = 'rgba(148,163,184,0.45)'; ctx.setLineDash([3, 3]); ctx.stroke();
       ctx.restore();
     },
   };
 
-  // Wert am Balkenende — nur für den aktuellen 30-Tage-Balken
   const valueLabels = {
     id: 'valueLabels',
     afterDatasetsDraw(chart) {
@@ -132,42 +109,50 @@
       ctx.font = '700 11px Inter, system-ui, sans-serif';
       ctx.textBaseline = 'middle';
       meta.data.forEach((bar, i) => {
-        const v = data[i];
-        const pos = v >= 0;
+        const v = data[i]; const pos = v >= 0;
         ctx.fillStyle = pos ? '#34d399' : '#f87171';
         ctx.textAlign = pos ? 'left' : 'right';
-        const pad = pos ? 8 : -8;
-        ctx.fillText(fmtPct(v), bar.x + pad, bar.y);
+        ctx.fillText(fmtPct(v), bar.x + (pos ? 8 : -8), bar.y);
       });
       ctx.restore();
     },
   };
 
-  /* ---------- Analystenliste ---------- */
+  /* ---------- Analysten-Perlen mit Filter + Sortierung ---------- */
+  const filters = { pe: null, perf6m: null, buyPct: null, upside: null };
+
+  function passesFilter(s) {
+    if (filters.pe != null && !(s.pe != null && s.pe <= filters.pe)) return false;
+    if (filters.perf6m != null && !(s.perf6m != null && s.perf6m >= filters.perf6m)) return false;
+    if (filters.buyPct != null && !(s.buyPct != null && s.buyPct >= filters.buyPct)) return false;
+    if (filters.upside != null && !(s.upside != null && s.upside >= filters.upside)) return false;
+    return true;
+  }
+
   function renderStocks() {
     const list = document.getElementById('sekStockList');
     const countEl = document.getElementById('sekStockCount');
-    let stocks = Array.isArray(DATA.topStocks) ? DATA.topStocks.slice() : [];
-    if (sectorFilter) stocks = stocks.filter(s => s.sector === sectorFilter);
-    stocks.sort((a, b) => (b.upside || 0) - (a.upside || 0));
-
-    countEl.textContent = sectorFilter
-      ? sectorById(sectorFilter).name + ' · ' + stocks.length
-      : (DATA.topStocks ? DATA.topStocks.length + ' Treffer' : '');
+    const all = Array.isArray(DATA.topStocks) ? DATA.topStocks.slice() : [];
+    const stocks = all.filter(passesFilter).sort(cmp);
+    const anyFilter = Object.values(filters).some(v => v != null);
+    countEl.textContent = anyFilter ? stocks.length + ' / ' + all.length : all.length + ' Treffer';
 
     list.innerHTML = '';
     if (!stocks.length) {
-      list.innerHTML = '<div class="sek-stocks-empty">Keine Treffer' + (sectorFilter ? ' in diesem Sektor.' : '.') + '</div>';
+      list.innerHTML = '<div class="sek-stocks-empty">' +
+        (anyFilter ? 'Keine Aktie passt zu diesem Filter.' : 'Noch keine Treffer — der tägliche Scan füllt die Liste.') +
+        '</div>';
       return;
     }
+
     stocks.forEach(st => {
       const sec = sectorById(st.sector);
       const row = document.createElement('div');
       row.className = 'sek-stock';
-      const up = (st.upside != null) ? '<span class="sek-stock-up">+' + Number(st.upside).toFixed(0) + '%</span>' : '';
+      const metric = stockMetric(st);
       const meta = [];
       if (st.buyPct != null) meta.push('Kauf ' + st.buyPct + '%');
-      if (st.outperformPct != null) meta.push('Outperf. ' + st.outperformPct + '%');
+      if (st.outperformPct != null) meta.push('Outp. ' + st.outperformPct + '%');
       if (st.analysts != null) meta.push(st.analysts + ' Analyst' + (st.analysts === 1 ? '' : 'en'));
       row.innerHTML =
         '<span class="sek-stock-dot" style="background:' + sec.color + '"></span>' +
@@ -175,54 +160,133 @@
           '<div class="sek-stock-top"><span class="sek-stock-tk">' + (st.ticker || '') + '</span>' +
           '<span class="sek-stock-nm">' + (st.name || '') + '</span></div>' +
           '<div class="sek-stock-meta">' + sec.name + (meta.length ? ' · ' + meta.join(' · ') : '') + '</div>' +
-        '</div>' + up;
+        '</div>' + metric;
       list.appendChild(row);
     });
   }
 
-  function setSectorFilter(id) {
-    sectorFilter = id;
-    renderStocks();
+  // Rechts an der Zeile: der aktuell sortierte Wert, hervorgehoben
+  function stockMetric(st) {
+    let v, label, cls = 'sek-stock-val';
+    if (sortKey === 'perf6m') { v = st.perf6m; label = v != null ? fmtPct(v) : '—'; cls += v >= 0 ? ' up' : ' down'; }
+    else if (sortKey === 'outperformPct') { v = st.outperformPct; label = v != null ? v + '%' : '—'; }
+    else if (sortKey === 'analysts') { v = st.analysts; label = v != null ? v + ' An.' : '—'; }
+    else if (sortKey === 'pe') { v = st.pe; label = v != null ? 'KGV ' + v : 'KGV —'; }
+    else { v = st.upside; label = v != null ? '+' + Math.round(v) + '%' : '—'; cls += ' up'; }
+    return '<span class="' + cls + '">' + label + '</span>';
   }
 
-  /* ---------- Insight-Text ---------- */
-  function renderInsight() {
-    const el = document.getElementById('sekInsight');
-    el.textContent = DATA.insight || '—';
+  function cmp(a, b) {
+    const va = a[sortKey], vb = b[sortKey];
+    // fehlende Werte immer ans Ende
+    const miss = v => v == null || !isFinite(v);
+    if (miss(va) && miss(vb)) return (b.upside ?? -999) - (a.upside ?? -999);
+    if (miss(va)) return 1;
+    if (miss(vb)) return -1;
+    if (va === vb) return (b.upside ?? -999) - (a.upside ?? -999);
+    return sortDir === -1 ? vb - va : va - vb;
   }
 
-  /* ---------- kleine Farbhilfe ---------- */
+  function wireSort() {
+    document.getElementById('sekSort').addEventListener('click', e => {
+      const btn = e.target.closest('button[data-key]');
+      if (!btn) return;
+      const key = btn.dataset.key;
+      if (key === sortKey) { sortDir = -sortDir; }      // gleicher Button -> Richtung umdrehen
+      else { sortKey = key; sortDir = key === 'pe' ? 1 : -1; } // KGV: klein zuerst
+      document.querySelectorAll('#sekSort button').forEach(b => {
+        b.classList.toggle('active', b === btn);
+        b.classList.remove('asc', 'desc');
+      });
+      btn.classList.add(sortDir === -1 ? 'desc' : 'asc');
+      renderStocks();
+    });
+  }
+
+  function wireFilter() {
+    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltBuy: 'buyPct', fltUpside: 'upside' };
+    Object.keys(map).forEach(id => {
+      document.getElementById(id).addEventListener('input', e => {
+        const v = e.target.value.trim();
+        filters[map[id]] = v === '' ? null : Number(v);
+        renderStocks();
+      });
+    });
+    document.getElementById('fltClear').addEventListener('click', () => {
+      Object.keys(map).forEach(id => { document.getElementById(id).value = ''; });
+      filters.pe = filters.perf6m = filters.buyPct = filters.upside = null;
+      renderStocks();
+    });
+  }
+
+  /* ---------- Sektor-Lage-Modal ---------- */
+  function openSectorModal(id) {
+    const sec = sectorById(id);
+    const bar = (DATA.bars30 || []).find(b => b.id === id) || {};
+    const note = (DATA.sectorNotes || {})[id];
+
+    document.getElementById('sekModalTitle').textContent = sec.name;
+    document.getElementById('sekModalDot').style.background = sec.color;
+
+    const stat = (lbl, val, cls) => '<div class="sek-mstat"><span>' + lbl + '</span><b class="' + (cls || '') + '">' + val + '</b></div>';
+    const cl = v => v == null ? '' : (v >= 0 ? 'up' : 'down');
+    document.getElementById('sekModalStats').innerHTML =
+      stat('30 Tage', bar.perf != null ? fmtPct(bar.perf) : '—', cl(bar.perf)) +
+      stat('Ø 30T (360T)', bar.avg30 != null ? fmtPct(bar.avg30) : '—', cl(bar.avg30)) +
+      stat('6 Monate', bar.perf6m != null ? fmtPct(bar.perf6m) : '—', cl(bar.perf6m));
+
+    document.getElementById('sekModalText').textContent = note?.text || 'Für diesen Sektor liegt noch kein KI-Text vor — er wird in den nächsten Tagen ergänzt (die Analyse läuft rollierend, um das Kontingent zu schonen).';
+    document.getElementById('sekModalDate').textContent = note?.date ? 'Stand: ' + note.date : '';
+
+    const m = document.getElementById('sekModal');
+    m.hidden = false;
+    requestAnimationFrame(() => m.classList.add('show'));
+  }
+  function closeModal() {
+    const m = document.getElementById('sekModal');
+    m.classList.remove('show');
+    setTimeout(() => { m.hidden = true; }, 200);
+  }
+  function wireModal() {
+    document.getElementById('sekModal').addEventListener('click', e => {
+      if (e.target.closest('[data-close]')) closeModal();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  }
+
+  /* ---------- Header: Stand mit Uhrzeit ---------- */
+  function renderStand() {
+    const el = document.getElementById('sekUpdated');
+    let txt = 'Stand: ' + (DATA.updated || '—');
+    if (DATA.updatedAt) {
+      const d = new Date(DATA.updatedAt);
+      if (!isNaN(d)) {
+        const t = d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+        txt = 'Stand: ' + d.toLocaleDateString('de-DE') + ', ' + t + ' Uhr';
+      }
+    }
+    el.textContent = txt;
+  }
+
+  /* ---------- Farbhilfen ---------- */
   function mix(hex, hex2, t) {
     const a = h2rgb(hex), b = h2rgb(hex2);
-    const r = Math.round(a[0] + (b[0] - a[0]) * t);
-    const g = Math.round(a[1] + (b[1] - a[1]) * t);
-    const bl = Math.round(a[2] + (b[2] - a[2]) * t);
-    return 'rgb(' + r + ',' + g + ',' + bl + ')';
+    return 'rgb(' + Math.round(a[0] + (b[0] - a[0]) * t) + ',' + Math.round(a[1] + (b[1] - a[1]) * t) + ',' + Math.round(a[2] + (b[2] - a[2]) * t) + ')';
   }
-  function h2rgb(h) {
-    h = h.replace('#', '');
-    return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
-  }
-  function hexA(hex, a) {
-    const [r, g, b] = h2rgb(hex);
-    return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
-  }
+  function h2rgb(h) { h = h.replace('#', ''); return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)]; }
+  function hexA(hex, a) { const [r, g, b] = h2rgb(hex); return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')'; }
 
   /* ---------- Init ---------- */
+  let wired = false;
   window.initSektor = async function () {
     const loading = document.getElementById('sekLoading');
     try {
       loading.classList.add('show');
       await loadData();
-
-      const stand = DATA.updated || '—';
-      document.getElementById('sekUpdated').textContent =
-        (DATA.isPlaceholder ? 'Demo-Daten · ' : 'Stand: ') + stand;
-
-      sectorFilter = null;
+      renderStand();
+      if (!wired) { wireSort(); wireFilter(); wireModal(); wired = true; }
       renderBars();
       renderStocks();
-      renderInsight();
     } catch (err) {
       console.error(err);
       document.getElementById('sekUpdated').textContent = 'Daten konnten nicht geladen werden';

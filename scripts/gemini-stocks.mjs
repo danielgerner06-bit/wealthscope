@@ -54,9 +54,11 @@ function normRating(o) {
   let upside = (o.upside != null && isFinite(Number(o.upside))) ? Math.round(Number(o.upside)) : null;
   // Plausibilität: unrealistische Kursziele (oft veraltete/falsche Websuche-Treffer) verwerfen.
   if (upside != null && (upside < -50 || upside > 120)) upside = null;
+  let pe = (o.pe ?? o.kgv ?? o.peRatio) != null ? +Number(o.pe ?? o.kgv ?? o.peRatio).toFixed(1) : null;
+  if (pe != null && (!isFinite(pe) || pe <= 0 || pe > 500)) pe = null;  // negatives/absurdes KGV verwerfen
   let sector = o.sector;
   if (!SECTOR_IDS.includes(sector)) sector = sectorForFinnhub(o.industry || o.branche || sector) || null;
-  return { buyPct, outperformPct, analysts, upside, sector };
+  return { buyPct, outperformPct, analysts, upside, pe, sector };
 }
 
 /* (A) Kandidaten prüfen ------------------------------------------------ */
@@ -73,6 +75,7 @@ Für jede Aktie ermittle aus aktuellen Quellen:
 - outperformPct: Prozent, die Strong Buy / Outperform sind (0-100)
 - sector: GENAU eine dieser IDs anhand der Branche: ${SECTOR_LIST}
 - upside: Kursziel-Potenzial in % falls auffindbar, sonst null
+- pe: aktuelles KGV (Kurs-Gewinn-Verhältnis), Zahl oder null
 - source: kurze Quellenangabe
 
 Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, die du sicher gefunden hast. Aktien ohne auffindbare Analystendaten weglassen. Kein Text außerhalb des JSON.`;
@@ -91,7 +94,7 @@ Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, die du sicher gefunden hast
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside,
+        analysts: r.analysts, upside: r.upside, pe: r.pe,
         via: 'gemini', source: o.source || sources[0] || 'web',
         seen: new Date().toISOString().slice(0, 10),
       });
@@ -114,6 +117,7 @@ Für jeden Vorschlag gib aus aktuellen Quellen:
 - analysts, buyPct (0-100), outperformPct (0-100)
 - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
 - upside (% oder null)
+- pe: aktuelles KGV (Zahl oder null)
 - source: kurze Quellenangabe
 
 Gib NUR ein JSON-Array mit bis zu 8 solcher Aktien zurück. Kein Text außerhalb des JSON.`;
@@ -132,7 +136,7 @@ Gib NUR ein JSON-Array mit bis zu 8 solcher Aktien zurück. Kein Text außerhalb
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside,
+        analysts: r.analysts, upside: r.upside, pe: r.pe,
         via: 'gemini-discover', source: o.source || sources[0] || 'web',
         seen: new Date().toISOString().slice(0, 10),
       });

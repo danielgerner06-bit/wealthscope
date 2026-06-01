@@ -1,12 +1,36 @@
-// Sektor-Performance über Sektor-ETFs via Yahoo-Finance-Chart-API (kostenlos, kein Key).
-// Liefert je Sektor: perf (aktuelle ~30-Handelstage-Performance) und avg30
-// (Durchschnitt der rollierenden 30-Handelstage-Returns über die letzten ~360 Tage).
+// Kursdaten über Yahoo-Finance-Chart-API (kostenlos, kein Key).
+//  - Sektor-Performance je ETF: perf30 (aktuell ~30 Handelstage), avg30 (Ø rollierende
+//    30T-Returns über ~360 Tage), perf6m (~126 Handelstage).
+//  - Einzelaktien-Performance (6 Monate) für die Sortierung der Analysten-Perlen.
+//
+// Robust gegen Yahoo-Ausreißer: End-/Startkurs = Median über ein kleines Fenster,
+// damit ein einzelner fehlerhafter Tageskurs die Prozentwerte nicht verfälscht.
 import { SECTORS } from './sectors.mjs';
 
-const WIN = 21; // ~21 Handelstage ≈ 30 Kalendertage
+const W30 = 21;    // ~30 Kalendertage
+const W6M = 126;   // ~6 Monate
 
-async function closes(symbol) {
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?range=1y&interval=1d`;
+function median(a) {
+  const x = a.filter(v => typeof v === 'number' && isFinite(v)).sort((m, n) => m - n);
+  if (!x.length) return null;
+  const mid = Math.floor(x.length / 2);
+  return x.length % 2 ? x[mid] : (x[mid - 1] + x[mid]) / 2;
+}
+// Median der k Werte um Index i (gegen Ausreißer)
+function smooth(arr, i, k = 3) {
+  const half = Math.floor(k / 2);
+  return median(arr.slice(Math.max(0, i - half), Math.min(arr.length, i + half + 1)));
+}
+function pctBack(c, win) {
+  if (c.length <= win + 2) return null;
+  const last = smooth(c, c.length - 1);
+  const ref = smooth(c, c.length - 1 - win);
+  if (!last || !ref) return null;
+  return +(((last - ref) / ref) * 100).toFixed(2);
+}
+
+async function closes(symbol, range = '1y') {
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?range=${range}&interval=1d`;
   const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   if (!res.ok) throw new Error('Yahoo HTTP ' + res.status + ' (' + symbol + ')');
   const j = await res.json();
@@ -20,23 +44,33 @@ export async function fetchSectorPerformance() {
   const out = [];
   for (const s of SECTORS) {
     try {
-      const c = await closes(s.etf);
-      if (c.length <= WIN + 1) { out.push({ id: s.id, perf: 0, avg30: 0 }); continue; }
-      const last = c[c.length - 1];
-      const ref = c[c.length - 1 - WIN];
-      const perf = ((last - ref) / ref) * 100;
+      const c = await closes(s.etf, '1y');
+      if (c.length <= W30 + 2) { out.push({ id: s.id, perf: 0, avg30: 0, perf6m: 0 }); continue; }
+      const perf = pctBack(c, W30) ?? 0;
+      const perf6m = pctBack(c, Math.min(W6M, c.length - 2)) ?? 0;
 
-      const lookback = Math.min(252, c.length - 1 - WIN);
+      // Ø der rollierenden 30T-Returns über die letzten ~252 Handelstage (geglättet).
+      const lookback = Math.min(252, c.length - 1 - W30);
       let sum = 0, cnt = 0;
-      for (let i = c.length - 1; i > c.length - 1 - lookback && i - WIN >= 0; i--) {
-        const a = c[i], b = c[i - WIN];
-        if (b > 0) { sum += ((a - b) / b) * 100; cnt++; }
+      for (let i = c.length - 1; i > c.length - 1 - lookback && i - W30 >= 0; i--) {
+        const a = smooth(c, i), b = smooth(c, i - W30);
+        if (a && b) { sum += ((a - b) / b) * 100; cnt++; }
       }
-      const avg = cnt ? sum / cnt : perf;
-      out.push({ id: s.id, perf: +perf.toFixed(2), avg30: +avg.toFixed(2) });
+      const avg30 = cnt ? +(sum / cnt).toFixed(2) : perf;
+      out.push({ id: s.id, perf, avg30, perf6m });
     } catch (e) {
-      out.push({ id: s.id, perf: 0, avg30: 0 });
+      out.push({ id: s.id, perf: 0, avg30: 0, perf6m: 0 });
     }
   }
   return out;
+}
+
+// 6-Monats-Performance für eine einzelne Aktie (oder null bei Fehler).
+export async function fetchStockPerf6m(ticker) {
+  try {
+    const c = await closes(ticker, '6mo');
+    return pctBack(c, Math.min(W6M, c.length - 2));
+  } catch {
+    return null;
+  }
 }

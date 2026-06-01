@@ -13,9 +13,9 @@
 
 import fs from 'node:fs';
 import { SECTORS } from './sectors.mjs';
-import { buildInsight } from './insight.mjs';
+import { buildSectorNotes } from './insight.mjs';
 import { scanAnalystStocks } from './finnhub.mjs';
-import { fetchSectorPerformance } from './prices.mjs';
+import { fetchSectorPerformance, fetchStockPerf6m } from './prices.mjs';
 import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 
@@ -95,28 +95,50 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
 
   // Kandidatenliste begrenzen, damit sie nicht unbegrenzt wächst.
-  if (candidates.length > 300) candidates = candidates.slice(candidates.length - 300);
+  if (candidates.length > 400) candidates = candidates.slice(candidates.length - 400);
   scan.candidates = candidates;
 
-  // Top-Liste: nach Kursziel-Potenzial, dann Kauf-%, max. 40.
-  const topStocks = Object.values(db)
+  // Top-Liste: nach Kursziel-Potenzial, dann Kauf-%. Bis zu 80 Perlen.
+  let topStocks = Object.values(db)
     .sort((a, b) => (b.upside ?? -999) - (a.upside ?? -999) || (b.buyPct || 0) - (a.buyPct || 0))
-    .slice(0, 40);
+    .slice(0, 80);
 
-  /* 3) Gemini-Marktlage-Text ----------------------------------------- */
-  let insight = prev?.insight || '';
+  /* 3) 6-Monats-Kursperformance je Aktie (Yahoo), rollierend nachladen --- */
+  // Pro Lauf nur für Aktien ohne/alten 6M-Wert, damit es schnell bleibt.
+  const STALE = 5 * 86400000; // 5 Tage
+  const nowMs = Date.now();
+  const needPerf = topStocks.filter(s => s.perf6m == null || !s.perf6mAt || (nowMs - Date.parse(s.perf6mAt)) > STALE)
+    .slice(0, Number(process.env.PERF6M_BUDGET || 30));
+  for (const s of needPerf) {
+    const v = await fetchStockPerf6m(s.ticker);
+    if (v != null) { s.perf6m = v; s.perf6mAt = today(); db[s.ticker] = { ...db[s.ticker], perf6m: v, perf6mAt: s.perf6mAt }; }
+  }
+  if (needPerf.length) console.log(`6M-Performance für ${needPerf.length} Aktien aktualisiert.`);
+
+  /* 4) Sektor-Lage-Texte rollierend (2-3 Sektoren pro Lauf) ----------- */
+  let sectorNotes = prev?.sectorNotes || {};
   if (GEMINI_KEY) {
-    try { insight = await buildInsight(GEMINI_KEY, bars30, topStocks); console.log('Insight aktualisiert.'); }
-    catch (e) { console.error('Insight fehlgeschlagen, behalte alten Text:', e.message); }
+    try {
+      const ids = SECTORS.map(s => s.id);
+      const start = (scan.noteCursor || 0) % ids.length;
+      const PER = Number(process.env.NOTES_PER_RUN || 3);
+      const todo = [];
+      for (let i = 0; i < PER; i++) todo.push(ids[(start + i) % ids.length]);
+      scan.noteCursor = (start + PER) % ids.length;
+      const fresh = await buildSectorNotes(GEMINI_KEY, todo, bars30, topStocks);
+      sectorNotes = { ...sectorNotes, ...fresh };
+      console.log(`Sektor-Lage: ${Object.keys(fresh).length} Texte aktualisiert (${todo.join(', ')}).`);
+    } catch (e) { console.error('Sektor-Lage fehlgeschlagen, behalte alte:', e.message); }
   }
 
   const out = {
     updated: today(),
+    updatedAt: new Date().toISOString(),
     source: [FINNHUB_KEY && 'Finnhub', GEMINI_KEY && 'Gemini (Websuche & Analyse)'].filter(Boolean).join(' · '),
     sectors: SECTORS,
     bars30,
     topStocks,
-    insight,
+    sectorNotes,
     scan,
   };
 

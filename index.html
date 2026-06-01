@@ -504,40 +504,67 @@
         <div class="sek-card-head">
           <div>
             <h2>Sektor-Performance · 30 Tage</h2>
-            <p class="sek-card-sub">Branchen gerankt nach Kursentwicklung der letzten 30&nbsp;Tage</p>
+            <p class="sek-card-sub">Gerankt nach 30-Tage-Kurs. Klick auf einen Sektornamen zeigt seine aktuelle Lage.</p>
           </div>
           <div class="sek-bars-legend">
             <span><i class="leg-strong"></i>aktuell</span>
             <span><i class="leg-faint"></i>Ø 30 T über 360 T</span>
           </div>
         </div>
-        <div class="sek-bars"><canvas id="sekBars"></canvas></div>
+        <div class="sek-bars-wrap">
+          <div class="sek-bars-names" id="sekBarsNames"></div>
+          <div class="sek-bars"><canvas id="sekBars"></canvas></div>
+        </div>
       </section>
 
-      <!-- RECHTS oben: Analystenliste -->
+      <!-- RECHTS: Analysten-Perlen mit Sortierung -->
       <section class="sek-card sek-analyst">
         <div class="sek-card-head">
           <div>
             <h2>Analysten-Perlen</h2>
-            <p class="sek-card-sub">Aktien mit Kaufempfehlung&nbsp;≥&nbsp;95&nbsp;% und Outperform&nbsp;≥&nbsp;80&nbsp;% — quer über alle Größen</p>
+            <p class="sek-card-sub">Kaufempfehlung&nbsp;≥&nbsp;95&nbsp;% und Outperform&nbsp;≥&nbsp;80&nbsp;% — quer über alle Größen</p>
           </div>
           <span class="sek-badge" id="sekStockCount"></span>
         </div>
+        <div class="sek-filter" id="sekFilter">
+          <span class="sek-filter-label">Filter:</span>
+          <input type="number" id="fltPe" placeholder="KGV ≤" min="0" step="1" aria-label="KGV maximal">
+          <input type="number" id="fltPerf6m" placeholder="6M ≥ %" step="1" aria-label="6-Monats-Performance minimal in Prozent">
+          <input type="number" id="fltBuy" placeholder="Kauf ≥ %" min="0" max="100" step="1" aria-label="Kaufempfehlung minimal in Prozent">
+          <input type="number" id="fltUpside" placeholder="Ziel ≥ %" step="1" aria-label="Analystenziel-Potenzial minimal in Prozent">
+          <button class="sek-filter-clear" id="fltClear" type="button">zurücksetzen</button>
+        </div>
+        <div class="sek-sort" id="sekSort">
+          <span class="sek-sort-label">Sortieren:</span>
+          <button data-key="upside" class="active desc">Potenzial</button>
+          <button data-key="perf6m">6M&nbsp;Kurs</button>
+          <button data-key="outperformPct">Outperform</button>
+          <button data-key="pe">KGV</button>
+          <button data-key="analysts">Analysten</button>
+        </div>
         <div class="sek-stocks-list" id="sekStockList"></div>
       </section>
-
-      <!-- RECHTS unten: Gemini-Analysetext -->
-      <section class="sek-card sek-insight">
-        <div class="sek-insight-head">
-          <span class="sek-insight-spark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3m0 12v3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M3 12h3m12 0h3M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/></svg>
-          </span>
-          <h2>Marktlage</h2>
-          <span class="sek-insight-tag">KI-Analyse</span>
-        </div>
-        <p class="sek-insight-text" id="sekInsight">—</p>
-      </section>
     </main>
+
+    <!-- Sektor-Lage-Modal -->
+    <div class="sek-modal" id="sekModal" hidden>
+      <div class="sek-modal-backdrop" data-close></div>
+      <div class="sek-modal-card" role="dialog" aria-modal="true" aria-labelledby="sekModalTitle">
+        <button class="sek-modal-x" data-close aria-label="Schließen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <div class="sek-modal-head">
+          <span class="sek-modal-dot" id="sekModalDot"></span>
+          <h3 id="sekModalTitle">Sektor</h3>
+        </div>
+        <div class="sek-modal-stats" id="sekModalStats"></div>
+        <div class="sek-modal-insight">
+          <span class="sek-insight-tag">KI-Analyse</span>
+          <p id="sekModalText">—</p>
+          <span class="sek-modal-date" id="sekModalDate"></span>
+        </div>
+      </div>
+    </div>
 
     <div class="sek-loading" id="sekLoading"><div class="spinner"></div><p>Daten werden geladen…</p></div>
   </div>

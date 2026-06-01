@@ -165,6 +165,8 @@ function getRegionPadding(region) {
 }
 
 // ---- SCREEN NAV ----
+const SCREEN_HASH = { sektorScreen: 'sektor', homeScreen: 'geo', calcScreen: 'calc' };
+
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
@@ -174,6 +176,20 @@ function showScreen(id) {
 
   const hubBack = document.querySelector('.hub-back');
   if (hubBack) hubBack.classList.toggle('visible', id === 'homeScreen');
+
+  // URL-Hash setzen, damit ein Reload auf demselben Screen bleibt
+  const h = SCREEN_HASH[id] || '';
+  if ((location.hash.replace('#', '')) !== h) {
+    try { history.replaceState(null, '', h ? '#' + h : location.pathname); } catch (e) {}
+  }
+}
+
+// Beim Laden: passenden Screen aus dem Hash wiederherstellen
+function restoreScreenFromHash() {
+  const h = location.hash.replace('#', '');
+  if (h === 'sektor') { showScreen('sektorScreen'); if (typeof initSektor === 'function') initSektor(); }
+  else if (h === 'geo') { showScreen('homeScreen'); }
+  else if (h === 'calc' && document.getElementById('calcScreen')) { showScreen('calcScreen'); }
 }
 
 function chooseQuizDifficulty(quizType) {
@@ -1048,6 +1064,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   setupScrollAnimations();
+  restoreScreenFromHash();
 });
 
 window.addEventListener('resize', () => {
