@@ -503,17 +503,21 @@
       <section class="sek-card sek-bars-card">
         <div class="sek-card-head">
           <div>
-            <h2>Sektor-Performance · 30 Tage</h2>
-            <p class="sek-card-sub">Gerankt nach 30-Tage-Kurs. Klick auf einen Sektornamen zeigt seine aktuelle Lage.</p>
+            <h2 id="sekBarsTitle">Sektor-Performance · 30 Tage</h2>
+            <p class="sek-card-sub" id="sekBarsSub">Gerankt nach 30-Tage-Kurs. Klick auf einen Namen zeigt die aktuelle Lage.</p>
           </div>
-          <div class="sek-bars-legend">
-            <span><i class="leg-strong"></i>aktuell</span>
-            <span><i class="leg-faint"></i>Ø 30 T über 360 T</span>
+          <div class="sek-bars-toggle" id="sekViewToggle" role="tablist" aria-label="Ansicht">
+            <button data-view="sectors" class="active">Sektoren</button>
+            <button data-view="regions">Regionen</button>
           </div>
         </div>
         <div class="sek-bars-wrap">
           <div class="sek-bars-names" id="sekBarsNames"></div>
           <div class="sek-bars"><canvas id="sekBars"></canvas></div>
+        </div>
+        <div class="sek-bars-legend">
+          <span><i class="leg-strong"></i>aktuell</span>
+          <span><i class="leg-faint"></i>Ø 30 T über 360 T</span>
         </div>
       </section>
 
@@ -528,17 +532,17 @@
         </div>
         <div class="sek-filter" id="sekFilter">
           <span class="sek-filter-label">Filter:</span>
-          <input type="number" id="fltPe" placeholder="KGV ≤" min="0" step="1" aria-label="KGV maximal">
-          <input type="number" id="fltPerf6m" placeholder="6M ≥ %" step="1" aria-label="6-Monats-Performance minimal in Prozent">
-          <input type="number" id="fltBuy" placeholder="Kauf ≥ %" min="0" max="100" step="1" aria-label="Kaufempfehlung minimal in Prozent">
-          <input type="number" id="fltUpside" placeholder="Ziel ≥ %" step="1" aria-label="Analystenziel-Potenzial minimal in Prozent">
+          <input type="text" inputmode="numeric" id="fltPe" placeholder="KGV ≤" aria-label="KGV maximal">
+          <input type="text" inputmode="numeric" id="fltPerf6m" placeholder="6M ≤ %" aria-label="6-Monats-Performance höchstens in Prozent">
+          <input type="text" inputmode="numeric" id="fltBuy" placeholder="Kauf ≥ %" aria-label="Kaufempfehlung minimal in Prozent">
+          <input type="text" inputmode="numeric" id="fltUpside" placeholder="Ziel ≥ %" aria-label="Analystenziel-Potenzial minimal in Prozent">
           <button class="sek-filter-clear" id="fltClear" type="button">zurücksetzen</button>
         </div>
         <div class="sek-sort" id="sekSort">
-          <span class="sek-sort-label">Sortieren:</span>
-          <button data-key="upside" class="active desc">Potenzial</button>
-          <button data-key="perf6m">6M&nbsp;Kurs</button>
-          <button data-key="outperformPct">Outperform</button>
+          <span class="sek-sort-label">Sort.</span>
+          <button data-key="upside" class="active desc">Ziel</button>
+          <button data-key="perf6m">6M</button>
+          <button data-key="outperformPct">Outperf.</button>
           <button data-key="pe">KGV</button>
           <button data-key="analysts">Analysten</button>
         </div>

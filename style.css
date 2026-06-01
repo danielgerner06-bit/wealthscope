@@ -1380,7 +1380,17 @@ a { text-decoration: none; color: inherit; }
 /* Balkendiagramm */
 .sek-bars { flex: 1; min-height: 0; position: relative; }
 .sek-bars canvas { position: absolute; inset: 0; }
-.sek-bars-legend { display: flex; gap: 14px; align-items: center; flex-shrink: 0; }
+/* Ansicht-Toggle Sektoren/Regionen */
+.sek-bars-toggle { display: inline-flex; gap: 2px; background: rgba(148,163,184,0.08); border: 1px solid var(--s-border); border-radius: 10px; padding: 3px; flex-shrink: 0; }
+.sek-bars-toggle button {
+  border: none; background: transparent; color: var(--s-muted);
+  font-weight: 700; font-size: 0.78rem; padding: 6px 13px; border-radius: 8px; cursor: pointer;
+  transition: background .15s, color .15s, box-shadow .15s; white-space: nowrap;
+}
+.sek-bars-toggle button:hover { color: var(--s-text); }
+.sek-bars-toggle button.active { background: linear-gradient(120deg, #6366f1, #a855f7); color: #fff; box-shadow: 0 4px 12px rgba(99,102,241,0.4); }
+
+.sek-bars-legend { display: flex; gap: 14px; align-items: center; flex-shrink: 0; margin-top: 10px; }
 .sek-bars-legend span { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; color: var(--s-muted); white-space: nowrap; }
 .sek-bars-legend i { width: 14px; height: 9px; border-radius: 3px; display: inline-block; }
 .sek-bars-legend .leg-strong { background: linear-gradient(90deg, #818cf8, #c084fc); }
@@ -1405,20 +1415,25 @@ a { text-decoration: none; color: inherit; }
 .sek-bars canvas { position: absolute; inset: 0; }
 
 /* Filter + Sortierung */
-.sek-filter, .sek-sort { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; flex-shrink: 0; margin-bottom: 10px; }
-.sek-filter-label, .sek-sort-label { font-size: 0.72rem; font-weight: 700; color: var(--s-faint); text-transform: uppercase; letter-spacing: 0.4px; margin-right: 2px; }
-.sek-filter select, .sek-filter input {
+.sek-filter { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; flex-shrink: 0; margin-bottom: 8px; }
+.sek-sort { display: flex; align-items: center; gap: 5px; flex-wrap: nowrap; flex-shrink: 0; margin-bottom: 10px; }
+.sek-filter-label, .sek-sort-label { font-size: 0.7rem; font-weight: 700; color: var(--s-faint); text-transform: uppercase; letter-spacing: 0.3px; margin-right: 1px; }
+.sek-filter input {
   background: rgba(148,163,184,0.08); border: 1px solid var(--s-border); color: var(--s-text);
   border-radius: 8px; padding: 5px 8px; font-size: 0.76rem; font-weight: 600; font-family: inherit;
+  width: 64px;
 }
-.sek-filter input { width: 66px; }
 .sek-filter input::placeholder { color: var(--s-faint); }
-.sek-filter-clear { background: none; border: none; color: var(--s-accent); font-size: 0.74rem; font-weight: 700; cursor: pointer; padding: 4px; }
+/* Spinner-Pfeile entfernen (falls type=number) */
+.sek-filter input::-webkit-outer-spin-button,
+.sek-filter input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.sek-filter input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+.sek-filter-clear { background: none; border: none; color: var(--s-accent); font-size: 0.72rem; font-weight: 700; cursor: pointer; padding: 4px; white-space: nowrap; }
 .sek-filter-clear:hover { text-decoration: underline; }
 .sek-sort button {
   background: rgba(148,163,184,0.07); border: 1px solid var(--s-border); color: var(--s-muted);
-  border-radius: 8px; padding: 5px 11px; font-size: 0.76rem; font-weight: 700; cursor: pointer;
-  transition: all .12s; display: inline-flex; align-items: center; gap: 4px;
+  border-radius: 7px; padding: 5px 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer;
+  transition: all .12s; display: inline-flex; align-items: center; gap: 3px; white-space: nowrap;
 }
 .sek-sort button:hover { color: var(--s-text); border-color: var(--s-border-hi); }
 .sek-sort button.active { background: linear-gradient(120deg, rgba(129,140,248,0.22), rgba(192,132,252,0.22)); color: #c7cbff; border-color: var(--s-border-hi); }

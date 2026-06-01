@@ -12,10 +12,10 @@
 // Robust: fehlende Keys / Fehler lassen den jeweils alten Stand erhalten.
 
 import fs from 'node:fs';
-import { SECTORS } from './sectors.mjs';
+import { SECTORS, REGIONS } from './sectors.mjs';
 import { buildSectorNotes } from './insight.mjs';
-import { scanAnalystStocks } from './finnhub.mjs';
-import { fetchSectorPerformance, fetchStockPerf6m } from './prices.mjs';
+import { scanAnalystStocks, fetchMetric } from './finnhub.mjs';
+import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m } from './prices.mjs';
 import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 
@@ -49,10 +49,13 @@ const today = () => new Date().toISOString().slice(0, 10);
     ? prev.scan.candidates.slice()
     : SEED_CANDIDATES.slice();
 
-  /* 1) Sektor-Performance (30 Tage + 360-Tage-Schnitt) via Yahoo (kein Key) -- */
+  /* 1) Sektor- & Regions-Performance (30T + 360T-Schnitt + 6M) via Yahoo (kein Key) -- */
   let bars30 = prev?.bars30 || [];
-  try { bars30 = await fetchSectorPerformance(); console.log('Performance aktualisiert.'); }
-  catch (e) { console.error('Performance-Abruf fehlgeschlagen, behalte alte:', e.message); }
+  let bars30Region = prev?.bars30Region || [];
+  try { bars30 = await fetchSectorPerformance(); console.log('Sektor-Performance aktualisiert.'); }
+  catch (e) { console.error('Sektor-Performance fehlgeschlagen, behalte alte:', e.message); }
+  try { bars30Region = await fetchRegionPerformance(); console.log('Regions-Performance aktualisiert.'); }
+  catch (e) { console.error('Regions-Performance fehlgeschlagen, behalte alte:', e.message); }
 
   /* 2a) Finnhub-Analysten-Scan (US, rollierend) ---------------------- */
   if (FINNHUB_KEY) {
@@ -115,6 +118,21 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
   if (needPerf.length) console.log(`6M-Performance für ${needPerf.length} Aktien aktualisiert.`);
 
+  /* 3b) Echtes KGV je Aktie über Finnhub (verlässlicher als Gemini-Schätzung) ---
+     Setzt pe sauber: Verlustfirmen bekommen null (kein KGV). Rollierend, mit Budget. */
+  if (FINNHUB_KEY) {
+    const needPe = topStocks.filter(s => s.peAt == null || (nowMs - Date.parse(s.peAt)) > STALE)
+      .slice(0, Number(process.env.PE_BUDGET || 30));
+    let peCount = 0;
+    for (const s of needPe) {
+      const { pe, eps } = await fetchMetric(s.ticker, FINNHUB_KEY);
+      s.pe = pe; s.eps = eps; s.peAt = today();
+      db[s.ticker] = { ...db[s.ticker], pe, eps, peAt: s.peAt };
+      if (pe != null) peCount++;
+    }
+    if (needPe.length) console.log(`KGV (Finnhub) für ${needPe.length} Aktien geprüft, ${peCount} mit Wert.`);
+  }
+
   /* 4) Sektor-Lage-Texte rollierend (2-3 Sektoren pro Lauf) ----------- */
   let sectorNotes = prev?.sectorNotes || {};
   if (GEMINI_KEY) {
@@ -136,7 +154,9 @@ const today = () => new Date().toISOString().slice(0, 10);
     updatedAt: new Date().toISOString(),
     source: [FINNHUB_KEY && 'Finnhub', GEMINI_KEY && 'Gemini (Websuche & Analyse)'].filter(Boolean).join(' · '),
     sectors: SECTORS,
+    regions: REGIONS,
     bars30,
+    bars30Region,
     topStocks,
     sectorNotes,
     scan,

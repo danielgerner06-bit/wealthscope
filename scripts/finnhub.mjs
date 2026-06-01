@@ -108,3 +108,21 @@ export async function scanAnalystStocks(key, state, budget) {
 
   return { topStocks, scan: state.scan };
 }
+
+/* ---------- Echtes KGV (TTM) je Aktie über Finnhub /stock/metric ----------
+   Liefert { pe, eps } oder { pe: null } bei Verlust/ohne Daten. Negative oder
+   absurde KGV werden zu null — ein Verlustunternehmen hat KEIN sinnvolles KGV.   */
+export async function fetchMetric(ticker, key) {
+  try {
+    const m = await fh(`/stock/metric?symbol=${ticker}&metric=all`, key);
+    const d = m && m.metric ? m.metric : {};
+    let pe = d.peTTM ?? d.peBasicExclExtraTTM ?? d.peExclExtraTTM ?? null;
+    let eps = d.epsTTM ?? d.epsBasicExclExtraItemsTTM ?? null;
+    pe = (pe != null && isFinite(pe)) ? +Number(pe).toFixed(1) : null;
+    if (pe != null && (pe <= 0 || pe > 500)) pe = null;   // Verlust/absurd -> kein KGV
+    eps = (eps != null && isFinite(eps)) ? +Number(eps).toFixed(2) : null;
+    return { pe, eps };
+  } catch {
+    return { pe: null, eps: null };
+  }
+}

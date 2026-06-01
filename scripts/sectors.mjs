@@ -19,6 +19,20 @@ export const SECTORS = [
 
 export const SECTOR_IDS = SECTORS.map(s => s.id);
 
+// Weltregionen über breite Regions-ETFs (Yahoo-Symbole) — gleiche Logik wie Sektoren.
+export const REGIONS = [
+  { id: 'usa',      name: 'USA',                 color: '#6366f1', etf: 'SPY'  },
+  { id: 'europe',   name: 'Europa',              color: '#0ea5e9', etf: 'VGK'  },
+  { id: 'germany',  name: 'Deutschland',         color: '#f59e0b', etf: 'EWG'  },
+  { id: 'japan',    name: 'Japan',               color: '#ec4899', etf: 'EWJ'  },
+  { id: 'china',    name: 'China',               color: '#ef4444', etf: 'MCHI' },
+  { id: 'em',       name: 'Schwellenländer',     color: '#22c55e', etf: 'EEM'  },
+  { id: 'apac',     name: 'Asien-Pazifik',       color: '#14b8a6', etf: 'VPL'  },
+  { id: 'india',    name: 'Indien',              color: '#a855f7', etf: 'INDA' },
+  { id: 'latam',    name: 'Lateinamerika',       color: '#d97706', etf: 'ILF'  },
+  { id: 'world',    name: 'Welt gesamt',         color: '#94a3b8', etf: 'URTH' },
+];
+
 // Finnhub-Industrie -> unsere Sektor-ID. Bewusst fein, damit Software, KI/Halbleiter
 // und Hardware getrennt bleiben.
 const INDUSTRY_MAP = {

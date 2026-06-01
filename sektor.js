@@ -4,8 +4,14 @@
   let barChart = null;
   let sortKey = 'upside';
   let sortDir = -1;          // -1 = absteigend, 1 = aufsteigend
-  let barRows = [];          // aktuelle Reihenfolge der Sektoren im Balkenchart
+  let barRows = [];          // aktuelle Reihenfolge im Balkenchart
+  let view = 'sectors';      // 'sectors' | 'regions'
 
+  // Items (Sektoren oder Regionen) + Performance-Reihe je nach Ansicht
+  function viewItems() { return (view === 'regions' ? DATA.regions : DATA.sectors) || []; }
+  function viewBars() { return (view === 'regions' ? DATA.bars30Region : DATA.bars30) || []; }
+  function itemById(id) { return viewItems().find(s => s.id === id) || { name: id, color: '#94a3b8' }; }
+  // Aktien tragen immer einen Sektor (unabhängig von der Diagramm-Ansicht)
   function sectorById(id) { return (DATA.sectors || []).find(s => s.id === id) || { name: id, color: '#94a3b8' }; }
 
   async function loadData() {
@@ -20,15 +26,15 @@
 
   /* ---------- Balkendiagramm: 30-Tage-Performance + Ø-360T-Referenz ---------- */
   function renderBars() {
-    barRows = [...(DATA.bars30 || [])].sort((a, b) => b.perf - a.perf);
+    barRows = [...viewBars()].sort((a, b) => b.perf - a.perf);
     const values = barRows.map(r => +Number(r.perf).toFixed(2));
     const avgValues = barRows.map(r => (r.avg30 != null ? +Number(r.avg30).toFixed(2) : null));
     const hasAvg = avgValues.some(v => v != null);
     const colors = barRows.map(r => {
-      const base = sectorById(r.id).color;
+      const base = itemById(r.id).color;
       return r.perf >= 0 ? base : mix(base, '#ef4444', 0.45);
     });
-    const avgColors = barRows.map(r => hexA(sectorById(r.id).color, 0.20));
+    const avgColors = barRows.map(r => hexA(itemById(r.id).color, 0.20));
 
     renderBarNames();
 
@@ -49,7 +55,7 @@
 
     barChart = new Chart(ctx, {
       type: 'bar',
-      data: { labels: barRows.map(r => sectorById(r.id).name), datasets },
+      data: { labels: barRows.map(r => itemById(r.id).name), datasets },
       options: {
         indexAxis: 'y',
         responsive: true,
@@ -58,13 +64,14 @@
         plugins: { legend: { display: false }, tooltip: { enabled: false } },
         scales: {
           x: {
+            grace: '12%',   // Puffer an beiden Enden, damit Wert-Labels nicht abschneiden
             grid: { color: 'rgba(148,163,184,0.14)', drawTicks: false },
             border: { display: false },
             ticks: { color: '#94a3b8', callback: v => (v > 0 ? '+' : '') + v + '%', font: { size: 11 } },
           },
           y: { display: false, grid: { display: false } },
         },
-        layout: { padding: { right: 6 } },
+        layout: { padding: { right: 44, left: 4 } },
       },
       plugins: [zeroBarLine, valueLabels],
     });
@@ -75,7 +82,7 @@
     const wrap = document.getElementById('sekBarsNames');
     wrap.innerHTML = '';
     barRows.forEach(r => {
-      const sec = sectorById(r.id);
+      const sec = itemById(r.id);
       const b = document.createElement('button');
       b.className = 'sek-bar-name';
       b.innerHTML = '<i style="background:' + sec.color + '"></i><span>' + sec.name + '</span>';
@@ -122,8 +129,10 @@
   const filters = { pe: null, perf6m: null, buyPct: null, upside: null };
 
   function passesFilter(s) {
+    // KGV höchstens; 6M-Performance HÖCHSTENS (Aktien, die noch nicht durch die Decke sind);
+    // Kauf-% und Ziel-Potenzial mindestens. Aktien ohne den jeweiligen Wert fallen raus.
     if (filters.pe != null && !(s.pe != null && s.pe <= filters.pe)) return false;
-    if (filters.perf6m != null && !(s.perf6m != null && s.perf6m >= filters.perf6m)) return false;
+    if (filters.perf6m != null && !(s.perf6m != null && s.perf6m <= filters.perf6m)) return false;
     if (filters.buyPct != null && !(s.buyPct != null && s.buyPct >= filters.buyPct)) return false;
     if (filters.upside != null && !(s.upside != null && s.upside >= filters.upside)) return false;
     return true;
@@ -207,8 +216,10 @@
     const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltBuy: 'buyPct', fltUpside: 'upside' };
     Object.keys(map).forEach(id => {
       document.getElementById(id).addEventListener('input', e => {
-        const v = e.target.value.trim();
-        filters[map[id]] = v === '' ? null : Number(v);
+        // erlaubt negative Werte und Komma; ungültige Eingabe -> kein Filter
+        const raw = e.target.value.trim().replace(',', '.');
+        const num = parseFloat(raw);
+        filters[map[id]] = (raw === '' || isNaN(num)) ? null : num;
         renderStocks();
       });
     });
@@ -219,11 +230,12 @@
     });
   }
 
-  /* ---------- Sektor-Lage-Modal ---------- */
+  /* ---------- Lage-Modal (Sektor oder Region) ---------- */
   function openSectorModal(id) {
-    const sec = sectorById(id);
-    const bar = (DATA.bars30 || []).find(b => b.id === id) || {};
-    const note = (DATA.sectorNotes || {})[id];
+    const sec = itemById(id);
+    const bar = viewBars().find(b => b.id === id) || {};
+    // KI-Lagetexte gibt es nur für Sektoren
+    const note = view === 'sectors' ? (DATA.sectorNotes || {})[id] : null;
 
     document.getElementById('sekModalTitle').textContent = sec.name;
     document.getElementById('sekModalDot').style.background = sec.color;
@@ -235,8 +247,14 @@
       stat('Ø 30T (360T)', bar.avg30 != null ? fmtPct(bar.avg30) : '—', cl(bar.avg30)) +
       stat('6 Monate', bar.perf6m != null ? fmtPct(bar.perf6m) : '—', cl(bar.perf6m));
 
-    document.getElementById('sekModalText').textContent = note?.text || 'Für diesen Sektor liegt noch kein KI-Text vor — er wird in den nächsten Tagen ergänzt (die Analyse läuft rollierend, um das Kontingent zu schonen).';
-    document.getElementById('sekModalDate').textContent = note?.date ? 'Stand: ' + note.date : '';
+    const insightBox = document.querySelector('.sek-modal-insight');
+    if (view === 'regions') {
+      insightBox.style.display = 'none';
+    } else {
+      insightBox.style.display = '';
+      document.getElementById('sekModalText').textContent = note?.text || 'Für diesen Sektor liegt noch kein KI-Text vor — er wird in den nächsten Tagen ergänzt (die Analyse läuft rollierend, um das Kontingent zu schonen).';
+      document.getElementById('sekModalDate').textContent = note?.date ? 'Stand: ' + note.date : '';
+    }
 
     const m = document.getElementById('sekModal');
     m.hidden = false;
@@ -252,6 +270,26 @@
       if (e.target.closest('[data-close]')) closeModal();
     });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  }
+
+  /* ---------- Ansicht-Toggle: Sektoren <-> Regionen ---------- */
+  function applyViewLabels() {
+    const isReg = view === 'regions';
+    document.getElementById('sekBarsTitle').textContent =
+      (isReg ? 'Regionen-Performance' : 'Sektor-Performance') + ' · 30 Tage';
+    document.getElementById('sekBarsSub').textContent = isReg
+      ? 'Weltregionen gerankt nach 30-Tage-Kurs. Klick auf einen Namen zeigt die Kennzahlen.'
+      : 'Gerankt nach 30-Tage-Kurs. Klick auf einen Namen zeigt die aktuelle Lage.';
+  }
+  function wireViewToggle() {
+    document.getElementById('sekViewToggle').addEventListener('click', e => {
+      const btn = e.target.closest('button[data-view]');
+      if (!btn || btn.dataset.view === view) return;
+      view = btn.dataset.view;
+      document.querySelectorAll('#sekViewToggle button').forEach(b => b.classList.toggle('active', b === btn));
+      applyViewLabels();
+      renderBars();
+    });
   }
 
   /* ---------- Header: Stand mit Uhrzeit ---------- */
@@ -284,7 +322,8 @@
       loading.classList.add('show');
       await loadData();
       renderStand();
-      if (!wired) { wireSort(); wireFilter(); wireModal(); wired = true; }
+      if (!wired) { wireSort(); wireFilter(); wireModal(); wireViewToggle(); wired = true; }
+      applyViewLabels();
       renderBars();
       renderStocks();
     } catch (err) {

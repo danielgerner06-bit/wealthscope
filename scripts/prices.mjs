@@ -5,7 +5,7 @@
 //
 // Robust gegen Yahoo-Ausreißer: End-/Startkurs = Median über ein kleines Fenster,
 // damit ein einzelner fehlerhafter Tageskurs die Prozentwerte nicht verfälscht.
-import { SECTORS } from './sectors.mjs';
+import { SECTORS, REGIONS } from './sectors.mjs';
 
 const W30 = 21;    // ~30 Kalendertage
 const W6M = 126;   // ~6 Monate
@@ -16,15 +16,17 @@ function median(a) {
   const mid = Math.floor(x.length / 2);
   return x.length % 2 ? x[mid] : (x[mid - 1] + x[mid]) / 2;
 }
-// Median der k Werte um Index i (gegen Ausreißer)
-function smooth(arr, i, k = 3) {
-  const half = Math.floor(k / 2);
-  return median(arr.slice(Math.max(0, i - half), Math.min(arr.length, i + half + 1)));
+// Median der k Werte ENDEND bei Index i (trailing) — robust am Rand gegen Ausreißer.
+// Yahoos jeweils letzter Tageskurs ist oft ein Intraday-Spike; der 3-Tage-Median
+// trifft die offiziellen Monatswerte (validiert gegen etfdb/NAV).
+function trailMed(arr, i, k = 3) {
+  const lo = Math.max(0, i - k + 1);
+  return median(arr.slice(lo, i + 1));
 }
 function pctBack(c, win) {
   if (c.length <= win + 2) return null;
-  const last = smooth(c, c.length - 1);
-  const ref = smooth(c, c.length - 1 - win);
+  const last = trailMed(c, c.length - 1);
+  const ref = trailMed(c, c.length - 1 - win);
   if (!last || !ref) return null;
   return +(((last - ref) / ref) * 100).toFixed(2);
 }
@@ -40,9 +42,10 @@ async function closes(symbol, range = '1y') {
   return arr.filter(x => typeof x === 'number' && isFinite(x));
 }
 
-export async function fetchSectorPerformance() {
+// Performance für eine Liste von { id, etf } (Sektoren ODER Regionen).
+async function fetchPerf(list) {
   const out = [];
-  for (const s of SECTORS) {
+  for (const s of list) {
     try {
       const c = await closes(s.etf, '1y');
       if (c.length <= W30 + 2) { out.push({ id: s.id, perf: 0, avg30: 0, perf6m: 0 }); continue; }
@@ -53,7 +56,7 @@ export async function fetchSectorPerformance() {
       const lookback = Math.min(252, c.length - 1 - W30);
       let sum = 0, cnt = 0;
       for (let i = c.length - 1; i > c.length - 1 - lookback && i - W30 >= 0; i--) {
-        const a = smooth(c, i), b = smooth(c, i - W30);
+        const a = trailMed(c, i), b = trailMed(c, i - W30);
         if (a && b) { sum += ((a - b) / b) * 100; cnt++; }
       }
       const avg30 = cnt ? +(sum / cnt).toFixed(2) : perf;
@@ -64,6 +67,9 @@ export async function fetchSectorPerformance() {
   }
   return out;
 }
+
+export const fetchSectorPerformance = () => fetchPerf(SECTORS);
+export const fetchRegionPerformance = () => fetchPerf(REGIONS);
 
 // 6-Monats-Performance für eine einzelne Aktie (oder null bei Fehler).
 export async function fetchStockPerf6m(ticker) {
