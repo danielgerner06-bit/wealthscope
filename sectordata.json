@@ -1,5 +1,6 @@
 {
   "updated": "2026-06-01",
+  "updatedAt": "2026-06-01T20:33:01.264Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -81,276 +82,6 @@
       "etf": "XLRE"
     }
   ],
-  "bars30": [
-    {
-      "id": "software",
-      "perf": 24.01,
-      "avg30": -0.97,
-      "perf6m": 1.55
-    },
-    {
-      "id": "ai_semi",
-      "perf": 23.6,
-      "avg30": 8.38,
-      "perf6m": 95.73
-    },
-    {
-      "id": "hardware",
-      "perf": 21.24,
-      "avg30": 3.69,
-      "perf6m": 36.29
-    },
-    {
-      "id": "comm",
-      "perf": -0.61,
-      "avg30": 1.04,
-      "perf6m": 1.17
-    },
-    {
-      "id": "health",
-      "perf": 2.44,
-      "avg30": 0.87,
-      "perf6m": -6.13
-    },
-    {
-      "id": "finance",
-      "perf": -0.78,
-      "avg30": 0.12,
-      "perf6m": -2.71
-    },
-    {
-      "id": "cons_cycl",
-      "perf": 1.19,
-      "avg30": 1.05,
-      "perf6m": 1.92
-    },
-    {
-      "id": "cons_def",
-      "perf": -2.06,
-      "avg30": 0.43,
-      "perf6m": 4.47
-    },
-    {
-      "id": "industrial",
-      "perf": -0.03,
-      "avg30": 1.72,
-      "perf6m": 13.16
-    },
-    {
-      "id": "energy",
-      "perf": -3.7,
-      "avg30": 3.01,
-      "perf6m": 27.34
-    },
-    {
-      "id": "materials",
-      "perf": -0.59,
-      "avg30": 1.5,
-      "perf6m": 14.86
-    },
-    {
-      "id": "utilities",
-      "perf": -5.86,
-      "avg30": 1.03,
-      "perf6m": -2.61
-    },
-    {
-      "id": "realestate",
-      "perf": -1.42,
-      "avg30": 0.59,
-      "perf6m": 5.35
-    }
-  ],
-  "topStocks": [
-    {
-      "ticker": "FRAMERY",
-      "name": "Framery Group Oyj",
-      "sector": "industrial",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 2,
-      "upside": 39,
-      "via": "gemini-discover",
-      "source": "Investing.com, MarketScreener, Fintel",
-      "seen": "2026-06-01",
-      "pe": 31
-    },
-    {
-      "ticker": "NBIS",
-      "name": "Nebius Group",
-      "sector": "software",
-      "buyPct": 100,
-      "outperformPct": 90,
-      "analysts": 8,
-      "upside": 33,
-      "pe": null
-    },
-    {
-      "ticker": "KTN",
-      "name": "Kontron AG",
-      "sector": "software",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 7,
-      "upside": 25,
-      "via": "gemini",
-      "source": "Investing.com",
-      "seen": "2026-06-01"
-    },
-    {
-      "ticker": "VRT",
-      "name": "Vertiv Holdings",
-      "sector": "hardware",
-      "buyPct": 96,
-      "outperformPct": 85,
-      "analysts": 21,
-      "upside": 24,
-      "pe": 42
-    },
-    {
-      "ticker": "DEF",
-      "name": "DEFAMA Deutsche Fachmarkt AG",
-      "sector": "realestate",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 3,
-      "upside": 21,
-      "via": "gemini-discover",
-      "source": "Investing.com, Stockopedia, Metzler Research",
-      "seen": "2026-06-01",
-      "pe": 18
-    },
-    {
-      "ticker": "TLN",
-      "name": "Talen Energy",
-      "sector": "energy",
-      "buyPct": 97,
-      "outperformPct": 86,
-      "analysts": 9,
-      "upside": 21,
-      "pe": 22
-    },
-    {
-      "ticker": "CLS",
-      "name": "Celestica",
-      "sector": "hardware",
-      "buyPct": 100,
-      "outperformPct": 91,
-      "analysts": 11,
-      "upside": 19,
-      "pe": 28
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "ai_semi",
-      "buyPct": 97,
-      "outperformPct": 88,
-      "analysts": 62,
-      "upside": 18,
-      "pe": 38
-    },
-    {
-      "ticker": "NET",
-      "name": "Cloudflare",
-      "sector": "software",
-      "buyPct": 96,
-      "outperformPct": 83,
-      "analysts": 30,
-      "upside": 15,
-      "pe": 120
-    },
-    {
-      "ticker": "GEV",
-      "name": "GE Vernova",
-      "sector": "industrial",
-      "buyPct": 95,
-      "outperformPct": 82,
-      "analysts": 28,
-      "upside": 14,
-      "pe": 45
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "sector": "finance",
-      "buyPct": 95,
-      "outperformPct": 81,
-      "analysts": 19,
-      "upside": 12,
-      "pe": 55
-    },
-    {
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "sector": "software",
-      "buyPct": 95,
-      "outperformPct": 80,
-      "analysts": 24,
-      "upside": 9,
-      "pe": 180
-    },
-    {
-      "ticker": "S92",
-      "name": "SMA Solar Technology AG",
-      "sector": "energy",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 2,
-      "upside": null,
-      "via": "gemini",
-      "source": "marketscreener.com",
-      "seen": "2026-06-01",
-      "pe": 26
-    }
-  ],
-  "insight": "Die aktuelle Sektorrotation am Aktienmarkt wird deutlich von technologischen Innovationen getragen. Software & Cloud sowie KI & Halbleiter führen mit deutlichen Zuwächsen, angetrieben durch anhaltende Investitionen in digitale Transformation und künstliche Intelligenz. Gleichzeitig leiden defensive Sektoren wie Versorger und Energie unter dem zunehmenden Optimismus bezüglich einer stabilen Konjunktur und potenziellen Zinssenkungen, was ihre relative Attraktivität mindert.",
-  "scan": {
-    "universe": 18419,
-    "scanned": 1400,
-    "lastCursor": 1400,
-    "candCursor": 24,
-    "candidates": [
-      "innoscripta SE",
-      "Smartbroker Holding AG",
-      "Nagarro SE",
-      "PVA TePla AG",
-      "SMA Solar Technology AG",
-      "Friedrich Vorwerk Group SE",
-      "SECunet Security Networks AG",
-      "Atoss Software SE",
-      "Süss MicroTec SE",
-      "Verbio SE",
-      "Mensch und Maschine Software SE",
-      "Init Innovation in Traffic Systems SE",
-      "Pferdewetten.de AG",
-      "Schott Pharma AG",
-      "ADTRAN Holdings",
-      "Kontron AG",
-      "Jenoptik AG",
-      "Hypoport SE",
-      "CompuGroup Medical SE",
-      "Stratec SE",
-      "ASM International NV",
-      "BE Semiconductor Industries NV",
-      "Sartorius Stedim Biotech",
-      "Soitec SA",
-      "Nordic Semiconductor ASA",
-      "Nebius Group",
-      "Credo Technology Group",
-      "Astera Labs",
-      "Vertiv Holdings",
-      "Celestica",
-      "Talen Energy",
-      "Comfort Systems USA",
-      "Powell Industries",
-      "SkyWater Technology",
-      "Modine Manufacturing",
-      "DEFAMA Deutsche Fachmarkt AG",
-      "Framery Group Oyj"
-    ]
-  },
-  "updatedAt": "2026-06-01T19:32:09.222Z",
   "regions": [
     {
       "id": "usa",
@@ -413,12 +144,92 @@
       "etf": "URTH"
     }
   ],
+  "bars30": [
+    {
+      "id": "software",
+      "perf": 20.31,
+      "avg30": -1.06,
+      "perf6m": -1.27
+    },
+    {
+      "id": "ai_semi",
+      "perf": 26.55,
+      "avg30": 8.34,
+      "perf6m": 100.81
+    },
+    {
+      "id": "hardware",
+      "perf": 20.06,
+      "avg30": 3.63,
+      "perf6m": 36.22
+    },
+    {
+      "id": "comm",
+      "perf": -0.05,
+      "avg30": 1.06,
+      "perf6m": 1.22
+    },
+    {
+      "id": "health",
+      "perf": 3.91,
+      "avg30": 0.87,
+      "perf6m": -5.65
+    },
+    {
+      "id": "finance",
+      "perf": -0.94,
+      "avg30": 0.14,
+      "perf6m": -2.11
+    },
+    {
+      "id": "cons_cycl",
+      "perf": 3.3,
+      "avg30": 1.06,
+      "perf6m": 3.57
+    },
+    {
+      "id": "cons_def",
+      "perf": -0.2,
+      "avg30": 0.43,
+      "perf6m": 6.21
+    },
+    {
+      "id": "industrial",
+      "perf": 1.26,
+      "avg30": 1.74,
+      "perf6m": 13.96
+    },
+    {
+      "id": "energy",
+      "perf": -3.52,
+      "avg30": 3.05,
+      "perf6m": 27.73
+    },
+    {
+      "id": "materials",
+      "perf": -0.49,
+      "avg30": 1.52,
+      "perf6m": 16.5
+    },
+    {
+      "id": "utilities",
+      "perf": -3.96,
+      "avg30": 1.05,
+      "perf6m": -0.35
+    },
+    {
+      "id": "realestate",
+      "perf": 0.18,
+      "avg30": 0.59,
+      "perf6m": 6.54
+    }
+  ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": 0,
-      "avg30": 0,
-      "perf6m": 0
+      "perf": 6.29,
+      "avg30": 1.93,
+      "perf6m": 12.07
     },
     {
       "id": "europe",
@@ -474,5 +285,269 @@
       "avg30": 1.81,
       "perf6m": 11.85
     }
-  ]
+  ],
+  "topStocks": [
+    {
+      "ticker": "FRAMERY",
+      "name": "Framery Group Oyj",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 2,
+      "upside": 39,
+      "via": "gemini-discover",
+      "source": "Investing.com, MarketScreener, Fintel",
+      "seen": "2026-06-01",
+      "pe": null,
+      "eps": null,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "TLN",
+      "name": "Talen Energy Corporation",
+      "sector": "energy",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 15,
+      "upside": 26,
+      "pe": null,
+      "yahoo": "TLN",
+      "via": "gemini",
+      "source": "Investing.com, WallStreetZen",
+      "seen": "2026-06-01",
+      "eps": -0.85,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "KTN",
+      "name": "Kontron AG",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 7,
+      "upside": 25,
+      "via": "gemini",
+      "source": "Investing.com",
+      "seen": "2026-06-01",
+      "pe": null,
+      "eps": null,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "VRT",
+      "name": "Vertiv Holdings",
+      "sector": "hardware",
+      "buyPct": 96,
+      "outperformPct": 85,
+      "analysts": 21,
+      "upside": 24,
+      "pe": 79.5,
+      "eps": 3.98,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "DEF",
+      "name": "DEFAMA Deutsche Fachmarkt AG",
+      "sector": "realestate",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 3,
+      "upside": 21,
+      "via": "gemini",
+      "source": "Investing.com, wallstreetONLINE",
+      "seen": "2026-06-01",
+      "pe": null,
+      "yahoo": "DEF.DE",
+      "eps": null,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "CLS",
+      "name": "Celestica",
+      "sector": "hardware",
+      "buyPct": 100,
+      "outperformPct": 91,
+      "analysts": 11,
+      "upside": 19,
+      "pe": 46.2,
+      "eps": 8.27,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "MOD",
+      "name": "Modine Manufacturing Company",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 7,
+      "upside": 18,
+      "yahoo": "MOD",
+      "via": "gemini",
+      "source": "Investing.com, MarketScreener",
+      "seen": "2026-06-01",
+      "pe": 150.6,
+      "eps": 1.8,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "ADEA",
+      "name": "Adeia Inc.",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 80,
+      "analysts": 5,
+      "upside": 18,
+      "yahoo": "ADEA",
+      "via": "gemini-discover",
+      "source": "Barchart.com, Stock Analysis, Perplexity",
+      "seen": "2026-06-01",
+      "pe": 24.1,
+      "eps": 1.08,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "ai_semi",
+      "buyPct": 97,
+      "outperformPct": 88,
+      "analysts": 62,
+      "upside": 18,
+      "pe": 33.2,
+      "eps": 6.53,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "NET",
+      "name": "Cloudflare",
+      "sector": "software",
+      "buyPct": 96,
+      "outperformPct": 83,
+      "analysts": 30,
+      "upside": 15,
+      "pe": null,
+      "eps": -0.25,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "GEV",
+      "name": "GE Vernova",
+      "sector": "industrial",
+      "buyPct": 95,
+      "outperformPct": 82,
+      "analysts": 28,
+      "upside": 14,
+      "pe": 27.8,
+      "eps": 34.37,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "finance",
+      "buyPct": 95,
+      "outperformPct": 81,
+      "analysts": 19,
+      "upside": 12,
+      "pe": 44.8,
+      "eps": 2.07,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "sector": "software",
+      "buyPct": 95,
+      "outperformPct": 80,
+      "analysts": 24,
+      "upside": 9,
+      "pe": 164.5,
+      "eps": 0.89,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "NBIS",
+      "name": "Nebius Group NV",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 4,
+      "upside": 3,
+      "pe": 71.2,
+      "yahoo": "NBIS",
+      "via": "gemini",
+      "source": "MarketScreener",
+      "seen": "2026-06-01",
+      "eps": 2.73,
+      "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "S92",
+      "name": "SMA Solar Technology AG",
+      "sector": "energy",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 2,
+      "upside": null,
+      "via": "gemini",
+      "source": "marketscreener.com",
+      "seen": "2026-06-01",
+      "pe": null,
+      "eps": null,
+      "peAt": "2026-06-01"
+    }
+  ],
+  "sectorNotes": {
+    "software": {
+      "text": "Der Sektor Software & Cloud erlebt aktuell einen bemerkenswerten Aufschwung mit einer 30-Tage-Kursentwicklung von +20.31%, die deutlich über dem typischen 30-Tage-Schnitt von -1.06% liegt. Dieser starke Anstieg, nach einer eher verhaltenen Sechs-Monats-Entwicklung von -1.27%, ist primär auf die zunehmende Begeisterung und Investitionen im Bereich Künstliche Intelligenz zurückzuführen. Viele Unternehmen, darunter auch die genannten Analysten-Favoriten wie Cloudflare und Palantir, profitieren von der Erwartungshaltung an zukünftiges Wachstum und Effizienzsteigerungen durch KI, was zu einer Neubewertung der Sektor-Perspektiven führt.",
+      "date": "2026-06-01"
+    }
+  },
+  "scan": {
+    "universe": 18419,
+    "scanned": 2100,
+    "lastCursor": 2100,
+    "candCursor": 36,
+    "candidates": [
+      "innoscripta SE",
+      "Smartbroker Holding AG",
+      "Nagarro SE",
+      "PVA TePla AG",
+      "SMA Solar Technology AG",
+      "Friedrich Vorwerk Group SE",
+      "SECunet Security Networks AG",
+      "Atoss Software SE",
+      "Süss MicroTec SE",
+      "Verbio SE",
+      "Mensch und Maschine Software SE",
+      "Init Innovation in Traffic Systems SE",
+      "Pferdewetten.de AG",
+      "Schott Pharma AG",
+      "ADTRAN Holdings",
+      "Kontron AG",
+      "Jenoptik AG",
+      "Hypoport SE",
+      "CompuGroup Medical SE",
+      "Stratec SE",
+      "ASM International NV",
+      "BE Semiconductor Industries NV",
+      "Sartorius Stedim Biotech",
+      "Soitec SA",
+      "Nordic Semiconductor ASA",
+      "Nebius Group",
+      "Credo Technology Group",
+      "Astera Labs",
+      "Vertiv Holdings",
+      "Celestica",
+      "Talen Energy",
+      "Comfort Systems USA",
+      "Powell Industries",
+      "SkyWater Technology",
+      "Modine Manufacturing",
+      "DEFAMA Deutsche Fachmarkt AG",
+      "Framery Group Oyj",
+      "Adeia Inc."
+    ],
+    "noteCursor": 3
+  }
 }
