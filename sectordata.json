@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-01",
-  "updatedAt": "2026-06-01T20:33:01.264Z",
+  "updatedAt": "2026-06-01T20:44:19.781Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -288,21 +288,6 @@
   ],
   "topStocks": [
     {
-      "ticker": "FRAMERY",
-      "name": "Framery Group Oyj",
-      "sector": "industrial",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 2,
-      "upside": 39,
-      "via": "gemini-discover",
-      "source": "Investing.com, MarketScreener, Fintel",
-      "seen": "2026-06-01",
-      "pe": null,
-      "eps": null,
-      "peAt": "2026-06-01"
-    },
-    {
       "ticker": "TLN",
       "name": "Talen Energy Corporation",
       "sector": "energy",
@@ -316,7 +301,9 @@
       "source": "Investing.com, WallStreetZen",
       "seen": "2026-06-01",
       "eps": -0.85,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": 3.68,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "KTN",
@@ -331,7 +318,9 @@
       "seen": "2026-06-01",
       "pe": null,
       "eps": null,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": -1.77,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "VRT",
@@ -343,7 +332,9 @@
       "upside": 24,
       "pe": 79.5,
       "eps": 3.98,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": 74.51,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "DEF",
@@ -359,7 +350,9 @@
       "pe": null,
       "yahoo": "DEF.DE",
       "eps": null,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": -13.67,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "CLS",
@@ -371,7 +364,9 @@
       "upside": 19,
       "pe": 46.2,
       "eps": 8.27,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": 24.96,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "MOD",
@@ -387,7 +382,9 @@
       "seen": "2026-06-01",
       "pe": 150.6,
       "eps": 1.8,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": 74.42,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "ADEA",
@@ -403,7 +400,9 @@
       "seen": "2026-06-01",
       "pe": 24.1,
       "eps": 1.08,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": 117.95,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "NVDA",
@@ -415,7 +414,9 @@
       "upside": 18,
       "pe": 33.2,
       "eps": 6.53,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": 18.07,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "NET",
@@ -427,7 +428,27 @@
       "upside": 15,
       "pe": null,
       "eps": -0.25,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": 18.45,
+      "perf6mAt": "2026-06-01"
+    },
+    {
+      "ticker": "FRAMERY",
+      "name": "Framery Group Oyj",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 3,
+      "upside": 14,
+      "via": "gemini",
+      "source": "Investing.com, MarketScreener.com",
+      "seen": "2026-06-01",
+      "pe": null,
+      "eps": null,
+      "peAt": "2026-06-01",
+      "yahoo": "FRAMERY.HE",
+      "perf6m": -6.05,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "GEV",
@@ -439,7 +460,9 @@
       "upside": 14,
       "pe": 27.8,
       "eps": 34.37,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": 60.86,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "HOOD",
@@ -451,7 +474,9 @@
       "upside": 12,
       "pe": 44.8,
       "eps": 2.07,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": -32.11,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "PLTR",
@@ -463,7 +488,9 @@
       "upside": 9,
       "pe": 164.5,
       "eps": 0.89,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": -11.1,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "NBIS",
@@ -479,7 +506,9 @@
       "source": "MarketScreener",
       "seen": "2026-06-01",
       "eps": 2.73,
-      "peAt": "2026-06-01"
+      "peAt": "2026-06-01",
+      "perf6m": 133.61,
+      "perf6mAt": "2026-06-01"
     },
     {
       "ticker": "S92",
@@ -501,13 +530,17 @@
     "software": {
       "text": "Der Sektor Software & Cloud erlebt aktuell einen bemerkenswerten Aufschwung mit einer 30-Tage-Kursentwicklung von +20.31%, die deutlich über dem typischen 30-Tage-Schnitt von -1.06% liegt. Dieser starke Anstieg, nach einer eher verhaltenen Sechs-Monats-Entwicklung von -1.27%, ist primär auf die zunehmende Begeisterung und Investitionen im Bereich Künstliche Intelligenz zurückzuführen. Viele Unternehmen, darunter auch die genannten Analysten-Favoriten wie Cloudflare und Palantir, profitieren von der Erwartungshaltung an zukünftiges Wachstum und Effizienzsteigerungen durch KI, was zu einer Neubewertung der Sektor-Perspektiven führt.",
       "date": "2026-06-01"
+    },
+    "health": {
+      "text": "Der Gesundheits- und Pharmasektor zeigt sich nach einer schwachen Sechsmonatsperformance von -5,65% in den letzten 30 Tagen mit einem Kursplus von +3,91% deutlich erholt, was signifikant über dem historischen 30-Tage-Schnitt von +0,87% liegt. Diese kurzfristige Stärke könnte auf eine Rotation in defensivere Sektoren zurückzuführen sein, da die Unsicherheiten bezüglich des globalen Wirtschaftswachstums und der Zinsentwicklung zunehmen. Trotzdem fehlen derzeit markante Analysten-Favoriten, was auf eine weiterhin selektive Betrachtung und das Ausbleiben eines breiten Investitionszyklus hindeutet.",
+      "date": "2026-06-01"
     }
   },
   "scan": {
     "universe": 18419,
-    "scanned": 2100,
-    "lastCursor": 2100,
-    "candCursor": 36,
+    "scanned": 2400,
+    "lastCursor": 2400,
+    "candCursor": 12,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -548,6 +581,7 @@
       "Framery Group Oyj",
       "Adeia Inc."
     ],
-    "noteCursor": 3
+    "noteCursor": 6,
+    "focusCursor": 2
   }
 }
