@@ -1385,6 +1385,11 @@ a { text-decoration: none; color: inherit; }
 /* Balkendiagramm */
 .sek-bars { flex: 1; min-height: 0; position: relative; }
 .sek-bars canvas { position: absolute; inset: 0; }
+.sek-bars-legend { display: flex; gap: 14px; align-items: center; flex-shrink: 0; }
+.sek-bars-legend span { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; color: var(--s-muted); white-space: nowrap; }
+.sek-bars-legend i { width: 14px; height: 9px; border-radius: 3px; display: inline-block; }
+.sek-bars-legend .leg-strong { background: linear-gradient(90deg, #818cf8, #c084fc); }
+.sek-bars-legend .leg-faint { background: rgba(148,163,184,0.3); }
 
 /* Analystenliste */
 .sek-stocks-list { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 3px; padding-right: 4px; margin: -2px; padding: 2px 4px 2px 2px; }
