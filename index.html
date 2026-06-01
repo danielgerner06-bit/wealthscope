@@ -491,6 +491,14 @@
         <span>Apps</span>
       </button>
       <div class="sek-brand">Sektor<span class="grad">Scope</span></div>
+      <div class="sek-ranges" id="sekRanges" role="tablist" aria-label="Zeitfenster">
+        <button data-range="1m" class="active">1M</button>
+        <button data-range="3m">3M</button>
+        <button data-range="6m">6M</button>
+        <button data-range="1j">1J</button>
+        <button data-range="3j">3J</button>
+        <button data-range="5j">5J</button>
+      </div>
       <div class="sek-meta">
         <span class="sek-dot"></span>
         <span id="sekUpdated">—</span>
@@ -498,60 +506,28 @@
     </header>
 
     <main class="sek-main">
-      <!-- linke große Spalte: Performance -->
-      <section class="sek-card sek-perf">
+      <!-- LINKS: Momentum-Liniendiagramm -->
+      <section class="sek-card sek-momentum">
         <div class="sek-card-head">
           <div>
-            <h2>Sektor-Performance</h2>
-            <p class="sek-card-sub">Prozentuales Aktienwachstum je Branche am Weltmarkt</p>
-          </div>
-          <div class="sek-ranges" id="sekRanges">
-            <button data-range="1m">1M</button>
-            <button data-range="3m">3M</button>
-            <button data-range="6m">6M</button>
-            <button data-range="1j" class="active">1J</button>
-            <button data-range="3j">3J</button>
-            <button data-range="5j">5J</button>
+            <h2>Sektor-Momentum</h2>
+            <p class="sek-card-sub">Aktuelle Steigung je Branche (Ø Wochen-Wachstum) — über 0 = outperformend, darunter = underperformend</p>
           </div>
         </div>
-        <div class="sek-chart-wrap"><canvas id="sekPerfChart"></canvas></div>
+        <div class="sek-chart-wrap"><canvas id="sekMomentumChart"></canvas></div>
         <div class="sek-legend" id="sekLegend"></div>
       </section>
 
-      <!-- rechte Spalte oben: Ranking -->
-      <section class="sek-card sek-rank">
-        <div class="sek-card-head">
-          <h2>Rangliste</h2>
-          <span class="sek-badge" id="sekRankRange">1J</span>
-        </div>
-        <div class="sek-bars" id="sekBars"></div>
-      </section>
-
-      <!-- rechte Spalte unten: Analysten-Verteilung -->
+      <!-- RECHTS: Analysten-Titel + Analysten-Diagramm -->
       <section class="sek-card sek-analyst">
         <div class="sek-card-head">
           <div>
-            <h2>Analysten-Favoriten je Sektor</h2>
-            <p class="sek-card-sub">Anteil der Top-bewerteten Aktien (Strong&nbsp;Buy / Buy) über die Zeit</p>
+            <h2>Analysten-Favoriten</h2>
+            <p class="sek-card-sub">Verteilung der Top-Aktien je Sektor — Kaufempfehlung&nbsp;≥&nbsp;95&nbsp;%, Outperform&nbsp;≥&nbsp;80&nbsp;% (über die Zeit)</p>
           </div>
         </div>
-        <div class="sek-chart-wrap sek-chart-sm"><canvas id="sekAnalystChart"></canvas></div>
-      </section>
-
-      <!-- unten breit: Top-Aktien-Tabelle -->
-      <section class="sek-card sek-table">
-        <div class="sek-card-head">
-          <h2>Höchstbewertete Einzelaktien</h2>
-          <p class="sek-card-sub">Nach Analystenkonsens</p>
-        </div>
-        <div class="sek-table-scroll">
-          <table>
-            <thead>
-              <tr><th>Aktie</th><th>Sektor</th><th>Rating</th><th class="num">Kursziel-Potenzial</th></tr>
-            </thead>
-            <tbody id="sekStockBody"></tbody>
-          </table>
-        </div>
+        <div class="sek-chart-wrap"><canvas id="sekAnalystChart"></canvas></div>
+        <div class="sek-legend sek-legend-sm" id="sekAnalystLegend"></div>
       </section>
     </main>
 

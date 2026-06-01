@@ -49,16 +49,12 @@ Liefere ein Objekt mit dieser exakten Struktur:
   "analyst": {
     "labels": ["Q1 23", ... 12 Quartalslabels bis heute],
     "series": { "<sektorId>": [12 Zahlen], ... für alle Sektoren }
-  },
-  "topStocks": [
-    { "ticker": "...", "name": "...", "sector": "<eine der IDs>", "rating": "Strong Buy" oder "Buy", "upside": Zahl }
-  ]
+  }
 }
 
 Regeln:
 - performance[range][sektorId] ist ein Array von kumulativem prozentualem Kurswachstum, START bei 0, mit Anzahl Punkten: ${RANGES.map(r => `${r}=${POINTS[r]}`).join(', ')}. Letzter Wert = Gesamt-Performance des Sektors über den Zeitraum (z.B. 1m kleine Werte, 5j große). Werte plausibel, mit etwas Verlauf/Schwankung, eine Nachkommastelle.
-- analyst.series[sektorId]: prozentualer Anteil der Top-bewerteten Aktien (Strong Buy/Buy weltweit) je Sektor; alle Sektoren zusammen pro Quartal ~100. Trend realistisch (KI & Halbleiter zuletzt steigend).
-- topStocks: 10 weltweit höchstbewertete Aktien, "upside" = Kursziel-Potenzial in % (ganze Zahl, positiv).
+- analyst: Betrachte weltweit ALLE Aktien (Anzahl der Analysten egal, auch nur 1 reicht; Unternehmensgröße egal), die BEIDE Kriterien erfüllen: Kaufempfehlungs-Anteil ("Buy" + "Strong Buy") mindestens 95 % der abgebenden Analysten UND Outperform-Empfehlungs-Anteil mindestens 80 %. Diese Aktien sind die "Top-Aktien". analyst.series[sektorId] = prozentualer ANTEIL dieser Top-Aktien, der in den jeweiligen Sektor fällt; alle Sektoren zusammen ergeben pro Quartal ~100. Realistischer Trend über die Zeit (z.B. KI & Halbleiter zuletzt steigend).
 Gib NUR das JSON.`;
 
 async function callGemini() {
@@ -79,7 +75,7 @@ async function callGemini() {
 }
 
 function validate(d) {
-  if (!d.performance || !d.analyst || !Array.isArray(d.topStocks)) throw new Error('Felder fehlen');
+  if (!d.performance || !d.analyst) throw new Error('Felder fehlen');
   for (const r of RANGES) {
     const block = d.performance[r];
     if (!block) throw new Error('performance.' + r + ' fehlt');
@@ -92,10 +88,6 @@ function validate(d) {
   if (!Array.isArray(d.analyst.labels) || !d.analyst.series) throw new Error('analyst ungültig');
   for (const id of SECTOR_IDS) {
     if (!Array.isArray(d.analyst.series[id])) throw new Error('analyst.series.' + id + ' fehlt');
-  }
-  if (d.topStocks.length < 5) throw new Error('zu wenige topStocks');
-  for (const st of d.topStocks) {
-    if (!SECTOR_IDS.includes(st.sector)) throw new Error('topStock mit unbekanntem Sektor: ' + st.sector);
   }
 }
 
@@ -122,7 +114,6 @@ function toFrontendPerformance(perf) {
       sectors: SECTORS,
       performance: toFrontendPerformance(ai.performance),
       analyst: ai.analyst,
-      topStocks: ai.topStocks,
     };
 
     fs.writeFileSync(OUT, JSON.stringify(out, null, 2));
