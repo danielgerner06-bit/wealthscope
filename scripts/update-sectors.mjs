@@ -49,12 +49,21 @@ Liefere ein Objekt mit dieser exakten Struktur:
   "analyst": {
     "labels": ["Q1 23", ... 12 Quartalslabels bis heute],
     "series": { "<sektorId>": [12 Zahlen], ... für alle Sektoren }
-  }
+  },
+  "topStocks": [
+    { "ticker": "AAPL", "name": "Apple", "sector": "<eine der IDs>", "upside": Zahl }
+  ]
 }
+
+Definition "Top-Aktie": eine weltweit gehandelte Aktie, die BEIDE Kriterien erfüllt:
+  (1) Kaufempfehlungs-Anteil ("Buy" + "Strong Buy") mindestens 95 % der abgebenden Analysten, UND
+  (2) Outperform-Empfehlungs-Anteil mindestens 80 %.
+Anzahl der Analysten egal (auch nur 1 reicht); Unternehmensgröße egal.
 
 Regeln:
 - performance[range][sektorId] ist ein Array von kumulativem prozentualem Kurswachstum, START bei 0, mit Anzahl Punkten: ${RANGES.map(r => `${r}=${POINTS[r]}`).join(', ')}. Letzter Wert = Gesamt-Performance des Sektors über den Zeitraum (z.B. 1m kleine Werte, 5j große). Werte plausibel, mit etwas Verlauf/Schwankung, eine Nachkommastelle.
-- analyst: Betrachte weltweit ALLE Aktien (Anzahl der Analysten egal, auch nur 1 reicht; Unternehmensgröße egal), die BEIDE Kriterien erfüllen: Kaufempfehlungs-Anteil ("Buy" + "Strong Buy") mindestens 95 % der abgebenden Analysten UND Outperform-Empfehlungs-Anteil mindestens 80 %. Diese Aktien sind die "Top-Aktien". analyst.series[sektorId] = prozentualer ANTEIL dieser Top-Aktien, der in den jeweiligen Sektor fällt; alle Sektoren zusammen ergeben pro Quartal ~100. Realistischer Trend über die Zeit (z.B. KI & Halbleiter zuletzt steigend).
+- analyst.series[sektorId] = prozentualer ANTEIL der Top-Aktien (siehe Definition), der in den jeweiligen Sektor fällt; alle Sektoren zusammen ergeben pro Quartal ~100. Realistischer Trend über die Zeit (z.B. KI & Halbleiter zuletzt steigend).
+- topStocks: 12–20 konkrete reale Aktien, die HEUTE die Top-Aktien-Definition erfüllen. "sector" = eine der IDs, "upside" = durchschnittliches Kursziel-Potenzial in % (ganze Zahl). Quer über mehrere Sektoren.
 Gib NUR das JSON.`;
 
 async function callGemini() {
@@ -91,6 +100,14 @@ function validate(d) {
   }
 }
 
+// topStocks tolerant aufbereiten: nur gültige Einträge mit bekanntem Sektor übernehmen.
+function cleanStocks(arr) {
+  if (!Array.isArray(arr)) return [];
+  return arr
+    .filter(s => s && s.ticker && SECTOR_IDS.includes(s.sector))
+    .map(s => ({ ticker: String(s.ticker), name: String(s.name || s.ticker), sector: s.sector, upside: Number(s.upside) || 0 }));
+}
+
 // Wandelt das KI-Performance-Objekt ins Frontend-Format (mit labels) um.
 function toFrontendPerformance(perf) {
   const out = {};
@@ -114,6 +131,7 @@ function toFrontendPerformance(perf) {
       sectors: SECTORS,
       performance: toFrontendPerformance(ai.performance),
       analyst: ai.analyst,
+      topStocks: cleanStocks(ai.topStocks),
     };
 
     fs.writeFileSync(OUT, JSON.stringify(out, null, 2));

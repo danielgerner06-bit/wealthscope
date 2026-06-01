@@ -1370,6 +1370,25 @@ a { text-decoration: none; color: inherit; }
 .sek-leg-item.off { opacity: 0.32; }
 .sek-leg-swatch { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
 
+/* Top-Aktien-Liste (intern scrollbar, Karte bleibt fix) */
+.sek-stocks { margin-top: 16px; flex-shrink: 0; border-top: 1px solid var(--s-border); padding-top: 14px; min-height: 0; display: flex; flex-direction: column; }
+.sek-stocks-head { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.2px; color: var(--s-text); margin-bottom: 10px; flex-shrink: 0; }
+.sek-stocks-head span { color: var(--s-faint); font-weight: 600; }
+.sek-stocks-list { display: flex; flex-direction: column; gap: 2px; overflow-y: auto; max-height: 168px; }
+.sek-stock {
+  display: grid; grid-template-columns: auto auto 1fr auto auto;
+  align-items: center; gap: 9px;
+  padding: 7px 8px; border-radius: 9px;
+  font-size: 0.82rem; transition: background .12s;
+}
+.sek-stock:hover { background: var(--s-bg); }
+.sek-stock-dot { width: 8px; height: 8px; border-radius: 3px; }
+.sek-stock-tk { font-weight: 800; color: var(--s-text); }
+.sek-stock-nm { color: var(--s-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sek-stock-sec { color: var(--s-faint); font-size: 0.72rem; font-weight: 600; white-space: nowrap; }
+.sek-stock-up { font-weight: 800; color: #16a34a; font-variant-numeric: tabular-nums; }
+.sek-stocks-empty { color: var(--s-faint); font-size: 0.82rem; padding: 8px; }
+
 .sek-loading {
   position: absolute; inset: 0; display: none;
   flex-direction: column; align-items: center; justify-content: center;

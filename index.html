@@ -506,19 +506,19 @@
     </header>
 
     <main class="sek-main">
-      <!-- LINKS: Momentum-Liniendiagramm -->
+      <!-- LINKS: relative Stärke -->
       <section class="sek-card sek-momentum">
         <div class="sek-card-head">
           <div>
-            <h2>Sektor-Momentum</h2>
-            <p class="sek-card-sub">Aktuelle Steigung je Branche (Ø Wochen-Wachstum) — über 0 = outperformend, darunter = underperformend</p>
+            <h2>Relative Stärke der Sektoren</h2>
+            <p class="sek-card-sub">Vorsprung jeder Branche gegenüber dem Marktdurchschnitt — über&nbsp;0 = besser als der Markt, darunter = schwächer</p>
           </div>
         </div>
         <div class="sek-chart-wrap"><canvas id="sekMomentumChart"></canvas></div>
         <div class="sek-legend" id="sekLegend"></div>
       </section>
 
-      <!-- RECHTS: Analysten-Titel + Analysten-Diagramm -->
+      <!-- RECHTS: Analysten-Diagramm + Aktientitel -->
       <section class="sek-card sek-analyst">
         <div class="sek-card-head">
           <div>
@@ -528,6 +528,11 @@
         </div>
         <div class="sek-chart-wrap"><canvas id="sekAnalystChart"></canvas></div>
         <div class="sek-legend sek-legend-sm" id="sekAnalystLegend"></div>
+
+        <div class="sek-stocks">
+          <div class="sek-stocks-head">Top-Aktien aktuell <span id="sekStockCount"></span></div>
+          <div class="sek-stocks-list" id="sekStockList"></div>
+        </div>
       </section>
     </main>
 
