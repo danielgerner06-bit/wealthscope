@@ -1,151 +1,88 @@
-// Aktualisiert sectordata.json täglich per Gemini API.
-// Läuft in GitHub Actions; der API-Key kommt aus dem Secret GEMINI_API_KEY.
-// Schlägt der KI-Aufruf fehl oder ist die Antwort ungültig, bleibt die alte Datei
-// erhalten (kein Commit), damit die Seite nie kaputte Daten bekommt.
+// Aktualisiert sectordata.json mit ECHTEN Daten.
+//
+// Datenquellen:
+//  - Finnhub  (Secret FINNHUB_API_KEY): 30-Tage-Sektor-Performance über Sektor-ETFs
+//    sowie Analystenratings, rollierend über ein großes Aktien-Universum gescannt.
+//  - Gemini   (Secret GEMINI_API_KEY) : kurzer Analysetext zur Marktlage.
+//
+// Robust: fehlt ein Key oder schlägt eine Quelle fehl, bleibt der jeweils alte
+// Stand erhalten (die Seite bekommt nie kaputte Daten). Der Aktien-Scan ist
+// rollierend: pro Lauf wird nur ein Teil des Universums geprüft (Free-Tier-Limit),
+// die Treffer werden in sectordata.json über die Tage aufgebaut und gepflegt.
 
 import fs from 'node:fs';
+import { SECTORS, SECTOR_IDS, sectorForFinnhub } from './sectors.mjs';
+import { buildInsight } from './insight.mjs';
+import {
+  loadState, fetchSectorPerformance, scanAnalystStocks,
+} from './finnhub.mjs';
 
-const KEY = process.env.GEMINI_API_KEY;
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const OUT = 'sectordata.json';
+const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
+const GEMINI_KEY = process.env.GEMINI_API_KEY;
 
-if (!KEY) {
-  console.error('GEMINI_API_KEY fehlt.');
-  process.exit(1);
-}
+// Wie viele Symbole pro Lauf maximal prüfen (Free-Tier: 60 Calls/Min).
+const SCAN_BUDGET = Number(process.env.SCAN_BUDGET || 700);
 
-// Sektoren sind fix vorgegeben (Farben/Reihenfolge stabil halten).
-const SECTORS = [
-  { id: 'software',   name: 'Software & Cloud',       color: '#6366f1' },
-  { id: 'ai_semi',    name: 'KI & Halbleiter',        color: '#a855f7' },
-  { id: 'hardware',   name: 'Hardware & Geräte',      color: '#8b5cf6' },
-  { id: 'comm',       name: 'Kommunikation & Medien', color: '#ec4899' },
-  { id: 'health',     name: 'Gesundheit & Pharma',    color: '#22c55e' },
-  { id: 'finance',    name: 'Finanzen & Banken',      color: '#0ea5e9' },
-  { id: 'cons_cycl',  name: 'Konsum zyklisch',        color: '#f59e0b' },
-  { id: 'cons_def',   name: 'Konsum defensiv',        color: '#84cc16' },
-  { id: 'industrial', name: 'Industrie',              color: '#64748b' },
-  { id: 'energy',     name: 'Energie',                color: '#ef4444' },
-  { id: 'materials',  name: 'Rohstoffe',              color: '#d97706' },
-  { id: 'utilities',  name: 'Versorger',              color: '#14b8a6' },
-  { id: 'realestate', name: 'Immobilien',             color: '#a16207' },
-];
-
-const SECTOR_IDS = SECTORS.map(s => s.id);
-const RANGES = ['1m', '3m', '6m', '1j', '3j', '5j'];
-const POINTS = { '1m': 10, '3m': 10, '6m': 10, '1j': 10, '3j': 10, '5j': 10 };
-
-const prompt = `Du bist Finanzdatenanalyst. Gib AUSSCHLIESSLICH gültiges JSON zurück (kein Markdown, keine Erklärung).
-
-Schätze auf Basis deines Wissens über die globalen Aktienmärkte realistische Werte. Heutiges Datum: ${new Date().toISOString().slice(0, 10)}.
-
-Sektoren (genau diese IDs verwenden): ${SECTOR_IDS.join(', ')}.
-
-Liefere ein Objekt mit dieser exakten Struktur:
-{
-  "performance": {
-    ${RANGES.map(r => `"${r}": { "${SECTOR_IDS[0]}": [Zahlen], ... für alle Sektoren }`).join(',\n    ')}
-  },
-  "analyst": {
-    "labels": ["Q1 23", ... 12 Quartalslabels bis heute],
-    "series": { "<sektorId>": [12 Zahlen], ... für alle Sektoren }
-  },
-  "topStocks": [
-    { "ticker": "AAPL", "name": "Apple", "sector": "<eine der IDs>", "upside": Zahl }
-  ]
-}
-
-Definition "Top-Aktie": eine weltweit gehandelte Aktie, die BEIDE Kriterien erfüllt:
-  (1) Kaufempfehlungs-Anteil ("Buy" + "Strong Buy") mindestens 95 % der abgebenden Analysten, UND
-  (2) Outperform-Empfehlungs-Anteil mindestens 80 %.
-Anzahl der Analysten egal (auch nur 1 reicht); Unternehmensgröße egal.
-
-Regeln:
-- performance[range][sektorId] ist ein Array von kumulativem prozentualem Kurswachstum, START bei 0, mit Anzahl Punkten: ${RANGES.map(r => `${r}=${POINTS[r]}`).join(', ')}. Letzter Wert = Gesamt-Performance des Sektors über den Zeitraum (z.B. 1m kleine Werte, 5j große). Werte plausibel, mit etwas Verlauf/Schwankung, eine Nachkommastelle.
-- analyst.series[sektorId] = prozentualer ANTEIL der Top-Aktien (siehe Definition), der in den jeweiligen Sektor fällt; alle Sektoren zusammen ergeben pro Quartal ~100. Realistischer Trend über die Zeit (z.B. KI & Halbleiter zuletzt steigend).
-- topStocks: 12–20 konkrete reale Aktien, die HEUTE die Top-Aktien-Definition erfüllen. "sector" = eine der IDs, "upside" = durchschnittliches Kursziel-Potenzial in % (ganze Zahl). Quer über mehrere Sektoren.
-Gib NUR das JSON.`;
-
-async function callGemini() {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${KEY}`;
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: {
-        temperature: 0.4,
-        responseMimeType: 'application/json',
-        maxOutputTokens: 32768,
-        thinkingConfig: { thinkingBudget: 0 },   // kein "thinking" -> volle Tokens fürs JSON
-      },
-    }),
-  });
-  if (!res.ok) throw new Error('Gemini HTTP ' + res.status + ': ' + (await res.text()).slice(0, 500));
-  const json = await res.json();
-  const cand = json?.candidates?.[0];
-  // Reasoning-Modelle (2.5) können mehrere parts liefern; nimm den Text-Part.
-  const text = cand?.content?.parts?.map(p => p.text).filter(Boolean).join('') || '';
-  if (!text && cand?.finishReason) throw new Error('Gemini ohne Text, finishReason=' + cand.finishReason);
-  if (!text) throw new Error('Leere Gemini-Antwort');
-  return JSON.parse(text);
-}
-
-function validate(d) {
-  if (!d.performance || !d.analyst) throw new Error('Felder fehlen');
-  for (const r of RANGES) {
-    const block = d.performance[r];
-    if (!block) throw new Error('performance.' + r + ' fehlt');
-    for (const id of SECTOR_IDS) {
-      const arr = block[id];
-      if (!Array.isArray(arr) || arr.length < 4) throw new Error('performance.' + r + '.' + id + ' ungültig');
-      if (arr.some(v => typeof v !== 'number' || !isFinite(v))) throw new Error('NaN in ' + r + '.' + id);
-    }
-  }
-  if (!Array.isArray(d.analyst.labels) || !d.analyst.series) throw new Error('analyst ungültig');
-  for (const id of SECTOR_IDS) {
-    if (!Array.isArray(d.analyst.series[id])) throw new Error('analyst.series.' + id + ' fehlt');
-  }
-}
-
-// topStocks tolerant aufbereiten: nur gültige Einträge mit bekanntem Sektor übernehmen.
-function cleanStocks(arr) {
-  if (!Array.isArray(arr)) return [];
-  return arr
-    .filter(s => s && s.ticker && SECTOR_IDS.includes(s.sector))
-    .map(s => ({ ticker: String(s.ticker), name: String(s.name || s.ticker), sector: s.sector, upside: Number(s.upside) || 0 }));
-}
-
-// Wandelt das KI-Performance-Objekt ins Frontend-Format (mit labels) um.
-function toFrontendPerformance(perf) {
-  const out = {};
-  for (const r of RANGES) {
-    const series = {};
-    let n = 0;
-    for (const id of SECTOR_IDS) { series[id] = perf[r][id]; n = Math.max(n, perf[r][id].length); }
-    out[r] = { labels: Array.from({ length: n }, (_, i) => (i === 0 ? 'Start' : '')), series };
-  }
-  return out;
+function readPrev() {
+  try { return JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch { return null; }
 }
 
 (async () => {
-  try {
-    const ai = await callGemini();
-    validate(ai);
+  const prev = readPrev();
 
-    const out = {
-      updated: new Date().toISOString().slice(0, 10),
-      source: 'Gemini ' + MODEL + ' – KI-Schätzung globaler Marktdaten',
-      sectors: SECTORS,
-      performance: toFrontendPerformance(ai.performance),
-      analyst: ai.analyst,
-      topStocks: cleanStocks(ai.topStocks),
-    };
-
-    fs.writeFileSync(OUT, JSON.stringify(out, null, 2));
-    console.log('sectordata.json aktualisiert (' + out.updated + ').');
-  } catch (err) {
-    console.error('Update fehlgeschlagen, bestehende Datei bleibt erhalten:', err.message);
+  if (!FINNHUB_KEY) {
+    console.error('FINNHUB_API_KEY fehlt – ohne Finnhub keine echten Daten. Bestehende Datei bleibt.');
     process.exit(1);
   }
-})();
+
+  // Persistenter Zustand (Scan-Cursor, gesammelte Treffer-Datenbank).
+  const state = loadState(prev);
+
+  // 1) Sektor-Performance (30 Tage) über Sektor-ETFs.
+  let bars30 = prev?.bars30 || [];
+  try {
+    bars30 = await fetchSectorPerformance(FINNHUB_KEY);
+    console.log('Sektor-Performance aktualisiert.');
+  } catch (e) {
+    console.error('Performance-Abruf fehlgeschlagen, behalte alte Werte:', e.message);
+  }
+
+  // 2) Analystenratings rollierend scannen, Treffer-DB pflegen.
+  let topStocks = prev?.topStocks || [];
+  try {
+    const result = await scanAnalystStocks(FINNHUB_KEY, state, SCAN_BUDGET);
+    topStocks = result.topStocks;
+    state.scan = result.scan;
+    console.log(`Analysten-Scan: ${result.scan.scanned}/${result.scan.universe} geprüft, ${topStocks.length} Treffer in der DB.`);
+  } catch (e) {
+    console.error('Analysten-Scan fehlgeschlagen, behalte alte Treffer:', e.message);
+  }
+
+  // 3) Gemini-Analysetext (optional – ohne Key bleibt der alte Text).
+  let insight = prev?.insight || '';
+  if (GEMINI_KEY) {
+    try {
+      insight = await buildInsight(GEMINI_KEY, bars30, topStocks);
+      console.log('Insight-Text aktualisiert.');
+    } catch (e) {
+      console.error('Insight-Generierung fehlgeschlagen, behalte alten Text:', e.message);
+    }
+  }
+
+  const out = {
+    updated: new Date().toISOString().slice(0, 10),
+    source: 'Finnhub (Kurse & Analystenratings)' + (GEMINI_KEY ? ' · Gemini (Analyse)' : ''),
+    sectors: SECTORS,
+    bars30,
+    topStocks,
+    insight,
+    scan: state.scan,
+  };
+
+  fs.writeFileSync(OUT, JSON.stringify(out, null, 2));
+  console.log('sectordata.json geschrieben (' + out.updated + ').');
+})().catch(err => {
+  console.error('Update abgebrochen:', err.message);
+  process.exit(1);
+});

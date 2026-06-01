@@ -18,8 +18,9 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Sektordaten via Gemini aktualisieren
+      - name: Sektordaten aktualisieren (Finnhub + Gemini)
         env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/update-sectors.mjs
 

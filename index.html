@@ -485,20 +485,13 @@
 
   <!-- ============ SEKTORSCOPE ============ -->
   <div class="screen" id="sektorScreen">
+    <div class="sek-aurora" aria-hidden="true"><span></span><span></span><span></span></div>
     <header class="sek-head">
       <button class="sek-back" onclick="showScreen('hubScreen')" aria-label="Zurück">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         <span>Apps</span>
       </button>
       <div class="sek-brand">Sektor<span class="grad">Scope</span></div>
-      <div class="sek-ranges" id="sekRanges" role="tablist" aria-label="Zeitfenster">
-        <button data-range="1m" class="active">1M</button>
-        <button data-range="3m">3M</button>
-        <button data-range="6m">6M</button>
-        <button data-range="1j">1J</button>
-        <button data-range="3j">3J</button>
-        <button data-range="5j">5J</button>
-      </div>
       <div class="sek-meta">
         <span class="sek-dot"></span>
         <span id="sekUpdated">—</span>
@@ -506,33 +499,39 @@
     </header>
 
     <main class="sek-main">
-      <!-- LINKS: relative Stärke -->
-      <section class="sek-card sek-momentum">
+      <!-- LINKS: Balkendiagramm 30-Tage-Performance gerankt -->
+      <section class="sek-card sek-bars-card">
         <div class="sek-card-head">
           <div>
-            <h2>Relative Stärke der Sektoren</h2>
-            <p class="sek-card-sub">Vorsprung jeder Branche gegenüber dem Marktdurchschnitt — über&nbsp;0 = besser als der Markt, darunter = schwächer</p>
+            <h2>Sektor-Performance · 30 Tage</h2>
+            <p class="sek-card-sub">Branchen gerankt nach Kursentwicklung der letzten 30&nbsp;Tage</p>
           </div>
         </div>
-        <div class="sek-chart-wrap"><canvas id="sekMomentumChart"></canvas></div>
-        <div class="sek-legend" id="sekLegend"></div>
+        <div class="sek-bars"><canvas id="sekBars"></canvas></div>
       </section>
 
-      <!-- RECHTS: Analysten-Diagramm + Aktientitel -->
+      <!-- RECHTS oben: Analystenliste -->
       <section class="sek-card sek-analyst">
         <div class="sek-card-head">
           <div>
-            <h2>Analysten-Favoriten</h2>
-            <p class="sek-card-sub">Verteilung der Top-Aktien je Sektor — Kaufempfehlung&nbsp;≥&nbsp;95&nbsp;%, Outperform&nbsp;≥&nbsp;80&nbsp;% (über die Zeit)</p>
+            <h2>Analysten-Perlen</h2>
+            <p class="sek-card-sub">Aktien mit Kaufempfehlung&nbsp;≥&nbsp;95&nbsp;% und Outperform&nbsp;≥&nbsp;80&nbsp;% — quer über alle Größen</p>
           </div>
+          <span class="sek-badge" id="sekStockCount"></span>
         </div>
-        <div class="sek-chart-wrap"><canvas id="sekAnalystChart"></canvas></div>
-        <div class="sek-legend sek-legend-sm" id="sekAnalystLegend"></div>
+        <div class="sek-stocks-list" id="sekStockList"></div>
+      </section>
 
-        <div class="sek-stocks">
-          <div class="sek-stocks-head">Top-Aktien aktuell <span id="sekStockCount"></span></div>
-          <div class="sek-stocks-list" id="sekStockList"></div>
+      <!-- RECHTS unten: Gemini-Analysetext -->
+      <section class="sek-card sek-insight">
+        <div class="sek-insight-head">
+          <span class="sek-insight-spark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3m0 12v3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M3 12h3m12 0h3M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/></svg>
+          </span>
+          <h2>Marktlage</h2>
+          <span class="sek-insight-tag">KI-Analyse</span>
         </div>
+        <p class="sek-insight-text" id="sekInsight">—</p>
       </section>
     </main>
 

@@ -1,6 +1,12 @@
 {
   "updated": "2026-06-01",
-  "source": "Gemini gemini-2.5-flash – KI-Schätzung globaler Marktdaten",
+  "source": "Platzhalter – wird durch echte Finnhub-Daten + Gemini-Analyse ersetzt",
+  "isPlaceholder": true,
+  "scan": {
+    "universe": 0,
+    "scanned": 0,
+    "lastCursor": 0
+  },
   "sectors": [
     {
       "id": "software",
@@ -68,1348 +74,151 @@
       "color": "#a16207"
     }
   ],
-  "performance": {
-    "1m": {
-      "labels": [
-        "Start",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "series": {
-        "software": [
-          0,
-          0.1,
-          0.3,
-          0.2,
-          0.4,
-          0.6,
-          0.5,
-          0.7,
-          0.9,
-          1.1
-        ],
-        "ai_semi": [
-          0,
-          0.2,
-          0.5,
-          0.4,
-          0.7,
-          1,
-          0.9,
-          1.2,
-          1.5,
-          1.8
-        ],
-        "hardware": [
-          0,
-          -0.1,
-          0.1,
-          0,
-          0.2,
-          0.3,
-          0.2,
-          0.4,
-          0.6,
-          0.8
-        ],
-        "comm": [
-          0,
-          0.1,
-          0.2,
-          0.3,
-          0.4,
-          0.5,
-          0.6,
-          0.7,
-          0.8,
-          0.9
-        ],
-        "health": [
-          0,
-          0,
-          0.1,
-          0.2,
-          0.1,
-          0.3,
-          0.2,
-          0.4,
-          0.5,
-          0.6
-        ],
-        "finance": [
-          0,
-          0.1,
-          0.2,
-          0.1,
-          0.3,
-          0.4,
-          0.3,
-          0.5,
-          0.6,
-          0.7
-        ],
-        "cons_cycl": [
-          0,
-          -0.1,
-          0,
-          -0.2,
-          -0.1,
-          0.1,
-          0,
-          0.2,
-          0.3,
-          0.4
-        ],
-        "cons_def": [
-          0,
-          0,
-          0.1,
-          0.1,
-          0.2,
-          0.2,
-          0.3,
-          0.3,
-          0.4,
-          0.5
-        ],
-        "industrial": [
-          0,
-          0.1,
-          0.2,
-          0.3,
-          0.2,
-          0.4,
-          0.3,
-          0.5,
-          0.6,
-          0.7
-        ],
-        "energy": [
-          0,
-          0.2,
-          0.4,
-          0.3,
-          0.5,
-          0.7,
-          0.6,
-          0.8,
-          1,
-          1.2
-        ],
-        "materials": [
-          0,
-          0.1,
-          0.2,
-          0.1,
-          0.3,
-          0.4,
-          0.3,
-          0.5,
-          0.6,
-          0.7
-        ],
-        "utilities": [
-          0,
-          0,
-          0.1,
-          0.1,
-          0.2,
-          0.2,
-          0.3,
-          0.3,
-          0.4,
-          0.5
-        ],
-        "realestate": [
-          0,
-          -0.1,
-          0,
-          -0.2,
-          -0.1,
-          0.1,
-          0,
-          0.2,
-          0.3,
-          0.4
-        ]
-      }
+  "bars30": [
+    {
+      "id": "software",
+      "perf": 4.2
     },
-    "3m": {
-      "labels": [
-        "Start",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "series": {
-        "software": [
-          0,
-          0.5,
-          1,
-          1.5,
-          2,
-          2.5,
-          3,
-          3.5,
-          4,
-          4.5
-        ],
-        "ai_semi": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "hardware": [
-          0,
-          0.2,
-          0.4,
-          0.6,
-          0.8,
-          1,
-          1.2,
-          1.4,
-          1.6,
-          1.8
-        ],
-        "comm": [
-          0,
-          0.3,
-          0.6,
-          0.9,
-          1.2,
-          1.5,
-          1.8,
-          2.1,
-          2.4,
-          2.7
-        ],
-        "health": [
-          0,
-          0.2,
-          0.4,
-          0.6,
-          0.8,
-          1,
-          1.2,
-          1.4,
-          1.6,
-          1.8
-        ],
-        "finance": [
-          0,
-          0.4,
-          0.8,
-          1.2,
-          1.6,
-          2,
-          2.4,
-          2.8,
-          3.2,
-          3.6
-        ],
-        "cons_cycl": [
-          0,
-          -0.2,
-          0,
-          -0.4,
-          -0.2,
-          0.2,
-          0,
-          0.4,
-          0.6,
-          0.8
-        ],
-        "cons_def": [
-          0,
-          0.1,
-          0.2,
-          0.3,
-          0.4,
-          0.5,
-          0.6,
-          0.7,
-          0.8,
-          0.9
-        ],
-        "industrial": [
-          0,
-          0.3,
-          0.6,
-          0.9,
-          1.2,
-          1.5,
-          1.8,
-          2.1,
-          2.4,
-          2.7
-        ],
-        "energy": [
-          0,
-          0.8,
-          1.6,
-          2.4,
-          3.2,
-          4,
-          4.8,
-          5.6,
-          6.4,
-          7.2
-        ],
-        "materials": [
-          0,
-          0.3,
-          0.6,
-          0.9,
-          1.2,
-          1.5,
-          1.8,
-          2.1,
-          2.4,
-          2.7
-        ],
-        "utilities": [
-          0,
-          0.1,
-          0.2,
-          0.3,
-          0.4,
-          0.5,
-          0.6,
-          0.7,
-          0.8,
-          0.9
-        ],
-        "realestate": [
-          0,
-          -0.2,
-          0,
-          -0.4,
-          -0.2,
-          0.2,
-          0,
-          0.4,
-          0.6,
-          0.8
-        ]
-      }
+    {
+      "id": "ai_semi",
+      "perf": 7.8
     },
-    "6m": {
-      "labels": [
-        "Start",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "series": {
-        "software": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "ai_semi": [
-          0,
-          2,
-          4,
-          6,
-          8,
-          10,
-          12,
-          14,
-          16,
-          18
-        ],
-        "hardware": [
-          0,
-          0.5,
-          1,
-          1.5,
-          2,
-          2.5,
-          3,
-          3.5,
-          4,
-          4.5
-        ],
-        "comm": [
-          0,
-          0.8,
-          1.6,
-          2.4,
-          3.2,
-          4,
-          4.8,
-          5.6,
-          6.4,
-          7.2
-        ],
-        "health": [
-          0,
-          0.5,
-          1,
-          1.5,
-          2,
-          2.5,
-          3,
-          3.5,
-          4,
-          4.5
-        ],
-        "finance": [
-          0,
-          0.8,
-          1.6,
-          2.4,
-          3.2,
-          4,
-          4.8,
-          5.6,
-          6.4,
-          7.2
-        ],
-        "cons_cycl": [
-          0,
-          -0.5,
-          0,
-          -1,
-          -0.5,
-          0.5,
-          0,
-          1,
-          1.5,
-          2
-        ],
-        "cons_def": [
-          0,
-          0.3,
-          0.6,
-          0.9,
-          1.2,
-          1.5,
-          1.8,
-          2.1,
-          2.4,
-          2.7
-        ],
-        "industrial": [
-          0,
-          0.8,
-          1.6,
-          2.4,
-          3.2,
-          4,
-          4.8,
-          5.6,
-          6.4,
-          7.2
-        ],
-        "energy": [
-          0,
-          1.5,
-          3,
-          4.5,
-          6,
-          7.5,
-          9,
-          10.5,
-          12,
-          13.5
-        ],
-        "materials": [
-          0,
-          0.8,
-          1.6,
-          2.4,
-          3.2,
-          4,
-          4.8,
-          5.6,
-          6.4,
-          7.2
-        ],
-        "utilities": [
-          0,
-          0.3,
-          0.6,
-          0.9,
-          1.2,
-          1.5,
-          1.8,
-          2.1,
-          2.4,
-          2.7
-        ],
-        "realestate": [
-          0,
-          -0.5,
-          0,
-          -1,
-          -0.5,
-          0.5,
-          0,
-          1,
-          1.5,
-          2
-        ]
-      }
+    {
+      "id": "hardware",
+      "perf": 1.1
     },
-    "1j": {
-      "labels": [
-        "Start",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "series": {
-        "software": [
-          0,
-          2,
-          4,
-          6,
-          8,
-          10,
-          12,
-          14,
-          16,
-          18
-        ],
-        "ai_semi": [
-          0,
-          4,
-          8,
-          12,
-          16,
-          20,
-          24,
-          28,
-          32,
-          36
-        ],
-        "hardware": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "comm": [
-          0,
-          1.5,
-          3,
-          4.5,
-          6,
-          7.5,
-          9,
-          10.5,
-          12,
-          13.5
-        ],
-        "health": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "finance": [
-          0,
-          1.5,
-          3,
-          4.5,
-          6,
-          7.5,
-          9,
-          10.5,
-          12,
-          13.5
-        ],
-        "cons_cycl": [
-          0,
-          -1,
-          0,
-          -2,
-          -1,
-          1,
-          0,
-          2,
-          3,
-          4
-        ],
-        "cons_def": [
-          0,
-          0.5,
-          1,
-          1.5,
-          2,
-          2.5,
-          3,
-          3.5,
-          4,
-          4.5
-        ],
-        "industrial": [
-          0,
-          1.5,
-          3,
-          4.5,
-          6,
-          7.5,
-          9,
-          10.5,
-          12,
-          13.5
-        ],
-        "energy": [
-          0,
-          3,
-          6,
-          9,
-          12,
-          15,
-          18,
-          21,
-          24,
-          27
-        ],
-        "materials": [
-          0,
-          1.5,
-          3,
-          4.5,
-          6,
-          7.5,
-          9,
-          10.5,
-          12,
-          13.5
-        ],
-        "utilities": [
-          0,
-          0.5,
-          1,
-          1.5,
-          2,
-          2.5,
-          3,
-          3.5,
-          4,
-          4.5
-        ],
-        "realestate": [
-          0,
-          -1,
-          0,
-          -2,
-          -1,
-          1,
-          0,
-          2,
-          3,
-          4
-        ]
-      }
+    {
+      "id": "comm",
+      "perf": 3.4
     },
-    "3j": {
-      "labels": [
-        "Start",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "series": {
-        "software": [
-          0,
-          6,
-          12,
-          18,
-          24,
-          30,
-          36,
-          42,
-          48,
-          54
-        ],
-        "ai_semi": [
-          0,
-          12,
-          24,
-          36,
-          48,
-          60,
-          72,
-          84,
-          96,
-          108
-        ],
-        "hardware": [
-          0,
-          3,
-          6,
-          9,
-          12,
-          15,
-          18,
-          21,
-          24,
-          27
-        ],
-        "comm": [
-          0,
-          4.5,
-          9,
-          13.5,
-          18,
-          22.5,
-          27,
-          31.5,
-          36,
-          40.5
-        ],
-        "health": [
-          0,
-          3,
-          6,
-          9,
-          12,
-          15,
-          18,
-          21,
-          24,
-          27
-        ],
-        "finance": [
-          0,
-          4.5,
-          9,
-          13.5,
-          18,
-          22.5,
-          27,
-          31.5,
-          36,
-          40.5
-        ],
-        "cons_cycl": [
-          0,
-          -3,
-          0,
-          -6,
-          -3,
-          3,
-          0,
-          6,
-          9,
-          12
-        ],
-        "cons_def": [
-          0,
-          1.5,
-          3,
-          4.5,
-          6,
-          7.5,
-          9,
-          10.5,
-          12,
-          13.5
-        ],
-        "industrial": [
-          0,
-          4.5,
-          9,
-          13.5,
-          18,
-          22.5,
-          27,
-          31.5,
-          36,
-          40.5
-        ],
-        "energy": [
-          0,
-          9,
-          18,
-          27,
-          36,
-          45,
-          54,
-          63,
-          72,
-          81
-        ],
-        "materials": [
-          0,
-          4.5,
-          9,
-          13.5,
-          18,
-          22.5,
-          27,
-          31.5,
-          36,
-          40.5
-        ],
-        "utilities": [
-          0,
-          1.5,
-          3,
-          4.5,
-          6,
-          7.5,
-          9,
-          10.5,
-          12,
-          13.5
-        ],
-        "realestate": [
-          0,
-          -3,
-          0,
-          -6,
-          -3,
-          3,
-          0,
-          6,
-          9,
-          12
-        ]
-      }
+    {
+      "id": "health",
+      "perf": -0.6
     },
-    "5j": {
-      "labels": [
-        "Start",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "series": {
-        "software": [
-          0,
-          10,
-          20,
-          30,
-          40,
-          50,
-          60,
-          70,
-          80,
-          90
-        ],
-        "ai_semi": [
-          0,
-          20,
-          40,
-          60,
-          80,
-          100,
-          120,
-          140,
-          160,
-          180
-        ],
-        "hardware": [
-          0,
-          5,
-          10,
-          15,
-          20,
-          25,
-          30,
-          35,
-          40,
-          45
-        ],
-        "comm": [
-          0,
-          7.5,
-          15,
-          22.5,
-          30,
-          37.5,
-          45,
-          52.5,
-          60,
-          67.5
-        ],
-        "health": [
-          0,
-          5,
-          10,
-          15,
-          20,
-          25,
-          30,
-          35,
-          40,
-          45
-        ],
-        "finance": [
-          0,
-          7.5,
-          15,
-          22.5,
-          30,
-          37.5,
-          45,
-          52.5,
-          60,
-          67.5
-        ],
-        "cons_cycl": [
-          0,
-          -5,
-          0,
-          -10,
-          -5,
-          5,
-          0,
-          10,
-          15,
-          20
-        ],
-        "cons_def": [
-          0,
-          2.5,
-          5,
-          7.5,
-          10,
-          12.5,
-          15,
-          17.5,
-          20,
-          22.5
-        ],
-        "industrial": [
-          0,
-          7.5,
-          15,
-          22.5,
-          30,
-          37.5,
-          45,
-          52.5,
-          60,
-          67.5
-        ],
-        "energy": [
-          0,
-          15,
-          30,
-          45,
-          60,
-          75,
-          90,
-          105,
-          120,
-          135
-        ],
-        "materials": [
-          0,
-          7.5,
-          15,
-          22.5,
-          30,
-          37.5,
-          45,
-          52.5,
-          60,
-          67.5
-        ],
-        "utilities": [
-          0,
-          2.5,
-          5,
-          7.5,
-          10,
-          12.5,
-          15,
-          17.5,
-          20,
-          22.5
-        ],
-        "realestate": [
-          0,
-          -5,
-          0,
-          -10,
-          -5,
-          5,
-          0,
-          10,
-          15,
-          20
-        ]
-      }
+    {
+      "id": "finance",
+      "perf": 2.2
+    },
+    {
+      "id": "cons_cycl",
+      "perf": -1.8
+    },
+    {
+      "id": "cons_def",
+      "perf": 0.4
+    },
+    {
+      "id": "industrial",
+      "perf": 1.9
+    },
+    {
+      "id": "energy",
+      "perf": -3.1
+    },
+    {
+      "id": "materials",
+      "perf": 0.8
+    },
+    {
+      "id": "utilities",
+      "perf": -0.3
+    },
+    {
+      "id": "realestate",
+      "perf": -2.4
     }
-  },
-  "analyst": {
-    "labels": [
-      "Q1 23",
-      "Q2 23",
-      "Q3 23",
-      "Q4 23",
-      "Q1 24",
-      "Q2 24",
-      "Q3 24",
-      "Q4 24",
-      "Q1 25",
-      "Q2 25",
-      "Q3 25",
-      "Q4 25"
-    ],
-    "series": {
-      "software": [
-        15,
-        14,
-        13,
-        12,
-        11,
-        10,
-        9,
-        8,
-        7,
-        6,
-        5,
-        4
-      ],
-      "ai_semi": [
-        10,
-        12,
-        15,
-        18,
-        22,
-        25,
-        28,
-        30,
-        32,
-        35,
-        38,
-        40
-      ],
-      "hardware": [
-        8,
-        7,
-        6,
-        5,
-        4,
-        3,
-        3,
-        2,
-        2,
-        2,
-        1,
-        1
-      ],
-      "comm": [
-        12,
-        11,
-        10,
-        9,
-        8,
-        7,
-        6,
-        5,
-        4,
-        3,
-        3,
-        2
-      ],
-      "health": [
-        10,
-        10,
-        9,
-        9,
-        8,
-        8,
-        7,
-        7,
-        6,
-        6,
-        5,
-        5
-      ],
-      "finance": [
-        9,
-        9,
-        8,
-        8,
-        7,
-        7,
-        6,
-        6,
-        5,
-        5,
-        4,
-        4
-      ],
-      "cons_cycl": [
-        7,
-        6,
-        5,
-        4,
-        3,
-        2,
-        2,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "cons_def": [
-        6,
-        6,
-        5,
-        5,
-        4,
-        4,
-        3,
-        3,
-        2,
-        2,
-        2,
-        2
-      ],
-      "industrial": [
-        8,
-        8,
-        7,
-        7,
-        6,
-        6,
-        5,
-        5,
-        4,
-        4,
-        3,
-        3
-      ],
-      "energy": [
-        5,
-        5,
-        6,
-        6,
-        7,
-        7,
-        8,
-        8,
-        9,
-        9,
-        10,
-        10
-      ],
-      "materials": [
-        5,
-        5,
-        4,
-        4,
-        3,
-        3,
-        3,
-        2,
-        2,
-        2,
-        2,
-        2
-      ],
-      "utilities": [
-        3,
-        3,
-        3,
-        3,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2
-      ],
-      "realestate": [
-        2,
-        2,
-        2,
-        2,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ]
-    }
-  },
+  ],
   "topStocks": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "ai_semi",
-      "upside": 25
-    },
-    {
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "sector": "hardware",
-      "upside": 30
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "sector": "software",
+      "buyPct": 97,
+      "outperformPct": 88,
+      "analysts": 62,
       "upside": 18
     },
     {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "sector": "comm",
-      "upside": 15
+      "ticker": "VRT",
+      "name": "Vertiv Holdings",
+      "sector": "hardware",
+      "buyPct": 96,
+      "outperformPct": 85,
+      "analysts": 21,
+      "upside": 24
     },
     {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "sector": "cons_cycl",
-      "upside": 20
-    },
-    {
-      "ticker": "LLY",
-      "name": "Eli Lilly and Company",
-      "sector": "health",
-      "upside": 12
-    },
-    {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase & Co.",
-      "sector": "finance",
-      "upside": 10
-    },
-    {
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "sector": "cons_cycl",
-      "upside": 22
-    },
-    {
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "sector": "software",
-      "upside": 17
-    },
-    {
-      "ticker": "ASML",
-      "name": "ASML Holding",
-      "sector": "ai_semi",
-      "upside": 28
-    },
-    {
-      "ticker": "CAT",
-      "name": "Caterpillar",
-      "sector": "industrial",
-      "upside": 14
-    },
-    {
-      "ticker": "XOM",
-      "name": "Exxon Mobil",
-      "sector": "energy",
-      "upside": 16
-    },
-    {
-      "ticker": "V",
-      "name": "Visa",
-      "sector": "finance",
-      "upside": 13
-    },
-    {
-      "ticker": "ADBE",
-      "name": "Adobe",
-      "sector": "software",
+      "ticker": "CLS",
+      "name": "Celestica",
+      "sector": "hardware",
+      "buyPct": 100,
+      "outperformPct": 91,
+      "analysts": 11,
       "upside": 19
     },
     {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
+      "ticker": "GEV",
+      "name": "GE Vernova",
+      "sector": "industrial",
+      "buyPct": 95,
+      "outperformPct": 82,
+      "analysts": 28,
+      "upside": 14
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials",
       "sector": "ai_semi",
-      "upside": 27
+      "buyPct": 96,
+      "outperformPct": 84,
+      "analysts": 34,
+      "upside": 16
     },
     {
-      "ticker": "UNH",
-      "name": "UnitedHealth Group",
-      "sector": "health",
-      "upside": 11
+      "ticker": "NBIS",
+      "name": "Nebius Group",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 90,
+      "analysts": 8,
+      "upside": 33
     },
     {
-      "ticker": "HD",
-      "name": "Home Depot",
-      "sector": "cons_cycl",
-      "upside": 10
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "finance",
+      "buyPct": 95,
+      "outperformPct": 81,
+      "analysts": 19,
+      "upside": 12
     },
     {
-      "ticker": "NEE",
-      "name": "NextEra Energy",
-      "sector": "utilities",
-      "upside": 8
+      "ticker": "TLN",
+      "name": "Talen Energy",
+      "sector": "energy",
+      "buyPct": 97,
+      "outperformPct": 86,
+      "analysts": 9,
+      "upside": 21
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "sector": "software",
+      "buyPct": 95,
+      "outperformPct": 80,
+      "analysts": 24,
+      "upside": 9
+    },
+    {
+      "ticker": "NET",
+      "name": "Cloudflare",
+      "sector": "software",
+      "buyPct": 96,
+      "outperformPct": 83,
+      "analysts": 30,
+      "upside": 15
     }
-  ]
+  ],
+  "insight": "Sobald echte Daten fließen, steht hier täglich eine kurze KI-Einschätzung von Gemini zur Lage einzelner Sektoren — etwa warum KI & Halbleiter gerade vorn liegen oder Energie zurückfällt. (Aktuell Platzhalter.)"
 }

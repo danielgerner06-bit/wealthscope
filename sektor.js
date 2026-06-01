@@ -1,15 +1,10 @@
 /* ===== SektorScope ===== */
 (function () {
   let DATA = null;
-  let rsChart = null;        // relative Stärke (links)
-  let analystChart = null;   // Analysten-Verteilung (rechts)
-  let currentRange = '1m';
-  let hidden = {};           // sectorId -> ausgeblendet (für beide Charts synchron)
-  let initialized = false;
+  let barChart = null;
+  let sectorFilter = null;   // aktiver Sektor-Filter für die Aktienliste (null = alle)
 
-  const RANGE_LABEL = { '1m': '1M', '3m': '3M', '6m': '6M', '1j': '1J', '3j': '3J', '5j': '5J' };
-
-  function sectorById(id) { return DATA.sectors.find(s => s.id === id); }
+  function sectorById(id) { return (DATA.sectors || []).find(s => s.id === id) || { name: id, color: '#94a3b8' }; }
 
   async function loadData() {
     if (DATA) return DATA;
@@ -20,252 +15,170 @@
   }
 
   function fmtPct(v, dp = 1) {
-    const n = Number(v);
+    const n = Number(v) || 0;
     return (n > 0 ? '+' : '') + n.toFixed(dp) + '%';
   }
 
-  /* ---------- Relative Stärke ----------
-     Pro Zeitpunkt: kumulatives %-Wachstum des Sektors minus Durchschnitt
-     aller Sektoren. > 0 = schlägt den Markt, < 0 = hinkt nach.            */
-  function relativeStrengthSeries(range) {
-    const block = DATA.performance[range];
-    const ids = DATA.sectors.map(s => s.id);
-    const n = Math.max(...ids.map(id => block.series[id].length));
-    // Marktdurchschnitt je Zeitpunkt
-    const avg = new Array(n).fill(0);
-    for (let i = 0; i < n; i++) {
-      let sum = 0, cnt = 0;
-      for (const id of ids) {
-        const v = block.series[id][i];
-        if (typeof v === 'number') { sum += v; cnt++; }
-      }
-      avg[i] = cnt ? sum / cnt : 0;
-    }
-    const out = {};
-    for (const id of ids) {
-      out[id] = block.series[id].map((v, i) => +(v - avg[i]).toFixed(2));
-    }
-    return out;
-  }
+  /* ---------- Balkendiagramm: 30-Tage-Performance, gerankt ---------- */
+  function renderBars() {
+    const rows = [...(DATA.bars30 || [])].sort((a, b) => b.perf - a.perf);
+    const labels = rows.map(r => sectorById(r.id).name);
+    const values = rows.map(r => +Number(r.perf).toFixed(2));
+    const colors = rows.map(r => {
+      const base = sectorById(r.id).color;
+      return r.perf >= 0 ? base : mix(base, '#ef4444', 0.45);
+    });
 
-  // letzter Wert je Sektor -> zum Ranking / Default-Auswahl
-  function lastValues(series) {
-    const r = {};
-    for (const id of Object.keys(series)) {
-      const a = series[id];
-      r[id] = a[a.length - 1];
-    }
-    return r;
-  }
+    const ctx = document.getElementById('sekBars');
+    if (barChart) barChart.destroy();
 
-  // Standard: nur die 2 besten + 2 schwächsten Sektoren sichtbar
-  function defaultHidden(series) {
-    const lv = lastValues(series);
-    const sorted = Object.keys(lv).sort((a, b) => lv[b] - lv[a]);
-    const show = new Set([...sorted.slice(0, 2), ...sorted.slice(-2)]);
-    const h = {};
-    DATA.sectors.forEach(s => { h[s.id] = !show.has(s.id); });
-    return h;
-  }
-
-  /* ---------- Chart-Theme (hell, clean) ---------- */
-  const GRID = 'rgba(15,23,42,0.07)';
-  const ZERO = 'rgba(15,23,42,0.30)';
-  const TICK = '#64748b';
-
-  function lineDatasets(seriesObj, ids) {
-    return ids.map(id => {
-      const s = sectorById(id);
-      return {
-        label: s.name,
-        sectorId: id,
-        data: seriesObj[id],
-        borderColor: s.color,
-        backgroundColor: s.color,
-        borderWidth: 2.4,
-        pointRadius: 0,
-        pointHoverRadius: 4,
-        pointHoverBackgroundColor: s.color,
-        pointHoverBorderColor: '#fff',
-        pointHoverBorderWidth: 2,
-        tension: 0.35,
-        fill: false,
-        hidden: !!hidden[id],
-      };
+    barChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          data: values,
+          backgroundColor: colors.map(c => c),
+          borderRadius: 7,
+          borderSkipped: false,
+          barThickness: 'flex',
+          maxBarThickness: 26,
+          categoryPercentage: 0.82,
+        }],
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 700, easing: 'easeOutCubic' },
+        onClick: (e, els) => {
+          if (!els.length) { setSectorFilter(null); return; }
+          const id = rows[els[0].index].id;
+          setSectorFilter(sectorFilter === id ? null : id);
+        },
+        onHover: (e, els) => { e.native.target.style.cursor = els.length ? 'pointer' : 'default'; },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: 'rgba(17,21,40,0.96)', borderColor: 'rgba(148,163,184,0.25)', borderWidth: 1,
+            titleColor: '#fff', bodyColor: '#cbd5e1', padding: 11, cornerRadius: 10,
+            callbacks: {
+              label: c => '  30-Tage: ' + fmtPct(c.parsed.x) + '  ·  Klick = filtern',
+            },
+          },
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(148,163,184,0.14)', drawTicks: false },
+            border: { display: false },
+            ticks: { color: '#94a3b8', callback: v => (v > 0 ? '+' : '') + v + '%', font: { size: 11 } },
+          },
+          y: {
+            grid: { display: false },
+            border: { display: false },
+            ticks: { color: '#e2e8f0', font: { size: 12, weight: '600' }, crossAlign: 'far', padding: 6 },
+          },
+        },
+      },
+      plugins: [zeroBarLine, valueLabels],
     });
   }
 
-  function tooltipCfg(unit, dp = 1) {
-    return {
-      backgroundColor: '#ffffff',
-      borderColor: 'rgba(15,23,42,0.12)',
-      borderWidth: 1,
-      titleColor: '#0f172a',
-      bodyColor: '#334155',
-      padding: 12,
-      cornerRadius: 12,
-      usePointStyle: true,
-      boxWidth: 8, boxHeight: 8, boxPadding: 5,
-      titleFont: { weight: '700' },
-      callbacks: {
-        title: () => RANGE_LABEL[currentRange] + ' · ' + unit,
-        label: c => '  ' + c.dataset.label + ': ' + fmtPct(c.parsed.y, dp),
-      },
-      itemSort: (a, b) => b.parsed.y - a.parsed.y,
-    };
-  }
-
-  // Nulllinie hervorheben
-  const zeroLinePlugin = {
-    id: 'zeroLine',
+  // Nulllinie betonen
+  const zeroBarLine = {
+    id: 'zeroBarLine',
     afterDraw(chart) {
-      const y = chart.scales.y;
-      if (!y) return;
-      const yPos = y.getPixelForValue(0);
-      if (yPos < chart.chartArea.top || yPos > chart.chartArea.bottom) return;
+      const x = chart.scales.x; if (!x) return;
+      const xPos = x.getPixelForValue(0);
       const { ctx, chartArea } = chart;
       ctx.save();
-      ctx.beginPath();
-      ctx.moveTo(chartArea.left, yPos);
-      ctx.lineTo(chartArea.right, yPos);
-      ctx.lineWidth = 1.5;
-      ctx.strokeStyle = ZERO;
-      ctx.setLineDash([4, 4]);
-      ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(xPos, chartArea.top); ctx.lineTo(xPos, chartArea.bottom);
+      ctx.lineWidth = 1.5; ctx.strokeStyle = 'rgba(148,163,184,0.5)'; ctx.setLineDash([3, 3]); ctx.stroke();
       ctx.restore();
     },
   };
 
-  /* ---------- Relative-Stärke-Chart (links) ---------- */
-  function renderRsChart() {
-    const block = DATA.performance[currentRange];
-    const series = relativeStrengthSeries(currentRange);
-    const ctx = document.getElementById('sekMomentumChart');
-    if (rsChart) rsChart.destroy();
-
-    rsChart = new Chart(ctx, {
-      type: 'line',
-      data: { labels: block.labels.map((_, i) => i), datasets: lineDatasets(series, DATA.sectors.map(s => s.id)) },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        animation: { duration: 500, easing: 'easeOutCubic' },
-        interaction: { mode: 'index', intersect: false },
-        plugins: { legend: { display: false }, tooltip: tooltipCfg('vs. Markt') },
-        scales: {
-          x: { display: false, grid: { display: false } },
-          y: {
-            grid: { color: GRID, drawTicks: false },
-            border: { display: false },
-            ticks: { color: TICK, callback: v => (v > 0 ? '+' : '') + v + '%', font: { size: 11 }, padding: 8 },
-          },
-        },
-      },
-      plugins: [zeroLinePlugin],
-    });
-  }
-
-  /* ---------- Analysten-Chart (rechts) ---------- */
-  function renderAnalystChart() {
-    const a = DATA.analyst;
-    const ctx = document.getElementById('sekAnalystChart');
-    if (analystChart) analystChart.destroy();
-
-    analystChart = new Chart(ctx, {
-      type: 'line',
-      data: { labels: a.labels, datasets: lineDatasets(a.series, DATA.sectors.map(s => s.id)) },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        animation: { duration: 500 },
-        interaction: { mode: 'index', intersect: false },
-        plugins: { legend: { display: false }, tooltip: tooltipCfg('% Anteil', 1) },
-        scales: {
-          x: { grid: { display: false }, border: { display: false }, ticks: { color: TICK, font: { size: 10 }, maxRotation: 0, autoSkipPadding: 16 } },
-          y: { grid: { color: GRID, drawTicks: false }, border: { display: false }, ticks: { color: TICK, callback: v => v + '%', font: { size: 10 }, padding: 6 } },
-        },
-      },
-    });
-  }
-
-  /* ---------- Legenden (klickbar, beide synchron) ---------- */
-  function buildLegend(elId) {
-    const el = document.getElementById(elId);
-    el.innerHTML = '';
-    DATA.sectors.forEach(s => {
-      const item = document.createElement('button');
-      item.type = 'button';
-      item.dataset.sectorId = s.id;
-      item.className = 'sek-leg-item' + (hidden[s.id] ? ' off' : '');
-      item.innerHTML = '<span class="sek-leg-swatch" style="background:' + s.color + '"></span>' + s.name;
-      item.addEventListener('click', () => {
-        hidden[s.id] = !hidden[s.id];
-        syncVisibility(s.id);
+  // Wert am Balkenende
+  const valueLabels = {
+    id: 'valueLabels',
+    afterDatasetsDraw(chart) {
+      const { ctx } = chart;
+      const meta = chart.getDatasetMeta(0);
+      const data = chart.data.datasets[0].data;
+      ctx.save();
+      ctx.font = '700 11px Inter, system-ui, sans-serif';
+      ctx.textBaseline = 'middle';
+      meta.data.forEach((bar, i) => {
+        const v = data[i];
+        const pos = v >= 0;
+        ctx.fillStyle = pos ? '#34d399' : '#f87171';
+        ctx.textAlign = pos ? 'left' : 'right';
+        const pad = pos ? 8 : -8;
+        ctx.fillText(fmtPct(v), bar.x + pad, bar.y);
       });
-      el.appendChild(item);
-    });
-  }
+      ctx.restore();
+    },
+  };
 
-  function syncVisibility(sectorId) {
-    const off = !!hidden[sectorId];
-    [rsChart, analystChart].forEach(ch => {
-      if (!ch) return;
-      const idx = ch.data.datasets.findIndex(d => d.sectorId === sectorId);
-      if (idx >= 0) ch.setDatasetVisibility(idx, !off);
-      ch.update();
-    });
-    document.querySelectorAll('.sek-leg-item[data-sector-id="' + sectorId + '"]').forEach(it => it.classList.toggle('off', off));
-  }
-
-  function applyHiddenToCharts() {
-    [rsChart, analystChart].forEach(ch => {
-      if (!ch) return;
-      DATA.sectors.forEach(s => {
-        const idx = ch.data.datasets.findIndex(d => d.sectorId === s.id);
-        if (idx >= 0) ch.setDatasetVisibility(idx, !hidden[s.id]);
-      });
-      ch.update();
-    });
-  }
-
-  /* ---------- Top-Aktien-Liste ---------- */
+  /* ---------- Analystenliste ---------- */
   function renderStocks() {
     const list = document.getElementById('sekStockList');
     const countEl = document.getElementById('sekStockCount');
-    const stocks = Array.isArray(DATA.topStocks) ? DATA.topStocks : [];
-    countEl.textContent = stocks.length ? '(' + stocks.length + ')' : '';
+    let stocks = Array.isArray(DATA.topStocks) ? DATA.topStocks.slice() : [];
+    if (sectorFilter) stocks = stocks.filter(s => s.sector === sectorFilter);
+    stocks.sort((a, b) => (b.upside || 0) - (a.upside || 0));
+
+    countEl.textContent = sectorFilter
+      ? sectorById(sectorFilter).name + ' · ' + stocks.length
+      : (DATA.topStocks ? DATA.topStocks.length + ' Treffer' : '');
+
     list.innerHTML = '';
     if (!stocks.length) {
-      list.innerHTML = '<div class="sek-stocks-empty">Keine Aktien in den Daten.</div>';
+      list.innerHTML = '<div class="sek-stocks-empty">Keine Treffer' + (sectorFilter ? ' in diesem Sektor.' : '.') + '</div>';
       return;
     }
-    [...stocks].sort((a, b) => (b.upside || 0) - (a.upside || 0)).forEach(st => {
-      const sec = sectorById(st.sector) || { name: st.sector, color: '#94a3b8' };
+    stocks.forEach(st => {
+      const sec = sectorById(st.sector);
       const row = document.createElement('div');
       row.className = 'sek-stock';
       const up = (st.upside != null) ? '<span class="sek-stock-up">+' + Number(st.upside).toFixed(0) + '%</span>' : '';
+      const meta = [];
+      if (st.buyPct != null) meta.push('Kauf ' + st.buyPct + '%');
+      if (st.outperformPct != null) meta.push('Outperf. ' + st.outperformPct + '%');
+      if (st.analysts != null) meta.push(st.analysts + ' Analyst' + (st.analysts === 1 ? '' : 'en'));
       row.innerHTML =
         '<span class="sek-stock-dot" style="background:' + sec.color + '"></span>' +
-        '<span class="sek-stock-tk">' + (st.ticker || '') + '</span>' +
-        '<span class="sek-stock-nm">' + (st.name || '') + '</span>' +
-        '<span class="sek-stock-sec">' + sec.name + '</span>' +
-        up;
+        '<div class="sek-stock-main">' +
+          '<div class="sek-stock-top"><span class="sek-stock-tk">' + (st.ticker || '') + '</span>' +
+          '<span class="sek-stock-nm">' + (st.name || '') + '</span></div>' +
+          '<div class="sek-stock-meta">' + sec.name + (meta.length ? ' · ' + meta.join(' · ') : '') + '</div>' +
+        '</div>' + up;
       list.appendChild(row);
     });
   }
 
-  /* ---------- Range-Umschalter ---------- */
-  function wireRanges() {
-    document.getElementById('sekRanges').addEventListener('click', e => {
-      const btn = e.target.closest('button[data-range]');
-      if (!btn) return;
-      const r = btn.dataset.range;
-      if (r === currentRange) return;
-      currentRange = r;
-      document.querySelectorAll('#sekRanges button').forEach(b => b.classList.toggle('active', b === btn));
-      renderRsChart();
-      applyHiddenToCharts();
-    });
+  function setSectorFilter(id) {
+    sectorFilter = id;
+    renderStocks();
+  }
+
+  /* ---------- Insight-Text ---------- */
+  function renderInsight() {
+    const el = document.getElementById('sekInsight');
+    el.textContent = DATA.insight || '—';
+  }
+
+  /* ---------- kleine Farbhilfe ---------- */
+  function mix(hex, hex2, t) {
+    const a = h2rgb(hex), b = h2rgb(hex2);
+    const r = Math.round(a[0] + (b[0] - a[0]) * t);
+    const g = Math.round(a[1] + (b[1] - a[1]) * t);
+    const bl = Math.round(a[2] + (b[2] - a[2]) * t);
+    return 'rgb(' + r + ',' + g + ',' + bl + ')';
+  }
+  function h2rgb(h) {
+    h = h.replace('#', '');
+    return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
   }
 
   /* ---------- Init ---------- */
@@ -274,27 +187,21 @@
     try {
       loading.classList.add('show');
       await loadData();
-      document.getElementById('sekUpdated').textContent = 'Stand: ' + (DATA.updated || '—');
 
-      // Default-Sichtbarkeit aus aktueller relativer Stärke (nur beim ersten Mal)
-      if (!initialized) {
-        hidden = defaultHidden(relativeStrengthSeries(currentRange));
-        wireRanges();
-        initialized = true;
-      }
+      const stand = DATA.updated || '—';
+      document.getElementById('sekUpdated').textContent =
+        (DATA.isPlaceholder ? 'Demo-Daten · ' : 'Stand: ') + stand;
 
-      renderRsChart();
-      renderAnalystChart();
-      buildLegend('sekLegend');
-      buildLegend('sekAnalystLegend');
+      sectorFilter = null;
+      renderBars();
       renderStocks();
-      applyHiddenToCharts();
+      renderInsight();
     } catch (err) {
       console.error(err);
       document.getElementById('sekUpdated').textContent = 'Daten konnten nicht geladen werden';
     } finally {
       loading.classList.remove('show');
-      setTimeout(() => { if (rsChart) rsChart.resize(); if (analystChart) analystChart.resize(); }, 60);
+      setTimeout(() => { if (barChart) barChart.resize(); }, 60);
     }
   };
 })();

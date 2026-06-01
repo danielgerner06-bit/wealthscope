@@ -1,32 +1,54 @@
 # SektorScope – tägliche Datenaktualisierung
 
-Die Seite lädt ihre Daten aus `sectordata.json` im Projekt-Root. Diese Datei wird
-**täglich automatisch** per GitHub Action und der Gemini-API aktualisiert.
+Die Seite lädt ihre Daten aus `sectordata.json` (Projekt-Root). Diese Datei wird
+**täglich automatisch** per GitHub Action aktualisiert.
+
+## Datenquellen
+
+- **Finnhub** (`FINNHUB_API_KEY`) – echte Kurse & Analystenratings
+  - 30-Tage-Sektor-Performance über Sektor-ETFs (IGV, SOXX, XLK, XLF …)
+  - Analystenratings, **rollierend** über das US-Aktien-Universum gescannt
+  - Treffer-Kriterium: **Kauf ≥ 95 %** UND **Outperform ≥ 80 %** (Strong-Buy-Anteil)
+- **Gemini** (`GEMINI_API_KEY`, optional) – kurzer Analysetext zur Marktlage
 
 ## Einrichtung (einmalig)
 
-1. **Gemini-API-Key besorgen** (kostenlos): https://aistudio.google.com/apikey
-2. Auf GitHub im Repo: **Settings → Secrets and variables → Actions → New repository secret**
-   - Name: `GEMINI_API_KEY`
-   - Value: dein Key
-3. Fertig. Die Action `.github/workflows/update-sectors.yml` läuft täglich um 05:00 UTC,
-   ruft Gemini auf, schreibt `sectordata.json` und committet sie automatisch.
+1. **Finnhub-Key** (kostenlos): https://finnhub.io → „Get free API key"
+2. **Gemini-Key** (kostenlos): https://aistudio.google.com/apikey
+3. Auf GitHub: **Settings → Secrets and variables → Actions → New repository secret**
+   - `FINNHUB_API_KEY` = dein Finnhub-Key
+   - `GEMINI_API_KEY` = dein Gemini-Key
+4. Fertig. Die Action `.github/workflows/update-sectors.yml` läuft täglich 05:00 UTC.
 
-> Der Key liegt **nur** als GitHub-Secret und ist nie im öffentlichen Code sichtbar.
+> Beide Keys liegen **nur** als GitHub-Secret und sind nie im öffentlichen Code sichtbar.
+
+## Rollierender Scan
+
+Analystenratings für zehntausende Aktien einzeln abzufragen sprengt das Free-Tier
+(60 Calls/Min). Deshalb prüft die Action pro Lauf nur einen Teil des Universums
+(`SCAN_BUDGET`, Standard 700 Symbole) ab dem letzten Cursor und baut die Treffer-
+Datenbank in `sectordata.json` über mehrere Tage auf. Fällt ein bekannter Treffer
+bei erneuter Prüfung durch die Kriterien, wird er entfernt.
+
+State steckt in `sectordata.json` unter `scan` (`universe`, `scanned`, `lastCursor`)
+und in `topStocks` (die gepflegte Treffer-Datenbank).
 
 ## Manuell auslösen
 
-Im Repo unter **Actions → "Sektordaten aktualisieren" → Run workflow**.
+Im Repo unter **Actions → „Sektordaten aktualisieren" → Run workflow**.
 
 ## Lokal testen
 
 ```bash
-GEMINI_API_KEY=dein_key node scripts/update-sectors.mjs
+FINNHUB_API_KEY=... GEMINI_API_KEY=... node scripts/update-sectors.mjs
 ```
 
-Schlägt der KI-Aufruf fehl oder ist die Antwort ungültig, bricht das Skript ab und
-die bestehende `sectordata.json` bleibt unverändert – die Seite zeigt nie kaputte Daten.
+Fehlt der Finnhub-Key, bricht das Skript ab und `sectordata.json` bleibt unverändert
+– die Seite zeigt nie kaputte Daten.
 
-Optional: anderes Modell via `GEMINI_MODEL=...` (Standard: `gemini-2.5-flash`).
-Hinweis: `gemini-2.0-flash` hat im Free Tier dieses Keys kein Kontingent (HTTP 429),
-deshalb ist `gemini-2.5-flash` voreingestellt.
+## Dateien
+
+- `update-sectors.mjs` – Orchestrierung
+- `finnhub.mjs` – Kurse, Universum, rollierender Analysten-Scan
+- `sectors.mjs` – Sektordefinition + Mapping Finnhub-Industrie → Sektor-ID
+- `insight.mjs` – Gemini-Analysetext (greift 2–3 auffällige Sektoren heraus)
