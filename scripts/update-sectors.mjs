@@ -33,7 +33,7 @@ const SECTORS = [
 
 const SECTOR_IDS = SECTORS.map(s => s.id);
 const RANGES = ['1m', '3m', '6m', '1j', '3j', '5j'];
-const POINTS = { '1m': 22, '3m': 13, '6m': 26, '1j': 12, '3j': 12, '5j': 12 };
+const POINTS = { '1m': 10, '3m': 10, '6m': 10, '1j': 10, '3j': 10, '5j': 10 };
 
 const prompt = `Du bist Finanzdatenanalyst. Gib AUSSCHLIESSLICH gültiges JSON zurück (kein Markdown, keine Erklärung).
 
@@ -73,7 +73,12 @@ async function callGemini() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { temperature: 0.4, responseMimeType: 'application/json', maxOutputTokens: 16384 },
+      generationConfig: {
+        temperature: 0.4,
+        responseMimeType: 'application/json',
+        maxOutputTokens: 32768,
+        thinkingConfig: { thinkingBudget: 0 },   // kein "thinking" -> volle Tokens fürs JSON
+      },
     }),
   });
   if (!res.ok) throw new Error('Gemini HTTP ' + res.status + ': ' + (await res.text()).slice(0, 500));
