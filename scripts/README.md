@@ -27,4 +27,6 @@ GEMINI_API_KEY=dein_key node scripts/update-sectors.mjs
 Schlägt der KI-Aufruf fehl oder ist die Antwort ungültig, bricht das Skript ab und
 die bestehende `sectordata.json` bleibt unverändert – die Seite zeigt nie kaputte Daten.
 
-Optional: anderes Modell via `GEMINI_MODEL=gemini-2.0-flash` (Standard).
+Optional: anderes Modell via `GEMINI_MODEL=...` (Standard: `gemini-2.5-flash`).
+Hinweis: `gemini-2.0-flash` hat im Free Tier dieses Keys kein Kontingent (HTTP 429),
+deshalb ist `gemini-2.5-flash` voreingestellt.
