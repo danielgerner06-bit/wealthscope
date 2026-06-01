@@ -23,8 +23,8 @@ const OUT = 'sectordata.json';
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
 const GEMINI_KEY = process.env.GEMINI_API_KEY;
 
-const SCAN_BUDGET = Number(process.env.SCAN_BUDGET || 700);   // Finnhub-Symbole pro Lauf
-const CAND_BUDGET = Number(process.env.CAND_BUDGET || 12);    // Kandidaten je Lauf (Gemini)
+const SCAN_BUDGET = Number(process.env.SCAN_BUDGET || 300);   // Finnhub-Symbole pro Lauf (8x/Tag = 2400)
+const CAND_BUDGET = Number(process.env.CAND_BUDGET || 14);    // Kandidaten je Lauf (Gemini)
 
 function readPrev() {
   try { return JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch { return null; }
@@ -81,20 +81,37 @@ const today = () => new Date().toISOString().slice(0, 10);
     } catch (e) { console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
   }
 
-  /* 2c) Gemini: neue unbekannte Werte entdecken ---------------------- */
+  /* 2c) Gemini: neue unbekannte Werte entdecken (mehrere Foki pro Lauf) ---- */
+  // Rotierende Schwerpunkte, damit über die Läufe breit gestreut neue Werte kommen.
+  const FOCI = [
+    'deutsche Small- und Mid-Caps (XETRA, SDAX, TecDAX)',
+    'europäische Nebenwerte (Skandinavien, Benelux, Frankreich, Italien)',
+    'US-amerikanische Small-Caps abseits der Mega-Caps',
+    'asiatische Aktien (Japan, Südkorea, Taiwan, Indien)',
+    'Technologie, Software und Halbleiter weltweit',
+    'Gesundheit, Biotech und Medizintechnik weltweit',
+    'Industrie, Energie und Rohstoffe weltweit',
+    'Finanzwerte und Versorger weltweit',
+  ];
   if (GEMINI_KEY) {
-    try {
-      const knownNames = Object.values(db).map(s => s.name).concat(candidates);
-      const found = await discoverNew(GEMINI_KEY, knownNames);
-      let added = 0;
-      for (const f of found) {
-        if (!db[f.ticker]) added++;
-        db[f.ticker] = { ...db[f.ticker], ...f };
-        // neu entdeckte Namen dauerhaft in die Kandidatenliste aufnehmen
-        if (f.name && !candidates.includes(f.name)) candidates.push(f.name);
-      }
-      console.log(`Gemini-Discovery: ${found.length} Treffer, ${added} neu in der DB.`);
-    } catch (e) { console.error('Gemini-Discovery fehlgeschlagen:', e.message); }
+    const perRun = Number(process.env.DISCOVER_PER_RUN || 2);
+    const start = (scan.focusCursor || 0) % FOCI.length;
+    let added = 0, total = 0;
+    for (let k = 0; k < perRun; k++) {
+      const focus = FOCI[(start + k) % FOCI.length];
+      try {
+        const knownNames = Object.values(db).map(s => s.name).concat(candidates);
+        const found = await discoverNew(GEMINI_KEY, knownNames, focus);
+        total += found.length;
+        for (const f of found) {
+          if (!db[f.ticker]) added++;
+          db[f.ticker] = { ...db[f.ticker], ...f };
+          if (f.name && !candidates.includes(f.name)) candidates.push(f.name);
+        }
+      } catch (e) { console.error(`Discovery (${focus}) fehlgeschlagen:`, e.message); }
+    }
+    scan.focusCursor = (start + perRun) % FOCI.length;
+    console.log(`Gemini-Discovery: ${total} Vorschläge, ${added} neu in der DB.`);
   }
 
   // Kandidatenliste begrenzen, damit sie nicht unbegrenzt wächst.

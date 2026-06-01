@@ -6,20 +6,22 @@ const nameOf = id => (SECTORS.find(s => s.id === id) || {}).name || id;
 
 async function gen(key, prompt) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${key}`;
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { temperature: 0.7, maxOutputTokens: 2048, thinkingConfig: { thinkingBudget: 0 } },
-    }),
+  const body = JSON.stringify({
+    contents: [{ parts: [{ text: prompt }] }],
+    generationConfig: { temperature: 0.7, maxOutputTokens: 6144, thinkingConfig: { thinkingBudget: 0 } },
   });
-  if (!res.ok) throw new Error('Gemini HTTP ' + res.status + ': ' + (await res.text()).slice(0, 200));
-  const j = await res.json();
-  const cand = j?.candidates?.[0];
-  const text = cand?.content?.parts?.map(p => p.text).filter(Boolean).join('').trim();
-  if (!text) throw new Error('Leere Antwort' + (cand?.finishReason ? ' (' + cand.finishReason + ')' : ''));
-  return text;
+  // bis zu 2 Versuche – 2.5-flash liefert sporadisch leere Antworten
+  let lastErr = '';
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body });
+    if (!res.ok) { lastErr = 'HTTP ' + res.status; if (res.status === 429) break; continue; }
+    const j = await res.json();
+    const cand = j?.candidates?.[0];
+    const text = cand?.content?.parts?.map(p => p.text).filter(Boolean).join('').trim();
+    if (text) return text;
+    lastErr = 'leer' + (cand?.finishReason ? ' (' + cand.finishReason + ')' : '');
+  }
+  throw new Error(lastErr);
 }
 
 // Liefert { sectorId: { text, date } } für die übergebenen Sektor-IDs.
@@ -46,7 +48,7 @@ Erkläre konkret und plausibel, WARUM der Sektor gerade so läuft (z. B. Zinsen,
     try {
       out[id] = { text: await gen(key, prompt), date: today };
     } catch (e) {
-      // einzelnen Sektor überspringen, Rest läuft weiter
+      console.error(`  Sektor-Text ${id} fehlgeschlagen:`, e.message);
     }
   }
   return out;

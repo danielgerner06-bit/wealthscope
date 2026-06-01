@@ -72,10 +72,15 @@ export const fetchSectorPerformance = () => fetchPerf(SECTORS);
 export const fetchRegionPerformance = () => fetchPerf(REGIONS);
 
 // 6-Monats-Performance für eine einzelne Aktie (oder null bei Fehler).
+// Der 6mo-Range liefert ~124 Handelstage -> Anfang (3er-Median) vs. Ende (3er-Median).
 export async function fetchStockPerf6m(ticker) {
   try {
     const c = await closes(ticker, '6mo');
-    return pctBack(c, Math.min(W6M, c.length - 2));
+    if (c.length < 10) return null;
+    const start = trailMed(c, 2);                 // Median der ersten 3 Tage
+    const end = trailMed(c, c.length - 1);        // Median der letzten 3 Tage
+    if (!start || !end) return null;
+    return +(((end - start) / start) * 100).toFixed(2);
   } catch {
     return null;
   }

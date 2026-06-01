@@ -105,10 +105,15 @@ Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, die du sicher gefunden hast
   return out;
 }
 
-/* (B) Neue unbekannte Werte entdecken --------------------------------- */
-export async function discoverNew(key, knownNames) {
-  const known = knownNames.slice(0, 120).join(', ');
-  const prompt = `Du suchst über die Google-Suche WELTWEIT kleine bis mittelgroße, eher UNBEKANNTE Aktien (Small-/Mid-Caps, gern aus Deutschland/Europa, aber auch USA/Asien), die von Analysten fast ausschließlich mit Kaufempfehlungen bewertet werden.
+/* (B) Neue unbekannte Werte entdecken ---------------------------------
+   `focus` lenkt die Suche auf eine Region/Branche, damit über mehrere Läufe
+   verschiedene Werte gefunden werden (z. B. "deutsche Small-Caps", "Biotech").  */
+export async function discoverNew(key, knownNames, focus = '') {
+  const known = knownNames.slice(0, 140).join(', ');
+  const focusLine = focus
+    ? `Lege diesmal den Schwerpunkt auf: ${focus}. `
+    : '';
+  const prompt = `Du suchst über die Google-Suche WELTWEIT kleine bis mittelgroße, eher UNBEKANNTE Aktien (Small-/Mid-Caps, gern aus Deutschland/Europa, aber auch USA/Asien), die von Analysten fast ausschließlich mit Kaufempfehlungen bewertet werden. ${focusLine}
 
 Kriterium: buyPct (Buy + Strong Buy) >= 95 UND outperformPct (Strong Buy/Outperform) >= 80. Anzahl Analysten egal (auch 1-3 reicht). Unternehmensgröße egal — je unbekannter/kleiner, desto besser. KEINE Mega-Caps (kein Apple, Microsoft, Nvidia, Amazon, Alphabet, Meta usw.).
 
@@ -122,7 +127,7 @@ Für jeden Vorschlag gib aus aktuellen Quellen:
 - yahoo: Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "NVDA")
 - source: kurze Quellenangabe
 
-Gib NUR ein JSON-Array mit bis zu 8 solcher Aktien zurück. Kein Text außerhalb des JSON.`;
+Gib NUR ein JSON-Array mit bis zu 10 solcher Aktien zurück. Kein Text außerhalb des JSON.`;
 
   const { text, sources } = await groundedJSON(key, prompt);
   const arr = extractJSON(text);

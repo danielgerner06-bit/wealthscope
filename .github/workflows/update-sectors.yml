@@ -2,8 +2,8 @@ name: Sektordaten aktualisieren
 
 on:
   schedule:
-    - cron: '0 5 * * *'   # täglich 05:00 UTC
-  workflow_dispatch:        # manueller Start möglich
+    - cron: '0 */3 * * *'   # alle 3 Stunden (8x/Tag) – baut die Treffer-DB schneller auf
+  workflow_dispatch:         # manueller Start möglich
 
 permissions:
   contents: write
