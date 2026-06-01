@@ -58,7 +58,9 @@ function normRating(o) {
   if (pe != null && (!isFinite(pe) || pe <= 0 || pe > 500)) pe = null;  // negatives/absurdes KGV verwerfen
   let sector = o.sector;
   if (!SECTOR_IDS.includes(sector)) sector = sectorForFinnhub(o.industry || o.branche || sector) || null;
-  return { buyPct, outperformPct, analysts, upside, pe, sector };
+  // Yahoo-Symbol für die Kursabfrage (z. B. KTN.DE, FRA.DE); fällt sonst auf Ticker zurück.
+  const yahoo = (o.yahoo || o.yahooSymbol || '').toString().trim().toUpperCase() || null;
+  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo };
 }
 
 /* (A) Kandidaten prüfen ------------------------------------------------ */
@@ -76,6 +78,7 @@ Für jede Aktie ermittle aus aktuellen Quellen:
 - sector: GENAU eine dieser IDs anhand der Branche: ${SECTOR_LIST}
 - upside: Kursziel-Potenzial in % falls auffindbar, sonst null
 - pe: aktuelles KGV (Kurs-Gewinn-Verhältnis), Zahl oder null
+- yahoo: das Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "FRA.DE", "NVDA"), für Kursabfragen
 - source: kurze Quellenangabe
 
 Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, die du sicher gefunden hast. Aktien ohne auffindbare Analystendaten weglassen. Kein Text außerhalb des JSON.`;
@@ -94,7 +97,7 @@ Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, die du sicher gefunden hast
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside, pe: r.pe,
+        analysts: r.analysts, upside: r.upside, pe: r.pe, yahoo: r.yahoo,
         via: 'gemini', source: o.source || sources[0] || 'web',
         seen: new Date().toISOString().slice(0, 10),
       });
@@ -118,6 +121,7 @@ Für jeden Vorschlag gib aus aktuellen Quellen:
 - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
 - upside (% oder null)
 - pe: aktuelles KGV (Zahl oder null)
+- yahoo: Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "NVDA")
 - source: kurze Quellenangabe
 
 Gib NUR ein JSON-Array mit bis zu 8 solcher Aktien zurück. Kein Text außerhalb des JSON.`;
@@ -136,7 +140,7 @@ Gib NUR ein JSON-Array mit bis zu 8 solcher Aktien zurück. Kein Text außerhalb
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside, pe: r.pe,
+        analysts: r.analysts, upside: r.upside, pe: r.pe, yahoo: r.yahoo,
         via: 'gemini-discover', source: o.source || sources[0] || 'web',
         seen: new Date().toISOString().slice(0, 10),
       });

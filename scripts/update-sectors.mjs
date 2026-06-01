@@ -110,7 +110,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   const needPerf = topStocks.filter(s => s.perf6m == null || !s.perf6mAt || (nowMs - Date.parse(s.perf6mAt)) > STALE)
     .slice(0, Number(process.env.PERF6M_BUDGET || 30));
   for (const s of needPerf) {
-    const v = await fetchStockPerf6m(s.ticker);
+    const v = await fetchStockPerf6m(s.yahoo || s.ticker);   // Yahoo-Symbol bevorzugen (z. B. KTN.DE)
     if (v != null) { s.perf6m = v; s.perf6mAt = today(); db[s.ticker] = { ...db[s.ticker], perf6m: v, perf6mAt: s.perf6mAt }; }
   }
   if (needPerf.length) console.log(`6M-Performance für ${needPerf.length} Aktien aktualisiert.`);
