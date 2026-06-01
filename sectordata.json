@@ -84,67 +84,67 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 28.5,
-      "avg30": -0.96
+      "perf": 28.64,
+      "avg30": -0.95
     },
     {
       "id": "ai_semi",
-      "perf": 24.27,
+      "perf": 24.3,
       "avg30": 8.41
     },
     {
       "id": "hardware",
-      "perf": 22.87,
+      "perf": 22.92,
       "avg30": 3.71
     },
     {
       "id": "comm",
-      "perf": -0.45,
+      "perf": -0.41,
       "avg30": 1.04
     },
     {
       "id": "health",
-      "perf": 1.26,
+      "perf": 1.2,
       "avg30": 0.87
     },
     {
       "id": "finance",
-      "perf": -1.32,
+      "perf": -1.39,
       "avg30": 0.13
     },
     {
       "id": "cons_cycl",
-      "perf": 0.29,
+      "perf": 0.27,
       "avg30": 1.05
     },
     {
       "id": "cons_def",
-      "perf": -2.81,
+      "perf": -2.85,
       "avg30": 0.42
     },
     {
       "id": "industrial",
-      "perf": -1.06,
+      "perf": -1.12,
       "avg30": 1.73
     },
     {
       "id": "energy",
-      "perf": -3.95,
+      "perf": -3.94,
       "avg30": 3.01
     },
     {
       "id": "materials",
-      "perf": -0.95,
+      "perf": -0.98,
       "avg30": 1.5
     },
     {
       "id": "utilities",
-      "perf": -7.59,
-      "avg30": 1.03
+      "perf": -7.66,
+      "avg30": 1.02
     },
     {
       "id": "realestate",
-      "perf": -2.14,
+      "perf": -2.16,
       "avg30": 0.58
     }
   ],
@@ -169,6 +169,18 @@
       "outperformPct": 90,
       "analysts": 8,
       "upside": 33
+    },
+    {
+      "ticker": "KTN",
+      "name": "Kontron AG",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 7,
+      "upside": 25,
+      "via": "gemini",
+      "source": "Investing.com",
+      "seen": "2026-06-01"
     },
     {
       "ticker": "VRT",
@@ -219,15 +231,6 @@
       "upside": 18
     },
     {
-      "ticker": "AMAT",
-      "name": "Applied Materials",
-      "sector": "ai_semi",
-      "buyPct": 96,
-      "outperformPct": 84,
-      "analysts": 34,
-      "upside": 16
-    },
-    {
       "ticker": "NET",
       "name": "Cloudflare",
       "sector": "software",
@@ -276,12 +279,12 @@
       "seen": "2026-06-01"
     }
   ],
-  "insight": "Die aktuellen Kursentwicklungen zeigen eine klare Divergenz am Aktienmarkt. Während Technologie-Sektoren wie Software & Cloud (0%) und KI & Halbleiter (0%) Stärke demonstrieren, was auf anhaltende Investitionen in digitale Transformation und Künstliche Intelligenz hindeutet, schwächeln traditionelle Branchen. Insbesondere Rohstoffe (0%) und Versorger (0%) leiden unter der Unsicherheit bezüglich der globalen Konjunktur und potenziell restriktiverer Geldpolitik. Die hohe Anzahl an Analysten-Favoriten im Software & Cloud-Bereich unterstreicht zudem das Vertrauen in deren Wachstumsaussichten.",
+  "insight": "Die aktuelle Sektorrotation am Aktienmarkt wird deutlich von technologischen Innovationen getragen. Software & Cloud sowie KI & Halbleiter führen mit deutlichen Zuwächsen, angetrieben durch anhaltende Investitionen in digitale Transformation und künstliche Intelligenz. Gleichzeitig leiden defensive Sektoren wie Versorger und Energie unter dem zunehmenden Optimismus bezüglich einer stabilen Konjunktur und potenziellen Zinssenkungen, was ihre relative Attraktivität mindert.",
   "scan": {
     "universe": 18419,
-    "scanned": 700,
-    "lastCursor": 700,
-    "candCursor": 12,
+    "scanned": 1400,
+    "lastCursor": 1400,
+    "candCursor": 24,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
