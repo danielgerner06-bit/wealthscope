@@ -59,19 +59,6 @@ async function loadUniverse(key) {
     .sort();
 }
 
-/* ---------- Zustand laden/initialisieren ---------- */
-export function loadState(prev) {
-  return {
-    scan: prev?.scan || { universe: 0, scanned: 0, lastCursor: 0 },
-    db: indexByTicker(prev?.topStocks || []),
-  };
-}
-function indexByTicker(arr) {
-  const m = {};
-  for (const s of arr) m[s.ticker] = s;
-  return m;
-}
-
 /* ---------- Rollierender Analysten-Scan ----------
    Prüft je Lauf bis zu `budget` Symbole ab dem letzten Cursor. Für jedes Symbol:
    - recommendation trends -> Kauf-% und (als Outperform-Näherung) Strong-Buy-Anteil
@@ -123,6 +110,7 @@ export async function scanAnalystStocks(key, state, budget) {
         if (pt.targetMean && q.c) upside = Math.round(((pt.targetMean - q.c) / q.c) * 100);
       } catch { /* Kursziel optional */ }
       state.db[hit.ticker] = {
+        ...state.db[hit.ticker],
         ticker: hit.ticker,
         name: prof.name || hit.ticker,
         sector,
@@ -130,6 +118,7 @@ export async function scanAnalystStocks(key, state, budget) {
         outperformPct: hit.outperformPct,
         analysts: hit.analysts,
         upside: upside != null ? upside : (state.db[hit.ticker]?.upside ?? null),
+        via: 'finnhub', source: 'Finnhub',
         seen: new Date().toISOString().slice(0, 10),
       };
     } catch { /* Profil-Fehler ignorieren */ }

@@ -1,33 +1,19 @@
-// Diagnose: Kann Gemini mit Google-Search-Grounding echte Analystenratings
-// auch für Nebenwerte liefern? Testet 2 kleine Aktien. Loggt KEINEN Key.
+// Diagnose: testet die echten Pipeline-Funktionen checkCandidates + discoverNew.
+import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
+
 const KEY = process.env.GEMINI_API_KEY;
 if (!KEY) { console.error('kein GEMINI_API_KEY'); process.exit(1); }
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 
-const stocks = ['innoscripta SE (XETRA)', 'wallstreet:online AG (WSO1)'];
+console.log('=== checkCandidates: 4 Nebenwerte prüfen ===');
+try {
+  const hits = await checkCandidates(KEY, ['innoscripta SE', 'Nagarro SE', 'PVA TePla AG', 'Atoss Software SE']);
+  console.log('Treffer (Kauf>=95 & Outperf>=80):', hits.length);
+  for (const h of hits) console.log(`  ${h.ticker}  ${h.name}  [${h.sector}]  Kauf ${h.buyPct}%  Outp ${h.outperformPct}%  ${h.analysts}A  up=${h.upside}  src=${h.source}`);
+} catch (e) { console.log('FEHLER checkCandidates:', e.message); }
 
-for (const name of stocks) {
-  const prompt = `Suche im Web die aktuellen Analysten-Empfehlungen für die Aktie ${name}. Gib zurück, wie viele Analysten sie covern und die Verteilung (Strong Buy / Buy / Hold / Sell). Wenn du nichts findest, sage das klar. Antworte in 2 Sätzen.`;
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${KEY}`;
-  try {
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        tools: [{ google_search: {} }],
-      }),
-    });
-    const txt = await res.text();
-    console.log('\n=== ' + name + ' === HTTP ' + res.status);
-    if (!res.ok) { console.log(txt.slice(0, 400)); continue; }
-    const j = JSON.parse(txt);
-    const cand = j.candidates?.[0];
-    const text = cand?.content?.parts?.map(p => p.text).filter(Boolean).join('').trim();
-    console.log('Antwort:', text || '(leer, finishReason=' + cand?.finishReason + ')');
-    const chunks = cand?.groundingMetadata?.groundingChunks || [];
-    console.log('Quellen:', chunks.length, chunks.slice(0, 4).map(c => c.web?.title || c.web?.uri).join(' | '));
-  } catch (e) {
-    console.log('Fehler bei ' + name + ':', e.message);
-  }
-}
+console.log('\n=== discoverNew: neue unbekannte Werte (kennt schon: Apple, Microsoft, Nvidia) ===');
+try {
+  const found = await discoverNew(KEY, ['Apple', 'Microsoft', 'Nvidia']);
+  console.log('Vorgeschlagen:', found.length);
+  for (const f of found) console.log(`  ${f.ticker}  ${f.name}  [${f.sector}]  Kauf ${f.buyPct}%  Outp ${f.outperformPct}%  ${f.analysts}A  src=${f.source}`);
+} catch (e) { console.log('FEHLER discoverNew:', e.message); }
