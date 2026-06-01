@@ -51,7 +51,9 @@ function normRating(o) {
   const buyPct = Math.round(Number(o.buyPct ?? o.buy_percent ?? o.kaufProzent));
   const outperformPct = Math.round(Number(o.outperformPct ?? o.outperform_percent ?? o.outperformProzent));
   const analysts = Number(o.analysts ?? o.analystCount ?? o.anzahlAnalysten) || null;
-  const upside = (o.upside != null) ? Math.round(Number(o.upside)) : null;
+  let upside = (o.upside != null && isFinite(Number(o.upside))) ? Math.round(Number(o.upside)) : null;
+  // Plausibilität: unrealistische Kursziele (oft veraltete/falsche Websuche-Treffer) verwerfen.
+  if (upside != null && (upside < -50 || upside > 120)) upside = null;
   let sector = o.sector;
   if (!SECTOR_IDS.includes(sector)) sector = sectorForFinnhub(o.industry || o.branche || sector) || null;
   return { buyPct, outperformPct, analysts, upside, sector };
