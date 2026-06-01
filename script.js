@@ -168,8 +168,8 @@ function getRegionPadding(region) {
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  // homeScreen (Scroll-Landing), calcScreen und hubScreen brauchen Scroll
-  const scrollable = id === 'homeScreen' || id === 'calcScreen' || id === 'hubScreen';
+  // homeScreen (Scroll-Landing) und hubScreen brauchen Scroll
+  const scrollable = id === 'homeScreen' || id === 'hubScreen';
   document.body.classList.toggle('locked', !scrollable);
 
   const hubBack = document.querySelector('.hub-back');
@@ -1040,9 +1040,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const go = el.dataset.go;
       if (go === 'geo') {
         showScreen('homeScreen');
-      } else if (go === 'calc') {
-        showScreen('calcScreen');
-        if (typeof initCalc === 'function') initCalc();
+      } else if (go === 'sektor') {
+        showScreen('sektorScreen');
+        if (typeof initSektor === 'function') initSektor();
       }
     });
   });

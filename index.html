@@ -27,7 +27,7 @@
             <div class="hub-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 6-7"/></svg>
             </div>
-            <h2>Portfolio</h2>
+            <h2>Wealth<span class="grad">Scope</span></h2>
             <p>Meine Finanz-App — Vermögen und Investments im Blick.</p>
             <span class="hub-card-go">Öffnen
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
@@ -45,12 +45,12 @@
             </span>
           </button>
 
-          <button class="hub-card hub-calc" type="button" data-go="calc">
+          <button class="hub-card hub-sektor" type="button" data-go="sektor">
             <div class="hub-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10"/><line x1="12" y1="10" x2="12" y2="10"/><line x1="16" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="16" y1="14" x2="16" y2="18"/><line x1="8" y1="18" x2="12" y2="18"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l3-4 3 2 4-7 2 3"/><circle cx="7" cy="15" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="13" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="6" r="1.2" fill="currentColor" stroke="none"/></svg>
             </div>
-            <h2>Calc<span class="grad">Scope</span></h2>
-            <p>Praktische Rechner — Matrizen lösen und Autos vergleichen.</p>
+            <h2>Sektor<span class="grad">Scope</span></h2>
+            <p>Welche Branchen am Weltaktienmarkt gerade führen — Performance & Analystentrends.</p>
             <span class="hub-card-go">Öffnen
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
@@ -483,79 +483,85 @@
     </div>
   </div>
 
-  <!-- ============ CALCSCOPE ============ -->
-  <div class="screen" id="calcScreen">
-    <header class="calc-head">
-      <button class="calc-back" onclick="showScreen('hubScreen')" aria-label="Zurück">
+  <!-- ============ SEKTORSCOPE ============ -->
+  <div class="screen" id="sektorScreen">
+    <header class="sek-head">
+      <button class="sek-back" onclick="showScreen('hubScreen')" aria-label="Zurück">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         <span>Apps</span>
       </button>
-      <div class="calc-brand">Calc<span class="grad">Scope</span></div>
-      <div class="calc-tabs">
-        <button class="calc-tab active" data-tab="matrix">Matrixrechner</button>
-        <button class="calc-tab" data-tab="auto">AutoCalc</button>
+      <div class="sek-brand">Sektor<span class="grad">Scope</span></div>
+      <div class="sek-meta">
+        <span class="sek-dot"></span>
+        <span id="sekUpdated">—</span>
       </div>
     </header>
 
-    <main class="calc-main">
-      <!-- MATRIX -->
-      <section class="calc-panel active" id="panelMatrix">
-        <div class="calc-intro">
-          <h1>Matrixrechner</h1>
-          <p>Lineares Gleichungssystem <b>A · x = b</b> lösen — z.&nbsp;B. eine Maschenmatrix aus der Elektrotechnik.</p>
-        </div>
-        <div class="matrix-controls">
-          <label>Größe
-            <select id="matrixSize">
-              <option value="2">2 × 2</option>
-              <option value="3" selected>3 × 3</option>
-              <option value="4">4 × 4</option>
-              <option value="5">5 × 5</option>
-              <option value="6">6 × 6</option>
-            </select>
-          </label>
-          <button class="btn btn-primary" id="matrixSolve">Lösen</button>
-          <button class="btn btn-ghost" id="matrixClear">Leeren</button>
-        </div>
-        <div class="matrix-board">
-          <div class="matrix-block">
-            <div class="matrix-cap">A</div>
-            <div id="matrixA" class="matrix-grid"></div>
+    <main class="sek-main">
+      <!-- linke große Spalte: Performance -->
+      <section class="sek-card sek-perf">
+        <div class="sek-card-head">
+          <div>
+            <h2>Sektor-Performance</h2>
+            <p class="sek-card-sub">Prozentuales Aktienwachstum je Branche am Weltmarkt</p>
           </div>
-          <div class="matrix-op">· x =</div>
-          <div class="matrix-block">
-            <div class="matrix-cap">b</div>
-            <div id="matrixB" class="matrix-grid matrix-vec"></div>
+          <div class="sek-ranges" id="sekRanges">
+            <button data-range="1m">1M</button>
+            <button data-range="3m">3M</button>
+            <button data-range="6m">6M</button>
+            <button data-range="1j" class="active">1J</button>
+            <button data-range="3j">3J</button>
+            <button data-range="5j">5J</button>
           </div>
         </div>
-        <div id="matrixResult" class="matrix-result"></div>
-        <p class="matrix-hint">Tipp: Felder akzeptieren Brüche und Ausdrücke wie <code>1/3</code>, <code>2*4</code>, <code>-5.5</code>.</p>
+        <div class="sek-chart-wrap"><canvas id="sekPerfChart"></canvas></div>
+        <div class="sek-legend" id="sekLegend"></div>
       </section>
 
-      <!-- AUTOCALC -->
-      <section class="calc-panel" id="panelAuto">
-        <div class="calc-intro">
-          <h1>AutoCalc</h1>
-          <p>Autos vergleichen — laufende Kosten, Wertverlust und Autowechsel.</p>
+      <!-- rechte Spalte oben: Ranking -->
+      <section class="sek-card sek-rank">
+        <div class="sek-card-head">
+          <h2>Rangliste</h2>
+          <span class="sek-badge" id="sekRankRange">1J</span>
         </div>
-        <div class="auto-controls">
-          <button class="btn btn-primary" id="autoAdd">+ Auto hinzufügen</button>
-          <label class="auto-period">Eingabe / Anzeige
-            <select id="autoPeriod">
-              <option value="month">pro Monat</option>
-              <option value="year">pro Jahr</option>
-            </select>
-          </label>
+        <div class="sek-bars" id="sekBars"></div>
+      </section>
+
+      <!-- rechte Spalte unten: Analysten-Verteilung -->
+      <section class="sek-card sek-analyst">
+        <div class="sek-card-head">
+          <div>
+            <h2>Analysten-Favoriten je Sektor</h2>
+            <p class="sek-card-sub">Anteil der Top-bewerteten Aktien (Strong&nbsp;Buy / Buy) über die Zeit</p>
+          </div>
         </div>
-        <div id="autoList" class="auto-list"></div>
-        <div id="autoCompare" class="auto-compare"></div>
+        <div class="sek-chart-wrap sek-chart-sm"><canvas id="sekAnalystChart"></canvas></div>
+      </section>
+
+      <!-- unten breit: Top-Aktien-Tabelle -->
+      <section class="sek-card sek-table">
+        <div class="sek-card-head">
+          <h2>Höchstbewertete Einzelaktien</h2>
+          <p class="sek-card-sub">Nach Analystenkonsens</p>
+        </div>
+        <div class="sek-table-scroll">
+          <table>
+            <thead>
+              <tr><th>Aktie</th><th>Sektor</th><th>Rating</th><th class="num">Kursziel-Potenzial</th></tr>
+            </thead>
+            <tbody id="sekStockBody"></tbody>
+          </table>
+        </div>
       </section>
     </main>
+
+    <div class="sek-loading" id="sekLoading"><div class="spinner"></div><p>Daten werden geladen…</p></div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="data.js"></script>
   <script src="script.js"></script>
-  <script src="calc.js"></script>
+  <script src="sektor.js"></script>
 </body>
 </html>

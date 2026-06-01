@@ -1,0 +1,36 @@
+name: Sektordaten aktualisieren
+
+on:
+  schedule:
+    - cron: '0 5 * * *'   # täglich 05:00 UTC
+  workflow_dispatch:        # manueller Start möglich
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sektordaten via Gemini aktualisieren
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/update-sectors.mjs
+
+      - name: Änderungen committen
+        run: |
+          if git diff --quiet sectordata.json; then
+            echo "Keine Änderungen."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add sectordata.json
+            git commit -m "Sektordaten aktualisiert ($(date -u +%Y-%m-%d))"
+            git push
+          fi
