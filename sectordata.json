@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-01",
-  "updatedAt": "2026-06-01T22:16:52.019Z",
+  "updated": "2026-06-02",
+  "updatedAt": "2026-06-02T01:16:01.808Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -288,6 +288,58 @@
   ],
   "topStocks": [
     {
+      "ticker": "SB1G",
+      "name": "Smartbroker Holding AG",
+      "sector": "finance",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 4,
+      "upside": 47,
+      "yahoo": "SB1G.DE",
+      "via": "gemini",
+      "source": "Investing.com, Simply Wall St, Stockopedia",
+      "seen": "2026-06-02",
+      "pe": null,
+      "eps": null,
+      "peAt": "2026-06-02"
+    },
+    {
+      "ticker": "DEF",
+      "name": "DEFAMA Deutsche Fachmarkt AG",
+      "sector": "realestate",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 3,
+      "upside": 44,
+      "via": "gemini",
+      "source": "Investing.com, MarketScreener, Finanzen.net, Stockopedia",
+      "seen": "2026-06-02",
+      "pe": null,
+      "yahoo": "DEF.DE",
+      "eps": null,
+      "peAt": "2026-06-01",
+      "perf6m": -13.67,
+      "perf6mAt": "2026-06-01"
+    },
+    {
+      "ticker": "ADEA",
+      "name": "Adeia Inc.",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 4,
+      "upside": 38,
+      "yahoo": "ADEA",
+      "via": "gemini",
+      "source": "Investing.com, MarketScreener, Stock Analysis, Benzinga",
+      "seen": "2026-06-02",
+      "pe": 24.1,
+      "eps": 1.08,
+      "peAt": "2026-06-01",
+      "perf6m": 117.95,
+      "perf6mAt": "2026-06-01"
+    },
+    {
       "ticker": "TLN",
       "name": "Talen Energy Corporation",
       "sector": "energy",
@@ -337,24 +389,6 @@
       "perf6mAt": "2026-06-01"
     },
     {
-      "ticker": "DEF",
-      "name": "DEFAMA Deutsche Fachmarkt AG",
-      "sector": "realestate",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 3,
-      "upside": 21,
-      "via": "gemini",
-      "source": "Investing.com, wallstreetONLINE",
-      "seen": "2026-06-01",
-      "pe": null,
-      "yahoo": "DEF.DE",
-      "eps": null,
-      "peAt": "2026-06-01",
-      "perf6m": -13.67,
-      "perf6mAt": "2026-06-01"
-    },
-    {
       "ticker": "CLS",
       "name": "Celestica",
       "sector": "hardware",
@@ -384,24 +418,6 @@
       "eps": 1.8,
       "peAt": "2026-06-01",
       "perf6m": 74.42,
-      "perf6mAt": "2026-06-01"
-    },
-    {
-      "ticker": "ADEA",
-      "name": "Adeia Inc.",
-      "sector": "software",
-      "buyPct": 100,
-      "outperformPct": 80,
-      "analysts": 5,
-      "upside": 18,
-      "yahoo": "ADEA",
-      "via": "gemini-discover",
-      "source": "Barchart.com, Stock Analysis, Perplexity",
-      "seen": "2026-06-01",
-      "pe": 24.1,
-      "eps": 1.08,
-      "peAt": "2026-06-01",
-      "perf6m": 117.95,
       "perf6mAt": "2026-06-01"
     },
     {
@@ -441,8 +457,8 @@
       "analysts": 3,
       "upside": 14,
       "via": "gemini",
-      "source": "Investing.com, MarketScreener.com",
-      "seen": "2026-06-01",
+      "source": "Investing.com, MarketScreener",
+      "seen": "2026-06-02",
       "pe": null,
       "eps": null,
       "peAt": "2026-06-01",
@@ -524,6 +540,24 @@
       "pe": null,
       "eps": null,
       "peAt": "2026-06-01"
+    },
+    {
+      "ticker": "1INN",
+      "name": "innoscripta SE",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 2,
+      "upside": null,
+      "yahoo": "1INN.DE",
+      "via": "gemini",
+      "source": "Investing.com, MarketScreener",
+      "seen": "2026-06-02",
+      "perf6m": -10.43,
+      "perf6mAt": "2026-06-02",
+      "pe": null,
+      "eps": null,
+      "peAt": "2026-06-02"
     }
   ],
   "sectorNotes": {
@@ -542,9 +576,9 @@
   },
   "scan": {
     "universe": 18419,
-    "scanned": 2700,
-    "lastCursor": 2700,
-    "candCursor": 26,
+    "scanned": 3000,
+    "lastCursor": 3000,
+    "candCursor": 2,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -585,7 +619,7 @@
       "Framery Group Oyj",
       "Adeia Inc."
     ],
-    "noteCursor": 9,
-    "focusCursor": 4
+    "noteCursor": 12,
+    "focusCursor": 6
   }
 }
