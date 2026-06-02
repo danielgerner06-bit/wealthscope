@@ -18,6 +18,7 @@ import { scanAnalystStocks } from './finnhub.mjs';
 import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock } from './prices.mjs';
 import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
+import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
 
 const OUT = 'sectordata.json';
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
@@ -205,6 +206,14 @@ const today = () => new Date().toISOString().slice(0, 10);
   /* 4) Lage-Texte: NUR 1× pro Tag je 1 Sektor + 1 Region (rollierend) -- */
   let sectorNotes = prev?.sectorNotes || {};
   let regionNotes = prev?.regionNotes || {};
+  // Start-Texte einsetzen, wo noch keiner steht -> sofort überall etwas da,
+  // Gemini überarbeitet sie dann rollierend. seed=true markiert Platzhalter.
+  for (const id of Object.keys(SEED_SECTOR_NOTES)) {
+    if (!sectorNotes[id]) sectorNotes[id] = { text: SEED_SECTOR_NOTES[id], date: null, seed: true };
+  }
+  for (const id of Object.keys(SEED_REGION_NOTES)) {
+    if (!regionNotes[id]) regionNotes[id] = { text: SEED_REGION_NOTES[id], date: null, seed: true };
+  }
   const todayStr = today();
   const notesDoneToday = scan.notesDay === todayStr;
   if (GEMINI_KEY && !notesDoneToday) {

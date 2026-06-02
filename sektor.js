@@ -349,8 +349,9 @@
 
     document.querySelector('.sek-modal-insight').style.display = '';
     document.getElementById('sekModalText').textContent = note?.text ||
-      'Hier liegt noch kein KI-Text vor — er wird in den nächsten Läufen ergänzt (die Analyse läuft rollierend, um das Kontingent zu schonen).';
-    document.getElementById('sekModalDate').textContent = note?.date ? 'Stand: ' + note.date : '';
+      'Hier liegt noch kein KI-Text vor — er wird in den nächsten Läufen ergänzt.';
+    document.getElementById('sekModalDate').textContent =
+      note?.date ? 'Stand: ' + note.date : (note?.seed ? 'Startwert — wird per KI aktualisiert' : '');
 
     const m = document.getElementById('sekModal');
     m.hidden = false;
