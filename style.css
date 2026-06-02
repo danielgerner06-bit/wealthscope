@@ -1564,8 +1564,7 @@ html.preselect #hubScreen { display: none !important; }
 }
 .sek-rank-row:hover { background: rgba(148,163,184,0.1); }
 .sek-rank-row.active { border-color: var(--s-border-hi); background: rgba(129,140,248,0.14); }
-.sek-rank-name { display: flex; align-items: center; gap: 7px; font-size: 0.8rem; font-weight: 600; color: var(--s-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.sek-rank-dot { width: 8px; height: 8px; border-radius: 3px; flex-shrink: 0; box-shadow: 0 0 8px currentColor; }
+.sek-rank-name { font-size: 0.8rem; font-weight: 600; color: var(--s-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .sek-rank-n { font-size: 0.8rem; font-weight: 800; color: var(--s-text); font-variant-numeric: tabular-nums; text-align: right; }
 .sek-rank-hit { font-size: 0.78rem; font-weight: 700; color: var(--s-up); font-variant-numeric: tabular-nums; text-align: right; }
 .sek-rank-perfv { font-size: 0.8rem; font-weight: 700; color: var(--s-accent); font-variant-numeric: tabular-nums; text-align: right; }

@@ -272,7 +272,7 @@
       const row = document.createElement('button');
       row.className = 'sek-rank-row' + (sectorFilter === r.id ? ' active' : '');
       row.innerHTML =
-        '<span class="sek-rank-name"><i class="sek-rank-dot" style="background:' + sec.color + '"></i>' + sec.name + '</span>' +
+        '<span class="sek-rank-name">' + sec.name + '</span>' +
         '<span class="sek-rank-n">' + pct + '%</span>' +
         '<span class="sek-rank-hit">' + hitTxt + '</span>' +
         '<span class="sek-rank-perfv">' + scoreTxt + '</span>';
