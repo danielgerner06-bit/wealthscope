@@ -1521,6 +1521,41 @@ a { text-decoration: none; color: inherit; }
 .sek-loading.show { display: flex; }
 .sek-loading .spinner { border-color: rgba(148,163,184,0.25); border-top-color: var(--s-accent); }
 
+/* Perlen-Ranking-Button + Popup */
+.sek-analyst { position: relative; }
+.sek-head-right { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.sek-rank-btn {
+  display: inline-grid; place-items: center; width: 30px; height: 28px;
+  background: rgba(148,163,184,0.08); border: 1px solid var(--s-border); border-radius: 8px;
+  color: var(--s-muted); cursor: pointer; transition: all .12s;
+}
+.sek-rank-btn:hover, .sek-rank-btn.active { color: #c7cbff; border-color: var(--s-border-hi); background: rgba(129,140,248,0.16); }
+.sek-rank-btn svg { width: 16px; height: 16px; }
+
+.sek-rank-pop {
+  position: absolute; top: 58px; right: 18px; z-index: 30; width: min(320px, 88%);
+  background: linear-gradient(160deg, #1a2138, #141a30);
+  border: 1px solid var(--s-border-hi); border-radius: 14px; padding: 14px 14px 12px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+}
+.sek-rank-pop[hidden] { display: none; }
+.sek-rank-pop-head { font-size: 0.78rem; font-weight: 800; color: var(--s-text); margin-bottom: 10px; }
+.sek-rank-list { display: flex; flex-direction: column; gap: 3px; max-height: 320px; overflow-y: auto; scrollbar-width: none; }
+.sek-rank-list::-webkit-scrollbar { display: none; }
+.sek-rank-row {
+  display: grid; grid-template-columns: 18px 1fr 60px auto; align-items: center; gap: 9px;
+  background: none; border: 1px solid transparent; border-radius: 8px; padding: 6px 7px;
+  cursor: pointer; text-align: left; transition: background .12s, border-color .12s;
+}
+.sek-rank-row:hover { background: rgba(148,163,184,0.1); }
+.sek-rank-row.active { border-color: var(--s-border-hi); background: rgba(129,140,248,0.14); }
+.sek-rank-pos { font-size: 0.72rem; font-weight: 800; color: var(--s-faint); text-align: center; }
+.sek-rank-name { display: inline-flex; align-items: center; gap: 7px; font-size: 0.8rem; font-weight: 600; color: var(--s-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sek-rank-name i { width: 9px; height: 9px; border-radius: 3px; flex-shrink: 0; box-shadow: 0 0 8px currentColor; }
+.sek-rank-bar { height: 7px; border-radius: 99px; background: rgba(148,163,184,0.14); overflow: hidden; }
+.sek-rank-bar span { display: block; height: 100%; border-radius: 99px; }
+.sek-rank-n { font-size: 0.82rem; font-weight: 800; color: var(--s-text); font-variant-numeric: tabular-nums; min-width: 16px; text-align: right; }
+
 @media (max-width: 980px) {
   #sektorScreen.active { overflow-y: auto; }
   .sek-main { grid-template-columns: 1fr; }

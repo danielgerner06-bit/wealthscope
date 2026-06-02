@@ -216,6 +216,51 @@
     });
   }
 
+  /* ---------- Popup: Sektoren gerankt nach Perlen-Anzahl ---------- */
+  function renderRankPop() {
+    const listEl = document.getElementById('sekRankList');
+    const all = Array.isArray(DATA.topStocks) ? DATA.topStocks : [];
+    const counts = {};
+    all.forEach(s => { counts[s.sector] = (counts[s.sector] || 0) + 1; });
+    const rows = Object.keys(counts).map(id => ({ id, n: counts[id] })).sort((a, b) => b.n - a.n);
+    const max = rows.length ? rows[0].n : 1;
+
+    listEl.innerHTML = '';
+    if (!rows.length) { listEl.innerHTML = '<div class="sek-stocks-empty">Noch keine Perlen.</div>'; return; }
+    rows.forEach((r, i) => {
+      const sec = sectorById(r.id);
+      const row = document.createElement('button');
+      row.className = 'sek-rank-row' + (sectorFilter === r.id ? ' active' : '');
+      row.innerHTML =
+        '<span class="sek-rank-pos">' + (i + 1) + '</span>' +
+        '<span class="sek-rank-name"><i style="background:' + sec.color + '"></i>' + sec.name + '</span>' +
+        '<span class="sek-rank-bar"><span style="width:' + Math.round((r.n / max) * 100) + '%;background:' + sec.color + '"></span></span>' +
+        '<span class="sek-rank-n">' + r.n + '</span>';
+      row.addEventListener('click', () => {
+        sectorFilter = (sectorFilter === r.id) ? null : r.id;  // Klick filtert die Liste
+        renderStocks();
+        toggleRankPop(false);
+      });
+      listEl.appendChild(row);
+    });
+  }
+  function toggleRankPop(show) {
+    const pop = document.getElementById('sekRankPop');
+    const btn = document.getElementById('sekRankBtn');
+    const open = show != null ? show : pop.hidden;
+    if (open) renderRankPop();
+    pop.hidden = !open;
+    btn.classList.toggle('active', open);
+  }
+  function wireRankPop() {
+    document.getElementById('sekRankBtn').addEventListener('click', e => { e.stopPropagation(); toggleRankPop(); });
+    // Klick außerhalb schließt das Popup
+    document.addEventListener('click', e => {
+      const pop = document.getElementById('sekRankPop');
+      if (!pop.hidden && !e.target.closest('#sekRankPop') && !e.target.closest('#sekRankBtn')) toggleRankPop(false);
+    });
+  }
+
   // Rechts an der Zeile: der aktuell sortierte Wert, hervorgehoben
   function stockMetric(st) {
     let v, label, cls = 'sek-stock-val';
@@ -324,7 +369,9 @@
     if (!items.length) { wrap.style.display = 'none'; return; }
     wrap.style.display = '';
 
-    const unit = items.join(' • ') + ' • ';
+    const fmtItem = it => (typeof it === "string") ? it : (it.stamp ? it.stamp + "  " : "") + it.text;
+    const sep = "     •     ";
+    const unit = items.map(fmtItem).join(sep) + sep;
     // erst eine Hälfte aufbauen, dann messen
     track.innerHTML = '<span>' + unit + '</span>';
     requestAnimationFrame(() => {
@@ -367,15 +414,16 @@
     });
   }
 
-  /* ---------- Header: Stand mit Uhrzeit ---------- */
+  /* ---------- Header: Stand im Format TT.MM.JJ HH:MM ---------- */
   function renderStand() {
     const el = document.getElementById('sekUpdated');
     let txt = 'Stand: ' + (DATA.updated || '—');
     if (DATA.updatedAt) {
       const d = new Date(DATA.updatedAt);
       if (!isNaN(d)) {
-        const t = d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-        txt = 'Stand: ' + d.toLocaleDateString('de-DE') + ', ' + t + ' Uhr';
+        const p = n => String(n).padStart(2, '0');
+        txt = 'Stand: ' + p(d.getDate()) + '.' + p(d.getMonth() + 1) + '.' + String(d.getFullYear()).slice(2) +
+              ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
       }
     }
     el.textContent = txt;
@@ -397,7 +445,7 @@
       loading.classList.add('show');
       await loadData();
       renderStand();
-      if (!wired) { wireSort(); wireFilter(); wireModal(); wireViewToggle(); wired = true; }
+      if (!wired) { wireSort(); wireFilter(); wireModal(); wireViewToggle(); wireRankPop(); wired = true; }
       applyViewLabels();
       renderNews();
       renderBars();

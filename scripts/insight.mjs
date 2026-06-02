@@ -56,18 +56,31 @@ Schreibe MAXIMAL 2 sehr knappe deutsche Sätze (zusammen höchstens 30 Wörter),
 // Liefert { items: ["...", "..."], date } per Google-Search-Grounding.
 export async function buildNews(key) {
   const today = new Date().toISOString().slice(0, 10);
-  const prompt = `Suche über Google die AKTUELL wichtigsten Nachrichten von heute/gestern, die die globalen Finanzmärkte bewegen — politisch, wirtschaftlich, geopolitisch, Notenbanken, große Unternehmen.
+  const COUNT = Number(process.env.NEWS_COUNT || 6);
+  const prompt = `Suche über Google die AKTUELL wichtigsten Nachrichten der letzten ~24 Stunden, die die globalen Finanzmärkte bewegen — politisch, wirtschaftlich, geopolitisch, Notenbanken, große Unternehmen.
 
-Gib die 3 WICHTIGSTEN als JSON-Array von kurzen deutschen Schlagzeilen zurück (je höchstens 9 Wörter, prägnant, konkret). Beispiel: ["Fed signalisiert Zinssenkung", "Ölpreis steigt nach Nahost-Eskalation", "Nvidia-Zahlen treiben Tech-Rally"].
-Nur das JSON-Array, kein weiterer Text.`;
+Gib die ${COUNT} WICHTIGSTEN als JSON-Array zurück. Jedes Element ist ein Objekt:
+{ "h": "kurze deutsche Schlagzeile (max 9 Wörter, konkret)", "t": "Veröffentlichungszeit als ISO 8601, z.B. 2026-06-02T15:30:00Z" }
+Sortiere nach Wichtigkeit (wichtigste zuerst). Nur das JSON-Array, kein weiterer Text.`;
   const text = await gen(key, prompt, true);
-  let items = [];
+  let raw = [];
   try {
     const t = text.replace(/```json/gi, '').replace(/```/g, '');
     const a = t.indexOf('['), b = t.lastIndexOf(']');
-    if (a >= 0 && b > a) items = JSON.parse(t.slice(a, b + 1));
+    if (a >= 0 && b > a) raw = JSON.parse(t.slice(a, b + 1));
   } catch { /* ignore */ }
-  items = (Array.isArray(items) ? items : []).map(x => String(x).trim()).filter(Boolean).slice(0, 3);
+
+  // -> [{ text, stamp }] mit Zeitstempel TT.MM.JJ HH:MM
+  const fmt = iso => {
+    const d = iso ? new Date(iso) : null;
+    if (!d || isNaN(d)) return '';
+    const p = n => String(n).padStart(2, '0');
+    return `${p(d.getUTCDate())}.${p(d.getUTCMonth() + 1)}.${String(d.getUTCFullYear()).slice(2)} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`;
+  };
+  const items = (Array.isArray(raw) ? raw : []).map(o => {
+    if (typeof o === 'string') return { text: o.trim(), stamp: '' };
+    return { text: String(o.h || o.headline || o.text || '').trim(), stamp: fmt(o.t || o.time || o.date) };
+  }).filter(x => x.text).slice(0, COUNT);
   if (!items.length) throw new Error('keine News geparst');
   return { items, date: today };
 }

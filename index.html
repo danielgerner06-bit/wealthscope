@@ -529,7 +529,16 @@
       <section class="sek-card sek-analyst">
         <div class="sek-card-head">
           <h2>Analysten-Perlen</h2>
-          <span class="sek-badge" id="sekStockCount"></span>
+          <div class="sek-head-right">
+            <span class="sek-badge" id="sekStockCount"></span>
+            <button class="sek-rank-btn" id="sekRankBtn" type="button" title="Perlen je Sektor" aria-label="Rangliste der Sektoren nach Perlen-Anzahl">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h6M3 6h12M3 18h9"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="sek-rank-pop" id="sekRankPop" hidden>
+          <div class="sek-rank-pop-head">Perlen je Sektor</div>
+          <div class="sek-rank-list" id="sekRankList"></div>
         </div>
         <div class="sek-filter" id="sekFilter">
           <span class="sek-filter-label">Filter:</span>

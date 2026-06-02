@@ -57,6 +57,13 @@ const today = () => new Date().toISOString().slice(0, 10);
   try { bars30Region = await fetchRegionPerformance(); console.log('Regions-Performance aktualisiert.'); }
   catch (e) { console.error('Regions-Performance fehlgeschlagen, behalte alte:', e.message); }
 
+  /* 1b) Markt-News ZUERST (vor den vielen Gemini-Scans, damit das Kontingent reicht) */
+  let news = prev?.news || null;
+  if (GEMINI_KEY) {
+    try { news = await buildNews(GEMINI_KEY); console.log(`News: ${news.items.length} Schlagzeilen.`); }
+    catch (e) { console.error('News fehlgeschlagen, behalte alte:', e.message); }
+  }
+
   /* 2a) Finnhub-Analysten-Scan (US, rollierend) ---------------------- */
   if (FINNHUB_KEY) {
     try {
@@ -208,13 +215,6 @@ const today = () => new Date().toISOString().slice(0, 10);
       regionNotes = { ...regionNotes, ...rfresh };
       console.log(`Region-Lage: ${Object.keys(rfresh).length}/${rtodo.length} (${rtodo.join(', ')}).`);
     } catch (e) { console.error('Region-Lage fehlgeschlagen:', e.message); }
-  }
-
-  /* 5) Markt-News-Ticker (max 3 wichtigste, via Google-Search) -------- */
-  let news = prev?.news || null;
-  if (GEMINI_KEY) {
-    try { news = await buildNews(GEMINI_KEY); console.log(`News: ${news.items.length} Schlagzeilen.`); }
-    catch (e) { console.error('News fehlgeschlagen, behalte alte:', e.message); }
   }
 
   const out = {
