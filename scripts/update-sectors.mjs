@@ -135,36 +135,37 @@ const today = () => new Date().toISOString().slice(0, 10);
     } catch (e) { console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
   }
 
-  /* 2b2) Bestehende Gemini-Perlen rollierend RE-VALIDIEREN ---------- */
+  /* 2b2) Bestehende Gemini-Perlen RE-VALIDIEREN — nur 1× pro WOCHE je Perle.
+     Analysten-Kaufempfehlungen ändern sich langsam; häufiger zu prüfen wäre
+     verschwendetes Kontingent. Nur Perlen ohne/mit >7 Tage altem recheckAt. */
+  const RECHECK_AGE = 7 * 86400000;
   if (GEMINI_KEY && geminiBudgetLeft()) {
-    useGemini();
-    try {
-      const geminiTickers = Object.values(db)
-        .filter(s => s.via && s.via.startsWith('gemini'))
-        .map(s => ({ ticker: s.ticker, name: s.name }));
-      if (geminiTickers.length) {
-        const rn = geminiTickers.length;
-        const rstart = (scan.recheckCursor || 0) % rn;
-        const batch = [];
-        for (let i = 0; i < Math.min(Number(process.env.RECHECK_BUDGET || 8), rn); i++) batch.push(geminiTickers[(rstart + i) % rn]);
-        scan.recheckCursor = (rstart + batch.length) % rn;
-        const names = batch.map(b => b.name + ' (' + b.ticker + ')');
+    const due = Object.values(db)
+      .filter(s => s.via && s.via.startsWith('gemini'))
+      .filter(s => !s.recheckAt || (nowMs - Date.parse(s.recheckAt)) > RECHECK_AGE)
+      .slice(0, Number(process.env.RECHECK_BUDGET || 8));
+    if (due.length) {
+      useGemini();
+      try {
+        const names = due.map(b => b.name + ' (' + b.ticker + ')');
         const stillOk = await checkCandidates(GEMINI_KEY, names);
         const okSet = new Set(stillOk.map(s => s.ticker));
-        for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s, miss: 0 }; // bestätigt -> Zähler zurück
-        // Schonend: erst nach 3 aufeinanderfolgenden Fehlversuchen entfernen
-        // (eine einzelne erfolglose Websuche darf keine gültige Perle löschen).
+        for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s, miss: 0, recheckAt: today() };
+        // Schonend: erst nach 3 aufeinanderfolgenden Fehlversuchen entfernen.
         let dropped = 0;
         const MAX_MISS = Number(process.env.RECHECK_MAX_MISS || 3);
-        for (const b of batch) {
+        for (const b of due) {
           if (okSet.has(b.ticker) || !db[b.ticker]) continue;
           const m = (db[b.ticker].miss || 0) + 1;
+          db[b.ticker].recheckAt = today();
           if (m >= MAX_MISS) { delete db[b.ticker]; dropped++; }
           else db[b.ticker].miss = m;
         }
-        console.log(`Re-Validierung: ${batch.length} geprüft, ${dropped} entfernt (nach ${MAX_MISS} Fehlversuchen).`);
-      }
-    } catch (e) { console.error('Re-Validierung fehlgeschlagen:', e.message); }
+        console.log(`Re-Validierung: ${due.length} fällige geprüft, ${dropped} entfernt.`);
+      } catch (e) { console.error('Re-Validierung fehlgeschlagen:', e.message); }
+    } else {
+      console.log('Re-Validierung: keine Perle fällig (alle <7 Tage geprüft).');
+    }
   }
 
   // Kandidatenliste begrenzen, damit sie nicht unbegrenzt wächst.
