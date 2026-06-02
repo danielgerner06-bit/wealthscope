@@ -109,12 +109,9 @@ export async function scanAnalystStocks(key, state, budget) {
   state.scan.lastCursor = cursor;
   state.scan.scanned = Math.min(state.scan.scanned + used, n);
 
-  // Top-Liste: nach Kursziel-Potenzial, dann Kauf-%, begrenzt auf 40 Einträge.
-  const topStocks = Object.values(state.db)
-    .sort((a, b) => (b.upside ?? -999) - (a.upside ?? -999) || b.buyPct - a.buyPct)
-    .slice(0, 40);
-
-  return { topStocks, scan: state.scan };
+  // Hinweis: Die finale Treffer-Liste baut update-sectors.mjs selbst aus der DB
+  // (ohne Obergrenze). Hier nur den Scan-Zustand zurückgeben.
+  return { scan: state.scan };
 }
 
 /* ---------- Echtes KGV (TTM) je Aktie über Finnhub /stock/metric ----------

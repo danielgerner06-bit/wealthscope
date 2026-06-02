@@ -197,10 +197,10 @@ const today = () => new Date().toISOString().slice(0, 10);
   if (candidates.length > 400) candidates = candidates.slice(candidates.length - 400);
   scan.candidates = candidates;
 
-  // Top-Liste: nach Kursziel-Potenzial, dann Kauf-%. Bis zu 80 Perlen.
+  // Top-Liste: nach Kursziel-Potenzial, dann Kauf-%. KEINE Obergrenze — alle
+  // qualifizierten Treffer (> 50 % Kauf) werden angezeigt. Sortierung = beste zuerst.
   let topStocks = Object.values(db)
-    .sort((a, b) => (b.upside ?? -999) - (a.upside ?? -999) || (b.buyPct || 0) - (a.buyPct || 0))
-    .slice(0, 80);
+    .sort((a, b) => (b.upside ?? -999) - (a.upside ?? -999) || (b.buyPct || 0) - (a.buyPct || 0));
 
   /* 3) 6-Monats-Kursperformance je Aktie (Yahoo), rollierend nachladen --- */
   // Pro Lauf nur für Aktien ohne/alten 6M-Wert, damit es schnell bleibt.
