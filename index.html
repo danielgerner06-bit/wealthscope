@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WealthScope</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="mask-icon" href="favicon.svg" color="#6366f1" />
+  <meta name="theme-color" content="#6366f1" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -647,8 +650,14 @@
         <div class="ana-filters" id="anaFilters">
           <label>Sektor<select id="afSector"><option value="">alle</option></select></label>
           <label>Region<select id="afRegion"><option value="">alle</option></select></label>
-          <label>KGV von<input type="text" inputmode="numeric" id="afPeMin" placeholder="–"></label>
-          <label>bis<input type="text" inputmode="numeric" id="afPeMax" placeholder="–"></label>
+          <div class="ana-range" id="afPeRange">
+            <span class="ana-range-label">KGV <b id="afPeVal">alle</b></span>
+            <div class="ana-range-track" id="afPeTrack">
+              <div class="ana-range-fill" id="afPeFill"></div>
+              <input type="range" id="afPeMin" min="0" max="60" step="1" value="0" aria-label="KGV von">
+              <input type="range" id="afPeMax" min="0" max="60" step="1" value="60" aria-label="KGV bis">
+            </div>
+          </div>
           <label>Kauf ≥%<input type="text" inputmode="numeric" id="afBuy" placeholder="–"></label>
           <label>Outp. ≥%<input type="text" inputmode="numeric" id="afOutp" placeholder="–"></label>
           <label>Ziel ≥%<input type="text" inputmode="numeric" id="afUpside" placeholder="–"></label>
@@ -665,7 +674,12 @@
       <!-- RECHTS: Faktor-Wichtigkeit + KI-Analyse -->
       <aside class="ana-side">
         <section class="sek-card ana-factors-card">
-          <div class="sek-card-head"><h2>Wichtigste Faktoren</h2></div>
+          <div class="sek-card-head">
+            <h2>Wichtigste Faktoren</h2>
+            <label class="ana-month-pick">Zeitraum
+              <select id="anaFactorMonth"><option value="0">neuester</option></select>
+            </label>
+          </div>
           <div class="ana-factors" id="anaFactors"></div>
         </section>
         <section class="sek-card sek-insight ana-ki">

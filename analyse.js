@@ -3,6 +3,9 @@
   let HIST = null, SECT = null, REG = null, chart = null;
   let view = 'bars';                 // 'bars' | 'line'
   let xFactor = 'pe';
+  let factorMonth = 0;               // 0 = neuester Monat (lastPerf), sonst Monat m -> perf[m-1]
+  // Performance-Funktion für die Faktor-Wichtigkeit je nach gewähltem Zeitraum
+  const perfForMonth = s => factorMonth === 0 ? lastPerf(s) : ((s.perf || [])[factorMonth - 1] ?? null);
   // jüngster vorhandener Monatswert einer Aktie (kumulierte Performance seit Aufnahme)
   const lastPerf = s => { const p = s.perf; if (!Array.isArray(p)) return null; for (let i = p.length - 1; i >= 0; i--) if (p[i] != null) return p[i]; return null; };
   // wie viele Monate hat diese Aktie schon? (Anzahl gemessener Punkte)
@@ -174,10 +177,11 @@
     const data = view === 'line' ? HIST : HIST.filter(passes);
     const rows = [];
     for (const f of FACTORS) {
-      const { slope, best, n } = factorCurve(data, f.key, lastPerf);
+      const { slope, best, n } = factorCurve(data, f.key, perfForMonth);
       if (n < 4 || !best) continue;
       rows.push({ label: f.label, slope, bestX: best.x, bestY: best.y });
     }
+    syncMonthOptions();
     rows.sort((a, b) => b.slope - a.slope);
     const maxSlope = rows.length ? Math.max(...rows.map(r => r.slope), 0.1) : 1;
 
@@ -195,11 +199,57 @@
     });
   }
 
+  // Zeitraum-Auswahl der Faktor-Wichtigkeit an die real vorhandenen Monate anpassen.
+  function syncMonthOptions() {
+    const sel = document.getElementById('anaFactorMonth');
+    if (!sel) return;
+    const maxM = Math.max(0, ...HIST.map(monthsOf));
+    if (sel.options.length === maxM + 1) return;   // schon korrekt befüllt
+    const cur = factorMonth;
+    sel.innerHTML = '<option value="0">neuester</option>';
+    for (let m = 1; m <= maxM; m++) {
+      const o = document.createElement('option'); o.value = String(m); o.textContent = m + ' Monat' + (m === 1 ? '' : 'e');
+      sel.appendChild(o);
+    }
+    sel.value = String(cur <= maxM ? cur : 0);
+    if (cur > maxM) factorMonth = 0;
+  }
+
   /* ---------- KI-Analyse (3 beste Kombis) ---------- */
   function renderKi() {
     const el = document.getElementById('anaKi');
     const txt = (HIST._kiObj && HIST._kiObj.kiAnalysis && HIST._kiObj.kiAnalysis.text) || null;
     el.textContent = txt || 'Die KI nennt hier die stärksten Faktor-Kombinationen, sobald der Backtest läuft. Aktuell liegt erst ein vorläufiger 1-Monats-Wert je Perle vor; die Aussage aktualisiert sich monatlich.';
+  }
+
+  /* ---------- KGV-Doppelregler (von/bis) ---------- */
+  const PE_LO = 0, PE_HI = 60;       // HI = offenes Ende ("kein Limit")
+  function updatePeRange() {
+    const lo = document.getElementById('afPeMin'), hi = document.getElementById('afPeMax');
+    let a = +lo.value, b = +hi.value;
+    if (a > b) { if (document.activeElement === lo) b = a, hi.value = b; else a = b, lo.value = a; }   // Kreuzen verhindern
+    // Filterwerte: an den Endanschlägen = offen (null)
+    filt.peMin = a > PE_LO ? a : null;
+    filt.peMax = b < PE_HI ? b : null;
+    // Füllbalken + Beschriftung
+    const fill = document.getElementById('afPeFill');
+    const span = PE_HI - PE_LO;
+    fill.style.left = ((a - PE_LO) / span * 100) + '%';
+    fill.style.right = ((PE_HI - b) / span * 100) + '%';
+    const lbl = document.getElementById('afPeVal');
+    lbl.textContent = (a <= PE_LO && b >= PE_HI) ? 'alle'
+      : (a <= PE_LO ? '≤ ' + b : (b >= PE_HI ? '≥ ' + a : a + '–' + b));
+  }
+  function wirePeRange() {
+    const lo = document.getElementById('afPeMin'), hi = document.getElementById('afPeMax');
+    const on = () => { updatePeRange(); render(); };
+    lo.addEventListener('input', on); hi.addEventListener('input', on);
+    updatePeRange();
+  }
+  function resetPeRange() {
+    document.getElementById('afPeMin').value = PE_LO;
+    document.getElementById('afPeMax').value = PE_HI;
+    updatePeRange();
   }
 
   /* ---------- Wiring ---------- */
@@ -215,12 +265,14 @@
     });
     document.getElementById('afSector').addEventListener('change', e => { filt.sector = e.target.value || null; render(); });
     document.getElementById('afRegion').addEventListener('change', e => { filt.region = e.target.value || null; render(); });
-    num('afPeMin', 'peMin'); num('afPeMax', 'peMax'); num('afBuy', 'buy'); num('afOutp', 'outp');
+    wirePeRange();
+    num('afBuy', 'buy'); num('afOutp', 'outp');
     num('afUpside', 'upside'); num('afDiv', 'div'); num('afAnalysts', 'analysts');
     document.getElementById('afClear').addEventListener('click', () => {
       Object.keys(filt).forEach(k => delete filt[k]);
-      document.querySelectorAll('#anaFilters input').forEach(i => i.value = '');
+      document.querySelectorAll('#anaFilters input[type="text"]').forEach(i => i.value = '');
       document.getElementById('afSector').value = ''; document.getElementById('afRegion').value = '';
+      resetPeRange();
       render();
     });
     // Diagramm-Toggle: Linien-Modus blendet Filter aus (gilt für alle Aktien), zeigt X-Achsen-Wahl
@@ -233,6 +285,7 @@
       render();
     });
     document.getElementById('anaXFactor').addEventListener('change', e => { xFactor = e.target.value; render(); });
+    document.getElementById('anaFactorMonth').addEventListener('change', e => { factorMonth = parseInt(e.target.value, 10) || 0; renderFactors(); });
   }
 
   window.initAnalyse = async function () {
