@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-02",
-  "updatedAt": "2026-06-02T19:24:08.795Z",
+  "updatedAt": "2026-06-02T20:05:15.917Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 23.46,
+      "perf": 23.9,
       "avg30": -0.95,
-      "perf6m": 1.1
+      "perf6m": 1.46
     },
     {
       "id": "ai_semi",
@@ -177,9 +177,9 @@
     },
     {
       "id": "finance",
-      "perf": -0.69,
+      "perf": -0.8,
       "avg30": 0.13,
-      "perf6m": -2.62
+      "perf6m": -2.73
     },
     {
       "id": "cons_cycl",
@@ -213,15 +213,15 @@
     },
     {
       "id": "utilities",
-      "perf": -5.71,
+      "perf": -5.73,
       "avg30": 1.02,
-      "perf6m": -2.46
+      "perf6m": -2.47
     },
     {
       "id": "realestate",
-      "perf": -2.18,
+      "perf": -1.92,
       "avg30": 0.58,
-      "perf6m": 4.55
+      "perf6m": 4.82
     }
   ],
   "bars30Region": [
@@ -233,9 +233,9 @@
     },
     {
       "id": "europe",
-      "perf": 2.03,
+      "perf": 2.08,
       "avg30": 1.28,
-      "perf6m": 9.77
+      "perf6m": 9.82
     },
     {
       "id": "germany",
@@ -269,15 +269,15 @@
     },
     {
       "id": "india",
-      "perf": -2.3,
+      "perf": -2.25,
       "avg30": -1.01,
-      "perf6m": -12.22
+      "perf6m": -12.17
     },
     {
       "id": "latam",
-      "perf": -3.48,
+      "perf": -3.54,
       "avg30": 3.2,
-      "perf6m": 12.93
+      "perf6m": 12.86
     },
     {
       "id": "world",
@@ -1951,37 +1951,37 @@
   "news": {
     "items": [
       {
-        "text": "Iran unterbricht Kommunikationskanäle mit den USA nach Militäraktionen.",
-        "stamp": "02.06.26 07:00"
+        "text": "US-Notenbank: Zinsen bleiben wohl stabil, Inflation im Fokus.",
+        "stamp": "02.06.26 17:45"
       },
       {
-        "text": "US-Börsen setzen Rekordjagd fort, Alphabet senkt Kurse wegen KI-Offensive.",
-        "stamp": "02.06.26 18:03"
+        "text": "Iran-Konflikt: Ölpreise unter Druck, geopolitische Spannungen bleiben.",
+        "stamp": "02.06.26 19:06"
       },
       {
-        "text": "Ölpreise steigen um über 2% wegen geopolitischer Instabilität im Nahen Osten.",
-        "stamp": "02.06.26 07:00"
+        "text": "KI-Boom treibt Tech-Aktien: Broadcom und Nvidia im Fokus.",
+        "stamp": "02.06.26 10:00"
       },
       {
-        "text": "Europäische Aktienmärkte eröffnen schwächer aufgrund erhöhten geopolitischen Risikos.",
-        "stamp": "02.06.26 07:00"
+        "text": "Tesla-Verkäufe ziehen an: China-Boom und Europa-Sprung.",
+        "stamp": "02.06.26 08:00"
       },
       {
-        "text": "Bank of England beobachtet Lohnwachstum und hält sich bei Zinserhöhungen zurück.",
-        "stamp": "02.06.26 07:00"
+        "text": "Bitcoin stürzt ab: US-Behörden beschlagnahmen Krypto vom Iran.",
+        "stamp": "02.06.26 09:00"
       },
       {
-        "text": "Deutsche Banken bieten attraktive Zinsen für Tagesgeldkonten zur Inflationsbekämpfung.",
-        "stamp": "02.06.26 18:03"
+        "text": "Deutsche Wirtschaft: BIP-Prognose leicht angehoben, Konsum bleibt schwach.",
+        "stamp": "02.06.26 10:30"
       }
     ],
     "date": "2026-06-02"
   },
   "scan": {
     "universe": 8833,
-    "scanned": 6600,
-    "lastCursor": 6600,
-    "candCursor": 72,
+    "scanned": 6900,
+    "lastCursor": 6900,
+    "candCursor": 80,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -2082,37 +2082,37 @@
       "iRhythm Technologies, Inc."
     ],
     "noteCursor": 6,
-    "focusCursor": 4,
+    "focusCursor": 5,
     "recheckCursor": 16,
     "regionNoteCursor": 4,
     "notesDay": "2026-06-02",
     "seenBySector": {
-      "cons_cycl": 19,
-      "cons_def": 11,
-      "materials": 8,
-      "health": 33,
-      "finance": 46,
-      "energy": 28,
-      "hardware": 11,
-      "software": 38,
-      "industrial": 15,
-      "utilities": 11,
+      "cons_cycl": 20,
+      "cons_def": 13,
+      "materials": 9,
+      "health": 34,
+      "finance": 51,
+      "energy": 31,
+      "hardware": 12,
+      "software": 47,
+      "industrial": 16,
+      "utilities": 12,
       "comm": 6,
       "ai_semi": 9,
       "realestate": 4
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 21,
-      "cons_def": 12,
-      "materials": 15,
-      "health": 62,
-      "finance": 53,
-      "energy": 32,
-      "hardware": 18,
-      "software": 47,
-      "industrial": 21,
-      "utilities": 13,
+      "cons_cycl": 22,
+      "cons_def": 14,
+      "materials": 16,
+      "health": 63,
+      "finance": 58,
+      "energy": 35,
+      "hardware": 19,
+      "software": 56,
+      "industrial": 22,
+      "utilities": 14,
       "comm": 7,
       "ai_semi": 13,
       "realestate": 5
