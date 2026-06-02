@@ -233,53 +233,46 @@
     // damit das Ranking zum aktiven Filter passt. Sektor-Filter bewusst NICHT anwenden,
     // sonst bliebe nur ein Sektor übrig.
     const all = (Array.isArray(DATA.topStocks) ? DATA.topStocks : []).filter(passesValueFilter);
-    const counts = {};
-    all.forEach(s => { counts[s.sector] = (counts[s.sector] || 0) + 1; });
+    const counts = {}, divCounts = {};
+    all.forEach(s => {
+      counts[s.sector] = (counts[s.sector] || 0) + 1;
+      if (s.div != null && s.div > 0) divCounts[s.sector] = (divCounts[s.sector] || 0) + 1; // Dividendenperlen
+    });
     const totalN = all.length || 1;
+    const divTotal = Object.values(divCounts).reduce((a, b) => a + b, 0) || 1;
     const rows = Object.keys(counts).map(id => ({ id, n: counts[id] })).sort((a, b) => b.n - a.n);
     const max = rows.length ? rows[0].n : 1;
 
-    // Performance-Rang je Sektor (nach 30T-Kurs) — nur über die Sektoren, die hier Perlen haben.
-    // Vergleich: liegt ein Sektor bei den Perlen besser/schlechter als bei der Kursperformance?
+    // 30T-Kursperformance je Sektor + Spanne (für relPos / Value-Score)
     const perfMap = {};
     (DATA.bars30 || []).forEach(b => { perfMap[b.id] = b.perf; });
-    const perfRank = {};
-    rows.map(r => r.id).sort((a, b) => (perfMap[b] ?? -999) - (perfMap[a] ?? -999))
-      .forEach((id, i) => { perfRank[id] = i; });
+    const perfs = rows.map(r => perfMap[r.id]).filter(v => v != null);
+    const perfMin = perfs.length ? Math.min(...perfs) : 0;
+    const perfMax = perfs.length ? Math.max(...perfs) : 1;
+    const perfSpan = (perfMax - perfMin) || 1;
 
     listEl.innerHTML = '';
     if (!rows.length) { listEl.innerHTML = '<div class="sek-stocks-empty">Keine Perlen im aktuellen Filter.</div>'; return; }
-    rows.forEach((r, pearlRank) => {
+    rows.forEach(r => {
       const sec = sectorById(r.id);
       const pct = Math.round((r.n / totalN) * 100);
       const perf = perfMap[r.id];
-      // Diskrepanz Perlen-Rang vs. Performance-Rang: >0 = Analysten optimistischer als Kurs.
-      // Pfeilstärke gestaffelt nach Größe der Abweichung (mehr Pfeile = größere Diskrepanz).
-      const diff = (perfRank[r.id] != null) ? perfRank[r.id] - pearlRank : 0;
-      const a = Math.abs(diff);
-      let arrow = '≈', dir = 'neutral', strong = '';
-      if (a >= 1) {
-        const up = diff > 0;
-        dir = up ? 'up' : 'down';
-        const ch = up ? '▲' : '▼';
-        const lvl = a >= 6 ? 3 : a >= 3 ? 2 : 1;          // 1–2 / 3–5 / ab 6 Ränge
-        arrow = ch.repeat(lvl);
-        strong = ' lvl' + lvl;
-      }
-      const cmpTitle = diff === 0 ? 'Analysten-Gunst passt zur Kursperformance'
-        : diff > 0 ? 'Analysten optimistischer als die Kursperformance (Diskrepanz ' + a + ' Ränge)'
-        : 'Kursperformance stärker als die Analysten-Gunst (Diskrepanz ' + a + ' Ränge)';
-      const cmp = '<span class="sek-rank-cmp ' + dir + strong + '" title="' + cmpTitle + '">' + arrow + '</span>';
-      const perfTxt = perf != null ? (perf > 0 ? '+' : '') + perf.toFixed(1) + '%' : '—';
+
+      // Value-Score (alles dezimal): Anteil Dividendenperlen / relPos.
+      // relPos: 0 = schlechtester, 1 = bester Sektor; unten gekappt gegen /0.
+      // Hoch = viele Dividendenperlen bei schwacher Kursperformance.
+      const divShare = (divCounts[r.id] || 0) / divTotal;
+      const relPos = perf != null ? Math.max(0.05, (perf - perfMin) / perfSpan) : 1;
+      const score = divCounts[r.id] ? (divShare / relPos) : null;
+      const scoreTxt = score != null ? score.toFixed(2).replace('.', ',') : '–';
 
       const row = document.createElement('button');
       row.className = 'sek-rank-row' + (sectorFilter === r.id ? ' active' : '');
-      row.title = sec.name + ': ' + pct + '% der Perlen · Sektor 30-Tage-Kurs ' + perfTxt;
       row.innerHTML =
         '<span class="sek-rank-name">' + sec.name + '</span>' +
         '<span class="sek-rank-bar"><span style="width:' + Math.round((r.n / max) * 100) + '%;background:' + sec.color + '"></span></span>' +
         '<span class="sek-rank-n">' + pct + '%</span>' +
-        '<span class="sek-rank-perf">' + cmp + '<span class="sek-rank-perfv">' + perfTxt + '</span></span>';
+        '<span class="sek-rank-perfv">' + scoreTxt + '</span>';
       row.addEventListener('click', () => {
         sectorFilter = (sectorFilter === r.id) ? null : r.id;  // Klick filtert die Liste
         renderStocks();
