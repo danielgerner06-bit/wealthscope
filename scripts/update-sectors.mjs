@@ -14,8 +14,8 @@
 import fs from 'node:fs';
 import { SECTORS, REGIONS } from './sectors.mjs';
 import { buildNotes, buildNews } from './insight.mjs';
-import { scanAnalystStocks, fetchMetric } from './finnhub.mjs';
-import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m } from './prices.mjs';
+import { scanAnalystStocks } from './finnhub.mjs';
+import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock } from './prices.mjs';
 import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 
@@ -174,33 +174,32 @@ const today = () => new Date().toISOString().slice(0, 10);
   const STALE = 5 * 86400000; // 5 Tage
   const nowMs = Date.now();
   const needPerf = topStocks.filter(s => s.perf6m == null || !s.perf6mAt || (nowMs - Date.parse(s.perf6mAt)) > STALE)
-    .slice(0, Number(process.env.PERF6M_BUDGET || 30));
+    .slice(0, Number(process.env.PERF6M_BUDGET || 40));
   for (const s of needPerf) {
     const v = await fetchStockPerf6m(s.yahoo || s.ticker);   // Yahoo-Symbol bevorzugen (z. B. KTN.DE)
     if (v != null) { s.perf6m = v; s.perf6mAt = today(); db[s.ticker] = { ...db[s.ticker], perf6m: v, perf6mAt: s.perf6mAt }; }
   }
   if (needPerf.length) console.log(`6M-Performance für ${needPerf.length} Aktien aktualisiert.`);
 
-  /* 3b) Echtes KGV je Aktie über Finnhub (verlässlicher als Gemini-Schätzung) ---
-     Setzt pe sauber: Verlustfirmen bekommen null (kein KGV). Rollierend, mit Budget. */
-  if (FINNHUB_KEY) {
-    const needPe = topStocks.filter(s => s.peAt == null || (nowMs - Date.parse(s.peAt)) > STALE)
-      .slice(0, Number(process.env.PE_BUDGET || 30));
-    let peCount = 0;
-    for (const s of needPe) {
-      const { pe, eps } = await fetchMetric(s.ticker, FINNHUB_KEY);
-      s.eps = eps; s.peAt = today();
-      // Finnhub-KGV bevorzugen; wenn keins (z. B. Nicht-US-Wert), Gemini-KGV als Fallback,
-      // aber nur plausibel (0–500) und nur wenn EPS nicht negativ ist.
-      let peFinal = pe;
-      if (peFinal == null && s.peGemini != null && s.peGemini > 0 && s.peGemini <= 500 && !(eps != null && eps < 0)) {
-        peFinal = s.peGemini;
-      }
-      s.pe = peFinal;
-      db[s.ticker] = { ...db[s.ticker], pe: peFinal, eps, peAt: s.peAt };
-      if (peFinal != null) peCount++;
+  /* 3b) Kursziel + KGV + EPS + Analysten je Aktie über Yahoo (1 Call, kein Key,
+     funktioniert auch für deutsche Werte). Ersetzt die alte Finnhub-Anreicherung. */
+  {
+    const needEnrich = topStocks.filter(s => s.enrichAt == null || (nowMs - Date.parse(s.enrichAt)) > STALE)
+      .slice(0, Number(process.env.ENRICH_BUDGET || 40));
+    let upCount = 0, peCount = 0;
+    for (const s of needEnrich) {
+      const e = await enrichStock(s.yahoo || s.ticker);
+      if (!e) continue;
+      if (e.upside != null) { s.upside = e.upside; upCount++; }
+      // KGV: Yahoo-Wert; bei Verlust (EPS < 0) bewusst kein KGV
+      s.pe = (e.eps != null && e.eps < 0) ? null : e.pe;
+      if (e.eps != null) s.eps = e.eps;
+      if (e.analysts != null) s.analysts = e.analysts;
+      s.enrichAt = today();
+      if (s.pe != null) peCount++;
+      db[s.ticker] = { ...db[s.ticker], upside: s.upside, pe: s.pe, eps: s.eps, analysts: s.analysts, enrichAt: s.enrichAt };
     }
-    if (needPe.length) console.log(`KGV für ${needPe.length} Aktien geprüft, ${peCount} mit Wert (Finnhub + Gemini-Fallback).`);
+    if (needEnrich.length) console.log(`Yahoo-Anreicherung: ${needEnrich.length} Aktien, ${upCount} mit Kursziel, ${peCount} mit KGV.`);
   }
 
   /* 4) Lage-Texte: NUR 1× pro Tag je 1 Sektor + 1 Region (rollierend) -- */

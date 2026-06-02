@@ -31,15 +31,65 @@ function pctBack(c, win) {
   return +(((last - ref) / ref) * 100).toFixed(2);
 }
 
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
+
 async function closes(symbol, range = '1y') {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?range=${range}&interval=1d`;
-  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  const res = await fetch(url, { headers: { 'User-Agent': UA } });
   if (!res.ok) throw new Error('Yahoo HTTP ' + res.status + ' (' + symbol + ')');
   const j = await res.json();
   const r = j?.chart?.result?.[0];
   const arr = r?.indicators?.quote?.[0]?.close;
   if (!Array.isArray(arr)) throw new Error('keine Kursdaten für ' + symbol);
   return arr.filter(x => typeof x === 'number' && isFinite(x));
+}
+
+/* ---------- Yahoo quoteSummary (Kursziel, KGV, EPS) ----------
+   Braucht Cookie + Crumb. Beides einmal holen und cachen.                       */
+let _cookie = null, _crumb = null;
+async function ensureCrumb() {
+  if (_crumb) return;
+  // 1) Cookie holen
+  const r1 = await fetch('https://fc.yahoo.com/', { headers: { 'User-Agent': UA } });
+  _cookie = (r1.headers.get('set-cookie') || '').split(';')[0] || '';
+  // 2) Crumb mit Cookie holen
+  const r2 = await fetch('https://query1.finance.yahoo.com/v1/test/getcrumb', {
+    headers: { 'User-Agent': UA, 'Cookie': _cookie },
+  });
+  const c = await r2.text();
+  if (c && !c.startsWith('{') && c.length < 40) _crumb = c;
+  else throw new Error('kein Yahoo-Crumb');
+}
+
+// Liefert { price, target, upside, pe, eps, analysts } für ein Symbol (oder Teilwerte/null).
+export async function enrichStock(symbol) {
+  try {
+    await ensureCrumb();
+    const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(symbol)}`
+      + `?modules=financialData,summaryDetail,price,defaultKeyStatistics&crumb=${encodeURIComponent(_crumb)}`;
+    const res = await fetch(url, { headers: { 'User-Agent': UA, 'Cookie': _cookie } });
+    if (res.status === 401 || res.status === 403) { _crumb = null; throw new Error('crumb abgelaufen'); }
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const r = (await res.json())?.quoteSummary?.result?.[0];
+    if (!r) return null;
+    const fd = r.financialData || {}, sd = r.summaryDetail || {}, pr = r.price || {}, ks = r.defaultKeyStatistics || {};
+    const price = fd.currentPrice?.raw ?? pr.regularMarketPrice?.raw ?? null;
+    const target = fd.targetMeanPrice?.raw ?? null;
+    const upside = (price && target) ? Math.round((target / price - 1) * 100) : null;
+    let pe = sd.trailingPE?.raw ?? fd.trailingPE?.raw ?? null;
+    pe = (pe != null && isFinite(pe) && pe > 0 && pe <= 500) ? +pe.toFixed(1) : null;  // Verlust/absurd -> kein KGV
+    const eps = ks.trailingEps?.raw ?? null;
+    const analysts = fd.numberOfAnalystOpinions?.raw ?? null;
+    return {
+      price, target,
+      // Kursziel-Potenzial plausibel begrenzen (extreme Werte = oft Datenfehler/Penny-Stocks)
+      upside: (upside != null && upside >= -60 && upside <= 100) ? upside : null,
+      pe, eps: (eps != null && isFinite(eps)) ? +eps.toFixed(2) : null,
+      analysts: analysts || null,
+    };
+  } catch {
+    return null;
+  }
 }
 
 // Performance für eine Liste von { id, etf } (Sektoren ODER Regionen).
