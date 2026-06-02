@@ -151,12 +151,18 @@ const today = () => new Date().toISOString().slice(0, 10);
         const names = batch.map(b => b.name + ' (' + b.ticker + ')');
         const stillOk = await checkCandidates(GEMINI_KEY, names);
         const okSet = new Set(stillOk.map(s => s.ticker));
-        for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s };
+        for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s, miss: 0 }; // bestätigt -> Zähler zurück
+        // Schonend: erst nach 3 aufeinanderfolgenden Fehlversuchen entfernen
+        // (eine einzelne erfolglose Websuche darf keine gültige Perle löschen).
         let dropped = 0;
+        const MAX_MISS = Number(process.env.RECHECK_MAX_MISS || 3);
         for (const b of batch) {
-          if (!okSet.has(b.ticker) && db[b.ticker]) { delete db[b.ticker]; dropped++; }
+          if (okSet.has(b.ticker) || !db[b.ticker]) continue;
+          const m = (db[b.ticker].miss || 0) + 1;
+          if (m >= MAX_MISS) { delete db[b.ticker]; dropped++; }
+          else db[b.ticker].miss = m;
         }
-        console.log(`Re-Validierung: ${batch.length} geprüft, ${dropped} entfernt.`);
+        console.log(`Re-Validierung: ${batch.length} geprüft, ${dropped} entfernt (nach ${MAX_MISS} Fehlversuchen).`);
       }
     } catch (e) { console.error('Re-Validierung fehlgeschlagen:', e.message); }
   }
