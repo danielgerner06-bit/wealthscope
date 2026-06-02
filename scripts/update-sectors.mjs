@@ -305,6 +305,17 @@ const today = () => new Date().toISOString().slice(0, 10);
     saveHistory(hist);
   } catch (e) { console.error('Historie fehlgeschlagen:', e.message); }
 
+  /* Trefferquoten-Basis je Sektor: geprüfte Aktien = abgelehnte (Scan) + Perlen (akzeptiert).
+     Die Perlen sind selbst geprüfte Treffer und gehören in den Nenner. So hat JEDER Sektor
+     mit mindestens einer Perle immer eine berechenbare Quote (nie „unbekannt"). */
+  scan.seenBySector = scan.seenBySector || {};
+  const evaluatedBySector = { ...scan.seenBySector };
+  for (const s of topStocks) {
+    if (!s.sector) continue;
+    evaluatedBySector[s.sector] = (evaluatedBySector[s.sector] || 0) + 1;   // Perle = geprüfter Treffer
+  }
+  scan.evaluatedBySector = evaluatedBySector;
+
   const out = {
     updated: today(),
     updatedAt: new Date().toISOString(),

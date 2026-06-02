@@ -248,18 +248,23 @@
     const perfMax = perfs.length ? Math.max(...perfs) : 1;
     const perfSpan = (perfMax - perfMin) || 1;
 
-    // Abgelehnte Aktien je Sektor (aus dem Scan) -> echte Trefferquote, unabhängig von Sektorgröße
-    const seen = (DATA.scan && DATA.scan.seenBySector) || {};
+    // Geprüfte Aktien je Sektor = abgelehnte (Scan) + Perlen (akzeptiert). Die Perle ist selbst
+    // ein geprüfter Treffer, daher ist der Nenner nie 0, wenn der Sektor eine Perle hat.
+    // evaluatedBySector enthält bereits abgelehnte + Perlen; Fallback (ältere Daten / fehlende
+    // Pipeline-Felder): abgelehnte aus seenBySector + die Perlenzahl r.n.
+    const evaluated = (DATA.scan && DATA.scan.evaluatedBySector) || null;
+    const rejectedMap = (DATA.scan && DATA.scan.seenBySector) || {};
 
     // je Sektor die drei Kennzahlen berechnen (für Anzeige + Sortierung)
     const items = rows.map(r => {
       const perf = perfMap[r.id];
-      const rejected = seen[r.id] || 0;
+      const seenTotal = evaluated ? (evaluated[r.id] || r.n) : ((rejectedMap[r.id] || 0) + r.n);
       const anteil = r.n / totalN;
-      // Trefferquote = Perlen / (Perlen + abgelehnte); ohne Ablehnungsdaten = null (zeigt „–")
-      const hitRate = (rejected > 0) ? r.n / (r.n + rejected) : null;
+      // Trefferquote = Perlen / geprüfte Aktien des Sektors. Immer berechenbar (Perlen ⊆ geprüfte),
+      // auf 100% gedeckelt für den Fall unvollständiger Scan-Buchhaltung.
+      const hitRate = Math.min(1, r.n / Math.max(r.n, seenTotal));
       const relPos = perf != null ? Math.max(0.05, (perf - perfMin) / perfSpan) : 1;
-      const psi = (hitRate != null ? hitRate : anteil) / relPos;   // Ψ nutzt echte Quote oder Anteil-Näherung
+      const psi = hitRate / relPos;
       return { id: r.id, n: r.n, anteil, hitRate, psi };
     });
 
