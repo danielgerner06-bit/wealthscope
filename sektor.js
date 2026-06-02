@@ -233,13 +233,9 @@
     // damit das Ranking zum aktiven Filter passt. Sektor-Filter bewusst NICHT anwenden,
     // sonst bliebe nur ein Sektor übrig.
     const all = (Array.isArray(DATA.topStocks) ? DATA.topStocks : []).filter(passesValueFilter);
-    const counts = {}, divCounts = {};
-    all.forEach(s => {
-      counts[s.sector] = (counts[s.sector] || 0) + 1;
-      if (s.div != null && s.div > 0) divCounts[s.sector] = (divCounts[s.sector] || 0) + 1; // Dividendenperlen
-    });
+    const counts = {};
+    all.forEach(s => { counts[s.sector] = (counts[s.sector] || 0) + 1; });
     const totalN = all.length || 1;
-    const divTotal = Object.values(divCounts).reduce((a, b) => a + b, 0) || 1;
     const rows = Object.keys(counts).map(id => ({ id, n: counts[id] })).sort((a, b) => b.n - a.n);
     const max = rows.length ? rows[0].n : 1;
 
@@ -258,13 +254,13 @@
       const pct = Math.round((r.n / totalN) * 100);
       const perf = perfMap[r.id];
 
-      // Value-Score (alles dezimal): Anteil Dividendenperlen / relPos.
-      // relPos: 0 = schlechtester, 1 = bester Sektor; unten gekappt gegen /0.
-      // Hoch = viele Dividendenperlen bei schwacher Kursperformance.
-      const divShare = (divCounts[r.id] || 0) / divTotal;
+      // Value-Score (alles dezimal): Perlen-Anteil des Sektors / relPos.
+      // relPos: 0 = schlechtester, 1 = bester Sektor (nach 30T-Kurs), unten gekappt gegen /0.
+      // Hoch = viele Perlen bei schwacher Kursperformance des Sektors.
+      const share = r.n / totalN;
       const relPos = perf != null ? Math.max(0.05, (perf - perfMin) / perfSpan) : 1;
-      const score = divCounts[r.id] ? (divShare / relPos) : null;
-      const scoreTxt = score != null ? score.toFixed(2).replace('.', ',') : '–';
+      const score = (share / relPos);
+      const scoreTxt = score.toFixed(2).replace('.', ',');
 
       const row = document.createElement('button');
       row.className = 'sek-rank-row' + (sectorFilter === r.id ? ' active' : '');
