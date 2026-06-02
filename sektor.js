@@ -164,7 +164,8 @@
   const filters = { pe: null, perf6m: null, outperformPct: null, upside: null, analysts: null };
   let sectorFilter = null;   // aktiver Sektor-Filter (Klick auf Balken)
 
-  function passesFilter(s) {
+  // nur die Wert-Filter (KGV/6M/Outperform/Ziel/Analysten), OHNE Sektor-Filter
+  function passesValueFilter(s) {
     // KGV: Eingabe 0 => nur Aktien OHNE KGV (unprofitabel); sonst KGV höchstens.
     if (filters.pe != null) {
       if (filters.pe === 0) { if (s.pe != null) return false; }
@@ -175,6 +176,10 @@
     if (filters.outperformPct != null && !(s.outperformPct != null && s.outperformPct >= filters.outperformPct)) return false;
     if (filters.upside != null && !(s.upside != null && s.upside >= filters.upside)) return false;
     if (filters.analysts != null && !(s.analysts != null && s.analysts >= filters.analysts)) return false;
+    return true;
+  }
+  function passesFilter(s) {
+    if (!passesValueFilter(s)) return false;
     if (sectorFilter && s.sector !== sectorFilter) return false;
     return true;
   }
@@ -184,6 +189,8 @@
     const countEl = document.getElementById('sekStockCount');
     const all = Array.isArray(DATA.topStocks) ? DATA.topStocks.slice() : [];
     const stocks = all.filter(passesFilter).sort(cmp);
+    // Ranking-Popup mitziehen, falls offen (soll nur gefilterte Perlen zeigen)
+    if (!document.getElementById('sekRankPop').hidden) renderRankPop();
     const anyFilter = sectorFilter || Object.values(filters).some(v => v != null);
     countEl.textContent = sectorFilter
       ? sectorById(sectorFilter).name + ' · ' + stocks.length
@@ -220,7 +227,10 @@
   /* ---------- Popup: Sektoren gerankt nach Perlen-Anzahl ---------- */
   function renderRankPop() {
     const listEl = document.getElementById('sekRankList');
-    const all = Array.isArray(DATA.topStocks) ? DATA.topStocks : [];
+    // Nur die wert-gefilterten Perlen einbeziehen (KGV/6M/Outperform/Ziel/Analysten),
+    // damit das Ranking zum aktiven Filter passt. Sektor-Filter bewusst NICHT anwenden,
+    // sonst bliebe nur ein Sektor übrig.
+    const all = (Array.isArray(DATA.topStocks) ? DATA.topStocks : []).filter(passesValueFilter);
     const counts = {};
     all.forEach(s => { counts[s.sector] = (counts[s.sector] || 0) + 1; });
     const totalN = all.length || 1;
@@ -228,7 +238,7 @@
     const max = rows.length ? rows[0].n : 1;
 
     listEl.innerHTML = '';
-    if (!rows.length) { listEl.innerHTML = '<div class="sek-stocks-empty">Noch keine Perlen.</div>'; return; }
+    if (!rows.length) { listEl.innerHTML = '<div class="sek-stocks-empty">Keine Perlen im aktuellen Filter.</div>'; return; }
     rows.forEach(r => {
       const sec = sectorById(r.id);
       const pct = Math.round((r.n / totalN) * 100);

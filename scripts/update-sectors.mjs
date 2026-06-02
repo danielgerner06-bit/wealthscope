@@ -50,6 +50,16 @@ const today = () => new Date().toISOString().slice(0, 10);
   const db = {};
   for (const s of (prev?.topStocks || [])) db[s.ticker] = s;
 
+  // Einmalige Bereinigung: "Geister-Treffer" aus dem früheren breiten Finnhub-Scan
+  // entfernen — 5-stellige OTC-/Pink-Sheet-Ticker (ohne Yahoo-Daten), die via=finnhub
+  // sind und kein eigenes Yahoo-Symbol haben. Gemini-Funde (DE-Werte) bleiben unberührt.
+  let purged = 0;
+  for (const tk of Object.keys(db)) {
+    const s = db[tk];
+    if (s.via === 'finnhub' && !/^[A-Z]{1,4}$/.test(tk)) { delete db[tk]; purged++; }
+  }
+  if (purged) console.log(`Bereinigt: ${purged} OTC-Geister-Treffer entfernt.`);
+
   // Persistenter Scan-/Kandidaten-Zustand.
   const scan = prev?.scan || { universe: 0, scanned: 0, lastCursor: 0, candCursor: 0 };
   let candidates = Array.isArray(prev?.scan?.candidates) && prev.scan.candidates.length

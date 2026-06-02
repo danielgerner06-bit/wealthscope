@@ -26,11 +26,14 @@ async function fh(path, key) {
   return res.json();
 }
 
-/* ---------- Aktien-Universum (US-Common-Stocks) ---------- */
+/* ---------- Aktien-Universum (US-Common-Stocks) ----------
+   Nur "echte" handelbare Tickers: 1–4 Großbuchstaben (NYSE/Nasdaq). 5-stellige
+   OTC-/Pink-Sheet-Symbole (enden auf F/Y/Q, z. B. CHHMF) ausschließen — die haben
+   bei Yahoo keine Kursdaten und meist keine echten Analystendaten -> "Geister-Treffer". */
 async function loadUniverse(key) {
   const syms = await fh('/stock/symbol?exchange=US', key);
   return (Array.isArray(syms) ? syms : [])
-    .filter(x => x.type === 'Common Stock' && x.symbol && /^[A-Z.]{1,6}$/.test(x.symbol))
+    .filter(x => x.type === 'Common Stock' && x.symbol && /^[A-Z]{1,4}$/.test(x.symbol)) // 1–4 Buchstaben (NYSE/Nasdaq), keine 5-stelligen OTC
     .map(x => x.symbol)
     .sort();
 }
