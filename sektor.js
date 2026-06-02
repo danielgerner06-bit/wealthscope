@@ -266,13 +266,15 @@
       const relPos = perf != null ? Math.max(0.05, (perf - perfMin) / perfSpan) : 1;
       const score = (hitRate / relPos);
       const scoreTxt = score.toFixed(2).replace('.', ',');
+      // Trefferquote als %: nur echte Quote zeigen, wenn Ablehnungsdaten da sind, sonst „—“
+      const hitTxt = rejected > 0 ? Math.round(hitRate * 100) + '%' : '–';
 
       const row = document.createElement('button');
       row.className = 'sek-rank-row' + (sectorFilter === r.id ? ' active' : '');
       row.innerHTML =
-        '<span class="sek-rank-name">' + sec.name + '</span>' +
-        '<span class="sek-rank-bar"><span style="width:' + Math.round((r.n / max) * 100) + '%;background:' + sec.color + '"></span></span>' +
+        '<span class="sek-rank-name"><i class="sek-rank-dot" style="background:' + sec.color + '"></i>' + sec.name + '</span>' +
         '<span class="sek-rank-n">' + pct + '%</span>' +
+        '<span class="sek-rank-hit">' + hitTxt + '</span>' +
         '<span class="sek-rank-perfv">' + scoreTxt + '</span>';
       row.addEventListener('click', () => {
         sectorFilter = (sectorFilter === r.id) ? null : r.id;  // Klick filtert die Liste
