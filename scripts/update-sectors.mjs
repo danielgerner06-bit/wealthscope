@@ -97,14 +97,15 @@ const today = () => new Date().toISOString().slice(0, 10);
       Object.assign(scan, r.scan);
       // abgelehnte Ticker zur Sektor-Auflösung vormerken (max. 300 in der Queue)
       for (const t of (state._rejected || [])) if (!scan.pendingReject.includes(t)) scan.pendingReject.push(t);
-      if (scan.pendingReject.length > 300) scan.pendingReject = scan.pendingReject.slice(-300);
+      if (scan.pendingReject.length > 2000) scan.pendingReject = scan.pendingReject.slice(-2000);
       console.log(`Finnhub-Scan: ${scan.scanned}/${scan.universe} geprüft, ${(state._rejected || []).length} abgelehnt.`);
     } catch (e) { console.error('Finnhub-Scan fehlgeschlagen:', e.message); }
   }
 
-  /* 2a2) Sektor abgelehnter Aktien via Yahoo klären (kein Kontingent) -> Trefferquote */
+  /* 2a2) Sektor abgelehnter Aktien via Yahoo klären (kein Kontingent) -> Trefferquote.
+     Yahoo hat kein Tageslimit, daher großzügiges Budget pro Lauf. */
   if (scan.pendingReject.length) {
-    const batch = scan.pendingReject.splice(0, Number(process.env.SECTORRESOLVE_BUDGET || 30));
+    const batch = scan.pendingReject.splice(0, Number(process.env.SECTORRESOLVE_BUDGET || 150));
     let resolved = 0;
     for (const sym of batch) {
       const info = await fetchSectorOf(sym);
