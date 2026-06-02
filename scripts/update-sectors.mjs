@@ -47,6 +47,10 @@ const today = () => new Date().toISOString().slice(0, 10);
     process.exit(1);
   }
 
+  // Zeit-Konstanten früh definieren (werden in mehreren Schritten genutzt).
+  const STALE = 5 * 86400000; // 5 Tage
+  const nowMs = Date.now();
+
   // DB der Treffer (ticker -> Eintrag) aus bisherigem Stand laden.
   const db = {};
   for (const s of (prev?.topStocks || [])) db[s.ticker] = s;
@@ -179,8 +183,6 @@ const today = () => new Date().toISOString().slice(0, 10);
 
   /* 3) 6-Monats-Kursperformance je Aktie (Yahoo), rollierend nachladen --- */
   // Pro Lauf nur für Aktien ohne/alten 6M-Wert, damit es schnell bleibt.
-  const STALE = 5 * 86400000; // 5 Tage
-  const nowMs = Date.now();
   const needPerf = topStocks.filter(s => s.perf6m == null || !s.perf6mAt || (nowMs - Date.parse(s.perf6mAt)) > STALE)
     .slice(0, Number(process.env.PERF6M_BUDGET || 40));
   for (const s of needPerf) {
