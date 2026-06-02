@@ -239,17 +239,47 @@
     const rows = Object.keys(counts).map(id => ({ id, n: counts[id] })).sort((a, b) => b.n - a.n);
     const max = rows.length ? rows[0].n : 1;
 
+    // Performance-Rang je Sektor (nach 30T-Kurs) — nur über die Sektoren, die hier Perlen haben.
+    // Vergleich: liegt ein Sektor bei den Perlen besser/schlechter als bei der Kursperformance?
+    const perfMap = {};
+    (DATA.bars30 || []).forEach(b => { perfMap[b.id] = b.perf; });
+    const perfRank = {};
+    rows.map(r => r.id).sort((a, b) => (perfMap[b] ?? -999) - (perfMap[a] ?? -999))
+      .forEach((id, i) => { perfRank[id] = i; });
+
     listEl.innerHTML = '';
     if (!rows.length) { listEl.innerHTML = '<div class="sek-stocks-empty">Keine Perlen im aktuellen Filter.</div>'; return; }
-    rows.forEach(r => {
+    rows.forEach((r, pearlRank) => {
       const sec = sectorById(r.id);
       const pct = Math.round((r.n / totalN) * 100);
+      const perf = perfMap[r.id];
+      // Diskrepanz Perlen-Rang vs. Performance-Rang: >0 = Analysten optimistischer als Kurs.
+      // Pfeilstärke gestaffelt nach Größe der Abweichung (mehr Pfeile = größere Diskrepanz).
+      const diff = (perfRank[r.id] != null) ? perfRank[r.id] - pearlRank : 0;
+      const a = Math.abs(diff);
+      let arrow = '≈', dir = 'neutral', strong = '';
+      if (a >= 1) {
+        const up = diff > 0;
+        dir = up ? 'up' : 'down';
+        const ch = up ? '▲' : '▼';
+        const lvl = a >= 6 ? 3 : a >= 3 ? 2 : 1;          // 1–2 / 3–5 / ab 6 Ränge
+        arrow = ch.repeat(lvl);
+        strong = ' lvl' + lvl;
+      }
+      const cmpTitle = diff === 0 ? 'Analysten-Gunst passt zur Kursperformance'
+        : diff > 0 ? 'Analysten optimistischer als die Kursperformance (Diskrepanz ' + a + ' Ränge)'
+        : 'Kursperformance stärker als die Analysten-Gunst (Diskrepanz ' + a + ' Ränge)';
+      const cmp = '<span class="sek-rank-cmp ' + dir + strong + '" title="' + cmpTitle + '">' + arrow + '</span>';
+      const perfTxt = perf != null ? (perf > 0 ? '+' : '') + perf.toFixed(1) + '%' : '—';
+
       const row = document.createElement('button');
       row.className = 'sek-rank-row' + (sectorFilter === r.id ? ' active' : '');
+      row.title = sec.name + ': ' + pct + '% der Perlen · Sektor 30-Tage-Kurs ' + perfTxt;
       row.innerHTML =
         '<span class="sek-rank-name">' + sec.name + '</span>' +
         '<span class="sek-rank-bar"><span style="width:' + Math.round((r.n / max) * 100) + '%;background:' + sec.color + '"></span></span>' +
-        '<span class="sek-rank-n">' + pct + '%</span>';
+        '<span class="sek-rank-n">' + pct + '%</span>' +
+        '<span class="sek-rank-perf">' + cmp + '<span class="sek-rank-perfv">' + perfTxt + '</span></span>';
       row.addEventListener('click', () => {
         sectorFilter = (sectorFilter === r.id) ? null : r.id;  // Klick filtert die Liste
         renderStocks();
