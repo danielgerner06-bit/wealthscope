@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-02",
-  "updatedAt": "2026-06-02T01:16:01.808Z",
+  "updatedAt": "2026-06-02T04:41:26.524Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -576,9 +576,9 @@
   },
   "scan": {
     "universe": 18419,
-    "scanned": 3000,
-    "lastCursor": 3000,
-    "candCursor": 2,
+    "scanned": 3300,
+    "lastCursor": 3300,
+    "candCursor": 16,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -619,7 +619,7 @@
       "Framery Group Oyj",
       "Adeia Inc."
     ],
-    "noteCursor": 12,
-    "focusCursor": 6
+    "noteCursor": 2,
+    "focusCursor": 0
   }
 }
