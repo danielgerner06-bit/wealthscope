@@ -32,8 +32,12 @@ const CAND_BUDGET = Number(process.env.CAND_BUDGET || 8);     // Kandidaten je L
 // Free-Tier ist eng -> sparsam. Reihenfolge = Priorität (News zuerst).
 const GEMINI_BUDGET = Number(process.env.GEMINI_BUDGET || 10);
 let geminiUsed = 0;
-const geminiBudgetLeft = () => geminiUsed < GEMINI_BUDGET;
+let geminiDailyDead = false;   // gesetzt, sobald ein Call trotz Backoff am 429 scheitert (Tageslimit)
+const geminiBudgetLeft = () => geminiUsed < GEMINI_BUDGET && !geminiDailyDead;
 const useGemini = () => { geminiUsed++; };
+// Wenn ein Gemini-Aufruf endgültig mit 429 scheitert, ist das Tageskontingent vermutlich leer
+// -> restliche Gemini-Schritte dieses Laufs überspringen (statt je 20 min Backoff zu verbrennen).
+const noteGeminiError = e => { if (/\b429\b/.test(String(e && e.message))) geminiDailyDead = true; };
 
 function readPrev() {
   try { return JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch { return null; }
@@ -85,7 +89,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   if (GEMINI_KEY && geminiBudgetLeft()) {
     useGemini();
     try { news = await buildNews(GEMINI_KEY); console.log(`News: ${news.items.length} Schlagzeilen.`); }
-    catch (e) { console.error('News fehlgeschlagen, behalte alte:', e.message); }
+    catch (e) { noteGeminiError(e); console.error('News fehlgeschlagen, behalte alte:', e.message); }
   }
 
   /* 2a) Finnhub-Analysten-Scan (US, rollierend) ---------------------- */
@@ -142,7 +146,7 @@ const today = () => new Date().toISOString().slice(0, 10);
         if (f.name && !candidates.includes(f.name)) candidates.push(f.name);
       }
       console.log(`Gemini-Discovery (${focus}): ${found.length} Vorschläge, ${added} neu.`);
-    } catch (e) { console.error('Discovery fehlgeschlagen:', e.message); }
+    } catch (e) { noteGeminiError(e); console.error('Discovery fehlgeschlagen:', e.message); }
   }
 
   /* 2b) Gemini: Kandidaten prüfen (rollierend) ---------------------- */
@@ -157,7 +161,7 @@ const today = () => new Date().toISOString().slice(0, 10);
       const hits = await checkCandidates(GEMINI_KEY, slice);
       for (const h of hits) db[h.ticker] = { ...db[h.ticker], ...h };
       console.log(`Gemini-Kandidaten: ${slice.length} geprüft, ${hits.length} Treffer.`);
-    } catch (e) { console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
+    } catch (e) { noteGeminiError(e); console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
   }
 
   /* 2b2) Bestehende Gemini-Perlen RE-VALIDIEREN — nur 1× pro WOCHE je Perle.
@@ -187,7 +191,7 @@ const today = () => new Date().toISOString().slice(0, 10);
           else db[b.ticker].miss = m;
         }
         console.log(`Re-Validierung: ${due.length} fällige geprüft, ${dropped} entfernt.`);
-      } catch (e) { console.error('Re-Validierung fehlgeschlagen:', e.message); }
+      } catch (e) { noteGeminiError(e); console.error('Re-Validierung fehlgeschlagen:', e.message); }
     } else {
       console.log('Re-Validierung: keine Perle fällig (alle <7 Tage geprüft).');
     }
@@ -268,7 +272,7 @@ const today = () => new Date().toISOString().slice(0, 10);
         const fresh = await buildNotes(GEMINI_KEY, [id], bars30, topStocks, 'Sektor');
         sectorNotes = { ...sectorNotes, ...fresh };
         console.log(`Sektor-Lage: ${Object.keys(fresh).length}/1 (${id}).`);
-      } catch (e) { console.error('Sektor-Lage fehlgeschlagen:', e.message); }
+      } catch (e) { noteGeminiError(e); console.error('Sektor-Lage fehlgeschlagen:', e.message); }
     }
     if (geminiBudgetLeft()) {
       useGemini(); any = true;
@@ -279,7 +283,7 @@ const today = () => new Date().toISOString().slice(0, 10);
         const rfresh = await buildNotes(GEMINI_KEY, [rid], bars30Region, topStocks, 'Region');
         regionNotes = { ...regionNotes, ...rfresh };
         console.log(`Region-Lage: ${Object.keys(rfresh).length}/1 (${rid}).`);
-      } catch (e) { console.error('Region-Lage fehlgeschlagen:', e.message); }
+      } catch (e) { noteGeminiError(e); console.error('Region-Lage fehlgeschlagen:', e.message); }
     }
     if (any) scan.notesDay = todayStr;   // heute erledigt -> spätere Läufe überspringen
   }
@@ -300,7 +304,7 @@ const today = () => new Date().toISOString().slice(0, 10);
     if (GEMINI_KEY && geminiBudgetLeft() && hist.kiDay !== today() && findings.factors.length) {
       useGemini();
       try { hist.kiAnalysis = await buildFactorInsight(GEMINI_KEY, findings); hist.kiDay = today(); console.log('Faktor-KI-Analyse aktualisiert.'); }
-      catch (e) { console.error('Faktor-KI fehlgeschlagen:', e.message); }
+      catch (e) { noteGeminiError(e); console.error('Faktor-KI fehlgeschlagen:', e.message); }
     }
     saveHistory(hist);
   } catch (e) { console.error('Historie fehlgeschlagen:', e.message); }

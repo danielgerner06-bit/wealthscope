@@ -19,22 +19,28 @@ const qualifies = r => isFinite(r.buyPct) && r.buyPct >= MIN_BUY_PCT;
 
 async function groundedJSON(key, prompt) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${key}`;
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      tools: [{ google_search: {} }],
-      generationConfig: { temperature: 0.3 },
-    }),
+  const body = JSON.stringify({
+    contents: [{ parts: [{ text: prompt }] }],
+    tools: [{ google_search: {} }],
+    generationConfig: { temperature: 0.3 },
   });
-  if (!res.ok) throw new Error('Gemini HTTP ' + res.status + ': ' + (await res.text()).slice(0, 250));
-  const j = await res.json();
-  const cand = j.candidates?.[0];
-  const text = cand?.content?.parts?.map(p => p.text).filter(Boolean).join('').trim() || '';
-  const sources = (cand?.groundingMetadata?.groundingChunks || [])
-    .map(c => c.web?.title || c.web?.uri).filter(Boolean);
-  return { text, sources };
+  let lastErr = '';
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body });
+    if (res.status === 429) {                        // RPM-Grounding-Limit -> warten & erneut versuchen
+      lastErr = 'Gemini HTTP 429';
+      await new Promise(r => setTimeout(r, 20000 * (attempt + 1)));   // 20s, 40s, 60s, 80s
+      continue;
+    }
+    if (!res.ok) throw new Error('Gemini HTTP ' + res.status + ': ' + (await res.text()).slice(0, 250));
+    const j = await res.json();
+    const cand = j.candidates?.[0];
+    const text = cand?.content?.parts?.map(p => p.text).filter(Boolean).join('').trim() || '';
+    const sources = (cand?.groundingMetadata?.groundingChunks || [])
+      .map(c => c.web?.title || c.web?.uri).filter(Boolean);
+    return { text, sources };
+  }
+  throw new Error(lastErr);
 }
 
 // Extrahiert das erste JSON-Array/-Objekt aus einem Text (Grounding erlaubt kein responseMimeType=json).

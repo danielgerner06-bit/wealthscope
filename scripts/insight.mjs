@@ -13,9 +13,14 @@ async function gen(key, prompt, useSearch = false) {
   if (useSearch) payload.tools = [{ google_search: {} }];
   const body = JSON.stringify(payload);
   let lastErr = '';
-  for (let attempt = 0; attempt < 3; attempt++) {   // flash-lite liefert sporadisch leer -> mehr Versuche
+  for (let attempt = 0; attempt < 5; attempt++) {   // flash-lite liefert sporadisch leer; 429 = RPM-Limit -> Backoff
     const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body });
-    if (!res.ok) { lastErr = 'HTTP ' + res.status; if (res.status === 429) break; continue; }
+    if (res.status === 429) {                        // Minutenlimit -> warten & erneut (statt aufgeben)
+      lastErr = 'HTTP 429';
+      await new Promise(r => setTimeout(r, 20000 * (attempt + 1)));   // 20s, 40s, 60s, 80s
+      continue;
+    }
+    if (!res.ok) { lastErr = 'HTTP ' + res.status; continue; }
     const j = await res.json();
     const cand = j?.candidates?.[0];
     const text = cand?.content?.parts?.map(p => p.text).filter(Boolean).join('').trim();
