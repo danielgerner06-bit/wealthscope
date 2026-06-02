@@ -563,6 +563,7 @@
           <input type="text" inputmode="numeric" id="fltOutperf" placeholder="Outp ≥%" aria-label="Outperform minimal in Prozent">
           <input type="text" inputmode="numeric" id="fltUpside" placeholder="Ziel ≥%" aria-label="Analystenziel-Potenzial minimal in Prozent">
           <input type="text" inputmode="numeric" id="fltAnalysts" placeholder="Analyst ≥" aria-label="Anzahl Analysten minimal">
+          <input type="text" inputmode="numeric" id="fltDiv" placeholder="Div ≥%" aria-label="Dividendenrendite minimal in Prozent">
           <button class="sek-filter-clear" id="fltClear" type="button" title="Filter zurücksetzen" aria-label="Filter zurücksetzen">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v5M14 11v5"/></svg>
           </button>
@@ -571,9 +572,10 @@
           <span class="sek-sort-label">Sort.</span>
           <button data-key="upside" class="active desc">Ziel</button>
           <button data-key="perf6m">6M</button>
-          <button data-key="outperformPct">Outperf.</button>
+          <button data-key="outperformPct">Outp.</button>
           <button data-key="pe">KGV</button>
-          <button data-key="analysts">Analysten</button>
+          <button data-key="div">Div.</button>
+          <button data-key="analysts">Analyst.</button>
         </div>
         <div class="sek-stocks-list" id="sekStockList"></div>
       </section>

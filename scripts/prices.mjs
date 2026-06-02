@@ -80,12 +80,16 @@ export async function enrichStock(symbol) {
     pe = (pe != null && isFinite(pe) && pe > 0 && pe <= 500) ? +pe.toFixed(1) : null;  // Verlust/absurd -> kein KGV
     const eps = ks.trailingEps?.raw ?? null;
     const analysts = fd.numberOfAnalystOpinions?.raw ?? null;
+    // Dividendenrendite in % (Yahoo liefert Dezimal, z. B. 0.0258 -> 2.58)
+    let divYield = sd.dividendYield?.raw ?? sd.trailingAnnualDividendYield?.raw ?? null;
+    divYield = (divYield != null && isFinite(divYield) && divYield >= 0 && divYield < 1) ? +(divYield * 100).toFixed(2) : null;
     return {
       price, target,
       // Kursziel-Potenzial plausibel begrenzen (extreme Werte = oft Datenfehler/Penny-Stocks)
       upside: (upside != null && upside >= -60 && upside <= 100) ? upside : null,
       pe, eps: (eps != null && isFinite(eps)) ? +eps.toFixed(2) : null,
       analysts: analysts || null,
+      divYield,
     };
   } catch {
     return null;

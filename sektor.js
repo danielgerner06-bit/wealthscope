@@ -161,7 +161,7 @@
   };
 
   /* ---------- Analysten-Perlen mit Filter + Sortierung ---------- */
-  const filters = { pe: null, perf6m: null, outperformPct: null, upside: null, analysts: null };
+  const filters = { pe: null, perf6m: null, outperformPct: null, upside: null, analysts: null, div: null };
   let sectorFilter = null;   // aktiver Sektor-Filter (Klick auf Balken)
 
   // nur die Wert-Filter (KGV/6M/Outperform/Ziel/Analysten), OHNE Sektor-Filter
@@ -176,6 +176,7 @@
     if (filters.outperformPct != null && !(s.outperformPct != null && s.outperformPct >= filters.outperformPct)) return false;
     if (filters.upside != null && !(s.upside != null && s.upside >= filters.upside)) return false;
     if (filters.analysts != null && !(s.analysts != null && s.analysts >= filters.analysts)) return false;
+    if (filters.div != null && !(s.div != null && s.div >= filters.div)) return false;
     return true;
   }
   function passesFilter(s) {
@@ -213,6 +214,7 @@
       if (st.buyPct != null) meta.push('Kauf ' + st.buyPct + '%');
       if (st.outperformPct != null) meta.push('Outp. ' + st.outperformPct + '%');
       if (st.analysts != null) meta.push(st.analysts + ' Analyst' + (st.analysts === 1 ? '' : 'en'));
+      if (st.div != null && st.div > 0) meta.push('Div ' + st.div + '%');
       row.innerHTML =
         '<span class="sek-stock-dot" style="background:' + sec.color + '"></span>' +
         '<div class="sek-stock-main">' +
@@ -280,6 +282,7 @@
     else if (sortKey === 'outperformPct') { v = st.outperformPct; label = v != null ? v + '%' : '—'; }
     else if (sortKey === 'analysts') { v = st.analysts; label = v != null ? v + ' An.' : '—'; }
     else if (sortKey === 'pe') { v = st.pe; label = v != null ? 'KGV ' + v : 'KGV —'; }
+    else if (sortKey === 'div') { v = st.div; label = v != null ? v + '% Div' : '— Div'; }
     else { v = st.upside; label = v != null ? '+' + Math.round(v) + '%' : '—'; cls += ' up'; }
     return '<span class="' + cls + '">' + label + '</span>';
   }
@@ -312,7 +315,7 @@
   }
 
   function wireFilter() {
-    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltOutperf: 'outperformPct', fltUpside: 'upside', fltAnalysts: 'analysts' };
+    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltOutperf: 'outperformPct', fltUpside: 'upside', fltAnalysts: 'analysts', fltDiv: 'div' };
     Object.keys(map).forEach(id => {
       document.getElementById(id).addEventListener('input', e => {
         // erlaubt negative Werte und Komma; ungültige Eingabe -> kein Filter
@@ -324,7 +327,7 @@
     });
     document.getElementById('fltClear').addEventListener('click', () => {
       Object.keys(map).forEach(id => { document.getElementById(id).value = ''; });
-      filters.pe = filters.perf6m = filters.outperformPct = filters.upside = filters.analysts = null;
+      filters.pe = filters.perf6m = filters.outperformPct = filters.upside = filters.analysts = filters.div = null;
       sectorFilter = null;
       renderStocks();
     });
