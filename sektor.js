@@ -247,6 +247,9 @@
     const perfMax = perfs.length ? Math.max(...perfs) : 1;
     const perfSpan = (perfMax - perfMin) || 1;
 
+    // Abgelehnte Aktien je Sektor (aus dem Scan) -> echte Trefferquote, unabhängig von Sektorgröße
+    const seen = (DATA.scan && DATA.scan.seenBySector) || {};
+
     listEl.innerHTML = '';
     if (!rows.length) { listEl.innerHTML = '<div class="sek-stocks-empty">Keine Perlen im aktuellen Filter.</div>'; return; }
     rows.forEach(r => {
@@ -254,12 +257,14 @@
       const pct = Math.round((r.n / totalN) * 100);
       const perf = perfMap[r.id];
 
-      // Value-Score (alles dezimal): Perlen-Anteil des Sektors / relPos.
-      // relPos: 0 = schlechtester, 1 = bester Sektor (nach 30T-Kurs), unten gekappt gegen /0.
-      // Hoch = viele Perlen bei schwacher Kursperformance des Sektors.
-      const share = r.n / totalN;
+      // Ψ = Trefferquote / relPos, alles dezimal.
+      // Trefferquote = Perlen / (Perlen + abgelehnte Aktien des Sektors) — so zählt die QUALITÄT
+      // (welcher Anteil der geprüften Aktien war gut), nicht die Sektorgröße. Fehlen noch
+      // Ablehnungsdaten, dient der Perlen-Anteil als Näherung.
+      const rejected = seen[r.id] || 0;
+      const hitRate = (rejected > 0) ? r.n / (r.n + rejected) : (r.n / totalN);
       const relPos = perf != null ? Math.max(0.05, (perf - perfMin) / perfSpan) : 1;
-      const score = (share / relPos);
+      const score = (hitRate / relPos);
       const scoreTxt = score.toFixed(2).replace('.', ',');
 
       const row = document.createElement('button');

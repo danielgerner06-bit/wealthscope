@@ -61,6 +61,21 @@ async function ensureCrumb() {
   else throw new Error('kein Yahoo-Crumb');
 }
 
+// Nur der Yahoo-Sektor/-Branche einer Aktie (für Trefferquoten-Zählung; kein Kontingent).
+export async function fetchSectorOf(symbol) {
+  try {
+    await ensureCrumb();
+    const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(symbol)}`
+      + `?modules=assetProfile&crumb=${encodeURIComponent(_crumb)}`;
+    const res = await fetch(url, { headers: { 'User-Agent': UA, 'Cookie': _cookie } });
+    if (res.status === 401 || res.status === 403) { _crumb = null; return null; }
+    if (!res.ok) return null;
+    const a = (await res.json())?.quoteSummary?.result?.[0]?.assetProfile;
+    if (!a) return null;
+    return { sector: a.sector || null, industry: a.industry || null };
+  } catch { return null; }
+}
+
 // Liefert { price, target, upside, pe, eps, analysts } für ein Symbol (oder Teilwerte/null).
 export async function enrichStock(symbol) {
   try {

@@ -53,6 +53,7 @@ export async function scanAnalystStocks(key, state, budget) {
   let cursor = state.scan.lastCursor % (n || 1);
 
   const checked = [];
+  const rejected = [];   // Ticker, die Analysten haben aber das Kriterium NICHT erfüllen
   let used = 0;
   while (used < budget && used < n) {
     const sym = universe[cursor];
@@ -69,12 +70,14 @@ export async function scanAnalystStocks(key, state, budget) {
           if (buyPct >= MIN_BUY_PCT) {
             checked.push({ ticker: sym, buyPct, outperformPct, analysts: total });
           } else {
-            delete state.db[sym]; // war evtl. mal Treffer -> jetzt nicht mehr
+            rejected.push(sym);          // geprüft, aber abgelehnt -> für Trefferquote
+            delete state.db[sym];        // war evtl. mal Treffer -> jetzt nicht mehr
           }
         }
       }
     } catch { /* einzelne Symbole überspringen */ }
   }
+  state._rejected = rejected;   // dem Aufrufer mitgeben
 
   // Treffer mit Profil (Name, Sektor) und Kursziel anreichern.
   for (const hit of checked) {

@@ -12,10 +12,10 @@
 // Robust: fehlende Keys / Fehler lassen den jeweils alten Stand erhalten.
 
 import fs from 'node:fs';
-import { SECTORS, REGIONS } from './sectors.mjs';
+import { SECTORS, REGIONS, sectorForFinnhub } from './sectors.mjs';
 import { buildNotes, buildNews } from './insight.mjs';
 import { scanAnalystStocks } from './finnhub.mjs';
-import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock } from './prices.mjs';
+import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock, fetchSectorOf } from './prices.mjs';
 import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
@@ -88,12 +88,31 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
 
   /* 2a) Finnhub-Analysten-Scan (US, rollierend) ---------------------- */
+  scan.seenBySector = scan.seenBySector || {};   // geprüfte Aktien je Sektor (für Trefferquote)
+  scan.pendingReject = scan.pendingReject || []; // abgelehnte Ticker, deren Sektor noch via Yahoo zu klären ist
   if (FINNHUB_KEY) {
     try {
-      const r = await scanAnalystStocks(FINNHUB_KEY, { scan, db }, SCAN_BUDGET);
+      const state = { scan, db };
+      const r = await scanAnalystStocks(FINNHUB_KEY, state, SCAN_BUDGET);
       Object.assign(scan, r.scan);
-      console.log(`Finnhub-Scan: ${scan.scanned}/${scan.universe} geprüft.`);
+      // abgelehnte Ticker zur Sektor-Auflösung vormerken (max. 300 in der Queue)
+      for (const t of (state._rejected || [])) if (!scan.pendingReject.includes(t)) scan.pendingReject.push(t);
+      if (scan.pendingReject.length > 300) scan.pendingReject = scan.pendingReject.slice(-300);
+      console.log(`Finnhub-Scan: ${scan.scanned}/${scan.universe} geprüft, ${(state._rejected || []).length} abgelehnt.`);
     } catch (e) { console.error('Finnhub-Scan fehlgeschlagen:', e.message); }
+  }
+
+  /* 2a2) Sektor abgelehnter Aktien via Yahoo klären (kein Kontingent) -> Trefferquote */
+  if (scan.pendingReject.length) {
+    const batch = scan.pendingReject.splice(0, Number(process.env.SECTORRESOLVE_BUDGET || 30));
+    let resolved = 0;
+    for (const sym of batch) {
+      const info = await fetchSectorOf(sym);
+      const sid = info ? sectorForFinnhub(info.industry || info.sector) : null;
+      if (sid) { scan.seenBySector[sid] = (scan.seenBySector[sid] || 0) + 1; resolved++; }
+      // ohne klaren Sektor: verwerfen (nicht zurück in die Queue, sonst Endlosschleife)
+    }
+    if (batch.length) console.log(`Sektor-Auflösung: ${resolved}/${batch.length} abgelehnte Aktien zugeordnet.`);
   }
 
   /* 2c) Gemini: neue unbekannte Werte entdecken (1 Fokus/Lauf, rotierend) -- */
