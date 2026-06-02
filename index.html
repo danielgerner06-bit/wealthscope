@@ -532,7 +532,6 @@
         <div class="sek-card-head">
           <div>
             <h2 id="sekBarsTitle">Sektor-Performance · 30 Tage</h2>
-            <p class="sek-card-sub" id="sekBarsSub">Gerankt nach 30-Tage-Kurs. Klick auf einen Namen zeigt die aktuelle Lage.</p>
           </div>
           <div class="sek-bars-toggle" id="sekViewToggle" role="tablist" aria-label="Ansicht">
             <button data-view="sectors" class="active">Sektoren</button>
@@ -645,7 +644,7 @@
               <option value="analysts">Analysten</option>
             </select>
           </label>
-          <span class="ana-axis-hint">alle Zeitfenster als Linien</span>
+          <span class="ana-axis-hint">Filter &amp; Monat gelten auch hier</span>
         </div>
         <div class="ana-filters" id="anaFilters">
           <label>Sektor<select id="afSector"><option value="">alle</option></select></label>
@@ -676,8 +675,8 @@
         <section class="sek-card ana-factors-card">
           <div class="sek-card-head">
             <h2>Wichtigste Faktoren</h2>
-            <label class="ana-month-pick">Zeitraum
-              <select id="anaFactorMonth"><option value="0">neuester</option></select>
+            <label class="ana-month-pick">Monat
+              <select id="anaFactorMonth"><option value="1">1 Monat</option></select>
             </label>
           </div>
           <div class="ana-factors" id="anaFactors"></div>

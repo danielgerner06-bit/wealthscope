@@ -478,9 +478,6 @@
     const isReg = view === 'regions';
     document.getElementById('sekBarsTitle').textContent =
       (isReg ? 'Regionen-Performance' : 'Sektor-Performance') + ' · 30 Tage';
-    document.getElementById('sekBarsSub').textContent = isReg
-      ? 'Weltregionen gerankt nach 30-Tage-Kurs. Klick auf einen Namen zeigt die Lage.'
-      : 'Klick auf einen Namen zeigt die Lage, Klick auf einen Balken filtert die Perlen.';
   }
   function wireViewToggle() {
     document.getElementById('sekViewToggle').addEventListener('click', e => {

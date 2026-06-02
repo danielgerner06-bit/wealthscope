@@ -3,9 +3,9 @@
   let HIST = null, SECT = null, REG = null, chart = null;
   let view = 'bars';                 // 'bars' | 'line'
   let xFactor = 'pe';
-  let factorMonth = 0;               // 0 = neuester Monat (lastPerf), sonst Monat m -> perf[m-1]
-  // Performance-Funktion für die Faktor-Wichtigkeit je nach gewähltem Zeitraum
-  const perfForMonth = s => factorMonth === 0 ? lastPerf(s) : ((s.perf || [])[factorMonth - 1] ?? null);
+  let factorMonth = 1;               // gewählter Monat m -> perf[m-1] (Performance seit Aufnahme)
+  // Performance-Funktion für Faktor-Kurve & -Wichtigkeit beim gewählten Monat
+  const perfForMonth = s => (s.perf || [])[factorMonth - 1] ?? null;
   // jüngster vorhandener Monatswert einer Aktie (kumulierte Performance seit Aufnahme)
   const lastPerf = s => { const p = s.perf; if (!Array.isArray(p)) return null; for (let i = p.length - 1; i >= 0; i--) if (p[i] != null) return p[i]; return null; };
   // wie viele Monate hat diese Aktie schon? (Anzahl gemessener Punkte)
@@ -30,6 +30,12 @@
   const secName = id => (SECT.find(s => s.id === id) || {}).name || id;
   const regName = id => (REG.find(s => s.id === id) || {}).name || id;
   const avg = arr => arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : null;
+  // Median (robust gegen Ausreißer) — für die Bin-Mittelung der Faktor-Kurve.
+  const median = arr => {
+    if (!arr.length) return null;
+    const s = [...arr].sort((a, b) => a - b), m = s.length >> 1;
+    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  };
   const flabel = key => (FACTORS.find(f => f.key === key) || {}).label || key;
 
   /* ---------- Filter ---------- */
@@ -68,7 +74,9 @@
     bins.forEach(arr => {
       if (!arr.length) return;
       const cx = avg(arr.map(p => p.x));
-      const cy = avg(arr.map(p => p.y));
+      // Y robust mitteln: Median statt arithm. Mittel, damit einzelne Ausreißer-Aktien
+      // (eine extrem gut/schlecht laufende Perle) den Bin-Wert nicht verzerren.
+      const cy = median(arr.map(p => p.y));
       curve.push({ x: +cx.toFixed(2), y: +cy.toFixed(2), n: arr.length });
     });
     if (curve.length < 2) return { points: curve, slope: 0, n: pts.length };
@@ -96,8 +104,8 @@
 
     if (view === 'line') {
       document.getElementById('anaTitle').innerHTML = 'Performance über ' + flabel(xFactor);
-      // Im Linien-Modus KEINE Filter (alle Aktien); x = Faktor, y = Performance seit Aufnahme (jüngster Monat)
-      const { points, slope, n } = factorCurve(HIST, xFactor, lastPerf);
+      // Linien-Modus: x = Faktor, y = Performance im gewählten Monat; Filter gelten auch hier.
+      const { points, slope, n } = factorCurve(matched, xFactor, perfForMonth);
       chart = new Chart(ctx, {
         type: 'line',
         data: { datasets: [{
@@ -117,7 +125,7 @@
         },
         plugins: [zeroLine],
       });
-      document.getElementById('anaMatch').textContent = HIST.length + ' Aktien · '
+      document.getElementById('anaMatch').textContent = matched.length + ' Aktien · '
         + (n >= 4 ? 'Wirkung ' + flabel(xFactor) + ': ' + (slope > 6 ? 'stark' : slope > 2.5 ? 'mittel' : 'gering') + ' (Δ ' + slope + '%)' : 'zu wenige Datenpunkte für die Kurve');
     } else {
       // Balken: Ø kumulierte Performance je Monat seit Aufnahme (Monat 1..max vorhanden)
@@ -199,20 +207,21 @@
     });
   }
 
-  // Zeitraum-Auswahl der Faktor-Wichtigkeit an die real vorhandenen Monate anpassen.
+  // Monats-Auswahl (für Faktor-Kurve & -Wichtigkeit) an die real vorhandenen Monate anpassen.
+  // Nur konkrete Monatszahlen (1..maxM), KEIN "neuester" — die Auswahl ist immer eindeutig.
   function syncMonthOptions() {
     const sel = document.getElementById('anaFactorMonth');
     if (!sel) return;
-    const maxM = Math.max(0, ...HIST.map(monthsOf));
-    if (sel.options.length === maxM + 1) return;   // schon korrekt befüllt
+    const maxM = Math.max(1, ...HIST.map(monthsOf));
+    if (sel.options.length === maxM) return;       // schon korrekt befüllt
     const cur = factorMonth;
-    sel.innerHTML = '<option value="0">neuester</option>';
+    sel.innerHTML = '';
     for (let m = 1; m <= maxM; m++) {
       const o = document.createElement('option'); o.value = String(m); o.textContent = m + ' Monat' + (m === 1 ? '' : 'e');
       sel.appendChild(o);
     }
-    sel.value = String(cur <= maxM ? cur : 0);
-    if (cur > maxM) factorMonth = 0;
+    factorMonth = (cur >= 1 && cur <= maxM) ? cur : 1;
+    sel.value = String(factorMonth);
   }
 
   /* ---------- KI-Analyse (3 beste Kombis) ---------- */
@@ -275,17 +284,16 @@
       resetPeRange();
       render();
     });
-    // Diagramm-Toggle: Linien-Modus blendet Filter aus (gilt für alle Aktien), zeigt X-Achsen-Wahl
+    // Diagramm-Toggle: Linien-Modus zeigt zusätzlich die X-Achsen-Wahl; Filter bleiben in BEIDEN Modi.
     document.getElementById('anaViewToggle').addEventListener('click', e => {
       const btn = e.target.closest('button[data-view]'); if (!btn || btn.dataset.view === view) return;
       view = btn.dataset.view;
       document.querySelectorAll('#anaViewToggle button').forEach(b => b.classList.toggle('active', b === btn));
       document.getElementById('anaAxis').hidden = (view !== 'line');
-      document.getElementById('anaFilters').hidden = (view === 'line');
       render();
     });
     document.getElementById('anaXFactor').addEventListener('change', e => { xFactor = e.target.value; render(); });
-    document.getElementById('anaFactorMonth').addEventListener('change', e => { factorMonth = parseInt(e.target.value, 10) || 0; renderFactors(); });
+    document.getElementById('anaFactorMonth').addEventListener('change', e => { factorMonth = parseInt(e.target.value, 10) || 1; render(); });
   }
 
   window.initAnalyse = async function () {
