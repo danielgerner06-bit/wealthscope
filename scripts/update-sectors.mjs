@@ -16,7 +16,7 @@ import { SECTORS, REGIONS, sectorForFinnhub } from './sectors.mjs';
 import { buildNotes, buildNews, buildFactorInsight } from './insight.mjs';
 import { scanAnalystStocks } from './finnhub.mjs';
 import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock, fetchSectorOf } from './prices.mjs';
-import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
+import { checkCandidates, discoverNew, MIN_BUY_PCT } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
 import { loadHistory, saveHistory, snapshotStocks, measureMilestones, seedBacktest1m, pruneHistory, computeFindings } from './history.mjs';
@@ -70,11 +70,29 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
   if (purged) console.log(`Bereinigt: ${purged} OTC-Geister-Treffer entfernt.`);
 
+  // Kriteriums-Bereinigung: bereits aufgenommene Treffer, die das aktuelle Kauf-%-Kriterium
+  // nicht mehr erfüllen, sofort entfernen (nicht erst beim nächsten Scan ihres Symbols).
+  // buyPct == null (noch nicht bewertet) bleibt drin, damit nichts vorschnell fliegt.
+  let belowCut = 0;
+  for (const tk of Object.keys(db)) {
+    const bp = db[tk].buyPct;
+    if (bp != null && bp < MIN_BUY_PCT) { delete db[tk]; belowCut++; }
+  }
+  if (belowCut) console.log(`Bereinigt: ${belowCut} Treffer unter ${MIN_BUY_PCT}% Kauf entfernt.`);
+
   // Persistenter Scan-/Kandidaten-Zustand.
   const scan = prev?.scan || { universe: 0, scanned: 0, lastCursor: 0, candCursor: 0 };
   let candidates = Array.isArray(prev?.scan?.candidates) && prev.scan.candidates.length
     ? prev.scan.candidates.slice()
     : SEED_CANDIDATES.slice();
+
+  // Takt-Trennung: Yahoo-Daten (Kurse/Performance, kein Limit) laufen JEDEN Lauf (stündlich).
+  // Die limitierten Quellen Gemini + Finnhub nur, wenn seit dem letzten "schweren" Lauf
+  // >= HEAVY_GAP_H Stunden vergangen sind (Default 6h). Spart das Gemini-Free-Tier-Kontingent.
+  const HEAVY_GAP_MS = Number(process.env.HEAVY_GAP_H || 6) * 3600000 - 5 * 60000; // 5 min Toleranz für Cron-Jitter
+  const heavyDue = !scan.heavyAt || (nowMs - Date.parse(scan.heavyAt)) >= HEAVY_GAP_MS;
+  console.log(heavyDue ? 'Lauf-Typ: VOLL (Yahoo + Gemini + Finnhub).' : 'Lauf-Typ: leicht (nur Yahoo-Kurse/Performance).');
+  if (heavyDue) scan.heavyAt = new Date(nowMs).toISOString();   // Zeitstempel für die 6h-Taktung
 
   /* 1) Sektor- & Regions-Performance (30T + 360T-Schnitt + 6M) via Yahoo (kein Key) -- */
   let bars30 = prev?.bars30 || [];
@@ -86,7 +104,7 @@ const today = () => new Date().toISOString().slice(0, 10);
 
   /* 1b) Markt-News ZUERST (höchste Priorität im Gemini-Budget) */
   let news = prev?.news || null;
-  if (GEMINI_KEY && geminiBudgetLeft()) {
+  if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
     useGemini();
     try { news = await buildNews(GEMINI_KEY); console.log(`News: ${news.items.length} Schlagzeilen.`); }
     catch (e) { noteGeminiError(e); console.error('News fehlgeschlagen, behalte alte:', e.message); }
@@ -95,7 +113,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   /* 2a) Finnhub-Analysten-Scan (US, rollierend) ---------------------- */
   scan.seenBySector = scan.seenBySector || {};   // geprüfte Aktien je Sektor (für Trefferquote)
   scan.pendingReject = scan.pendingReject || []; // abgelehnte Ticker, deren Sektor noch via Yahoo zu klären ist
-  if (FINNHUB_KEY) {
+  if (FINNHUB_KEY && heavyDue) {
     try {
       const state = { scan, db };
       const r = await scanAnalystStocks(FINNHUB_KEY, state, SCAN_BUDGET);
@@ -132,7 +150,7 @@ const today = () => new Date().toISOString().slice(0, 10);
     'Industrie, Energie und Rohstoffe weltweit',
     'Finanzwerte und Versorger weltweit',
   ];
-  if (GEMINI_KEY && geminiBudgetLeft()) {
+  if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
     useGemini();
     const focus = FOCI[(scan.focusCursor || 0) % FOCI.length];
     scan.focusCursor = ((scan.focusCursor || 0) + 1) % FOCI.length;
@@ -150,7 +168,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
 
   /* 2b) Gemini: Kandidaten prüfen (rollierend) ---------------------- */
-  if (GEMINI_KEY && geminiBudgetLeft()) {
+  if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
     useGemini();
     try {
       const n = candidates.length;
@@ -168,7 +186,7 @@ const today = () => new Date().toISOString().slice(0, 10);
      Analysten-Kaufempfehlungen ändern sich langsam; häufiger zu prüfen wäre
      verschwendetes Kontingent. Nur Perlen ohne/mit >7 Tage altem recheckAt. */
   const RECHECK_AGE = 7 * 86400000;
-  if (GEMINI_KEY && geminiBudgetLeft()) {
+  if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
     const due = Object.values(db)
       .filter(s => s.via && s.via.startsWith('gemini'))
       .filter(s => !s.recheckAt || (nowMs - Date.parse(s.recheckAt)) > RECHECK_AGE)
@@ -261,7 +279,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
   const todayStr = today();
   const notesDoneToday = scan.notesDay === todayStr;
-  if (GEMINI_KEY && !notesDoneToday) {
+  if (GEMINI_KEY && heavyDue && !notesDoneToday) {
     let any = false;
     if (geminiBudgetLeft()) {
       useGemini(); any = true;
@@ -301,7 +319,7 @@ const today = () => new Date().toISOString().slice(0, 10);
     // KI-Analyse der stärksten Faktoren — 1× pro Tag (Budget-schonend)
     const findings = computeFindings(hist);
     hist.findings = findings;
-    if (GEMINI_KEY && geminiBudgetLeft() && hist.kiDay !== today() && findings.factors.length) {
+    if (GEMINI_KEY && heavyDue && geminiBudgetLeft() && hist.kiDay !== today() && findings.factors.length) {
       useGemini();
       try { hist.kiAnalysis = await buildFactorInsight(GEMINI_KEY, findings); hist.kiDay = today(); console.log('Faktor-KI-Analyse aktualisiert.'); }
       catch (e) { noteGeminiError(e); console.error('Faktor-KI fehlgeschlagen:', e.message); }

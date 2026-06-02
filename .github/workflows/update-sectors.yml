@@ -2,7 +2,8 @@ name: Sektordaten aktualisieren
 
 on:
   schedule:
-    - cron: '0 */6 * * *'   # alle 6 Stunden (4x/Tag) — schont das Gemini-Free-Tier-Limit
+    - cron: '0 * * * *'     # stündlich: Yahoo-Kurse/Performance jeden Lauf;
+                            # Gemini + Finnhub nur alle ~6h (Gating per scan.heavyAt im Skript)
   workflow_dispatch:         # manueller Start möglich
 
 permissions:
