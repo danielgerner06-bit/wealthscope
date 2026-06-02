@@ -33,5 +33,10 @@ jobs:
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add sectordata.json
             git commit -m "Sektordaten aktualisiert ($(date -u +%Y-%m-%d))"
-            git push
+            # bis zu 3 Versuche: bei parallelem Push (z. B. manueller Commit) erst rebasen
+            for i in 1 2 3; do
+              if git push; then break; fi
+              echo "Push abgelehnt – rebase und erneut versuchen ($i)…"
+              git pull --rebase -X ours origin main || git rebase --abort
+            done
           fi
