@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-02",
-  "updatedAt": "2026-06-02T12:36:44.875Z",
+  "updatedAt": "2026-06-02T13:29:50.250Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -817,11 +817,11 @@
     },
     {
       "ticker": "NVDA",
-      "name": "NVIDIA",
+      "name": "NVIDIA Corp",
       "sector": "ai_semi",
-      "buyPct": 97,
-      "outperformPct": 88,
-      "analysts": 58,
+      "buyPct": 93,
+      "outperformPct": 35,
+      "analysts": 68,
       "upside": 32,
       "pe": 34.4,
       "eps": 6.53,
@@ -829,7 +829,10 @@
       "perf6m": 18.07,
       "perf6mAt": "2026-06-01",
       "enrichAt": "2026-06-02",
-      "div": 0.45
+      "div": 0.45,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-02"
     },
     {
       "ticker": "CLBT",
@@ -1166,6 +1169,26 @@
       "enrichAt": "2026-06-02"
     },
     {
+      "ticker": "HEI",
+      "name": "Heidelberg Materials AG",
+      "sector": "materials",
+      "buyPct": 84,
+      "outperformPct": 69,
+      "analysts": 19,
+      "upside": 23,
+      "yahoo": "HEI.DE",
+      "peGemini": 15.7,
+      "via": "gemini-discover",
+      "source": "Finanznachrichten.de",
+      "seen": "2026-06-02",
+      "perf6m": -14.07,
+      "perf6mAt": "2026-06-02",
+      "pe": 16.4,
+      "eps": 11.18,
+      "div": 1.94,
+      "enrichAt": "2026-06-02"
+    },
+    {
       "ticker": "ALGN",
       "name": "Align Technology, Inc.",
       "sector": "health",
@@ -1382,23 +1405,43 @@
       "div": 0.08
     },
     {
-      "ticker": "UBSG",
-      "name": "UBS Group AG",
-      "sector": "finance",
-      "buyPct": 81,
-      "outperformPct": 63,
-      "analysts": 17,
-      "upside": 3,
-      "yahoo": "UBSG.SW",
-      "peGemini": 12.8,
+      "ticker": "CRH",
+      "name": "CRH plc",
+      "sector": "materials",
+      "buyPct": 87,
+      "outperformPct": 74,
+      "analysts": 11,
+      "upside": 17,
+      "yahoo": "CRH.L",
+      "peGemini": 17.5,
       "via": "gemini-discover",
       "source": "MarketScreener",
       "seen": "2026-06-02",
-      "perf6m": 20.9,
+      "perf6m": -6.04,
       "perf6mAt": "2026-06-02",
-      "pe": 17.4,
-      "eps": 2.19,
-      "div": 2.3,
+      "pe": 21.6,
+      "eps": 4.07,
+      "div": 1.27,
+      "enrichAt": "2026-06-02"
+    },
+    {
+      "ticker": "DB1",
+      "name": "Deutsche Börse AG",
+      "sector": "finance",
+      "buyPct": 90,
+      "outperformPct": 80,
+      "analysts": 12,
+      "upside": 16,
+      "yahoo": "DB1.DE",
+      "peGemini": 30.1,
+      "via": "gemini-discover",
+      "source": "MarketScreener",
+      "seen": "2026-06-02",
+      "perf6m": 10.71,
+      "perf6mAt": "2026-06-02",
+      "pe": 22.2,
+      "eps": 11.21,
+      "div": 1.69,
       "enrichAt": "2026-06-02"
     },
     {
@@ -1494,26 +1537,6 @@
       "div": 2.63
     },
     {
-      "ticker": "DB1",
-      "name": "Deutsche Börse AG",
-      "sector": "finance",
-      "buyPct": 90,
-      "outperformPct": 80,
-      "analysts": 12,
-      "upside": 16,
-      "yahoo": "DB1.DE",
-      "peGemini": 30.1,
-      "via": "gemini-discover",
-      "source": "MarketScreener",
-      "seen": "2026-06-02",
-      "perf6m": 10.71,
-      "perf6mAt": "2026-06-02",
-      "pe": 22.2,
-      "eps": 11.21,
-      "div": 1.69,
-      "enrichAt": "2026-06-02"
-    },
-    {
       "ticker": "SNPS",
       "name": "Synopsys, Inc.",
       "sector": "ai_semi",
@@ -1534,23 +1557,23 @@
       "div": 0
     },
     {
-      "ticker": "HEI",
-      "name": "Heidelberg Materials AG",
-      "sector": "materials",
-      "buyPct": 84,
-      "outperformPct": 69,
+      "ticker": "RWE",
+      "name": "RWE AG",
+      "sector": "utilities",
+      "buyPct": 88,
+      "outperformPct": 75,
       "analysts": 19,
-      "upside": 23,
-      "yahoo": "HEI.DE",
-      "peGemini": 15.7,
+      "upside": 14,
+      "yahoo": "RWE.DE",
+      "peGemini": 22.1,
       "via": "gemini-discover",
       "source": "Finanznachrichten.de",
       "seen": "2026-06-02",
-      "perf6m": -14.07,
+      "perf6m": 26.73,
       "perf6mAt": "2026-06-02",
-      "pe": 16.4,
-      "eps": 11.18,
-      "div": 1.94,
+      "pe": 17,
+      "eps": 3.26,
+      "div": 2.17,
       "enrichAt": "2026-06-02"
     },
     {
@@ -1574,26 +1597,6 @@
       "enrichAt": "2026-06-02"
     },
     {
-      "ticker": "ENEL",
-      "name": "Enel S.p.A.",
-      "sector": "utilities",
-      "buyPct": 82,
-      "outperformPct": 65,
-      "analysts": 22,
-      "upside": 6,
-      "yahoo": "ENEL.MI",
-      "peGemini": 18.9,
-      "via": "gemini-discover",
-      "source": "MarketScreener",
-      "seen": "2026-06-02",
-      "perf6m": 8.71,
-      "perf6mAt": "2026-06-02",
-      "pe": 25.3,
-      "eps": 0.38,
-      "div": 5.44,
-      "enrichAt": "2026-06-02"
-    },
-    {
       "ticker": "AMAT",
       "name": "Applied Materials, Inc.",
       "sector": "ai_semi",
@@ -1612,66 +1615,6 @@
       "eps": 10.63,
       "enrichAt": "2026-06-02",
       "div": 0.46
-    },
-    {
-      "ticker": "INGA",
-      "name": "ING Groep N.V.",
-      "sector": "finance",
-      "buyPct": 86,
-      "outperformPct": 72,
-      "analysts": 19,
-      "upside": 5,
-      "yahoo": "INGA.AS",
-      "peGemini": 9.5,
-      "via": "gemini-discover",
-      "source": "Finanznachrichten.de",
-      "seen": "2026-06-02",
-      "perf6m": 17.26,
-      "perf6mAt": "2026-06-02",
-      "pe": 12.2,
-      "eps": 2.19,
-      "div": 4.1,
-      "enrichAt": "2026-06-02"
-    },
-    {
-      "ticker": "RWE",
-      "name": "RWE AG",
-      "sector": "utilities",
-      "buyPct": 88,
-      "outperformPct": 75,
-      "analysts": 19,
-      "upside": 14,
-      "yahoo": "RWE.DE",
-      "peGemini": 22.1,
-      "via": "gemini-discover",
-      "source": "Finanznachrichten.de",
-      "seen": "2026-06-02",
-      "perf6m": 26.73,
-      "perf6mAt": "2026-06-02",
-      "pe": 17,
-      "eps": 3.26,
-      "div": 2.17,
-      "enrichAt": "2026-06-02"
-    },
-    {
-      "ticker": "CRH",
-      "name": "CRH plc",
-      "sector": "materials",
-      "buyPct": 87,
-      "outperformPct": 74,
-      "analysts": 11,
-      "upside": 17,
-      "yahoo": "CRH.L",
-      "peGemini": 17.5,
-      "via": "gemini-discover",
-      "source": "MarketScreener",
-      "seen": "2026-06-02",
-      "perf6m": -6.04,
-      "perf6mAt": "2026-06-02",
-      "pe": 21.6,
-      "eps": 4.07,
-      "div": 1.27,
-      "enrichAt": "2026-06-02"
     },
     {
       "ticker": "600519.SS",
@@ -1770,23 +1713,43 @@
       "div": 0
     },
     {
-      "ticker": "IBER",
-      "name": "Iberdrola S.A.",
+      "ticker": "ENEL",
+      "name": "Enel S.p.A.",
       "sector": "utilities",
-      "buyPct": 80,
-      "outperformPct": 60,
+      "buyPct": 82,
+      "outperformPct": 65,
       "analysts": 22,
-      "upside": 1,
-      "yahoo": "IBE.MC",
-      "peGemini": 20.3,
+      "upside": 6,
+      "yahoo": "ENEL.MI",
+      "peGemini": 18.9,
       "via": "gemini-discover",
       "source": "MarketScreener",
       "seen": "2026-06-02",
-      "perf6m": 8.27,
+      "perf6m": 8.71,
       "perf6mAt": "2026-06-02",
-      "pe": 24.4,
-      "eps": 0.8,
-      "div": 3.51,
+      "pe": 25.3,
+      "eps": 0.38,
+      "div": 5.44,
+      "enrichAt": "2026-06-02"
+    },
+    {
+      "ticker": "INGA",
+      "name": "ING Groep N.V.",
+      "sector": "finance",
+      "buyPct": 86,
+      "outperformPct": 72,
+      "analysts": 19,
+      "upside": 5,
+      "yahoo": "INGA.AS",
+      "peGemini": 9.5,
+      "via": "gemini-discover",
+      "source": "Finanznachrichten.de",
+      "seen": "2026-06-02",
+      "perf6m": 17.26,
+      "perf6mAt": "2026-06-02",
+      "pe": 12.2,
+      "eps": 2.19,
+      "div": 4.1,
       "enrichAt": "2026-06-02"
     },
     {
@@ -1804,6 +1767,26 @@
       "perf6mAt": "2026-06-01",
       "enrichAt": "2026-06-02",
       "div": 0
+    },
+    {
+      "ticker": "UBSG",
+      "name": "UBS Group AG",
+      "sector": "finance",
+      "buyPct": 81,
+      "outperformPct": 63,
+      "analysts": 17,
+      "upside": 3,
+      "yahoo": "UBSG.SW",
+      "peGemini": 12.8,
+      "via": "gemini-discover",
+      "source": "MarketScreener",
+      "seen": "2026-06-02",
+      "perf6m": 20.9,
+      "perf6mAt": "2026-06-02",
+      "pe": 17.4,
+      "eps": 2.19,
+      "div": 2.3,
+      "enrichAt": "2026-06-02"
     },
     {
       "ticker": "ASML",
@@ -1824,6 +1807,26 @@
       "eps": 30.13,
       "enrichAt": "2026-06-02",
       "div": 0.54
+    },
+    {
+      "ticker": "IBER",
+      "name": "Iberdrola S.A.",
+      "sector": "utilities",
+      "buyPct": 80,
+      "outperformPct": 60,
+      "analysts": 22,
+      "upside": 1,
+      "yahoo": "IBE.MC",
+      "peGemini": 20.3,
+      "via": "gemini-discover",
+      "source": "MarketScreener",
+      "seen": "2026-06-02",
+      "perf6m": 8.27,
+      "perf6mAt": "2026-06-02",
+      "pe": 24.4,
+      "eps": 0.8,
+      "div": 3.51,
+      "enrichAt": "2026-06-02"
     }
   ],
   "sectorNotes": {
@@ -1941,37 +1944,37 @@
   "news": {
     "items": [
       {
-        "text": "US-Iran-Konflikt treibt Ölpreise und Renditen in die Höhe",
-        "stamp": "02.06.26 09:48"
+        "text": "Geopolitische Risiken und KI-Boom treiben Finanzmärkte an",
+        "stamp": "01.06.26 00:00"
       },
       {
-        "text": "ECB-Vertreterin warnt vor Risiken durch Stablecoins für Finanzstabilität",
-        "stamp": "01.06.26 18:54"
+        "text": "US-Notenbank warnt vor Politisierung der Geldpolitik, Zinserhöhungen erwartet",
+        "stamp": "01.06.26 00:00"
       },
       {
-        "text": "Eurozone-Inflation steigt, Zinserhöhung der EZB wahrscheinlich",
-        "stamp": "02.06.26 09:48"
+        "text": "Ölpreise steigen deutlich aufgrund geopolitischer Spannungen",
+        "stamp": "01.06.26 00:00"
       },
       {
-        "text": "Fed-Gouverneurin tritt vorzeitig zurück; Trump nominiert Warsh",
-        "stamp": "31.05.26 00:00"
+        "text": "US-Aktienmärkte starten stark in den Juni, S&P 500 und Nasdaq auf Rekordkurs",
+        "stamp": "01.06.26 00:00"
       },
       {
-        "text": "Tech-Rally treibt US-Märkte trotz geopolitischer Unsicherheit an",
-        "stamp": "01.06.26 18:54"
+        "text": "Iran-Konflikt und mögliche Sanktionen belasten globale Märkte",
+        "stamp": "02.06.26 00:00"
       },
       {
-        "text": "Google plant 80 Mrd. USD für KI-Ausbau; Berkshire investiert 10 Mrd. USD",
-        "stamp": "01.06.26 09:48"
+        "text": "Deutsche Industrie klagt über Materialmangel und angespannte Lieferketten",
+        "stamp": "01.06.26 00:00"
       }
     ],
     "date": "2026-06-02"
   },
   "scan": {
     "universe": 8833,
-    "scanned": 5400,
-    "lastCursor": 5400,
-    "candCursor": 40,
+    "scanned": 5700,
+    "lastCursor": 5700,
+    "candCursor": 48,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -2052,23 +2055,24 @@
       "CRH plc"
     ],
     "noteCursor": 6,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 4,
     "notesDay": "2026-06-02",
     "seenBySector": {
       "cons_cycl": 2,
-      "cons_def": 2,
+      "cons_def": 4,
       "materials": 3,
-      "health": 6,
-      "finance": 12,
-      "energy": 9,
-      "hardware": 3,
-      "software": 7,
-      "industrial": 5,
-      "utilities": 2,
+      "health": 9,
+      "finance": 20,
+      "energy": 13,
+      "hardware": 4,
+      "software": 13,
+      "industrial": 7,
+      "utilities": 3,
       "comm": 2,
-      "ai_semi": 1
+      "ai_semi": 4,
+      "realestate": 1
     },
     "pendingReject": []
   }
