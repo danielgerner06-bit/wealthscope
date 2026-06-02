@@ -70,6 +70,7 @@
           renderStocks();
         },
         onHover: (e, els) => { if (e.native?.target) e.native.target.style.cursor = (view === 'sectors' && els.length) ? 'pointer' : 'default'; },
+        onResize: () => requestAnimationFrame(positionBarNames),
         plugins: { legend: { display: false }, tooltip: { enabled: false } },
         scales: {
           x: {
@@ -82,21 +83,46 @@
         },
         layout: { padding: { right: 44, left: 4 } },
       },
-      plugins: [zeroBarLine, valueLabels],
+      plugins: [zeroBarLine, valueLabels, {
+        id: 'syncNames',
+        afterRender: () => positionBarNames(),  // nach jedem Frame Namen auf Balkenhöhe halten
+      }],
     });
   }
 
-  // Sektornamen als klickbare HTML-Liste links neben dem Chart (öffnet Lage-Modal)
+  // Sektornamen als klickbare Labels — absolut auf die exakte Balkenhöhe gesetzt
+  // (aus Chart.js ausgelesen), damit Name und Balken immer auf einer Linie liegen.
   function renderBarNames() {
     const wrap = document.getElementById('sekBarsNames');
     wrap.innerHTML = '';
-    barRows.forEach(r => {
+    wrap.style.position = 'relative';
+    barRows.forEach((r, i) => {
       const sec = itemById(r.id);
       const b = document.createElement('button');
       b.className = 'sek-bar-name';
+      b.dataset.idx = i;
       b.innerHTML = '<i style="background:' + sec.color + '"></i><span>' + sec.name + '</span>';
       b.addEventListener('click', () => openSectorModal(r.id));
       wrap.appendChild(b);
+    });
+    positionBarNames();
+  }
+
+  // Liest die y-Mittelpunkte der Balken aus Chart.js und positioniert die Namen darauf.
+  function positionBarNames() {
+    if (!barChart) return;
+    const wrap = document.getElementById('sekBarsNames');
+    const meta = barChart.getDatasetMeta(barChart.data.datasets.length - 1);
+    const chartTop = barChart.canvas.getBoundingClientRect().top;
+    const wrapTop = wrap.getBoundingClientRect().top;
+    const offset = chartTop - wrapTop; // Canvas kann minimal versetzt zum Namen-Container sein
+    [...wrap.children].forEach((el, i) => {
+      const bar = meta.data[i];
+      if (!bar) return;
+      el.style.position = 'absolute';
+      el.style.left = '0'; el.style.right = '0';
+      el.style.top = (offset + bar.y) + 'px';
+      el.style.transform = 'translateY(-50%)';
     });
   }
 
@@ -285,16 +311,39 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
   }
 
-  /* ---------- News-Ticker ---------- */
+  /* ---------- News-Ticker ----------
+     Nahtloser Endlos-Lauf: eine "Hälfte" muss breiter als der sichtbare Bereich
+     sein (sonst entsteht eine Lücke und es wirkt, als stoppe der Ticker). Daher
+     den verbundenen Block so oft wiederholen, bis er den Viewport füllt, und
+     dann verdoppeln — die CSS-Animation läuft genau um -50%.                     */
   function renderNews() {
     const track = document.getElementById('sekNewsTrack');
     const wrap = document.getElementById('sekNews');
+    const viewport = wrap.querySelector('.sek-news-viewport');
     const items = DATA.news?.items || [];
     if (!items.length) { wrap.style.display = 'none'; return; }
     wrap.style.display = '';
-    // Schlagzeilen durch Trenner verbunden, fortlaufend (CSS-Animation scrollt)
-    const joined = items.join('   •   ');
-    track.innerHTML = '<span>' + joined + '</span><span aria-hidden="true">' + joined + '</span>';
+
+    const unit = items.join(' • ') + ' • ';
+    // erst eine Hälfte aufbauen, dann messen
+    track.innerHTML = '<span>' + unit + '</span>';
+    requestAnimationFrame(() => {
+      const vw = viewport.clientWidth || 400;
+      let half = unit;
+      // Hälfte verbreitern bis > Viewport (max ein paar Wiederholungen)
+      let guard = 0;
+      track.innerHTML = '<span>' + half + '</span>';
+      while (track.firstChild.offsetWidth < vw + 60 && guard < 12) {
+        half += unit;
+        track.firstChild.textContent = half;
+        guard++;
+      }
+      // zwei identische Hälften -> -50% ist nahtlos
+      track.innerHTML = '<span>' + half + '</span><span aria-hidden="true">' + half + '</span>';
+      // Tempo an die Länge koppeln (konstante Geschwindigkeit, ~70px/s)
+      const halfW = track.firstChild.offsetWidth || vw;
+      track.style.animationDuration = Math.max(18, Math.round(halfW / 70)) + 's';
+    });
   }
 
   /* ---------- Ansicht-Toggle: Sektoren <-> Regionen ---------- */

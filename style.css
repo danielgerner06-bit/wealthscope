@@ -1328,22 +1328,23 @@ a { text-decoration: none; color: inherit; }
 .sek-news {
   flex: 1; min-width: 0; margin: 0 6px;
   display: flex; align-items: center; gap: 10px;
-  overflow: hidden;
   background: rgba(148,163,184,0.06); border: 1px solid var(--s-border);
-  border-radius: 99px; padding: 6px 14px 6px 6px;
+  border-radius: 99px; padding: 6px 6px 6px 6px;
 }
 .sek-news-tag {
   flex-shrink: 0; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.8px;
   padding: 4px 8px; border-radius: 99px; color: #fff;
   background: linear-gradient(120deg, #ef4444, #f59e0b);
 }
+/* eigener Clip-Container, damit der Lauftext nie unter den NEWS-Tag rutscht */
+.sek-news-viewport { flex: 1; min-width: 0; overflow: hidden; }
 .sek-news-track {
-  display: flex; gap: 0; white-space: nowrap; min-width: 0;
-  animation: sekTicker 38s linear infinite;
+  display: inline-flex; white-space: nowrap; will-change: transform;
+  animation: sekTicker 40s linear infinite;
 }
 .sek-news-track span { padding-right: 48px; font-size: 0.82rem; font-weight: 600; color: var(--s-text); }
 .sek-news:hover .sek-news-track { animation-play-state: paused; }
-@keyframes sekTicker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes sekTicker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 .sek-meta {
   flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px;
@@ -1419,9 +1420,10 @@ a { text-decoration: none; color: inherit; }
 
 /* Balken: klickbare Namen-Spalte links + Chart rechts */
 .sek-bars-wrap { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(120px, 26%) 1fr; gap: 10px; }
-.sek-bars-names { display: flex; flex-direction: column; min-height: 0; }
+.sek-bars-names { position: relative; min-height: 0; }
+/* Namen werden per JS absolut auf die exakte Balkenhöhe gesetzt */
 .sek-bar-name {
-  flex: 1 1 0; min-height: 0;
+  position: absolute; left: 0; right: 0; height: 24px;
   display: flex; align-items: center; gap: 8px;
   background: none; border: none; border-radius: 8px; padding: 0 8px;
   color: var(--s-text); font-size: 0.82rem; font-weight: 600; text-align: left;
