@@ -2065,17 +2065,39 @@
       ],
       "prov": true,
       "provDay": "2026-06-02"
+    },
+    "RBRK": {
+      "ticker": "RBRK",
+      "name": "Rubrik Inc",
+      "yahoo": "RBRK",
+      "sector": "hardware",
+      "region": "usa",
+      "buyPct": 97,
+      "outperformPct": 37,
+      "upside": 4,
+      "pe": null,
+      "perf6mAtAdd": 16.54,
+      "analysts": 27,
+      "div": 0,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 82.08000183105469,
+      "perf": [
+        41.69
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     }
   },
   "findings": {
     "factors": [
       {
         "name": "Kursziel",
-        "spread": 17.9,
+        "spread": 22.1,
         "best": {
           "k": "<10%",
-          "avg": 12,
-          "n": 6
+          "avg": 16.2,
+          "n": 7
         },
         "worst": {
           "k": "40%+",
@@ -2098,26 +2120,12 @@
         }
       },
       {
-        "name": "Outperform",
-        "spread": 4.4,
-        "best": {
-          "k": "70-85%",
-          "avg": 3.1,
-          "n": 10
-        },
-        "worst": {
-          "k": "<70%",
-          "avg": -1.3,
-          "n": 60
-        }
-      },
-      {
         "name": "Dividende",
-        "spread": 2.9,
+        "spread": 3.8,
         "best": {
           "k": "keine",
-          "avg": 0.5,
-          "n": 44
+          "avg": 1.4,
+          "n": 45
         },
         "worst": {
           "k": "4%+",
@@ -2126,12 +2134,26 @@
         }
       },
       {
-        "name": "Analysten",
-        "spread": 2,
+        "name": "Outperform",
+        "spread": 3.7,
         "best": {
-          "k": "5-14",
-          "avg": 0.7,
-          "n": 37
+          "k": "70-85%",
+          "avg": 3.1,
+          "n": 10
+        },
+        "worst": {
+          "k": "<70%",
+          "avg": -0.6,
+          "n": 61
+        }
+      },
+      {
+        "name": "Analysten",
+        "spread": 2.3,
+        "best": {
+          "k": "15+",
+          "avg": 1,
+          "n": 36
         },
         "worst": {
           "k": "1-4",
@@ -2141,7 +2163,7 @@
       }
     ],
     "combo": null,
-    "sampleSize": 83,
+    "sampleSize": 84,
     "maxMonths": 1,
     "provisional": true
   },

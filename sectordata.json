@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-02",
-  "updatedAt": "2026-06-02T16:41:36.187Z",
+  "updatedAt": "2026-06-02T19:24:08.795Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 23.41,
+      "perf": 23.46,
       "avg30": -0.95,
-      "perf6m": 1.06
+      "perf6m": 1.1
     },
     {
       "id": "ai_semi",
@@ -177,9 +177,9 @@
     },
     {
       "id": "finance",
-      "perf": -0.94,
+      "perf": -0.69,
       "avg30": 0.13,
-      "perf6m": -2.87
+      "perf6m": -2.62
     },
     {
       "id": "cons_cycl",
@@ -213,15 +213,15 @@
     },
     {
       "id": "utilities",
-      "perf": -5.96,
+      "perf": -5.71,
       "avg30": 1.02,
-      "perf6m": -2.71
+      "perf6m": -2.46
     },
     {
       "id": "realestate",
-      "perf": -2.09,
+      "perf": -2.18,
       "avg30": 0.58,
-      "perf6m": 4.64
+      "perf6m": 4.55
     }
   ],
   "bars30Region": [
@@ -233,9 +233,9 @@
     },
     {
       "id": "europe",
-      "perf": 1.98,
+      "perf": 2.03,
       "avg30": 1.28,
-      "perf6m": 9.71
+      "perf6m": 9.77
     },
     {
       "id": "germany",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": -2.21,
+      "perf": -2.3,
       "avg30": -1.01,
-      "perf6m": -12.14
+      "perf6m": -12.22
     },
     {
       "id": "latam",
@@ -363,26 +363,6 @@
       "div": 0
     },
     {
-      "ticker": "IRTC",
-      "name": "iRhythm Technologies, Inc.",
-      "sector": "health",
-      "buyPct": 85,
-      "outperformPct": 62,
-      "analysts": 14,
-      "upside": 66,
-      "yahoo": "IRTC",
-      "peGemini": null,
-      "via": "gemini-discover",
-      "source": "TipRanks",
-      "seen": "2026-06-02",
-      "perf6m": -39.97,
-      "perf6mAt": "2026-06-02",
-      "pe": null,
-      "eps": -0.85,
-      "div": 0,
-      "enrichAt": "2026-06-02"
-    },
-    {
       "ticker": "INSM",
       "name": "Insmed Inc",
       "sector": "health",
@@ -399,26 +379,6 @@
       "eps": -5.76,
       "enrichAt": "2026-06-02",
       "div": 0
-    },
-    {
-      "ticker": "ADPT",
-      "name": "Adaptive Biotechnologies Corporation",
-      "sector": "health",
-      "buyPct": 82,
-      "outperformPct": 55,
-      "analysts": 7,
-      "upside": 35,
-      "yahoo": "ADPT",
-      "peGemini": null,
-      "via": "gemini-discover",
-      "source": "TipRanks",
-      "seen": "2026-06-02",
-      "perf6m": -13.23,
-      "perf6mAt": "2026-06-02",
-      "pe": null,
-      "eps": -0.32,
-      "div": 0,
-      "enrichAt": "2026-06-02"
     },
     {
       "ticker": "CGEN",
@@ -438,6 +398,26 @@
       "pe": 6.5,
       "enrichAt": "2026-06-02",
       "div": 0
+    },
+    {
+      "ticker": "TLRY",
+      "name": "Tilray Brands, Inc.",
+      "sector": "health",
+      "buyPct": 83,
+      "outperformPct": 58,
+      "analysts": 9,
+      "upside": 84,
+      "yahoo": "TLRY",
+      "peGemini": null,
+      "via": "gemini-discover",
+      "source": "TipRanks",
+      "seen": "2026-06-02",
+      "perf6m": -23.96,
+      "perf6mAt": "2026-06-02",
+      "pe": null,
+      "eps": -14.63,
+      "div": 0,
+      "enrichAt": "2026-06-02"
     },
     {
       "ticker": "INR",
@@ -589,6 +569,26 @@
       "div": 0
     },
     {
+      "ticker": "IRTC",
+      "name": "iRhythm Technologies, Inc.",
+      "sector": "health",
+      "buyPct": 85,
+      "outperformPct": 62,
+      "analysts": 14,
+      "upside": 66,
+      "yahoo": "IRTC",
+      "peGemini": null,
+      "via": "gemini-discover",
+      "source": "TipRanks",
+      "seen": "2026-06-02",
+      "perf6m": -39.97,
+      "perf6mAt": "2026-06-02",
+      "pe": null,
+      "eps": -0.85,
+      "div": 0,
+      "enrichAt": "2026-06-02"
+    },
+    {
       "ticker": "JBS",
       "name": "Jbs NV",
       "sector": "cons_def",
@@ -624,26 +624,6 @@
       "pe": null,
       "enrichAt": "2026-06-02",
       "div": 0
-    },
-    {
-      "ticker": "TLRY",
-      "name": "Tilray Brands, Inc.",
-      "sector": "health",
-      "buyPct": 83,
-      "outperformPct": 58,
-      "analysts": 9,
-      "upside": 84,
-      "yahoo": "TLRY",
-      "peGemini": null,
-      "via": "gemini-discover",
-      "source": "TipRanks",
-      "seen": "2026-06-02",
-      "perf6m": -23.96,
-      "perf6mAt": "2026-06-02",
-      "pe": null,
-      "eps": -14.63,
-      "div": 0,
-      "enrichAt": "2026-06-02"
     },
     {
       "ticker": "RHM",
@@ -718,26 +698,6 @@
       "eps": 5.15,
       "enrichAt": "2026-06-02",
       "div": 5.76
-    },
-    {
-      "ticker": "PLTK",
-      "name": "Playtika Holding Corp.",
-      "sector": "software",
-      "buyPct": 80,
-      "outperformPct": 40,
-      "analysts": 11,
-      "upside": 46,
-      "yahoo": "PLTK",
-      "peGemini": 25,
-      "via": "gemini-discover",
-      "source": "TipRanks",
-      "seen": "2026-06-02",
-      "perf6m": -14.05,
-      "perf6mAt": "2026-06-02",
-      "pe": null,
-      "eps": -0.78,
-      "div": 11.05,
-      "enrichAt": "2026-06-02"
     },
     {
       "ticker": "CHDN",
@@ -933,6 +893,26 @@
       "div": 2.75
     },
     {
+      "ticker": "PLTK",
+      "name": "Playtika Holding Corp.",
+      "sector": "software",
+      "buyPct": 80,
+      "outperformPct": 40,
+      "analysts": 11,
+      "upside": 46,
+      "yahoo": "PLTK",
+      "peGemini": 25,
+      "via": "gemini-discover",
+      "source": "TipRanks",
+      "seen": "2026-06-02",
+      "perf6m": -14.05,
+      "perf6mAt": "2026-06-02",
+      "pe": null,
+      "eps": -0.78,
+      "div": 11.05,
+      "enrichAt": "2026-06-02"
+    },
+    {
       "ticker": "DEF",
       "name": "DEFAMA Deutsche Fachmarkt AG",
       "sector": "realestate",
@@ -1013,23 +993,23 @@
       "div": 0
     },
     {
-      "ticker": "REGN",
-      "name": "Regeneron Pharmaceuticals, Inc.",
+      "ticker": "ADPT",
+      "name": "Adaptive Biotechnologies Corporation",
       "sector": "health",
-      "buyPct": 84,
-      "outperformPct": 68,
-      "analysts": 28,
-      "upside": 39,
-      "yahoo": "REGN",
-      "peGemini": 28.5,
+      "buyPct": 82,
+      "outperformPct": 55,
+      "analysts": 7,
+      "upside": 35,
+      "yahoo": "ADPT",
+      "peGemini": null,
       "via": "gemini-discover",
       "source": "TipRanks",
       "seen": "2026-06-02",
-      "perf6m": -15.05,
+      "perf6m": -13.23,
       "perf6mAt": "2026-06-02",
-      "pe": 14.7,
-      "eps": 40.97,
-      "div": 0.63,
+      "pe": null,
+      "eps": -0.32,
+      "div": 0,
       "enrichAt": "2026-06-02"
     },
     {
@@ -1836,6 +1816,24 @@
       "eps": 1.57,
       "div": 4.62,
       "enrichAt": "2026-06-02"
+    },
+    {
+      "ticker": "RBRK",
+      "name": "Rubrik Inc",
+      "sector": "hardware",
+      "buyPct": 97,
+      "outperformPct": 37,
+      "analysts": 27,
+      "upside": 4,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-02",
+      "perf6m": 16.54,
+      "perf6mAt": "2026-06-02",
+      "pe": null,
+      "eps": -1.78,
+      "div": 0,
+      "enrichAt": "2026-06-02"
     }
   ],
   "sectorNotes": {
@@ -1953,37 +1951,37 @@
   "news": {
     "items": [
       {
-        "text": "US-Notenbank hält Leitzins stabil angesichts Iran-Krieg",
-        "stamp": "30.04.26 00:00"
+        "text": "Iran unterbricht Kommunikationskanäle mit den USA nach Militäraktionen.",
+        "stamp": "02.06.26 07:00"
       },
       {
-        "text": "Citi erwartet Kupfer-Rallye mit Ziel 15.000 US-Dollar",
-        "stamp": "02.06.26 17:30"
+        "text": "US-Börsen setzen Rekordjagd fort, Alphabet senkt Kurse wegen KI-Offensive.",
+        "stamp": "02.06.26 18:03"
       },
       {
-        "text": "Trump glaubt an Einigung mit Iran, DAX zeigt sich mutiger",
-        "stamp": "02.06.26 00:00"
+        "text": "Ölpreise steigen um über 2% wegen geopolitischer Instabilität im Nahen Osten.",
+        "stamp": "02.06.26 07:00"
       },
       {
-        "text": "KI-Boom treibt Tech-Aktien, Sorgen vor Inflation wachsen",
-        "stamp": "02.06.26 16:56"
+        "text": "Europäische Aktienmärkte eröffnen schwächer aufgrund erhöhten geopolitischen Risikos.",
+        "stamp": "02.06.26 07:00"
       },
       {
-        "text": "DroneShield erhält Millionenvertrag mit US-Taskforce",
-        "stamp": "02.06.26 00:00"
+        "text": "Bank of England beobachtet Lohnwachstum und hält sich bei Zinserhöhungen zurück.",
+        "stamp": "02.06.26 07:00"
       },
       {
-        "text": "Unicredit steigert Commerzbank-Anteil auf über ein Drittel",
-        "stamp": "02.06.26 06:35"
+        "text": "Deutsche Banken bieten attraktive Zinsen für Tagesgeldkonten zur Inflationsbekämpfung.",
+        "stamp": "02.06.26 18:03"
       }
     ],
     "date": "2026-06-02"
   },
   "scan": {
     "universe": 8833,
-    "scanned": 6300,
-    "lastCursor": 6300,
-    "candCursor": 64,
+    "scanned": 6600,
+    "lastCursor": 6600,
+    "candCursor": 72,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -2084,39 +2082,39 @@
       "iRhythm Technologies, Inc."
     ],
     "noteCursor": 6,
-    "focusCursor": 3,
+    "focusCursor": 4,
     "recheckCursor": 16,
     "regionNoteCursor": 4,
     "notesDay": "2026-06-02",
     "seenBySector": {
-      "cons_cycl": 12,
-      "cons_def": 10,
+      "cons_cycl": 19,
+      "cons_def": 11,
       "materials": 8,
-      "health": 26,
-      "finance": 43,
-      "energy": 23,
-      "hardware": 7,
-      "software": 30,
-      "industrial": 13,
+      "health": 33,
+      "finance": 46,
+      "energy": 28,
+      "hardware": 11,
+      "software": 38,
+      "industrial": 15,
       "utilities": 11,
-      "comm": 4,
-      "ai_semi": 6,
+      "comm": 6,
+      "ai_semi": 9,
       "realestate": 4
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 14,
-      "cons_def": 11,
+      "cons_cycl": 21,
+      "cons_def": 12,
       "materials": 15,
-      "health": 56,
-      "finance": 50,
-      "energy": 27,
-      "hardware": 13,
-      "software": 39,
-      "industrial": 19,
+      "health": 62,
+      "finance": 53,
+      "energy": 32,
+      "hardware": 18,
+      "software": 47,
+      "industrial": 21,
       "utilities": 13,
-      "comm": 5,
-      "ai_semi": 10,
+      "comm": 7,
+      "ai_semi": 13,
       "realestate": 5
     }
   }
