@@ -110,7 +110,7 @@ export async function seedBacktest1m(hist, topStocks, budget = 60) {
 // Faktor-Befunde (für KI-Analyse): je Faktor beste/schlechteste Stufe nach Ø-Performance
 // im jüngsten verfügbaren Monat + stärkste Zweier-Kombination.
 export function computeFindings(hist) {
-  const data = Object.values(hist.entries).map(x => ({ ...x, perfLast: lastPerf(x) })).filter(x => x.perfLast != null);
+  const data = Object.values(hist.entries).map(x => ({ ...x, perfLast: lastPerf(x), months: monthsOf(x) })).filter(x => x.perfLast != null);
   const avg = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : null;
   const buckets = {
     KGV: s => s.pe == null ? null : s.pe < 15 ? '<15' : s.pe < 25 ? '15-25' : s.pe < 40 ? '25-40' : '40+',
@@ -136,10 +136,15 @@ export function computeFindings(hist) {
     const sub = data.filter(s => fn1(s) === f1.best.k && fn2(s) === f2.best.k).map(s => s.perfLast).filter(p => p != null);
     if (sub.length >= 3) combo = { f1: f1.name + ' ' + f1.best.k, f2: f2.name + ' ' + f2.best.k, avg: +avg(sub).toFixed(1), n: sub.length };
   }
-  return { factors: factors.slice(0, 5), combo, sampleSize: data.length };
+  // Reifegrad der Datenbasis: längster real gemessener Zeitraum + ob (noch) provisorisch.
+  const maxMonths = data.length ? Math.max(...data.map(s => s.months || 0)) : 0;
+  const allProvisional = data.length > 0 && Object.values(hist.entries).every(x => x.prov || lastPerf(x) == null);
+  return { factors: factors.slice(0, 5), combo, sampleSize: data.length, maxMonths, provisional: allProvisional };
 }
 // jüngster vorhandener Monatswert einer Aktie
 function lastPerf(x) { if (!x.perf || !x.perf.length) return null; for (let i = x.perf.length - 1; i >= 0; i--) if (x.perf[i] != null) return x.perf[i]; return null; }
+// Anzahl real vorhandener Monatspunkte (höchster gesetzter Index + 1)
+function monthsOf(x) { if (!x.perf || !x.perf.length) return 0; for (let i = x.perf.length - 1; i >= 0; i--) if (x.perf[i] != null) return i + 1; return 0; }
 
 // Einträge älter als 1 Jahr + alte Voll-Fake-Aktien (Altbestand) entfernen.
 export function pruneHistory(hist) {

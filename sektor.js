@@ -264,7 +264,10 @@
     });
 
     // nach aktivem Sortierschlüssel sortieren (fehlende Trefferquote ans Ende)
-    const key = rankSort.key, dir = rankSort.dir;
+    // Spalten-data-sort -> Item-Feld (Spalte "treffer" liest hitRate)
+    const COL2FIELD = { anteil: 'anteil', treffer: 'hitRate', psi: 'psi' };
+    const dir = rankSort.dir;
+    const key = COL2FIELD[rankSort.key] || rankSort.key;
     items.sort((a, b) => {
       const va = a[key], vb = b[key];
       const ma = (va == null || !isFinite(va)), mb = (vb == null || !isFinite(vb));
@@ -297,9 +300,10 @@
     });
     // aktive Sortierspalte markieren
     document.querySelectorAll('#sekRankCols .sortable').forEach(c => {
-      c.classList.toggle('active', c.dataset.sort === key);
-      c.classList.toggle('asc', c.dataset.sort === key && dir === 1);
-      c.classList.toggle('desc', c.dataset.sort === key && dir === -1);
+      const on = c.dataset.sort === rankSort.key;
+      c.classList.toggle('active', on);
+      c.classList.toggle('asc', on && dir === 1);
+      c.classList.toggle('desc', on && dir === -1);
     });
   }
   function toggleRankPop(show) {

@@ -90,10 +90,16 @@ Sortiere nach Wichtigkeit (wichtigste zuerst). Nur das JSON-Array, kein weiterer
 // serverseitig berechnetes Objekt mit den besten Stufen je Faktor + bester Kombi.
 export async function buildFactorInsight(key, findings) {
   const today = new Date().toISOString().slice(0, 10);
-  const prompt = `Du bist Aktien-Analyst. Aus einem Backtest (Performance seit Aufnahme der Analysten-Perlen) liegen diese Befunde vor:
-${JSON.stringify(findings)}
+  // Reifegrad der Daten beschreiben, damit die KI ihre Aussage entsprechend einordnet
+  // und nicht mehr behauptet als die kurze (evtl. provisorische) Historie hergibt.
+  const m = findings.maxMonths || 0;
+  const stage = findings.provisional
+    ? `Datenbasis vorläufig: nur ein rückgerechneter 1-Monats-Wert je Perle (echte Kurse). Längere Zeiträume folgen monatlich.`
+    : `Datenbasis: Performance über bis zu ${m} Monat${m === 1 ? '' : 'e'} seit Aufnahme, ${findings.sampleSize} Perlen.`;
+  const prompt = `Du bist Aktien-Analyst. Backtest der Analysten-Perlen (Performance seit Aufnahme). ${stage}
+Befunde: ${JSON.stringify({ factors: findings.factors, combo: findings.combo })}
 
-Schreibe MAXIMAL 2 sehr knappe deutsche Sätze (zusammen ≤ 35 Wörter): welche Faktor-Ausprägung bzw. Kombination bisher am besten abgeschnitten hat und welcher Faktor kaum Einfluss hatte. Konkret mit Zahlen, kein Geschwafel, keine Anlageberatung. Nur den Text.`;
+Schreibe MAXIMAL 2 sehr knappe deutsche Sätze (zusammen ≤ 40 Wörter): welche Faktor-Ausprägung bzw. -Kombination bisher am besten lief (mit Zahlen) und welcher Faktor kaum Einfluss hatte. ${findings.provisional ? 'Mache klar, dass dies ein vorläufiger 1-Monats-Befund ist.' : ''} Kein Geschwafel, keine Anlageberatung. Nur den Text.`;
   const text = await gen(key, prompt);
-  return { text, date: today };
+  return { text, date: today, stage: findings.provisional ? 'prov' : 'real', months: m };
 }

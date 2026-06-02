@@ -85,7 +85,7 @@
     const matched = HIST.filter(passes);
     document.getElementById('anaCount').textContent = matched.length + ' / ' + HIST.length + ' Aktien';
     document.getElementById('anaMatch').textContent = matched.length
-      ? matched.length + ' Aktien im Filter' + (matched.some(s => s.fake) ? ' · enthält Demo-Daten' : '')
+      ? matched.length + ' Aktien im Filter' + (matched.some(s => s.prov) ? ' · vorläufige 1M-Werte' : '')
       : 'Keine Aktien im aktuellen Filter.';
 
     const ctx = document.getElementById('anaChart');
@@ -199,7 +199,7 @@
   function renderKi() {
     const el = document.getElementById('anaKi');
     const txt = (HIST._kiObj && HIST._kiObj.kiAnalysis && HIST._kiObj.kiAnalysis.text) || null;
-    el.textContent = txt || 'Sobald genügend echte Performance-Daten vorliegen, nennt die KI hier die stärksten Faktor-Kombinationen. (Aktuell überbrücken Demo-Werte.)';
+    el.textContent = txt || 'Die KI nennt hier die stärksten Faktor-Kombinationen, sobald der Backtest läuft. Aktuell liegt erst ein vorläufiger 1-Monats-Wert je Perle vor; die Aussage aktualisiert sich monatlich.';
   }
 
   /* ---------- Wiring ---------- */
