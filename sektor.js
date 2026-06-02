@@ -161,7 +161,7 @@
   };
 
   /* ---------- Analysten-Perlen mit Filter + Sortierung ---------- */
-  const filters = { pe: null, perf6m: null, outperformPct: null, upside: null };
+  const filters = { pe: null, perf6m: null, outperformPct: null, upside: null, analysts: null };
   let sectorFilter = null;   // aktiver Sektor-Filter (Klick auf Balken)
 
   function passesFilter(s) {
@@ -174,6 +174,7 @@
     if (filters.perf6m != null && !(s.perf6m != null && s.perf6m <= filters.perf6m)) return false;
     if (filters.outperformPct != null && !(s.outperformPct != null && s.outperformPct >= filters.outperformPct)) return false;
     if (filters.upside != null && !(s.upside != null && s.upside >= filters.upside)) return false;
+    if (filters.analysts != null && !(s.analysts != null && s.analysts >= filters.analysts)) return false;
     if (sectorFilter && s.sector !== sectorFilter) return false;
     return true;
   }
@@ -300,7 +301,7 @@
   }
 
   function wireFilter() {
-    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltOutperf: 'outperformPct', fltUpside: 'upside' };
+    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltOutperf: 'outperformPct', fltUpside: 'upside', fltAnalysts: 'analysts' };
     Object.keys(map).forEach(id => {
       document.getElementById(id).addEventListener('input', e => {
         // erlaubt negative Werte und Komma; ungültige Eingabe -> kein Filter
@@ -312,7 +313,7 @@
     });
     document.getElementById('fltClear').addEventListener('click', () => {
       Object.keys(map).forEach(id => { document.getElementById(id).value = ''; });
-      filters.pe = filters.perf6m = filters.outperformPct = filters.upside = null;
+      filters.pe = filters.perf6m = filters.outperformPct = filters.upside = filters.analysts = null;
       sectorFilter = null;
       renderStocks();
     });
