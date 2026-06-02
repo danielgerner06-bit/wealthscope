@@ -13,7 +13,7 @@ async function gen(key, prompt, useSearch = false) {
   if (useSearch) payload.tools = [{ google_search: {} }];
   const body = JSON.stringify(payload);
   let lastErr = '';
-  for (let attempt = 0; attempt < 2; attempt++) {
+  for (let attempt = 0; attempt < 3; attempt++) {   // flash-lite liefert sporadisch leer -> mehr Versuche
     const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body });
     if (!res.ok) { lastErr = 'HTTP ' + res.status; if (res.status === 429) break; continue; }
     const j = await res.json();
@@ -21,6 +21,7 @@ async function gen(key, prompt, useSearch = false) {
     const text = cand?.content?.parts?.map(p => p.text).filter(Boolean).join('').trim();
     if (text) return text;
     lastErr = 'leer' + (cand?.finishReason ? ' (' + cand.finishReason + ')' : '');
+    await new Promise(r => setTimeout(r, 600));     // kurz warten vor erneutem Versuch
   }
   throw new Error(lastErr);
 }
