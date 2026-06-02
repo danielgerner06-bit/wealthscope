@@ -19,7 +19,7 @@ import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enric
 import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
-import { loadHistory, saveHistory, snapshotStocks, measureMilestones, pruneHistory, computeFindings } from './history.mjs';
+import { loadHistory, saveHistory, snapshotStocks, measureMilestones, seedBacktest1m, pruneHistory, computeFindings } from './history.mjs';
 
 const OUT = 'sectordata.json';
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
@@ -284,13 +284,15 @@ const today = () => new Date().toISOString().slice(0, 10);
     if (any) scan.notesDay = todayStr;   // heute erledigt -> spätere Läufe überspringen
   }
 
-  /* 6) Backtest-Historie pflegen (Snapshots + Meilensteine; Yahoo, kein Kontingent) */
+  /* 6) Backtest-Historie pflegen (Snapshots + Monats-Performance; Yahoo, kein Kontingent) */
   try {
     const hist = loadHistory();
     const snapped = await snapshotStocks(hist, topStocks, Number(process.env.SNAPSHOT_BUDGET || 30));
     const measured = await measureMilestones(hist, Number(process.env.MILESTONE_BUDGET || 40));
+    // provisorische 1M-Performance für Perlen ohne echten Monatswert (rückwirkend echt aus Yahoo)
+    const seeded = await seedBacktest1m(hist, topStocks, Number(process.env.SEED1M_BUDGET || 80));
     const pruned = pruneHistory(hist);
-    console.log(`Historie: ${Object.keys(hist.entries).length} Aktien (${snapped} neu, ${measured} Meilensteine gemessen, ${pruned} alte entfernt).`);
+    console.log(`Historie: ${Object.keys(hist.entries).length} Aktien (${snapped} neu, ${measured} Monatspunkte, ${seeded} prov. 1M, ${pruned} entfernt).`);
 
     // KI-Analyse der stärksten Faktoren — 1× pro Tag (Budget-schonend)
     const findings = computeFindings(hist);

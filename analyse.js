@@ -2,8 +2,11 @@
 (function () {
   let HIST = null, SECT = null, REG = null, chart = null;
   let view = 'bars';                 // 'bars' | 'line'
-  let xFactor = 'pe', xWindow = 'perf6m';
-  const FW = [['perf1m', '1M'], ['perf3m', '3M'], ['perf6m', '6M'], ['perf1j', '1J']];
+  let xFactor = 'pe';
+  // jüngster vorhandener Monatswert einer Aktie (kumulierte Performance seit Aufnahme)
+  const lastPerf = s => { const p = s.perf; if (!Array.isArray(p)) return null; for (let i = p.length - 1; i >= 0; i--) if (p[i] != null) return p[i]; return null; };
+  // wie viele Monate hat diese Aktie schon? (Anzahl gemessener Punkte)
+  const monthsOf = s => Array.isArray(s.perf) ? s.perf.filter(v => v != null).length : 0;
   const FACTORS = [
     { key: 'pe', label: 'KGV' }, { key: 'outperformPct', label: 'Outperform' },
     { key: 'buyPct', label: 'Kaufempfehlung' }, { key: 'upside', label: 'Kursziel' },
@@ -43,8 +46,9 @@
   /* ---------- Faktor-Kurve: gebinnte Ø-Performance über Faktorwert ----------
      Teilt den Faktor-Wertebereich in Bins, mittelt je Bin die Performance.
      Liefert {points:[{x,y}], slope} — slope = Ø |Steigung| (= Wirkungsstärke).   */
-  function factorCurve(data, factorKey, perfKey) {
-    const pts = data.map(s => ({ x: s[factorKey], y: s[perfKey] }))
+  function factorCurve(data, factorKey, perfFn) {
+    const pf = typeof perfFn === 'function' ? perfFn : (s => s[perfFn]);
+    const pts = data.map(s => ({ x: s[factorKey], y: pf(s) }))
       .filter(p => p.x != null && isFinite(p.x) && p.y != null && isFinite(p.y))
       .sort((a, b) => a.x - b.x);
     if (pts.length < 4) return { points: [], slope: 0, n: pts.length };
@@ -58,18 +62,22 @@
       bins[bi].push(p);
     });
     const curve = [];
-    bins.forEach((arr, i) => {
+    bins.forEach(arr => {
       if (!arr.length) return;
       const cx = avg(arr.map(p => p.x));
       const cy = avg(arr.map(p => p.y));
-      curve.push({ x: +cx.toFixed(2), y: +cy.toFixed(2) });
+      curve.push({ x: +cx.toFixed(2), y: +cy.toFixed(2), n: arr.length });
     });
     if (curve.length < 2) return { points: curve, slope: 0, n: pts.length };
-    // mittlere |Steigung| pro normierter x-Einheit: Summe |Δy| über den Verlauf / x-Spanne
-    let totalDy = 0;
-    for (let i = 1; i < curve.length; i++) totalDy += Math.abs(curve[i].y - curve[i - 1].y);
-    const slope = +(totalDy / (curve.length - 1)).toFixed(2);   // Ø Performance-Änderung je Bin-Schritt
-    return { points: curve, slope, n: pts.length };
+    // Wirkungsstärke = Spannweite zwischen bester/schlechtester Bin-Ø, ABER nur über
+    // Bins mit ausreichend Aktien (>=5), damit zufällig streuende Kleingruppen (z.B.
+    // wenige Hochdividenden-Werte) keine Schein-Wirkung erzeugen.
+    const solid = curve.filter(c => c.n >= 5);
+    const basis = solid.length >= 2 ? solid : curve;
+    const ys = basis.map(c => c.y);
+    const slope = +(Math.max(...ys) - Math.min(...ys)).toFixed(2);
+    const best = basis.reduce((a, b) => b.y > a.y ? b : a, basis[0]);
+    return { points: curve, slope, best, n: pts.length };
   }
 
   /* ---------- Diagramm rendern (Balken oder Linie) ---------- */
@@ -85,46 +93,50 @@
 
     if (view === 'line') {
       document.getElementById('anaTitle').innerHTML = 'Performance über ' + flabel(xFactor);
-      const { points, slope, n } = factorCurve(matched, xFactor, xWindow);
+      // Im Linien-Modus KEINE Filter (alle Aktien); x = Faktor, y = Performance seit Aufnahme (jüngster Monat)
+      const { points, slope, n } = factorCurve(HIST, xFactor, lastPerf);
       chart = new Chart(ctx, {
         type: 'line',
         data: { datasets: [{
           data: points, parsing: false,
-          borderColor: '#818cf8', borderWidth: 2.4,
-          backgroundColor: 'rgba(129,140,248,0.12)', fill: true,
+          borderColor: '#818cf8', borderWidth: 2.4, backgroundColor: 'rgba(129,140,248,0.12)', fill: true,
           tension: 0.45, pointRadius: 3, pointBackgroundColor: '#c084fc', pointHoverRadius: 5,
         }] },
         options: {
           responsive: true, maintainAspectRatio: false, animation: { duration: 450 },
-          plugins: {
-            legend: { display: false },
-            tooltip: { callbacks: { label: c => flabel(xFactor) + ' ' + c.parsed.x + ' → Ø ' + (c.parsed.y > 0 ? '+' : '') + c.parsed.y + '%' } },
-          },
+          plugins: { legend: { display: false }, tooltip: { enabled: false } },
           scales: {
             x: { type: 'linear', title: { display: true, text: flabel(xFactor), color: '#94a3b8', font: { size: 11 } },
                  grid: { color: 'rgba(148,163,184,0.12)' }, border: { display: false }, ticks: { color: '#94a3b8', font: { size: 10 } } },
-            y: { title: { display: true, text: 'Ø Performance (' + FW.find(f => f[0] === xWindow)[1] + ')', color: '#94a3b8', font: { size: 11 } },
+            y: { title: { display: true, text: 'Ø Performance seit Aufnahme', color: '#94a3b8', font: { size: 11 } },
                  grid: { color: 'rgba(148,163,184,0.12)', drawTicks: false }, border: { display: false }, ticks: { color: '#94a3b8', callback: v => v + '%', font: { size: 10 } } },
           },
         },
         plugins: [zeroLine],
       });
-      document.getElementById('anaMatch').textContent +=
-        n >= 4 ? ' · Wirkung ' + flabel(xFactor) + ': ' + (slope > 4 ? 'stark' : slope > 1.5 ? 'mittel' : 'gering') + ' (Ø ' + slope + '%/Stufe)' : ' · zu wenige Datenpunkte für die Kurve';
+      document.getElementById('anaMatch').textContent = HIST.length + ' Aktien · '
+        + (n >= 4 ? 'Wirkung ' + flabel(xFactor) + ': ' + (slope > 6 ? 'stark' : slope > 2.5 ? 'mittel' : 'gering') + ' (Δ ' + slope + '%)' : 'zu wenige Datenpunkte für die Kurve');
     } else {
+      // Balken: Ø kumulierte Performance je Monat seit Aufnahme (Monat 1..max vorhanden)
       document.getElementById('anaTitle').innerHTML = 'Ø&nbsp;Performance seit Aufnahme';
-      const labels = FW.map(f => f[1]);
-      const values = FW.map(([key]) => { const v = avg(matched.map(s => s[key]).filter(x => x != null)); return v != null ? +v.toFixed(2) : null; });
+      const maxM = Math.max(0, ...matched.map(monthsOf));
+      const months = Math.max(1, maxM);
+      const labels = Array.from({ length: months }, (_, i) => (i + 1) + 'M');
+      const values = labels.map((_, i) => {
+        const v = avg(matched.map(s => (s.perf || [])[i]).filter(x => x != null));
+        return v != null ? +v.toFixed(2) : null;
+      });
       const colors = values.map(v => v == null ? 'rgba(148,163,184,0.3)' : v >= 0 ? '#34d399' : '#f87171');
       chart = new Chart(ctx, {
         type: 'bar',
-        data: { labels, datasets: [{ data: values.map(v => v ?? 0), backgroundColor: colors, borderRadius: 7, maxBarThickness: 70 }] },
+        data: { labels, datasets: [{ data: values.map(v => v ?? 0), backgroundColor: colors, borderRadius: 7, maxBarThickness: 60 }] },
         options: {
           responsive: true, maintainAspectRatio: false, animation: { duration: 450 },
-          plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => '  Ø ' + (values[c.dataIndex] == null ? 'keine Daten' : (values[c.dataIndex] > 0 ? '+' : '') + values[c.dataIndex] + '%') } } },
+          layout: { padding: { top: 18 } },
+          plugins: { legend: { display: false }, tooltip: { enabled: false } },
           scales: {
-            x: { grid: { display: false }, border: { display: false }, ticks: { color: '#cbd5e1', font: { size: 13, weight: '700' } } },
-            y: { grid: { color: 'rgba(148,163,184,0.14)', drawTicks: false }, border: { display: false }, ticks: { color: '#94a3b8', callback: v => v + '%', font: { size: 11 } } },
+            x: { grid: { display: false }, border: { display: false }, ticks: { color: '#cbd5e1', font: { size: 12, weight: '700' } } },
+            y: { grace: '12%', grid: { color: 'rgba(148,163,184,0.14)', drawTicks: false }, border: { display: false }, ticks: { color: '#94a3b8', callback: v => v + '%', font: { size: 11 } } },
           },
         },
         plugins: [barLabels(values)],
@@ -155,16 +167,15 @@
     } };
   }
 
-  /* ---------- Wichtigste Faktoren: gerankt nach Ø-Spline-Steigung ---------- */
+  /* ---------- Wichtigste Faktoren: gerankt nach Performance-Spanne (jüngster Monat) ---------- */
   function renderFactors() {
     const el = document.getElementById('anaFactors');
-    const data = HIST.filter(passes);
+    // Linien-Modus: alle Aktien (keine Filter); Balken-Modus: gefilterte Auswahl.
+    const data = view === 'line' ? HIST : HIST.filter(passes);
     const rows = [];
     for (const f of FACTORS) {
-      const { points, slope, n } = factorCurve(data, f.key, xWindow);
-      if (n < 4 || points.length < 2) continue;
-      // bester Wert = x-Bin mit höchster Ø-Performance
-      const best = points.reduce((a, b) => b.y > a.y ? b : a, points[0]);
+      const { slope, best, n } = factorCurve(data, f.key, lastPerf);
+      if (n < 4 || !best) continue;
       rows.push({ label: f.label, slope, bestX: best.x, bestY: best.y });
     }
     rows.sort((a, b) => b.slope - a.slope);
@@ -177,7 +188,7 @@
       row.className = 'ana-factor';
       row.innerHTML =
         '<div class="ana-factor-top"><span class="ana-factor-name">' + r.label + '</span>' +
-        '<span class="ana-factor-spread">' + r.slope.toFixed(1) + '%/Stufe</span></div>' +
+        '<span class="ana-factor-spread">Δ ' + r.slope.toFixed(1) + '%</span></div>' +
         '<div class="ana-factor-bar"><span style="width:' + Math.round((r.slope / maxSlope) * 100) + '%"></span></div>' +
         '<div class="ana-factor-best">am besten bei <b>' + r.bestX + '</b> (Ø ' + (r.bestY > 0 ? '+' : '') + r.bestY.toFixed(1) + '%)</div>';
       el.appendChild(row);
@@ -212,16 +223,16 @@
       document.getElementById('afSector').value = ''; document.getElementById('afRegion').value = '';
       render();
     });
-    // Diagramm-Toggle
+    // Diagramm-Toggle: Linien-Modus blendet Filter aus (gilt für alle Aktien), zeigt X-Achsen-Wahl
     document.getElementById('anaViewToggle').addEventListener('click', e => {
       const btn = e.target.closest('button[data-view]'); if (!btn || btn.dataset.view === view) return;
       view = btn.dataset.view;
       document.querySelectorAll('#anaViewToggle button').forEach(b => b.classList.toggle('active', b === btn));
       document.getElementById('anaAxis').hidden = (view !== 'line');
+      document.getElementById('anaFilters').hidden = (view === 'line');
       render();
     });
     document.getElementById('anaXFactor').addEventListener('change', e => { xFactor = e.target.value; render(); });
-    document.getElementById('anaXWindow').addEventListener('change', e => { xWindow = e.target.value; render(); });
   }
 
   window.initAnalyse = async function () {

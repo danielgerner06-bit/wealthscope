@@ -559,7 +559,7 @@
         </div>
         <div class="sek-rank-pop" id="sekRankPop" hidden>
           <div class="sek-rank-pop-head">Perlen je Sektor</div>
-          <div class="sek-rank-cols"><span>Sektor</span><span>Anteil</span><span title="Trefferquote: Anteil der geprüften Aktien dieses Sektors, die zur Perle wurden">Treffer</span><span title="Analysten-Gunst relativ zur Kursposition – hoch = Aufholpotenzial">Ψ</span></div>
+          <div class="sek-rank-cols" id="sekRankCols"><span>Sektor</span><span class="sortable" data-sort="anteil">Anteil</span><span class="sortable" data-sort="treffer" title="Trefferquote: Anteil der geprüften Aktien dieses Sektors, die zur Perle wurden">Treffer</span><span class="sortable" data-sort="psi" title="Analysten-Gunst relativ zur Kursposition – hoch = Aufholpotenzial">Ψ</span></div>
           <div class="sek-rank-list" id="sekRankList"></div>
         </div>
         <div class="sek-filter" id="sekFilter">
@@ -642,14 +642,7 @@
               <option value="analysts">Analysten</option>
             </select>
           </label>
-          <label>Zeitfenster
-            <select id="anaXWindow">
-              <option value="perf1m">1M</option>
-              <option value="perf3m">3M</option>
-              <option value="perf6m" selected>6M</option>
-              <option value="perf1j">1J</option>
-            </select>
-          </label>
+          <span class="ana-axis-hint">alle Zeitfenster als Linien</span>
         </div>
         <div class="ana-filters" id="anaFilters">
           <label>Sektor<select id="afSector"><option value="">alle</option></select></label>

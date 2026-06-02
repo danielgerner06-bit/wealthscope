@@ -163,6 +163,7 @@
   /* ---------- Analysten-Perlen mit Filter + Sortierung ---------- */
   const filters = { pe: null, perf6m: null, outperformPct: null, upside: null, analysts: null, div: null };
   let sectorFilter = null;   // aktiver Sektor-Filter (Klick auf Balken)
+  let rankSort = { key: 'anteil', dir: -1 };   // Sortierung im Sektor-Ranking-Popup
 
   // nur die Wert-Filter (KGV/6M/Outperform/Ziel/Analysten), OHNE Sektor-Filter
   function passesValueFilter(s) {
@@ -250,38 +251,55 @@
     // Abgelehnte Aktien je Sektor (aus dem Scan) -> echte Trefferquote, unabhängig von Sektorgröße
     const seen = (DATA.scan && DATA.scan.seenBySector) || {};
 
-    listEl.innerHTML = '';
-    if (!rows.length) { listEl.innerHTML = '<div class="sek-stocks-empty">Keine Perlen im aktuellen Filter.</div>'; return; }
-    rows.forEach(r => {
-      const sec = sectorById(r.id);
-      const pct = Math.round((r.n / totalN) * 100);
+    // je Sektor die drei Kennzahlen berechnen (für Anzeige + Sortierung)
+    const items = rows.map(r => {
       const perf = perfMap[r.id];
-
-      // Ψ = Trefferquote / relPos, alles dezimal.
-      // Trefferquote = Perlen / (Perlen + abgelehnte Aktien des Sektors) — so zählt die QUALITÄT
-      // (welcher Anteil der geprüften Aktien war gut), nicht die Sektorgröße. Fehlen noch
-      // Ablehnungsdaten, dient der Perlen-Anteil als Näherung.
       const rejected = seen[r.id] || 0;
-      const hitRate = (rejected > 0) ? r.n / (r.n + rejected) : (r.n / totalN);
+      const anteil = r.n / totalN;
+      // Trefferquote = Perlen / (Perlen + abgelehnte); ohne Ablehnungsdaten = null (zeigt „–")
+      const hitRate = (rejected > 0) ? r.n / (r.n + rejected) : null;
       const relPos = perf != null ? Math.max(0.05, (perf - perfMin) / perfSpan) : 1;
-      const score = (hitRate / relPos);
-      const scoreTxt = score.toFixed(2).replace('.', ',');
-      // Trefferquote als %: nur echte Quote zeigen, wenn Ablehnungsdaten da sind, sonst „—“
-      const hitTxt = rejected > 0 ? Math.round(hitRate * 100) + '%' : '–';
+      const psi = (hitRate != null ? hitRate : anteil) / relPos;   // Ψ nutzt echte Quote oder Anteil-Näherung
+      return { id: r.id, n: r.n, anteil, hitRate, psi };
+    });
 
+    // nach aktivem Sortierschlüssel sortieren (fehlende Trefferquote ans Ende)
+    const key = rankSort.key, dir = rankSort.dir;
+    items.sort((a, b) => {
+      const va = a[key], vb = b[key];
+      const ma = (va == null || !isFinite(va)), mb = (vb == null || !isFinite(vb));
+      if (ma && mb) return b.anteil - a.anteil;
+      if (ma) return 1; if (mb) return -1;
+      return dir === -1 ? vb - va : va - vb;
+    });
+
+    listEl.innerHTML = '';
+    if (!items.length) { listEl.innerHTML = '<div class="sek-stocks-empty">Keine Perlen im aktuellen Filter.</div>'; return; }
+    items.forEach(it => {
+      const sec = sectorById(it.id);
+      const pct = Math.round(it.anteil * 100);
+      const hitTxt = it.hitRate != null ? Math.round(it.hitRate * 100) + '%' : '–';
+      const scoreTxt = it.psi.toFixed(2).replace('.', ',');
+      const barPct = Math.round((it.n / max) * 100);
       const row = document.createElement('button');
-      row.className = 'sek-rank-row' + (sectorFilter === r.id ? ' active' : '');
+      row.className = 'sek-rank-row' + (sectorFilter === it.id ? ' active' : '');
       row.innerHTML =
         '<span class="sek-rank-name">' + sec.name + '</span>' +
         '<span class="sek-rank-n">' + pct + '%</span>' +
         '<span class="sek-rank-hit">' + hitTxt + '</span>' +
         '<span class="sek-rank-perfv">' + scoreTxt + '</span>';
       row.addEventListener('click', () => {
-        sectorFilter = (sectorFilter === r.id) ? null : r.id;  // Klick filtert die Liste
+        sectorFilter = (sectorFilter === it.id) ? null : it.id;  // Klick filtert die Liste
         renderStocks();
         toggleRankPop(false);
       });
       listEl.appendChild(row);
+    });
+    // aktive Sortierspalte markieren
+    document.querySelectorAll('#sekRankCols .sortable').forEach(c => {
+      c.classList.toggle('active', c.dataset.sort === key);
+      c.classList.toggle('asc', c.dataset.sort === key && dir === 1);
+      c.classList.toggle('desc', c.dataset.sort === key && dir === -1);
     });
   }
   function toggleRankPop(show) {
@@ -298,6 +316,14 @@
     document.addEventListener('click', e => {
       const pop = document.getElementById('sekRankPop');
       if (!pop.hidden && !e.target.closest('#sekRankPop') && !e.target.closest('#sekRankBtn')) toggleRankPop(false);
+    });
+    // Spalten-Überschriften: Klick sortiert; erneuter Klick dreht die Richtung
+    document.getElementById('sekRankCols').addEventListener('click', e => {
+      const col = e.target.closest('.sortable'); if (!col) return;
+      const k = col.dataset.sort;
+      if (rankSort.key === k) rankSort.dir = -rankSort.dir;
+      else { rankSort.key = k; rankSort.dir = -1; }
+      renderRankPop();
     });
   }
 
