@@ -622,13 +622,34 @@
     </header>
 
     <main class="ana-main">
-      <!-- LINKS: Filter + Balkendiagramm -->
+      <!-- LINKS: Filter + Diagramm (Balken oder Linie) -->
       <section class="sek-card ana-chart-card">
         <div class="sek-card-head">
-          <div>
-            <h2>Ø&nbsp;Performance seit Aufnahme</h2>
-            <p class="sek-card-sub" id="anaSub">Filtere Faktoren — die Balken zeigen die durchschnittliche Kursperformance der passenden Aktien je Zeitfenster.</p>
+          <h2 id="anaTitle">Ø&nbsp;Performance seit Aufnahme</h2>
+          <div class="ana-view-toggle" id="anaViewToggle" role="tablist">
+            <button data-view="bars" class="active">Zeitfenster</button>
+            <button data-view="line">Faktor-Kurve</button>
           </div>
+        </div>
+        <div class="ana-axis" id="anaAxis" hidden>
+          <label>X-Achse (Faktor)
+            <select id="anaXFactor">
+              <option value="pe">KGV</option>
+              <option value="outperformPct">Outperform&nbsp;%</option>
+              <option value="buyPct">Kaufempfehlung&nbsp;%</option>
+              <option value="upside">Kursziel-Potenzial&nbsp;%</option>
+              <option value="div">Dividende&nbsp;%</option>
+              <option value="analysts">Analysten</option>
+            </select>
+          </label>
+          <label>Zeitfenster
+            <select id="anaXWindow">
+              <option value="perf1m">1M</option>
+              <option value="perf3m">3M</option>
+              <option value="perf6m" selected>6M</option>
+              <option value="perf1j">1J</option>
+            </select>
+          </label>
         </div>
         <div class="ana-filters" id="anaFilters">
           <label>Sektor<select id="afSector"><option value="">alle</option></select></label>
@@ -652,7 +673,6 @@
       <aside class="ana-side">
         <section class="sek-card ana-factors-card">
           <div class="sek-card-head"><h2>Wichtigste Faktoren</h2></div>
-          <p class="sek-card-sub">Wie stark beeinflusst ein Faktor die Performance? (Spannweite Ø-Performance zwischen seinen Stufen)</p>
           <div class="ana-factors" id="anaFactors"></div>
         </section>
         <section class="sek-card sek-insight ana-ki">
