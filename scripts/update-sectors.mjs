@@ -29,7 +29,7 @@ const CAND_BUDGET = Number(process.env.CAND_BUDGET || 8);     // Kandidaten je L
 
 // HARTES Gemini-Budget pro Lauf gegen 429. Jeder Gemini-Aufruf zählt 1.
 // Free-Tier ist eng -> sparsam. Reihenfolge = Priorität (News zuerst).
-const GEMINI_BUDGET = Number(process.env.GEMINI_BUDGET || 6);
+const GEMINI_BUDGET = Number(process.env.GEMINI_BUDGET || 10);
 let geminiUsed = 0;
 const geminiBudgetLeft = () => geminiUsed < GEMINI_BUDGET;
 const useGemini = () => { geminiUsed++; };
@@ -187,10 +187,17 @@ const today = () => new Date().toISOString().slice(0, 10);
   {
     const needEnrich = topStocks.filter(s => s.enrichAt == null || (nowMs - Date.parse(s.enrichAt)) > STALE)
       .slice(0, Number(process.env.ENRICH_BUDGET || 40));
+    // Kandidaten-Yahoo-Symbole (Name -> Symbol) aus früheren Gemini-Funden, zum Nachschlagen
     let upCount = 0, peCount = 0;
     for (const s of needEnrich) {
-      const e = await enrichStock(s.yahoo || s.ticker);
-      if (!e) continue;
+      // Symbol bestimmen: explizites yahoo-Feld, sonst Ticker; bei Fehlschlag .DE-Fallback
+      let e = await enrichStock(s.yahoo || s.ticker);
+      if (!e && !s.yahoo && /^[A-Z0-9]{1,5}$/.test(s.ticker)) {
+        // deutsche/europäische Nebenwerte hängen an .DE (z. B. KTN -> KTN.DE)
+        e = await enrichStock(s.ticker + '.DE');
+        if (e) { s.yahoo = s.ticker + '.DE'; }
+      }
+      if (!e) { s.enrichAt = today(); db[s.ticker] = { ...db[s.ticker], enrichAt: s.enrichAt }; continue; } // auch bei Fehlschlag markieren, sonst jeder Lauf erneut
       if (e.upside != null) { s.upside = e.upside; upCount++; }
       // KGV: Yahoo-Wert; bei Verlust (EPS < 0) bewusst kein KGV
       s.pe = (e.eps != null && e.eps < 0) ? null : e.pe;
@@ -198,7 +205,7 @@ const today = () => new Date().toISOString().slice(0, 10);
       if (e.analysts != null) s.analysts = e.analysts;
       s.enrichAt = today();
       if (s.pe != null) peCount++;
-      db[s.ticker] = { ...db[s.ticker], upside: s.upside, pe: s.pe, eps: s.eps, analysts: s.analysts, enrichAt: s.enrichAt };
+      db[s.ticker] = { ...db[s.ticker], upside: s.upside, pe: s.pe, eps: s.eps, analysts: s.analysts, yahoo: s.yahoo, enrichAt: s.enrichAt };
     }
     if (needEnrich.length) console.log(`Yahoo-Anreicherung: ${needEnrich.length} Aktien, ${upCount} mit Kursziel, ${peCount} mit KGV.`);
   }

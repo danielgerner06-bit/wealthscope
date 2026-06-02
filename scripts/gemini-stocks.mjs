@@ -10,7 +10,7 @@
 
 import { sectorForFinnhub, SECTOR_IDS } from './sectors.mjs';
 
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
 const SECTOR_LIST = SECTOR_IDS.join(', ');
 
 // Aufnahmekriterium: Kaufempfehlungs-Anteil (Buy + Strong Buy) >= 80 %.

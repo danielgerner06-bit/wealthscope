@@ -1,7 +1,7 @@
 // Gemini-Texte: knappe Lage-Notizen je Sektor/Region (rollierend) + Markt-News-Ticker.
 import { SECTORS, REGIONS } from './sectors.mjs';
 
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
 const nameOf = id => (SECTORS.find(s => s.id === id) || REGIONS.find(s => s.id === id) || {}).name || id;
 
 async function gen(key, prompt, useSearch = false) {

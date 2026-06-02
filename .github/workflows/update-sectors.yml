@@ -2,7 +2,7 @@ name: Sektordaten aktualisieren
 
 on:
   schedule:
-    - cron: '0 */6 * * *'   # alle 6 Stunden (4x/Tag) – bleibt sicher im Gemini-Free-Limit
+    - cron: '0 */3 * * *'   # alle 3 Stunden (8x/Tag); flash-lite hat 1000 RPD -> reichlich Puffer
   workflow_dispatch:         # manueller Start möglich
 
 permissions:
