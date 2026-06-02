@@ -49,8 +49,8 @@
             <div class="hub-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l3-4 3 2 4-7 2 3"/><circle cx="7" cy="15" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="13" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="6" r="1.2" fill="currentColor" stroke="none"/></svg>
             </div>
-            <h2>Sektor<span class="grad">Scope</span></h2>
-            <p>Welche Branchen am Weltaktienmarkt gerade führen — Performance & Analystentrends.</p>
+            <h2>Trend<span class="grad">Scope</span></h2>
+            <p>Was am Weltmarkt gerade läuft — Sektoren, Regionen, Analysten-Perlen & News.</p>
             <span class="hub-card-go">Öffnen
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
@@ -491,7 +491,11 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         <span>Apps</span>
       </button>
-      <div class="sek-brand">Sektor<span class="grad">Scope</span></div>
+      <div class="sek-brand">Trend<span class="grad">Scope</span></div>
+      <div class="sek-news" id="sekNews" aria-live="polite">
+        <span class="sek-news-tag">NEWS</span>
+        <div class="sek-news-track" id="sekNewsTrack"></div>
+      </div>
       <div class="sek-meta">
         <span class="sek-dot"></span>
         <span id="sekUpdated">—</span>
@@ -524,17 +528,14 @@
       <!-- RECHTS: Analysten-Perlen mit Sortierung -->
       <section class="sek-card sek-analyst">
         <div class="sek-card-head">
-          <div>
-            <h2>Analysten-Perlen</h2>
-            <p class="sek-card-sub">Kaufempfehlung&nbsp;≥&nbsp;95&nbsp;% und Outperform&nbsp;≥&nbsp;80&nbsp;% — quer über alle Größen</p>
-          </div>
+          <h2>Analysten-Perlen</h2>
           <span class="sek-badge" id="sekStockCount"></span>
         </div>
         <div class="sek-filter" id="sekFilter">
           <span class="sek-filter-label">Filter:</span>
-          <input type="text" inputmode="numeric" id="fltPe" placeholder="KGV ≤" aria-label="KGV maximal">
+          <input type="text" inputmode="numeric" id="fltPe" placeholder="KGV ≤" title="KGV höchstens — 0 zeigt unprofitable (ohne KGV)" aria-label="KGV maximal, 0 für ohne KGV">
           <input type="text" inputmode="numeric" id="fltPerf6m" placeholder="6M ≤ %" aria-label="6-Monats-Performance höchstens in Prozent">
-          <input type="text" inputmode="numeric" id="fltBuy" placeholder="Kauf ≥ %" aria-label="Kaufempfehlung minimal in Prozent">
+          <input type="text" inputmode="numeric" id="fltOutperf" placeholder="Outp. ≥ %" aria-label="Outperform minimal in Prozent">
           <input type="text" inputmode="numeric" id="fltUpside" placeholder="Ziel ≥ %" aria-label="Analystenziel-Potenzial minimal in Prozent">
           <button class="sek-filter-clear" id="fltClear" type="button">zurücksetzen</button>
         </div>

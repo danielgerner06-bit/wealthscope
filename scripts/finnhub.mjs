@@ -1,6 +1,8 @@
 // Finnhub-Anbindung: Sektor-Performance (ETFs) + rollierender Analysten-Scan.
 import { sectorForFinnhub } from './sectors.mjs';
 
+const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 80);
+
 const BASE = 'https://finnhub.io/api/v1';
 
 // Einfache Ratenbegrenzung: Free-Tier erlaubt 60 Calls/Min -> ~1.05s Abstand.
@@ -61,7 +63,7 @@ export async function scanAnalystStocks(key, state, budget) {
         if (total > 0) {
           const buyPct = Math.round(((r.strongBuy + r.buy) / total) * 100);
           const outperformPct = Math.round((r.strongBuy / total) * 100);
-          if (buyPct >= 95 && outperformPct >= 80) {
+          if (buyPct >= MIN_BUY_PCT) {
             checked.push({ ticker: sym, buyPct, outperformPct, analysts: total });
           } else {
             delete state.db[sym]; // war evtl. mal Treffer -> jetzt nicht mehr

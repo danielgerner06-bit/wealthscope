@@ -13,7 +13,7 @@
 
 import fs from 'node:fs';
 import { SECTORS, REGIONS } from './sectors.mjs';
-import { buildSectorNotes } from './insight.mjs';
+import { buildNotes, buildNews } from './insight.mjs';
 import { scanAnalystStocks, fetchMetric } from './finnhub.mjs';
 import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m } from './prices.mjs';
 import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
@@ -81,6 +81,34 @@ const today = () => new Date().toISOString().slice(0, 10);
     } catch (e) { console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
   }
 
+  /* 2b2) Bestehende Gemini-Perlen rollierend RE-VALIDIEREN -----------------
+     Per Websuche erneut prüfen; wer das Kriterium (Kauf >= 80%) nicht mehr
+     erfüllt, fliegt aus der DB. Finnhub-Werte werden ohnehin im Scan geprüft. */
+  if (GEMINI_KEY) {
+    try {
+      const geminiTickers = Object.values(db)
+        .filter(s => s.via && s.via.startsWith('gemini'))
+        .map(s => ({ ticker: s.ticker, name: s.name }));
+      if (geminiTickers.length) {
+        const rn = geminiTickers.length;
+        const rstart = (scan.recheckCursor || 0) % rn;
+        const batch = [];
+        for (let i = 0; i < Math.min(Number(process.env.RECHECK_BUDGET || 10), rn); i++) batch.push(geminiTickers[(rstart + i) % rn]);
+        scan.recheckCursor = (rstart + batch.length) % rn;
+
+        const names = batch.map(b => b.name + ' (' + b.ticker + ')');
+        const stillOk = await checkCandidates(GEMINI_KEY, names);
+        const okSet = new Set(stillOk.map(s => s.ticker));
+        for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s };
+        let dropped = 0;
+        for (const b of batch) {
+          if (!okSet.has(b.ticker) && db[b.ticker]) { delete db[b.ticker]; dropped++; }
+        }
+        console.log(`Re-Validierung: ${batch.length} Perlen geprüft, ${dropped} entfernt (Kriterium nicht mehr erfüllt).`);
+      }
+    } catch (e) { console.error('Re-Validierung fehlgeschlagen:', e.message); }
+  }
+
   /* 2c) Gemini: neue unbekannte Werte entdecken (mehrere Foki pro Lauf) ---- */
   // Rotierende Schwerpunkte, damit über die Läufe breit gestreut neue Werte kommen.
   const FOCI = [
@@ -143,27 +171,50 @@ const today = () => new Date().toISOString().slice(0, 10);
     let peCount = 0;
     for (const s of needPe) {
       const { pe, eps } = await fetchMetric(s.ticker, FINNHUB_KEY);
-      s.pe = pe; s.eps = eps; s.peAt = today();
-      db[s.ticker] = { ...db[s.ticker], pe, eps, peAt: s.peAt };
-      if (pe != null) peCount++;
+      s.eps = eps; s.peAt = today();
+      // Finnhub-KGV bevorzugen; wenn keins (z. B. Nicht-US-Wert), Gemini-KGV als Fallback,
+      // aber nur plausibel (0–500) und nur wenn EPS nicht negativ ist.
+      let peFinal = pe;
+      if (peFinal == null && s.peGemini != null && s.peGemini > 0 && s.peGemini <= 500 && !(eps != null && eps < 0)) {
+        peFinal = s.peGemini;
+      }
+      s.pe = peFinal;
+      db[s.ticker] = { ...db[s.ticker], pe: peFinal, eps, peAt: s.peAt };
+      if (peFinal != null) peCount++;
     }
-    if (needPe.length) console.log(`KGV (Finnhub) für ${needPe.length} Aktien geprüft, ${peCount} mit Wert.`);
+    if (needPe.length) console.log(`KGV für ${needPe.length} Aktien geprüft, ${peCount} mit Wert (Finnhub + Gemini-Fallback).`);
   }
 
-  /* 4) Sektor-Lage-Texte rollierend (2-3 Sektoren pro Lauf) ----------- */
+  /* 4) Knappe Lage-Texte rollierend: Sektoren UND Regionen ------------ */
   let sectorNotes = prev?.sectorNotes || {};
+  let regionNotes = prev?.regionNotes || {};
   if (GEMINI_KEY) {
+    const PER = Number(process.env.NOTES_PER_RUN || 3);
     try {
       const ids = SECTORS.map(s => s.id);
       const start = (scan.noteCursor || 0) % ids.length;
-      const PER = Number(process.env.NOTES_PER_RUN || 3);
-      const todo = [];
-      for (let i = 0; i < PER; i++) todo.push(ids[(start + i) % ids.length]);
+      const todo = []; for (let i = 0; i < PER; i++) todo.push(ids[(start + i) % ids.length]);
       scan.noteCursor = (start + PER) % ids.length;
-      const fresh = await buildSectorNotes(GEMINI_KEY, todo, bars30, topStocks);
+      const fresh = await buildNotes(GEMINI_KEY, todo, bars30, topStocks, 'Sektor');
       sectorNotes = { ...sectorNotes, ...fresh };
-      console.log(`Sektor-Lage: ${Object.keys(fresh).length} Texte aktualisiert (${todo.join(', ')}).`);
-    } catch (e) { console.error('Sektor-Lage fehlgeschlagen, behalte alte:', e.message); }
+      console.log(`Sektor-Lage: ${Object.keys(fresh).length}/${todo.length} (${todo.join(', ')}).`);
+    } catch (e) { console.error('Sektor-Lage fehlgeschlagen:', e.message); }
+    try {
+      const rids = REGIONS.map(r => r.id);
+      const rstart = (scan.regionNoteCursor || 0) % rids.length;
+      const rtodo = []; for (let i = 0; i < PER; i++) rtodo.push(rids[(rstart + i) % rids.length]);
+      scan.regionNoteCursor = (rstart + PER) % rids.length;
+      const rfresh = await buildNotes(GEMINI_KEY, rtodo, bars30Region, topStocks, 'Region');
+      regionNotes = { ...regionNotes, ...rfresh };
+      console.log(`Region-Lage: ${Object.keys(rfresh).length}/${rtodo.length} (${rtodo.join(', ')}).`);
+    } catch (e) { console.error('Region-Lage fehlgeschlagen:', e.message); }
+  }
+
+  /* 5) Markt-News-Ticker (max 3 wichtigste, via Google-Search) -------- */
+  let news = prev?.news || null;
+  if (GEMINI_KEY) {
+    try { news = await buildNews(GEMINI_KEY); console.log(`News: ${news.items.length} Schlagzeilen.`); }
+    catch (e) { console.error('News fehlgeschlagen, behalte alte:', e.message); }
   }
 
   const out = {
@@ -176,6 +227,8 @@ const today = () => new Date().toISOString().slice(0, 10);
     bars30Region,
     topStocks,
     sectorNotes,
+    regionNotes,
+    news,
     scan,
   };
 

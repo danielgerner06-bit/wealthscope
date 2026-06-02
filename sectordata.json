@@ -621,5 +621,23 @@
     ],
     "noteCursor": 2,
     "focusCursor": 0
+  },
+  "news": {
+    "items": [
+      "Fed deutet Zinspause an",
+      "Ölpreis nach Nahost-Eskalation höher",
+      "KI-Nachfrage treibt Chip-Werte"
+    ],
+    "date": "2026-06-02"
+  },
+  "regionNotes": {
+    "apac": {
+      "text": "Asien-Pazifik führt: schwacher Dollar und Tech-Erholung treiben die Region klar über ihr Normalniveau.",
+      "date": "2026-06-02"
+    },
+    "em": {
+      "text": "Schwellenländer profitieren von Kapitalzuflüssen und Rohstoffstärke.",
+      "date": "2026-06-02"
+    }
   }
 }

@@ -1,16 +1,17 @@
-// Erzeugt mit Gemini kurze Lage-Texte je Sektor (rollierend, nicht alle pro Tag).
-import { SECTORS } from './sectors.mjs';
+// Gemini-Texte: knappe Lage-Notizen je Sektor/Region (rollierend) + Markt-News-Ticker.
+import { SECTORS, REGIONS } from './sectors.mjs';
 
 const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
-const nameOf = id => (SECTORS.find(s => s.id === id) || {}).name || id;
+const nameOf = id => (SECTORS.find(s => s.id === id) || REGIONS.find(s => s.id === id) || {}).name || id;
 
-async function gen(key, prompt) {
+async function gen(key, prompt, useSearch = false) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${key}`;
-  const body = JSON.stringify({
+  const payload = {
     contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 0.7, maxOutputTokens: 6144, thinkingConfig: { thinkingBudget: 0 } },
-  });
-  // bis zu 2 Versuche – 2.5-flash liefert sporadisch leere Antworten
+    generationConfig: { temperature: 0.6, maxOutputTokens: 6144, thinkingConfig: { thinkingBudget: 0 } },
+  };
+  if (useSearch) payload.tools = [{ google_search: {} }];
+  const body = JSON.stringify(payload);
   let lastErr = '';
   for (let attempt = 0; attempt < 2; attempt++) {
     const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body });
@@ -24,32 +25,49 @@ async function gen(key, prompt) {
   throw new Error(lastErr);
 }
 
-// Liefert { sectorId: { text, date } } für die übergebenen Sektor-IDs.
-export async function buildSectorNotes(key, sectorIds, bars30, topStocks) {
+// Knappe Lage-Notizen für Sektoren ODER Regionen. items = [{id, perf, avg30, perf6m}, ...]
+// Liefert { id: { text, date } }. Text ist SEHR kurz (1-2 Sätze).
+export async function buildNotes(key, ids, bars, topStocks, kind = 'Sektor') {
   const out = {};
   const today = new Date().toISOString().slice(0, 10);
-  for (const id of sectorIds) {
-    const bar = (bars30 || []).find(b => b.id === id);
+  for (const id of ids) {
+    const bar = (bars || []).find(b => b.id === id);
     const perf = bar ? `${bar.perf > 0 ? '+' : ''}${bar.perf}%` : 'k. A.';
     const perf6m = bar && bar.perf6m != null ? `${bar.perf6m > 0 ? '+' : ''}${bar.perf6m}%` : 'k. A.';
     const avg = bar && bar.avg30 != null ? `${bar.avg30 > 0 ? '+' : ''}${bar.avg30}%` : 'k. A.';
-    const perlen = (topStocks || []).filter(s => s.sector === id).slice(0, 4)
-      .map(s => s.name + (s.ticker ? ` (${s.ticker})` : '')).join(', ');
+    const perlen = kind === 'Sektor'
+      ? (topStocks || []).filter(s => s.sector === id).slice(0, 3).map(s => s.ticker).join(', ')
+      : '';
 
-    const prompt = `Du bist Aktienmarkt-Analyst. Schreibe einen KURZEN deutschen Fließtext (3-4 Sätze, ~60-80 Wörter) zur AKTUELLEN Lage des Sektors "${nameOf(id)}" am globalen Aktienmarkt.
+    const prompt = `${kind === 'Region' ? 'Weltregion' : 'Aktienmarkt-Sektor'} "${nameOf(id)}".
+Zahlen: 30-Tage ${perf} (Normalniveau ${avg}), 6 Monate ${perf6m}${perlen ? `, auffällige Werte: ${perlen}` : ''}.
 
-Kennzahlen dieses Sektors:
-- 30-Tage-Kursentwicklung: ${perf} (sein typischer 30-Tage-Schnitt über 360 Tage: ${avg})
-- 6-Monats-Entwicklung: ${perf6m}
-- Hoch bewertete Analysten-Favoriten hier: ${perlen || 'derzeit keine markanten'}
-
-Erkläre konkret und plausibel, WARUM der Sektor gerade so läuft (z. B. Zinsen, KI-/Investitionszyklus, Energiepreise, Konjunktur, Regulierung). Beziehe dich auf die Zahlen (über/unter Normalniveau). Sachlich, kein Hype, keine Anlageberatung, keine Floskeln. Nur den Text, keine Überschrift.`;
-
+Schreibe MAXIMAL 2 sehr knappe deutsche Sätze (zusammen höchstens 30 Wörter), die SOFORT klar machen, was gerade abgeht und warum. Konkret (Zinsen, KI, Energie, Konjunktur, Geopolitik …), kein Geschwafel, keine Floskeln, keine Anlageberatung. Nur den Text.`;
     try {
       out[id] = { text: await gen(key, prompt), date: today };
     } catch (e) {
-      console.error(`  Sektor-Text ${id} fehlgeschlagen:`, e.message);
+      console.error(`  ${kind}-Text ${id} fehlgeschlagen:`, e.message);
     }
   }
   return out;
+}
+
+// Markt-News-Ticker: die wichtigsten (max 3) marktbewegenden News, sehr knapp.
+// Liefert { items: ["...", "..."], date } per Google-Search-Grounding.
+export async function buildNews(key) {
+  const today = new Date().toISOString().slice(0, 10);
+  const prompt = `Suche über Google die AKTUELL wichtigsten Nachrichten von heute/gestern, die die globalen Finanzmärkte bewegen — politisch, wirtschaftlich, geopolitisch, Notenbanken, große Unternehmen.
+
+Gib die 3 WICHTIGSTEN als JSON-Array von kurzen deutschen Schlagzeilen zurück (je höchstens 9 Wörter, prägnant, konkret). Beispiel: ["Fed signalisiert Zinssenkung", "Ölpreis steigt nach Nahost-Eskalation", "Nvidia-Zahlen treiben Tech-Rally"].
+Nur das JSON-Array, kein weiterer Text.`;
+  const text = await gen(key, prompt, true);
+  let items = [];
+  try {
+    const t = text.replace(/```json/gi, '').replace(/```/g, '');
+    const a = t.indexOf('['), b = t.lastIndexOf(']');
+    if (a >= 0 && b > a) items = JSON.parse(t.slice(a, b + 1));
+  } catch { /* ignore */ }
+  items = (Array.isArray(items) ? items : []).map(x => String(x).trim()).filter(Boolean).slice(0, 3);
+  if (!items.length) throw new Error('keine News geparst');
+  return { items, date: today };
 }

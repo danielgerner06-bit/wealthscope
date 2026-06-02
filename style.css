@@ -1324,8 +1324,29 @@ a { text-decoration: none; color: inherit; }
   background: linear-gradient(120deg, #818cf8, #c084fc 50%, #22d3ee);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
+/* News-Ticker in der Header-Mitte */
+.sek-news {
+  flex: 1; min-width: 0; margin: 0 6px;
+  display: flex; align-items: center; gap: 10px;
+  overflow: hidden;
+  background: rgba(148,163,184,0.06); border: 1px solid var(--s-border);
+  border-radius: 99px; padding: 6px 14px 6px 6px;
+}
+.sek-news-tag {
+  flex-shrink: 0; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.8px;
+  padding: 4px 8px; border-radius: 99px; color: #fff;
+  background: linear-gradient(120deg, #ef4444, #f59e0b);
+}
+.sek-news-track {
+  display: flex; gap: 0; white-space: nowrap; min-width: 0;
+  animation: sekTicker 38s linear infinite;
+}
+.sek-news-track span { padding-right: 48px; font-size: 0.82rem; font-weight: 600; color: var(--s-text); }
+.sek-news:hover .sek-news-track { animation-play-state: paused; }
+@keyframes sekTicker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
 .sek-meta {
-  margin-left: auto; display: inline-flex; align-items: center; gap: 8px;
+  flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px;
   color: var(--s-faint); font-size: 0.8rem; font-weight: 600;
   padding: 6px 12px; border-radius: 99px;
   background: rgba(148,163,184,0.06); border: 1px solid var(--s-border);
@@ -1441,7 +1462,8 @@ a { text-decoration: none; color: inherit; }
 .sek-sort button.active.asc::after { content: '▴'; }
 
 /* Analystenliste */
-.sek-stocks-list { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 3px; padding: 2px 4px 2px 2px; }
+.sek-stocks-list { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 3px; padding: 2px 4px 2px 2px; scrollbar-width: none; -ms-overflow-style: none; }
+.sek-stocks-list::-webkit-scrollbar { width: 0; height: 0; display: none; }
 .sek-stock {
   display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 11px;
   padding: 9px 11px; border-radius: 11px;

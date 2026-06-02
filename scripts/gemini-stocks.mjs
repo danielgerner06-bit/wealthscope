@@ -13,6 +13,10 @@ import { sectorForFinnhub, SECTOR_IDS } from './sectors.mjs';
 const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const SECTOR_LIST = SECTOR_IDS.join(', ');
 
+// Aufnahmekriterium: Kaufempfehlungs-Anteil (Buy + Strong Buy) >= 80 %.
+export const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 80);
+const qualifies = r => isFinite(r.buyPct) && r.buyPct >= MIN_BUY_PCT;
+
 async function groundedJSON(key, prompt) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${key}`;
   const res = await fetch(url, {
@@ -77,6 +81,7 @@ Für jede Aktie ermittle aus aktuellen Quellen:
 - outperformPct: Prozent, die Strong Buy / Outperform sind (0-100)
 - sector: GENAU eine dieser IDs anhand der Branche: ${SECTOR_LIST}
 - upside: Kursziel-Potenzial in % falls auffindbar, sonst null
+- pe: aktuelles KGV (Kurs-Gewinn-Verhältnis) als Zahl; bei Verlust null
 - yahoo: das Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "FRA.DE", "NVDA"), für Kursabfragen
 - source: kurze Quellenangabe
 
@@ -89,14 +94,14 @@ Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, die du sicher gefunden hast
   for (const o of arr) {
     if (!o || !o.ticker) continue;
     const r = normRating(o);
-    if (!r.sector || !isFinite(r.buyPct) || !isFinite(r.outperformPct)) continue;
-    if (r.buyPct >= 95 && r.outperformPct >= 80) {
+    if (!r.sector) continue;
+    if (qualifies(r)) {
       out.push({
         ticker: String(o.ticker).toUpperCase(),
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo,
+        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe,
         via: 'gemini', source: o.source || sources[0] || 'web',
         seen: new Date().toISOString().slice(0, 10),
       });
@@ -113,9 +118,9 @@ export async function discoverNew(key, knownNames, focus = '') {
   const focusLine = focus
     ? `Lege diesmal den Schwerpunkt auf: ${focus}. `
     : '';
-  const prompt = `Du suchst über die Google-Suche WELTWEIT kleine bis mittelgroße, eher UNBEKANNTE Aktien (Small-/Mid-Caps, gern aus Deutschland/Europa, aber auch USA/Asien), die von Analysten fast ausschließlich mit Kaufempfehlungen bewertet werden. ${focusLine}
+  const prompt = `Du suchst über die Google-Suche WELTWEIT kleine bis mittelgroße, eher UNBEKANNTE Aktien (Small-/Mid-Caps, gern aus Deutschland/Europa, aber auch USA/Asien), die von Analysten überwiegend mit Kaufempfehlungen bewertet werden. ${focusLine}
 
-Kriterium: buyPct (Buy + Strong Buy) >= 95 UND outperformPct (Strong Buy/Outperform) >= 80. Anzahl Analysten egal (auch 1-3 reicht). Unternehmensgröße egal — je unbekannter/kleiner, desto besser. KEINE Mega-Caps (kein Apple, Microsoft, Nvidia, Amazon, Alphabet, Meta usw.).
+Kriterium: buyPct (Buy + Strong Buy) >= ${MIN_BUY_PCT} (Prozent aller Empfehlungen). Anzahl Analysten egal (auch 1-3 reicht). Unternehmensgröße egal — je unbekannter/kleiner, desto besser. KEINE Mega-Caps (kein Apple, Microsoft, Nvidia, Amazon, Alphabet, Meta usw.).
 
 Schlage NUR Aktien vor, die NICHT in dieser Liste bereits bekannter Werte stehen: ${known || '(noch keine)'}.
 
@@ -124,6 +129,7 @@ Für jeden Vorschlag gib aus aktuellen Quellen:
 - analysts, buyPct (0-100), outperformPct (0-100)
 - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
 - upside (% oder null)
+- pe: aktuelles KGV als Zahl; bei Verlust null
 - yahoo: Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "NVDA")
 - source: kurze Quellenangabe
 
@@ -136,14 +142,14 @@ Gib NUR ein JSON-Array mit bis zu 10 solcher Aktien zurück. Kein Text außerhal
   for (const o of arr) {
     if (!o || !o.ticker) continue;
     const r = normRating(o);
-    if (!r.sector || !isFinite(r.buyPct) || !isFinite(r.outperformPct)) continue;
-    if (r.buyPct >= 95 && r.outperformPct >= 80) {
+    if (!r.sector) continue;
+    if (qualifies(r)) {
       out.push({
         ticker: String(o.ticker).toUpperCase(),
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo,
+        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe,
         via: 'gemini-discover', source: o.source || sources[0] || 'web',
         seen: new Date().toISOString().slice(0, 10),
       });

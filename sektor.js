@@ -61,6 +61,15 @@
         responsive: true,
         maintainAspectRatio: false,
         animation: { duration: 650, easing: 'easeOutCubic' },
+        // Klick auf einen Balken filtert die Perlen nach diesem Sektor (nur Sektoransicht)
+        onClick: (e, els) => {
+          if (view !== 'sectors' || !els.length) return;
+          const id = barRows[els[0].index]?.id;
+          if (!id) return;
+          sectorFilter = (sectorFilter === id) ? null : id;
+          renderStocks();
+        },
+        onHover: (e, els) => { if (e.native?.target) e.native.target.style.cursor = (view === 'sectors' && els.length) ? 'pointer' : 'default'; },
         plugins: { legend: { display: false }, tooltip: { enabled: false } },
         scales: {
           x: {
@@ -126,15 +135,20 @@
   };
 
   /* ---------- Analysten-Perlen mit Filter + Sortierung ---------- */
-  const filters = { pe: null, perf6m: null, buyPct: null, upside: null };
+  const filters = { pe: null, perf6m: null, outperformPct: null, upside: null };
+  let sectorFilter = null;   // aktiver Sektor-Filter (Klick auf Balken)
 
   function passesFilter(s) {
-    // KGV höchstens; 6M-Performance HÖCHSTENS (Aktien, die noch nicht durch die Decke sind);
-    // Kauf-% und Ziel-Potenzial mindestens. Aktien ohne den jeweiligen Wert fallen raus.
-    if (filters.pe != null && !(s.pe != null && s.pe <= filters.pe)) return false;
+    // KGV: Eingabe 0 => nur Aktien OHNE KGV (unprofitabel); sonst KGV höchstens.
+    if (filters.pe != null) {
+      if (filters.pe === 0) { if (s.pe != null) return false; }
+      else if (!(s.pe != null && s.pe <= filters.pe)) return false;
+    }
+    // 6M HÖCHSTENS (Aktien, die noch nicht durch die Decke sind); Outperform & Ziel mindestens.
     if (filters.perf6m != null && !(s.perf6m != null && s.perf6m <= filters.perf6m)) return false;
-    if (filters.buyPct != null && !(s.buyPct != null && s.buyPct >= filters.buyPct)) return false;
+    if (filters.outperformPct != null && !(s.outperformPct != null && s.outperformPct >= filters.outperformPct)) return false;
     if (filters.upside != null && !(s.upside != null && s.upside >= filters.upside)) return false;
+    if (sectorFilter && s.sector !== sectorFilter) return false;
     return true;
   }
 
@@ -143,8 +157,10 @@
     const countEl = document.getElementById('sekStockCount');
     const all = Array.isArray(DATA.topStocks) ? DATA.topStocks.slice() : [];
     const stocks = all.filter(passesFilter).sort(cmp);
-    const anyFilter = Object.values(filters).some(v => v != null);
-    countEl.textContent = anyFilter ? stocks.length + ' / ' + all.length : all.length + ' Treffer';
+    const anyFilter = sectorFilter || Object.values(filters).some(v => v != null);
+    countEl.textContent = sectorFilter
+      ? sectorById(sectorFilter).name + ' · ' + stocks.length
+      : (anyFilter ? stocks.length + ' / ' + all.length : all.length + ' Treffer');
 
     list.innerHTML = '';
     if (!stocks.length) {
@@ -213,7 +229,7 @@
   }
 
   function wireFilter() {
-    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltBuy: 'buyPct', fltUpside: 'upside' };
+    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltOutperf: 'outperformPct', fltUpside: 'upside' };
     Object.keys(map).forEach(id => {
       document.getElementById(id).addEventListener('input', e => {
         // erlaubt negative Werte und Komma; ungültige Eingabe -> kein Filter
@@ -225,7 +241,8 @@
     });
     document.getElementById('fltClear').addEventListener('click', () => {
       Object.keys(map).forEach(id => { document.getElementById(id).value = ''; });
-      filters.pe = filters.perf6m = filters.buyPct = filters.upside = null;
+      filters.pe = filters.perf6m = filters.outperformPct = filters.upside = null;
+      sectorFilter = null;
       renderStocks();
     });
   }
@@ -234,8 +251,8 @@
   function openSectorModal(id) {
     const sec = itemById(id);
     const bar = viewBars().find(b => b.id === id) || {};
-    // KI-Lagetexte gibt es nur für Sektoren
-    const note = view === 'sectors' ? (DATA.sectorNotes || {})[id] : null;
+    // KI-Lagetext je nach Ansicht aus sectorNotes bzw. regionNotes
+    const note = (view === 'regions' ? (DATA.regionNotes || {}) : (DATA.sectorNotes || {}))[id];
 
     document.getElementById('sekModalTitle').textContent = sec.name;
     document.getElementById('sekModalDot').style.background = sec.color;
@@ -247,14 +264,10 @@
       stat('Ø 30T (360T)', bar.avg30 != null ? fmtPct(bar.avg30) : '—', cl(bar.avg30)) +
       stat('6 Monate', bar.perf6m != null ? fmtPct(bar.perf6m) : '—', cl(bar.perf6m));
 
-    const insightBox = document.querySelector('.sek-modal-insight');
-    if (view === 'regions') {
-      insightBox.style.display = 'none';
-    } else {
-      insightBox.style.display = '';
-      document.getElementById('sekModalText').textContent = note?.text || 'Für diesen Sektor liegt noch kein KI-Text vor — er wird in den nächsten Tagen ergänzt (die Analyse läuft rollierend, um das Kontingent zu schonen).';
-      document.getElementById('sekModalDate').textContent = note?.date ? 'Stand: ' + note.date : '';
-    }
+    document.querySelector('.sek-modal-insight').style.display = '';
+    document.getElementById('sekModalText').textContent = note?.text ||
+      'Hier liegt noch kein KI-Text vor — er wird in den nächsten Läufen ergänzt (die Analyse läuft rollierend, um das Kontingent zu schonen).';
+    document.getElementById('sekModalDate').textContent = note?.date ? 'Stand: ' + note.date : '';
 
     const m = document.getElementById('sekModal');
     m.hidden = false;
@@ -272,14 +285,26 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
   }
 
+  /* ---------- News-Ticker ---------- */
+  function renderNews() {
+    const track = document.getElementById('sekNewsTrack');
+    const wrap = document.getElementById('sekNews');
+    const items = DATA.news?.items || [];
+    if (!items.length) { wrap.style.display = 'none'; return; }
+    wrap.style.display = '';
+    // Schlagzeilen durch Trenner verbunden, fortlaufend (CSS-Animation scrollt)
+    const joined = items.join('   •   ');
+    track.innerHTML = '<span>' + joined + '</span><span aria-hidden="true">' + joined + '</span>';
+  }
+
   /* ---------- Ansicht-Toggle: Sektoren <-> Regionen ---------- */
   function applyViewLabels() {
     const isReg = view === 'regions';
     document.getElementById('sekBarsTitle').textContent =
       (isReg ? 'Regionen-Performance' : 'Sektor-Performance') + ' · 30 Tage';
     document.getElementById('sekBarsSub').textContent = isReg
-      ? 'Weltregionen gerankt nach 30-Tage-Kurs. Klick auf einen Namen zeigt die Kennzahlen.'
-      : 'Gerankt nach 30-Tage-Kurs. Klick auf einen Namen zeigt die aktuelle Lage.';
+      ? 'Weltregionen gerankt nach 30-Tage-Kurs. Klick auf einen Namen zeigt die Lage.'
+      : 'Klick auf einen Namen zeigt die Lage, Klick auf einen Balken filtert die Perlen.';
   }
   function wireViewToggle() {
     document.getElementById('sekViewToggle').addEventListener('click', e => {
@@ -287,6 +312,7 @@
       if (!btn || btn.dataset.view === view) return;
       view = btn.dataset.view;
       document.querySelectorAll('#sekViewToggle button').forEach(b => b.classList.toggle('active', b === btn));
+      if (view === 'regions' && sectorFilter) { sectorFilter = null; renderStocks(); } // Sektorfilter bei Regionansicht lösen
       applyViewLabels();
       renderBars();
     });
@@ -324,6 +350,7 @@
       renderStand();
       if (!wired) { wireSort(); wireFilter(); wireModal(); wireViewToggle(); wired = true; }
       applyViewLabels();
+      renderNews();
       renderBars();
       renderStocks();
     } catch (err) {
