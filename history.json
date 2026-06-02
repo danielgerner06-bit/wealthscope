@@ -773,7 +773,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        44.61
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "KOPN": {
       "ticker": "KOPN",
@@ -794,7 +799,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        30.65
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "KNSA": {
       "ticker": "KNSA",
@@ -815,7 +825,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -17.34
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "ICUI": {
       "ticker": "ICUI",
@@ -836,7 +851,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        11.06
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "ADEA": {
       "ticker": "ADEA",
@@ -857,7 +877,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -13.11
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "IXX": {
       "ticker": "IXX",
@@ -878,7 +903,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -4.28
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "ADSK": {
       "ticker": "ADSK",
@@ -899,7 +929,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -3.53
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "KTN": {
       "ticker": "KTN",
@@ -920,7 +955,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        5.08
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "GEV": {
       "ticker": "GEV",
@@ -941,7 +981,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -10.63
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "TLN": {
       "ticker": "TLN",
@@ -962,7 +1007,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -2.27
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "KGS": {
       "ticker": "KGS",
@@ -983,7 +1033,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -3.08
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "300995.SZ": {
       "ticker": "300995.SZ",
@@ -1004,7 +1059,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -6.04
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "LC": {
       "ticker": "LC",
@@ -1025,7 +1085,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        8.17
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "KYIV": {
       "ticker": "KYIV",
@@ -1046,7 +1111,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        13.56
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "CENX": {
       "ticker": "CENX",
@@ -1067,7 +1137,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        15.92
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "VRTX": {
       "ticker": "VRTX",
@@ -1088,7 +1163,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        0.34
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "HEI": {
       "ticker": "HEI",
@@ -1109,7 +1189,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -1.08
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "ALGN": {
       "ticker": "ALGN",
@@ -1130,7 +1215,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -0.24
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "KARO": {
       "ticker": "KARO",
@@ -1151,7 +1241,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -3.09
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "CFG": {
       "ticker": "CFG",
@@ -1172,7 +1267,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -2.84
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "VBK": {
       "ticker": "VBK",
@@ -1193,7 +1293,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        1.27
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "TCS.NS": {
       "ticker": "TCS.NS",
@@ -1214,7 +1319,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        0.64
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "GILD": {
       "ticker": "GILD",
@@ -1235,7 +1345,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -1.76
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "FRAMERY": {
       "ticker": "FRAMERY",
@@ -1256,7 +1371,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        11.13
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "BNP": {
       "ticker": "BNP",
@@ -1277,7 +1397,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        7.5
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "MOD": {
       "ticker": "MOD",
@@ -1298,7 +1423,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        13.17
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "VRT": {
       "ticker": "VRT",
@@ -1319,7 +1449,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        1.25
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "DB1": {
       "ticker": "DB1",
@@ -1340,7 +1475,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        -5.58
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "INFY.NS": {
       "ticker": "INFY.NS",
@@ -1361,7 +1501,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        8.76
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "YSN": {
       "ticker": "YSN",
@@ -1382,7 +1527,12 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        15.02
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     },
     "PLTR": {
       "ticker": "PLTR",
@@ -1403,89 +1553,443 @@
       "perf1m": null,
       "perf3m": null,
       "perf6m": null,
-      "perf1j": null
+      "perf1j": null,
+      "perf": [
+        5.63
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "RHM": {
+      "ticker": "RHM",
+      "name": "Rheinmetall AG",
+      "yahoo": "RHM.DE",
+      "sector": "industrial",
+      "region": "europe",
+      "buyPct": 94,
+      "outperformPct": 69,
+      "upside": 59,
+      "pe": 53.1,
+      "perf6mAtAdd": -20.54,
+      "analysts": 21,
+      "div": 0.95,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 1187.199951171875,
+      "perf": [
+        -14.48
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "ZAL": {
+      "ticker": "ZAL",
+      "name": "Zalando SE",
+      "yahoo": "ZAL.DE",
+      "sector": "cons_cycl",
+      "region": "europe",
+      "buyPct": 83,
+      "outperformPct": 52,
+      "upside": 51,
+      "pe": 29,
+      "perf6mAtAdd": -1.23,
+      "analysts": 24,
+      "div": 0,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 23.729999542236328,
+      "perf": [
+        13.43
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "BAYN": {
+      "ticker": "BAYN",
+      "name": "Bayer AG",
+      "yahoo": "BAYN.DE",
+      "sector": "health",
+      "region": "europe",
+      "buyPct": 80,
+      "outperformPct": 40,
+      "upside": 47,
+      "pe": null,
+      "perf6mAtAdd": 2.87,
+      "analysts": 19,
+      "div": 0.31,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 33.470001220703125,
+      "perf": [
+        -10.51
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "CNOB": {
+      "ticker": "CNOB",
+      "name": "ConnectOne Bancorp Inc",
+      "yahoo": "CNOB",
+      "sector": "finance",
+      "region": "usa",
+      "buyPct": 91,
+      "outperformPct": 36,
+      "upside": 14,
+      "pe": 16,
+      "perf6mAtAdd": 13.84,
+      "analysts": 5,
+      "div": 2.63,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 29.889999389648438,
+      "perf": [
+        1.49
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "SNPS": {
+      "ticker": "SNPS",
+      "name": "Synopsys, Inc.",
+      "yahoo": "SNPS",
+      "sector": "ai_semi",
+      "region": "usa",
+      "buyPct": 88,
+      "outperformPct": 76,
+      "upside": 14,
+      "pe": 112.4,
+      "perf6mAtAdd": 3.64,
+      "analysts": 26,
+      "div": 0,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 488.05999755859375,
+      "perf": [
+        -1.9
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "RWE": {
+      "ticker": "RWE",
+      "name": "RWE AG",
+      "yahoo": "RWE.DE",
+      "sector": "utilities",
+      "region": "europe",
+      "buyPct": 88,
+      "outperformPct": 75,
+      "upside": 14,
+      "pe": 17,
+      "perf6mAtAdd": 26.73,
+      "analysts": 19,
+      "div": 2.17,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 55.20000076293945,
+      "perf": [
+        -7.63
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "BIIB": {
+      "ticker": "BIIB",
+      "name": "Biogen Inc.",
+      "yahoo": "BIIB",
+      "sector": "health",
+      "region": "usa",
+      "buyPct": 80,
+      "outperformPct": 50,
+      "upside": 14,
+      "pe": 20.7,
+      "perf6mAtAdd": 8.44,
+      "analysts": 29,
+      "div": 0,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 188.48500061035156,
+      "perf": [
+        0.68
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "AMAT": {
+      "ticker": "AMAT",
+      "name": "Applied Materials, Inc.",
+      "yahoo": "AMAT",
+      "sector": "ai_semi",
+      "region": "usa",
+      "buyPct": 89,
+      "outperformPct": 68,
+      "upside": 12,
+      "pe": 43.1,
+      "perf6mAtAdd": 67.54,
+      "analysts": 36,
+      "div": 0.46,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 473.1650085449219,
+      "perf": [
+        20.63
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "DTG": {
+      "ticker": "DTG",
+      "name": "Daimler Truck Holding AG",
+      "yahoo": "DTG.DE",
+      "sector": "industrial",
+      "region": "europe",
+      "buyPct": 89,
+      "outperformPct": 61,
+      "upside": 10,
+      "pe": 26.7,
+      "perf6mAtAdd": 18.15,
+      "analysts": 17,
+      "div": 4.62,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 41.939998626708984,
+      "perf": [
+        -0.52
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "600519.SS": {
+      "ticker": "600519.SS",
+      "name": "Kweichow Moutai Co., Ltd.",
+      "yahoo": "600519.SS",
+      "sector": "cons_def",
+      "region": "china",
+      "buyPct": 83,
+      "outperformPct": 50,
+      "upside": 10,
+      "pe": 19.8,
+      "perf6mAtAdd": -8.36,
+      "analysts": 18,
+      "div": 3.94,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 1307.219970703125,
+      "perf": [
+        -4.93
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "SMHN": {
+      "ticker": "SMHN",
+      "name": "Süss MicroTec SE",
+      "yahoo": "SMHN.DE",
+      "sector": "ai_semi",
+      "region": "europe",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "upside": 9,
+      "pe": 30.5,
+      "perf6mAtAdd": 143.41,
+      "analysts": 8,
+      "div": 0.05,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 93,
+      "perf": [
+        21.49
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "1SXP": {
+      "ticker": "1SXP",
+      "name": "Schott Pharma AG",
+      "yahoo": "1SXP.DE",
+      "sector": "health",
+      "region": "europe",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "upside": 9,
+      "pe": 18.8,
+      "perf6mAtAdd": -3.79,
+      "analysts": 12,
+      "div": 1.04,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 17.299999237060547,
+      "perf": [
+        15.18
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "HOOD": {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "yahoo": "HOOD",
+      "sector": "finance",
+      "region": "usa",
+      "buyPct": 95,
+      "outperformPct": 81,
+      "upside": 9,
+      "pe": 44,
+      "perf6mAtAdd": -32.11,
+      "analysts": 24,
+      "div": 0,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 87.625,
+      "perf": [
+        14.46
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "JAZZ": {
+      "ticker": "JAZZ",
+      "name": "Jazz Pharmaceuticals PLC",
+      "yahoo": "JAZZ",
+      "sector": "health",
+      "region": "usa",
+      "buyPct": 92,
+      "outperformPct": 32,
+      "upside": 9,
+      "pe": null,
+      "perf6mAtAdd": 41.02,
+      "analysts": 19,
+      "div": 0,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 230.08999633789062,
+      "perf": [
+        10.59
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "ENEL": {
+      "ticker": "ENEL",
+      "name": "Enel S.p.A.",
+      "yahoo": "ENEL.MI",
+      "sector": "utilities",
+      "region": "europe",
+      "buyPct": 82,
+      "outperformPct": 65,
+      "upside": 6,
+      "pe": 25.3,
+      "perf6mAtAdd": 8.71,
+      "analysts": 22,
+      "div": 5.44,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 9.583999633789062,
+      "perf": [
+        -0.92
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
+    },
+    "INGA": {
+      "ticker": "INGA",
+      "name": "ING Groep N.V.",
+      "yahoo": "INGA.AS",
+      "sector": "finance",
+      "region": "europe",
+      "buyPct": 86,
+      "outperformPct": 72,
+      "upside": 5,
+      "pe": 12.2,
+      "perf6mAtAdd": 17.26,
+      "analysts": 19,
+      "div": 4.1,
+      "seen": "2026-06-02",
+      "seenMs": 1780358400000,
+      "startPrice": 26.594999313354492,
+      "perf": [
+        10.97
+      ],
+      "prov": true,
+      "provDay": "2026-06-02"
     }
   },
   "findings": {
     "factors": [
       {
-        "name": "Outperform",
-        "spread": 22.3,
-        "best": {
-          "k": "70-85%",
-          "avg": 4.8,
-          "n": 36
-        },
-        "worst": {
-          "k": "95%+",
-          "avg": -17.5,
-          "n": 3
-        }
-      },
-      {
-        "name": "Dividende",
-        "spread": 11.3,
-        "best": {
-          "k": "2-4%",
-          "avg": 8.3,
-          "n": 20
-        },
-        "worst": {
-          "k": "4%+",
-          "avg": -3,
-          "n": 11
-        }
-      },
-      {
         "name": "Kursziel",
-        "spread": 9.6,
+        "spread": 18.9,
         "best": {
-          "k": "10-25%",
-          "avg": 7,
-          "n": 22
+          "k": "<10%",
+          "avg": 12,
+          "n": 6
         },
         "worst": {
-          "k": "<10%",
-          "avg": -2.6,
-          "n": 10
+          "k": "40%+",
+          "avg": -6.9,
+          "n": 29
         }
       },
       {
         "name": "KGV",
-        "spread": 9,
+        "spread": 9.2,
         "best": {
-          "k": "<15",
-          "avg": 5.9,
+          "k": "40+",
+          "avg": 4,
           "n": 13
         },
         "worst": {
-          "k": "15-25",
-          "avg": -3.1,
-          "n": 7
+          "k": "<15",
+          "avg": -5.2,
+          "n": 11
+        }
+      },
+      {
+        "name": "Outperform",
+        "spread": 3.6,
+        "best": {
+          "k": "95%+",
+          "avg": 2.8,
+          "n": 10
+        },
+        "worst": {
+          "k": "<70%",
+          "avg": -0.8,
+          "n": 55
+        }
+      },
+      {
+        "name": "Dividende",
+        "spread": 2.7,
+        "best": {
+          "k": "keine",
+          "avg": 0.6,
+          "n": 38
+        },
+        "worst": {
+          "k": "4%+",
+          "avg": -2.1,
+          "n": 10
         }
       },
       {
         "name": "Analysten",
-        "spread": 2.7,
+        "spread": 1,
         "best": {
           "k": "5-14",
-          "avg": 3.2,
-          "n": 28
+          "avg": 0.7,
+          "n": 31
         },
         "worst": {
-          "k": "15+",
-          "avg": 0.5,
-          "n": 64
+          "k": "1-4",
+          "avg": -0.3,
+          "n": 10
         }
       }
     ],
-    "combo": {
-      "f1": "Outperform 70-85%",
-      "f2": "Dividende 2-4%",
-      "avg": 12.1,
-      "n": 7
-    },
-    "sampleSize": 160
+    "combo": null,
+    "sampleSize": 76,
+    "maxMonths": 1,
+    "provisional": true
   },
   "kiAnalysis": {
     "text": "Aktien mit hohem Kursziel-Potenzial (40%+) und moderatem KGV (15–25) schnitten mit Ø +12,8% am besten ab; die Dividendenrendite hatte mit Abstand den geringsten Einfluss auf die Performance.",
