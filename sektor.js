@@ -223,20 +223,21 @@
     const all = Array.isArray(DATA.topStocks) ? DATA.topStocks : [];
     const counts = {};
     all.forEach(s => { counts[s.sector] = (counts[s.sector] || 0) + 1; });
+    const totalN = all.length || 1;
     const rows = Object.keys(counts).map(id => ({ id, n: counts[id] })).sort((a, b) => b.n - a.n);
     const max = rows.length ? rows[0].n : 1;
 
     listEl.innerHTML = '';
     if (!rows.length) { listEl.innerHTML = '<div class="sek-stocks-empty">Noch keine Perlen.</div>'; return; }
-    rows.forEach((r, i) => {
+    rows.forEach(r => {
       const sec = sectorById(r.id);
+      const pct = Math.round((r.n / totalN) * 100);
       const row = document.createElement('button');
       row.className = 'sek-rank-row' + (sectorFilter === r.id ? ' active' : '');
       row.innerHTML =
-        '<span class="sek-rank-pos">' + (i + 1) + '</span>' +
-        '<span class="sek-rank-name"><i style="background:' + sec.color + '"></i>' + sec.name + '</span>' +
+        '<span class="sek-rank-name">' + sec.name + '</span>' +
         '<span class="sek-rank-bar"><span style="width:' + Math.round((r.n / max) * 100) + '%;background:' + sec.color + '"></span></span>' +
-        '<span class="sek-rank-n">' + r.n + '</span>';
+        '<span class="sek-rank-n">' + pct + '%</span>';
       row.addEventListener('click', () => {
         sectorFilter = (sectorFilter === r.id) ? null : r.id;  // Klick filtert die Liste
         renderStocks();
@@ -370,25 +371,28 @@
     if (!items.length) { wrap.style.display = 'none'; return; }
     wrap.style.display = '';
 
-    const fmtItem = it => (typeof it === "string") ? it : (it.stamp ? it.stamp + "  " : "") + it.text;
-    const sep = "     •     ";
-    const unit = items.map(fmtItem).join(sep) + sep;
-    // erst eine Hälfte aufbauen, dann messen
-    track.innerHTML = '<span>' + unit + '</span>';
+    const esc = s => String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+    // jede News: farbiger Trenner + fetter Zeitstempel + Schlagzeile
+    const itemHTML = it => {
+      if (typeof it === 'string') return '<b class="nw-sep">›</b><span class="nw-h">' + esc(it) + '</span>';
+      return '<b class="nw-sep">›</b>' + (it.stamp ? '<b class="nw-t">' + esc(it.stamp) + '</b>' : '') +
+             '<span class="nw-h">' + esc(it.text) + '</span>';
+    };
+    const unitHTML = items.map(itemHTML).join('');
+
+    track.innerHTML = '<span>' + unitHTML + '</span>';
     requestAnimationFrame(() => {
       const vw = viewport.clientWidth || 400;
-      let half = unit;
-      // Hälfte verbreitern bis > Viewport (max ein paar Wiederholungen)
+      let halfHTML = unitHTML;
       let guard = 0;
-      track.innerHTML = '<span>' + half + '</span>';
+      track.innerHTML = '<span>' + halfHTML + '</span>';
       while (track.firstChild.offsetWidth < vw + 60 && guard < 12) {
-        half += unit;
-        track.firstChild.textContent = half;
+        halfHTML += unitHTML;
+        track.firstChild.innerHTML = halfHTML;
         guard++;
       }
       // zwei identische Hälften -> -50% ist nahtlos
-      track.innerHTML = '<span>' + half + '</span><span aria-hidden="true">' + half + '</span>';
-      // Tempo an die Länge koppeln (konstante Geschwindigkeit, ~70px/s)
+      track.innerHTML = '<span>' + halfHTML + '</span><span aria-hidden="true">' + halfHTML + '</span>';
       const halfW = track.firstChild.offsetWidth || vw;
       track.style.animationDuration = Math.max(18, Math.round(halfW / 70)) + 's';
     });

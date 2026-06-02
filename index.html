@@ -8,6 +8,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Beim Reload sofort den richtigen Screen aktivieren (vor dem ersten Paint),
+       damit kein kurzes Zurückspringen zum Hub sichtbar ist. -->
+  <script>
+    (function () {
+      var h = location.hash.replace('#', '');
+      var map = { sektor: 'sektorScreen', geo: 'homeScreen', calc: 'calcScreen' };
+      var target = map[h];
+      if (!target) return;
+      document.documentElement.classList.add('preselect');
+      document.addEventListener('DOMContentLoaded', function () {
+        var hub = document.getElementById('hubScreen');
+        var scr = document.getElementById(target);
+        if (hub && scr) { hub.classList.remove('active'); scr.classList.add('active'); }
+        document.documentElement.classList.remove('preselect');
+      });
+    })();
+  </script>
 
   <!-- ============ HUB / PORTAL ============ -->
   <div class="screen active" id="hubScreen">
@@ -541,13 +558,14 @@
           <div class="sek-rank-list" id="sekRankList"></div>
         </div>
         <div class="sek-filter" id="sekFilter">
-          <span class="sek-filter-label">Filter:</span>
           <input type="text" inputmode="numeric" id="fltPe" placeholder="KGV ≤" title="KGV höchstens — 0 zeigt unprofitable (ohne KGV)" aria-label="KGV maximal, 0 für ohne KGV">
-          <input type="text" inputmode="numeric" id="fltPerf6m" placeholder="6M ≤ %" aria-label="6-Monats-Performance höchstens in Prozent">
-          <input type="text" inputmode="numeric" id="fltOutperf" placeholder="Outp. ≥ %" aria-label="Outperform minimal in Prozent">
-          <input type="text" inputmode="numeric" id="fltUpside" placeholder="Ziel ≥ %" aria-label="Analystenziel-Potenzial minimal in Prozent">
-          <input type="text" inputmode="numeric" id="fltAnalysts" placeholder="Analysten ≥" aria-label="Anzahl Analysten minimal">
-          <button class="sek-filter-clear" id="fltClear" type="button">zurücksetzen</button>
+          <input type="text" inputmode="numeric" id="fltPerf6m" placeholder="6M ≤%" aria-label="6-Monats-Performance höchstens in Prozent">
+          <input type="text" inputmode="numeric" id="fltOutperf" placeholder="Outp ≥%" aria-label="Outperform minimal in Prozent">
+          <input type="text" inputmode="numeric" id="fltUpside" placeholder="Ziel ≥%" aria-label="Analystenziel-Potenzial minimal in Prozent">
+          <input type="text" inputmode="numeric" id="fltAnalysts" placeholder="Analyst ≥" aria-label="Anzahl Analysten minimal">
+          <button class="sek-filter-clear" id="fltClear" type="button" title="Filter zurücksetzen" aria-label="Filter zurücksetzen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v5M14 11v5"/></svg>
+          </button>
         </div>
         <div class="sek-sort" id="sekSort">
           <span class="sek-sort-label">Sort.</span>

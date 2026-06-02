@@ -23,8 +23,15 @@ const OUT = 'sectordata.json';
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
 const GEMINI_KEY = process.env.GEMINI_API_KEY;
 
-const SCAN_BUDGET = Number(process.env.SCAN_BUDGET || 300);   // Finnhub-Symbole pro Lauf (8x/Tag = 2400)
-const CAND_BUDGET = Number(process.env.CAND_BUDGET || 14);    // Kandidaten je Lauf (Gemini)
+const SCAN_BUDGET = Number(process.env.SCAN_BUDGET || 300);   // Finnhub-Symbole pro Lauf (kostet KEIN Gemini)
+const CAND_BUDGET = Number(process.env.CAND_BUDGET || 8);     // Kandidaten je Lauf
+
+// HARTES Gemini-Budget pro Lauf gegen 429. Jeder Gemini-Aufruf zählt 1.
+// Free-Tier ist eng -> sparsam. Reihenfolge = Priorität (News zuerst).
+const GEMINI_BUDGET = Number(process.env.GEMINI_BUDGET || 6);
+let geminiUsed = 0;
+const geminiBudgetLeft = () => geminiUsed < GEMINI_BUDGET;
+const useGemini = () => { geminiUsed++; };
 
 function readPrev() {
   try { return JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch { return null; }
@@ -57,9 +64,10 @@ const today = () => new Date().toISOString().slice(0, 10);
   try { bars30Region = await fetchRegionPerformance(); console.log('Regions-Performance aktualisiert.'); }
   catch (e) { console.error('Regions-Performance fehlgeschlagen, behalte alte:', e.message); }
 
-  /* 1b) Markt-News ZUERST (vor den vielen Gemini-Scans, damit das Kontingent reicht) */
+  /* 1b) Markt-News ZUERST (höchste Priorität im Gemini-Budget) */
   let news = prev?.news || null;
-  if (GEMINI_KEY) {
+  if (GEMINI_KEY && geminiBudgetLeft()) {
+    useGemini();
     try { news = await buildNews(GEMINI_KEY); console.log(`News: ${news.items.length} Schlagzeilen.`); }
     catch (e) { console.error('News fehlgeschlagen, behalte alte:', e.message); }
   }
@@ -73,51 +81,7 @@ const today = () => new Date().toISOString().slice(0, 10);
     } catch (e) { console.error('Finnhub-Scan fehlgeschlagen:', e.message); }
   }
 
-  /* 2b) Gemini: Kandidaten prüfen (rollierend über die Liste) -------- */
-  if (GEMINI_KEY) {
-    try {
-      const n = candidates.length;
-      const start = (scan.candCursor || 0) % n;
-      const slice = [];
-      for (let i = 0; i < Math.min(CAND_BUDGET, n); i++) slice.push(candidates[(start + i) % n]);
-      scan.candCursor = (start + slice.length) % n;
-
-      const hits = await checkCandidates(GEMINI_KEY, slice);
-      for (const h of hits) db[h.ticker] = { ...db[h.ticker], ...h };
-      console.log(`Gemini-Kandidaten: ${slice.length} geprüft, ${hits.length} Treffer.`);
-    } catch (e) { console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
-  }
-
-  /* 2b2) Bestehende Gemini-Perlen rollierend RE-VALIDIEREN -----------------
-     Per Websuche erneut prüfen; wer das Kriterium (Kauf >= 80%) nicht mehr
-     erfüllt, fliegt aus der DB. Finnhub-Werte werden ohnehin im Scan geprüft. */
-  if (GEMINI_KEY) {
-    try {
-      const geminiTickers = Object.values(db)
-        .filter(s => s.via && s.via.startsWith('gemini'))
-        .map(s => ({ ticker: s.ticker, name: s.name }));
-      if (geminiTickers.length) {
-        const rn = geminiTickers.length;
-        const rstart = (scan.recheckCursor || 0) % rn;
-        const batch = [];
-        for (let i = 0; i < Math.min(Number(process.env.RECHECK_BUDGET || 10), rn); i++) batch.push(geminiTickers[(rstart + i) % rn]);
-        scan.recheckCursor = (rstart + batch.length) % rn;
-
-        const names = batch.map(b => b.name + ' (' + b.ticker + ')');
-        const stillOk = await checkCandidates(GEMINI_KEY, names);
-        const okSet = new Set(stillOk.map(s => s.ticker));
-        for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s };
-        let dropped = 0;
-        for (const b of batch) {
-          if (!okSet.has(b.ticker) && db[b.ticker]) { delete db[b.ticker]; dropped++; }
-        }
-        console.log(`Re-Validierung: ${batch.length} Perlen geprüft, ${dropped} entfernt (Kriterium nicht mehr erfüllt).`);
-      }
-    } catch (e) { console.error('Re-Validierung fehlgeschlagen:', e.message); }
-  }
-
-  /* 2c) Gemini: neue unbekannte Werte entdecken (mehrere Foki pro Lauf) ---- */
-  // Rotierende Schwerpunkte, damit über die Läufe breit gestreut neue Werte kommen.
+  /* 2c) Gemini: neue unbekannte Werte entdecken (1 Fokus/Lauf, rotierend) -- */
   const FOCI = [
     'deutsche Small- und Mid-Caps (XETRA, SDAX, TecDAX)',
     'europäische Nebenwerte (Skandinavien, Benelux, Frankreich, Italien)',
@@ -128,25 +92,62 @@ const today = () => new Date().toISOString().slice(0, 10);
     'Industrie, Energie und Rohstoffe weltweit',
     'Finanzwerte und Versorger weltweit',
   ];
-  if (GEMINI_KEY) {
-    const perRun = Number(process.env.DISCOVER_PER_RUN || 2);
-    const start = (scan.focusCursor || 0) % FOCI.length;
-    let added = 0, total = 0;
-    for (let k = 0; k < perRun; k++) {
-      const focus = FOCI[(start + k) % FOCI.length];
-      try {
-        const knownNames = Object.values(db).map(s => s.name).concat(candidates);
-        const found = await discoverNew(GEMINI_KEY, knownNames, focus);
-        total += found.length;
-        for (const f of found) {
-          if (!db[f.ticker]) added++;
-          db[f.ticker] = { ...db[f.ticker], ...f };
-          if (f.name && !candidates.includes(f.name)) candidates.push(f.name);
+  if (GEMINI_KEY && geminiBudgetLeft()) {
+    useGemini();
+    const focus = FOCI[(scan.focusCursor || 0) % FOCI.length];
+    scan.focusCursor = ((scan.focusCursor || 0) + 1) % FOCI.length;
+    try {
+      const knownNames = Object.values(db).map(s => s.name).concat(candidates);
+      const found = await discoverNew(GEMINI_KEY, knownNames, focus);
+      let added = 0;
+      for (const f of found) {
+        if (!db[f.ticker]) added++;
+        db[f.ticker] = { ...db[f.ticker], ...f };
+        if (f.name && !candidates.includes(f.name)) candidates.push(f.name);
+      }
+      console.log(`Gemini-Discovery (${focus}): ${found.length} Vorschläge, ${added} neu.`);
+    } catch (e) { console.error('Discovery fehlgeschlagen:', e.message); }
+  }
+
+  /* 2b) Gemini: Kandidaten prüfen (rollierend) ---------------------- */
+  if (GEMINI_KEY && geminiBudgetLeft()) {
+    useGemini();
+    try {
+      const n = candidates.length;
+      const start = (scan.candCursor || 0) % n;
+      const slice = [];
+      for (let i = 0; i < Math.min(CAND_BUDGET, n); i++) slice.push(candidates[(start + i) % n]);
+      scan.candCursor = (start + slice.length) % n;
+      const hits = await checkCandidates(GEMINI_KEY, slice);
+      for (const h of hits) db[h.ticker] = { ...db[h.ticker], ...h };
+      console.log(`Gemini-Kandidaten: ${slice.length} geprüft, ${hits.length} Treffer.`);
+    } catch (e) { console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
+  }
+
+  /* 2b2) Bestehende Gemini-Perlen rollierend RE-VALIDIEREN ---------- */
+  if (GEMINI_KEY && geminiBudgetLeft()) {
+    useGemini();
+    try {
+      const geminiTickers = Object.values(db)
+        .filter(s => s.via && s.via.startsWith('gemini'))
+        .map(s => ({ ticker: s.ticker, name: s.name }));
+      if (geminiTickers.length) {
+        const rn = geminiTickers.length;
+        const rstart = (scan.recheckCursor || 0) % rn;
+        const batch = [];
+        for (let i = 0; i < Math.min(Number(process.env.RECHECK_BUDGET || 8), rn); i++) batch.push(geminiTickers[(rstart + i) % rn]);
+        scan.recheckCursor = (rstart + batch.length) % rn;
+        const names = batch.map(b => b.name + ' (' + b.ticker + ')');
+        const stillOk = await checkCandidates(GEMINI_KEY, names);
+        const okSet = new Set(stillOk.map(s => s.ticker));
+        for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s };
+        let dropped = 0;
+        for (const b of batch) {
+          if (!okSet.has(b.ticker) && db[b.ticker]) { delete db[b.ticker]; dropped++; }
         }
-      } catch (e) { console.error(`Discovery (${focus}) fehlgeschlagen:`, e.message); }
-    }
-    scan.focusCursor = (start + perRun) % FOCI.length;
-    console.log(`Gemini-Discovery: ${total} Vorschläge, ${added} neu in der DB.`);
+        console.log(`Re-Validierung: ${batch.length} geprüft, ${dropped} entfernt.`);
+      }
+    } catch (e) { console.error('Re-Validierung fehlgeschlagen:', e.message); }
   }
 
   // Kandidatenliste begrenzen, damit sie nicht unbegrenzt wächst.
@@ -192,29 +193,36 @@ const today = () => new Date().toISOString().slice(0, 10);
     if (needPe.length) console.log(`KGV für ${needPe.length} Aktien geprüft, ${peCount} mit Wert (Finnhub + Gemini-Fallback).`);
   }
 
-  /* 4) Knappe Lage-Texte rollierend: Sektoren UND Regionen ------------ */
+  /* 4) Lage-Texte: NUR 1× pro Tag je 1 Sektor + 1 Region (rollierend) -- */
   let sectorNotes = prev?.sectorNotes || {};
   let regionNotes = prev?.regionNotes || {};
-  if (GEMINI_KEY) {
-    const PER = Number(process.env.NOTES_PER_RUN || 3);
-    try {
-      const ids = SECTORS.map(s => s.id);
-      const start = (scan.noteCursor || 0) % ids.length;
-      const todo = []; for (let i = 0; i < PER; i++) todo.push(ids[(start + i) % ids.length]);
-      scan.noteCursor = (start + PER) % ids.length;
-      const fresh = await buildNotes(GEMINI_KEY, todo, bars30, topStocks, 'Sektor');
-      sectorNotes = { ...sectorNotes, ...fresh };
-      console.log(`Sektor-Lage: ${Object.keys(fresh).length}/${todo.length} (${todo.join(', ')}).`);
-    } catch (e) { console.error('Sektor-Lage fehlgeschlagen:', e.message); }
-    try {
-      const rids = REGIONS.map(r => r.id);
-      const rstart = (scan.regionNoteCursor || 0) % rids.length;
-      const rtodo = []; for (let i = 0; i < PER; i++) rtodo.push(rids[(rstart + i) % rids.length]);
-      scan.regionNoteCursor = (rstart + PER) % rids.length;
-      const rfresh = await buildNotes(GEMINI_KEY, rtodo, bars30Region, topStocks, 'Region');
-      regionNotes = { ...regionNotes, ...rfresh };
-      console.log(`Region-Lage: ${Object.keys(rfresh).length}/${rtodo.length} (${rtodo.join(', ')}).`);
-    } catch (e) { console.error('Region-Lage fehlgeschlagen:', e.message); }
+  const todayStr = today();
+  const notesDoneToday = scan.notesDay === todayStr;
+  if (GEMINI_KEY && !notesDoneToday) {
+    let any = false;
+    if (geminiBudgetLeft()) {
+      useGemini(); any = true;
+      try {
+        const ids = SECTORS.map(s => s.id);
+        const id = ids[(scan.noteCursor || 0) % ids.length];
+        scan.noteCursor = ((scan.noteCursor || 0) + 1) % ids.length;
+        const fresh = await buildNotes(GEMINI_KEY, [id], bars30, topStocks, 'Sektor');
+        sectorNotes = { ...sectorNotes, ...fresh };
+        console.log(`Sektor-Lage: ${Object.keys(fresh).length}/1 (${id}).`);
+      } catch (e) { console.error('Sektor-Lage fehlgeschlagen:', e.message); }
+    }
+    if (geminiBudgetLeft()) {
+      useGemini(); any = true;
+      try {
+        const rids = REGIONS.map(r => r.id);
+        const rid = rids[(scan.regionNoteCursor || 0) % rids.length];
+        scan.regionNoteCursor = ((scan.regionNoteCursor || 0) + 1) % rids.length;
+        const rfresh = await buildNotes(GEMINI_KEY, [rid], bars30Region, topStocks, 'Region');
+        regionNotes = { ...regionNotes, ...rfresh };
+        console.log(`Region-Lage: ${Object.keys(rfresh).length}/1 (${rid}).`);
+      } catch (e) { console.error('Region-Lage fehlgeschlagen:', e.message); }
+    }
+    if (any) scan.notesDay = todayStr;   // heute erledigt -> spätere Läufe überspringen
   }
 
   const out = {
