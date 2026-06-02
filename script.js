@@ -165,7 +165,7 @@ function getRegionPadding(region) {
 }
 
 // ---- SCREEN NAV ----
-const SCREEN_HASH = { sektorScreen: 'sektor', homeScreen: 'geo', calcScreen: 'calc' };
+const SCREEN_HASH = { sektorScreen: 'sektor', analyseScreen: 'analyse', homeScreen: 'geo', calcScreen: 'calc' };
 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -188,6 +188,7 @@ function showScreen(id) {
 function restoreScreenFromHash() {
   const h = location.hash.replace('#', '');
   if (h === 'sektor') { showScreen('sektorScreen'); if (typeof initSektor === 'function') initSektor(); }
+  else if (h === 'analyse') { showScreen('analyseScreen'); if (typeof initAnalyse === 'function') initAnalyse(); }
   else if (h === 'geo') { showScreen('homeScreen'); }
   else if (h === 'calc' && document.getElementById('calcScreen')) { showScreen('calcScreen'); }
 }

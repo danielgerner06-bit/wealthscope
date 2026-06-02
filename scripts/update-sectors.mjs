@@ -19,6 +19,7 @@ import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enric
 import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
+import { loadHistory, saveHistory, snapshotStocks, measureMilestones, pruneHistory } from './history.mjs';
 
 const OUT = 'sectordata.json';
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
@@ -282,6 +283,16 @@ const today = () => new Date().toISOString().slice(0, 10);
     }
     if (any) scan.notesDay = todayStr;   // heute erledigt -> spätere Läufe überspringen
   }
+
+  /* 6) Backtest-Historie pflegen (Snapshots + Meilensteine; Yahoo, kein Kontingent) */
+  try {
+    const hist = loadHistory();
+    const snapped = await snapshotStocks(hist, topStocks, Number(process.env.SNAPSHOT_BUDGET || 30));
+    const measured = await measureMilestones(hist, Number(process.env.MILESTONE_BUDGET || 40));
+    const pruned = pruneHistory(hist);
+    saveHistory(hist);
+    console.log(`Historie: ${Object.keys(hist.entries).length} Aktien (${snapped} neu, ${measured} Meilensteine gemessen, ${pruned} alte entfernt).`);
+  } catch (e) { console.error('Historie fehlgeschlagen:', e.message); }
 
   const out = {
     updated: today(),

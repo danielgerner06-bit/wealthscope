@@ -44,6 +44,42 @@ async function closes(symbol, range = '1y') {
   return arr.filter(x => typeof x === 'number' && isFinite(x));
 }
 
+/* ---------- Historische Kurse (für Backtest seit Aufnahme) ----------
+   Holt {ts[], close[]} in einem Datumsbereich. */
+async function history(symbol, fromMs, toMs) {
+  const p1 = Math.floor(fromMs / 1000), p2 = Math.floor(toMs / 1000);
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?period1=${p1}&period2=${p2}&interval=1d`;
+  const res = await fetch(url, { headers: { 'User-Agent': UA } });
+  if (!res.ok) throw new Error('Yahoo HTTP ' + res.status);
+  const r = (await res.json())?.chart?.result?.[0];
+  const ts = r?.timestamp || [];
+  const cl = r?.indicators?.quote?.[0]?.close || [];
+  const out = [];
+  for (let i = 0; i < ts.length; i++) if (typeof cl[i] === 'number' && isFinite(cl[i])) out.push({ t: ts[i] * 1000, c: cl[i] });
+  return out;
+}
+
+// Kurs am/nahe einem Datum (erster verfügbarer Kurs ab dateMs, ±7 Tage Fenster).
+export async function priceAtDate(symbol, dateMs) {
+  try {
+    const data = await history(symbol, dateMs - 5 * 86400000, dateMs + 9 * 86400000);
+    if (!data.length) return null;
+    // nimm den ersten Kurs ab dateMs, sonst den letzten davor
+    const after = data.find(d => d.t >= dateMs);
+    return (after || data[data.length - 1]).c;
+  } catch { return null; }
+}
+
+// Performance (%) zwischen zwei Daten für ein Symbol; null wenn Daten fehlen.
+export async function perfBetween(symbol, fromMs, toMs) {
+  try {
+    const start = await priceAtDate(symbol, fromMs);
+    const end = await priceAtDate(symbol, toMs);
+    if (start == null || end == null || start === 0) return null;
+    return +(((end - start) / start) * 100).toFixed(2);
+  } catch { return null; }
+}
+
 /* ---------- Yahoo quoteSummary (Kursziel, KGV, EPS) ----------
    Braucht Cookie + Crumb. Beides einmal holen und cachen.                       */
 let _cookie = null, _crumb = null;

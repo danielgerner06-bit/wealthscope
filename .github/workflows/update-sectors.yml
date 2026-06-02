@@ -26,12 +26,12 @@ jobs:
 
       - name: Änderungen committen
         run: |
-          if git diff --quiet sectordata.json; then
+          if git diff --quiet sectordata.json history.json; then
             echo "Keine Änderungen."
           else
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add sectordata.json
+            git add sectordata.json history.json
             git commit -m "Sektordaten aktualisiert ($(date -u +%Y-%m-%d))"
             # bis zu 3 Versuche: bei parallelem Push (z. B. manueller Commit) erst rebasen
             for i in 1 2 3; do
