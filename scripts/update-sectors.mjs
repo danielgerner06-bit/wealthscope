@@ -192,7 +192,10 @@ const today = () => new Date().toISOString().slice(0, 10);
   /* 3b) Kursziel + KGV + EPS + Analysten je Aktie über Yahoo (1 Call, kein Key,
      funktioniert auch für deutsche Werte). Ersetzt die alte Finnhub-Anreicherung. */
   {
-    const needEnrich = topStocks.filter(s => s.enrichAt == null || (nowMs - Date.parse(s.enrichAt)) > STALE)
+    // Anreichern wenn: noch nie, veraltet (>STALE), ODER ein neues Feld fehlt noch ganz
+    // (z. B. div nach Feature-Einführung) -> zieht neue Datenfelder einmalig nach.
+    const needEnrich = topStocks.filter(s =>
+      s.enrichAt == null || (nowMs - Date.parse(s.enrichAt)) > STALE || s.div === undefined)
       .slice(0, Number(process.env.ENRICH_BUDGET || 40));
     // Kandidaten-Yahoo-Symbole (Name -> Symbol) aus früheren Gemini-Funden, zum Nachschlagen
     let upCount = 0, peCount = 0;
