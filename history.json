@@ -2300,5 +2300,10 @@
       "fake": true,
       "fakeUntil": "2026-07-03"
     }
+  },
+  "findings": {},
+  "kiAnalysis": {
+    "text": "Aktien mit hohem Kursziel-Potenzial (40%+) und moderatem KGV (15–25) schnitten mit Ø +12,8% am besten ab; die Dividendenrendite hatte mit Abstand den geringsten Einfluss auf die Performance.",
+    "date": "2026-06-02"
   }
 }

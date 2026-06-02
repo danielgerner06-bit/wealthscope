@@ -85,3 +85,15 @@ Sortiere nach Wichtigkeit (wichtigste zuerst). Nur das JSON-Array, kein weiterer
   if (!items.length) throw new Error('keine News geparst');
   return { items, date: today };
 }
+
+// Knappe KI-Analyse der stärksten Faktoren/Kombination. `findings` ist ein bereits
+// serverseitig berechnetes Objekt mit den besten Stufen je Faktor + bester Kombi.
+export async function buildFactorInsight(key, findings) {
+  const today = new Date().toISOString().slice(0, 10);
+  const prompt = `Du bist Aktien-Analyst. Aus einem Backtest (Performance seit Aufnahme der Analysten-Perlen) liegen diese Befunde vor:
+${JSON.stringify(findings)}
+
+Schreibe MAXIMAL 2 sehr knappe deutsche Sätze (zusammen ≤ 35 Wörter): welche Faktor-Ausprägung bzw. Kombination bisher am besten abgeschnitten hat und welcher Faktor kaum Einfluss hatte. Konkret mit Zahlen, kein Geschwafel, keine Anlageberatung. Nur den Text.`;
+  const text = await gen(key, prompt);
+  return { text, date: today };
+}

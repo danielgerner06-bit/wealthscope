@@ -13,13 +13,13 @@
 
 import fs from 'node:fs';
 import { SECTORS, REGIONS, sectorForFinnhub } from './sectors.mjs';
-import { buildNotes, buildNews } from './insight.mjs';
+import { buildNotes, buildNews, buildFactorInsight } from './insight.mjs';
 import { scanAnalystStocks } from './finnhub.mjs';
 import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock, fetchSectorOf } from './prices.mjs';
 import { checkCandidates, discoverNew } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
-import { loadHistory, saveHistory, snapshotStocks, measureMilestones, pruneHistory } from './history.mjs';
+import { loadHistory, saveHistory, snapshotStocks, measureMilestones, pruneHistory, computeFindings } from './history.mjs';
 
 const OUT = 'sectordata.json';
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
@@ -290,8 +290,17 @@ const today = () => new Date().toISOString().slice(0, 10);
     const snapped = await snapshotStocks(hist, topStocks, Number(process.env.SNAPSHOT_BUDGET || 30));
     const measured = await measureMilestones(hist, Number(process.env.MILESTONE_BUDGET || 40));
     const pruned = pruneHistory(hist);
-    saveHistory(hist);
     console.log(`Historie: ${Object.keys(hist.entries).length} Aktien (${snapped} neu, ${measured} Meilensteine gemessen, ${pruned} alte entfernt).`);
+
+    // KI-Analyse der stärksten Faktoren — 1× pro Tag (Budget-schonend)
+    const findings = computeFindings(hist);
+    hist.findings = findings;
+    if (GEMINI_KEY && geminiBudgetLeft() && hist.kiDay !== today() && findings.factors.length) {
+      useGemini();
+      try { hist.kiAnalysis = await buildFactorInsight(GEMINI_KEY, findings); hist.kiDay = today(); console.log('Faktor-KI-Analyse aktualisiert.'); }
+      catch (e) { console.error('Faktor-KI fehlgeschlagen:', e.message); }
+    }
+    saveHistory(hist);
   } catch (e) { console.error('Historie fehlgeschlagen:', e.message); }
 
   const out = {

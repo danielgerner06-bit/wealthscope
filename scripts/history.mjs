@@ -78,6 +78,41 @@ export async function measureMilestones(hist, budget = 30) {
   return measured;
 }
 
+// Faktor-Befunde aus der Historie berechnen (für die KI-Analyse): je Faktor die
+// beste/schlechteste Stufe nach Ø-6M-Performance + die stärkste Zweier-Kombination.
+export function computeFindings(hist) {
+  const data = Object.values(hist.entries);
+  const perfKey = 'perf6m';
+  const avg = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : null;
+  const buckets = {
+    KGV: s => s.pe == null ? null : s.pe < 15 ? '<15' : s.pe < 25 ? '15-25' : s.pe < 40 ? '25-40' : '40+',
+    Outperform: s => s.outperformPct == null ? null : s.outperformPct < 70 ? '<70%' : s.outperformPct < 85 ? '70-85%' : s.outperformPct < 95 ? '85-95%' : '95%+',
+    Kursziel: s => s.upside == null ? null : s.upside < 10 ? '<10%' : s.upside < 25 ? '10-25%' : s.upside < 40 ? '25-40%' : '40%+',
+    Dividende: s => s.div == null ? null : s.div === 0 ? 'keine' : s.div < 2 ? '<2%' : s.div < 4 ? '2-4%' : '4%+',
+    Analysten: s => s.analysts == null ? null : s.analysts < 5 ? '1-4' : s.analysts < 15 ? '5-14' : '15+',
+  };
+  const factors = [];
+  for (const [name, fn] of Object.entries(buckets)) {
+    const g = {};
+    data.forEach(s => { const k = fn(s), p = s[perfKey]; if (k != null && p != null) (g[k] = g[k] || []).push(p); });
+    const stages = Object.entries(g).filter(([, a]) => a.length >= 3).map(([k, a]) => ({ k, avg: +avg(a).toFixed(1), n: a.length }));
+    if (stages.length < 2) continue;
+    stages.sort((a, b) => b.avg - a.avg);
+    factors.push({ name, spread: +(stages[0].avg - stages[stages.length - 1].avg).toFixed(1), best: stages[0], worst: stages[stages.length - 1] });
+  }
+  factors.sort((a, b) => b.spread - a.spread);
+
+  // stärkste Zweier-Kombi der beiden wichtigsten Faktoren
+  let combo = null;
+  if (factors.length >= 2) {
+    const [f1, f2] = factors;
+    const fn1 = buckets[f1.name], fn2 = buckets[f2.name];
+    const sub = data.filter(s => fn1(s) === f1.best.k && fn2(s) === f2.best.k).map(s => s[perfKey]).filter(p => p != null);
+    if (sub.length >= 3) combo = { f1: f1.name + ' ' + f1.best.k, f2: f2.name + ' ' + f2.best.k, avg: +avg(sub).toFixed(1), n: sub.length };
+  }
+  return { factors: factors.slice(0, 5), combo, sampleSize: data.length };
+}
+
 // Einträge älter als 1 Jahr entfernen + abgelaufene Demo-Aktien (fake) löschen.
 export function pruneHistory(hist) {
   const now = Date.now();

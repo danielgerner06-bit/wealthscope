@@ -12,8 +12,7 @@
     ]);
     HIST = Object.values(h.entries || {});
     SECT = d.sectors || []; REG = d.regions || [];
-    HIST._ki = h. kiAnalysis || d.factorInsight || null;
-    HIST._kiObj = h;
+    HIST._kiObj = h;   // enthält kiAnalysis (Text) + findings
   }
   const secName = id => (SECT.find(s => s.id === id) || {}).name || id;
   const regName = id => (REG.find(s => s.id === id) || {}).name || id;
