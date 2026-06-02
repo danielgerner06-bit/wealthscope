@@ -1,7 +1,7 @@
 // Finnhub-Anbindung: Sektor-Performance (ETFs) + rollierender Analysten-Scan.
 import { sectorForFinnhub } from './sectors.mjs';
 
-const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 80);
+const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 51);   // > 50 % Kaufempfehlung (gerundete Ganzzahlen)
 
 const BASE = 'https://finnhub.io/api/v1';
 
@@ -41,7 +41,7 @@ async function loadUniverse(key) {
 /* ---------- Rollierender Analysten-Scan ----------
    Prüft je Lauf bis zu `budget` Symbole ab dem letzten Cursor. Für jedes Symbol:
    - recommendation trends -> Kauf-% und (als Outperform-Näherung) Strong-Buy-Anteil
-   - Treffer = Kauf >= 95% UND Outperform >= 80%; nur die kommen in die DB.
+   - Treffer = Kauf-% > 50 (MIN_BUY_PCT, Default 51); nur die kommen in die DB.
    Bekannte Treffer werden re-validiert; fallen sie durch, werden sie entfernt.    */
 export async function scanAnalystStocks(key, state, budget) {
   let universe = state._universe;

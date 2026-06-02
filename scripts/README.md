@@ -14,7 +14,7 @@ Die Seite lädt ihre Daten aus `sectordata.json` (Projekt-Root). Diese Datei wir
   - **entdeckt täglich neue unbekannte Werte** und kennt dabei die bereits gefundenen
   - schreibt zusätzlich den kurzen **Marktlage-Text**
 
-Treffer-Kriterium überall: **Kauf ≥ 95 %** UND **Outperform ≥ 80 %** (Strong-Buy-Anteil).
+Treffer-Kriterium überall: **Kaufempfehlungs-Anteil > 50 %** (Buy + Strong Buy; Schwelle via `MIN_BUY_PCT`, Default 51).
 Alle Treffer (Finnhub + Gemini) landen in einer gemeinsamen, über Tage gepflegten DB
 (`topStocks`); jeder Eintrag trägt `via` (finnhub / gemini / gemini-discover) und `source`.
 

@@ -1,8 +1,8 @@
 // Analysten-Perlen via Gemini + Google-Search-Grounding.
 //
 // Zwei Funktionen:
-//  (A) checkCandidates: prüft eine Handvoll Kandidaten-Aktien per Websuche auf die
-//      Kriterien (Kauf >= 95% UND Outperform >= 80%) und liefert Treffer mit Quelle.
+//  (A) checkCandidates: prüft eine Handvoll Kandidaten-Aktien per Websuche auf das
+//      Kriterium (Kaufempfehlungs-Anteil > 50 %) und liefert Treffer mit Quelle.
 //  (B) discoverNew: lässt Gemini NEUE, unbekannte Werte vorschlagen — bekommt dazu
 //      die Liste bereits bekannter Namen, damit es nichts doppelt vorschlägt.
 //
@@ -13,8 +13,8 @@ import { sectorForFinnhub, SECTOR_IDS } from './sectors.mjs';
 const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
 const SECTOR_LIST = SECTOR_IDS.join(', ');
 
-// Aufnahmekriterium: Kaufempfehlungs-Anteil (Buy + Strong Buy) >= 80 %.
-export const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 80);
+// Aufnahmekriterium: Kaufempfehlungs-Anteil (Buy + Strong Buy) > 50 % (Default-Schwelle 51).
+export const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 51);
 const qualifies = r => isFinite(r.buyPct) && r.buyPct >= MIN_BUY_PCT;
 
 async function groundedJSON(key, prompt) {
