@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T15:00:31.729Z",
+  "updatedAt": "2026-06-03T16:00:31.943Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 21.45,
+      "perf": 21.25,
       "avg30": 3.77,
-      "perf6m": 37.37
+      "perf6m": 37.14
     },
     {
       "id": "comm",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 1.38,
+      "perf": 1.69,
       "avg30": 0.87,
-      "perf6m": -6.65
+      "perf6m": -6.37
     },
     {
       "id": "finance",
@@ -251,21 +251,21 @@
     },
     {
       "id": "china",
-      "perf": -2.36,
+      "perf": -2.58,
       "avg30": 0.41,
-      "perf6m": -9.63
+      "perf6m": -9.83
     },
     {
       "id": "em",
-      "perf": 9.34,
+      "perf": 9.33,
       "avg30": 3.33,
-      "perf6m": 29.13
+      "perf6m": 29.11
     },
     {
       "id": "apac",
-      "perf": 10.36,
+      "perf": 10.11,
       "avg30": 3.26,
-      "perf6m": 29.81
+      "perf6m": 29.52
     },
     {
       "id": "india",
@@ -5440,7 +5440,8 @@
       "pe": null,
       "eps": -1.78,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 44.11
     },
     {
       "ticker": "TRIN",
@@ -5458,7 +5459,8 @@
       "pe": 9.1,
       "eps": 1.89,
       "div": 11.8,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "perf1mBefore": 1.87
     },
     {
       "ticker": "SHOO",
@@ -5476,7 +5478,8 @@
       "pe": 41.8,
       "eps": 1.06,
       "div": 1.94,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 16.81
     },
     {
       "ticker": "VELO",
@@ -11039,5 +11042,5 @@
     },
     "heavyAt": "2026-06-03T08:00:01.738Z"
   },
-  "yahooAt": "2026-06-03T15:00:31.729Z"
+  "yahooAt": "2026-06-03T16:00:31.943Z"
 }
