@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T19:25:56.519Z",
+  "updatedAt": "2026-06-03T19:37:56.597Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 21.39,
+      "perf": 21.42,
       "avg30": 3.77,
-      "perf6m": 37.3
+      "perf6m": 37.34
     },
     {
       "id": "comm",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 1.72,
+      "perf": 1.74,
       "avg30": 0.87,
-      "perf6m": -6.34
+      "perf6m": -6.32
     },
     {
       "id": "finance",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 0.71,
+      "perf": 0.64,
       "avg30": 1.72,
-      "perf6m": 14
+      "perf6m": 13.92
     },
     {
       "id": "energy",
@@ -213,9 +213,9 @@
     },
     {
       "id": "utilities",
-      "perf": -5.82,
+      "perf": -5.92,
       "avg30": 1,
-      "perf6m": -2.57
+      "perf6m": -2.67
     },
     {
       "id": "realestate",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -2.73,
+      "perf": -2.83,
       "avg30": 0.41,
-      "perf6m": -9.97
+      "perf6m": -10.06
     },
     {
       "id": "em",
@@ -405,6 +405,29 @@
       "peGemini": 30.9,
       "recheckAt": "2026-06-03",
       "tdAt": "2026-06-03"
+    },
+    {
+      "ticker": "DTE.DE",
+      "name": "Deutsche Telekom AG",
+      "sector": "comm",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 17,
+      "upside": 35,
+      "yahoo": "DTE.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener 2026-06-03",
+      "seen": "2026-06-03",
+      "miss": 0,
+      "recheckAt": "2026-06-03",
+      "perf6m": 5.22,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": 4.21,
+      "pe": 15.5,
+      "eps": 1.81,
+      "div": 3.46,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "CRH",
@@ -571,8 +594,8 @@
       "perf1mBefore": -0.85,
       "peGemini": null,
       "recheckAt": "2026-06-03",
-      "fmpAt": "2026-06-03",
-      "tdAt": "2026-06-03"
+      "tdAt": "2026-06-03",
+      "fmpAt": "2026-06-03"
     },
     {
       "ticker": "VBK",
@@ -693,8 +716,8 @@
       "perf1mBefore": -8.86,
       "peGemini": 24.8,
       "recheckAt": "2026-06-03",
-      "fmpAt": "2026-06-03",
-      "tdAt": "2026-06-03"
+      "tdAt": "2026-06-03",
+      "fmpAt": "2026-06-03"
     },
     {
       "ticker": "MOD",
@@ -719,8 +742,8 @@
       "peGemini": null,
       "perf1mBefore": 11.57,
       "recheckAt": "2026-06-03",
-      "fmpAt": "2026-06-03",
-      "tdAt": "2026-06-03"
+      "tdAt": "2026-06-03",
+      "fmpAt": "2026-06-03"
     },
     {
       "ticker": "YSN",
@@ -840,8 +863,8 @@
       "div": 2.25,
       "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-03",
-      "fmpAt": "2026-06-03",
-      "tdAt": "2026-06-03"
+      "tdAt": "2026-06-03",
+      "fmpAt": "2026-06-03"
     },
     {
       "ticker": "DTG",
@@ -866,6 +889,28 @@
       "recheckAt": "2026-06-03",
       "miss": 1,
       "tdAt": "2026-06-03"
+    },
+    {
+      "ticker": "LIN.DE",
+      "name": "Linde plc",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 2,
+      "upside": 8,
+      "yahoo": "LIN.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener 2026-06-03",
+      "seen": "2026-06-03",
+      "miss": 0,
+      "recheckAt": "2026-06-03",
+      "perf6m": 21.67,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": 0.96,
+      "pe": 33.9,
+      "div": 1.45,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "ENEL",
@@ -1081,6 +1126,29 @@
       "tdAt": "2026-06-03"
     },
     {
+      "ticker": "COK.DE",
+      "name": "Cancom SE",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 7,
+      "upside": 5,
+      "yahoo": "COK.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener 2026-06-03",
+      "seen": "2026-06-03",
+      "miss": 0,
+      "recheckAt": "2026-06-03",
+      "perf6m": 5.69,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": 9.8,
+      "pe": 49.5,
+      "eps": 0.55,
+      "div": 3.47,
+      "enrichAt": "2026-06-03"
+    },
+    {
       "ticker": "WCH",
       "name": "WCH Service AG",
       "sector": "industrial",
@@ -1243,28 +1311,28 @@
   "news": {
     "items": [
       {
-        "text": "Marvell Technology Aktie nach guten Zahlen und KI-Fokus stark im Plus.",
+        "text": "US-Dienstleistungssektor wächst stärker als erwartet; Kanadas Sektor belebt sich",
         "stamp": "03.06.26"
       },
       {
-        "text": "US-Jobmärkte zeigen gemischte Signale; Fed-Chefin deutet mögliche Zinserhöhung an.",
+        "text": "US-Privatsektor baut robust Stellen auf; Neueinstellungen sinken im April",
+        "stamp": "03.06.26"
+      },
+      {
+        "text": "EU will Abhängigkeit von US-Tech-Infrastruktur verringern",
+        "stamp": "03.06.26"
+      },
+      {
+        "text": "Fed-Präsidentin Hammack: Möglicherweise muss bei Inflation reagiert werden",
         "stamp": "02.06.26"
       },
       {
-        "text": "SpaceX-Börsengang könnte historisch groß werden, ETF-Regeln angepasst.",
+        "text": "BoE-Direktorin Greene: Argumente für Zinserhöhung werden stärker",
         "stamp": "02.06.26"
       },
       {
-        "text": "Geopolitische Spannungen treiben Ölpreise, Sorge vor Inflation und Zinsanstieg.",
+        "text": "US-Arbeitsmarkt: Offene Stellen gestiegen, Neueinstellungen gesunken im April",
         "stamp": "02.06.26"
-      },
-      {
-        "text": "Kanada fordert Verlängerung des nordamerikanischen Handelsabkommens.",
-        "stamp": "02.06.26"
-      },
-      {
-        "text": "Ölpreise steigen durch Nahost-Konflikt; Inflation in Deutschland zieht an.",
-        "stamp": "01.06.26"
       }
     ],
     "date": "2026-06-03"
@@ -1272,8 +1340,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 2867,
-    "candCursor": 99,
+    "lastCursor": 3167,
+    "candCursor": 107,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -1415,42 +1483,43 @@
       "WCH Service AG"
     ],
     "noteCursor": 7,
-    "focusCursor": 4,
+    "focusCursor": 5,
     "recheckCursor": 16,
     "regionNoteCursor": 5,
     "notesDay": "2026-06-03",
     "seenBySector": {
-      "cons_cycl": 111,
-      "cons_def": 51,
-      "materials": 61,
-      "health": 233,
-      "finance": 234,
-      "energy": 106,
-      "hardware": 60,
-      "software": 199,
-      "industrial": 87,
-      "utilities": 48,
-      "comm": 42,
-      "ai_semi": 33,
-      "realestate": 16
+      "cons_cycl": 120,
+      "cons_def": 55,
+      "materials": 66,
+      "health": 238,
+      "finance": 270,
+      "energy": 112,
+      "hardware": 64,
+      "software": 212,
+      "industrial": 91,
+      "utilities": 50,
+      "comm": 46,
+      "ai_semi": 34,
+      "realestate": 21
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 111,
-      "cons_def": 51,
-      "materials": 66,
-      "health": 233,
-      "finance": 241,
-      "energy": 108,
-      "hardware": 62,
-      "software": 205,
-      "industrial": 93,
-      "utilities": 54,
-      "comm": 42,
-      "ai_semi": 33,
-      "realestate": 17
+      "cons_cycl": 120,
+      "cons_def": 55,
+      "materials": 71,
+      "health": 238,
+      "finance": 277,
+      "energy": 114,
+      "hardware": 66,
+      "software": 219,
+      "industrial": 98,
+      "utilities": 56,
+      "comm": 47,
+      "ai_semi": 34,
+      "realestate": 22
     },
-    "heavyAt": "2026-06-03T19:17:16.533Z",
-    "revalidateTag": "marketscreener-2026-06"
+    "heavyAt": "2026-06-03T19:31:51.197Z",
+    "revalidateTag": "marketscreener-2026-06",
+    "fmpRetryTag": "grades-summary-fix"
   }
 }
