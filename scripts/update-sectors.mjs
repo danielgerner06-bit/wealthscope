@@ -91,6 +91,19 @@ const today = () => new Date().toISOString().slice(0, 10);
   // >= HEAVY_GAP_H Stunden vergangen sind (Default 6h). Spart das Gemini-Free-Tier-Kontingent.
   const HEAVY_GAP_MS = Number(process.env.HEAVY_GAP_H || 6) * 3600000 - 5 * 60000; // 5 min Toleranz für Cron-Jitter
   const heavyDue = !scan.heavyAt || (nowMs - Date.parse(scan.heavyAt)) >= HEAVY_GAP_MS;
+
+  // Mehrere Cron-Slots pro Stunde (gegen GitHubs unzuverlässige :00-Zustellung) könnten
+  // kurz hintereinander feuern. Ein NICHT-schwerer Lauf, dessen letzter Lauf < MIN_GAP_MIN
+  // her ist, bricht hier ab -> Yahoo wird höchstens ~1×/Stunde geholt, keine Doppelläufe.
+  const MIN_GAP_MIN = Number(process.env.MIN_GAP_MIN || 50);
+  const lastRunMs = prev?.updatedAt ? Date.parse(prev.updatedAt) : 0;
+  const tooSoon = lastRunMs && (nowMs - lastRunMs) < MIN_GAP_MIN * 60000;
+  if (tooSoon && !heavyDue && !process.env.FORCE_RUN) {
+    const mins = Math.round((nowMs - lastRunMs) / 60000);
+    console.log(`Übersprungen: letzter Lauf vor ${mins} min (< ${MIN_GAP_MIN} min), kein schwerer Lauf fällig.`);
+    return;   // nichts schreiben -> Git-Diff leer -> kein Commit
+  }
+
   console.log(heavyDue ? 'Lauf-Typ: VOLL (Yahoo + Gemini + Finnhub).' : 'Lauf-Typ: leicht (nur Yahoo-Kurse/Performance).');
   if (heavyDue) scan.heavyAt = new Date(nowMs).toISOString();   // Zeitstempel für die 6h-Taktung
 

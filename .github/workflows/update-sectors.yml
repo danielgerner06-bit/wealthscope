@@ -2,8 +2,14 @@ name: Sektordaten aktualisieren
 
 on:
   schedule:
-    - cron: '0 * * * *'     # stündlich: Yahoo-Kurse/Performance jeden Lauf;
-                            # Gemini + Finnhub nur alle ~6h (Gating per scan.heavyAt im Skript)
+    # GitHub stellt geplante Läufe nur "best effort" zu und überspringt/verzögert
+    # gerade den :00-Slot bei Last. Daher 3 Slots pro Stunde (NICHT :00) -> fast
+    # immer kommt mind. einer durch = stündlich frische Yahoo-Kurse.
+    # Gemini + Finnhub laufen trotzdem nur alle ~6h (Gating per scan.heavyAt im Skript),
+    # ein zwischenzeitlich schon gelaufener "leichter" Lauf wird per heavyAt erkannt.
+    - cron: '11 * * * *'
+    - cron: '31 * * * *'
+    - cron: '51 * * * *'
   workflow_dispatch:         # manueller Start möglich
     inputs:
       force_heavy:
