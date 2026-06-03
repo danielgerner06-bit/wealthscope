@@ -5,6 +5,11 @@ on:
     - cron: '0 * * * *'     # stündlich: Yahoo-Kurse/Performance jeden Lauf;
                             # Gemini + Finnhub nur alle ~6h (Gating per scan.heavyAt im Skript)
   workflow_dispatch:         # manueller Start möglich
+    inputs:
+      force_heavy:
+        description: 'Vollen Lauf erzwingen (Gemini+Finnhub, ignoriert 6h-Takt)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -23,6 +28,8 @@ jobs:
         env:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # bei manuellem "force_heavy" das 6h-Gating überbrücken (HEAVY_GAP_H=0 -> immer voll)
+          HEAVY_GAP_H: ${{ (github.event_name == 'workflow_dispatch' && inputs.force_heavy) && '0' || '' }}
         run: node scripts/update-sectors.mjs
 
       - name: Änderungen committen
