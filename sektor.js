@@ -302,17 +302,13 @@
     requestAnimationFrame(() => m.classList.add('show'));   // Einblend-Animation
   }
 
-  // externe Nachschau-Seiten (genau diese Aktie), mehrere zur Wahl
+  // MarketScreener-Direktlink (von Gemini hinterlegt) — genau diese Aktie, eindeutig.
+  // Fällt zurück auf die MarketScreener-Suche, wenn (noch) keine Direkt-URL da ist.
   function verifyLinks(st) {
-    const tk = st.ticker || '';
-    const name = encodeURIComponent(st.name || tk);
-    const ms = encodeURIComponent((st.name || tk));
-    return [
-      { name: 'MarketScreener', url: 'https://www.marketscreener.com/search/?q=' + ms },
-      { name: 'TipRanks', url: 'https://www.tipranks.com/search?query=' + name },
-      { name: 'Yahoo Finance', url: 'https://finance.yahoo.com/quote/' + encodeURIComponent(st.yahoo || tk) },
-      { name: 'getquin', url: 'https://app.getquin.com/en/search?query=' + name },
-    ];
+    const url = st.msUrl
+      ? { name: 'MarketScreener öffnen', url: st.msUrl }
+      : { name: 'Auf MarketScreener suchen', url: 'https://www.marketscreener.com/search/?q=' + encodeURIComponent(st.name || st.ticker || '') };
+    return [url];
   }
   function closeStockModal() { const m = document.getElementById('stkModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
 

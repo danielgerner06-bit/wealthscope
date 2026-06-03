@@ -97,7 +97,11 @@ function normRating(o) {
   const yahoo = (o.yahoo || o.yahooSymbol || '').toString().trim().toUpperCase() || null;
   // rohe Zähler zur Transparenz im Detail-Popup mitgeben (MarketScreener-Stufen)
   const counts = haveCounts ? { buy: buy ?? 0, outperform: outp ?? 0, hold: hold ?? 0, underperform: under ?? 0, sell: sell ?? 0 } : null;
-  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts };
+  // MarketScreener-Direktlink validieren: nur echte Consensus-/quote-URLs übernehmen.
+  let msUrl = (o.marketScreenerUrl || o.marketscreenerUrl || o.msUrl || '').toString().trim();
+  if (!/^https?:\/\/(www\.)?marketscreener\.com\/quote\/stock\//i.test(msUrl)) msUrl = null;
+  else if (!/consensus\/?$/i.test(msUrl)) msUrl = msUrl.replace(/\/?$/, '/').replace(/\/+$/, '/') + 'consensus/';
+  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts, msUrl };
 }
 
 /* (A) Kandidaten prüfen ------------------------------------------------ */
@@ -105,17 +109,18 @@ export async function checkCandidates(key, names) {
   if (!names.length) return [];
   const prompt = `Du recherchierst Analysten-Empfehlungen für Aktien über die Google-Suche.
 
-WICHTIG für konsistente, nachprüfbare Daten: Nutze als Quelle für die Analysten-Verteilung
-AUSSCHLIESSLICH MarketScreener (marketscreener.com, "Consensus"/"Empfehlungen"-Seite der
-jeweiligen Aktie). NICHT mehrere Quellen mischen. Wenn du die Aktie dort nicht findest,
-gib sie NICHT aus (lieber weglassen als aus einer anderen Quelle raten).
+WICHTIG: Finde für jede Aktie die EXAKTE MarketScreener-Consensus-Seite über die Google-Suche.
+Das URL-Format ist: https://www.marketscreener.com/quote/stock/FIRMENNAME-ID/consensus/
+(z. B. .../quote/stock/MICROSOFT-CORPORATION-4835/consensus/). Lies die Analysten-Verteilung
+GENAU von dieser Seite. Findest du die Aktie dort nicht eindeutig -> NICHT ausgeben.
 
 Prüfe GENAU diese Aktien: ${names.map(n => '"' + n + '"').join(', ')}.
 
-WICHTIG: MarketScreener nutzt die Skala (von best zu schlecht): Buy, Outperform, Hold,
-Underperform, Sell. Lies die ANZAHL der Analysten je Stufe AB und gib exakt diese ZÄHLER
-zurück — NICHT selbst Prozente rechnen (das machen wir). Beispiel: 4 "Buy" + 1 "Hold" -> buy:4, hold:1.
+MarketScreener-Skala (best zu schlecht): Buy, Outperform, Hold, Underperform, Sell. Lies die
+ANZAHL der Analysten je Stufe AB und gib exakt diese ZÄHLER zurück — NICHT selbst Prozente
+rechnen (das machen wir). Beispiel: 4 "Buy" + 1 "Hold" -> buy:4, hold:1.
 - ticker (Börsenkürzel), name, land
+- marketScreenerUrl: die VOLLSTÄNDIGE URL der Consensus-Seite (…/quote/stock/…/consensus/)
 - buy: Anzahl "Buy" (höchste Stufe)
 - outperform: Anzahl "Outperform" (zweithöchste)
 - hold: Anzahl "Hold"
@@ -125,7 +130,6 @@ zurück — NICHT selbst Prozente rechnen (das machen wir). Beispiel: 4 "Buy" + 
 - upside: Kursziel-Potenzial in % falls auffindbar, sonst null
 - pe: aktuelles KGV (Kurs-Gewinn-Verhältnis) als Zahl; bei Verlust null
 - yahoo: das Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "FRA.DE", "NVDA"), für Kursabfragen
-- source: "marketscreener" + ggf. Datum
 
 Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, deren Analysten-Verteilung du bei
 MarketScreener sicher gefunden hast. Ohne klare Zähler weglassen. Kein Text außerhalb des JSON.`;
@@ -144,7 +148,7 @@ MarketScreener sicher gefunden hast. Ohne klare Zähler weglassen. Kein Text au�
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe, ratingCounts: r.ratingCounts,
+        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe, ratingCounts: r.ratingCounts, msUrl: r.msUrl,
         via: 'gemini', source: o.source || sources[0] || 'web',
         seen: new Date().toISOString().slice(0, 10),
       });
@@ -171,16 +175,17 @@ Kriterium: buyPct (Buy + Strong Buy) >= ${MIN_BUY_PCT} (Prozent aller Empfehlung
 
 Schlage NUR Aktien vor, die NICHT in dieser Liste bereits bekannter Werte stehen: ${known || '(noch keine)'}.
 
-MarketScreener-Skala (best->schlecht): Buy, Outperform, Hold, Underperform, Sell. Lies die
-ANZAHL Analysten je Stufe AB und gib die ZÄHLER zurück (NICHT selbst Prozente rechnen).
-Beispiel: 4 "Buy" + 1 "Hold" -> buy:4, hold:1.
+Prüfe jede Aktie auf ihrer EXAKTEN MarketScreener-Consensus-Seite
+(https://www.marketscreener.com/quote/stock/FIRMENNAME-ID/consensus/) und lies die Verteilung
+GENAU dort ab. MarketScreener-Skala (best->schlecht): Buy, Outperform, Hold, Underperform, Sell.
+Gib die ZÄHLER zurück (NICHT selbst Prozente rechnen). Beispiel: 4 "Buy" + 1 "Hold" -> buy:4, hold:1.
 - ticker, name, land
+- marketScreenerUrl: vollständige URL der Consensus-Seite
 - buy / outperform / hold / underperform / sell = Anzahl Analysten je Stufe (Buy=höchste)
 - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
 - upside (% oder null)
 - pe: aktuelles KGV als Zahl; bei Verlust null
 - yahoo: Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "NVDA")
-- source: "marketscreener"
 
 Gib NUR ein JSON-Array mit bis zu 10 Aktien zurück, deren Verteilung du bei MarketScreener sicher gefunden hast. Kein Text außerhalb des JSON.`;
 
@@ -198,7 +203,7 @@ Gib NUR ein JSON-Array mit bis zu 10 Aktien zurück, deren Verteilung du bei Mar
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe, ratingCounts: r.ratingCounts,
+        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe, ratingCounts: r.ratingCounts, msUrl: r.msUrl,
         via: 'gemini-discover', source: o.source || sources[0] || 'web',
         seen: new Date().toISOString().slice(0, 10),
       });
