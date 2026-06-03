@@ -80,15 +80,6 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
   if (belowCut) console.log(`Bereinigt: ${belowCut} Treffer unter ${MIN_BUY_PCT}% Kauf entfernt.`);
 
-  // Outperform-Bereinigung: gespeicherte 0% (von der Websuche fast immer "nicht gefunden",
-  // nicht echte 0) auf null setzen -> zeigt "–" statt irreführender 0%, bis die wöchentliche
-  // Re-Validierung einen echten Strong-Buy-Anteil liefert.
-  let outpFix = 0;
-  for (const tk of Object.keys(db)) {
-    if (db[tk].outperformPct === 0) { db[tk].outperformPct = null; outpFix++; }
-  }
-  if (outpFix) console.log(`Bereinigt: ${outpFix}× Outperform 0% -> unbekannt (null).`);
-
   // Persistenter Scan-/Kandidaten-Zustand.
   const scan = prev?.scan || { universe: 0, scanned: 0, lastCursor: 0, candCursor: 0 };
   let candidates = Array.isArray(prev?.scan?.candidates) && prev.scan.candidates.length

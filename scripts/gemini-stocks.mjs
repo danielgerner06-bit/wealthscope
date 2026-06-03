@@ -59,12 +59,12 @@ function extractJSON(text) {
 
 function normRating(o) {
   const buyPct = Math.round(Number(o.buyPct ?? o.buy_percent ?? o.kaufProzent));
-  // Outperform (Strong-Buy-Anteil) aus Websuche: fehlt das Feld -> null. Eine "0" ist bei
-  // 100%-Kauf-Werten fast immer "nicht gefunden" (Gemini hat den Strong-Buy-Anteil nicht
-  // ermittelt) statt echte 0 -> daher 0 ebenfalls als unbekannt (null) behandeln.
+  // Outperform = Strong-Buy-Anteil. Ist Teil der Kaufempfehlung (Buy + Strong Buy), wird
+  // also IMMER mitermittelt, wenn buyPct bekannt ist. 0 ist eine echte, gültige Angabe
+  // (alle "Buy", keiner "Strong Buy") -> NICHT als unbekannt behandeln.
   const rawOutp = o.outperformPct ?? o.outperform_percent ?? o.outperformProzent;
   const outpNum = Math.round(Number(rawOutp));
-  const outperformPct = (rawOutp == null || !isFinite(outpNum) || outpNum === 0) ? null : outpNum;
+  const outperformPct = (rawOutp == null || !isFinite(outpNum)) ? null : outpNum;
   const analysts = Number(o.analysts ?? o.analystCount ?? o.anzahlAnalysten) || null;
   let upside = (o.upside != null && isFinite(Number(o.upside))) ? Math.round(Number(o.upside)) : null;
   // Plausibilität: unrealistische Kursziele (oft veraltete/falsche Websuche-Treffer) verwerfen.
@@ -88,8 +88,8 @@ Prüfe GENAU diese Aktien: ${names.map(n => '"' + n + '"').join(', ')}.
 Für jede Aktie ermittle aus aktuellen Quellen:
 - ticker (Börsenkürzel), name, land
 - analysts: Anzahl coverender Analysten (auch 1 zählt)
-- buyPct: Prozent der Empfehlungen, die Buy ODER Strong Buy sind (0-100)
-- outperformPct: Prozent, die NUR "Strong Buy" (höchste Stufe, oft "Outperform") sind (0-100). NUR angeben, wenn du den Strong-Buy-Anteil aus der Quelle wirklich kennst — sonst null (NICHT 0 raten).
+- buyPct: Prozent ALLER Empfehlungen, die Buy ODER Strong Buy sind (0-100)
+- outperformPct: davon der Anteil, der NUR "Strong Buy" (höchste Stufe, oft "Outperform" genannt) ist (0-100). Da Strong Buy Teil der Kaufempfehlung ist, kennst du diesen Wert, wenn du buyPct kennst. 0 ist gültig (alle nur "Buy", keiner "Strong Buy").
 - sector: GENAU eine dieser IDs anhand der Branche: ${SECTOR_LIST}
 - upside: Kursziel-Potenzial in % falls auffindbar, sonst null
 - pe: aktuelles KGV (Kurs-Gewinn-Verhältnis) als Zahl; bei Verlust null
@@ -137,7 +137,7 @@ Schlage NUR Aktien vor, die NICHT in dieser Liste bereits bekannter Werte stehen
 
 Für jeden Vorschlag gib aus aktuellen Quellen:
 - ticker, name, land
-- analysts, buyPct (0-100); outperformPct = Anteil NUR "Strong Buy" (0-100), nur wenn bekannt, sonst null (nicht 0 raten)
+- analysts, buyPct (0-100) = Anteil Buy+Strong Buy; outperformPct (0-100) = davon der Anteil NUR "Strong Buy" (Teil von buyPct, also bekannt wenn buyPct bekannt; 0 ist gültig)
 - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
 - upside (% oder null)
 - pe: aktuelles KGV als Zahl; bei Verlust null
