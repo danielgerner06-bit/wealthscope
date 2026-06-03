@@ -275,14 +275,15 @@
       '<div class="stk-stat"><div class="stk-stat-val" style="color:' + hsl(t.s) + '">' + t.val + '</div>' +
       '<div class="stk-stat-lbl">' + t.lbl + '</div></div>').join('');
 
-    // rohe Analysten-Verteilung (volle Transparenz, wenn von MarketScreener gezählt)
+    // rohe Analysten-Verteilung (volle Transparenz, MarketScreener-Stufen)
     const rc = st.ratingCounts;
     const cntsEl = document.getElementById('stkModalCounts');
-    if (rc && (rc.strongBuy || rc.buy || rc.hold || rc.sell)) {
+    if (rc && (rc.buy || rc.outperform || rc.hold || rc.underperform || rc.sell)) {
       const parts = [];
-      if (rc.strongBuy) parts.push('<b style="color:#34d399">' + rc.strongBuy + '</b> Strong Buy');
-      if (rc.buy) parts.push('<b style="color:#86efac">' + rc.buy + '</b> Buy');
+      if (rc.buy) parts.push('<b style="color:#34d399">' + rc.buy + '</b> Buy');
+      if (rc.outperform) parts.push('<b style="color:#86efac">' + rc.outperform + '</b> Outperform');
       if (rc.hold) parts.push('<b style="color:#fbbf24">' + rc.hold + '</b> Hold');
+      if (rc.underperform) parts.push('<b style="color:#fb923c">' + rc.underperform + '</b> Underperform');
       if (rc.sell) parts.push('<b style="color:#f87171">' + rc.sell + '</b> Sell');
       cntsEl.innerHTML = 'Analysten: ' + parts.join(' · ');
       cntsEl.hidden = false;

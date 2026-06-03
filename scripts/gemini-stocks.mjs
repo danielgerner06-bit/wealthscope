@@ -58,18 +58,23 @@ function extractJSON(text) {
 }
 
 function normRating(o) {
-  // BEVORZUGT: rohe Analysten-Zähler -> WIR rechnen die Prozente (Gemini kann nicht "100" raten).
+  // MarketScreener-Skala (best->schlecht): Buy, Outperform, Hold, Underperform, Sell.
+  // Kaufempfehlung = Buy + Outperform; "Strong Buy"-Wert (outperformPct) = NUR Outperform.
+  // BEVORZUGT rohe Zähler -> WIR rechnen die Prozente (Gemini kann nicht "100" raten).
   const cnt = k => { const v = Number(o[k]); return isFinite(v) && v >= 0 ? Math.round(v) : null; };
-  const sb = cnt('strongBuy') ?? cnt('strong_buy'); const by = cnt('buy');
-  const hd = cnt('hold'); const sl = (cnt('sell') ?? 0) + (cnt('strongSell') ?? cnt('strong_sell') ?? 0);
+  const buy = cnt('buy');
+  const outp = cnt('outperform') ?? cnt('outperformCount') ?? cnt('accumulate');
+  const hold = cnt('hold');
+  const under = cnt('underperform') ?? 0;
+  const sell = (cnt('sell') ?? 0) + (cnt('strongSell') ?? cnt('strong_sell') ?? 0);
   let buyPct, outperformPct, analysts;
-  const haveCounts = [sb, by, hd].some(x => x != null);
+  const haveCounts = [buy, outp, hold].some(x => x != null);
   if (haveCounts) {
-    const SB = sb ?? 0, B = by ?? 0, H = hd ?? 0, S = sl ?? 0;
-    const total = SB + B + H + S;
+    const BUY = buy ?? 0, OUTP = outp ?? 0, H = hold ?? 0, U = under ?? 0, S = sell ?? 0;
+    const total = BUY + OUTP + H + U + S;
     if (total > 0) {
-      buyPct = Math.round(((SB + B) / total) * 100);
-      outperformPct = Math.round((SB / total) * 100);
+      buyPct = Math.round(((BUY + OUTP) / total) * 100);   // Kaufempfehlung = Buy + Outperform
+      outperformPct = Math.round((OUTP / total) * 100);    // nur die Outperform-Stufe
       analysts = total;
     }
   }
@@ -90,8 +95,8 @@ function normRating(o) {
   if (!SECTOR_IDS.includes(sector)) sector = sectorForFinnhub(o.industry || o.branche || sector) || null;
   // Yahoo-Symbol für die Kursabfrage (z. B. KTN.DE, FRA.DE); fällt sonst auf Ticker zurück.
   const yahoo = (o.yahoo || o.yahooSymbol || '').toString().trim().toUpperCase() || null;
-  // rohe Zähler zur Transparenz im Detail-Popup mitgeben (wenn von MarketScreener)
-  const counts = haveCounts ? { strongBuy: sb ?? 0, buy: by ?? 0, hold: hd ?? 0, sell: sl ?? 0 } : null;
+  // rohe Zähler zur Transparenz im Detail-Popup mitgeben (MarketScreener-Stufen)
+  const counts = haveCounts ? { buy: buy ?? 0, outperform: outp ?? 0, hold: hold ?? 0, underperform: under ?? 0, sell: sell ?? 0 } : null;
   return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts };
 }
 
@@ -107,14 +112,15 @@ gib sie NICHT aus (lieber weglassen als aus einer anderen Quelle raten).
 
 Prüfe GENAU diese Aktien: ${names.map(n => '"' + n + '"').join(', ')}.
 
-WICHTIG: Lies bei MarketScreener die ANZAHL der Analysten je Empfehlungsstufe AB und gib
-exakt diese ZÄHLER zurück — NICHT selbst Prozente rechnen (das machen wir). Beispiel: stehen
-dort 4 "Buy" und 1 "Hold", dann strongBuy:0, buy:4, hold:1.
+WICHTIG: MarketScreener nutzt die Skala (von best zu schlecht): Buy, Outperform, Hold,
+Underperform, Sell. Lies die ANZAHL der Analysten je Stufe AB und gib exakt diese ZÄHLER
+zurück — NICHT selbst Prozente rechnen (das machen wir). Beispiel: 4 "Buy" + 1 "Hold" -> buy:4, hold:1.
 - ticker (Börsenkürzel), name, land
-- strongBuy: Anzahl "Strong Buy"/"Outperform" (höchste Stufe)
-- buy: Anzahl "Buy"/"Accumulate"/"Add"
-- hold: Anzahl "Hold"/"Neutral"
-- sell: Anzahl "Sell"/"Reduce"/"Underperform"/"Strong Sell"
+- buy: Anzahl "Buy" (höchste Stufe)
+- outperform: Anzahl "Outperform" (zweithöchste)
+- hold: Anzahl "Hold"
+- underperform: Anzahl "Underperform"
+- sell: Anzahl "Sell"
 - sector: GENAU eine dieser IDs anhand der Branche: ${SECTOR_LIST}
 - upside: Kursziel-Potenzial in % falls auffindbar, sonst null
 - pe: aktuelles KGV (Kurs-Gewinn-Verhältnis) als Zahl; bei Verlust null
@@ -165,10 +171,11 @@ Kriterium: buyPct (Buy + Strong Buy) >= ${MIN_BUY_PCT} (Prozent aller Empfehlung
 
 Schlage NUR Aktien vor, die NICHT in dieser Liste bereits bekannter Werte stehen: ${known || '(noch keine)'}.
 
-Lies bei MarketScreener die ANZAHL Analysten je Stufe AB und gib die ZÄHLER zurück (NICHT selbst
-Prozente rechnen — das machen wir). Beispiel: 4 "Buy" + 1 "Hold" -> strongBuy:0, buy:4, hold:1.
+MarketScreener-Skala (best->schlecht): Buy, Outperform, Hold, Underperform, Sell. Lies die
+ANZAHL Analysten je Stufe AB und gib die ZÄHLER zurück (NICHT selbst Prozente rechnen).
+Beispiel: 4 "Buy" + 1 "Hold" -> buy:4, hold:1.
 - ticker, name, land
-- strongBuy / buy / hold / sell = Anzahl Analysten je Stufe (Strong Buy=höchste; sell deckt Sell/Underperform/Strong Sell ab)
+- buy / outperform / hold / underperform / sell = Anzahl Analysten je Stufe (Buy=höchste)
 - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
 - upside (% oder null)
 - pe: aktuelles KGV als Zahl; bei Verlust null
