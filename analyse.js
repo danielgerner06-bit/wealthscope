@@ -24,7 +24,10 @@
       fetch('history.json?v=' + Date.now()).then(r => r.ok ? r.json() : { entries: {} }).catch(() => ({ entries: {} })),
       fetch('sectordata.json?v=' + Date.now()).then(r => r.json()).catch(() => ({})),
     ]);
-    HIST = Object.values(h.entries || {});
+    // Nur Perlen mit mindestens einem echten Performance-Wert zählen für die Analyse.
+    // Frisch aufgenommene Perlen (perf:[] leer) haben noch keine auswertbaren Daten ->
+    // Analyse bleibt "0/0", bis nach ~1 Monat die ersten echten Monatswerte reifen.
+    HIST = Object.values(h.entries || {}).filter(x => monthsOf(x) > 0);
     SECT = d.sectors || []; REG = d.regions || [];
     HIST._kiObj = h;
   }
