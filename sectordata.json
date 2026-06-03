@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T20:00:21.361Z",
+  "updatedAt": "2026-06-03T20:02:07.112Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -354,30 +354,6 @@
       "miss": 2,
       "div": 2.57,
       "perf1mBefore": -2.85,
-      "recheckAt": "2026-06-03",
-      "tdAt": "2026-06-03"
-    },
-    {
-      "ticker": "MUM",
-      "name": "Mensch und Maschine Software SE",
-      "sector": "software",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 4,
-      "upside": 42,
-      "yahoo": "MUM.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "wallstreetONLINE, MarketScreener",
-      "seen": "2026-06-02",
-      "perf6m": -8.35,
-      "perf6mAt": "2026-06-02",
-      "pe": 20.5,
-      "eps": 1.91,
-      "enrichAt": "2026-06-02",
-      "miss": 2,
-      "div": 5.13,
-      "perf1mBefore": -5.93,
       "recheckAt": "2026-06-03",
       "tdAt": "2026-06-03"
     },
@@ -1522,6 +1498,8 @@
     "revalidateTag": "marketscreener-2026-06",
     "fmpRetryTag": "grades-summary-fix"
   },
-  "blacklist": {},
+  "blacklist": {
+    "MUM": "2026-09-03"
+  },
   "yahooAt": "2026-06-03T20:00:21.361Z"
 }
