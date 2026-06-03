@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T03:28:40.313Z",
+  "updatedAt": "2026-06-03T05:20:19.769Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -305,7 +305,8 @@
       "pe": null,
       "eps": -1.42,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 21.47
     },
     {
       "ticker": "SLGL",
@@ -323,7 +324,8 @@
       "pe": null,
       "eps": -0.3,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -5.11
     },
     {
       "ticker": "STRO",
@@ -341,7 +343,8 @@
       "pe": null,
       "eps": -16.35,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -36.36
     },
     {
       "ticker": "NVTA",
@@ -358,7 +361,8 @@
       "seen": "2026-06-02",
       "pe": null,
       "div": null,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": null
     },
     {
       "ticker": "CGEM",
@@ -377,7 +381,8 @@
       "peAt": "2026-06-02",
       "pe": null,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": 0
     },
     {
       "ticker": "CLDX",
@@ -396,7 +401,8 @@
       "peAt": "2026-06-02",
       "pe": null,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": -11.81
     },
     {
       "ticker": "SLDP",
@@ -414,7 +420,8 @@
       "pe": null,
       "eps": -0.49,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 4.91
     },
     {
       "ticker": "INSM",
@@ -432,7 +439,8 @@
       "pe": null,
       "eps": -5.76,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": -25.91
     },
     {
       "ticker": "CGEN",
@@ -451,7 +459,8 @@
       "peAt": "2026-06-02",
       "pe": 6.5,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": -14.39
     },
     {
       "ticker": "SRZN",
@@ -469,7 +478,8 @@
       "pe": null,
       "eps": -36.59,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -27.83
     },
     {
       "ticker": "SKYH",
@@ -487,7 +497,8 @@
       "pe": 77.3,
       "eps": 0.12,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -9.65
     },
     {
       "ticker": "INR",
@@ -505,7 +516,8 @@
       "pe": 4.6,
       "eps": 2.88,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": -23.92
     },
     {
       "ticker": "SPAI",
@@ -523,7 +535,8 @@
       "pe": null,
       "eps": -0.72,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 32.44
     },
     {
       "ticker": "TDUP",
@@ -541,7 +554,46 @@
       "pe": null,
       "eps": -0.18,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 2.97
+    },
+    {
+      "ticker": "TYRA",
+      "name": "Tyra Biosciences Inc",
+      "sector": "health",
+      "buyPct": 90,
+      "outperformPct": 43,
+      "analysts": 11,
+      "upside": 78,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": 40.05,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -2.18,
+      "div": 0,
+      "enrichAt": "2026-06-03",
+      "perf1mBefore": -18.44
+    },
+    {
+      "ticker": "TRVI",
+      "name": "Trevi Therapeutics Inc",
+      "sector": "health",
+      "buyPct": 94,
+      "outperformPct": 35,
+      "analysts": 10,
+      "upside": 77,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": 3.56,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -0.32,
+      "div": 0,
+      "enrichAt": "2026-06-03",
+      "perf1mBefore": -6.12
     },
     {
       "ticker": "ACRS",
@@ -561,7 +613,8 @@
       "pe": null,
       "eps": -0.56,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 2.21
     },
     {
       "ticker": "TBN",
@@ -579,7 +632,27 @@
       "pe": null,
       "eps": -1.83,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -9.16
+    },
+    {
+      "ticker": "TREE",
+      "name": "Lendingtree Inc",
+      "sector": "finance",
+      "buyPct": 92,
+      "outperformPct": 25,
+      "analysts": 6,
+      "upside": 72,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": -32.63,
+      "perf6mAt": "2026-06-03",
+      "pe": 3,
+      "eps": 12.92,
+      "div": 0,
+      "enrichAt": "2026-06-03",
+      "perf1mBefore": -1.8
     },
     {
       "ticker": "SMC",
@@ -597,7 +670,8 @@
       "pe": null,
       "eps": -1.88,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -6.94
     },
     {
       "ticker": "IMNM",
@@ -615,7 +689,8 @@
       "pe": null,
       "eps": -2.39,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": -17.1
     },
     {
       "ticker": "KOD",
@@ -633,7 +708,8 @@
       "pe": null,
       "eps": -4.17,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": -21.39
     },
     {
       "ticker": "GWH",
@@ -653,7 +729,8 @@
       "pe": null,
       "eps": -3.38,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -11.71
     },
     {
       "ticker": "IMTX",
@@ -671,7 +748,8 @@
       "pe": null,
       "eps": -1.99,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": -9.87
     },
     {
       "ticker": "TMC",
@@ -689,7 +767,8 @@
       "pe": null,
       "eps": -0.84,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 25.05
     },
     {
       "ticker": "SHEN",
@@ -707,7 +786,8 @@
       "pe": null,
       "eps": -0.83,
       "div": 0.68,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 3.31
     },
     {
       "ticker": "CLYM",
@@ -726,7 +806,8 @@
       "peAt": "2026-06-02",
       "pe": null,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": 15.58
     },
     {
       "ticker": "SIBN",
@@ -744,7 +825,8 @@
       "pe": null,
       "eps": -0.39,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 4.94
     },
     {
       "ticker": "ISSC",
@@ -762,7 +844,8 @@
       "pe": 17.9,
       "eps": 0.95,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": -14.94
     },
     {
       "ticker": "IRTC",
@@ -782,7 +865,8 @@
       "pe": null,
       "eps": -0.85,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -11.48
     },
     {
       "ticker": "TARS",
@@ -800,7 +884,8 @@
       "pe": null,
       "eps": -1.11,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -11.09
     },
     {
       "ticker": "SLSR",
@@ -818,7 +903,8 @@
       "pe": null,
       "eps": -0.19,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 13.3
     },
     {
       "ticker": "JBS",
@@ -836,7 +922,8 @@
       "pe": 7.5,
       "eps": 1.62,
       "enrichAt": "2026-06-02",
-      "div": 11.09
+      "div": 11.09,
+      "perf1mBefore": -23.32
     },
     {
       "ticker": "TCMD",
@@ -854,7 +941,8 @@
       "pe": 28.1,
       "eps": 0.87,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 8.83
     },
     {
       "ticker": "SOPH",
@@ -872,7 +960,8 @@
       "pe": null,
       "eps": -1.18,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -6.62
     },
     {
       "ticker": "CNL",
@@ -891,7 +980,8 @@
       "peAt": "2026-06-02",
       "pe": null,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": -3.4
     },
     {
       "ticker": "SMTI",
@@ -909,7 +999,8 @@
       "pe": 354.3,
       "eps": 0.06,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 11.95
     },
     {
       "ticker": "IE",
@@ -927,7 +1018,8 @@
       "pe": null,
       "eps": -0.29,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": 15.09
     },
     {
       "ticker": "KVYO",
@@ -945,7 +1037,8 @@
       "pe": null,
       "eps": -0.03,
       "enrichAt": "2026-06-02",
-      "div": 0
+      "div": 0,
+      "perf1mBefore": -24.57
     },
     {
       "ticker": "SOUN",
@@ -963,7 +1056,8 @@
       "pe": null,
       "eps": -0.7,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -6.86
     },
     {
       "ticker": "STOK",
@@ -1055,6 +1149,24 @@
       "pe": 16.5,
       "enrichAt": "2026-06-02",
       "div": 0.49
+    },
+    {
+      "ticker": "TOI",
+      "name": "Oncology Institute Inc",
+      "sector": "health",
+      "buyPct": 88,
+      "outperformPct": 25,
+      "analysts": 4,
+      "upside": 53,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": 52.77,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -0.35,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "SI",
@@ -1221,6 +1333,24 @@
       "eps": 19.24,
       "div": 0,
       "enrichAt": "2026-06-02"
+    },
+    {
+      "ticker": "TRMB",
+      "name": "Trimble Inc",
+      "sector": "hardware",
+      "buyPct": 95,
+      "outperformPct": 38,
+      "analysts": 12,
+      "upside": 48,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": -29.88,
+      "perf6mAt": "2026-06-03",
+      "pe": 30.2,
+      "eps": 1.91,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "SEPN",
@@ -1803,6 +1933,26 @@
       "enrichAt": "2026-06-02"
     },
     {
+      "ticker": "DTE",
+      "name": "Deutsche Telekom AG",
+      "sector": "comm",
+      "buyPct": 80,
+      "outperformPct": 50,
+      "analysts": 17,
+      "upside": 32,
+      "yahoo": "DTE.DE",
+      "peGemini": 10.4,
+      "via": "gemini-discover",
+      "source": "Marketscreener",
+      "seen": "2026-06-03",
+      "perf6m": 5.37,
+      "perf6mAt": "2026-06-03",
+      "pe": 16,
+      "eps": 1.81,
+      "div": 3.47,
+      "enrichAt": "2026-06-03"
+    },
+    {
       "ticker": "KNSA",
       "name": "Kiniksa Pharmaceuticals International PLC",
       "sector": "health",
@@ -1998,6 +2148,24 @@
       "enrichAt": "2026-06-02"
     },
     {
+      "ticker": "UAMY",
+      "name": "United States Antimony Corp",
+      "sector": "materials",
+      "buyPct": 90,
+      "outperformPct": 30,
+      "analysts": 4,
+      "upside": 28,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": 51.31,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -0.13,
+      "div": 0,
+      "enrichAt": "2026-06-03"
+    },
+    {
       "ticker": "SPGI",
       "name": "S&P Global Inc",
       "sector": "finance",
@@ -2032,6 +2200,26 @@
       "eps": 1.02,
       "div": 0,
       "enrichAt": "2026-06-02"
+    },
+    {
+      "ticker": "HNR1",
+      "name": "H&R GmbH & Co. KGaA",
+      "sector": "materials",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 15,
+      "upside": 27,
+      "yahoo": "HNR1.DE",
+      "peGemini": 10.5,
+      "via": "gemini-discover",
+      "source": "Marketscreener",
+      "seen": "2026-06-03",
+      "perf6m": -8.65,
+      "perf6mAt": "2026-06-03",
+      "pe": 9.5,
+      "eps": 23.81,
+      "div": 5.5,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TMO",
@@ -2092,6 +2280,24 @@
       "div": 0
     },
     {
+      "ticker": "TVTX",
+      "name": "Travere Therapeutics Inc",
+      "sector": "health",
+      "buyPct": 90,
+      "outperformPct": 38,
+      "analysts": 14,
+      "upside": 26,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": 28.69,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -0.5,
+      "div": 0,
+      "enrichAt": "2026-06-03"
+    },
+    {
       "ticker": "300995.SZ",
       "name": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
       "sector": "health",
@@ -2112,6 +2318,26 @@
       "recheckAt": "2026-06-02",
       "miss": 1,
       "div": 1.02
+    },
+    {
+      "ticker": "EVT",
+      "name": "Evotec SE",
+      "sector": "health",
+      "buyPct": 80,
+      "outperformPct": 60,
+      "analysts": 7,
+      "upside": 26,
+      "yahoo": "EVT.DE",
+      "peGemini": null,
+      "via": "gemini-discover",
+      "source": "Onvista",
+      "seen": "2026-06-03",
+      "perf6m": -5.17,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -1.09,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "LC",
@@ -2166,6 +2392,24 @@
       "eps": -0.91,
       "div": 0,
       "enrichAt": "2026-06-02"
+    },
+    {
+      "ticker": "TTWO",
+      "name": "Take-Two Interactive Software Inc",
+      "sector": "comm",
+      "buyPct": 92,
+      "outperformPct": 32,
+      "analysts": 28,
+      "upside": 25,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": -9.43,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -1.62,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "CENX",
@@ -2349,6 +2593,26 @@
       "eps": 6.13,
       "div": 2.64,
       "enrichAt": "2026-06-02"
+    },
+    {
+      "ticker": "VOW3",
+      "name": "Volkswagen AG Vz.",
+      "sector": "cons_cycl",
+      "buyPct": 85,
+      "outperformPct": 60,
+      "analysts": 22,
+      "upside": 23,
+      "yahoo": "VOW3.DE",
+      "peGemini": 4.5,
+      "via": "gemini-discover",
+      "source": "Marketscreener",
+      "seen": "2026-06-03",
+      "perf6m": -10.72,
+      "perf6mAt": "2026-06-03",
+      "pe": 7.5,
+      "eps": 12.21,
+      "div": 5.81,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "ALGN",
@@ -2617,6 +2881,24 @@
       "div": 2.88
     },
     {
+      "ticker": "TSSI",
+      "name": "TSS Inc",
+      "sector": "hardware",
+      "buyPct": 89,
+      "outperformPct": 22,
+      "analysts": 2,
+      "upside": 19,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": 72.09,
+      "perf6mAt": "2026-06-03",
+      "pe": 29,
+      "eps": 0.52,
+      "div": 0,
+      "enrichAt": "2026-06-03"
+    },
+    {
       "ticker": "BNP",
       "name": "BNP Paribas SA",
       "sector": "finance",
@@ -2713,6 +2995,24 @@
       "div": 0
     },
     {
+      "ticker": "UNTY",
+      "name": "Unity Bancorp Inc",
+      "sector": "finance",
+      "buyPct": 90,
+      "outperformPct": 20,
+      "analysts": 4,
+      "upside": 18,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": 4.95,
+      "perf6mAt": "2026-06-03",
+      "pe": 9.2,
+      "eps": 5.94,
+      "div": 1.13,
+      "enrichAt": "2026-06-03"
+    },
+    {
       "ticker": "VRT",
       "name": "Vertiv Holdings",
       "sector": "hardware",
@@ -2783,6 +3083,24 @@
       "eps": 3.3,
       "div": 3.05,
       "enrichAt": "2026-06-02"
+    },
+    {
+      "ticker": "UCTT",
+      "name": "Ultra Clean Holdings Inc",
+      "sector": "ai_semi",
+      "buyPct": 91,
+      "outperformPct": 27,
+      "analysts": 5,
+      "upside": 16,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": 224.99,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -4.29,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "DB1",
@@ -3267,26 +3585,6 @@
       "enrichAt": "2026-06-02"
     },
     {
-      "ticker": "HNR1",
-      "name": "H&R GmbH & Co. KGaA",
-      "sector": "materials",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 15,
-      "upside": 27,
-      "yahoo": "HNR1.DE",
-      "peGemini": 10.5,
-      "via": "gemini-discover",
-      "source": "Marketscreener",
-      "seen": "2026-06-03",
-      "perf6m": -8.65,
-      "perf6mAt": "2026-06-03",
-      "pe": 9.5,
-      "eps": 23.81,
-      "div": 5.5,
-      "enrichAt": "2026-06-03"
-    },
-    {
       "ticker": "SOW",
       "name": "S&T AG",
       "sector": "software",
@@ -3324,66 +3622,6 @@
       "enrichAt": "2026-06-02"
     },
     {
-      "ticker": "WCH",
-      "name": "Wacker Chemie AG",
-      "sector": "materials",
-      "buyPct": 90,
-      "outperformPct": 70,
-      "analysts": 14,
-      "upside": -17,
-      "yahoo": "WCH.DE",
-      "peGemini": 15.2,
-      "via": "gemini-discover",
-      "source": "Morningstar",
-      "seen": "2026-06-03",
-      "perf6m": 51.87,
-      "perf6mAt": "2026-06-03",
-      "pe": null,
-      "eps": -16.16,
-      "div": 2.67,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "VOW3",
-      "name": "Volkswagen AG Vz.",
-      "sector": "cons_cycl",
-      "buyPct": 85,
-      "outperformPct": 60,
-      "analysts": 22,
-      "upside": 23,
-      "yahoo": "VOW3.DE",
-      "peGemini": 4.5,
-      "via": "gemini-discover",
-      "source": "Marketscreener",
-      "seen": "2026-06-03",
-      "perf6m": -10.72,
-      "perf6mAt": "2026-06-03",
-      "pe": 7.5,
-      "eps": 12.21,
-      "div": 5.81,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "EVT",
-      "name": "Evotec SE",
-      "sector": "health",
-      "buyPct": 80,
-      "outperformPct": 60,
-      "analysts": 7,
-      "upside": 26,
-      "yahoo": "EVT.DE",
-      "peGemini": null,
-      "via": "gemini-discover",
-      "source": "Onvista",
-      "seen": "2026-06-03",
-      "perf6m": -5.17,
-      "perf6mAt": "2026-06-03",
-      "pe": null,
-      "eps": -1.09,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
       "ticker": "CNQ",
       "name": "Cancom SE",
       "sector": "software",
@@ -3416,26 +3654,6 @@
       "enrichAt": "2026-06-03"
     },
     {
-      "ticker": "DTE",
-      "name": "Deutsche Telekom AG",
-      "sector": "comm",
-      "buyPct": 80,
-      "outperformPct": 50,
-      "analysts": 17,
-      "upside": 32,
-      "yahoo": "DTE.DE",
-      "peGemini": 10.4,
-      "via": "gemini-discover",
-      "source": "Marketscreener",
-      "seen": "2026-06-03",
-      "perf6m": 5.37,
-      "perf6mAt": "2026-06-03",
-      "pe": 16,
-      "eps": 1.81,
-      "div": 3.47,
-      "enrichAt": "2026-06-03"
-    },
-    {
       "ticker": "SIL",
       "name": "Siltronic AG",
       "sector": "ai_semi",
@@ -3450,6 +3668,24 @@
       "seen": "2026-06-03",
       "pe": null,
       "div": null,
+      "enrichAt": "2026-06-03"
+    },
+    {
+      "ticker": "TOYO",
+      "name": "TOYO Co., Ltd",
+      "sector": "ai_semi",
+      "buyPct": 88,
+      "outperformPct": 25,
+      "analysts": 2,
+      "upside": -1,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": 114.01,
+      "perf6mAt": "2026-06-03",
+      "pe": 8.6,
+      "eps": 1.95,
+      "div": 0,
       "enrichAt": "2026-06-03"
     },
     {
@@ -3543,6 +3779,24 @@
       "perf6mAt": "2026-06-02"
     },
     {
+      "ticker": "TWST",
+      "name": "Twist Bioscience Corp",
+      "sector": "health",
+      "buyPct": 93,
+      "outperformPct": 53,
+      "analysts": 9,
+      "upside": -8,
+      "via": "finnhub",
+      "source": "Finnhub",
+      "seen": "2026-06-03",
+      "perf6m": 110.09,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -1.32,
+      "div": 0,
+      "enrichAt": "2026-06-03"
+    },
+    {
       "ticker": "TGB",
       "name": "Taseko Mines Ltd",
       "sector": "materials",
@@ -3595,6 +3849,26 @@
       "eps": 10.5,
       "div": 0.32,
       "enrichAt": "2026-06-02"
+    },
+    {
+      "ticker": "WCH",
+      "name": "Wacker Chemie AG",
+      "sector": "materials",
+      "buyPct": 90,
+      "outperformPct": 70,
+      "analysts": 14,
+      "upside": -17,
+      "yahoo": "WCH.DE",
+      "peGemini": 15.2,
+      "via": "gemini-discover",
+      "source": "Morningstar",
+      "seen": "2026-06-03",
+      "perf6m": 51.87,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -16.16,
+      "div": 2.67,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "SWMR",
@@ -3651,24 +3925,6 @@
       "enrichAt": "2026-06-02"
     },
     {
-      "ticker": "TRMB",
-      "name": "Trimble Inc",
-      "sector": "hardware",
-      "buyPct": 95,
-      "outperformPct": 38,
-      "analysts": 12,
-      "upside": 48,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": -29.88,
-      "perf6mAt": "2026-06-03",
-      "pe": 30.2,
-      "eps": 1.91,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
       "ticker": "TSHA",
       "name": "Taysha Gene Therapies Inc",
       "sector": "health",
@@ -3703,24 +3959,6 @@
       "eps": -4.46,
       "div": 0,
       "enrichAt": "2026-06-02"
-    },
-    {
-      "ticker": "TRVI",
-      "name": "Trevi Therapeutics Inc",
-      "sector": "health",
-      "buyPct": 94,
-      "outperformPct": 35,
-      "analysts": 10,
-      "upside": 77,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": 3.56,
-      "perf6mAt": "2026-06-03",
-      "pe": null,
-      "eps": -0.32,
-      "div": 0,
-      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "SVRA",
@@ -3773,24 +4011,6 @@
       "perf6mAt": "2026-06-03",
       "pe": null,
       "eps": -0.44,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "TWST",
-      "name": "Twist Bioscience Corp",
-      "sector": "health",
-      "buyPct": 93,
-      "outperformPct": 53,
-      "analysts": 9,
-      "upside": -8,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": 110.09,
-      "perf6mAt": "2026-06-03",
-      "pe": null,
-      "eps": -1.32,
       "div": 0,
       "enrichAt": "2026-06-03"
     },
@@ -3867,42 +4087,6 @@
       "enrichAt": "2026-06-03"
     },
     {
-      "ticker": "TREE",
-      "name": "Lendingtree Inc",
-      "sector": "finance",
-      "buyPct": 92,
-      "outperformPct": 25,
-      "analysts": 6,
-      "upside": 72,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": -32.63,
-      "perf6mAt": "2026-06-03",
-      "pe": 3,
-      "eps": 12.92,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "TTWO",
-      "name": "Take-Two Interactive Software Inc",
-      "sector": "comm",
-      "buyPct": 92,
-      "outperformPct": 32,
-      "analysts": 28,
-      "upside": 25,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": -9.43,
-      "perf6mAt": "2026-06-03",
-      "pe": null,
-      "eps": -1.62,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
       "ticker": "SPRB",
       "name": "Spruce Biosciences, Inc",
       "sector": "health",
@@ -3955,24 +4139,6 @@
       "eps": -1.42,
       "div": 0,
       "enrichAt": "2026-06-02"
-    },
-    {
-      "ticker": "UCTT",
-      "name": "Ultra Clean Holdings Inc",
-      "sector": "ai_semi",
-      "buyPct": 91,
-      "outperformPct": 27,
-      "analysts": 5,
-      "upside": 16,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": 224.99,
-      "perf6mAt": "2026-06-03",
-      "pe": null,
-      "eps": -4.29,
-      "div": 0,
-      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "SNTI",
@@ -4029,42 +4195,6 @@
       "enrichAt": "2026-06-02"
     },
     {
-      "ticker": "TVTX",
-      "name": "Travere Therapeutics Inc",
-      "sector": "health",
-      "buyPct": 90,
-      "outperformPct": 38,
-      "analysts": 14,
-      "upside": 26,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": 28.69,
-      "perf6mAt": "2026-06-03",
-      "pe": null,
-      "eps": -0.5,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "TYRA",
-      "name": "Tyra Biosciences Inc",
-      "sector": "health",
-      "buyPct": 90,
-      "outperformPct": 43,
-      "analysts": 11,
-      "upside": 78,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": 40.05,
-      "perf6mAt": "2026-06-03",
-      "pe": null,
-      "eps": -2.18,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
       "ticker": "TZOO",
       "name": "Travelzoo",
       "sector": "comm",
@@ -4080,42 +4210,6 @@
       "pe": 26.9,
       "eps": 0.38,
       "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "UAMY",
-      "name": "United States Antimony Corp",
-      "sector": "materials",
-      "buyPct": 90,
-      "outperformPct": 30,
-      "analysts": 4,
-      "upside": 28,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": 51.31,
-      "perf6mAt": "2026-06-03",
-      "pe": null,
-      "eps": -0.13,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "UNTY",
-      "name": "Unity Bancorp Inc",
-      "sector": "finance",
-      "buyPct": 90,
-      "outperformPct": 20,
-      "analysts": 4,
-      "upside": 18,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": 4.95,
-      "perf6mAt": "2026-06-03",
-      "pe": 9.2,
-      "eps": 5.94,
-      "div": 1.13,
       "enrichAt": "2026-06-03"
     },
     {
@@ -4241,24 +4335,6 @@
       "perf6mAt": "2026-06-03",
       "pe": null,
       "eps": -14.66,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "TSSI",
-      "name": "TSS Inc",
-      "sector": "hardware",
-      "buyPct": 89,
-      "outperformPct": 22,
-      "analysts": 2,
-      "upside": 19,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": 72.09,
-      "perf6mAt": "2026-06-03",
-      "pe": 29,
-      "eps": 0.52,
       "div": 0,
       "enrichAt": "2026-06-03"
     },
@@ -4550,24 +4626,6 @@
       "enrichAt": "2026-06-03"
     },
     {
-      "ticker": "TOI",
-      "name": "Oncology Institute Inc",
-      "sector": "health",
-      "buyPct": 88,
-      "outperformPct": 25,
-      "analysts": 4,
-      "upside": 53,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": 52.77,
-      "perf6mAt": "2026-06-03",
-      "pe": null,
-      "eps": -0.35,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
       "ticker": "TOVX",
       "name": "Theriva Biologics Inc",
       "sector": "health",
@@ -4582,24 +4640,6 @@
       "perf6mAt": "2026-06-03",
       "pe": null,
       "eps": -0.58,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "TOYO",
-      "name": "TOYO Co., Ltd",
-      "sector": "ai_semi",
-      "buyPct": 88,
-      "outperformPct": 25,
-      "analysts": 2,
-      "upside": -1,
-      "via": "finnhub",
-      "source": "Finnhub",
-      "seen": "2026-06-03",
-      "perf6m": 114.01,
-      "perf6mAt": "2026-06-03",
-      "pe": 8.6,
-      "eps": 1.95,
       "div": 0,
       "enrichAt": "2026-06-03"
     },
@@ -5445,7 +5485,9 @@
       "pe": null,
       "eps": -5.01,
       "div": 0,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "perf6m": 14.37,
+      "perf6mAt": "2026-06-03"
     },
     {
       "ticker": "TOON",
@@ -5457,7 +5499,13 @@
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -4.95,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -0.45,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TOPS",
@@ -5469,7 +5517,13 @@
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -84.74,
+      "perf6mAt": "2026-06-03",
+      "pe": 1.7,
+      "eps": 0.67,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TPST",
@@ -5477,11 +5531,17 @@
       "sector": "health",
       "buyPct": 86,
       "outperformPct": 29,
-      "analysts": 7,
+      "analysts": 1,
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -55.66,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -5.7,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TRAK",
@@ -5489,11 +5549,17 @@
       "sector": "hardware",
       "buyPct": 86,
       "outperformPct": 29,
-      "analysts": 7,
-      "upside": null,
+      "analysts": 1,
+      "upside": 53,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -22.75,
+      "perf6mAt": "2026-06-03",
+      "pe": 28.3,
+      "eps": 0.37,
+      "div": 0.76,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TRDA",
@@ -5501,11 +5567,17 @@
       "sector": "health",
       "buyPct": 86,
       "outperformPct": 36,
-      "analysts": 14,
+      "analysts": 4,
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -31.99,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -4,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TRNR",
@@ -5513,11 +5585,17 @@
       "sector": "cons_cycl",
       "buyPct": 86,
       "outperformPct": 29,
-      "analysts": 7,
+      "analysts": 1,
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -95.38,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -8.43,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TRUG",
@@ -5525,11 +5603,17 @@
       "sector": "comm",
       "buyPct": 86,
       "outperformPct": 29,
-      "analysts": 7,
+      "analysts": 1,
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -85.34,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -9.9,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TRX",
@@ -5537,11 +5621,17 @@
       "sector": "materials",
       "buyPct": 86,
       "outperformPct": 14,
-      "analysts": 7,
+      "analysts": 4,
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 48.68,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -0.07,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TTRX",
@@ -5553,7 +5643,13 @@
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 48.94,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -0.13,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TTSH",
@@ -5565,7 +5661,13 @@
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -55.83,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -0.1,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TUSK",
@@ -5577,7 +5679,13 @@
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 57.21,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -1.17,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TWAV",
@@ -5589,7 +5697,13 @@
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -32.24,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -1.74,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TWER",
@@ -5601,7 +5715,13 @@
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 25,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -1.82,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TWI",
@@ -5609,11 +5729,17 @@
       "sector": "industrial",
       "buyPct": 86,
       "outperformPct": 14,
-      "analysts": 7,
-      "upside": null,
+      "analysts": 4,
+      "upside": 52,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -11.84,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -1.37,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TWIN",
@@ -5625,7 +5751,13 @@
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 6.76,
+      "perf6mAt": "2026-06-03",
+      "pe": 9.5,
+      "eps": 1.86,
+      "div": 0.91,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "UBAB",
@@ -5637,7 +5769,13 @@
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 2.87,
+      "perf6mAt": "2026-06-03",
+      "pe": 9.7,
+      "eps": 5.61,
+      "div": 2.57,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "UBCP",
@@ -5645,11 +5783,17 @@
       "sector": "finance",
       "buyPct": 86,
       "outperformPct": 29,
-      "analysts": 7,
-      "upside": null,
+      "analysts": 1,
+      "upside": 25,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 18.51,
+      "perf6mAt": "2026-06-03",
+      "pe": 11.9,
+      "eps": 1.35,
+      "div": 4.77,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "UCAR",
@@ -5657,11 +5801,17 @@
       "sector": "cons_cycl",
       "buyPct": 86,
       "outperformPct": 29,
-      "analysts": 7,
-      "upside": null,
+      "analysts": 1,
+      "upside": 43,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -92.31,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -22.24,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "UGRO",
@@ -5673,7 +5823,13 @@
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -41.06,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -42.62,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "UEC",
@@ -5681,11 +5837,17 @@
       "sector": "energy",
       "buyPct": 85,
       "outperformPct": 8,
-      "analysts": 13,
-      "upside": null,
+      "analysts": 9,
+      "upside": 24,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 0.07,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -0.18,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "UPBD",
@@ -5693,11 +5855,17 @@
       "sector": "cons_cycl",
       "buyPct": 85,
       "outperformPct": 31,
-      "analysts": 13,
-      "upside": null,
+      "analysts": 7,
+      "upside": 53,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 1.06,
+      "perf6mAt": "2026-06-03",
+      "pe": 12.9,
+      "eps": 1.44,
+      "div": 8.38,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TRGP",
@@ -5705,11 +5873,17 @@
       "sector": "energy",
       "buyPct": 83,
       "outperformPct": 30,
-      "analysts": 30,
-      "upside": null,
+      "analysts": 20,
+      "upside": 8,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 43.92,
+      "perf6mAt": "2026-06-03",
+      "pe": 26.9,
+      "eps": 9.79,
+      "div": 1.61,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TSLX",
@@ -5717,11 +5891,17 @@
       "sector": "finance",
       "buyPct": 83,
       "outperformPct": 22,
-      "analysts": 18,
-      "upside": null,
+      "analysts": 11,
+      "upside": 11,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -19.75,
+      "perf6mAt": "2026-06-03",
+      "pe": 15.5,
+      "eps": 1.15,
+      "div": 9.4,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TSQ",
@@ -5729,11 +5909,17 @@
       "sector": "comm",
       "buyPct": 83,
       "outperformPct": 33,
-      "analysts": 6,
-      "upside": null,
+      "analysts": 2,
+      "upside": 88,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 35.99,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -0.43,
+      "div": 12.03,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TTAN",
@@ -5741,11 +5927,17 @@
       "sector": "hardware",
       "buyPct": 83,
       "outperformPct": 25,
-      "analysts": 24,
-      "upside": null,
+      "analysts": 16,
+      "upside": 33,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -21.53,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -1.73,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "UMBF",
@@ -5753,11 +5945,17 @@
       "sector": "finance",
       "buyPct": 83,
       "outperformPct": 17,
-      "analysts": 18,
-      "upside": null,
+      "analysts": 12,
+      "upside": 14,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 12.34,
+      "perf6mAt": "2026-06-03",
+      "pe": 11.3,
+      "eps": 11.43,
+      "div": 1.33,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "UPB",
@@ -5765,11 +5963,17 @@
       "sector": "health",
       "buyPct": 83,
       "outperformPct": 17,
-      "analysts": 12,
+      "analysts": 7,
       "upside": null,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -70.87,
+      "perf6mAt": "2026-06-03",
+      "pe": null,
+      "eps": -2.9,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "STKS",
@@ -5813,11 +6017,17 @@
       "sector": "ai_semi",
       "buyPct": 82,
       "outperformPct": 18,
-      "analysts": 11,
-      "upside": null,
+      "analysts": 6,
+      "upside": 14,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 121.8,
+      "perf6mAt": "2026-06-03",
+      "pe": 126.6,
+      "eps": 2.17,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TRIN",
@@ -5825,11 +6035,17 @@
       "sector": "finance",
       "buyPct": 81,
       "outperformPct": 38,
-      "analysts": 16,
-      "upside": null,
+      "analysts": 9,
+      "upside": 4,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 16.01,
+      "perf6mAt": "2026-06-03",
+      "pe": 9.1,
+      "eps": 1.89,
+      "div": 11.8,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TWLO",
@@ -5837,11 +6053,17 @@
       "sector": "hardware",
       "buyPct": 81,
       "outperformPct": 31,
-      "analysts": 36,
-      "upside": null,
+      "analysts": 28,
+      "upside": -15,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": 78.72,
+      "perf6mAt": "2026-06-03",
+      "pe": 347.4,
+      "eps": 0.66,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "TYL",
@@ -5849,11 +6071,17 @@
       "sector": "hardware",
       "buyPct": 81,
       "outperformPct": 33,
-      "analysts": 27,
-      "upside": null,
+      "analysts": 21,
+      "upside": 42,
       "via": "finnhub",
       "source": "Finnhub",
-      "seen": "2026-06-03"
+      "seen": "2026-06-03",
+      "perf6m": -32.8,
+      "perf6mAt": "2026-06-03",
+      "pe": 43.2,
+      "eps": 7.26,
+      "div": 0,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "SER",
