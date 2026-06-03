@@ -1446,12 +1446,12 @@ html.preselect #hubScreen { display: none !important; }
 .sek-filter { display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; flex-shrink: 0; margin-bottom: 8px; }
 .sek-sort { display: flex; align-items: center; gap: 5px; flex-wrap: nowrap; flex-shrink: 0; margin-bottom: 10px; }
 .sek-sort-label { font-size: 0.7rem; font-weight: 700; color: var(--s-faint); text-transform: uppercase; letter-spacing: 0.3px; margin-right: 1px; }
-/* Felder teilen sich die Zeile gleichmäßig -> nichts abgeschnitten, kein zu groß/klein */
+/* Felder teilen sich die Zeile, schrumpfen aber NICHT unter die Platzhalter-Breite
+   (min-width) -> nichts wird abgeschnitten, egal bei welcher Schrift/Zoom. */
 .sek-filter input {
-  flex: 1 1 0; min-width: 0; width: auto;
+  flex: 1 1 auto; min-width: 46px; width: auto;
   background: rgba(148,163,184,0.08); border: 1px solid var(--s-border); color: var(--s-text);
-  border-radius: 8px; padding: 5px 7px; font-size: 0.74rem; font-weight: 600; font-family: inherit;
-  text-overflow: ellipsis;
+  border-radius: 8px; padding: 5px 5px; font-size: 0.72rem; font-weight: 600; font-family: inherit;
 }
 .sek-filter input::placeholder { color: var(--s-faint); }
 .sek-filter input:focus { outline: none; border-color: var(--s-border-hi); background: rgba(148,163,184,0.14); }
