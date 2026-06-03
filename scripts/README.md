@@ -15,6 +15,11 @@ Die Seite lädt ihre Daten aus `sectordata.json` (Projekt-Root). Diese Datei wir
   - schreibt zusätzlich den kurzen **Marktlage-Text**
 
 Treffer-Kriterium überall: **Kaufempfehlungs-Anteil = 100 %** (alle Analysten Buy/Strong Buy; Schwelle via `MIN_BUY_PCT`, Default 100).
+**Konsistenz:** Gemini liest die Analysten-Verteilung NUR von einer festen Quelle
+(MarketScreener) und rechnet buyPct/outperformPct aus den Roh-Counts (StrongBuy+Buy bzw.
+StrongBuy / Gesamt). Eine Aktie, die dort nicht eindeutig auffindbar ist, wird nicht
+aufgenommen — verhindert die früheren Quellen-Widersprüche (jede Finanzseite zählt anders).
+Finnhub liefert die Counts ohnehin exakt aus der API.
 Alle Treffer (Finnhub + Gemini) landen in einer gemeinsamen, über Tage gepflegten DB
 (`topStocks`); jeder Eintrag trägt `via` (finnhub / gemini / gemini-discover) und `source`.
 

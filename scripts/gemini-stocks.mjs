@@ -81,20 +81,26 @@ function normRating(o) {
 /* (A) Kandidaten prüfen ------------------------------------------------ */
 export async function checkCandidates(key, names) {
   if (!names.length) return [];
-  const prompt = `Du recherchierst Analysten-Empfehlungen für Aktien über die Google-Suche (Quellen wie investing.com, marketscreener.com, finanzen.net, wallstreet-online).
+  const prompt = `Du recherchierst Analysten-Empfehlungen für Aktien über die Google-Suche.
+
+WICHTIG für konsistente, nachprüfbare Daten: Nutze als Quelle für die Analysten-Verteilung
+AUSSCHLIESSLICH MarketScreener (marketscreener.com, "Consensus"/"Empfehlungen"-Seite der
+jeweiligen Aktie). NICHT mehrere Quellen mischen. Wenn du die Aktie dort nicht findest,
+gib sie NICHT aus (lieber weglassen als aus einer anderen Quelle raten).
 
 Prüfe GENAU diese Aktien: ${names.map(n => '"' + n + '"').join(', ')}.
 
-Für jede Aktie ermittle aus aktuellen Quellen:
+Lies bei MarketScreener die ANZAHL der Analysten je Stufe ab (Strong Buy / Outperform /
+Buy, Hold, Underperform, Sell) und RECHNE daraus:
 - ticker (Börsenkürzel), name, land
-- analysts: Anzahl coverender Analysten (auch 1 zählt)
-- buyPct: Prozent ALLER Empfehlungen, die Buy ODER Strong Buy sind (0-100)
-- outperformPct: davon der Anteil, der NUR "Strong Buy" (höchste Stufe, oft "Outperform" genannt) ist (0-100). Da Strong Buy Teil der Kaufempfehlung ist, kennst du diesen Wert, wenn du buyPct kennst. 0 ist gültig (alle nur "Buy", keiner "Strong Buy").
+- analysts: Gesamtzahl der Analysten in der Verteilung
+- buyPct: round( (Strong-Buy + Buy) / Gesamt * 100 ) — Anteil aller Kauf-Empfehlungen
+- outperformPct: round( Strong-Buy / Gesamt * 100 ) — Anteil NUR der höchsten Stufe (Strong Buy/Outperform). 0 ist gültig.
 - sector: GENAU eine dieser IDs anhand der Branche: ${SECTOR_LIST}
 - upside: Kursziel-Potenzial in % falls auffindbar, sonst null
 - pe: aktuelles KGV (Kurs-Gewinn-Verhältnis) als Zahl; bei Verlust null
 - yahoo: das Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "FRA.DE", "NVDA"), für Kursabfragen
-- source: kurze Quellenangabe
+- source: "marketscreener" + ggf. Datum
 
 Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, die du sicher gefunden hast. Aktien ohne auffindbare Analystendaten weglassen. Kein Text außerhalb des JSON.`;
 
@@ -131,13 +137,17 @@ export async function discoverNew(key, knownNames, focus = '') {
     : '';
   const prompt = `Du suchst über die Google-Suche WELTWEIT kleine bis mittelgroße, eher UNBEKANNTE Aktien (Small-/Mid-Caps, gern aus Deutschland/Europa, aber auch USA/Asien), die von Analysten überwiegend mit Kaufempfehlungen bewertet werden. ${focusLine}
 
+WICHTIG für konsistente, nachprüfbare Daten: Prüfe die Analysten-Verteilung jeder vorgeschlagenen
+Aktie AUSSCHLIESSLICH auf MarketScreener (marketscreener.com, Consensus-Seite). Findest du sie
+dort nicht oder ist die Verteilung unklar -> Aktie NICHT vorschlagen (nicht aus anderer Quelle raten).
+
 Kriterium: buyPct (Buy + Strong Buy) >= ${MIN_BUY_PCT} (Prozent aller Empfehlungen). Anzahl Analysten egal (auch 1-3 reicht). Unternehmensgröße egal — je unbekannter/kleiner, desto besser. KEINE Mega-Caps (kein Apple, Microsoft, Nvidia, Amazon, Alphabet, Meta usw.).
 
 Schlage NUR Aktien vor, die NICHT in dieser Liste bereits bekannter Werte stehen: ${known || '(noch keine)'}.
 
-Für jeden Vorschlag gib aus aktuellen Quellen:
+Lies bei MarketScreener die ANZAHL Analysten je Stufe ab und rechne:
 - ticker, name, land
-- analysts, buyPct (0-100) = Anteil Buy+Strong Buy; outperformPct (0-100) = davon der Anteil NUR "Strong Buy" (Teil von buyPct, also bekannt wenn buyPct bekannt; 0 ist gültig)
+- analysts = Gesamtzahl; buyPct = round((StrongBuy+Buy)/Gesamt*100); outperformPct = round(StrongBuy/Gesamt*100), 0 ist gültig
 - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
 - upside (% oder null)
 - pe: aktuelles KGV als Zahl; bei Verlust null
