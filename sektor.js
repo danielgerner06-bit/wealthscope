@@ -237,31 +237,44 @@
     document.getElementById('stkModalNm').textContent = st.name || '';
     document.getElementById('stkModalDot').style.background = sec.color;
     const pct = v => v == null ? '–' : fmtPct(v);
-    const plain = (v, suf = '') => v == null ? '–' : v + suf;
     const seenStr = st.seen ? st.seen.split('-').reverse().join('.') : '–';
-    // Bewertung 0..1 (0=schlecht/rot, 1=gut/grün) je Kennzahl; null = neutral (keine Farbe).
-    // clamp((wert-lo)/(hi-lo)); bei "niedrig ist besser" (KGV) umgedreht.
+    // Bewertung 0..1 (0=schlecht/rot, 1=gut/grün); null = neutral. KGV invers (niedrig=gut).
     const sc = (v, lo, hi) => v == null ? null : Math.max(0, Math.min(1, (v - lo) / (hi - lo)));
     const scInv = (v, lo, hi) => v == null ? null : 1 - Math.max(0, Math.min(1, (v - lo) / (hi - lo)));
-    const rows = [
-      ['Sektor', sec.name, null],
-      ['Region', regionName(st.region || regionOfSym(st.yahoo || st.ticker)), null],
-      ['Kaufempfehlung', plain(st.buyPct, '%'), sc(st.buyPct, 50, 100)],
-      ['Outperform (Strong Buy)', plain(st.outperformPct, '%'), sc(st.outperformPct, 0, 100)],
-      ['Analysten', plain(st.analysts), sc(st.analysts, 1, 20)],
-      ['Kursziel-Potenzial', pct(st.upside), sc(st.upside, 0, 50)],
-      ['KGV', st.pe == null ? '– (kein Gewinn)' : String(st.pe), scInv(st.pe, 10, 50)],
-      ['Dividendenrendite', st.div == null ? '–' : st.div + '%', sc(st.div, 0, 5)],
-      ['6-Monats-Performance', pct(st.perf6m), sc(st.perf6m, -20, 30)],
-      ['1M vor Aufnahme', pct(st.perf1mBefore), sc(st.perf1mBefore, -20, 30)],
-      ['Gefunden am', seenStr, null],
-      ['Quelle', viaLabel(st.via), null],
-      ['Yahoo-Symbol', st.yahoo || st.ticker || '–', null],
+    const hsl = s => s == null ? '#cbd5e1' : 'hsl(' + Math.round(s * 130) + ',78%,60%)';
+
+    // Kopf-Badges: Sektor + Region + Quelle der Ratings
+    const region = regionName(st.region || regionOfSym(st.yahoo || st.ticker));
+    document.getElementById('stkModalBadges').innerHTML =
+      '<span class="stk-badge" style="border-color:' + sec.color + '55;color:' + sec.color + '">' + sec.name + '</span>' +
+      '<span class="stk-badge">' + region + '</span>' +
+      '<span class="stk-badge stk-badge-src">' + ratingSrcLabel(st) + '</span>';
+
+    // 3 große Highlight-Kacheln (die wichtigsten Zahlen, ring-gefärbt)
+    const hero = [
+      { lbl: 'Kursziel-Potenzial', val: pct(st.upside), s: sc(st.upside, 0, 50) },
+      { lbl: 'Kaufempfehlung', val: st.buyPct == null ? '–' : st.buyPct + '%', s: sc(st.buyPct, 50, 100) },
+      { lbl: 'Strong Buy', val: st.outperformPct == null ? '–' : st.outperformPct + '%', s: sc(st.outperformPct, 0, 100) },
     ];
-    // Score -> Farbe (rot 0° über gelb 50° zu grün 130°)
-    const col = s => s == null ? '' : ' style="color:hsl(' + Math.round(s * 130) + ',75%,62%)"';
-    document.getElementById('stkModalGrid').innerHTML = rows.map(([k, v, s]) =>
-      '<div class="stk-row"><span class="stk-k">' + k + '</span><span class="stk-v"' + col(s) + '>' + v + '</span></div>').join('');
+    document.getElementById('stkModalHero').innerHTML = hero.map(h =>
+      '<div class="stk-hero" style="--c:' + hsl(h.s) + '">' +
+        '<div class="stk-hero-val">' + h.val + '</div>' +
+        '<div class="stk-hero-lbl">' + h.lbl + '</div>' +
+      '</div>').join('');
+
+    // kompakte Stat-Kacheln im Grid (kein Scrollen, alles auf einen Blick)
+    const stats = [
+      { lbl: 'Analysten', val: st.analysts == null ? '–' : String(st.analysts), s: sc(st.analysts, 1, 20) },
+      { lbl: 'KGV', val: st.pe == null ? '–' : String(st.pe), s: scInv(st.pe, 10, 50) },
+      { lbl: 'Dividende', val: st.div == null ? '–' : st.div + '%', s: sc(st.div, 0, 5) },
+      { lbl: '6 Monate', val: pct(st.perf6m), s: sc(st.perf6m, -20, 30) },
+      { lbl: '1M vor Aufn.', val: pct(st.perf1mBefore), s: sc(st.perf1mBefore, -20, 30) },
+      { lbl: 'Gefunden', val: seenStr, s: null },
+    ];
+    document.getElementById('stkModalStats').innerHTML = stats.map(t =>
+      '<div class="stk-stat"><div class="stk-stat-val" style="color:' + hsl(t.s) + '">' + t.val + '</div>' +
+      '<div class="stk-stat-lbl">' + t.lbl + '</div></div>').join('');
+
     const m = document.getElementById('stkModal');
     m.hidden = false;
     requestAnimationFrame(() => m.classList.add('show'));   // Einblend-Animation
@@ -276,6 +289,13 @@
     return suf ? (map[suf] || 'world') : 'usa';
   }
   function viaLabel(v) { if (!v) return '–'; if (v.startsWith('gemini')) return 'KI-Websuche (Gemini)'; if (v === 'finnhub') return 'Finnhub (US-Analysten)'; return v; }
+  // Herkunft der Rating-Zahlen: FMP/Finnhub = exakte Counts, Gemini = Websuche-Schätzung
+  function ratingSrcLabel(st) {
+    if (st.ratingSrc === 'twelvedata') return '✓ exakte Daten (Twelve Data)';
+    if (st.ratingSrc === 'fmp') return '✓ exakte Daten (FMP)';
+    if (st.via === 'finnhub') return '✓ exakte Daten (Finnhub)';
+    return '≈ Websuche-Schätzung';
+  }
   function wireStockModal() {
     const m = document.getElementById('stkModal');
     m.addEventListener('click', e => { if (e.target.closest('[data-close]') || e.target === m || e.target.classList.contains('sek-modal-backdrop')) closeStockModal(); });

@@ -21,6 +21,7 @@ import { SEED_CANDIDATES } from './candidates.mjs';
 import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
 import { loadHistory, saveHistory, snapshotStocks, measureMilestones, pruneHistory, computeFindings } from './history.mjs';
 import { fmpRating, fmpEnabled, isUsSymbol } from './fmp.mjs';
+import { twelveRating, twelveEnabled } from './twelvedata.mjs';
 
 const OUT = 'sectordata.json';
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
@@ -298,6 +299,30 @@ const today = () => new Date().toISOString().slice(0, 10);
     }
     if (needFmp.length) console.log(`FMP-Ratings: ${fmpOk}/${needFmp.length} US-Perlen exakt geprüft, ${fmpDrop} unter ${MIN_BUY_PCT}% entfernt.`);
     // entfernte Perlen aus topStocks ziehen (sonst weiter unten noch referenziert)
+    topStocks = topStocks.filter(s => db[s.ticker]);
+  }
+
+  /* 3a4) Twelve Data: EXAKTE Analysten-Counts AUCH für DE/EU/Asien (XETRA, Euronext, …).
+     Die einzige Gratis-Quelle mit strukturierten Ratings für Nebenwerte. Rollierend für
+     alle Perlen, die heute noch keine exakte Quelle (FMP/Finnhub) bekommen haben. */
+  if (twelveEnabled()) {
+    const needTd = topStocks.filter(s => s.ratingSrc !== 'fmp' && s.via !== 'finnhub'
+      && (s.tdAt == null || (nowMs - Date.parse(s.tdAt)) > STALE))
+      .slice(0, Number(process.env.TWELVE_BUDGET || 40));
+    let tdOk = 0, tdDrop = 0;
+    for (const s of needTd) {
+      const r = await twelveRating(s.yahoo || s.ticker);
+      s.tdAt = today();
+      if (r) {
+        s.buyPct = r.buyPct; s.outperformPct = r.outperformPct;
+        if (r.analysts) s.analysts = r.analysts;
+        s.source = 'Twelve Data (exakte Analysten-Counts)'; s.ratingSrc = 'twelvedata';
+        tdOk++;
+        if (s.buyPct < MIN_BUY_PCT) { delete db[s.ticker]; tdDrop++; continue; }
+      }
+      db[s.ticker] = { ...db[s.ticker], buyPct: s.buyPct, outperformPct: s.outperformPct, analysts: s.analysts, tdAt: s.tdAt, source: s.source, ratingSrc: s.ratingSrc };
+    }
+    if (needTd.length) console.log(`Twelve-Data-Ratings: ${tdOk}/${needTd.length} Perlen exakt geprüft, ${tdDrop} unter ${MIN_BUY_PCT}% entfernt.`);
     topStocks = topStocks.filter(s => db[s.ticker]);
   }
 

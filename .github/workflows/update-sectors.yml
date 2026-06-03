@@ -33,6 +33,7 @@ jobs:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
           # bei manuellem "force_heavy" das 6h-Gating überbrücken (HEAVY_GAP_H=0 -> immer voll)
           HEAVY_GAP_H: ${{ (github.event_name == 'workflow_dispatch' && inputs.force_heavy) && '0' || '' }}
         run: node scripts/update-sectors.mjs

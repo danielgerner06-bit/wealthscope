@@ -31,7 +31,8 @@ export async function fmpRating(symbol) {
   if (!KEY) return null;
   const sym = encodeURIComponent(symbol);
   const urls = [
-    `${BASE}/stable/grades-consensus?symbol=${sym}&apikey=${KEY}`,
+    `${BASE}/stable/grades-consensus?symbol=${sym}&apikey=${KEY}`,   // exakte Counts (Doku)
+    `${BASE}/stable/grades-summary?symbol=${sym}&apikey=${KEY}`,      // alt. Name "Grades Summary"
     `${BASE}/api/v4/upgrades-downgrades-consensus?symbol=${sym}&apikey=${KEY}`,
     `${BASE}/api/v3/analyst-stock-recommendations/${sym}?apikey=${KEY}`,
   ];
