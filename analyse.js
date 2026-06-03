@@ -11,12 +11,16 @@
   // wie viele Monate hat diese Aktie schon? (höchster gefüllter Monats-Index + 1,
   // passt zur positionsbasierten Balken-/Monatslogik auch bei einer evtl. Lücke)
   const monthsOf = s => { const p = s.perf; if (!Array.isArray(p)) return 0; for (let i = p.length - 1; i >= 0; i--) if (p[i] != null) return i + 1; return 0; };
+  // step = feste Bündelungs-Schrittweite je Faktor (z. B. KGV in 5er-Schritten)
   const FACTORS = [
-    { key: 'pe', label: 'KGV' }, { key: 'outperformPct', label: 'Strong Buy' },
-    { key: 'upside', label: 'Kursziel' },
-    { key: 'div', label: 'Dividende' }, { key: 'analysts', label: 'Analysten' },
-    { key: 'perf1mBefore', label: '1M vor Aufnahme' },
+    { key: 'pe', label: 'KGV', step: 5 },
+    { key: 'outperformPct', label: 'Strong Buy', step: 10 },
+    { key: 'upside', label: 'Kursziel', step: 10 },
+    { key: 'div', label: 'Dividende', step: 1 },
+    { key: 'analysts', label: 'Analysten', step: 5 },
+    { key: 'perf1mBefore', label: '1M vor Aufnahme', step: 10 },
   ];
+  const stepOf = key => (FACTORS.find(f => f.key === key) || {}).step || 5;
   const filt = {};
 
   async function load() {
@@ -57,38 +61,30 @@
     return true;
   }
 
-  /* ---------- Faktor-Kurve: gebinnte Ø-Performance über Faktorwert ----------
-     Teilt den Faktor-Wertebereich in Bins, mittelt je Bin die Performance.
-     Liefert {points:[{x,y}], slope} — slope = Ø |Steigung| (= Wirkungsstärke).   */
+  /* ---------- Faktor-Kurve: feste Schritt-Bündelung ----------
+     Bündelt den Faktor in FESTE Schritte (z. B. KGV in 5er-Schritten: 0-5,5-10,…),
+     mittelt je Schritt die Performance (Median, ausreißer-robust) und gibt eine Linie
+     über alle Schritte zurück. x = Schritt-Mitte. Liefert {points, slope, best, n, raw}. */
   function factorCurve(data, factorKey, perfFn) {
     const pf = typeof perfFn === 'function' ? perfFn : (s => s[perfFn]);
+    const step = stepOf(factorKey);
     const pts = data.map(s => ({ x: s[factorKey], y: pf(s) }))
-      .filter(p => p.x != null && isFinite(p.x) && p.y != null && isFinite(p.y))
-      .sort((a, b) => a.x - b.x);
-    if (pts.length < 4) return { points: [], slope: 0, n: pts.length };
-    const xMin = pts[0].x, xMax = pts[pts.length - 1].x;
-    const span = (xMax - xMin) || 1;
-    const BINS = Math.min(8, Math.max(3, Math.round(pts.length / 4)));
-    const bins = Array.from({ length: BINS }, () => []);
-    pts.forEach(p => {
-      let bi = Math.floor(((p.x - xMin) / span) * BINS);
-      if (bi >= BINS) bi = BINS - 1;
-      bins[bi].push(p);
-    });
-    const curve = [];
-    bins.forEach(arr => {
-      if (!arr.length) return;
-      const cx = avg(arr.map(p => p.x));
-      // Y robust mitteln: Median statt arithm. Mittel, damit einzelne Ausreißer-Aktien
-      // (eine extrem gut/schlecht laufende Perle) den Bin-Wert nicht verzerren.
-      const cy = median(arr.map(p => p.y));
-      curve.push({ x: +cx.toFixed(2), y: +cy.toFixed(2), n: arr.length });
-    });
-    if (curve.length < 2) return { points: curve, slope: 0, n: pts.length };
-    // Wirkungsstärke = Spannweite zwischen bester/schlechtester Bin-Ø, ABER nur über
-    // Bins mit ausreichend Aktien (>=5), damit zufällig streuende Kleingruppen (z.B.
-    // wenige Hochdividenden-Werte) keine Schein-Wirkung erzeugen.
-    const solid = curve.filter(c => c.n >= 5);
+      .filter(p => p.x != null && isFinite(p.x) && p.y != null && isFinite(p.y));
+    if (pts.length < 4) return { points: [], slope: 0, n: pts.length, raw: pts };
+    // je Schritt-Index (floor(x/step)) sammeln
+    const groups = new Map();
+    pts.forEach(p => { const k = Math.floor(p.x / step); (groups.get(k) || groups.set(k, []).get(k)).push(p); });
+    const curve = [...groups.entries()]
+      .sort((a, b) => a[0] - b[0])
+      .map(([k, arr]) => ({
+        x: +(k * step + step / 2).toFixed(2),   // Schritt-Mitte (z. B. 2.5, 7.5, …)
+        y: +median(arr.map(p => p.y)).toFixed(2),
+        n: arr.length,
+        lo: k * step, hi: (k + 1) * step,
+      }));
+    if (curve.length < 2) return { points: curve, slope: 0, best: curve[0], n: pts.length, raw: pts };
+    // Wirkung = Spanne zwischen bester/schlechtester Stufe; nur Stufen mit >=3 Aktien zählen
+    const solid = curve.filter(c => c.n >= 3);
     const basis = solid.length >= 2 ? solid : curve;
     const ys = basis.map(c => c.y);
     const slope = +(Math.max(...ys) - Math.min(...ys)).toFixed(2);
@@ -172,9 +168,9 @@
       const { points, slope, n, raw } = factorCurve(HIST, xFactor, perfForMonth);
       const trend = raw ? fitTrend(raw) : null;
       const datasets = [{
-        label: 'Ø je Wertebereich', data: points, parsing: false,
-        borderColor: 'rgba(129,140,248,0.55)', borderWidth: 2, backgroundColor: 'rgba(129,140,248,0.10)', fill: true,
-        tension: 0.45, pointRadius: 3, pointBackgroundColor: '#c084fc', pointHoverRadius: 5,
+        label: 'Ø je ' + stepOf(xFactor) + '-Schritt', data: points, parsing: false,
+        borderColor: '#818cf8', borderWidth: 2.4, backgroundColor: 'rgba(129,140,248,0.12)', fill: true,
+        tension: 0.4, pointRadius: 4, pointBackgroundColor: '#c084fc', pointHoverRadius: 6,
       }];
       if (trend) datasets.push({
         label: 'Trend (' + trend.kind + ')', data: trend.line, parsing: false,
@@ -259,7 +255,9 @@
     for (const f of FACTORS) {
       const { slope, best, n } = factorCurve(data, f.key, perfForMonth);
       if (n < 4 || !best) continue;
-      rows.push({ label: f.label, slope, bestX: best.x, bestY: best.y, n });
+      // beste Stufe als Bereich (z. B. "10–15") statt Einzelwert
+      const range = (best.lo != null) ? best.lo + '–' + best.hi : best.x;
+      rows.push({ label: f.label, slope, bestX: range, bestY: best.y, n });
     }
     syncMonthOptions();
     rows.sort((a, b) => b.slope - a.slope);
