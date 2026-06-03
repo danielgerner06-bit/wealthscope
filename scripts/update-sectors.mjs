@@ -20,6 +20,7 @@ import { checkCandidates, discoverNew, MIN_BUY_PCT } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
 import { loadHistory, saveHistory, snapshotStocks, measureMilestones, pruneHistory, computeFindings } from './history.mjs';
+import { fmpRating, fmpEnabled, isUsSymbol } from './fmp.mjs';
 
 const OUT = 'sectordata.json';
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
@@ -273,6 +274,32 @@ const today = () => new Date().toISOString().slice(0, 10);
     db[s.ticker] = { ...db[s.ticker], perf1mBefore: s.perf1mBefore };
   }
   if (needPre.length) console.log(`1M-vor-Aufnahme für ${needPre.length} Perlen gesetzt.`);
+
+  /* 3a3) FMP: EXAKTE Analysten-Counts für US-Perlen (zweite verlässliche Quelle neben
+     Finnhub). Überschreibt die evtl. ungenaue Websuche-Schätzung mit echten Zahlen.
+     Free-Tier: 250 Calls/Tag, nur US (Symbole ohne Börsensuffix). Rollierend. */
+  if (fmpEnabled()) {
+    const needFmp = topStocks.filter(s => isUsSymbol(s.yahoo || s.ticker)
+      && (s.fmpAt == null || (nowMs - Date.parse(s.fmpAt)) > STALE))
+      .slice(0, Number(process.env.FMP_BUDGET || 30));
+    let fmpOk = 0, fmpDrop = 0;
+    for (const s of needFmp) {
+      const r = await fmpRating(s.yahoo || s.ticker);
+      s.fmpAt = today();
+      if (r) {
+        s.buyPct = r.buyPct; s.outperformPct = r.outperformPct;
+        if (r.analysts) s.analysts = r.analysts;
+        s.source = 'FMP (exakte Analysten-Counts)'; s.ratingSrc = 'fmp';
+        fmpOk++;
+        // mit den echten Counts kann eine US-Perle das 100%-Kriterium verfehlen -> raus
+        if (s.buyPct < MIN_BUY_PCT) { delete db[s.ticker]; fmpDrop++; continue; }
+      }
+      db[s.ticker] = { ...db[s.ticker], buyPct: s.buyPct, outperformPct: s.outperformPct, analysts: s.analysts, fmpAt: s.fmpAt, source: s.source, ratingSrc: s.ratingSrc };
+    }
+    if (needFmp.length) console.log(`FMP-Ratings: ${fmpOk}/${needFmp.length} US-Perlen exakt geprüft, ${fmpDrop} unter ${MIN_BUY_PCT}% entfernt.`);
+    // entfernte Perlen aus topStocks ziehen (sonst weiter unten noch referenziert)
+    topStocks = topStocks.filter(s => db[s.ticker]);
+  }
 
   /* 3b) Kursziel + KGV + EPS + Analysten je Aktie über Yahoo (1 Call, kein Key,
      funktioniert auch für deutsche Werte). Ersetzt die alte Finnhub-Anreicherung. */
