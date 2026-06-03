@@ -161,12 +161,14 @@
   };
 
   /* ---------- Analysten-Perlen mit Filter + Sortierung ---------- */
-  const filters = { pe: null, perf6m: null, perf1mBefore: null, outperformPct: null, upside: null, analysts: null, div: null };
+  const filters = { buyPct: null, pe: null, perf6m: null, perf1mBefore: null, outperformPct: null, upside: null, analysts: null, div: null };
   let sectorFilter = null;   // aktiver Sektor-Filter (Klick auf Balken)
   let rankSort = { key: 'anteil', dir: -1 };   // Sortierung im Sektor-Ranking-Popup
 
   // nur die Wert-Filter (KGV/6M/Outperform/Ziel/Analysten), OHNE Sektor-Filter
   function passesValueFilter(s) {
+    // Kaufempfehlung MINDESTENS (%)
+    if (filters.buyPct != null && !(s.buyPct != null && s.buyPct >= filters.buyPct)) return false;
     // KGV: Eingabe 0 => nur Aktien OHNE KGV (unprofitabel); sonst KGV höchstens.
     if (filters.pe != null) {
       if (filters.pe === 0) { if (s.pe != null) return false; }
@@ -343,6 +345,7 @@
     let v, label, cls = 'sek-stock-val';
     if (sortKey === 'perf6m') { v = st.perf6m; label = v != null ? fmtPct(v) : '—'; cls += v >= 0 ? ' up' : ' down'; }
     else if (sortKey === 'perf1mBefore') { v = st.perf1mBefore; label = v != null ? fmtPct(v) : '—'; cls += v >= 0 ? ' up' : ' down'; }
+    else if (sortKey === 'buyPct') { v = st.buyPct; label = v != null ? 'Kauf ' + v + '%' : '—'; }
     else if (sortKey === 'outperformPct') { v = st.outperformPct; label = v != null ? v + '%' : '—'; }
     else if (sortKey === 'analysts') { v = st.analysts; label = v != null ? v + ' An.' : '—'; }
     else if (sortKey === 'pe') { v = st.pe; label = v != null ? 'KGV ' + v : 'KGV —'; }
@@ -380,7 +383,7 @@
   }
 
   function wireFilter() {
-    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltPre1m: 'perf1mBefore', fltOutperf: 'outperformPct', fltUpside: 'upside', fltAnalysts: 'analysts', fltDiv: 'div' };
+    const map = { fltBuy: 'buyPct', fltPe: 'pe', fltPerf6m: 'perf6m', fltPre1m: 'perf1mBefore', fltOutperf: 'outperformPct', fltUpside: 'upside', fltAnalysts: 'analysts', fltDiv: 'div' };
     Object.keys(map).forEach(id => {
       document.getElementById(id).addEventListener('input', e => {
         // erlaubt negative Werte und Komma; ungültige Eingabe -> kein Filter
@@ -392,7 +395,7 @@
     });
     document.getElementById('fltClear').addEventListener('click', () => {
       Object.keys(map).forEach(id => { document.getElementById(id).value = ''; });
-      filters.pe = filters.perf6m = filters.perf1mBefore = filters.outperformPct = filters.upside = filters.analysts = filters.div = null;
+      filters.buyPct = filters.pe = filters.perf6m = filters.perf1mBefore = filters.outperformPct = filters.upside = filters.analysts = filters.div = null;
       sectorFilter = null;
       renderStocks();
     });

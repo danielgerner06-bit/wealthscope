@@ -59,14 +59,20 @@ async function history(symbol, fromMs, toMs) {
   return out;
 }
 
-// Kurs am/nahe einem Datum (erster verfügbarer Kurs ab dateMs, ±7 Tage Fenster).
+// Robuster Kurs am/nahe einem Datum: MEDIAN der ~3 Handelstage um das Zieldatum,
+// damit ein einzelner Yahoo-Ausreißer (Intraday-Spike) den Wert nicht verfälscht.
+// Gleiche Robustheit wie die 6M-Berechnung (trailMed). ±7 Tage Suchfenster.
 export async function priceAtDate(symbol, dateMs) {
   try {
     const data = await history(symbol, dateMs - 5 * 86400000, dateMs + 9 * 86400000);
     if (!data.length) return null;
-    // nimm den ersten Kurs ab dateMs, sonst den letzten davor
-    const after = data.find(d => d.t >= dateMs);
-    return (after || data[data.length - 1]).c;
+    // Index des ersten Kurses ab dateMs (sonst letzter davor)
+    let idx = data.findIndex(d => d.t >= dateMs);
+    if (idx < 0) idx = data.length - 1;
+    // Median über den Zieltag + 2 Nachbartage (zentriert), robust gegen Spikes
+    const lo = Math.max(0, idx - 1), hi = Math.min(data.length, idx + 2);
+    const m = median(data.slice(lo, hi).map(d => d.c));
+    return m != null ? m : data[idx].c;
   } catch { return null; }
 }
 

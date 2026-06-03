@@ -565,6 +565,7 @@
           <div class="sek-rank-list" id="sekRankList"></div>
         </div>
         <div class="sek-filter" id="sekFilter">
+          <input type="text" inputmode="numeric" id="fltBuy" placeholder="Kauf≥" title="Kaufempfehlung mindestens (%)" aria-label="Kaufempfehlung minimal in Prozent">
           <input type="text" inputmode="numeric" id="fltPe" placeholder="KGV≤" title="KGV höchstens — 0 zeigt unprofitable (ohne KGV)" aria-label="KGV maximal, 0 für ohne KGV">
           <input type="text" inputmode="numeric" id="fltPerf6m" placeholder="6M≤" title="6-Monats-Performance höchstens (%)" aria-label="6-Monats-Performance höchstens in Prozent">
           <input type="text" inputmode="numeric" id="fltPre1m" placeholder="1M≤" title="Kursentwicklung im Monat VOR Aufnahme — höchstens (%)" aria-label="1-Monats-Performance vor Aufnahme höchstens in Prozent">
@@ -579,6 +580,7 @@
         <div class="sek-sort" id="sekSort">
           <span class="sek-sort-label">Sort.</span>
           <button data-key="upside" class="active desc">Ziel</button>
+          <button data-key="buyPct">Kauf</button>
           <button data-key="perf6m">6M</button>
           <button data-key="perf1mBefore" title="1-Monats-Kurs vor Aufnahme">1M-vor</button>
           <button data-key="outperformPct">Outp.</button>
