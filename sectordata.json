@@ -402,40 +402,17 @@
       "recheckAt": "2026-06-03"
     },
     {
-      "ticker": "SONY",
-      "name": "Sony Group Corporation",
-      "sector": "hardware",
-      "buyPct": 100,
-      "outperformPct": null,
-      "analysts": 4,
-      "upside": 32,
-      "yahoo": "SONY",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "benzinga.com, tipranks.com",
-      "seen": "2026-06-03",
-      "perf6m": -20.22,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 13.84,
-      "pe": 20.6,
-      "eps": 1.08,
-      "div": 0.7,
-      "enrichAt": "2026-06-03",
-      "miss": 2,
-      "recheckAt": "2026-06-03"
-    },
-    {
       "ticker": "CRH",
       "name": "CRH plc",
       "sector": "materials",
       "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 11,
-      "upside": 18,
+      "outperformPct": 0,
+      "analysts": 23,
+      "upside": 31,
       "yahoo": "CRH.L",
       "peGemini": null,
       "via": "gemini",
-      "source": "marketscreener",
+      "source": "marketscreener 2026-06-03",
       "seen": "2026-06-03",
       "perf6m": -6.33,
       "perf6mAt": "2026-06-03",
@@ -443,7 +420,9 @@
       "pe": 21.6,
       "eps": 4.07,
       "div": 1.27,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "miss": 0,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "IXX",
@@ -536,6 +515,29 @@
       "recheckAt": "2026-06-03"
     },
     {
+      "ticker": "HEI",
+      "name": "Heidelberg Materials AG",
+      "sector": "materials",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 19,
+      "upside": 27,
+      "yahoo": "HEI.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-03",
+      "perf6m": -15.76,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": -2.94,
+      "pe": 15.9,
+      "eps": 11.16,
+      "div": 1.96,
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03",
+      "miss": 1
+    },
+    {
       "ticker": "TLN",
       "name": "Talen Energy Corp.",
       "sector": "energy",
@@ -557,7 +559,8 @@
       "div": 0,
       "perf1mBefore": -0.85,
       "peGemini": null,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "fmpAt": "2026-06-03"
     },
     {
       "ticker": "VOW3",
@@ -578,28 +581,9 @@
       "pe": 7.3,
       "eps": 12.21,
       "div": 5.78,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "HEI",
-      "name": "Heidelberg Materials AG",
-      "sector": "materials",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 19,
-      "upside": 27,
-      "yahoo": "HEI.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-03",
-      "perf6m": -15.76,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": -2.94,
-      "pe": 15.9,
-      "eps": 11.16,
-      "div": 1.96,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03",
+      "miss": 1
     },
     {
       "ticker": "VBK",
@@ -715,7 +699,8 @@
       "div": 0.7,
       "perf1mBefore": -8.86,
       "peGemini": 24.8,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "fmpAt": "2026-06-03"
     },
     {
       "ticker": "MOD",
@@ -739,7 +724,8 @@
       "div": 0,
       "peGemini": null,
       "perf1mBefore": 11.57,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "fmpAt": "2026-06-03"
     },
     {
       "ticker": "YSN",
@@ -815,13 +801,13 @@
       "name": "E.ON SE",
       "sector": "utilities",
       "buyPct": 100,
-      "outperformPct": 100,
+      "outperformPct": 0,
       "analysts": 18,
-      "upside": 9,
+      "upside": 11,
       "yahoo": "EOAN.DE",
       "peGemini": null,
       "via": "gemini",
-      "source": "marketscreener",
+      "source": "marketscreener 2026-06-03",
       "seen": "2026-06-03",
       "perf6m": 15.53,
       "perf6mAt": "2026-06-03",
@@ -829,7 +815,9 @@
       "pe": 13.8,
       "eps": 1.31,
       "div": 3.2,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "miss": 0,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "VNA",
@@ -852,7 +840,31 @@
       "eps": 6.62,
       "div": 2.25,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "fmpAt": "2026-06-03"
+    },
+    {
+      "ticker": "DTG",
+      "name": "Daimler Truck Holding AG",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 17,
+      "upside": 9,
+      "yahoo": "DTG.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-03",
+      "perf6m": 11.88,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": -1.61,
+      "pe": 27,
+      "eps": 1.57,
+      "div": 4.51,
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03",
+      "miss": 1
     },
     {
       "ticker": "ENEL",
@@ -936,36 +948,38 @@
       "via": "gemini-discover",
       "source": "Finanznachrichten.de",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 2,
       "perf6m": 31.1,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": -5.65,
       "pe": 49.4,
       "eps": 0.34,
       "div": 5.9,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "ORSTED",
       "name": "Orsted A/S",
-      "sector": "energy",
+      "sector": "utilities",
       "buyPct": 100,
-      "outperformPct": 59,
-      "analysts": 24,
+      "outperformPct": 0,
+      "analysts": 26,
       "upside": 2,
       "yahoo": "ORSTED.CO",
-      "peGemini": 35.2,
-      "via": "gemini-discover",
-      "source": "Finanznachrichten.de",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener 2026-06-03",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 0,
       "perf6m": 20.35,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": -1.41,
       "pe": null,
       "eps": -2.41,
       "div": 0,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "ALFA",
@@ -980,36 +994,15 @@
       "via": "gemini-discover",
       "source": "Finanznachrichten.de",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 2,
       "perf6m": 12.29,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": -3.12,
       "pe": 27.3,
       "eps": 19.75,
       "div": 1.72,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "IBE",
-      "name": "Iberdrola S.A.",
-      "sector": "utilities",
-      "buyPct": 100,
-      "outperformPct": 30,
-      "analysts": 22,
-      "upside": 1,
-      "yahoo": "IBE.MC",
-      "peGemini": 22.1,
-      "via": "gemini-discover",
-      "source": "TipRanks",
-      "seen": "2026-06-03",
-      "miss": 1,
-      "perf6m": 8.51,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": -1.08,
-      "pe": 24.4,
-      "eps": 0.8,
-      "div": 3.48,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "PVA",
@@ -1024,14 +1017,15 @@
       "via": "gemini-discover",
       "source": "Finanznachrichten.de",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 2,
       "perf6m": 87.26,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": 16.78,
       "pe": 436.4,
       "eps": 0.1,
       "div": 0,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "SOW",
@@ -1050,28 +1044,31 @@
       "div": null,
       "enrichAt": "2026-06-03",
       "perf1mBefore": null,
-      "miss": 1
+      "miss": 2,
+      "recheckAt": "2026-06-03"
     },
     {
-      "ticker": "DTG",
-      "name": "Daimler Truck Holding AG",
-      "sector": "industrial",
+      "ticker": "IBE",
+      "name": "Iberdrola, S.A.",
+      "sector": "utilities",
       "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 17,
-      "upside": 9,
-      "yahoo": "DTG.DE",
+      "outperformPct": 0,
+      "analysts": 23,
+      "upside": -1,
+      "yahoo": "IBE.MC",
       "peGemini": null,
       "via": "gemini",
-      "source": "marketscreener",
+      "source": "marketscreener 2026-06-03",
       "seen": "2026-06-03",
-      "perf6m": 11.88,
+      "miss": 0,
+      "perf6m": 8.51,
       "perf6mAt": "2026-06-03",
-      "perf1mBefore": -1.61,
-      "pe": 27,
-      "eps": 1.57,
-      "div": 4.51,
-      "enrichAt": "2026-06-03"
+      "perf1mBefore": -1.08,
+      "pe": 24.4,
+      "eps": 0.8,
+      "div": 3.48,
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "WCH",
@@ -1092,7 +1089,9 @@
       "pe": null,
       "eps": -16.16,
       "div": 2.67,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03",
+      "miss": 1
     },
     {
       "ticker": "WKL",
@@ -1107,14 +1106,15 @@
       "via": "gemini-discover",
       "source": "Finanznachrichten.de",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 2,
       "perf6m": 58.13,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": 10.26,
       "pe": null,
       "eps": -16.16,
       "div": 2.67,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     }
   ],
   "sectorNotes": {
@@ -1231,27 +1231,19 @@
   "news": {
     "items": [
       {
-        "text": "US-Präsident erlässt Anordnung zur Weitergabe von KI-Modellen",
+        "text": "EU lockert Schuldenregeln für Energiewende angesichts Krisen.",
         "stamp": "03.06.26"
       },
       {
-        "text": "USA legen Berufung gegen Zollerstattungsentscheidung ein",
+        "text": "Tesla-Aktie unter Druck wegen US-Gesetzen und China-Beziehungen.",
+        "stamp": "03.06.26"
+      },
+      {
+        "text": "ExxonMobil warnt vor schwindenden Ölreserven und Hormus-Krise.",
         "stamp": "02.06.26"
       },
       {
-        "text": "Kanada und Mexiko drängen auf USMCA-Verlängerung",
-        "stamp": "02.06.26"
-      },
-      {
-        "text": "Globale Inflationsprognose für ASEAN+3 angehoben",
-        "stamp": "02.06.26"
-      },
-      {
-        "text": "Samsung Electronics steigt weltweit in Marktkapitalisierung auf",
-        "stamp": "02.06.26"
-      },
-      {
-        "text": "EU plant Stärkung der heimischen Chip-Industrie",
+        "text": "KI-Boom treibt DAX, aber Konzentrationsrisiken wachsen.",
         "stamp": "02.06.26"
       }
     ],
@@ -1260,8 +1252,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 2267,
-    "candCursor": 83,
+    "lastCursor": 2567,
+    "candCursor": 91,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -1403,57 +1395,42 @@
       "WCH Service AG"
     ],
     "noteCursor": 7,
-    "focusCursor": 2,
+    "focusCursor": 3,
     "recheckCursor": 16,
     "regionNoteCursor": 5,
     "notesDay": "2026-06-03",
     "seenBySector": {
-      "cons_cycl": 98,
-      "cons_def": 48,
-      "materials": 48,
-      "health": 183,
-      "finance": 210,
-      "energy": 88,
-      "hardware": 53,
-      "software": 172,
-      "industrial": 70,
-      "utilities": 37,
-      "comm": 37,
-      "ai_semi": 32,
-      "realestate": 13
-    },
-    "pendingReject": [
-      "DKNG",
-      "DKS",
-      "DLB",
-      "DLGI",
-      "DLHC",
-      "DLO",
-      "DLPN",
-      "DLTH",
-      "DLTR",
-      "DLX",
-      "DMAC",
-      "DMRA",
-      "DMRC",
-      "DNA"
-    ],
-    "evaluatedBySector": {
-      "cons_cycl": 99,
-      "cons_def": 48,
-      "materials": 53,
-      "health": 183,
-      "finance": 217,
-      "energy": 91,
-      "hardware": 56,
-      "software": 178,
-      "industrial": 76,
+      "cons_cycl": 105,
+      "cons_def": 50,
+      "materials": 55,
+      "health": 208,
+      "finance": 218,
+      "energy": 96,
+      "hardware": 58,
+      "software": 190,
+      "industrial": 77,
       "utilities": 42,
-      "comm": 37,
+      "comm": 40,
       "ai_semi": 32,
-      "realestate": 14
+      "realestate": 15
     },
-    "heavyAt": "2026-06-03T18:36:13.152Z",
+    "pendingReject": [],
+    "evaluatedBySector": {
+      "cons_cycl": 106,
+      "cons_def": 50,
+      "materials": 60,
+      "health": 208,
+      "finance": 225,
+      "energy": 98,
+      "hardware": 60,
+      "software": 196,
+      "industrial": 83,
+      "utilities": 48,
+      "comm": 40,
+      "ai_semi": 32,
+      "realestate": 16
+    },
+    "heavyAt": "2026-06-03T18:58:04.907Z",
     "revalidateTag": "marketscreener-2026-06"
   },
   "yahooAt": "2026-06-03T19:00:31.545Z"
