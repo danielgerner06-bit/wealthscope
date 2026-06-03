@@ -81,7 +81,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   // Einmalig (REVALIDATE_TAG): alle Gemini-Perlen zur Neuprüfung gegen die feste Quelle
   // (MarketScreener) freigeben -> recheckAt löschen, damit die Re-Validierung sie über die
   // nächsten Läufe neu bewertet und inkonsistente Altdaten (gemischte Quellen) ersetzt/aussortiert.
-  const REVALIDATE_TAG = 'marketscreener-2026-06';
+  const REVALIDATE_TAG = 'ms-scale-counts-v2';   // hochgezählt -> erzwingt Neuprüfung mit korrekter MS-Skala
   if (purged) console.log(`Bereinigt: ${purged} OTC-Geister-Treffer entfernt.`);
 
   // Kriteriums-Bereinigung: bereits aufgenommene Treffer, die das aktuelle Kauf-%-Kriterium
@@ -100,12 +100,16 @@ const today = () => new Date().toISOString().slice(0, 10);
     ? prev.scan.candidates.slice()
     : SEED_CANDIDATES.slice();
 
-  // Einmalige Neuprüfungs-Freigabe (s. REVALIDATE_TAG): recheckAt aller Gemini-Perlen löschen.
+  // Einmalige Neuprüfungs-Freigabe (s. REVALIDATE_TAG): recheckAt aller Gemini-Perlen löschen
+  // + alte ratingCounts (anderes Format) verwerfen -> saubere Neuermittlung mit MS-Skala.
   if (scan.revalidateTag !== REVALIDATE_TAG) {
     let freed = 0;
-    for (const s of Object.values(db)) if (s.via && s.via.startsWith('gemini') && s.recheckAt) { delete s.recheckAt; freed++; }
+    for (const s of Object.values(db)) if (s.via && s.via.startsWith('gemini')) {
+      if (s.recheckAt) { delete s.recheckAt; freed++; }
+      if (s.ratingCounts) delete s.ratingCounts;   // altes strongBuy-Format raus
+    }
     scan.revalidateTag = REVALIDATE_TAG;
-    if (freed) console.log(`Re-Validierung freigegeben: ${freed} Gemini-Perlen werden gegen die feste Quelle neu geprüft.`);
+    if (freed) console.log(`Re-Validierung freigegeben: ${freed} Gemini-Perlen werden mit MS-Skala neu geprüft.`);
   }
 
   // Takt-Trennung: Yahoo-Daten (Kurse/Performance, kein Limit) laufen JEDEN Lauf (stündlich).

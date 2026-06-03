@@ -275,10 +275,11 @@
       '<div class="stk-stat"><div class="stk-stat-val" style="color:' + hsl(t.s) + '">' + t.val + '</div>' +
       '<div class="stk-stat-lbl">' + t.lbl + '</div></div>').join('');
 
-    // rohe Analysten-Verteilung (volle Transparenz, MarketScreener-Stufen)
+    // rohe Analysten-Verteilung (volle Transparenz, MarketScreener-Stufen).
+    // Nur das aktuelle MS-Format (buy/outperform) anzeigen; altes Format (strongBuy) ignorieren.
     const rc = st.ratingCounts;
     const cntsEl = document.getElementById('stkModalCounts');
-    if (rc && (rc.buy || rc.outperform || rc.hold || rc.underperform || rc.sell)) {
+    if (rc && !('strongBuy' in rc) && (rc.buy || rc.outperform || rc.hold || rc.underperform || rc.sell)) {
       const parts = [];
       if (rc.buy) parts.push('<b style="color:#34d399">' + rc.buy + '</b> Buy');
       if (rc.outperform) parts.push('<b style="color:#86efac">' + rc.outperform + '</b> Outperform');
