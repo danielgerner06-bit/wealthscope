@@ -4312,6 +4312,25 @@
       "seenMs": 1780444800000,
       "startPrice": 56.1299991607666,
       "perf": []
+    },
+    "WCH": {
+      "ticker": "WCH",
+      "name": "WCH Service AG",
+      "yahoo": "WCH.DE",
+      "sector": "industrial",
+      "region": "europe",
+      "buyPct": 100,
+      "outperformPct": 50,
+      "upside": -18,
+      "pe": null,
+      "perf6mAtAdd": 58.13,
+      "perf1mBefore": 10.26,
+      "analysts": 14,
+      "div": 2.67,
+      "seen": "2026-06-03",
+      "seenMs": 1780444800000,
+      "startPrice": 105.29999923706055,
+      "perf": []
     }
   },
   "findings": {
