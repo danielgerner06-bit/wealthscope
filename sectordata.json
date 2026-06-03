@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T12:00:31.544Z",
+  "updatedAt": "2026-06-03T13:00:31.529Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -4452,7 +4452,8 @@
       "source": "Finanznachrichten.de",
       "seen": "2026-06-02",
       "enrichAt": "2026-06-03",
-      "div": null
+      "div": null,
+      "perf1mBefore": null
     },
     {
       "ticker": "3659",
@@ -4474,7 +4475,8 @@
       "pe": 17.5,
       "eps": 80.37,
       "div": 1.33,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "perf1mBefore": 13.99
     },
     {
       "ticker": "NVTA",
@@ -4514,7 +4516,8 @@
       "pe": 16.7,
       "eps": 76,
       "enrichAt": "2026-06-02",
-      "div": 4.16
+      "div": 4.16,
+      "perf1mBefore": 3.78
     },
     {
       "ticker": "YSN",
@@ -10048,5 +10051,5 @@
     },
     "heavyAt": "2026-06-03T08:00:01.738Z"
   },
-  "yahooAt": "2026-06-03T12:00:31.544Z"
+  "yahooAt": "2026-06-03T13:00:31.529Z"
 }
