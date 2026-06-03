@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T19:37:56.597Z",
+  "updatedAt": "2026-06-03T19:55:42.678Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -1521,5 +1521,8 @@
     "heavyAt": "2026-06-03T19:31:51.197Z",
     "revalidateTag": "marketscreener-2026-06",
     "fmpRetryTag": "grades-summary-fix"
+  },
+  "blacklist": {
+    "ZZZTEST": "2026-09-03"
   }
 }
