@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T09:00:31.491Z",
+  "updatedAt": "2026-06-03T10:00:31.491Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -4278,7 +4278,8 @@
       "pe": 22.2,
       "eps": 11.21,
       "div": 1.69,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -7.22
     },
     {
       "ticker": "SPFI",
@@ -4296,7 +4297,8 @@
       "pe": 11.3,
       "eps": 3.57,
       "div": 1.69,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -0.43
     },
     {
       "ticker": "SPXC",
@@ -4314,7 +4316,8 @@
       "pe": 43.9,
       "eps": 5.24,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 8.51
     },
     {
       "ticker": "TJX",
@@ -10039,5 +10042,5 @@
     },
     "heavyAt": "2026-06-03T08:00:01.738Z"
   },
-  "yahooAt": "2026-06-03T09:00:31.491Z"
+  "yahooAt": "2026-06-03T10:00:31.491Z"
 }
