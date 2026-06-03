@@ -259,7 +259,7 @@
     for (const f of FACTORS) {
       const { slope, best, n } = factorCurve(data, f.key, perfForMonth);
       if (n < 4 || !best) continue;
-      rows.push({ label: f.label, slope, bestX: best.x, bestY: best.y });
+      rows.push({ label: f.label, slope, bestX: best.x, bestY: best.y, n });
     }
     syncMonthOptions();
     rows.sort((a, b) => b.slope - a.slope);
@@ -267,14 +267,28 @@
 
     el.innerHTML = '';
     if (!rows.length) { el.innerHTML = '<div class="sek-stocks-empty">Noch zu wenige Daten für die Faktor-Analyse.</div>'; return; }
+
+    // Konfidenz: Aussagekraft hängt an der Stichprobe (Aktien mit Daten) und der gereiften
+    // Historie. Bei wenig Daten ist die "stärkste"-Faktor-Reihung oft nur Zufall -> warnen.
+    const sample = Math.max(...rows.map(r => r.n));
+    const conf = sample >= 60 ? 'hoch' : sample >= 25 ? 'mittel' : 'gering';
+    if (conf !== 'hoch') {
+      const warn = document.createElement('div');
+      warn.className = 'ana-conf ana-conf-' + conf;
+      warn.innerHTML = (conf === 'gering' ? '⚠ ' : 'ⓘ ') +
+        'Geringe Datenbasis (' + sample + ' Aktien' + (factorMonth ? ', Monat ' + factorMonth : '') + '). ' +
+        'Die Reihenfolge ist noch ' + (conf === 'gering' ? 'stark zufallsanfällig' : 'wenig belastbar') + ' — erst mit mehr Perlen & Monaten aussagekräftig.';
+      el.appendChild(warn);
+    }
+
     rows.forEach(r => {
       const row = document.createElement('div');
-      row.className = 'ana-factor';
+      row.className = 'ana-factor' + (conf === 'gering' ? ' ana-factor-weak' : '');
       row.innerHTML =
         '<div class="ana-factor-top"><span class="ana-factor-name">' + r.label + '</span>' +
         '<span class="ana-factor-spread">Δ ' + r.slope.toFixed(1) + '%</span></div>' +
         '<div class="ana-factor-bar"><span style="width:' + Math.round((r.slope / maxSlope) * 100) + '%"></span></div>' +
-        '<div class="ana-factor-best">am besten bei <b>' + r.bestX + '</b> (Ø ' + (r.bestY > 0 ? '+' : '') + r.bestY.toFixed(1) + '%)</div>';
+        '<div class="ana-factor-best">am besten bei <b>' + r.bestX + '</b> (Ø ' + (r.bestY > 0 ? '+' : '') + r.bestY.toFixed(1) + '%) · n=' + r.n + '</div>';
       el.appendChild(row);
     });
   }

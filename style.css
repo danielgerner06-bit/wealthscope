@@ -1682,6 +1682,13 @@ html.preselect #hubScreen { display: none !important; }
 .ana-factor-best { margin-top: 4px; font-size: 0.74rem; color: var(--s-muted); }
 .ana-factor-best b { color: var(--s-text); }
 
+/* Konfidenz-Hinweis bei kleiner Stichprobe (Faktor-Rangliste noch zufallsanfällig) */
+.ana-conf { font-size: 0.72rem; line-height: 1.35; font-weight: 600; border-radius: 9px; padding: 8px 10px; margin-bottom: 10px; flex-shrink: 0; }
+.ana-conf-mittel { color: #cbd5e1; background: rgba(148,163,184,0.12); border: 1px solid rgba(148,163,184,0.22); }
+.ana-conf-gering { color: #fbbf24; background: rgba(245,158,11,0.10); border: 1px solid rgba(245,158,11,0.30); }
+/* Faktor-Zeilen bei sehr kleiner Stichprobe optisch zurücknehmen (nicht überinterpretieren) */
+.ana-factor-weak { opacity: 0.72; }
+
 .ana-ki { min-height: 0; overflow: hidden; }
 .ana-ki .sek-insight-text { overflow: visible; font-size: 0.86rem; line-height: 1.55; color: #d7ddf2; }
 /* KI-Karten-Kopf (Icon + Titel + Tag) */
