@@ -13,7 +13,7 @@
   const monthsOf = s => { const p = s.perf; if (!Array.isArray(p)) return 0; for (let i = p.length - 1; i >= 0; i--) if (p[i] != null) return i + 1; return 0; };
   const FACTORS = [
     { key: 'pe', label: 'KGV' }, { key: 'outperformPct', label: 'Outperform' },
-    { key: 'buyPct', label: 'Kaufempfehlung' }, { key: 'upside', label: 'Kursziel' },
+    { key: 'upside', label: 'Kursziel' },
     { key: 'div', label: 'Dividende' }, { key: 'analysts', label: 'Analysten' },
     { key: 'perf1mBefore', label: '1M vor Aufnahme' },
   ];
@@ -354,10 +354,10 @@
   }
   let wired = false;
   function wire() {
-    const num = (id, key) => document.getElementById(id).addEventListener('input', e => {
+    const num = (id, key) => { const el = document.getElementById(id); el.setAttribute('autocomplete', 'off'); el.addEventListener('input', e => {
       const raw = e.target.value.trim().replace(',', '.'); const n = parseFloat(raw);
       filt[key] = (raw === '' || isNaN(n)) ? null : n; render();
-    });
+    }); };
     document.getElementById('afSector').addEventListener('change', e => { filt.sector = e.target.value || null; render(); });
     document.getElementById('afRegion').addEventListener('change', e => { filt.region = e.target.value || null; render(); });
     wirePeRange();

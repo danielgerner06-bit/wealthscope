@@ -161,14 +161,12 @@
   };
 
   /* ---------- Analysten-Perlen mit Filter + Sortierung ---------- */
-  const filters = { buyPct: null, pe: null, perf6m: null, perf1mBefore: null, outperformPct: null, upside: null, analysts: null, div: null };
+  const filters = { pe: null, perf6m: null, perf1mBefore: null, outperformPct: null, upside: null, analysts: null, div: null };
   let sectorFilter = null;   // aktiver Sektor-Filter (Klick auf Balken)
   let rankSort = { key: 'anteil', dir: -1 };   // Sortierung im Sektor-Ranking-Popup
 
   // nur die Wert-Filter (KGV/6M/Outperform/Ziel/Analysten), OHNE Sektor-Filter
   function passesValueFilter(s) {
-    // Kaufempfehlung MINDESTENS (%)
-    if (filters.buyPct != null && !(s.buyPct != null && s.buyPct >= filters.buyPct)) return false;
     // KGV: Eingabe 0 => nur Aktien OHNE KGV (unprofitabel); sonst KGV höchstens.
     if (filters.pe != null) {
       if (filters.pe === 0) { if (s.pe != null) return false; }
@@ -227,8 +225,61 @@
           '<span class="sek-stock-nm">' + (st.name || '') + '</span></div>' +
           '<div class="sek-stock-meta">' + sec.name + (meta.length ? ' · ' + meta.join(' · ') : '') + '</div>' +
         '</div>' + metric;
+      row.addEventListener('click', () => openStockModal(st));   // Klick -> Detail-Feld mit allen Daten
       list.appendChild(row);
     });
+  }
+
+  /* ---------- Aktien-Detail-Modal: alle Daten einer Perle ---------- */
+  function openStockModal(st) {
+    const sec = sectorById(st.sector);
+    document.getElementById('stkModalTk').textContent = st.ticker || '';
+    document.getElementById('stkModalNm').textContent = st.name || '';
+    document.getElementById('stkModalDot').style.background = sec.color;
+    const pct = v => v == null ? '–' : fmtPct(v);
+    const plain = (v, suf = '') => v == null ? '–' : v + suf;
+    const seenStr = st.seen ? st.seen.split('-').reverse().join('.') : '–';
+    // Bewertung 0..1 (0=schlecht/rot, 1=gut/grün) je Kennzahl; null = neutral (keine Farbe).
+    // clamp((wert-lo)/(hi-lo)); bei "niedrig ist besser" (KGV) umgedreht.
+    const sc = (v, lo, hi) => v == null ? null : Math.max(0, Math.min(1, (v - lo) / (hi - lo)));
+    const scInv = (v, lo, hi) => v == null ? null : 1 - Math.max(0, Math.min(1, (v - lo) / (hi - lo)));
+    const rows = [
+      ['Sektor', sec.name, null],
+      ['Region', regionName(st.region || regionOfSym(st.yahoo || st.ticker)), null],
+      ['Kaufempfehlung', plain(st.buyPct, '%'), sc(st.buyPct, 50, 100)],
+      ['Outperform (Strong Buy)', plain(st.outperformPct, '%'), sc(st.outperformPct, 0, 100)],
+      ['Analysten', plain(st.analysts), sc(st.analysts, 1, 20)],
+      ['Kursziel-Potenzial', pct(st.upside), sc(st.upside, 0, 50)],
+      ['KGV', st.pe == null ? '– (kein Gewinn)' : String(st.pe), scInv(st.pe, 10, 50)],
+      ['Dividendenrendite', st.div == null ? '–' : st.div + '%', sc(st.div, 0, 5)],
+      ['6-Monats-Performance', pct(st.perf6m), sc(st.perf6m, -20, 30)],
+      ['1M vor Aufnahme', pct(st.perf1mBefore), sc(st.perf1mBefore, -20, 30)],
+      ['Gefunden am', seenStr, null],
+      ['Quelle', viaLabel(st.via), null],
+      ['Yahoo-Symbol', st.yahoo || st.ticker || '–', null],
+    ];
+    // Score -> Farbe (rot 0° über gelb 50° zu grün 130°)
+    const col = s => s == null ? '' : ' style="color:hsl(' + Math.round(s * 130) + ',75%,62%)"';
+    document.getElementById('stkModalGrid').innerHTML = rows.map(([k, v, s]) =>
+      '<div class="stk-row"><span class="stk-k">' + k + '</span><span class="stk-v"' + col(s) + '>' + v + '</span></div>').join('');
+    const m = document.getElementById('stkModal');
+    m.hidden = false;
+    requestAnimationFrame(() => m.classList.add('show'));   // Einblend-Animation
+  }
+  function closeStockModal() { const m = document.getElementById('stkModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
+  function regionName(id) { return ({ usa: 'USA', europe: 'Europa', germany: 'Deutschland', japan: 'Japan', china: 'China', em: 'Schwellenländer', apac: 'Asien-Pazifik', india: 'Indien', latam: 'Lateinamerika', world: 'Welt' }[id]) || id || '–'; }
+  // Region aus dem Yahoo-Börsensuffix ableiten (US = ohne Suffix), wenn kein region-Feld da ist
+  function regionOfSym(sym) {
+    if (!sym) return null;
+    const suf = sym.includes('.') ? sym.split('.').pop() : '';
+    const map = { DE: 'germany', PA: 'europe', AS: 'europe', MI: 'europe', L: 'europe', SW: 'europe', ST: 'europe', HE: 'europe', BR: 'europe', VI: 'europe', MC: 'europe', T: 'japan', HK: 'china', SS: 'china', SZ: 'china', KS: 'apac', TW: 'apac', NS: 'india', BO: 'india', AX: 'apac', SA: 'latam', MX: 'latam' };
+    return suf ? (map[suf] || 'world') : 'usa';
+  }
+  function viaLabel(v) { if (!v) return '–'; if (v.startsWith('gemini')) return 'KI-Websuche (Gemini)'; if (v === 'finnhub') return 'Finnhub (US-Analysten)'; return v; }
+  function wireStockModal() {
+    const m = document.getElementById('stkModal');
+    m.addEventListener('click', e => { if (e.target.closest('[data-close]') || e.target === m || e.target.classList.contains('sek-modal-backdrop')) closeStockModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !m.hidden) closeStockModal(); });
   }
 
   /* ---------- Popup: Sektoren gerankt nach Perlen-Anzahl ---------- */
@@ -345,7 +396,6 @@
     let v, label, cls = 'sek-stock-val';
     if (sortKey === 'perf6m') { v = st.perf6m; label = v != null ? fmtPct(v) : '—'; cls += v >= 0 ? ' up' : ' down'; }
     else if (sortKey === 'perf1mBefore') { v = st.perf1mBefore; label = v != null ? fmtPct(v) : '—'; cls += v >= 0 ? ' up' : ' down'; }
-    else if (sortKey === 'buyPct') { v = st.buyPct; label = v != null ? 'Kauf ' + v + '%' : '—'; }
     else if (sortKey === 'outperformPct') { v = st.outperformPct; label = v != null ? v + '%' : '—'; }
     else if (sortKey === 'analysts') { v = st.analysts; label = v != null ? v + ' An.' : '—'; }
     else if (sortKey === 'pe') { v = st.pe; label = v != null ? 'KGV ' + v : 'KGV —'; }
@@ -383,9 +433,12 @@
   }
 
   function wireFilter() {
-    const map = { fltBuy: 'buyPct', fltPe: 'pe', fltPerf6m: 'perf6m', fltPre1m: 'perf1mBefore', fltOutperf: 'outperformPct', fltUpside: 'upside', fltAnalysts: 'analysts', fltDiv: 'div' };
+    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltPre1m: 'perf1mBefore', fltOutperf: 'outperformPct', fltUpside: 'upside', fltAnalysts: 'analysts', fltDiv: 'div' };
     Object.keys(map).forEach(id => {
-      document.getElementById(id).addEventListener('input', e => {
+      const el = document.getElementById(id);
+      // Browser-Autovervollständigung aus -> keine alten Eingaben poppen mehr auf
+      el.setAttribute('autocomplete', 'off');
+      el.addEventListener('input', e => {
         // erlaubt negative Werte und Komma; ungültige Eingabe -> kein Filter
         const raw = e.target.value.trim().replace(',', '.');
         const num = parseFloat(raw);
@@ -395,7 +448,7 @@
     });
     document.getElementById('fltClear').addEventListener('click', () => {
       Object.keys(map).forEach(id => { document.getElementById(id).value = ''; });
-      filters.buyPct = filters.pe = filters.perf6m = filters.perf1mBefore = filters.outperformPct = filters.upside = filters.analysts = filters.div = null;
+      filters.pe = filters.perf6m = filters.perf1mBefore = filters.outperformPct = filters.upside = filters.analysts = filters.div = null;
       sectorFilter = null;
       renderStocks();
     });
@@ -531,7 +584,7 @@
       loading.classList.add('show');
       await loadData();
       renderStand();
-      if (!wired) { wireSort(); wireFilter(); wireModal(); wireViewToggle(); wireRankPop(); wired = true; }
+      if (!wired) { wireSort(); wireFilter(); wireModal(); wireViewToggle(); wireRankPop(); wireStockModal(); wired = true; }
       applyViewLabels();
       renderNews();
       renderBars();

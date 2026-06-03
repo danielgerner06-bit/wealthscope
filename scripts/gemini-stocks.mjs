@@ -13,8 +13,8 @@ import { sectorForFinnhub, SECTOR_IDS } from './sectors.mjs';
 const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
 const SECTOR_LIST = SECTOR_IDS.join(', ');
 
-// Aufnahmekriterium: Kaufempfehlungs-Anteil (Buy + Strong Buy) >= 80 %.
-export const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 80);
+// Aufnahmekriterium: Kaufempfehlungs-Anteil (Buy + Strong Buy) = 100 %.
+export const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 100);
 const qualifies = r => isFinite(r.buyPct) && r.buyPct >= MIN_BUY_PCT;
 
 async function groundedJSON(key, prompt) {

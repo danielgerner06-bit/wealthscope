@@ -1485,6 +1485,7 @@ html.preselect #hubScreen { display: none !important; }
   background: rgba(148,163,184,0.04); border: 1px solid transparent;
   transition: background .12s, border-color .12s, transform .12s;
 }
+.sek-stock { cursor: pointer; }
 .sek-stock:hover { background: rgba(148,163,184,0.1); border-color: var(--s-border); transform: translateX(2px); }
 .sek-stock-dot { width: 9px; height: 9px; border-radius: 3px; box-shadow: 0 0 10px currentColor; }
 .sek-stock-main { min-width: 0; }
@@ -1521,6 +1522,14 @@ html.preselect #hubScreen { display: none !important; }
 .sek-mstat span { display: block; font-size: 0.68rem; color: var(--s-faint); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 4px; }
 .sek-mstat b { font-size: 1.05rem; font-weight: 800; font-variant-numeric: tabular-nums; }
 .sek-mstat b.up { color: var(--s-up); } .sek-mstat b.down { color: var(--s-down); }
+
+/* Aktien-Detail-Modal: Daten-Grid */
+.stk-tk { font-weight: 800; }
+.stk-nm { color: var(--s-muted); font-weight: 600; font-size: 0.95rem; }
+.stk-grid { display: flex; flex-direction: column; gap: 1px; background: var(--s-border); border-radius: 12px; overflow: hidden; }
+.stk-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 9px 13px; background: rgba(20,26,48,0.85); }
+.stk-k { color: var(--s-muted); font-size: 0.82rem; }
+.stk-v { color: var(--s-text); font-weight: 700; font-size: 0.86rem; text-align: right; font-variant-numeric: tabular-nums; }
 .sek-modal-insight { position: relative; background: linear-gradient(150deg, rgba(99,102,241,0.14), rgba(168,85,247,0.08)); border: 1px solid var(--s-border); border-radius: 12px; padding: 16px 16px 14px; }
 .sek-modal-insight .sek-insight-tag { display: inline-block; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; padding: 3px 9px; border-radius: 99px; color: #c7cbff; background: rgba(129,140,248,0.18); border: 1px solid var(--s-border-hi); margin-bottom: 10px; }
 .sek-modal-insight p { color: #dde3f6; font-size: 0.92rem; line-height: 1.65; }

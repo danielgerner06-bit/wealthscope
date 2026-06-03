@@ -568,8 +568,7 @@
           <input type="text" inputmode="numeric" id="fltUpside" placeholder="Ziel≥" title="Kursziel-Potenzial mindestens (%)" aria-label="Analystenziel-Potenzial minimal in Prozent">
           <input type="text" inputmode="numeric" id="fltPerf6m" placeholder="6M≤" title="6-Monats-Performance höchstens (%)" aria-label="6-Monats-Performance höchstens in Prozent">
           <input type="text" inputmode="numeric" id="fltPre1m" placeholder="1M≤" title="Kursentwicklung im Monat VOR Aufnahme — höchstens (%)" aria-label="1-Monats-Performance vor Aufnahme höchstens in Prozent">
-          <input type="text" inputmode="numeric" id="fltBuy" placeholder="Kauf≥" title="Kaufempfehlung mindestens (%)" aria-label="Kaufempfehlung minimal in Prozent">
-          <input type="text" inputmode="numeric" id="fltOutperf" placeholder="Outp≥" title="Outperform mindestens (%)" aria-label="Outperform minimal in Prozent">
+          <input type="text" inputmode="numeric" id="fltOutperf" placeholder="Outp≥" title="Outperform (Strong-Buy-Anteil) mindestens (%)" aria-label="Outperform minimal in Prozent">
           <input type="text" inputmode="numeric" id="fltPe" placeholder="KGV≤" title="KGV höchstens — 0 zeigt unprofitable (ohne KGV)" aria-label="KGV maximal, 0 für ohne KGV">
           <input type="text" inputmode="numeric" id="fltAnalysts" placeholder="Anal≥" title="Anzahl Analysten mindestens" aria-label="Anzahl Analysten minimal">
           <input type="text" inputmode="numeric" id="fltDiv" placeholder="Div≥" title="Dividendenrendite mindestens (%)" aria-label="Dividendenrendite minimal in Prozent">
@@ -582,7 +581,6 @@
           <button data-key="upside" class="active desc">Ziel</button>
           <button data-key="perf6m">6M</button>
           <button data-key="perf1mBefore" title="1-Monats-Kurs vor Aufnahme">1M</button>
-          <button data-key="buyPct">Kauf</button>
           <button data-key="outperformPct">Outp.</button>
           <button data-key="pe">KGV</button>
           <button data-key="div">Div.</button>
@@ -609,6 +607,21 @@
           <p id="sekModalText">—</p>
           <span class="sek-modal-date" id="sekModalDate"></span>
         </div>
+      </div>
+    </div>
+
+    <!-- Aktien-Detail-Modal: alle Daten einer Perle -->
+    <div class="sek-modal" id="stkModal" hidden>
+      <div class="sek-modal-backdrop" data-close></div>
+      <div class="sek-modal-card" role="dialog" aria-modal="true" aria-labelledby="stkModalTk">
+        <button class="sek-modal-x" data-close aria-label="Schließen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <div class="sek-modal-head">
+          <span class="sek-modal-dot" id="stkModalDot"></span>
+          <h3><span id="stkModalTk" class="stk-tk"></span> <span id="stkModalNm" class="stk-nm"></span></h3>
+        </div>
+        <div class="stk-grid" id="stkModalGrid"></div>
       </div>
     </div>
 
@@ -642,7 +655,6 @@
             <select id="anaXFactor">
               <option value="pe">KGV</option>
               <option value="outperformPct">Outperform&nbsp;%</option>
-              <option value="buyPct">Kaufempfehlung&nbsp;%</option>
               <option value="upside">Kursziel-Potenzial&nbsp;%</option>
               <option value="div">Dividende&nbsp;%</option>
               <option value="analysts">Analysten</option>

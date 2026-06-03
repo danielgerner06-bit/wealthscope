@@ -1,7 +1,7 @@
 // Finnhub-Anbindung: Sektor-Performance (ETFs) + rollierender Analysten-Scan.
 import { sectorForFinnhub } from './sectors.mjs';
 
-const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 80);   // >= 80 % Kaufempfehlung
+const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 100);   // nur 100 % Kaufempfehlung (alle Analysten Buy/Strong Buy)
 
 const BASE = 'https://finnhub.io/api/v1';
 
