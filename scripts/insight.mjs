@@ -61,13 +61,17 @@ Schreibe MAXIMAL 2 sehr knappe deutsche Sätze (zusammen höchstens 30 Wörter),
 // Markt-News-Ticker: die wichtigsten (max 3) marktbewegenden News, sehr knapp.
 // Liefert { items: ["...", "..."], date } per Google-Search-Grounding.
 export async function buildNews(key) {
-  const today = new Date().toISOString().slice(0, 10);
+  const now = new Date();
+  const today = now.toISOString().slice(0, 10);
   const COUNT = Number(process.env.NEWS_COUNT || 6);
-  const prompt = `Suche über Google die AKTUELL wichtigsten Nachrichten der letzten ~24 Stunden, die die globalen Finanzmärkte bewegen — politisch, wirtschaftlich, geopolitisch, Notenbanken, große Unternehmen.
+  const MAX_AGE_H = Number(process.env.NEWS_MAX_AGE_H || 72);   // älter -> verworfen (außer es bleibt zu wenig)
+  const prompt = `Heutiges Datum: ${today}. Suche über Google die ALLERNEUESTEN marktbewegenden Finanznachrichten — möglichst von HEUTE oder gestern (max. die letzten ${Math.round(MAX_AGE_H)} Stunden). Politik, Wirtschaft, Geopolitik, Notenbanken, große Unternehmen.
 
-Gib die ${COUNT} WICHTIGSTEN als JSON-Array zurück. Jedes Element ist ein Objekt:
-{ "h": "kurze deutsche Schlagzeile (max 9 Wörter, konkret)", "t": "Veröffentlichungszeit als ISO 8601, z.B. 2026-06-02T15:30:00Z" }
-Sortiere nach Wichtigkeit (wichtigste zuerst). Nur das JSON-Array, kein weiterer Text.`;
+WICHTIG: Nimm NUR wirklich aktuelle Meldungen. Lass veraltete/alte Nachrichten weg, auch wenn dadurch weniger als ${COUNT} übrig bleiben — lieber 3 topaktuelle als 6 mit alten dabei. Erfinde keine Zeitstempel; nutze das echte Veröffentlichungsdatum aus der Quelle.
+
+Gib bis zu ${COUNT} als JSON-Array zurück, wichtigste zuerst. Jedes Element:
+{ "h": "kurze deutsche Schlagzeile (max 9 Wörter, konkret)", "t": "Veröffentlichungszeit als ISO 8601, z.B. ${today}T09:30:00Z" }
+Nur das JSON-Array, kein weiterer Text.`;
   const text = await gen(key, prompt, true);
   let raw = [];
   try {
@@ -76,17 +80,27 @@ Sortiere nach Wichtigkeit (wichtigste zuerst). Nur das JSON-Array, kein weiterer
     if (a >= 0 && b > a) raw = JSON.parse(t.slice(a, b + 1));
   } catch { /* ignore */ }
 
-  // -> [{ text, stamp }] mit Zeitstempel TT.MM.JJ HH:MM
+  // -> [{ text, stamp, ms }] mit Zeitstempel TT.MM.JJ HH:MM und Roh-ms zum Sortieren/Filtern
   const fmt = iso => {
     const d = iso ? new Date(iso) : null;
-    if (!d || isNaN(d)) return '';
+    if (!d || isNaN(d)) return { stamp: '', ms: null };
     const p = n => String(n).padStart(2, '0');
-    return `${p(d.getUTCDate())}.${p(d.getUTCMonth() + 1)}.${String(d.getUTCFullYear()).slice(2)} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`;
+    return { stamp: `${p(d.getUTCDate())}.${p(d.getUTCMonth() + 1)}.${String(d.getUTCFullYear()).slice(2)} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`, ms: d.getTime() };
   };
-  const items = (Array.isArray(raw) ? raw : []).map(o => {
-    if (typeof o === 'string') return { text: o.trim(), stamp: '' };
-    return { text: String(o.h || o.headline || o.text || '').trim(), stamp: fmt(o.t || o.time || o.date) };
-  }).filter(x => x.text).slice(0, COUNT);
+  let items = (Array.isArray(raw) ? raw : []).map(o => {
+    if (typeof o === 'string') return { text: o.trim(), stamp: '', ms: null };
+    const f = fmt(o.t || o.time || o.date);
+    return { text: String(o.h || o.headline || o.text || '').trim(), stamp: f.stamp, ms: f.ms };
+  }).filter(x => x.text);
+
+  // Veraltete (älter als MAX_AGE_H) verwerfen — aber wenn dadurch NICHTS Aktuelles bleibt,
+  // lieber die (wenigen) vorhandenen behalten, statt eine leere Leiste zu zeigen.
+  const cutoff = now.getTime() - MAX_AGE_H * 3600000;
+  const fresh = items.filter(x => x.ms != null && x.ms >= cutoff);
+  items = (fresh.length ? fresh : items);
+  // neueste zuerst (Items ohne Datum ans Ende), dann auf COUNT begrenzen
+  items.sort((a, b) => (b.ms ?? -Infinity) - (a.ms ?? -Infinity));
+  items = items.slice(0, COUNT).map(({ text, stamp }) => ({ text, stamp }));
   if (!items.length) throw new Error('keine News geparst');
   return { items, date: today };
 }

@@ -161,7 +161,7 @@
   };
 
   /* ---------- Analysten-Perlen mit Filter + Sortierung ---------- */
-  const filters = { pe: null, perf6m: null, outperformPct: null, upside: null, analysts: null, div: null };
+  const filters = { pe: null, perf6m: null, perf1mBefore: null, outperformPct: null, upside: null, analysts: null, div: null };
   let sectorFilter = null;   // aktiver Sektor-Filter (Klick auf Balken)
   let rankSort = { key: 'anteil', dir: -1 };   // Sortierung im Sektor-Ranking-Popup
 
@@ -174,6 +174,8 @@
     }
     // 6M HÖCHSTENS (Aktien, die noch nicht durch die Decke sind); Outperform & Ziel mindestens.
     if (filters.perf6m != null && !(s.perf6m != null && s.perf6m <= filters.perf6m)) return false;
+    // 1M-vor-Aufnahme HÖCHSTENS (Momentum-Filter: nicht schon vorher explodiert)
+    if (filters.perf1mBefore != null && !(s.perf1mBefore != null && s.perf1mBefore <= filters.perf1mBefore)) return false;
     if (filters.outperformPct != null && !(s.outperformPct != null && s.outperformPct >= filters.outperformPct)) return false;
     if (filters.upside != null && !(s.upside != null && s.upside >= filters.upside)) return false;
     if (filters.analysts != null && !(s.analysts != null && s.analysts >= filters.analysts)) return false;
@@ -340,11 +342,13 @@
   function stockMetric(st) {
     let v, label, cls = 'sek-stock-val';
     if (sortKey === 'perf6m') { v = st.perf6m; label = v != null ? fmtPct(v) : '—'; cls += v >= 0 ? ' up' : ' down'; }
+    else if (sortKey === 'perf1mBefore') { v = st.perf1mBefore; label = v != null ? fmtPct(v) : '—'; cls += v >= 0 ? ' up' : ' down'; }
     else if (sortKey === 'outperformPct') { v = st.outperformPct; label = v != null ? v + '%' : '—'; }
     else if (sortKey === 'analysts') { v = st.analysts; label = v != null ? v + ' An.' : '—'; }
     else if (sortKey === 'pe') { v = st.pe; label = v != null ? 'KGV ' + v : 'KGV —'; }
     else if (sortKey === 'div') { v = st.div; label = v != null ? v + '% Div' : '— Div'; }
-    else { v = st.upside; label = v != null ? '+' + Math.round(v) + '%' : '—'; cls += ' up'; }
+    // Ziel (Kursziel-Potenzial): Vorzeichen über fmtPct (kein "+-"), Farbe nach Richtung
+    else { v = st.upside; label = v != null ? fmtPct(Math.round(v)) : '—'; cls += (v != null && v < 0) ? ' down' : ' up'; }
     return '<span class="' + cls + '">' + label + '</span>';
   }
 
@@ -376,7 +380,7 @@
   }
 
   function wireFilter() {
-    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltOutperf: 'outperformPct', fltUpside: 'upside', fltAnalysts: 'analysts', fltDiv: 'div' };
+    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltPre1m: 'perf1mBefore', fltOutperf: 'outperformPct', fltUpside: 'upside', fltAnalysts: 'analysts', fltDiv: 'div' };
     Object.keys(map).forEach(id => {
       document.getElementById(id).addEventListener('input', e => {
         // erlaubt negative Werte und Komma; ungültige Eingabe -> kein Filter
@@ -388,7 +392,7 @@
     });
     document.getElementById('fltClear').addEventListener('click', () => {
       Object.keys(map).forEach(id => { document.getElementById(id).value = ''; });
-      filters.pe = filters.perf6m = filters.outperformPct = filters.upside = filters.analysts = filters.div = null;
+      filters.pe = filters.perf6m = filters.perf1mBefore = filters.outperformPct = filters.upside = filters.analysts = filters.div = null;
       sectorFilter = null;
       renderStocks();
     });

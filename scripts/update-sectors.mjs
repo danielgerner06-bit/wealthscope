@@ -15,11 +15,11 @@ import fs from 'node:fs';
 import { SECTORS, REGIONS, sectorForFinnhub } from './sectors.mjs';
 import { buildNotes, buildNews, buildFactorInsight } from './insight.mjs';
 import { scanAnalystStocks } from './finnhub.mjs';
-import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock, fetchSectorOf } from './prices.mjs';
+import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock, fetchSectorOf, perfBetween } from './prices.mjs';
 import { checkCandidates, discoverNew, MIN_BUY_PCT } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
-import { loadHistory, saveHistory, snapshotStocks, measureMilestones, seedBacktest1m, pruneHistory, computeFindings } from './history.mjs';
+import { loadHistory, saveHistory, snapshotStocks, measureMilestones, pruneHistory, computeFindings } from './history.mjs';
 
 const OUT = 'sectordata.json';
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
@@ -234,6 +234,19 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
   if (needPerf.length) console.log(`6M-Performance für ${needPerf.length} Aktien aktualisiert.`);
 
+  /* 3a2) 1-Monats-Performance VOR Aufnahme (Momentum) je Perle, EINMALIG aus Yahoo.
+     = Kursentwicklung im Monat vor dem seen-Datum. Fix gespeichert (ändert sich nicht). */
+  const dayMs = d => new Date((d || today()) + 'T00:00:00Z').getTime();
+  const needPre = topStocks.filter(s => s.perf1mBefore === undefined)
+    .slice(0, Number(process.env.PRE1M_BUDGET || 40));
+  for (const s of needPre) {
+    const seenMs = dayMs(s.seen);
+    const v = await perfBetween(s.yahoo || s.ticker, seenMs - 30 * 86400000, seenMs);
+    s.perf1mBefore = (v == null ? null : v);   // null = nicht ermittelbar (verhindert erneutes Versuchen)
+    db[s.ticker] = { ...db[s.ticker], perf1mBefore: s.perf1mBefore };
+  }
+  if (needPre.length) console.log(`1M-vor-Aufnahme für ${needPre.length} Perlen gesetzt.`);
+
   /* 3b) Kursziel + KGV + EPS + Analysten je Aktie über Yahoo (1 Call, kein Key,
      funktioniert auch für deutsche Werte). Ersetzt die alte Finnhub-Anreicherung. */
   {
@@ -310,11 +323,11 @@ const today = () => new Date().toISOString().slice(0, 10);
   try {
     const hist = loadHistory();
     const snapped = await snapshotStocks(hist, topStocks, Number(process.env.SNAPSHOT_BUDGET || 30));
+    // NUR echte Monatswerte: für jeden vergangenen Monat seit Aufnahme die Performance messen.
+    // KEIN provisorischer 1M-Wert mehr (seedBacktest1m) — echte Daten reifen über die Monate.
     const measured = await measureMilestones(hist, Number(process.env.MILESTONE_BUDGET || 40));
-    // provisorische 1M-Performance für Perlen ohne echten Monatswert (rückwirkend echt aus Yahoo)
-    const seeded = await seedBacktest1m(hist, topStocks, Number(process.env.SEED1M_BUDGET || 80));
     const pruned = pruneHistory(hist);
-    console.log(`Historie: ${Object.keys(hist.entries).length} Aktien (${snapped} neu, ${measured} Monatspunkte, ${seeded} prov. 1M, ${pruned} entfernt).`);
+    console.log(`Historie: ${Object.keys(hist.entries).length} Aktien (${snapped} neu, ${measured} Monatspunkte, ${pruned} entfernt).`);
 
     // KI-Analyse der stärksten Faktoren — 1× pro Tag (Budget-schonend)
     const findings = computeFindings(hist);

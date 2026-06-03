@@ -567,6 +567,7 @@
         <div class="sek-filter" id="sekFilter">
           <input type="text" inputmode="numeric" id="fltPe" placeholder="KGV ≤" title="KGV höchstens — 0 zeigt unprofitable (ohne KGV)" aria-label="KGV maximal, 0 für ohne KGV">
           <input type="text" inputmode="numeric" id="fltPerf6m" placeholder="6M ≤%" aria-label="6-Monats-Performance höchstens in Prozent">
+          <input type="text" inputmode="numeric" id="fltPre1m" placeholder="1M-vor ≤%" title="Kursentwicklung im Monat VOR Aufnahme — höchstens" aria-label="1-Monats-Performance vor Aufnahme höchstens in Prozent">
           <input type="text" inputmode="numeric" id="fltOutperf" placeholder="Outp ≥%" aria-label="Outperform minimal in Prozent">
           <input type="text" inputmode="numeric" id="fltUpside" placeholder="Ziel ≥%" aria-label="Analystenziel-Potenzial minimal in Prozent">
           <input type="text" inputmode="numeric" id="fltAnalysts" placeholder="Analyst ≥" aria-label="Anzahl Analysten minimal">
@@ -579,6 +580,7 @@
           <span class="sek-sort-label">Sort.</span>
           <button data-key="upside" class="active desc">Ziel</button>
           <button data-key="perf6m">6M</button>
+          <button data-key="perf1mBefore" title="1-Monats-Kurs vor Aufnahme">1M-vor</button>
           <button data-key="outperformPct">Outp.</button>
           <button data-key="pe">KGV</button>
           <button data-key="div">Div.</button>
@@ -642,9 +644,10 @@
               <option value="upside">Kursziel-Potenzial&nbsp;%</option>
               <option value="div">Dividende&nbsp;%</option>
               <option value="analysts">Analysten</option>
+              <option value="perf1mBefore">1M&nbsp;vor&nbsp;Aufnahme&nbsp;%</option>
             </select>
           </label>
-          <span class="ana-axis-hint">Filter &amp; Monat gelten auch hier</span>
+          <span class="ana-axis-hint">alle Perlen · Zeitraum über „Monat" rechts</span>
         </div>
         <div class="ana-filters" id="anaFilters">
           <label>Sektor<select id="afSector"><option value="">alle</option></select></label>
