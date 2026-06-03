@@ -70,7 +70,8 @@ export async function buildNews(key) {
 WICHTIG: Nimm NUR wirklich aktuelle Meldungen. Lass veraltete/alte Nachrichten weg, auch wenn dadurch weniger als ${COUNT} übrig bleiben — lieber 3 topaktuelle als 6 mit alten dabei. Erfinde keine Zeitstempel; nutze das echte Veröffentlichungsdatum aus der Quelle.
 
 Gib bis zu ${COUNT} als JSON-Array zurück, wichtigste zuerst. Jedes Element:
-{ "h": "kurze deutsche Schlagzeile (max 9 Wörter, konkret)", "t": "Veröffentlichungszeit als ISO 8601, z.B. ${today}T09:30:00Z" }
+{ "h": "kurze deutsche Schlagzeile (max 9 Wörter, konkret)", "t": "Veröffentlichungszeitpunkt als ISO 8601 MIT echter Uhrzeit, z.B. ${today}T09:30:00Z" }
+WICHTIG zum Zeitstempel: Gib die TATSÄCHLICHE Veröffentlichungs-Uhrzeit aus der Quelle an. Wenn du die genaue Uhrzeit nicht sicher kennst, lass das "t"-Feld WEG oder setze es auf null — erfinde KEINE "00:00"-Uhrzeit.
 Nur das JSON-Array, kein weiterer Text.`;
   const text = await gen(key, prompt, true);
   let raw = [];
@@ -80,12 +81,17 @@ Nur das JSON-Array, kein weiterer Text.`;
     if (a >= 0 && b > a) raw = JSON.parse(t.slice(a, b + 1));
   } catch { /* ignore */ }
 
-  // -> [{ text, stamp, ms }] mit Zeitstempel TT.MM.JJ HH:MM und Roh-ms zum Sortieren/Filtern
-  const fmt = iso => {
+  // -> [{ text, stamp, ms }] mit Zeitstempel TT.MM.JJ (HH:MM nur wenn ECHTE Uhrzeit da ist).
+  const fmt = val => {
+    const iso = val == null ? '' : String(val).trim();
     const d = iso ? new Date(iso) : null;
     if (!d || isNaN(d)) return { stamp: '', ms: null };
     const p = n => String(n).padStart(2, '0');
-    return { stamp: `${p(d.getUTCDate())}.${p(d.getUTCMonth() + 1)}.${String(d.getUTCFullYear()).slice(2)} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`, ms: d.getTime() };
+    // Hat die Quelle überhaupt eine Uhrzeit geliefert? (ISO mit "T..:.." UND nicht exakt Mitternacht)
+    const hasTime = /\d{1,2}:\d{2}/.test(iso) && !(d.getUTCHours() === 0 && d.getUTCMinutes() === 0);
+    const date = `${p(d.getUTCDate())}.${p(d.getUTCMonth() + 1)}.${String(d.getUTCFullYear()).slice(2)}`;
+    const stamp = hasTime ? `${date} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}` : date;
+    return { stamp, ms: d.getTime() };
   };
   let items = (Array.isArray(raw) ? raw : []).map(o => {
     if (typeof o === 'string') return { text: o.trim(), stamp: '', ms: null };
