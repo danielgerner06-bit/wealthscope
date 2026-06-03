@@ -94,6 +94,18 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
   if (belowCut) console.log(`Bereinigt: ${belowCut} Treffer unter ${MIN_BUY_PCT}% Kauf entfernt.`);
 
+  // Inkonsistenz-Bereinigung: Gemini-Perlen, deren gespeicherte Stufen-Counts NICHT zur
+  // Analystenzahl passen (Summe != analysts, >15% Abweichung), sind fehlerhaft abgelesen
+  // -> entfernen. Discovery/Re-Validierung holen ggf. eine saubere Version neu.
+  let inconsistent = 0;
+  for (const tk of Object.keys(db)) {
+    const s = db[tk], c = s.ratingCounts;
+    if (!c || ('strongBuy' in c)) continue;   // kein/altes Format -> Re-Validierung kümmert sich
+    const sum = (c.buy || 0) + (c.outperform || 0) + (c.hold || 0) + (c.underperform || 0) + (c.sell || 0);
+    if (s.analysts && sum > 0 && Math.abs(s.analysts - sum) > Math.max(1, sum * 0.15)) { delete db[tk]; inconsistent++; }
+  }
+  if (inconsistent) console.log(`Bereinigt: ${inconsistent} Perlen mit inkonsistenten Counts (Summe≠Analysten) entfernt.`);
+
   // Persistenter Scan-/Kandidaten-Zustand.
   const scan = prev?.scan || { universe: 0, scanned: 0, lastCursor: 0, candCursor: 0 };
   let candidates = Array.isArray(prev?.scan?.candidates) && prev.scan.candidates.length
