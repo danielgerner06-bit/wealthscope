@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T08:08:12.151Z",
+  "updatedAt": "2026-06-03T09:00:31.491Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -4219,7 +4219,8 @@
       "pe": 26.1,
       "eps": 3.3,
       "div": 3.05,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -8.51
     },
     {
       "ticker": "WTTR",
@@ -4237,7 +4238,8 @@
       "pe": 89.8,
       "eps": 0.21,
       "div": 1.48,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "perf1mBefore": 12.1
     },
     {
       "ticker": "UCTT",
@@ -4255,7 +4257,8 @@
       "pe": null,
       "eps": -4.29,
       "div": 0,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "perf1mBefore": 17.22
     },
     {
       "ticker": "DB1",
@@ -10035,5 +10038,6 @@
       "realestate": 9
     },
     "heavyAt": "2026-06-03T08:00:01.738Z"
-  }
+  },
+  "yahooAt": "2026-06-03T09:00:31.491Z"
 }
