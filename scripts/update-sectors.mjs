@@ -241,11 +241,17 @@ const today = () => new Date().toISOString().slice(0, 10);
         const names = due.map(b => b.name + ' (' + b.ticker + ')');
         const stillOk = await checkCandidates(GEMINI_KEY, names);
         const okSet = new Set(stillOk.map(s => s.ticker));
+        // Treffer mit sauberen Counts -> Daten aktualisieren, miss zurücksetzen.
         for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s, miss: 0, recheckAt: today() };
+        // Nicht-Treffer: NUR zählen, wenn die Perle SCHON saubere Counts hatte (dann ist ein
+        // Wegfall ein echtes Signal "erfüllt 100% nicht mehr"). Perlen ohne bisherige Counts
+        // (Altbestand / Gemini las nicht sauber) NICHT bestrafen -> später erneut versuchen.
         for (const b of due) {
           if (okSet.has(b.ticker) || !db[b.ticker]) continue;
-          const m = (db[b.ticker].miss || 0) + 1;
+          const hadCounts = db[b.ticker].ratingCounts && !('strongBuy' in db[b.ticker].ratingCounts);
+          if (!hadCounts) continue;   // noch nie sauber gelesen -> KEIN recheckAt -> nächster Lauf versucht erneut
           db[b.ticker].recheckAt = today();
+          const m = (db[b.ticker].miss || 0) + 1;
           if (m >= MAX_MISS) { delete db[b.ticker]; dropped++; }
           else db[b.ticker].miss = m;
         }

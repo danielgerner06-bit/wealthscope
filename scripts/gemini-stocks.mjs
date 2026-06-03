@@ -84,9 +84,11 @@ function normRating(o) {
       analysts = total;
     }
   }
-  // FALLBACK (Altformat): fertige Prozente, falls keine Zähler geliefert wurden.
+  // KEIN Fallback auf fertige Prozente mehr: wir wollen NUR Aktien mit echten,
+  // konsistenten Stufen-Zählern. Ohne saubere Counts -> countsBad -> nicht aufnehmen.
   if (buyPct == null) {
-    buyPct = Math.round(Number(o.buyPct ?? o.buy_percent ?? o.kaufProzent));
+    countsBad = true;
+    buyPct = Math.round(Number(o.buyPct ?? o.buy_percent ?? o.kaufProzent));   // nur für Anzeige/Sortierung
     const rawOutp = o.outperformPct ?? o.outperform_percent ?? o.outperformProzent;
     const outpNum = Math.round(Number(rawOutp));
     outperformPct = (rawOutp == null || !isFinite(outpNum)) ? null : outpNum;
