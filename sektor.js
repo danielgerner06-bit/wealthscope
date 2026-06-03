@@ -301,22 +301,30 @@
   }
   function closeStockModal() { const m = document.getElementById('stkModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
 
-  /* ---------- Aktie löschen + 3 Monate sperren (nur mit Admin-Passwort) ---------- */
-  let adminKey = null;          // Admin-Passwort (im Browser gemerkt) -> schaltet Löschen frei
-  try { adminKey = localStorage.getItem('wsAdminKey') || null; } catch {}
+  /* ---------- Admin-Modus (Session) + Aktie löschen + 3 Monate sperren ---------- */
+  // adminKey nur in dieser Session (NICHT localStorage) -> bei Reload wieder aus.
+  let adminKey = null;
   const DELETE_ENDPOINT = 'https://wealthscope-yahoo.daniel-gerner06.workers.dev/blacklist';
 
+  // zentraler Login-Button im Header: an = Admin-Modus, aus = normal
+  function wireAdminBtn() {
+    const btn = document.getElementById('sekAdminBtn');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      if (adminKey) { adminKey = null; btn.classList.remove('on'); btn.title = 'Admin-Login (Aktien löschen)'; return; }
+      const k = prompt('Admin-Passwort:');
+      if (k) { adminKey = k; btn.classList.add('on'); btn.title = 'Admin-Modus aktiv – klicken zum Abmelden'; }
+    });
+  }
+
+  // Lösch-Leiste im Popup: nur im Admin-Modus sichtbar, sonst leer.
   function renderDeleteBar(st) {
     const el = document.getElementById('stkModalVerify');
     if (adminKey) {
       el.innerHTML = '<button class="stk-del" id="stkDelBtn">🗑 Aktie löschen & 3 Monate sperren</button>';
       document.getElementById('stkDelBtn').onclick = () => deleteStock(st, el);
     } else {
-      el.innerHTML = '<button class="stk-vunlock" id="stkVUnlock">Löschen freischalten</button>';
-      document.getElementById('stkVUnlock').onclick = () => {
-        const k = prompt('Admin-Passwort eingeben (zum Löschen von Aktien):');
-        if (k) { adminKey = k; try { localStorage.setItem('wsAdminKey', k); } catch {} renderDeleteBar(st); }
-      };
+      el.innerHTML = '';
     }
   }
 
@@ -328,7 +336,7 @@
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ key: adminKey, ticker: st.ticker }),
       });
-      if (res.status === 401) { alert('Falsches Passwort.'); adminKey = null; try { localStorage.removeItem('wsAdminKey'); } catch {} renderDeleteBar(st); return; }
+      if (res.status === 401) { alert('Falsches Admin-Passwort.'); adminKey = null; const ab = document.getElementById('sekAdminBtn'); if (ab) ab.classList.remove('on'); renderDeleteBar(st); return; }
       if (!res.ok) throw new Error('HTTP ' + res.status);
       // lokal sofort entfernen (Repo zieht beim nächsten Lauf nach)
       DATA.topStocks = (DATA.topStocks || []).filter(s => s.ticker !== st.ticker);
@@ -663,7 +671,7 @@
       loading.classList.add('show');
       await loadData();
       renderStand();
-      if (!wired) { wireSort(); wireFilter(); wireModal(); wireViewToggle(); wireRankPop(); wireStockModal(); wired = true; }
+      if (!wired) { wireSort(); wireFilter(); wireModal(); wireViewToggle(); wireRankPop(); wireStockModal(); wireAdminBtn(); wired = true; }
       applyViewLabels();
       renderNews();
       renderBars();
