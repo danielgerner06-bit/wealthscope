@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T18:42:11.109Z",
+  "updatedAt": "2026-06-03T19:00:31.545Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 21.47,
+      "perf": 21.35,
       "avg30": 3.77,
-      "perf6m": 37.39
+      "perf6m": 37.26
     },
     {
       "id": "comm",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 1.82,
+      "perf": 1.85,
       "avg30": 0.87,
-      "perf6m": -6.25
+      "perf6m": -6.22
     },
     {
       "id": "finance",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -2.64,
+      "perf": -2.68,
       "avg30": 0.41,
-      "perf6m": -9.89
+      "perf6m": -9.93
     },
     {
       "id": "em",
@@ -263,9 +263,9 @@
     },
     {
       "id": "apac",
-      "perf": 10.14,
+      "perf": 10.11,
       "avg30": 3.26,
-      "perf6m": 29.55
+      "perf6m": 29.52
     },
     {
       "id": "india",
@@ -1455,5 +1455,6 @@
     },
     "heavyAt": "2026-06-03T18:36:13.152Z",
     "revalidateTag": "marketscreener-2026-06"
-  }
+  },
+  "yahooAt": "2026-06-03T19:00:31.545Z"
 }
