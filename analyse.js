@@ -8,8 +8,9 @@
   const perfForMonth = s => (s.perf || [])[factorMonth - 1] ?? null;
   // jüngster vorhandener Monatswert einer Aktie (kumulierte Performance seit Aufnahme)
   const lastPerf = s => { const p = s.perf; if (!Array.isArray(p)) return null; for (let i = p.length - 1; i >= 0; i--) if (p[i] != null) return p[i]; return null; };
-  // wie viele Monate hat diese Aktie schon? (Anzahl gemessener Punkte)
-  const monthsOf = s => Array.isArray(s.perf) ? s.perf.filter(v => v != null).length : 0;
+  // wie viele Monate hat diese Aktie schon? (höchster gefüllter Monats-Index + 1,
+  // passt zur positionsbasierten Balken-/Monatslogik auch bei einer evtl. Lücke)
+  const monthsOf = s => { const p = s.perf; if (!Array.isArray(p)) return 0; for (let i = p.length - 1; i >= 0; i--) if (p[i] != null) return i + 1; return 0; };
   const FACTORS = [
     { key: 'pe', label: 'KGV' }, { key: 'outperformPct', label: 'Outperform' },
     { key: 'buyPct', label: 'Kaufempfehlung' }, { key: 'upside', label: 'Kursziel' },

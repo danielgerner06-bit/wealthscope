@@ -181,7 +181,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
 
   /* 2b) Gemini: Kandidaten prüfen (rollierend) ---------------------- */
-  if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
+  if (GEMINI_KEY && heavyDue && geminiBudgetLeft() && candidates.length) {
     useGemini();
     try {
       const n = candidates.length;
@@ -278,7 +278,13 @@ const today = () => new Date().toISOString().slice(0, 10);
         e = await enrichStock(s.ticker + '.DE');
         if (e) { s.yahoo = s.ticker + '.DE'; }
       }
-      if (!e) { s.enrichAt = today(); db[s.ticker] = { ...db[s.ticker], enrichAt: s.enrichAt }; continue; } // auch bei Fehlschlag markieren, sonst jeder Lauf erneut
+      if (!e) {
+        // auch bei Fehlschlag markieren (sonst jeder Lauf erneut). div explizit auf null,
+        // damit "s.div === undefined" nicht endlos sofortige Re-Enrichments triggert.
+        s.enrichAt = today(); if (s.div === undefined) s.div = null;
+        db[s.ticker] = { ...db[s.ticker], enrichAt: s.enrichAt, div: s.div ?? null };
+        continue;
+      }
       if (e.upside != null) { s.upside = e.upside; upCount++; }
       // KGV: Yahoo-Wert; bei Verlust (EPS < 0) bewusst kein KGV
       s.pe = (e.eps != null && e.eps < 0) ? null : e.pe;
@@ -306,30 +312,30 @@ const today = () => new Date().toISOString().slice(0, 10);
   const todayStr = today();
   const notesDoneToday = scan.notesDay === todayStr;
   if (GEMINI_KEY && heavyDue && !notesDoneToday) {
-    let any = false;
+    let ok = false;   // mind. EIN Lagetext erfolgreich -> erst dann "heute erledigt"
     if (geminiBudgetLeft()) {
-      useGemini(); any = true;
+      useGemini();
       try {
         const ids = SECTORS.map(s => s.id);
         const id = ids[(scan.noteCursor || 0) % ids.length];
         scan.noteCursor = ((scan.noteCursor || 0) + 1) % ids.length;
         const fresh = await buildNotes(GEMINI_KEY, [id], bars30, topStocks, 'Sektor');
         sectorNotes = { ...sectorNotes, ...fresh };
-        console.log(`Sektor-Lage: ${Object.keys(fresh).length}/1 (${id}).`);
+        console.log(`Sektor-Lage: ${Object.keys(fresh).length}/1 (${id}).`); ok = true;
       } catch (e) { noteGeminiError(e); console.error('Sektor-Lage fehlgeschlagen:', e.message); }
     }
     if (geminiBudgetLeft()) {
-      useGemini(); any = true;
+      useGemini();
       try {
         const rids = REGIONS.map(r => r.id);
         const rid = rids[(scan.regionNoteCursor || 0) % rids.length];
         scan.regionNoteCursor = ((scan.regionNoteCursor || 0) + 1) % rids.length;
         const rfresh = await buildNotes(GEMINI_KEY, [rid], bars30Region, topStocks, 'Region');
         regionNotes = { ...regionNotes, ...rfresh };
-        console.log(`Region-Lage: ${Object.keys(rfresh).length}/1 (${rid}).`);
+        console.log(`Region-Lage: ${Object.keys(rfresh).length}/1 (${rid}).`); ok = true;
       } catch (e) { noteGeminiError(e); console.error('Region-Lage fehlgeschlagen:', e.message); }
     }
-    if (any) scan.notesDay = todayStr;   // heute erledigt -> spätere Läufe überspringen
+    if (ok) scan.notesDay = todayStr;   // nur bei Erfolg "heute erledigt" -> bei 429 erneut versuchen
   }
 
   /* 6) Backtest-Historie pflegen (Snapshots + Monats-Performance; Yahoo, kein Kontingent) */
