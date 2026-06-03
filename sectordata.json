@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T10:00:31.491Z",
+  "updatedAt": "2026-06-03T11:00:31.514Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -4335,7 +4335,8 @@
       "pe": 30,
       "eps": 5.13,
       "div": 1.26,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": -1.12
     },
     {
       "ticker": "VMD",
@@ -4353,7 +4354,8 @@
       "div": 0,
       "enrichAt": "2026-06-03",
       "perf6m": 43.57,
-      "perf6mAt": "2026-06-03"
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": -1.03
     },
     {
       "ticker": "SONO",
@@ -4371,7 +4373,8 @@
       "pe": 96.9,
       "eps": 0.17,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 9.97
     },
     {
       "ticker": "MOD",
@@ -10042,5 +10045,5 @@
     },
     "heavyAt": "2026-06-03T08:00:01.738Z"
   },
-  "yahooAt": "2026-06-03T10:00:31.491Z"
+  "yahooAt": "2026-06-03T11:00:31.514Z"
 }
