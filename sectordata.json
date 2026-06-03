@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T11:00:31.514Z",
+  "updatedAt": "2026-06-03T12:00:31.544Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -4397,7 +4397,8 @@
       "recheckAt": "2026-06-02",
       "miss": 1,
       "div": 0,
-      "peGemini": 159.9
+      "peGemini": 159.9,
+      "perf1mBefore": 11.57
     },
     {
       "ticker": "SPHR",
@@ -4415,7 +4416,8 @@
       "pe": 47.8,
       "eps": 2.97,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 5.32
     },
     {
       "ticker": "UROY",
@@ -4433,7 +4435,8 @@
       "pe": 129,
       "eps": 0.03,
       "div": 0,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "perf1mBefore": -2.89
     },
     {
       "ticker": "VNE",
@@ -10045,5 +10048,5 @@
     },
     "heavyAt": "2026-06-03T08:00:01.738Z"
   },
-  "yahooAt": "2026-06-03T11:00:31.514Z"
+  "yahooAt": "2026-06-03T12:00:31.544Z"
 }
