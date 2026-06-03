@@ -39,9 +39,10 @@ export async function fmpRating(symbol) {
   for (const url of urls) {
     try {
       const res = await fetch(url);
-      if (!res.ok) continue;
+      if (!res.ok) { if (process.env.FMP_DEBUG) console.log('FMP', res.status, url.split('?')[0]); continue; }
       const j = await res.json();
       const rec = Array.isArray(j) ? j[0] : j;
+      if (process.env.FMP_DEBUG) console.log('FMP-Antwort', url.split('/').slice(-1)[0].split('?')[0], JSON.stringify(rec).slice(0, 200));
       const c = pickCounts(rec);
       if (!c) continue;
       return {
