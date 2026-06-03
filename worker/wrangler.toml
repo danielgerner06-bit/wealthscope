@@ -1,0 +1,27 @@
+name = "wealthscope-yahoo"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Stündlicher, pünktlicher Cron (Cloudflare führt das zuverlässig aus, anders als
+# GitHub Actions). Holt jede Stunde frische Yahoo-Kurse und committet sie ins Repo.
+[triggers]
+crons = ["0 * * * *"]
+
+[vars]
+REPO = "danielgerner06-bit/wealthscope"
+BRANCH = "main"
+MIN_GAP_MIN = "50"
+SUBREQ_CAP = "40"   # Gesamt-Budget Kurs-Fetches (40 - 23 Sektor/Region = 17 für rollierende Aktien); Overhead (getFile/crumb/commit ≈ 6) bleibt unter dem 50er-Free-Limit
+# Budgets klein halten: Cloudflare Free erlaubt nur 50 fetch-Subrequests pro Lauf.
+# Sektor+Region (23 Fetches) laufen IMMER komplett (das ist das stündlich Frische);
+# der Rest teilt sich die ~25 verbleibenden Fetches. Da der Worker STÜNDLICH läuft
+# (24×/Tag), ist der Tagesdurchsatz trotzdem höher als beim alten 6h-Action-Takt.
+PERF6M_BUDGET = "8"
+PRE1M_BUDGET = "6"
+ENRICH_BUDGET = "8"
+SNAPSHOT_BUDGET = "4"
+MILESTONE_BUDGET = "6"
+
+# Secrets (NICHT hier eintragen, via `wrangler secret put` setzen):
+#   GITHUB_TOKEN  – Fine-grained PAT, "Contents: Read and write" auf das Repo
+#   RUN_KEY       – frei wählbares Passwort für den manuellen /run-Test
