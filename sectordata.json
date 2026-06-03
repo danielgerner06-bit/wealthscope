@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-02",
-  "updatedAt": "2026-06-02T23:36:42.934Z",
+  "updated": "2026-06-03",
+  "updatedAt": "2026-06-03T01:01:50.597Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -1293,7 +1293,7 @@
       "pe": null,
       "eps": null,
       "peAt": "2026-06-02",
-      "enrichAt": "2026-06-02",
+      "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-02",
       "miss": 1
     },
@@ -2511,7 +2511,7 @@
       "via": "gemini-discover",
       "source": "TipRanks",
       "seen": "2026-06-02",
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "CFG",
@@ -2927,7 +2927,7 @@
       "via": "gemini-discover",
       "source": "Finanznachrichten.de",
       "seen": "2026-06-02",
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "INFY.NS",

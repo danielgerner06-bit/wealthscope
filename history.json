@@ -21,10 +21,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        3.78
+        0
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "CLDX": {
       "ticker": "CLDX",
@@ -47,10 +47,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -9.64
+        -11.81
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "INSM": {
       "ticker": "INSM",
@@ -73,10 +73,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -27.01
+        -25.91
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "CGEN": {
       "ticker": "CGEN",
@@ -99,10 +99,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -8.79
+        -14.39
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "INR": {
       "ticker": "INR",
@@ -125,10 +125,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -23.98
+        -23.92
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "IMNM": {
       "ticker": "IMNM",
@@ -151,10 +151,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -12.52
+        -17.1
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "KOD": {
       "ticker": "KOD",
@@ -177,10 +177,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -13.83
+        -21.4
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "IMTX": {
       "ticker": "IMTX",
@@ -203,10 +203,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -1.44
+        -9.87
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "CLYM": {
       "ticker": "CLYM",
@@ -229,10 +229,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        19.76
+        15.58
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "ISSC": {
       "ticker": "ISSC",
@@ -255,10 +255,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -16.77
+        -14.94
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "JBS": {
       "ticker": "JBS",
@@ -281,10 +281,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -23.48
+        -23.32
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "CNL": {
       "ticker": "CNL",
@@ -307,10 +307,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -6.28
+        -3.4
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "IE": {
       "ticker": "IE",
@@ -333,10 +333,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        10.24
+        15.09
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "KVYO": {
       "ticker": "KVYO",
@@ -359,10 +359,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -21.83
+        -24.57
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "JCAP": {
       "ticker": "JCAP",
@@ -385,10 +385,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -17.16
+        -18.4
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "CHDN": {
       "ticker": "CHDN",
@@ -411,10 +411,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -2.42
+        -4.49
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "CGON": {
       "ticker": "CGON",
@@ -437,10 +437,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -12.89
+        -17.98
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "CRIS": {
       "ticker": "CRIS",
@@ -463,10 +463,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -1.33
+        -2.91
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "KYMR": {
       "ticker": "KYMR",
@@ -489,10 +489,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -7.16
+        -14.71
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "MIRM": {
       "ticker": "MIRM",
@@ -515,10 +515,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -9.77
+        -12.87
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "INDV": {
       "ticker": "INDV",
@@ -541,10 +541,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -11.98
+        -13.52
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "AOF": {
       "ticker": "AOF",
@@ -567,10 +567,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        7.19
+        6.55
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "DEF": {
       "ticker": "DEF",
@@ -596,7 +596,7 @@
         -2.44
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "MUM": {
       "ticker": "MUM",
@@ -619,10 +619,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        -3.95
+        -3.83
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "KGC": {
       "ticker": "KGC",
@@ -645,10 +645,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        2.35
+        0.35
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "IRON": {
       "ticker": "IRON",
@@ -671,10 +671,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        4.11
+        0.53
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "REGN": {
       "ticker": "REGN",
@@ -723,10 +723,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        14.38
+        12.26
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "CLBT": {
       "ticker": "CLBT",
@@ -749,10 +749,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        14.22
+        9.82
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "CIFR": {
       "ticker": "CIFR",
@@ -775,10 +775,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        44.61
+        46.95
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "KOPN": {
       "ticker": "KOPN",
@@ -801,10 +801,10 @@
       "perf6m": null,
       "perf1j": null,
       "perf": [
-        30.65
+        36.47
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "KNSA": {
       "ticker": "KNSA",
@@ -1577,10 +1577,10 @@
       "seenMs": 1780358400000,
       "startPrice": 1187.199951171875,
       "perf": [
-        -14.48
+        -13.05
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "ZAL": {
       "ticker": "ZAL",
@@ -1599,10 +1599,10 @@
       "seenMs": 1780358400000,
       "startPrice": 23.729999542236328,
       "perf": [
-        13.43
+        9.61
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "BAYN": {
       "ticker": "BAYN",
@@ -1621,10 +1621,10 @@
       "seenMs": 1780358400000,
       "startPrice": 33.470001220703125,
       "perf": [
-        -10.51
+        -6.07
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "CNOB": {
       "ticker": "CNOB",
@@ -1929,10 +1929,10 @@
       "seenMs": 1780358400000,
       "startPrice": 2.3450000286102295,
       "perf": [
-        22.77
+        21.47
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "IRTC": {
       "ticker": "IRTC",
@@ -1951,10 +1951,10 @@
       "seenMs": 1780358400000,
       "startPrice": 107.91999816894531,
       "perf": [
-        -9.45
+        -11.48
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "ADPT": {
       "ticker": "ADPT",
@@ -1973,10 +1973,10 @@
       "seenMs": 1780358400000,
       "startPrice": 14.930000305175781,
       "perf": [
-        2.97
+        4.41
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "ACRS": {
       "ticker": "ACRS",
@@ -1995,10 +1995,10 @@
       "seenMs": 1780358400000,
       "startPrice": 4.625,
       "perf": [
-        2.1
+        2.21
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "GWH": {
       "ticker": "GWH",
@@ -2017,10 +2017,10 @@
       "seenMs": 1780358400000,
       "startPrice": 0.9848999977111816,
       "perf": [
-        -11.27
+        -11.71
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "TLRY": {
       "ticker": "TLRY",
@@ -2061,10 +2061,10 @@
       "seenMs": 1780358400000,
       "startPrice": 3.444999933242798,
       "perf": [
-        -5.62
+        -7.4
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "RBRK": {
       "ticker": "RBRK",
@@ -2152,7 +2152,7 @@
         20.63
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SGHC": {
       "ticker": "SGHC",
@@ -2174,7 +2174,7 @@
         -1.79
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SIBN": {
       "ticker": "SIBN",
@@ -2196,7 +2196,7 @@
         4.94
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SI": {
       "ticker": "SI",
@@ -2218,7 +2218,7 @@
         7.44
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SKE": {
       "ticker": "SKE",
@@ -2262,7 +2262,7 @@
         -9.65
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SLDE": {
       "ticker": "SLDE",
@@ -2284,7 +2284,7 @@
         -5.7
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SLI": {
       "ticker": "SLI",
@@ -2372,7 +2372,7 @@
         5.71
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SEI": {
       "ticker": "SEI",
@@ -2592,7 +2592,7 @@
         3.31
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SHWZ": {
       "ticker": "SHWZ",
@@ -2658,7 +2658,7 @@
         -5.11
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SLXN": {
       "ticker": "SLXN",
@@ -2724,7 +2724,7 @@
         11.95
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SERV": {
       "ticker": "SERV",
@@ -2988,7 +2988,7 @@
         11.18
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SGLY": {
       "ticker": "SGLY",
@@ -3142,7 +3142,7 @@
         4.91
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SLE": {
       "ticker": "SLE",
@@ -3340,7 +3340,7 @@
         -9.81
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SLB": {
       "ticker": "SLB",
@@ -3384,7 +3384,7 @@
         13.3
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SDRL": {
       "ticker": "SDRL",
@@ -3428,7 +3428,7 @@
         2.91
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SEG": {
       "ticker": "SEG",
@@ -3538,7 +3538,7 @@
         -2.4
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SHOO": {
       "ticker": "SHOO",
@@ -3604,7 +3604,7 @@
         -6.94
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SDGR": {
       "ticker": "SDGR",
@@ -3626,7 +3626,7 @@
         15.81
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SGI": {
       "ticker": "SGI",
@@ -4000,7 +4000,7 @@
         -3.87
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SNDX": {
       "ticker": "SNDX",
@@ -4044,7 +4044,7 @@
         -16.09
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SPRB": {
       "ticker": "SPRB",
@@ -4110,7 +4110,7 @@
         -27.83
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SSSS": {
       "ticker": "SSSS",
@@ -4176,7 +4176,7 @@
         -6.62
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SRTA": {
       "ticker": "SRTA",
@@ -4198,7 +4198,7 @@
         27.76
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SRTS": {
       "ticker": "SRTS",
@@ -4242,7 +4242,7 @@
         -36.36
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "STXS": {
       "ticker": "STXS",
@@ -4286,7 +4286,7 @@
         32.44
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SPFI": {
       "ticker": "SPFI",
@@ -4902,7 +4902,7 @@
         -14.69
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "STEX": {
       "ticker": "STEX",
@@ -4946,7 +4946,7 @@
         -12.5
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "STRT": {
       "ticker": "STRT",
@@ -5078,7 +5078,7 @@
         5.19
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SUPN": {
       "ticker": "SUPN",
@@ -5100,7 +5100,7 @@
         -9.38
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SSYS": {
       "ticker": "SSYS",
@@ -5166,7 +5166,7 @@
         5.07
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SNSE": {
       "ticker": "SNSE",
@@ -5232,7 +5232,7 @@
         -6.86
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SRG": {
       "ticker": "SRG",
@@ -5628,7 +5628,7 @@
         0.04
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "TECX": {
       "ticker": "TECX",
@@ -5716,7 +5716,7 @@
         -11.09
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SVCO": {
       "ticker": "SVCO",
@@ -5782,7 +5782,7 @@
         15.45
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "TENX": {
       "ticker": "TENX",
@@ -5848,7 +5848,7 @@
         8.83
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "TLSI": {
       "ticker": "TLSI",
@@ -5958,7 +5958,7 @@
         -9.16
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "TGEN": {
       "ticker": "TGEN",
@@ -5980,7 +5980,7 @@
         32.93
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "TMC": {
       "ticker": "TMC",
@@ -6002,7 +6002,7 @@
         25.05
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "SWBI": {
       "ticker": "SWBI",
@@ -6376,7 +6376,7 @@
         2.97
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "THC": {
       "ticker": "THC",
@@ -6398,7 +6398,7 @@
         -11.73
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "TJX": {
       "ticker": "TJX",
@@ -6464,7 +6464,7 @@
         -2.88
       ],
       "prov": true,
-      "provDay": "2026-06-02"
+      "provDay": "2026-06-03"
     },
     "TAC": {
       "ticker": "TAC",
@@ -6647,7 +6647,7 @@
     "factors": [
       {
         "name": "Kursziel",
-        "spread": 30.8,
+        "spread": 31.6,
         "best": {
           "k": "<10%",
           "avg": 27.9,
@@ -6655,41 +6655,41 @@
         },
         "worst": {
           "k": "40%+",
-          "avg": -2.9,
+          "avg": -3.7,
           "n": 71
         }
       },
       {
         "name": "KGV",
-        "spread": 13.6,
+        "spread": 13.8,
         "best": {
           "k": "40+",
-          "avg": 9.8,
+          "avg": 9.7,
           "n": 29
         },
         "worst": {
           "k": "<15",
-          "avg": -3.8,
+          "avg": -4.1,
           "n": 34
         }
       },
       {
         "name": "Analysten",
-        "spread": 5.6,
+        "spread": 6,
         "best": {
           "k": "1-4",
-          "avg": 6.6,
+          "avg": 6.7,
           "n": 78
         },
         "worst": {
           "k": "5-14",
-          "avg": 1,
+          "avg": 0.7,
           "n": 153
         }
       },
       {
         "name": "Dividende",
-        "spread": 5.3,
+        "spread": 5.4,
         "best": {
           "k": "<2%",
           "avg": 4.2,
@@ -6697,21 +6697,21 @@
         },
         "worst": {
           "k": "2-4%",
-          "avg": -1.1,
+          "avg": -1.2,
           "n": 24
         }
       },
       {
         "name": "Outperform",
-        "spread": 0.6,
+        "spread": 0.7,
         "best": {
           "k": "70-85%",
-          "avg": 3.6,
+          "avg": 3.5,
           "n": 9
         },
         "worst": {
           "k": "<70%",
-          "avg": 3,
+          "avg": 2.8,
           "n": 270
         }
       }
