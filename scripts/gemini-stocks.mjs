@@ -17,6 +17,14 @@ const SECTOR_LIST = SECTOR_IDS.join(', ');
 export const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 100);
 const qualifies = r => !r.countsBad && isFinite(r.buyPct) && r.buyPct >= MIN_BUY_PCT;
 
+// Firmenname auf vergleichbaren Kern reduzieren (Rechtsformen/Füllwörter weg, nur a-z0-9).
+function nameKey(s) {
+  return String(s || '')
+    .toLowerCase()
+    .replace(/\b(se|ag|nv|sa|corp|corporation|inc|incorporated|ltd|limited|plc|co|kgaa|group|holding|holdings|company|the|vz|vorzugsaktien|adr|spa|oyj|asa|ab|as)\b/g, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
 async function groundedJSON(key, prompt) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${key}`;
   const body = JSON.stringify({
@@ -149,9 +157,17 @@ MarketScreener sicher gefunden hast. Ohne klare Zähler weglassen. Kein Text au�
   const { text, sources } = await groundedJSON(key, prompt);
   const arr = extractJSON(text);
   if (!Array.isArray(arr)) return [];
+  // Identitäts-Schutz: zurückgegebenes Objekt muss zu EINER angefragten Aktie passen
+  // (Ticker ODER Firmenname-Kern), sonst hat Gemini eine ANDERE Firma erwischt -> verwerfen.
+  const wantTickers = new Set(names.map(n => (n.match(/\(([^)]+)\)/) || [])[1]).filter(Boolean).map(t => t.toUpperCase()));
+  const wantNameKeys = names.map(n => nameKey(n.replace(/\([^)]*\)/, ''))).filter(Boolean);
   const out = [];
   for (const o of arr) {
     if (!o || !o.ticker) continue;
+    const tk = String(o.ticker).toUpperCase();
+    const nk = nameKey(o.name || '');
+    const idOk = wantTickers.has(tk) || wantNameKeys.some(w => nk && (w.includes(nk) || nk.includes(w)));
+    if (!idOk) continue;   // andere Firma als angefragt -> nicht übernehmen
     const r = normRating(o);
     if (!r.sector) continue;
     if (qualifies(r)) {

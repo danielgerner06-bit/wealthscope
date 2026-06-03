@@ -305,10 +305,15 @@
   // MarketScreener-Direktlink (von Gemini hinterlegt) — genau diese Aktie, eindeutig.
   // Fällt zurück auf die MarketScreener-Suche, wenn (noch) keine Direkt-URL da ist.
   function verifyLinks(st) {
-    const url = st.msUrl
-      ? { name: 'MarketScreener öffnen', url: st.msUrl }
-      : { name: 'Auf MarketScreener suchen', url: 'https://www.marketscreener.com/search/?q=' + encodeURIComponent(st.name || st.ticker || '') };
-    return [url];
+    // Sicherheit: NICHT die von Gemini gelieferte Direkt-URL nutzen — die ID kann erfunden
+    // sein und auf eine völlig andere Firma zeigen (Name in der URL ist nur Kosmetik,
+    // MarketScreener routet über die Nummer). Stattdessen IMMER über die Suche mit dem
+    // echten Firmennamen — landet zuverlässig bei der richtigen Aktie, nie bei einer falschen.
+    const q = encodeURIComponent((st.name || st.ticker || '').replace(/\s+(SE|AG|N\.?V\.?|S\.?A\.?|Corp\.?|Inc\.?|Ltd\.?|PLC|Co\.?|KGaA|Group|Holding|Vz\.?)\b/gi, '').trim() || st.ticker || '');
+    return [
+      { name: 'Auf MarketScreener suchen', url: 'https://www.marketscreener.com/search/?q=' + q },
+      { name: 'TipRanks', url: 'https://www.tipranks.com/search?query=' + q },
+    ];
   }
   function closeStockModal() { const m = document.getElementById('stkModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
 
