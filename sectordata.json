@@ -1522,7 +1522,5 @@
     "revalidateTag": "marketscreener-2026-06",
     "fmpRetryTag": "grades-summary-fix"
   },
-  "blacklist": {
-    "ZZZTEST": "2026-09-03"
-  }
+  "blacklist": {}
 }
