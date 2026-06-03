@@ -275,6 +275,19 @@
       '<div class="stk-stat"><div class="stk-stat-val" style="color:' + hsl(t.s) + '">' + t.val + '</div>' +
       '<div class="stk-stat-lbl">' + t.lbl + '</div></div>').join('');
 
+    // rohe Analysten-Verteilung (volle Transparenz, wenn von MarketScreener gezählt)
+    const rc = st.ratingCounts;
+    const cntsEl = document.getElementById('stkModalCounts');
+    if (rc && (rc.strongBuy || rc.buy || rc.hold || rc.sell)) {
+      const parts = [];
+      if (rc.strongBuy) parts.push('<b style="color:#34d399">' + rc.strongBuy + '</b> Strong Buy');
+      if (rc.buy) parts.push('<b style="color:#86efac">' + rc.buy + '</b> Buy');
+      if (rc.hold) parts.push('<b style="color:#fbbf24">' + rc.hold + '</b> Hold');
+      if (rc.sell) parts.push('<b style="color:#f87171">' + rc.sell + '</b> Sell');
+      cntsEl.innerHTML = 'Analysten: ' + parts.join(' · ');
+      cntsEl.hidden = false;
+    } else { cntsEl.hidden = true; }
+
     // Nachschau-Links: extern auf Analysten-Seiten zum Selber-Prüfen
     document.getElementById('stkModalLinks').innerHTML =
       verifyLinks(st).map(l => '<a class="stk-link" href="' + l.url + '" target="_blank" rel="noopener">' + l.name + ' ↗</a>').join('');

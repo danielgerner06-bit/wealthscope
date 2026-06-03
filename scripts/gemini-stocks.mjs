@@ -58,14 +58,29 @@ function extractJSON(text) {
 }
 
 function normRating(o) {
-  const buyPct = Math.round(Number(o.buyPct ?? o.buy_percent ?? o.kaufProzent));
-  // Outperform = Strong-Buy-Anteil. Ist Teil der Kaufempfehlung (Buy + Strong Buy), wird
-  // also IMMER mitermittelt, wenn buyPct bekannt ist. 0 ist eine echte, gültige Angabe
-  // (alle "Buy", keiner "Strong Buy") -> NICHT als unbekannt behandeln.
-  const rawOutp = o.outperformPct ?? o.outperform_percent ?? o.outperformProzent;
-  const outpNum = Math.round(Number(rawOutp));
-  const outperformPct = (rawOutp == null || !isFinite(outpNum)) ? null : outpNum;
-  const analysts = Number(o.analysts ?? o.analystCount ?? o.anzahlAnalysten) || null;
+  // BEVORZUGT: rohe Analysten-Zähler -> WIR rechnen die Prozente (Gemini kann nicht "100" raten).
+  const cnt = k => { const v = Number(o[k]); return isFinite(v) && v >= 0 ? Math.round(v) : null; };
+  const sb = cnt('strongBuy') ?? cnt('strong_buy'); const by = cnt('buy');
+  const hd = cnt('hold'); const sl = (cnt('sell') ?? 0) + (cnt('strongSell') ?? cnt('strong_sell') ?? 0);
+  let buyPct, outperformPct, analysts;
+  const haveCounts = [sb, by, hd].some(x => x != null);
+  if (haveCounts) {
+    const SB = sb ?? 0, B = by ?? 0, H = hd ?? 0, S = sl ?? 0;
+    const total = SB + B + H + S;
+    if (total > 0) {
+      buyPct = Math.round(((SB + B) / total) * 100);
+      outperformPct = Math.round((SB / total) * 100);
+      analysts = total;
+    }
+  }
+  // FALLBACK (Altformat): fertige Prozente, falls keine Zähler geliefert wurden.
+  if (buyPct == null) {
+    buyPct = Math.round(Number(o.buyPct ?? o.buy_percent ?? o.kaufProzent));
+    const rawOutp = o.outperformPct ?? o.outperform_percent ?? o.outperformProzent;
+    const outpNum = Math.round(Number(rawOutp));
+    outperformPct = (rawOutp == null || !isFinite(outpNum)) ? null : outpNum;
+    analysts = Number(o.analysts ?? o.analystCount ?? o.anzahlAnalysten) || null;
+  }
   let upside = (o.upside != null && isFinite(Number(o.upside))) ? Math.round(Number(o.upside)) : null;
   // Plausibilität: unrealistische Kursziele (oft veraltete/falsche Websuche-Treffer) verwerfen.
   if (upside != null && (upside < -50 || upside > 120)) upside = null;
@@ -75,7 +90,9 @@ function normRating(o) {
   if (!SECTOR_IDS.includes(sector)) sector = sectorForFinnhub(o.industry || o.branche || sector) || null;
   // Yahoo-Symbol für die Kursabfrage (z. B. KTN.DE, FRA.DE); fällt sonst auf Ticker zurück.
   const yahoo = (o.yahoo || o.yahooSymbol || '').toString().trim().toUpperCase() || null;
-  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo };
+  // rohe Zähler zur Transparenz im Detail-Popup mitgeben (wenn von MarketScreener)
+  const counts = haveCounts ? { strongBuy: sb ?? 0, buy: by ?? 0, hold: hd ?? 0, sell: sl ?? 0 } : null;
+  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts };
 }
 
 /* (A) Kandidaten prüfen ------------------------------------------------ */
@@ -90,19 +107,22 @@ gib sie NICHT aus (lieber weglassen als aus einer anderen Quelle raten).
 
 Prüfe GENAU diese Aktien: ${names.map(n => '"' + n + '"').join(', ')}.
 
-Lies bei MarketScreener die ANZAHL der Analysten je Stufe ab (Strong Buy / Outperform /
-Buy, Hold, Underperform, Sell) und RECHNE daraus:
+WICHTIG: Lies bei MarketScreener die ANZAHL der Analysten je Empfehlungsstufe AB und gib
+exakt diese ZÄHLER zurück — NICHT selbst Prozente rechnen (das machen wir). Beispiel: stehen
+dort 4 "Buy" und 1 "Hold", dann strongBuy:0, buy:4, hold:1.
 - ticker (Börsenkürzel), name, land
-- analysts: Gesamtzahl der Analysten in der Verteilung
-- buyPct: round( (Strong-Buy + Buy) / Gesamt * 100 ) — Anteil aller Kauf-Empfehlungen
-- outperformPct: round( Strong-Buy / Gesamt * 100 ) — Anteil NUR der höchsten Stufe (Strong Buy/Outperform). 0 ist gültig.
+- strongBuy: Anzahl "Strong Buy"/"Outperform" (höchste Stufe)
+- buy: Anzahl "Buy"/"Accumulate"/"Add"
+- hold: Anzahl "Hold"/"Neutral"
+- sell: Anzahl "Sell"/"Reduce"/"Underperform"/"Strong Sell"
 - sector: GENAU eine dieser IDs anhand der Branche: ${SECTOR_LIST}
 - upside: Kursziel-Potenzial in % falls auffindbar, sonst null
 - pe: aktuelles KGV (Kurs-Gewinn-Verhältnis) als Zahl; bei Verlust null
 - yahoo: das Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "FRA.DE", "NVDA"), für Kursabfragen
 - source: "marketscreener" + ggf. Datum
 
-Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, die du sicher gefunden hast. Aktien ohne auffindbare Analystendaten weglassen. Kein Text außerhalb des JSON.`;
+Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, deren Analysten-Verteilung du bei
+MarketScreener sicher gefunden hast. Ohne klare Zähler weglassen. Kein Text außerhalb des JSON.`;
 
   const { text, sources } = await groundedJSON(key, prompt);
   const arr = extractJSON(text);
@@ -118,7 +138,7 @@ Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, die du sicher gefunden hast
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe,
+        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe, ratingCounts: r.ratingCounts,
         via: 'gemini', source: o.source || sources[0] || 'web',
         seen: new Date().toISOString().slice(0, 10),
       });
@@ -145,16 +165,17 @@ Kriterium: buyPct (Buy + Strong Buy) >= ${MIN_BUY_PCT} (Prozent aller Empfehlung
 
 Schlage NUR Aktien vor, die NICHT in dieser Liste bereits bekannter Werte stehen: ${known || '(noch keine)'}.
 
-Lies bei MarketScreener die ANZAHL Analysten je Stufe ab und rechne:
+Lies bei MarketScreener die ANZAHL Analysten je Stufe AB und gib die ZÄHLER zurück (NICHT selbst
+Prozente rechnen — das machen wir). Beispiel: 4 "Buy" + 1 "Hold" -> strongBuy:0, buy:4, hold:1.
 - ticker, name, land
-- analysts = Gesamtzahl; buyPct = round((StrongBuy+Buy)/Gesamt*100); outperformPct = round(StrongBuy/Gesamt*100), 0 ist gültig
+- strongBuy / buy / hold / sell = Anzahl Analysten je Stufe (Strong Buy=höchste; sell deckt Sell/Underperform/Strong Sell ab)
 - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
 - upside (% oder null)
 - pe: aktuelles KGV als Zahl; bei Verlust null
 - yahoo: Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "NVDA")
-- source: kurze Quellenangabe
+- source: "marketscreener"
 
-Gib NUR ein JSON-Array mit bis zu 10 solcher Aktien zurück. Kein Text außerhalb des JSON.`;
+Gib NUR ein JSON-Array mit bis zu 10 Aktien zurück, deren Verteilung du bei MarketScreener sicher gefunden hast. Kein Text außerhalb des JSON.`;
 
   const { text, sources } = await groundedJSON(key, prompt);
   const arr = extractJSON(text);
@@ -170,7 +191,7 @@ Gib NUR ein JSON-Array mit bis zu 10 solcher Aktien zurück. Kein Text außerhal
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe,
+        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe, ratingCounts: r.ratingCounts,
         via: 'gemini-discover', source: o.source || sources[0] || 'web',
         seen: new Date().toISOString().slice(0, 10),
       });
