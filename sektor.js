@@ -215,7 +215,7 @@
       const metric = stockMetric(st);
       const meta = [];
       if (st.buyPct != null) meta.push('Kauf ' + st.buyPct + '%');
-      if (st.outperformPct != null) meta.push('Outp. ' + st.outperformPct + '%');
+      if (st.outperformPct != null) meta.push('S.Buy ' + st.outperformPct + '%');
       if (st.analysts != null) meta.push(st.analysts + ' Analyst' + (st.analysts === 1 ? '' : 'en'));
       if (st.div != null && st.div > 0) meta.push('Div ' + st.div + '%');
       row.innerHTML =

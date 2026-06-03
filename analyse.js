@@ -12,7 +12,7 @@
   // passt zur positionsbasierten Balken-/Monatslogik auch bei einer evtl. Lücke)
   const monthsOf = s => { const p = s.perf; if (!Array.isArray(p)) return 0; for (let i = p.length - 1; i >= 0; i--) if (p[i] != null) return i + 1; return 0; };
   const FACTORS = [
-    { key: 'pe', label: 'KGV' }, { key: 'outperformPct', label: 'Outperform' },
+    { key: 'pe', label: 'KGV' }, { key: 'outperformPct', label: 'Strong Buy' },
     { key: 'upside', label: 'Kursziel' },
     { key: 'div', label: 'Dividende' }, { key: 'analysts', label: 'Analysten' },
     { key: 'perf1mBefore', label: '1M vor Aufnahme' },
