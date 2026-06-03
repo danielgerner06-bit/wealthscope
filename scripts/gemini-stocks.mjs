@@ -15,7 +15,7 @@ const SECTOR_LIST = SECTOR_IDS.join(', ');
 
 // Aufnahmekriterium: Kaufempfehlungs-Anteil (Buy + Strong Buy) = 100 %.
 export const MIN_BUY_PCT = Number(process.env.MIN_BUY_PCT || 100);
-const qualifies = r => isFinite(r.buyPct) && r.buyPct >= MIN_BUY_PCT;
+const qualifies = r => !r.countsBad && isFinite(r.buyPct) && r.buyPct >= MIN_BUY_PCT;
 
 async function groundedJSON(key, prompt) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${key}`;
@@ -67,12 +67,18 @@ function normRating(o) {
   const hold = cnt('hold');
   const under = cnt('underperform') ?? 0;
   const sell = (cnt('sell') ?? 0) + (cnt('strongSell') ?? cnt('strong_sell') ?? 0);
-  let buyPct, outperformPct, analysts;
+  let buyPct, outperformPct, analysts, countsBad = false;
   const haveCounts = [buy, outp, hold].some(x => x != null);
   if (haveCounts) {
     const BUY = buy ?? 0, OUTP = outp ?? 0, H = hold ?? 0, U = under ?? 0, S = sell ?? 0;
     const total = BUY + OUTP + H + U + S;
-    if (total > 0) {
+    // Konsistenz-Check: Geminis separat genannte Analystenzahl MUSS zur Stufen-Summe passen.
+    // Weicht sie stark ab (z. B. analysts:17 aber Counts ergeben 3), hat Gemini die Tabelle
+    // falsch abgelesen -> Daten verwerfen statt Müll speichern.
+    const declared = Number(o.analysts ?? o.analystCount ?? o.anzahlAnalysten);
+    if (isFinite(declared) && declared > 0 && Math.abs(declared - total) > Math.max(1, total * 0.15)) {
+      countsBad = true;
+    } else if (total > 0) {
       buyPct = Math.round(((BUY + OUTP) / total) * 100);   // Kaufempfehlung = Buy + Outperform
       outperformPct = Math.round((OUTP / total) * 100);    // nur die Outperform-Stufe
       analysts = total;
@@ -101,7 +107,7 @@ function normRating(o) {
   let msUrl = (o.marketScreenerUrl || o.marketscreenerUrl || o.msUrl || '').toString().trim();
   if (!/^https?:\/\/(www\.)?marketscreener\.com\/quote\/stock\//i.test(msUrl)) msUrl = null;
   else if (!/consensus\/?$/i.test(msUrl)) msUrl = msUrl.replace(/\/?$/, '/').replace(/\/+$/, '/') + 'consensus/';
-  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts, msUrl };
+  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts, msUrl, countsBad };
 }
 
 /* (A) Kandidaten prüfen ------------------------------------------------ */
@@ -117,10 +123,14 @@ GENAU von dieser Seite. Findest du die Aktie dort nicht eindeutig -> NICHT ausge
 Prüfe GENAU diese Aktien: ${names.map(n => '"' + n + '"').join(', ')}.
 
 MarketScreener-Skala (best zu schlecht): Buy, Outperform, Hold, Underperform, Sell. Lies die
-ANZAHL der Analysten je Stufe AB und gib exakt diese ZÄHLER zurück — NICHT selbst Prozente
-rechnen (das machen wir). Beispiel: 4 "Buy" + 1 "Hold" -> buy:4, hold:1.
+ANZAHL der Analysten JE Stufe AB und gib diese ZÄHLER zurück — NICHT selbst Prozente rechnen.
+ENTSCHEIDEND: Die SUMME aller Stufen-Zähler MUSS exakt der Gesamtzahl der Analysten entsprechen.
+Verteile ALLE Analysten auf die richtigen Stufen — packe nicht einfach alle in eine Stufe.
+Beispiel: 17 Analysten gesamt, davon 9 Buy, 5 Outperform, 3 Hold -> buy:9, outperform:5, hold:3
+(Summe 17). Wenn du die genaue Verteilung nicht sicher ablesen kannst -> Aktie WEGLASSEN.
 - ticker (Börsenkürzel), name, land
 - marketScreenerUrl: die VOLLSTÄNDIGE URL der Consensus-Seite (…/quote/stock/…/consensus/)
+- analysts: Gesamtzahl der Analysten (muss = Summe der Stufen sein)
 - buy: Anzahl "Buy" (höchste Stufe)
 - outperform: Anzahl "Outperform" (zweithöchste)
 - hold: Anzahl "Hold"
@@ -178,9 +188,11 @@ Schlage NUR Aktien vor, die NICHT in dieser Liste bereits bekannter Werte stehen
 Prüfe jede Aktie auf ihrer EXAKTEN MarketScreener-Consensus-Seite
 (https://www.marketscreener.com/quote/stock/FIRMENNAME-ID/consensus/) und lies die Verteilung
 GENAU dort ab. MarketScreener-Skala (best->schlecht): Buy, Outperform, Hold, Underperform, Sell.
-Gib die ZÄHLER zurück (NICHT selbst Prozente rechnen). Beispiel: 4 "Buy" + 1 "Hold" -> buy:4, hold:1.
+Gib die ZÄHLER zurück (NICHT selbst Prozente rechnen). Die SUMME der Stufen MUSS = Gesamtzahl
+Analysten sein; verteile ALLE Analysten (nicht alle in eine Stufe). Unsicher -> weglassen.
 - ticker, name, land
 - marketScreenerUrl: vollständige URL der Consensus-Seite
+- analysts: Gesamtzahl (= Summe der Stufen)
 - buy / outperform / hold / underperform / sell = Anzahl Analysten je Stufe (Buy=höchste)
 - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
 - upside (% oder null)
