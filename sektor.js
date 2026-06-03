@@ -457,7 +457,9 @@
     // jede News: farbiger Trenner + fetter Zeitstempel + Schlagzeile
     const itemHTML = it => {
       if (typeof it === 'string') return '<b class="nw-sep">›</b><span class="nw-h">' + esc(it) + '</span>';
-      return '<b class="nw-sep">›</b>' + (it.stamp ? '<b class="nw-t">' + esc(it.stamp) + '</b>' : '') +
+      // Sicherheitsnetz: evtl. noch gespeicherte " HH:MM"-Uhrzeit aus dem Datum entfernen
+      const stamp = (it.stamp || '').replace(/\s+\d{1,2}:\d{2}$/, '');
+      return '<b class="nw-sep">›</b>' + (stamp ? '<b class="nw-t">' + esc(stamp) + '</b>' : '') +
              '<span class="nw-h">' + esc(it.text) + '</span>';
     };
     const unitHTML = items.map(itemHTML).join('');
