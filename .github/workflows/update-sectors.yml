@@ -2,14 +2,12 @@ name: Sektordaten aktualisieren
 
 on:
   schedule:
-    # GitHub stellt geplante Läufe nur "best effort" zu und überspringt/verzögert
-    # gerade den :00-Slot bei Last. Daher 3 Slots pro Stunde (NICHT :00) -> fast
-    # immer kommt mind. einer durch = stündlich frische Yahoo-Kurse.
-    # Gemini + Finnhub laufen trotzdem nur alle ~6h (Gating per scan.heavyAt im Skript),
-    # ein zwischenzeitlich schon gelaufener "leichter" Lauf wird per heavyAt erkannt.
-    - cron: '11 * * * *'
-    - cron: '31 * * * *'
-    - cron: '51 * * * *'
+    # Yahoo-Kurse macht jetzt der Cloudflare-Worker STÜNDLICH (pünktlich). Diese Action
+    # ist nur noch für Gemini (News/Discovery/Lage) + Finnhub-Scan zuständig — die laufen
+    # ohnehin nur alle ~6h (heavyAt-Gating). Daher 4 Slots/Tag; GitHubs Cron-Jitter
+    # (1-2h Verspätung) ist beim 6h-Takt unkritisch. Mehrere Zeiten = höhere Trefferchance.
+    - cron: '13 1,7,13,19 * * *'
+    - cron: '43 2,8,14,20 * * *'
   workflow_dispatch:         # manueller Start möglich
     inputs:
       force_heavy:
