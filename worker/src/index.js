@@ -59,9 +59,14 @@ async function run(env, force = false) {
   let budget = num(env, 'SUBREQ_CAP', 33) - (SECTORS.length + REGIONS.length);
   const take = (want, perItem) => { const n = Math.max(0, Math.min(want, Math.floor(budget / perItem))); budget -= n * perItem; return n; };
 
-  // 1) Sektor- & Regionen-Performance (immer, schnell) — das ist das stündlich Frische
-  try { data.bars30 = await fetchSectorPerformance(SECTORS); } catch (e) { console.error('Sektor-Perf:', e.message); }
-  try { data.bars30Region = await fetchRegionPerformance(REGIONS); } catch (e) { console.error('Region-Perf:', e.message); }
+  // 1) Sektor- & Regionen-Performance (immer, schnell) — das ist das stündlich Frische.
+  // SCHUTZ: nur übernehmen, wenn die Abfrage echte Werte lieferte (nicht alles 0 = Yahoo-Block).
+  // Sonst alten Stand behalten, statt gute Daten mit Nullen zu überschreiben.
+  const allZero = arr => Array.isArray(arr) && arr.length > 0 && arr.every(b => !b.perf && !b.avg30 && !b.perf6m);
+  try { const b = await fetchSectorPerformance(SECTORS); if (!allZero(b)) data.bars30 = b; else console.error('Sektor-Perf: nur Nullen (Yahoo-Block?) -> alten Stand behalten'); }
+  catch (e) { console.error('Sektor-Perf:', e.message); }
+  try { const b = await fetchRegionPerformance(REGIONS); if (!allZero(b)) data.bars30Region = b; else console.error('Region-Perf: nur Nullen -> alten Stand behalten'); }
+  catch (e) { console.error('Region-Perf:', e.message); }
 
   // 2) 6M-Performance je Aktie (rollierend, Budget)
   const needPerf = topStocks.filter(s => s.perf6m == null || !s.perf6mAt || (nowMs - Date.parse(s.perf6mAt)) > STALE)

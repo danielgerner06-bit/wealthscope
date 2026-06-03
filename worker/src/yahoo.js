@@ -24,9 +24,13 @@ function pctBack(c, win) {
   return +(((last - ref) / ref) * 100).toFixed(2);
 }
 
+// Yahoo blockt Requests OHNE User-Agent (429 "Too Many Requests"). Cloudflare erlaubt
+// das Setzen des UA bei fetch -> zwingend nötig, sonst kommen nur Nullen zurück.
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
+
 async function closes(symbol, range = '1y') {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=${range}&interval=1d`;
-  const res = await fetch(url);
+  const res = await fetch(url, { headers: { 'User-Agent': UA } });
   if (!res.ok) throw new Error('Yahoo HTTP ' + res.status + ' (' + symbol + ')');
   const j = await res.json();
   const r = j?.chart?.result?.[0];
@@ -38,7 +42,7 @@ async function closes(symbol, range = '1y') {
 async function history(symbol, fromMs, toMs) {
   const p1 = Math.floor(fromMs / 1000), p2 = Math.floor(toMs / 1000);
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?period1=${p1}&period2=${p2}&interval=1d`;
-  const res = await fetch(url);
+  const res = await fetch(url, { headers: { 'User-Agent': UA } });
   if (!res.ok) throw new Error('Yahoo HTTP ' + res.status);
   const r = (await res.json())?.chart?.result?.[0];
   const ts = r?.timestamp || [];
@@ -73,9 +77,9 @@ export async function perfBetween(symbol, fromMs, toMs) {
 let _cookie = null, _crumb = null;
 async function ensureCrumb() {
   if (_crumb) return;
-  const r1 = await fetch('https://fc.yahoo.com/');
+  const r1 = await fetch('https://fc.yahoo.com/', { headers: { 'User-Agent': UA } });
   _cookie = (r1.headers.get('set-cookie') || '').split(';')[0] || '';
-  const r2 = await fetch('https://query1.finance.yahoo.com/v1/test/getcrumb', { headers: { Cookie: _cookie } });
+  const r2 = await fetch('https://query1.finance.yahoo.com/v1/test/getcrumb', { headers: { 'User-Agent': UA, Cookie: _cookie } });
   const c = await r2.text();
   if (c && !c.startsWith('{') && c.length < 40) _crumb = c;
   else throw new Error('kein Yahoo-Crumb');
@@ -86,7 +90,7 @@ export async function enrichStock(symbol) {
     await ensureCrumb();
     const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(symbol)}`
       + `?modules=financialData,summaryDetail,price,defaultKeyStatistics&crumb=${encodeURIComponent(_crumb)}`;
-    const res = await fetch(url, { headers: { Cookie: _cookie } });
+    const res = await fetch(url, { headers: { 'User-Agent': UA, Cookie: _cookie } });
     if (res.status === 401 || res.status === 403) { _crumb = null; throw new Error('crumb abgelaufen'); }
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const r = (await res.json())?.quoteSummary?.result?.[0];
