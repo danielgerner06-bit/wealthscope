@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T18:00:31.525Z",
+  "updatedAt": "2026-06-03T18:42:11.109Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 21.38,
+      "perf": 21.47,
       "avg30": 3.77,
-      "perf6m": 37.29
+      "perf6m": 37.39
     },
     {
       "id": "comm",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 1.85,
+      "perf": 1.82,
       "avg30": 0.87,
-      "perf6m": -6.22
+      "perf6m": -6.25
     },
     {
       "id": "finance",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -2.69,
+      "perf": -2.64,
       "avg30": 0.41,
-      "perf6m": -9.94
+      "perf6m": -9.89
     },
     {
       "id": "em",
@@ -263,9 +263,9 @@
     },
     {
       "id": "apac",
-      "perf": 10.11,
+      "perf": 10.14,
       "avg30": 3.26,
-      "perf6m": 29.52
+      "perf6m": 29.55
     },
     {
       "id": "india",
@@ -303,9 +303,10 @@
       "eps": null,
       "peAt": "2026-06-02",
       "enrichAt": "2026-06-03",
-      "miss": 1,
+      "miss": 2,
       "perf1mBefore": null,
-      "div": null
+      "div": null,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "AOF",
@@ -325,9 +326,10 @@
       "pe": 28.4,
       "eps": 3.04,
       "enrichAt": "2026-06-02",
-      "miss": 1,
+      "miss": 2,
       "div": 2.75,
-      "perf1mBefore": 4.24
+      "perf1mBefore": 4.24,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "DEF",
@@ -347,9 +349,10 @@
       "perf6m": -13.67,
       "perf6mAt": "2026-06-01",
       "enrichAt": "2026-06-02",
-      "miss": 1,
+      "miss": 2,
       "div": 2.57,
-      "perf1mBefore": -2.85
+      "perf1mBefore": -2.85,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "MUM",
@@ -369,9 +372,10 @@
       "pe": 20.5,
       "eps": 1.91,
       "enrichAt": "2026-06-02",
-      "miss": 1,
+      "miss": 2,
       "div": 5.13,
-      "perf1mBefore": -5.93
+      "perf1mBefore": -5.93,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "FRAMERY",
@@ -391,10 +395,11 @@
       "perf6m": -6.05,
       "perf6mAt": "2026-06-01",
       "enrichAt": "2026-06-02",
-      "miss": 1,
+      "miss": 2,
       "div": 2.88,
       "perf1mBefore": 11.4,
-      "peGemini": 30.9
+      "peGemini": 30.9,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "SONY",
@@ -416,7 +421,29 @@
       "eps": 1.08,
       "div": 0.7,
       "enrichAt": "2026-06-03",
-      "miss": 1
+      "miss": 2,
+      "recheckAt": "2026-06-03"
+    },
+    {
+      "ticker": "CRH",
+      "name": "CRH plc",
+      "sector": "materials",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 11,
+      "upside": 18,
+      "yahoo": "CRH.L",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-03",
+      "perf6m": -6.33,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": null,
+      "pe": 21.6,
+      "eps": 4.07,
+      "div": 1.27,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "IXX",
@@ -436,9 +463,10 @@
       "pe": 35,
       "eps": 1.47,
       "enrichAt": "2026-06-02",
-      "miss": 1,
+      "miss": 2,
       "div": 1.57,
-      "perf1mBefore": -4.47
+      "perf1mBefore": -4.47,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "SMI",
@@ -453,11 +481,12 @@
       "via": "gemini-discover",
       "source": "Finanznachrichten.de",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 2,
       "perf1mBefore": null,
       "pe": null,
       "div": null,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "KTN",
@@ -478,9 +507,10 @@
       "enrichAt": "2026-06-02",
       "yahoo": "KTN.VI",
       "peGemini": null,
-      "miss": 1,
+      "miss": 2,
       "div": 2.55,
-      "perf1mBefore": 3.74
+      "perf1mBefore": 3.74,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "HNR1",
@@ -502,7 +532,8 @@
       "div": 5.5,
       "enrichAt": "2026-06-03",
       "perf1mBefore": -11.89,
-      "miss": 1
+      "miss": 2,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "TLN",
@@ -522,10 +553,53 @@
       "perf6m": 3.68,
       "perf6mAt": "2026-06-01",
       "enrichAt": "2026-06-02",
-      "miss": 1,
+      "miss": 2,
       "div": 0,
       "perf1mBefore": -0.85,
-      "peGemini": null
+      "peGemini": null,
+      "recheckAt": "2026-06-03"
+    },
+    {
+      "ticker": "VOW3",
+      "name": "Volkswagen AG Vz",
+      "sector": "cons_cycl",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 22,
+      "upside": 25,
+      "yahoo": "VOW3.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-03",
+      "perf6m": -14.12,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": 6.89,
+      "pe": 7.3,
+      "eps": 12.21,
+      "div": 5.78,
+      "enrichAt": "2026-06-03"
+    },
+    {
+      "ticker": "HEI",
+      "name": "Heidelberg Materials AG",
+      "sector": "materials",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 19,
+      "upside": 27,
+      "yahoo": "HEI.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-03",
+      "perf6m": -15.76,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": -2.94,
+      "pe": 15.9,
+      "eps": 11.16,
+      "div": 1.96,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "VBK",
@@ -545,9 +619,10 @@
       "pe": null,
       "eps": -1.18,
       "enrichAt": "2026-06-02",
-      "miss": 1,
+      "miss": 2,
       "div": 1.07,
-      "perf1mBefore": 3.49
+      "perf1mBefore": 3.49,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "BNP",
@@ -568,7 +643,9 @@
       "pe": 8.8,
       "eps": 10.6,
       "div": 10.54,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03",
+      "miss": 1
     },
     {
       "ticker": "AXA",
@@ -583,14 +660,15 @@
       "via": "gemini-discover",
       "source": "TipRanks",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 2,
       "perf6m": 2.65,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": -2.2,
       "pe": 11.4,
       "eps": 3.42,
       "div": 5.83,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "DB1",
@@ -605,14 +683,15 @@
       "via": "gemini-discover",
       "source": "TipRanks",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 2,
       "perf6m": 8.91,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": -7.68,
       "pe": 21.5,
       "eps": 11.21,
       "div": 1.73,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "ADEA",
@@ -632,22 +711,23 @@
       "perf6m": 117.95,
       "perf6mAt": "2026-06-01",
       "enrichAt": "2026-06-02",
-      "miss": 1,
+      "miss": 2,
       "div": 0.7,
       "perf1mBefore": -8.86,
-      "peGemini": 24.8
+      "peGemini": 24.8,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "MOD",
       "name": "Modine Manufacturing Company",
       "sector": "industrial",
       "buyPct": 100,
-      "outperformPct": null,
+      "outperformPct": 0,
       "analysts": 8,
-      "upside": 15,
+      "upside": 18,
       "yahoo": "MOD",
       "via": "gemini",
-      "source": "Investing.com, MarketScreener",
+      "source": "marketscreener",
       "seen": "2026-06-03",
       "pe": 128.2,
       "eps": 2.25,
@@ -655,53 +735,100 @@
       "perf6m": 74.42,
       "perf6mAt": "2026-06-01",
       "enrichAt": "2026-06-02",
-      "miss": 1,
+      "miss": 0,
       "div": 0,
-      "peGemini": 159.9,
-      "perf1mBefore": 11.57
+      "peGemini": null,
+      "perf1mBefore": 11.57,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "YSN",
-      "name": "SECunet Security Networks AG",
+      "name": "SECUNET SECURITY NETWORKS AG",
       "sector": "software",
       "buyPct": 100,
-      "outperformPct": null,
+      "outperformPct": 0,
       "analysts": 3,
       "upside": 14,
       "yahoo": "YSN.DE",
-      "peGemini": 29.1,
+      "peGemini": null,
       "via": "gemini",
-      "source": "stockopedia.com, marketscreener.com",
-      "seen": "2026-06-02",
+      "source": "marketscreener",
+      "seen": "2026-06-03",
       "perf6m": 13.54,
       "perf6mAt": "2026-06-02",
       "pe": 40.7,
       "eps": 5.16,
       "enrichAt": "2026-06-02",
-      "miss": 1,
+      "miss": 0,
       "div": 1.26,
-      "perf1mBefore": 12.42
+      "perf1mBefore": 12.42,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "RWE",
       "name": "RWE AG",
       "sector": "utilities",
       "buyPct": 100,
-      "outperformPct": 30,
+      "outperformPct": 0,
       "analysts": 19,
-      "upside": 10,
+      "upside": 14,
       "yahoo": "RWE.DE",
-      "peGemini": 18.9,
-      "via": "gemini-discover",
-      "source": "TipRanks",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 0,
       "perf6m": 26.73,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": -6.85,
       "pe": 17.5,
       "eps": 3.26,
       "div": 2.18,
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
+    },
+    {
+      "ticker": "EON",
+      "name": "E.ON SE",
+      "sector": "utilities",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 18,
+      "upside": 11,
+      "yahoo": "EOAN.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-03",
+      "miss": 0,
+      "perf6m": 15.53,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": -2.26,
+      "pe": 13.8,
+      "eps": 1.31,
+      "div": 3.2,
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
+    },
+    {
+      "ticker": "EOAN",
+      "name": "E.ON SE",
+      "sector": "utilities",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 18,
+      "upside": 9,
+      "yahoo": "EOAN.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-03",
+      "perf6m": 15.53,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": -2.26,
+      "pe": 13.8,
+      "eps": 1.31,
+      "div": 3.2,
       "enrichAt": "2026-06-03"
     },
     {
@@ -717,58 +844,38 @@
       "via": "gemini-discover",
       "source": "TipRanks",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 2,
       "perf6m": 15.29,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": -0.61,
       "pe": 12.3,
       "eps": 6.62,
       "div": 2.25,
-      "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "EON",
-      "name": "E.ON SE",
-      "sector": "utilities",
-      "buyPct": 100,
-      "outperformPct": 35,
-      "analysts": 18,
-      "upside": 9,
-      "yahoo": "EOAN.DE",
-      "peGemini": 15.8,
-      "via": "gemini-discover",
-      "source": "TipRanks",
-      "seen": "2026-06-03",
-      "miss": 1,
-      "perf6m": 15.53,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": -2.26,
-      "pe": 13.8,
-      "eps": 1.31,
-      "div": 3.2,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "ENEL",
       "name": "Enel S.p.A.",
       "sector": "utilities",
       "buyPct": 100,
-      "outperformPct": 39,
-      "analysts": 22,
-      "upside": 8,
+      "outperformPct": 0,
+      "analysts": 23,
+      "upside": 7,
       "yahoo": "ENEL.MI",
       "peGemini": 14.2,
-      "via": "gemini-discover",
-      "source": "TipRanks",
+      "via": "gemini",
+      "source": "marketscreener",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 0,
       "perf6m": 8.37,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": -1.87,
       "pe": 24.9,
       "eps": 0.38,
       "div": 5.43,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "ING",
@@ -783,27 +890,28 @@
       "via": "gemini-discover",
       "source": "TipRanks",
       "seen": "2026-06-03",
-      "miss": 1,
+      "miss": 2,
       "perf6m": 17.05,
       "perf6mAt": "2026-06-03",
       "perf1mBefore": 8.96,
       "pe": 12,
       "eps": 2.19,
       "div": 4.06,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "UBS",
       "name": "UBS Group AG",
       "sector": "finance",
       "buyPct": 100,
-      "outperformPct": 24,
+      "outperformPct": 0,
       "analysts": 17,
-      "upside": 4,
+      "upside": 5,
       "yahoo": "UBSG.SW",
-      "peGemini": 12.3,
-      "via": "gemini-discover",
-      "source": "TipRanks",
+      "peGemini": 14,
+      "via": "gemini",
+      "source": "marketscreener",
       "seen": "2026-06-03",
       "perf6m": 20.01,
       "perf6mAt": "2026-06-03",
@@ -811,7 +919,9 @@
       "pe": 17.2,
       "eps": 2.18,
       "div": 2.27,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "miss": 0,
+      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "EVO",
@@ -941,6 +1051,27 @@
       "enrichAt": "2026-06-03",
       "perf1mBefore": null,
       "miss": 1
+    },
+    {
+      "ticker": "DTG",
+      "name": "Daimler Truck Holding AG",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 17,
+      "upside": 9,
+      "yahoo": "DTG.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-03",
+      "perf6m": 11.88,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": -1.61,
+      "pe": 27,
+      "eps": 1.57,
+      "div": 4.51,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "WCH",
@@ -1100,28 +1231,28 @@
   "news": {
     "items": [
       {
-        "text": "EU gibt 16 Milliarden Euro für Ungarn frei.",
+        "text": "US-Präsident erlässt Anordnung zur Weitergabe von KI-Modellen",
         "stamp": "03.06.26"
       },
       {
-        "text": "Iran und USA greifen sich in Golfregion an.",
-        "stamp": "03.06.26"
+        "text": "USA legen Berufung gegen Zollerstattungsentscheidung ein",
+        "stamp": "02.06.26"
       },
       {
-        "text": "Rheinmetall erhält Großauftrag aus Rumänien über 5,7 Mrd. Euro.",
-        "stamp": "03.06.26"
+        "text": "Kanada und Mexiko drängen auf USMCA-Verlängerung",
+        "stamp": "02.06.26"
       },
       {
-        "text": "US-Zölle gegen Europa wegen Zwangsarbeit geplant.",
-        "stamp": "03.06.26"
+        "text": "Globale Inflationsprognose für ASEAN+3 angehoben",
+        "stamp": "02.06.26"
       },
       {
-        "text": "Inflation steigt spürbar an – Kraftstoffpreise stark erhöht.",
-        "stamp": "03.06.26"
+        "text": "Samsung Electronics steigt weltweit in Marktkapitalisierung auf",
+        "stamp": "02.06.26"
       },
       {
-        "text": "Marvell Technology Aktie vor Aufnahme in S&P 500.",
-        "stamp": "03.06.26"
+        "text": "EU plant Stärkung der heimischen Chip-Industrie",
+        "stamp": "02.06.26"
       }
     ],
     "date": "2026-06-03"
@@ -1129,8 +1260,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 1967,
-    "candCursor": 75,
+    "lastCursor": 2267,
+    "candCursor": 83,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -1272,56 +1403,57 @@
       "WCH Service AG"
     ],
     "noteCursor": 7,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 5,
     "notesDay": "2026-06-03",
     "seenBySector": {
-      "cons_cycl": 90,
-      "cons_def": 46,
-      "materials": 47,
-      "health": 165,
-      "finance": 200,
-      "energy": 80,
-      "hardware": 45,
-      "software": 154,
-      "industrial": 62,
-      "utilities": 32,
-      "comm": 34,
-      "ai_semi": 30,
-      "realestate": 11
+      "cons_cycl": 98,
+      "cons_def": 48,
+      "materials": 48,
+      "health": 183,
+      "finance": 210,
+      "energy": 88,
+      "hardware": 53,
+      "software": 172,
+      "industrial": 70,
+      "utilities": 37,
+      "comm": 37,
+      "ai_semi": 32,
+      "realestate": 13
     },
     "pendingReject": [
-      "CRUS",
-      "CRVO",
-      "CRVS",
-      "CRWD",
-      "CRWS",
-      "CRWV",
-      "CSAI",
-      "CSBR",
-      "CSCO",
-      "CSGP",
-      "CSHR",
-      "CSIQ"
+      "DKNG",
+      "DKS",
+      "DLB",
+      "DLGI",
+      "DLHC",
+      "DLO",
+      "DLPN",
+      "DLTH",
+      "DLTR",
+      "DLX",
+      "DMAC",
+      "DMRA",
+      "DMRC",
+      "DNA"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 90,
-      "cons_def": 46,
-      "materials": 50,
-      "health": 165,
-      "finance": 207,
-      "energy": 83,
-      "hardware": 48,
-      "software": 160,
-      "industrial": 67,
-      "utilities": 36,
-      "comm": 34,
-      "ai_semi": 30,
-      "realestate": 12
+      "cons_cycl": 99,
+      "cons_def": 48,
+      "materials": 53,
+      "health": 183,
+      "finance": 217,
+      "energy": 91,
+      "hardware": 56,
+      "software": 178,
+      "industrial": 76,
+      "utilities": 42,
+      "comm": 37,
+      "ai_semi": 32,
+      "realestate": 14
     },
-    "heavyAt": "2026-06-03T17:27:57.702Z",
+    "heavyAt": "2026-06-03T18:36:13.152Z",
     "revalidateTag": "marketscreener-2026-06"
-  },
-  "yahooAt": "2026-06-03T18:00:31.525Z"
+  }
 }
