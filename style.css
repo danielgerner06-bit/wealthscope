@@ -1544,6 +1544,21 @@ html.preselect #hubScreen { display: none !important; }
 .stk-stat { background: rgba(148,163,184,0.05); border: 1px solid var(--s-border); border-radius: 11px; padding: 11px 10px; text-align: center; }
 .stk-stat-val { font-size: 1.05rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.1; }
 .stk-stat-lbl { font-size: 0.64rem; font-weight: 700; color: var(--s-faint); text-transform: uppercase; letter-spacing: 0.3px; margin-top: 4px; }
+
+/* Nachschau-Links (extern zum Selber-Prüfen) */
+.stk-links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+.stk-link { font-size: 0.72rem; font-weight: 700; padding: 6px 11px; border-radius: 8px; text-decoration: none;
+  background: rgba(129,140,248,0.12); border: 1px solid rgba(129,140,248,0.3); color: #a5b4fc; transition: all .12s; }
+.stk-link:hover { background: rgba(129,140,248,0.22); color: #c7d2fe; }
+
+/* Löschen-Leiste */
+.stk-verify { margin-top: 12px; display: flex; justify-content: center; }
+.stk-del, .stk-vunlock { font-size: 0.78rem; font-weight: 700; padding: 9px 16px; border-radius: 10px; cursor: pointer; border: 1px solid; transition: all .12s; width: 100%; font-family: inherit; }
+.stk-del { background: rgba(248,113,113,0.12); border-color: rgba(248,113,113,0.35); color: #fca5a5; }
+.stk-del:hover:not(:disabled) { background: rgba(248,113,113,0.22); color: #fecaca; }
+.stk-del:disabled { opacity: 0.6; cursor: default; }
+.stk-vunlock { background: rgba(148,163,184,0.08); border-color: var(--s-border); color: var(--s-muted); }
+.stk-vunlock:hover { color: var(--s-text); border-color: var(--s-border-hi); }
 .sek-modal-insight { position: relative; background: linear-gradient(150deg, rgba(99,102,241,0.14), rgba(168,85,247,0.08)); border: 1px solid var(--s-border); border-radius: 12px; padding: 16px 16px 14px; }
 .sek-modal-insight .sek-insight-tag { display: inline-block; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; padding: 3px 9px; border-radius: 99px; color: #c7cbff; background: rgba(129,140,248,0.18); border: 1px solid var(--s-border-hi); margin-bottom: 10px; }
 .sek-modal-insight p { color: #dde3f6; font-size: 0.92rem; line-height: 1.65; }

@@ -275,11 +275,70 @@
       '<div class="stk-stat"><div class="stk-stat-val" style="color:' + hsl(t.s) + '">' + t.val + '</div>' +
       '<div class="stk-stat-lbl">' + t.lbl + '</div></div>').join('');
 
+    // Nachschau-Links: extern auf Analysten-Seiten zum Selber-Prüfen
+    document.getElementById('stkModalLinks').innerHTML =
+      verifyLinks(st).map(l => '<a class="stk-link" href="' + l.url + '" target="_blank" rel="noopener">' + l.name + ' ↗</a>').join('');
+
+    // Lösch-Leiste (nur mit Admin-Passwort): Aktie löschen & 3 Monate sperren
+    renderDeleteBar(st);
+
     const m = document.getElementById('stkModal');
     m.hidden = false;
     requestAnimationFrame(() => m.classList.add('show'));   // Einblend-Animation
   }
+
+  // externe Nachschau-Seiten (genau diese Aktie), mehrere zur Wahl
+  function verifyLinks(st) {
+    const tk = st.ticker || '';
+    const name = encodeURIComponent(st.name || tk);
+    const ms = encodeURIComponent((st.name || tk));
+    return [
+      { name: 'MarketScreener', url: 'https://www.marketscreener.com/search/?q=' + ms },
+      { name: 'TipRanks', url: 'https://www.tipranks.com/search?query=' + name },
+      { name: 'Yahoo Finance', url: 'https://finance.yahoo.com/quote/' + encodeURIComponent(st.yahoo || tk) },
+      { name: 'getquin', url: 'https://app.getquin.com/en/search?query=' + name },
+    ];
+  }
   function closeStockModal() { const m = document.getElementById('stkModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
+
+  /* ---------- Aktie löschen + 3 Monate sperren (nur mit Admin-Passwort) ---------- */
+  let adminKey = null;          // Admin-Passwort (im Browser gemerkt) -> schaltet Löschen frei
+  try { adminKey = localStorage.getItem('wsAdminKey') || null; } catch {}
+  const DELETE_ENDPOINT = 'https://wealthscope-yahoo.daniel-gerner06.workers.dev/blacklist';
+
+  function renderDeleteBar(st) {
+    const el = document.getElementById('stkModalVerify');
+    if (adminKey) {
+      el.innerHTML = '<button class="stk-del" id="stkDelBtn">🗑 Aktie löschen & 3 Monate sperren</button>';
+      document.getElementById('stkDelBtn').onclick = () => deleteStock(st, el);
+    } else {
+      el.innerHTML = '<button class="stk-vunlock" id="stkVUnlock">Löschen freischalten</button>';
+      document.getElementById('stkVUnlock').onclick = () => {
+        const k = prompt('Admin-Passwort eingeben (zum Löschen von Aktien):');
+        if (k) { adminKey = k; try { localStorage.setItem('wsAdminKey', k); } catch {} renderDeleteBar(st); }
+      };
+    }
+  }
+
+  async function deleteStock(st, el) {
+    if (!confirm('"' + (st.name || st.ticker) + '" löschen? Wird 3 Monate nicht mehr aufgenommen.')) return;
+    const btn = document.getElementById('stkDelBtn'); if (btn) { btn.disabled = true; btn.textContent = 'lösche…'; }
+    try {
+      const res = await fetch(DELETE_ENDPOINT, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ key: adminKey, ticker: st.ticker }),
+      });
+      if (res.status === 401) { alert('Falsches Passwort.'); adminKey = null; try { localStorage.removeItem('wsAdminKey'); } catch {} renderDeleteBar(st); return; }
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      // lokal sofort entfernen (Repo zieht beim nächsten Lauf nach)
+      DATA.topStocks = (DATA.topStocks || []).filter(s => s.ticker !== st.ticker);
+      closeStockModal();
+      renderStocks();
+    } catch (e) {
+      alert('Löschen fehlgeschlagen: ' + e.message);
+      if (btn) { btn.disabled = false; btn.textContent = '🗑 Aktie löschen & 3 Monate sperren'; }
+    }
+  }
   function regionName(id) { return ({ usa: 'USA', europe: 'Europa', germany: 'Deutschland', japan: 'Japan', china: 'China', em: 'Schwellenländer', apac: 'Asien-Pazifik', india: 'Indien', latam: 'Lateinamerika', world: 'Welt' }[id]) || id || '–'; }
   // Region aus dem Yahoo-Börsensuffix ableiten (US = ohne Suffix), wenn kein region-Feld da ist
   function regionOfSym(sym) {

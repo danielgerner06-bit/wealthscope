@@ -24,16 +24,55 @@ export default {
   async scheduled(event, env, ctx) {
     ctx.waitUntil(run(env).catch(e => console.error('Worker-Lauf fehlgeschlagen:', e.message)));
   },
-  // manueller Trigger zum Testen: GET /run?key=...
   async fetch(req, env) {
     const u = new URL(req.url);
+    // CORS-Preflight für die Website
+    if (req.method === 'OPTIONS') return cors(new Response(null, { status: 204 }));
+
+    // manueller Trigger zum Testen: GET /run?key=...
     if (u.pathname === '/run' && u.searchParams.get('key') === env.RUN_KEY) {
       try { const r = await run(env, true); return Response.json({ ok: true, ...r }); }
       catch (e) { return Response.json({ ok: false, error: e.message }, { status: 500 }); }
     }
+
+    // Aktie löschen + 3 Monate sperren: POST /blacklist {key, ticker}
+    if (u.pathname === '/blacklist' && req.method === 'POST') {
+      try {
+        const body = await req.json();
+        if (body.key !== env.ADMIN_KEY) return cors(Response.json({ error: 'unauthorized' }, { status: 401 }));
+        if (!body.ticker) return cors(Response.json({ error: 'no ticker' }, { status: 400 }));
+        const r = await blacklistTicker(env, String(body.ticker));
+        return cors(Response.json({ ok: true, ...r }));
+      } catch (e) { return cors(Response.json({ ok: false, error: e.message }, { status: 500 })); }
+    }
+
     return new Response('wealthscope yahoo worker', { status: 200 });
   },
 };
+
+function cors(res) {
+  res.headers.set('Access-Control-Allow-Origin', '*');
+  res.headers.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+  res.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+  return res;
+}
+
+// Ticker aus topStocks entfernen + auf die Blacklist setzen (Sperre 3 Monate).
+async function blacklistTicker(env, ticker) {
+  const until = new Date(Date.now() + 92 * MS_DAY).toISOString().slice(0, 10);   // ~3 Monate
+  for (let i = 0; i < 3; i++) {
+    const sd = await getFile(env, 'sectordata.json');
+    const data = sd.json;
+    if (!data) throw new Error('sectordata.json fehlt');
+    data.blacklist = data.blacklist || {};
+    data.blacklist[ticker] = until;
+    data.topStocks = (data.topStocks || []).filter(s => s.ticker !== ticker);
+    data.updatedAt = new Date().toISOString();
+    try { await putFile(env, 'sectordata.json', data, sd.sha, `Aktie ${ticker} gelöscht & bis ${until} gesperrt [worker]`); return { ticker, until }; }
+    catch (e) { if (!e.conflict || i === 2) throw e; }   // bei Konflikt neu lesen & erneut
+  }
+  return { ticker, until };
+}
 
 async function run(env, force = false) {
   const nowMs = Date.now();

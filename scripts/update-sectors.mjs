@@ -60,6 +60,16 @@ const today = () => new Date().toISOString().slice(0, 10);
   const db = {};
   for (const s of (prev?.topStocks || [])) db[s.ticker] = s;
 
+  // Blacklist (vom Lösch-Button gesetzt): { TICKER: 'YYYY-MM-DD' bis wann gesperrt }.
+  // Abgelaufene Sperren entfernen; gesperrte Ticker aus der DB werfen.
+  const blacklist = prev?.blacklist || {};
+  const todayISO = today();
+  for (const [tk, until] of Object.entries(blacklist)) {
+    if (until < todayISO) delete blacklist[tk];          // Sperre abgelaufen
+    else if (db[tk]) delete db[tk];                       // noch gesperrt -> raus
+  }
+  const isBlacklisted = tk => blacklist[tk] && blacklist[tk] >= todayISO;
+
   // Einmalige Bereinigung: "Geister-Treffer" aus dem früheren breiten Finnhub-Scan
   // entfernen — 5-stellige OTC-/Pink-Sheet-Ticker (ohne Yahoo-Daten), die via=finnhub
   // sind und kein eigenes Yahoo-Symbol haben. Gemini-Funde (DE-Werte) bleiben unberührt.
@@ -248,6 +258,9 @@ const today = () => new Date().toISOString().slice(0, 10);
 
   // Top-Liste: nach Kursziel-Potenzial, dann Kauf-%. KEINE Obergrenze — alle
   // qualifizierten Treffer (> 50 % Kauf) werden angezeigt. Sortierung = beste zuerst.
+  // gesperrte Ticker (Lösch-Button, 3-Monats-Sperre) NICHT aufnehmen — auch wenn der
+  // Scan/Discovery sie zwischenzeitlich wieder gefunden hat.
+  for (const tk of Object.keys(db)) if (isBlacklisted(tk)) delete db[tk];
   let topStocks = Object.values(db)
     .sort((a, b) => (b.upside ?? -999) - (a.upside ?? -999) || (b.buyPct || 0) - (a.buyPct || 0));
 
@@ -398,6 +411,7 @@ const today = () => new Date().toISOString().slice(0, 10);
     regionNotes,
     news,
     scan,
+    blacklist,
   };
 
   fs.writeFileSync(OUT, JSON.stringify(out, null, 2));
