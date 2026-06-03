@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T14:00:31.550Z",
+  "updatedAt": "2026-06-03T15:00:31.729Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 20.94,
+      "perf": 21.45,
       "avg30": 3.77,
-      "perf6m": 36.79
+      "perf6m": 37.37
     },
     {
       "id": "comm",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 1.66,
+      "perf": 1.38,
       "avg30": 0.87,
-      "perf6m": -6.39
+      "perf6m": -6.65
     },
     {
       "id": "finance",
@@ -251,21 +251,21 @@
     },
     {
       "id": "china",
-      "perf": -2.28,
+      "perf": -2.36,
       "avg30": 0.41,
-      "perf6m": -9.55
+      "perf6m": -9.63
     },
     {
       "id": "em",
-      "perf": 9.33,
+      "perf": 9.34,
       "avg30": 3.33,
-      "perf6m": 29.11
+      "perf6m": 29.13
     },
     {
       "id": "apac",
-      "perf": 10.11,
+      "perf": 10.36,
       "avg30": 3.26,
-      "perf6m": 29.52
+      "perf6m": 29.81
     },
     {
       "id": "india",
@@ -4599,7 +4599,8 @@
       "pe": 19.2,
       "eps": 5.59,
       "div": 0,
-      "enrichAt": "2026-06-02"
+      "enrichAt": "2026-06-02",
+      "perf1mBefore": 1.68
     },
     {
       "ticker": "035750",
@@ -4618,7 +4619,8 @@
       "perf6mAt": "2026-06-03",
       "pe": null,
       "div": 0.13,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "perf1mBefore": 63.2
     },
     {
       "ticker": "INFY",
@@ -4638,7 +4640,8 @@
       "pe": 16.4,
       "eps": 0.8,
       "div": 3.96,
-      "enrichAt": "2026-06-03"
+      "enrichAt": "2026-06-03",
+      "perf1mBefore": 2.41
     },
     {
       "ticker": "UMBF",
@@ -10054,5 +10057,5 @@
     },
     "heavyAt": "2026-06-03T08:00:01.738Z"
   },
-  "yahooAt": "2026-06-03T14:00:31.550Z"
+  "yahooAt": "2026-06-03T15:00:31.729Z"
 }
