@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T19:00:31.545Z",
+  "updatedAt": "2026-06-03T19:25:56.519Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 21.35,
+      "perf": 21.39,
       "avg30": 3.77,
-      "perf6m": 37.26
+      "perf6m": 37.3
     },
     {
       "id": "comm",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 1.85,
+      "perf": 1.72,
       "avg30": 0.87,
-      "perf6m": -6.22
+      "perf6m": -6.34
     },
     {
       "id": "finance",
@@ -213,9 +213,9 @@
     },
     {
       "id": "utilities",
-      "perf": -5.69,
+      "perf": -5.82,
       "avg30": 1,
-      "perf6m": -2.43
+      "perf6m": -2.57
     },
     {
       "id": "realestate",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -2.68,
+      "perf": -2.73,
       "avg30": 0.41,
-      "perf6m": -9.93
+      "perf6m": -9.97
     },
     {
       "id": "em",
@@ -306,7 +306,8 @@
       "miss": 2,
       "perf1mBefore": null,
       "div": null,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "AOF",
@@ -329,7 +330,8 @@
       "miss": 2,
       "div": 2.75,
       "perf1mBefore": 4.24,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "DEF",
@@ -352,7 +354,8 @@
       "miss": 2,
       "div": 2.57,
       "perf1mBefore": -2.85,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "MUM",
@@ -375,7 +378,8 @@
       "miss": 2,
       "div": 5.13,
       "perf1mBefore": -5.93,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "FRAMERY",
@@ -399,7 +403,8 @@
       "div": 2.88,
       "perf1mBefore": 11.4,
       "peGemini": 30.9,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "CRH",
@@ -422,7 +427,8 @@
       "div": 1.27,
       "enrichAt": "2026-06-03",
       "miss": 0,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "IXX",
@@ -445,7 +451,8 @@
       "miss": 2,
       "div": 1.57,
       "perf1mBefore": -4.47,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "SMI",
@@ -465,7 +472,8 @@
       "pe": null,
       "div": null,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "KTN",
@@ -489,7 +497,8 @@
       "miss": 2,
       "div": 2.55,
       "perf1mBefore": 3.74,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "HNR1",
@@ -512,7 +521,8 @@
       "enrichAt": "2026-06-03",
       "perf1mBefore": -11.89,
       "miss": 2,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "HEI",
@@ -535,7 +545,8 @@
       "div": 1.96,
       "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-03",
-      "miss": 1
+      "miss": 1,
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "TLN",
@@ -560,30 +571,8 @@
       "perf1mBefore": -0.85,
       "peGemini": null,
       "recheckAt": "2026-06-03",
-      "fmpAt": "2026-06-03"
-    },
-    {
-      "ticker": "VOW3",
-      "name": "Volkswagen AG Vz",
-      "sector": "cons_cycl",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 22,
-      "upside": 25,
-      "yahoo": "VOW3.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-03",
-      "perf6m": -14.12,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 6.89,
-      "pe": 7.3,
-      "eps": 12.21,
-      "div": 5.78,
-      "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03",
-      "miss": 1
+      "fmpAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "VBK",
@@ -606,7 +595,8 @@
       "miss": 2,
       "div": 1.07,
       "perf1mBefore": 3.49,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "BNP",
@@ -629,7 +619,8 @@
       "div": 10.54,
       "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-03",
-      "miss": 1
+      "miss": 1,
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "AXA",
@@ -652,7 +643,8 @@
       "eps": 3.42,
       "div": 5.83,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "DB1",
@@ -675,7 +667,8 @@
       "eps": 11.21,
       "div": 1.73,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "ADEA",
@@ -700,7 +693,8 @@
       "perf1mBefore": -8.86,
       "peGemini": 24.8,
       "recheckAt": "2026-06-03",
-      "fmpAt": "2026-06-03"
+      "fmpAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "MOD",
@@ -725,7 +719,8 @@
       "peGemini": null,
       "perf1mBefore": 11.57,
       "recheckAt": "2026-06-03",
-      "fmpAt": "2026-06-03"
+      "fmpAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "YSN",
@@ -748,7 +743,8 @@
       "miss": 0,
       "div": 1.26,
       "perf1mBefore": 12.42,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "RWE",
@@ -771,7 +767,8 @@
       "eps": 3.26,
       "div": 2.18,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "EON",
@@ -794,7 +791,8 @@
       "eps": 1.31,
       "div": 3.2,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "EOAN",
@@ -817,7 +815,8 @@
       "div": 3.2,
       "enrichAt": "2026-06-03",
       "miss": 0,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "VNA",
@@ -841,7 +840,8 @@
       "div": 2.25,
       "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-03",
-      "fmpAt": "2026-06-03"
+      "fmpAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "DTG",
@@ -864,7 +864,8 @@
       "div": 4.51,
       "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-03",
-      "miss": 1
+      "miss": 1,
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "ENEL",
@@ -887,7 +888,8 @@
       "eps": 0.38,
       "div": 5.43,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "ING",
@@ -910,7 +912,8 @@
       "eps": 2.19,
       "div": 4.06,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "UBS",
@@ -933,7 +936,8 @@
       "div": 2.27,
       "enrichAt": "2026-06-03",
       "miss": 0,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "EVO",
@@ -956,7 +960,8 @@
       "eps": 0.34,
       "div": 5.9,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "ORSTED",
@@ -979,7 +984,8 @@
       "eps": -2.41,
       "div": 0,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "ALFA",
@@ -1002,7 +1008,8 @@
       "eps": 19.75,
       "div": 1.72,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "PVA",
@@ -1025,7 +1032,8 @@
       "eps": 0.1,
       "div": 0,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "SOW",
@@ -1045,7 +1053,8 @@
       "enrichAt": "2026-06-03",
       "perf1mBefore": null,
       "miss": 2,
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "IBE",
@@ -1068,7 +1077,8 @@
       "eps": 0.8,
       "div": 3.48,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "WCH",
@@ -1091,7 +1101,8 @@
       "div": 2.67,
       "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-03",
-      "miss": 1
+      "miss": 1,
+      "tdAt": "2026-06-03"
     },
     {
       "ticker": "WKL",
@@ -1114,7 +1125,8 @@
       "eps": -16.16,
       "div": 2.67,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03"
     }
   ],
   "sectorNotes": {
@@ -1231,20 +1243,28 @@
   "news": {
     "items": [
       {
-        "text": "EU lockert Schuldenregeln für Energiewende angesichts Krisen.",
+        "text": "Marvell Technology Aktie nach guten Zahlen und KI-Fokus stark im Plus.",
         "stamp": "03.06.26"
       },
       {
-        "text": "Tesla-Aktie unter Druck wegen US-Gesetzen und China-Beziehungen.",
-        "stamp": "03.06.26"
-      },
-      {
-        "text": "ExxonMobil warnt vor schwindenden Ölreserven und Hormus-Krise.",
+        "text": "US-Jobmärkte zeigen gemischte Signale; Fed-Chefin deutet mögliche Zinserhöhung an.",
         "stamp": "02.06.26"
       },
       {
-        "text": "KI-Boom treibt DAX, aber Konzentrationsrisiken wachsen.",
+        "text": "SpaceX-Börsengang könnte historisch groß werden, ETF-Regeln angepasst.",
         "stamp": "02.06.26"
+      },
+      {
+        "text": "Geopolitische Spannungen treiben Ölpreise, Sorge vor Inflation und Zinsanstieg.",
+        "stamp": "02.06.26"
+      },
+      {
+        "text": "Kanada fordert Verlängerung des nordamerikanischen Handelsabkommens.",
+        "stamp": "02.06.26"
+      },
+      {
+        "text": "Ölpreise steigen durch Nahost-Konflikt; Inflation in Deutschland zieht an.",
+        "stamp": "01.06.26"
       }
     ],
     "date": "2026-06-03"
@@ -1252,8 +1272,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 2567,
-    "candCursor": 91,
+    "lastCursor": 2867,
+    "candCursor": 99,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -1395,43 +1415,42 @@
       "WCH Service AG"
     ],
     "noteCursor": 7,
-    "focusCursor": 3,
+    "focusCursor": 4,
     "recheckCursor": 16,
     "regionNoteCursor": 5,
     "notesDay": "2026-06-03",
     "seenBySector": {
-      "cons_cycl": 105,
-      "cons_def": 50,
-      "materials": 55,
-      "health": 208,
-      "finance": 218,
-      "energy": 96,
-      "hardware": 58,
-      "software": 190,
-      "industrial": 77,
-      "utilities": 42,
-      "comm": 40,
-      "ai_semi": 32,
-      "realestate": 15
+      "cons_cycl": 111,
+      "cons_def": 51,
+      "materials": 61,
+      "health": 233,
+      "finance": 234,
+      "energy": 106,
+      "hardware": 60,
+      "software": 199,
+      "industrial": 87,
+      "utilities": 48,
+      "comm": 42,
+      "ai_semi": 33,
+      "realestate": 16
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 106,
-      "cons_def": 50,
-      "materials": 60,
-      "health": 208,
-      "finance": 225,
-      "energy": 98,
-      "hardware": 60,
-      "software": 196,
-      "industrial": 83,
-      "utilities": 48,
-      "comm": 40,
-      "ai_semi": 32,
-      "realestate": 16
+      "cons_cycl": 111,
+      "cons_def": 51,
+      "materials": 66,
+      "health": 233,
+      "finance": 241,
+      "energy": 108,
+      "hardware": 62,
+      "software": 205,
+      "industrial": 93,
+      "utilities": 54,
+      "comm": 42,
+      "ai_semi": 33,
+      "realestate": 17
     },
-    "heavyAt": "2026-06-03T18:58:04.907Z",
+    "heavyAt": "2026-06-03T19:17:16.533Z",
     "revalidateTag": "marketscreener-2026-06"
-  },
-  "yahooAt": "2026-06-03T19:00:31.545Z"
+  }
 }
