@@ -1660,29 +1660,6 @@
       "enrichAt": "2026-06-03",
       "tdAt": "2026-06-03",
       "msUrl": "https://www.marketscreener.com/quote/stock/PVA-TEPLA-AG-6000001/consensus/"
-    },
-    {
-      "ticker": "ALV.DE",
-      "name": "Allianz SE",
-      "sector": "finance",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 1,
-      "upside": null,
-      "yahoo": "ALV.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
-      "perf6m": 2.24,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": -2.68,
-      "pe": 11.9,
-      "eps": 30.96,
-      "div": 4.54,
-      "enrichAt": "2026-06-03",
-      "msUrl": "https://www.marketscreener.com/quote/stock/ALLIANZ-SE-6000003/consensus/",
-      "miss": 0
     }
   ],
   "sectorNotes": {
