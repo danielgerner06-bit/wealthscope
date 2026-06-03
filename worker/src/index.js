@@ -51,12 +51,12 @@ async function run(env, force = false) {
 
   const topStocks = Array.isArray(data.topStocks) ? data.topStocks : [];
 
-  // Cloudflare-Free erlaubt 50 fetch-Subrequests/Lauf. Sektor+Region (~23) laufen immer;
-  // die rollierenden Budgets sind so dimensioniert, dass die Summe < 50 bleibt. Zusätzlich
-  // ein konservativer Cap, der die Budgets bei Bedarf auf null kürzt (Reihenfolge = Priorität).
-  // Gesamt-fetch-Budget für KURSE. Overhead separat: 2× getFile + 2× crumb + 2× commit ≈ 6,
-  // dazu Sektor+Region. SUBREQ_CAP (Default 40) lässt Puffer zum 50er-Free-Limit.
-  let budget = num(env, 'SUBREQ_CAP', 40) - (SECTORS.length + REGIONS.length);   // Rest für rollierende Aktien-Fetches
+  // Cloudflare-Free erlaubt HART 50 fetch-Subrequests/Lauf — ALLE zählen mit:
+  //   getFile×2 (jetzt) + getFile×2 (history) + commit×2..4 + crumb×2 ≈ 8 Overhead.
+  //   Sektor+Region = 23 (laufen immer; das stündlich Frische).
+  // SUBREQ_CAP = Gesamt-Kurs-Fetch-Budget. Konservativ 33: 23 Perf + 10 Rolling + 8 Overhead
+  // = 41 < 50, mit Sicherheitspuffer gegen interne Retries.
+  let budget = num(env, 'SUBREQ_CAP', 33) - (SECTORS.length + REGIONS.length);
   const take = (want, perItem) => { const n = Math.max(0, Math.min(want, Math.floor(budget / perItem))); budget -= n * perItem; return n; };
 
   // 1) Sektor- & Regionen-Performance (immer, schnell) — das ist das stündlich Frische

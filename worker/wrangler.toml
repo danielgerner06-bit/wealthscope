@@ -11,16 +11,15 @@ crons = ["0 * * * *"]
 REPO = "danielgerner06-bit/wealthscope"
 BRANCH = "main"
 MIN_GAP_MIN = "50"
-SUBREQ_CAP = "40"   # Gesamt-Budget Kurs-Fetches (40 - 23 Sektor/Region = 17 für rollierende Aktien); Overhead (getFile/crumb/commit ≈ 6) bleibt unter dem 50er-Free-Limit
-# Budgets klein halten: Cloudflare Free erlaubt nur 50 fetch-Subrequests pro Lauf.
-# Sektor+Region (23 Fetches) laufen IMMER komplett (das ist das stündlich Frische);
-# der Rest teilt sich die ~25 verbleibenden Fetches. Da der Worker STÜNDLICH läuft
-# (24×/Tag), ist der Tagesdurchsatz trotzdem höher als beim alten 6h-Action-Takt.
-PERF6M_BUDGET = "8"
-PRE1M_BUDGET = "6"
-ENRICH_BUDGET = "8"
-SNAPSHOT_BUDGET = "4"
-MILESTONE_BUDGET = "6"
+# Cloudflare Free = HART 50 fetch-Subrequests/Lauf (alle zählen: getFile, crumb, commit).
+# SUBREQ_CAP=33 -> 23 Sektor/Region (immer) + ~10 rollierende Aktien-Fetches + ~8 Overhead
+# = ~41, sicher unter 50. Worker läuft STÜNDLICH (24×/Tag) -> Tagesdurchsatz trotzdem hoch.
+SUBREQ_CAP = "33"
+PERF6M_BUDGET = "4"
+PRE1M_BUDGET = "3"
+ENRICH_BUDGET = "4"
+SNAPSHOT_BUDGET = "3"
+MILESTONE_BUDGET = "3"
 
 # Secrets (NICHT hier eintragen, via `wrangler secret put` setzen):
 #   GITHUB_TOKEN  – Fine-grained PAT, "Contents: Read and write" auf das Repo
