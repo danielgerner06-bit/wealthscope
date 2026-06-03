@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-03",
-  "updatedAt": "2026-06-03T20:02:07.112Z",
+  "updatedAt": "2026-06-03T20:16:44.637Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 21.32,
+      "perf": 21.21,
       "avg30": 3.75,
-      "perf6m": 37.23
+      "perf6m": 37.1
     },
     {
       "id": "comm",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 1.66,
+      "perf": 1.62,
       "avg30": 0.87,
-      "perf6m": -6.4
+      "perf6m": -6.43
     },
     {
       "id": "finance",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 0.71,
+      "perf": 0.62,
       "avg30": 1.71,
-      "perf6m": 14
+      "perf6m": 13.89
     },
     {
       "id": "energy",
@@ -213,9 +213,9 @@
     },
     {
       "id": "utilities",
-      "perf": -6,
+      "perf": -6.14,
       "avg30": 1.01,
-      "perf6m": -2.76
+      "perf6m": -2.9
     },
     {
       "id": "realestate",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -2.77,
+      "perf": -2.76,
       "avg30": 0.4,
-      "perf6m": -10.01
+      "perf6m": -10
     },
     {
       "id": "em",
@@ -263,9 +263,9 @@
     },
     {
       "id": "apac",
-      "perf": 10.23,
+      "perf": 10.21,
       "avg30": 3.26,
-      "perf6m": 29.66
+      "perf6m": 29.64
     },
     {
       "id": "india",
@@ -961,6 +961,29 @@
       "tdAt": "2026-06-03"
     },
     {
+      "ticker": "COK.DE",
+      "name": "Cancom SE",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 7,
+      "upside": 5,
+      "yahoo": "COK.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener 2026-06-03",
+      "seen": "2026-06-03",
+      "miss": 0,
+      "recheckAt": "2026-06-03",
+      "perf6m": 5.69,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": 9.8,
+      "pe": 49.5,
+      "eps": 0.55,
+      "div": 3.47,
+      "enrichAt": "2026-06-03"
+    },
+    {
       "ticker": "EVO",
       "name": "Evonik Industries AG",
       "sector": "materials",
@@ -980,30 +1003,6 @@
       "pe": 49.4,
       "eps": 0.34,
       "div": 5.9,
-      "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03",
-      "tdAt": "2026-06-03"
-    },
-    {
-      "ticker": "ORSTED",
-      "name": "Orsted A/S",
-      "sector": "utilities",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 26,
-      "upside": 2,
-      "yahoo": "ORSTED.CO",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "marketscreener 2026-06-03",
-      "seen": "2026-06-03",
-      "miss": 0,
-      "perf6m": 20.35,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": -1.41,
-      "pe": null,
-      "eps": -2.41,
-      "div": 0,
       "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-03",
       "tdAt": "2026-06-03"
@@ -1057,6 +1056,36 @@
       "tdAt": "2026-06-03"
     },
     {
+      "ticker": "ORSTED",
+      "name": "Orsted A/S",
+      "sector": "utilities",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 1,
+      "upside": 0,
+      "yahoo": "ORSTED.CO",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener 2026-06-03",
+      "seen": "2026-06-03",
+      "miss": 0,
+      "perf6m": 20.35,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": -1.41,
+      "pe": null,
+      "eps": -2.41,
+      "div": 0,
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03",
+      "tdAt": "2026-06-03",
+      "ratingCounts": {
+        "strongBuy": 1,
+        "buy": 0,
+        "hold": 0,
+        "sell": 0
+      }
+    },
+    {
       "ticker": "SOW",
       "name": "S&T AG",
       "sector": "software",
@@ -1076,6 +1105,35 @@
       "miss": 2,
       "recheckAt": "2026-06-03",
       "tdAt": "2026-06-03"
+    },
+    {
+      "ticker": "SU",
+      "name": "Schneider Electric SE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 24,
+      "upside": 6,
+      "yahoo": "SU.PA",
+      "peGemini": null,
+      "ratingCounts": {
+        "strongBuy": 0,
+        "buy": 1,
+        "hold": 0,
+        "sell": 0
+      },
+      "via": "gemini",
+      "source": "marketscreener 2026-06-03",
+      "seen": "2026-06-03",
+      "recheckAt": "2026-06-03",
+      "miss": 1,
+      "perf6m": 20.36,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": 6.22,
+      "pe": 35.5,
+      "eps": 7.98,
+      "div": 1.46,
+      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "IBE",
@@ -1100,29 +1158,6 @@
       "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-03",
       "tdAt": "2026-06-03"
-    },
-    {
-      "ticker": "COK.DE",
-      "name": "Cancom SE",
-      "sector": "software",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 7,
-      "upside": 5,
-      "yahoo": "COK.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "marketscreener 2026-06-03",
-      "seen": "2026-06-03",
-      "miss": 0,
-      "recheckAt": "2026-06-03",
-      "perf6m": 5.69,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 9.8,
-      "pe": 49.5,
-      "eps": 0.55,
-      "div": 3.47,
-      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "WCH",
@@ -1287,28 +1322,24 @@
   "news": {
     "items": [
       {
-        "text": "US-Dienstleistungssektor wächst stärker als erwartet; Kanadas Sektor belebt sich",
+        "text": "US-Notenbankchef Kevin Warsh plant weitreichende Reformen.",
         "stamp": "03.06.26"
       },
       {
-        "text": "US-Privatsektor baut robust Stellen auf; Neueinstellungen sinken im April",
+        "text": "KI-Boom treibt Tech-Aktien: Marvell explodiert nach starken Zahlen.",
         "stamp": "03.06.26"
       },
       {
-        "text": "EU will Abhängigkeit von US-Tech-Infrastruktur verringern",
+        "text": "EU plant schärfere Asylregeln und Abschiebezentren in Drittstaaten.",
         "stamp": "03.06.26"
       },
       {
-        "text": "Fed-Präsidentin Hammack: Möglicherweise muss bei Inflation reagiert werden",
-        "stamp": "02.06.26"
+        "text": "Dax schließt im Minus wegen Nahost-Spannungen und Zoll-Drohungen.",
+        "stamp": "03.06.26"
       },
       {
-        "text": "BoE-Direktorin Greene: Argumente für Zinserhöhung werden stärker",
-        "stamp": "02.06.26"
-      },
-      {
-        "text": "US-Arbeitsmarkt: Offene Stellen gestiegen, Neueinstellungen gesunken im April",
-        "stamp": "02.06.26"
+        "text": "US-Industrie: Auftragseingang steigt etwas stärker als erwartet.",
+        "stamp": "03.06.26"
       }
     ],
     "date": "2026-06-03"
@@ -1316,8 +1347,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 3167,
-    "candCursor": 107,
+    "lastCursor": 3467,
+    "candCursor": 115,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -1459,47 +1490,46 @@
       "WCH Service AG"
     ],
     "noteCursor": 7,
-    "focusCursor": 5,
+    "focusCursor": 6,
     "recheckCursor": 16,
     "regionNoteCursor": 5,
     "notesDay": "2026-06-03",
     "seenBySector": {
-      "cons_cycl": 120,
-      "cons_def": 55,
-      "materials": 66,
-      "health": 238,
-      "finance": 270,
-      "energy": 112,
-      "hardware": 64,
-      "software": 212,
-      "industrial": 91,
-      "utilities": 50,
-      "comm": 46,
-      "ai_semi": 34,
+      "cons_cycl": 132,
+      "cons_def": 56,
+      "materials": 70,
+      "health": 254,
+      "finance": 277,
+      "energy": 117,
+      "hardware": 70,
+      "software": 225,
+      "industrial": 101,
+      "utilities": 51,
+      "comm": 49,
+      "ai_semi": 36,
       "realestate": 21
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 120,
-      "cons_def": 55,
-      "materials": 71,
-      "health": 238,
-      "finance": 277,
-      "energy": 114,
-      "hardware": 66,
-      "software": 219,
-      "industrial": 98,
-      "utilities": 56,
-      "comm": 47,
-      "ai_semi": 34,
+      "cons_cycl": 132,
+      "cons_def": 56,
+      "materials": 75,
+      "health": 254,
+      "finance": 284,
+      "energy": 119,
+      "hardware": 72,
+      "software": 231,
+      "industrial": 109,
+      "utilities": 57,
+      "comm": 50,
+      "ai_semi": 36,
       "realestate": 22
     },
-    "heavyAt": "2026-06-03T19:31:51.197Z",
+    "heavyAt": "2026-06-03T20:10:35.051Z",
     "revalidateTag": "marketscreener-2026-06",
     "fmpRetryTag": "grades-summary-fix"
   },
   "blacklist": {
     "MUM": "2026-09-03"
-  },
-  "yahooAt": "2026-06-03T20:00:21.361Z"
+  }
 }
