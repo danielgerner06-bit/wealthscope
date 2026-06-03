@@ -28,9 +28,9 @@ const GEMINI_KEY = process.env.GEMINI_API_KEY;
 const SCAN_BUDGET = Number(process.env.SCAN_BUDGET || 300);   // Finnhub-Symbole pro Lauf (kostet KEIN Gemini)
 const CAND_BUDGET = Number(process.env.CAND_BUDGET || 8);     // Kandidaten je Lauf
 
-// HARTES Gemini-Budget pro Lauf gegen 429. Jeder Gemini-Aufruf zählt 1.
-// Free-Tier ist eng -> sparsam. Reihenfolge = Priorität (News zuerst).
-const GEMINI_BUDGET = Number(process.env.GEMINI_BUDGET || 10);
+// Gemini-Budget pro Lauf. Paid Tier (1.500 grounded Calls/Tag frei) -> großzügiger
+// als früher (Free war eng). Reihenfolge im Code = Priorität.
+const GEMINI_BUDGET = Number(process.env.GEMINI_BUDGET || 20);
 let geminiUsed = 0;
 let geminiDailyDead = false;   // gesetzt, sobald ein Call trotz Backoff am 429 scheitert (Tageslimit)
 const geminiBudgetLeft = () => geminiUsed < GEMINI_BUDGET && !geminiDailyDead;
@@ -212,20 +212,22 @@ const today = () => new Date().toISOString().slice(0, 10);
      verschwendetes Kontingent. Nur Perlen ohne/mit >7 Tage altem recheckAt. */
   const RECHECK_AGE = 7 * 86400000;
   if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
-    const due = Object.values(db)
+    const allDue = Object.values(db)
       .filter(s => s.via && s.via.startsWith('gemini'))
-      .filter(s => !s.recheckAt || (nowMs - Date.parse(s.recheckAt)) > RECHECK_AGE)
-      .slice(0, Number(process.env.RECHECK_BUDGET || 8));
-    if (due.length) {
-      useGemini();
+      .filter(s => !s.recheckAt || (nowMs - Date.parse(s.recheckAt)) > RECHECK_AGE);
+    const BATCH = Number(process.env.RECHECK_BUDGET || 8);        // Namen pro Gemini-Call (klein -> saubere Daten je Aktie)
+    const ROUNDS = Number(process.env.RECHECK_ROUNDS || 3);       // Batches pro Lauf (Paid Tier -> schnellerer Abbau des Rückstands)
+    const MAX_MISS = Number(process.env.RECHECK_MAX_MISS || 3);
+    let checked = 0, dropped = 0, round = 0;
+    while (round < ROUNDS && geminiBudgetLeft()) {
+      const due = allDue.slice(round * BATCH, round * BATCH + BATCH);
+      if (!due.length) break;
+      round++; useGemini();
       try {
         const names = due.map(b => b.name + ' (' + b.ticker + ')');
         const stillOk = await checkCandidates(GEMINI_KEY, names);
         const okSet = new Set(stillOk.map(s => s.ticker));
         for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s, miss: 0, recheckAt: today() };
-        // Schonend: erst nach 3 aufeinanderfolgenden Fehlversuchen entfernen.
-        let dropped = 0;
-        const MAX_MISS = Number(process.env.RECHECK_MAX_MISS || 3);
         for (const b of due) {
           if (okSet.has(b.ticker) || !db[b.ticker]) continue;
           const m = (db[b.ticker].miss || 0) + 1;
@@ -233,11 +235,11 @@ const today = () => new Date().toISOString().slice(0, 10);
           if (m >= MAX_MISS) { delete db[b.ticker]; dropped++; }
           else db[b.ticker].miss = m;
         }
-        console.log(`Re-Validierung: ${due.length} fällige geprüft, ${dropped} entfernt.`);
-      } catch (e) { noteGeminiError(e); console.error('Re-Validierung fehlgeschlagen:', e.message); }
-    } else {
-      console.log('Re-Validierung: keine Perle fällig (alle <7 Tage geprüft).');
+        checked += due.length;
+      } catch (e) { noteGeminiError(e); console.error('Re-Validierung fehlgeschlagen:', e.message); break; }
     }
+    if (checked) console.log(`Re-Validierung: ${checked} geprüft (${round} Batches), ${dropped} entfernt, ${Math.max(0, allDue.length - checked)} verbleibend.`);
+    else console.log('Re-Validierung: keine Perle fällig.');
   }
 
   // Kandidatenliste begrenzen, damit sie nicht unbegrenzt wächst.
