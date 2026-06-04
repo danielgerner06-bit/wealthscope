@@ -125,16 +125,24 @@ const today = () => new Date().toISOString().slice(0, 10);
     ? prev.scan.candidates.slice()
     : SEED_CANDIDATES.slice();
 
-  // Einmalige Neuprüfungs-Freigabe (s. REVALIDATE_TAG): recheckAt aller Gemini-Perlen löschen
-  // + alte ratingCounts (anderes Format) verwerfen -> saubere Neuermittlung mit MS-Skala.
+  // Einmalige Neuprüfungs-Freigabe (s. REVALIDATE_TAG): markiert alle Gemini-Perlen als
+  // "noch nicht unabhängig gegengeprüft" (verifiedAt weg, recheckAt weg) -> die Re-Validierung
+  // arbeitet sie der Reihe nach durch verifyNoHold ab und entfernt dabei die Falschen.
+  // WICHTIG: ratingCounts NICHT pauschal löschen (sonst räumt die End-Bereinigung alle noch
+  // ungeprüften sofort ab, bevor die Gegenprüfung dran war). Stattdessen Namen als Kandidaten
+  // sichern, damit nichts unwiederbringlich verloren geht.
   if (scan.revalidateTag !== REVALIDATE_TAG) {
     let freed = 0;
     for (const s of Object.values(db)) if (s.via && s.via.startsWith('gemini')) {
-      if (s.recheckAt) { delete s.recheckAt; freed++; }
-      if (s.ratingCounts) delete s.ratingCounts;   // altes strongBuy-Format raus
+      if (s.recheckAt) { delete s.recheckAt; }
+      delete s.verifiedAt;                                   // erzwingt erneute Gegenprüfung
+      // altes strongBuy-Format ist kein gültiger MS-Count -> verwerfen (wird neu ermittelt)
+      if (s.ratingCounts && ('strongBuy' in s.ratingCounts)) delete s.ratingCounts;
+      if (s.name && !candidates.includes(s.name)) candidates.push(s.name);   // Name sichern -> später erneut prüfbar
+      freed++;
     }
     scan.revalidateTag = REVALIDATE_TAG;
-    if (freed) console.log(`Re-Validierung freigegeben: ${freed} Gemini-Perlen werden mit MS-Skala neu geprüft.`);
+    if (freed) console.log(`Re-Validierung freigegeben: ${freed} Gemini-Perlen werden unabhängig gegengeprüft.`);
   }
 
   // Takt-Trennung: Yahoo-Daten (Kurse/Performance, kein Limit) laufen JEDEN Lauf (stündlich).
