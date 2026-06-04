@@ -30,9 +30,10 @@ async function groundedJSON(key, prompt) {
   const body = JSON.stringify({
     contents: [{ parts: [{ text: prompt }] }],
     tools: [{ google_search: {} }],
-    // maxOutputTokens großzügig: bei flash-lite + Grounding kam sonst eine LEERE Antwort
-    // zurück (Modell verbraucht das Budget beim "Denken"/Tool-Use, ohne Text zu liefern).
-    generationConfig: { temperature: 0.3, maxOutputTokens: 8192 },
+    // flash-lite gab eine LEERE Antwort (finishReason=STOP, candidatesTokenCount>0, aber
+    // parts=undefined): die generierten Tokens waren reine "thinking"-Tokens, danach stoppte
+    // das Modell ohne Antworttext. thinkingBudget:0 schaltet das Denken ab -> echter Text.
+    generationConfig: { temperature: 0.3, maxOutputTokens: 8192, thinkingConfig: { thinkingBudget: 0 } },
   });
   let lastErr = '';
   for (let attempt = 0; attempt < 5; attempt++) {
