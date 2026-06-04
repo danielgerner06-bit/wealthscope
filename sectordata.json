@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-03",
-  "updatedAt": "2026-06-04T04:00:21.389Z",
+  "updated": "2026-06-04",
+  "updatedAt": "2026-06-04T04:13:59.591Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -339,6 +339,37 @@
       "div": null
     },
     {
+      "ticker": "SRT",
+      "name": "Sartorius Stedim Biotech",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 14,
+      "upside": 32,
+      "yahoo": "DIM.PA",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 14,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "msUrl": "https://www.marketscreener.com/quote/stock/SARTORIUS-STEDIM-BIOTECH-4010/consensus/",
+      "via": "gemini",
+      "source": "web",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": -17.52,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 8.65,
+      "pe": 64.2,
+      "eps": 2.75,
+      "div": 0.39,
+      "enrichAt": "2026-06-04"
+    },
+    {
       "ticker": "DTE.DE",
       "name": "Deutsche Telekom AG",
       "sector": "comm",
@@ -586,37 +617,6 @@
       "miss": 1
     },
     {
-      "ticker": "ADTN",
-      "name": "ADTRAN Holdings, Inc.",
-      "sector": "comm",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 6,
-      "upside": 11,
-      "yahoo": "ADTN",
-      "peGemini": null,
-      "ratingCounts": {
-        "buy": 9,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "msUrl": "https://www.marketscreener.com/quote/stock/ADTRAN-HOLDINGS-INC-11048006/consensus/",
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
-      "miss": 0,
-      "recheckAt": "2026-06-03",
-      "perf6m": 109.25,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": -2.34,
-      "pe": null,
-      "eps": -0.39,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
       "ticker": "NVEE",
       "name": "NV5 Global, Inc.",
       "sector": "industrial",
@@ -809,6 +809,37 @@
       "recheckAt": "2026-06-03"
     },
     {
+      "ticker": "ASMI",
+      "name": "ASM International NV",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 20,
+      "upside": 3,
+      "yahoo": "ASM.AS",
+      "peGemini": 41.2,
+      "ratingCounts": {
+        "buy": 20,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "msUrl": "https://www.marketscreener.com/quote/stock/ASM-INTERNATIONAL-NV-4730/consensus/",
+      "via": "gemini",
+      "source": "web",
+      "seen": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1,
+      "perf6m": 74.92,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 5.88,
+      "pe": 44.4,
+      "eps": 20.19,
+      "div": 0.36,
+      "enrichAt": "2026-06-04"
+    },
+    {
       "ticker": "2317",
       "name": "Hon Hai Precision Industry Co Ltd",
       "sector": "hardware",
@@ -961,6 +992,64 @@
       "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-03",
       "miss": 1
+    },
+    {
+      "ticker": "NBIS",
+      "name": "Nebius Group",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 16,
+      "upside": -10,
+      "yahoo": "NBIS.AS",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 16,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "msUrl": "https://www.marketscreener.com/quote/stock/NEBIUS-GROUP-NV-225300/consensus/",
+      "via": "gemini",
+      "source": "web",
+      "seen": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1,
+      "perf1mBefore": null,
+      "enrichAt": "2026-06-04",
+      "div": null
+    },
+    {
+      "ticker": "CRDO",
+      "name": "Credo Technology Group",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 18,
+      "upside": 8,
+      "yahoo": "CRDO",
+      "peGemini": 98.3,
+      "ratingCounts": {
+        "buy": 18,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "msUrl": "https://www.marketscreener.com/quote/stock/CREDO-TECHNOLOGY-GROUP-HOLDING-LTD-13023812/consensus/",
+      "via": "gemini",
+      "source": "web",
+      "seen": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1,
+      "perf6m": 26.36,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 14.58,
+      "pe": 117.9,
+      "eps": 1.82,
+      "div": 0,
+      "enrichAt": "2026-06-04"
     },
     {
       "ticker": "A000660",
@@ -1535,6 +1624,37 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-03"
+    },
+    {
+      "ticker": "BESI",
+      "name": "BE Semiconductor Industries NV",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 22,
+      "upside": -12,
+      "yahoo": "BESI.AS",
+      "peGemini": 49.4,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 23,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "msUrl": "https://www.marketscreener.com/quote/stock/BE-SEMICONDUCTOR-INDUSTRIES-NV-6080660/consensus/",
+      "via": "gemini",
+      "source": "web",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": 108.15,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 13.11,
+      "pe": 151.8,
+      "eps": 1.9,
+      "div": 0.55,
+      "enrichAt": "2026-06-04"
     }
   ],
   "sectorNotes": {
@@ -1547,8 +1667,8 @@
       "date": "2026-06-01"
     },
     "cons_def": {
-      "text": "Der Sektor \"Konsum defensiv\" zeigt sich am globalen Aktienmarkt aktuell stabil, jedoch mit einem leichten Rückgang von -0.2% in den letzten 30 Tagen, was unter dem historischen Durchschnitt von +0.43% liegt. Diese leicht unterdurchschnittliche Performance könnte auf die anhaltend hohen Zinsen zurückzuführen sein, die zwar primär Wachstumsunternehmen belasten, aber auch defensive Sektoren marginal beeinflussen, da Anleger höhere risikofreie Renditen finden. Über sechs Monate bleibt der Sektor mit +6.21% im positiven Bereich, was seine konjunkturunabhängige Resilienz unterstreicht. Eine fehlende Präsenz von hoch bewerteten Analysten-Favoriten deutet auf eine derzeit geringe Spekulationsfreudigkeit in diesem stabilen, aber unspektakulären Segment hin.",
-      "date": "2026-06-01"
+      "text": "Defensive Konsumgüter leiden unter hohen Zinsen und schwacher Konjunktur. Langfristig zeigt sich jedoch eine leichte Erholung.",
+      "date": "2026-06-04"
     },
     "finance": {
       "text": "Finanzsektor schwächelt kurzfristig (-0.94% 30 Tage vs. +0.14% Normal). Zinsunsicherheit und Konjunkturängste belasten Banken; SB1G, HOOD, CFG zeigen auffällige Bewegungen.",
@@ -1606,8 +1726,8 @@
       "date": "2026-06-02"
     },
     "em": {
-      "text": "Schwellenländer profitieren von Kapitalzuflüssen und Rohstoffstärke.",
-      "date": "2026-06-02"
+      "text": "Schwellenländer profitieren stark von globaler Konjunkturerholung und KI-Boom. Hohe Renditen locken trotz geopolitischer Risiken Investoren an.",
+      "date": "2026-06-04"
     },
     "japan": {
       "text": "Japans Börse boomt, getrieben von steigenden Unternehmensgewinnen und dem schwachen Yen, der Exporte beflügelt. Auch der Abzug internationaler Gelder aus China stärkt Japan.",
@@ -1651,33 +1771,37 @@
   "news": {
     "items": [
       {
-        "text": "Google muss KI-Suche öffnen: Kartellhammer gegen Google droht.",
-        "stamp": "03.06.26"
+        "text": "US-Börsen: Wall Street setzt Rekordjagd fort – Alphabet schürt KI-Sorgen.",
+        "stamp": "02.06.26"
       },
       {
-        "text": "Space-Aktien: Ist das die Südsee-Blase des 21. Jahrhunderts?",
-        "stamp": "03.06.26"
+        "text": "Iran: Keine Gespräche mehr mit den USA nach Verhandlungsstockung.",
+        "stamp": "02.06.26"
       },
       {
-        "text": "Dieselpreise fressen Amerika auf – Verbraucher zahlen Iran-Rechnung.",
-        "stamp": "03.06.26"
+        "text": "Eurozone-Inflation steigt im Mai auf 3,2 Prozent – Ölpreise treiben Preise.",
+        "stamp": "02.06.26"
       },
       {
-        "text": "Marvell Technology vor weiterem Kurssprung nach S&P500-Aufstieg.",
-        "stamp": "03.06.26"
+        "text": "Merz sichert Ungarn Unterstützung für Rückkehr \"in die Mitte Europas\" zu.",
+        "stamp": "02.06.26"
       },
       {
-        "text": "Gigantischer Fund in Montana: Kupfer-Gold-Sensation möglich.",
-        "stamp": "03.06.26"
+        "text": "Russland: Massive Luftangriffe auf Kiew – Tote und Verletzte.",
+        "stamp": "02.06.26"
+      },
+      {
+        "text": "EZB: Euro-Bedeutung an weltweiten Finanzmärkten wächst.",
+        "stamp": "02.06.26"
       }
     ],
-    "date": "2026-06-03"
+    "date": "2026-06-04"
   },
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 5267,
-    "candCursor": 20,
+    "lastCursor": 5567,
+    "candCursor": 28,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -1831,48 +1955,47 @@
       "Super Micro Computer, Inc.",
       "Ambarella, Inc."
     ],
-    "noteCursor": 7,
-    "focusCursor": 4,
+    "noteCursor": 8,
+    "focusCursor": 5,
     "recheckCursor": 16,
-    "regionNoteCursor": 5,
-    "notesDay": "2026-06-03",
+    "regionNoteCursor": 6,
+    "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 175,
-      "cons_def": 87,
-      "materials": 105,
-      "health": 389,
-      "finance": 350,
-      "energy": 149,
-      "hardware": 99,
-      "software": 291,
-      "industrial": 138,
-      "utilities": 61,
-      "comm": 68,
-      "ai_semi": 55,
-      "realestate": 29
+      "cons_cycl": 176,
+      "cons_def": 90,
+      "materials": 113,
+      "health": 410,
+      "finance": 366,
+      "energy": 164,
+      "hardware": 104,
+      "software": 305,
+      "industrial": 144,
+      "utilities": 66,
+      "comm": 70,
+      "ai_semi": 57,
+      "realestate": 30
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 177,
-      "cons_def": 87,
-      "materials": 108,
-      "health": 393,
-      "finance": 356,
-      "energy": 151,
-      "hardware": 102,
-      "software": 298,
-      "industrial": 143,
-      "utilities": 67,
-      "comm": 70,
-      "ai_semi": 62,
-      "realestate": 29
+      "cons_cycl": 178,
+      "cons_def": 90,
+      "materials": 116,
+      "health": 415,
+      "finance": 372,
+      "energy": 166,
+      "hardware": 107,
+      "software": 313,
+      "industrial": 149,
+      "utilities": 72,
+      "comm": 71,
+      "ai_semi": 67,
+      "realestate": 30
     },
-    "heavyAt": "2026-06-03T21:57:50.135Z",
+    "heavyAt": "2026-06-04T04:05:04.760Z",
     "revalidateTag": "ms-counts-consistency-v3",
     "fmpRetryTag": "grades-summary-fix"
   },
   "blacklist": {
     "MUM": "2026-09-03"
-  },
-  "yahooAt": "2026-06-04T04:00:21.389Z"
+  }
 }
