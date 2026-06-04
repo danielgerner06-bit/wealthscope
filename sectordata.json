@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T19:45:28.910Z",
+  "updatedAt": "2026-06-04T19:53:13.061Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,15 +147,15 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 13.71,
+      "perf": 13.78,
       "avg30": -0.84,
-      "perf6m": -3.57
+      "perf6m": -3.52
     },
     {
       "id": "ai_semi",
-      "perf": 30.9,
+      "perf": 29.91,
       "avg30": 8.55,
-      "perf6m": 105.32
+      "perf6m": 103.78
     },
     {
       "id": "hardware",
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -2.85,
+      "perf": -2.75,
       "avg30": 0.98,
-      "perf6m": -2.12
+      "perf6m": -2.01
     },
     {
       "id": "health",
@@ -183,7 +183,7 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -0.74,
+      "perf": -0.75,
       "avg30": 1.03,
       "perf6m": -0.88
     },
@@ -191,7 +191,7 @@
       "id": "cons_def",
       "perf": -2.55,
       "avg30": 0.41,
-      "perf6m": 3.32
+      "perf6m": 3.31
     },
     {
       "id": "industrial",
@@ -207,15 +207,15 @@
     },
     {
       "id": "materials",
-      "perf": 0.55,
+      "perf": 0.45,
       "avg30": 1.48,
-      "perf6m": 15.79
+      "perf6m": 15.68
     },
     {
       "id": "utilities",
-      "perf": -5.34,
+      "perf": -5.33,
       "avg30": 0.98,
-      "perf6m": -0.81
+      "perf6m": -0.8
     },
     {
       "id": "realestate",
@@ -227,21 +227,21 @@
   "bars30Region": [
     {
       "id": "usa",
-      "perf": 5.2,
+      "perf": 5.14,
       "avg30": 1.96,
-      "perf6m": 11.24
+      "perf6m": 11.17
     },
     {
       "id": "europe",
-      "perf": 2.41,
+      "perf": 2.4,
       "avg30": 1.29,
-      "perf6m": 9.17
+      "perf6m": 9.16
     },
     {
       "id": "germany",
-      "perf": 1.84,
+      "perf": 1.81,
       "avg30": 0.33,
-      "perf6m": 5.43
+      "perf6m": 5.39
     },
     {
       "id": "japan",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": -2.33,
+      "perf": -2.34,
       "avg30": -1.06,
-      "perf6m": -11.7
+      "perf6m": -11.71
     },
     {
       "id": "latam",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 4.66,
+      "perf": 4.58,
       "avg30": 1.84,
-      "perf6m": 11.15
+      "perf6m": 11.06
     }
   ],
   "topStocks": [
@@ -1985,8 +1985,8 @@
       "yahoo": "COK.DE",
       "peGemini": null,
       "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
       "miss": 0,
       "perf6m": 5.69,
       "perf6mAt": "2026-06-03",
@@ -1995,7 +1995,17 @@
       "eps": 0.55,
       "div": 3.47,
       "enrichAt": "2026-06-03",
-      "msUrl": "https://www.marketscreener.com/quote/stock/CANCOM-SE-6000176/consensus/"
+      "msUrl": "https://www.marketscreener.com/quote/stock/CANCOM-SE-6000176/consensus/",
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 8,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/CANCOM-SE-6000007/consensus/",
+      "recheckAt": "2026-06-04"
     },
     {
       "ticker": "ORSTED",
@@ -2147,6 +2157,102 @@
       "enrichAt": "2026-06-04",
       "recheckAt": "2026-06-04",
       "miss": 1
+    },
+    {
+      "ticker": "AOF.DE",
+      "name": "ATOSS Software SE",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 8,
+      "upside": 59,
+      "yahoo": "AOF.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 7,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/ATOSS-SOFTWARE-SE-6000000/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": -33.22,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 2.89,
+      "pe": 26.1,
+      "eps": 3.04,
+      "div": 2.95,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "SMHN.DE",
+      "name": "Süss MicroTec SE",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 8,
+      "upside": 4,
+      "yahoo": "SMHN.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 8,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/SUSS-MICROTEC-SE-6000035/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": 142.19,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 20.69,
+      "pe": 32.1,
+      "eps": 2.95,
+      "div": 0.04,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "TPE.DE",
+      "name": "PVA TePla AG",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 8,
+      "upside": 4,
+      "yahoo": "TPE.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/PVA-TEPLA-AG-6000047/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": 86.12,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 13.64,
+      "pe": 425,
+      "eps": 0.1,
+      "div": 0,
+      "enrichAt": "2026-06-04"
     }
   ],
   "sectorNotes": {
@@ -2263,27 +2369,27 @@
   "news": {
     "items": [
       {
-        "text": "USA drohen mit neuen Zöllen; Schweizer Präsident mahnt zur Ruhe.",
+        "text": "Europas Börsen schließen mit moderaten Gewinnen",
         "stamp": "04.06.26"
       },
       {
-        "text": "Börsen uneinheitlich; Nvidia-Ausblick bremst Techwerte.",
+        "text": "Schweizer Aktienmarkt schließt fester, SMI gestützt",
         "stamp": "04.06.26"
       },
       {
-        "text": "EU will mehr Schulden für Wärmepumpen und E-Autos erlauben.",
-        "stamp": "04.06.26"
+        "text": "US-Dienstleistungssektor wächst stärker als erwartet im Mai",
+        "stamp": "03.06.26"
       },
       {
-        "text": "SoftBank plant gigantische KI-Rechenzentren in Frankreich.",
-        "stamp": "04.06.26"
+        "text": "Kanadas Dienstleistungssektor wächst trotz Unsicherheit leicht",
+        "stamp": "03.06.26"
       },
       {
-        "text": "Schweizer Wirtschaft wuchs im ersten Quartal um 0,4 Prozent.",
-        "stamp": "04.06.26"
+        "text": "EU will Abhängigkeit von US-Tech verringern",
+        "stamp": "03.06.26"
       },
       {
-        "text": "US-Notenbankchef Warsh plant weitreichende Reformen der Fed.",
+        "text": "US-Privatsektor meldet robusten Stellenzuwachs im Mai",
         "stamp": "03.06.26"
       }
     ],
@@ -2292,8 +2398,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 934,
-    "candCursor": 140,
+    "lastCursor": 1234,
+    "candCursor": 148,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -2468,70 +2574,60 @@
       "Sanlorenzo S.p.A."
     ],
     "noteCursor": 8,
-    "focusCursor": 3,
+    "focusCursor": 4,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 273,
-      "cons_def": 133,
-      "materials": 181,
-      "health": 720,
-      "finance": 544,
-      "energy": 252,
-      "hardware": 167,
-      "software": 518,
-      "industrial": 225,
-      "utilities": 101,
-      "comm": 113,
+      "cons_cycl": 284,
+      "cons_def": 136,
+      "materials": 184,
+      "health": 739,
+      "finance": 566,
+      "energy": 257,
+      "hardware": 170,
+      "software": 533,
+      "industrial": 227,
+      "utilities": 102,
+      "comm": 117,
       "ai_semi": 109,
       "realestate": 46
     },
     "pendingReject": [
-      "BBLG",
-      "BBNX",
-      "BBOT",
-      "BBSI",
-      "BBT",
-      "BBUC",
-      "BBW",
-      "BBWI",
-      "BBY",
-      "BC",
-      "BCAB",
-      "BCAL",
-      "BCAX",
-      "BCBP",
-      "BCC",
-      "BCDA",
-      "BCE",
-      "BCHT",
-      "BCIC",
-      "BCLI",
-      "BCML",
-      "BCO",
-      "BCPC",
-      "BCRX",
-      "BCSF",
-      "BCTX",
-      "BDC"
+      "BRCB",
+      "BRCC",
+      "BRFH",
+      "BRIA",
+      "BRKR",
+      "BRLT",
+      "BRO",
+      "BROS",
+      "BRSL",
+      "BRTX",
+      "BRUN",
+      "BRZE",
+      "BSAI",
+      "BSBK",
+      "BSEM",
+      "BSET",
+      "BSFC"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 276,
-      "cons_def": 133,
-      "materials": 185,
-      "health": 729,
-      "finance": 550,
-      "energy": 256,
-      "hardware": 170,
-      "software": 529,
-      "industrial": 231,
-      "utilities": 106,
-      "comm": 114,
-      "ai_semi": 118,
+      "cons_cycl": 287,
+      "cons_def": 136,
+      "materials": 188,
+      "health": 748,
+      "finance": 572,
+      "energy": 261,
+      "hardware": 173,
+      "software": 545,
+      "industrial": 233,
+      "utilities": 107,
+      "comm": 118,
+      "ai_semi": 120,
       "realestate": 47
     },
-    "heavyAt": "2026-06-04T19:37:10.138Z",
+    "heavyAt": "2026-06-04T19:46:42.005Z",
     "revalidateTag": "ms-no-hold-v6",
     "fmpRetryTag": "grades-summary-fix"
   },
