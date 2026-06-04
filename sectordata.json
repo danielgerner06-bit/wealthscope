@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T22:09:19.269Z",
+  "updatedAt": "2026-06-04T22:16:30.187Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -401,28 +401,24 @@
   "news": {
     "items": [
       {
-        "text": "Börse: SAP und Airbus führen DAX an, S&P 500 im Plus.",
+        "text": "Geopolitische Spannungen und steigende Ölpreise zwingen Zentralbanken zu strafferen Geldpolitiken.",
         "stamp": "04.06.26"
       },
       {
-        "text": "DIW fordert Vermögensteuer zur Finanzierung von Steuersenkungen.",
+        "text": "SoftBank plant KI-Rechenzentren in Frankreich, Europa holt auf.",
         "stamp": "04.06.26"
       },
       {
-        "text": "SpaceX plant Rekord-Börsengang mit 75 Milliarden Dollar.",
-        "stamp": "04.06.26"
-      },
-      {
-        "text": "US-Industrie: Auftragseingang steigt stärker als erwartet.",
+        "text": "Iran-Krieg beeinflusst Ölpreise und treibt Inflationsangst, Gold fällt.",
         "stamp": "03.06.26"
       },
       {
-        "text": "Eurozone: Erzeugerpreise steigen kräftig wegen Energiepreisen.",
+        "text": "Graphit wird zum strategischen Rohstoff der neuen Weltordnung.",
         "stamp": "03.06.26"
       },
       {
-        "text": "Wall Street: Verhaltener Handelsauftakt erwartet, Ölpreis steigt.",
-        "stamp": "03.06.26"
+        "text": "SAP-Aktie: Startschuss zur Mega-Comebackrallye gefallen?",
+        "stamp": "02.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -430,8 +426,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 4834,
-    "candCursor": 64,
+    "lastCursor": 5134,
+    "candCursor": 72,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -637,48 +633,42 @@
       "Ultra Clean Holdings, Inc."
     ],
     "noteCursor": 8,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 378,
-      "cons_def": 192,
-      "materials": 244,
-      "health": 988,
-      "finance": 742,
-      "energy": 334,
-      "hardware": 235,
-      "software": 687,
-      "industrial": 309,
-      "utilities": 133,
-      "comm": 155,
-      "ai_semi": 132,
-      "realestate": 66
+      "cons_cycl": 384,
+      "cons_def": 196,
+      "materials": 250,
+      "health": 1010,
+      "finance": 755,
+      "energy": 336,
+      "hardware": 237,
+      "software": 696,
+      "industrial": 314,
+      "utilities": 134,
+      "comm": 157,
+      "ai_semi": 133,
+      "realestate": 68
     },
-    "pendingReject": [
-      "MAR",
-      "MARA",
-      "MARK",
-      "MAS",
-      "MASI"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 378,
-      "cons_def": 192,
-      "materials": 244,
-      "health": 988,
-      "finance": 742,
-      "energy": 334,
-      "hardware": 235,
-      "software": 687,
-      "industrial": 309,
-      "utilities": 133,
-      "comm": 155,
-      "ai_semi": 132,
-      "realestate": 66
+      "cons_cycl": 384,
+      "cons_def": 196,
+      "materials": 250,
+      "health": 1010,
+      "finance": 755,
+      "energy": 336,
+      "hardware": 237,
+      "software": 696,
+      "industrial": 314,
+      "utilities": 134,
+      "comm": 157,
+      "ai_semi": 133,
+      "realestate": 68
     },
-    "heavyAt": "2026-06-04T22:03:24.384Z",
+    "heavyAt": "2026-06-04T22:10:18.605Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
