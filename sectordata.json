@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T13:00:21.382Z",
+  "updatedAt": "2026-06-04T13:14:21.025Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -1020,24 +1020,6 @@
       "msUrl": "https://www.marketscreener.com/quote/stock/VERBIO-SE-100027/consensus/"
     },
     {
-      "ticker": "SOGN.SW",
-      "name": "Sonova Holding AG",
-      "sector": "health",
-      "buyPct": 100,
-      "outperformPct": 33,
-      "analysts": 3,
-      "upside": 0,
-      "yahoo": "SOGN.SW",
-      "peGemini": 25.2,
-      "via": "gemini-discover",
-      "source": "marketscreener",
-      "seen": "2026-06-03",
-      "perf1mBefore": null,
-      "enrichAt": "2026-06-03",
-      "div": null,
-      "miss": 1
-    },
-    {
       "ticker": "WKL.DE",
       "name": "Wacker Chemie AG",
       "sector": "materials",
@@ -2044,7 +2026,8 @@
     "fmpRetryTag": "grades-summary-fix"
   },
   "blacklist": {
-    "MUM": "2026-09-03"
+    "MUM": "2026-09-03",
+    "SOGN.SW": "2026-09-04"
   },
   "yahooAt": "2026-06-04T13:00:21.382Z"
 }
