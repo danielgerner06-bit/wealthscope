@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T21:20:11.709Z",
+  "updatedAt": "2026-06-04T21:31:07.765Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -401,28 +401,24 @@
   "news": {
     "items": [
       {
-        "text": "US-Aktien uneinheitlich, Gewinnmitnahmen im Technologiesektor.",
+        "text": "US-Militär verbannt China-Wolfram: Profitiert Western Star Resources?",
         "stamp": "04.06.26"
       },
       {
-        "text": "Ölpreise sinken, Brentöl unter 95 Dollar, Nervosität lässt nach.",
+        "text": "Ackman baut Pershing Square-Depot um: Milliarden-Einstieg bei Microsoft",
         "stamp": "04.06.26"
       },
       {
-        "text": "EU will Abhängigkeit von US-Tech-Infrastruktur verringern.",
-        "stamp": "03.06.26"
+        "text": "SAP und Airbus führen den DAX an – S&P 500 im Plus",
+        "stamp": "04.06.26"
       },
       {
-        "text": "Iran-Krieg beeinflusst Lebensmittelpreise, Chancen für Rohstoffanleger.",
-        "stamp": "03.06.26"
+        "text": "SoftBank macht Frankreich zum KI-Schlüsselstandort in Europa",
+        "stamp": "04.06.26"
       },
       {
-        "text": "US-Dienstleistungssektor wächst stärker als erwartet im Mai.",
-        "stamp": "03.06.26"
-      },
-      {
-        "text": "Dax fällt unter 25.000 Punkte wegen Geopolitik und Unternehmensnachrichten.",
-        "stamp": "03.06.26"
+        "text": "Bermuda wagt ein historisches Krypto-Experiment",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -430,8 +426,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 3034,
-    "candCursor": 16,
+    "lastCursor": 3334,
+    "candCursor": 24,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -629,42 +625,42 @@
       "Iberdrola, S.A."
     ],
     "noteCursor": 8,
-    "focusCursor": 2,
+    "focusCursor": 3,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 330,
-      "cons_def": 162,
-      "materials": 213,
-      "health": 865,
-      "finance": 672,
-      "energy": 299,
-      "hardware": 203,
-      "software": 616,
-      "industrial": 269,
-      "utilities": 123,
-      "comm": 137,
-      "ai_semi": 117,
-      "realestate": 57
+      "cons_cycl": 336,
+      "cons_def": 165,
+      "materials": 217,
+      "health": 875,
+      "finance": 688,
+      "energy": 304,
+      "hardware": 207,
+      "software": 632,
+      "industrial": 278,
+      "utilities": 124,
+      "comm": 140,
+      "ai_semi": 119,
+      "realestate": 60
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 330,
-      "cons_def": 162,
-      "materials": 213,
-      "health": 865,
-      "finance": 672,
-      "energy": 299,
-      "hardware": 203,
-      "software": 616,
-      "industrial": 269,
-      "utilities": 123,
-      "comm": 137,
-      "ai_semi": 117,
-      "realestate": 57
+      "cons_cycl": 336,
+      "cons_def": 165,
+      "materials": 217,
+      "health": 875,
+      "finance": 688,
+      "energy": 304,
+      "hardware": 207,
+      "software": 632,
+      "industrial": 278,
+      "utilities": 124,
+      "comm": 140,
+      "ai_semi": 119,
+      "realestate": 60
     },
-    "heavyAt": "2026-06-04T21:14:25.285Z",
+    "heavyAt": "2026-06-04T21:22:57.620Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
