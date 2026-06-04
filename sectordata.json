@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T22:16:30.187Z",
+  "updatedAt": "2026-06-04T22:23:27.890Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -401,23 +401,23 @@
   "news": {
     "items": [
       {
-        "text": "Geopolitische Spannungen und steigende Ölpreise zwingen Zentralbanken zu strafferen Geldpolitiken.",
+        "text": "US-Notenbank: Fed-Zinsentscheid beeinflusst Märkte weltweit",
         "stamp": "04.06.26"
       },
       {
-        "text": "SoftBank plant KI-Rechenzentren in Frankreich, Europa holt auf.",
+        "text": "Russische Wirtschaft wankt: Angst vor Kriegskosten",
         "stamp": "04.06.26"
       },
       {
-        "text": "Iran-Krieg beeinflusst Ölpreise und treibt Inflationsangst, Gold fällt.",
+        "text": "SAP und Airbus führen den DAX an",
+        "stamp": "04.06.26"
+      },
+      {
+        "text": "Geopolitik und Welthandel: Welt im Umbruch",
         "stamp": "03.06.26"
       },
       {
-        "text": "Graphit wird zum strategischen Rohstoff der neuen Weltordnung.",
-        "stamp": "03.06.26"
-      },
-      {
-        "text": "SAP-Aktie: Startschuss zur Mega-Comebackrallye gefallen?",
+        "text": "KI-Boom setzt Geldpolitik der Federal Reserve unter Druck",
         "stamp": "02.06.26"
       }
     ],
@@ -426,8 +426,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 5134,
-    "candCursor": 72,
+    "lastCursor": 5434,
+    "candCursor": 80,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -630,45 +630,55 @@
       "Rackspace Technology, Inc.",
       "Flex Ltd.",
       "Arm Holdings plc",
-      "Ultra Clean Holdings, Inc."
+      "Ultra Clean Holdings, Inc.",
+      "Umicore SA",
+      "Ørsted A/S",
+      "Alstom SA",
+      "IMCD N.V.",
+      "2G Energy AG",
+      "OHB SE"
     ],
     "noteCursor": 8,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 384,
-      "cons_def": 196,
-      "materials": 250,
-      "health": 1010,
-      "finance": 755,
-      "energy": 336,
-      "hardware": 237,
-      "software": 696,
-      "industrial": 314,
-      "utilities": 134,
-      "comm": 157,
-      "ai_semi": 133,
+      "cons_cycl": 387,
+      "cons_def": 198,
+      "materials": 260,
+      "health": 1028,
+      "finance": 773,
+      "energy": 348,
+      "hardware": 241,
+      "software": 710,
+      "industrial": 320,
+      "utilities": 137,
+      "comm": 161,
+      "ai_semi": 140,
       "realestate": 68
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "NGVT",
+      "NI",
+      "NIC"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 384,
-      "cons_def": 196,
-      "materials": 250,
-      "health": 1010,
-      "finance": 755,
-      "energy": 336,
-      "hardware": 237,
-      "software": 696,
-      "industrial": 314,
-      "utilities": 134,
-      "comm": 157,
-      "ai_semi": 133,
+      "cons_cycl": 387,
+      "cons_def": 198,
+      "materials": 260,
+      "health": 1028,
+      "finance": 773,
+      "energy": 348,
+      "hardware": 241,
+      "software": 710,
+      "industrial": 320,
+      "utilities": 137,
+      "comm": 161,
+      "ai_semi": 140,
       "realestate": 68
     },
-    "heavyAt": "2026-06-04T22:10:18.605Z",
+    "heavyAt": "2026-06-04T22:17:01.713Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
