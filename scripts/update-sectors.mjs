@@ -367,7 +367,11 @@ const today = () => new Date().toISOString().slice(0, 10);
       // KGV: Yahoo-Wert; bei Verlust (EPS < 0) bewusst kein KGV
       s.pe = (e.eps != null && e.eps < 0) ? null : e.pe;
       if (e.eps != null) s.eps = e.eps;
-      if (e.analysts != null) s.analysts = e.analysts;
+      // Analystenzahl: bei sauberen MS-Counts ist deren Summe maßgeblich (100%-Kriterium).
+      // Yahoos Zahl zählt ALLE Analysten (auch Hold/Sell) -> würde analysts!==sum machen
+      // und die Konsistenzprüfung brechen. Nur als Fallback ohne MS-Counts übernehmen.
+      const hasMsCounts = s.ratingCounts && !('strongBuy' in s.ratingCounts);
+      if (e.analysts != null && !hasMsCounts) s.analysts = e.analysts;
       s.div = e.divYield;   // Dividendenrendite in % (null = keine Dividende)
       s.enrichAt = today();
       if (s.pe != null) peCount++;
