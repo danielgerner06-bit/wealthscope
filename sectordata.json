@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T21:45:29.297Z",
+  "updatedAt": "2026-06-04T21:52:56.619Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -401,28 +401,28 @@
   "news": {
     "items": [
       {
-        "text": "EU gibt mehr als 16 Milliarden Euro für Ungarn frei.",
+        "text": "SoftBank plant gigantische KI-Rechenzentren in Frankreich",
         "stamp": "04.06.26"
       },
       {
-        "text": "Europäische Aktien legen bei sinkenden Ölpreisen zu.",
+        "text": "Bermuda wagt historisches Krypto-Experiment",
         "stamp": "04.06.26"
       },
       {
-        "text": "US-Dollar gibt vor Arbeitsmarktdaten nach.",
+        "text": "US-Börsen uneinheitlich – Gewinnmitnahmen im Technologiesektor",
         "stamp": "04.06.26"
       },
       {
-        "text": "Europas Börsen beenden Handel mit moderaten Gewinnen.",
-        "stamp": "04.06.26"
+        "text": "US-Militär verbannt China-Wolfram: Profitiert Western Star Resources?",
+        "stamp": "03.06.26"
       },
       {
-        "text": "DAX schließt freundlich dank sinkender Ölpreise.",
-        "stamp": "04.06.26"
+        "text": "EU will Abhängigkeit von US-Tech-Infrastruktur verringern",
+        "stamp": "03.06.26"
       },
       {
-        "text": "Notenbanken stellen sich gegen Trump: Solidarität mit Powell.",
-        "stamp": "04.06.26"
+        "text": "US-Privatsektor mit robustem Stellenzuwachs im Mai",
+        "stamp": "03.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -430,8 +430,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 3934,
-    "candCursor": 40,
+    "lastCursor": 4234,
+    "candCursor": 48,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -637,42 +637,42 @@
       "Ultra Clean Holdings, Inc."
     ],
     "noteCursor": 8,
-    "focusCursor": 5,
+    "focusCursor": 6,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 354,
-      "cons_def": 175,
-      "materials": 226,
-      "health": 913,
-      "finance": 716,
-      "energy": 316,
-      "hardware": 215,
-      "software": 647,
-      "industrial": 292,
-      "utilities": 129,
-      "comm": 144,
-      "ai_semi": 121,
-      "realestate": 61
+      "cons_cycl": 355,
+      "cons_def": 177,
+      "materials": 230,
+      "health": 943,
+      "finance": 723,
+      "energy": 322,
+      "hardware": 221,
+      "software": 664,
+      "industrial": 297,
+      "utilities": 131,
+      "comm": 148,
+      "ai_semi": 126,
+      "realestate": 63
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 354,
-      "cons_def": 175,
-      "materials": 226,
-      "health": 913,
-      "finance": 716,
-      "energy": 316,
-      "hardware": 215,
-      "software": 647,
-      "industrial": 292,
-      "utilities": 129,
-      "comm": 144,
-      "ai_semi": 121,
-      "realestate": 61
+      "cons_cycl": 355,
+      "cons_def": 177,
+      "materials": 230,
+      "health": 943,
+      "finance": 723,
+      "energy": 322,
+      "hardware": 221,
+      "software": 664,
+      "industrial": 297,
+      "utilities": 131,
+      "comm": 148,
+      "ai_semi": 126,
+      "realestate": 63
     },
-    "heavyAt": "2026-06-04T21:39:35.807Z",
+    "heavyAt": "2026-06-04T21:46:51.044Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
