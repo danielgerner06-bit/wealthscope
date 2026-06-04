@@ -10,7 +10,10 @@
 
 import { sectorForFinnhub, SECTOR_IDS } from './sectors.mjs';
 
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+// flash-lite lieferte mit google_search-Grounding nicht-deterministisch LEERE Antworten
+// (alles "thinking", kein Text — auch mit thinkingBudget:0). Das stärkere flash gibt mit
+// Grounding zuverlässig strukturierten Text zurück. News läuft weiter günstig (eigenes Modell).
+const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const SECTOR_LIST = SECTOR_IDS.join(', ');
 
 // Aufnahmekriterium: Kaufempfehlungs-Anteil (Buy + Strong Buy) = 100 %.
@@ -30,10 +33,9 @@ async function groundedJSON(key, prompt) {
   const body = JSON.stringify({
     contents: [{ parts: [{ text: prompt }] }],
     tools: [{ google_search: {} }],
-    // flash-lite gab eine LEERE Antwort (finishReason=STOP, candidatesTokenCount>0, aber
-    // parts=undefined): die generierten Tokens waren reine "thinking"-Tokens, danach stoppte
-    // das Modell ohne Antworttext. thinkingBudget:0 schaltet das Denken ab -> echter Text.
-    generationConfig: { temperature: 0.3, maxOutputTokens: 8192, thinkingConfig: { thinkingBudget: 0 } },
+    // flash braucht ein kleines Thinking-Budget, um mit Grounding zuverlässig Text zu liefern
+    // (thinkingBudget:0 ließ es bei flash-lite gar nicht mehr antworten). maxOutputTokens hoch.
+    generationConfig: { temperature: 0.3, maxOutputTokens: 8192, thinkingConfig: { thinkingBudget: 512 } },
   });
   let lastErr = '';
   for (let attempt = 0; attempt < 5; attempt++) {
