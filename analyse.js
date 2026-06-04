@@ -14,7 +14,7 @@
   // step = feste Bündelungs-Schrittweite je Faktor (z. B. KGV in 5er-Schritten)
   const FACTORS = [
     { key: 'pe', label: 'KGV', step: 5 },
-    { key: 'outperformPct', label: 'Strong Buy', step: 10 },
+    { key: 'outperformPct', label: 'Outperform', step: 10 },
     { key: 'upside', label: 'Kursziel', step: 10 },
     { key: 'div', label: 'Dividende', step: 1 },
     { key: 'analysts', label: 'Analysten', step: 5 },
