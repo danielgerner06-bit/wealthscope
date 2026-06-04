@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T14:13:34.178Z",
+  "updatedAt": "2026-06-04T15:00:21.387Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 14.41,
+      "perf": 14.01,
       "avg30": -0.84,
-      "perf6m": -2.98
+      "perf6m": -3.31
     },
     {
       "id": "ai_semi",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -0.41,
+      "perf": -0.63,
       "avg30": 1.03,
-      "perf6m": -0.54
+      "perf6m": -0.76
     },
     {
       "id": "cons_def",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": -1.77,
+      "perf": -1.14,
       "avg30": 2.96,
-      "perf6m": 29
+      "perf6m": 29.82
     },
     {
       "id": "materials",
@@ -213,9 +213,9 @@
     },
     {
       "id": "utilities",
-      "perf": -5.39,
+      "perf": -5.74,
       "avg30": 0.98,
-      "perf6m": -0.87
+      "perf6m": -1.23
     },
     {
       "id": "realestate",
@@ -233,21 +233,21 @@
     },
     {
       "id": "europe",
-      "perf": 2.08,
+      "perf": 2.03,
       "avg30": 1.29,
-      "perf6m": 8.82
+      "perf6m": 8.76
     },
     {
       "id": "germany",
-      "perf": 2.02,
+      "perf": 1.8,
       "avg30": 0.33,
-      "perf6m": 5.61
+      "perf6m": 5.38
     },
     {
       "id": "japan",
-      "perf": 6.01,
+      "perf": 5.99,
       "avg30": 2.15,
-      "perf6m": 13.43
+      "perf6m": 13.4
     },
     {
       "id": "china",
@@ -269,21 +269,21 @@
     },
     {
       "id": "india",
-      "perf": -2.27,
+      "perf": -2.39,
       "avg30": -1.06,
-      "perf6m": -11.64
+      "perf6m": -11.75
     },
     {
       "id": "latam",
-      "perf": -6.04,
+      "perf": -6.01,
       "avg30": 3.12,
-      "perf6m": 9.2
+      "perf6m": 9.23
     },
     {
       "id": "world",
-      "perf": 4.03,
+      "perf": 4.06,
       "avg30": 1.83,
-      "perf6m": 10.48
+      "perf6m": 10.51
     }
   ],
   "topStocks": [
@@ -2070,5 +2070,6 @@
     "SOGN.SW": "2026-09-04",
     "VOW3.DE": "2026-09-04",
     "HEI.DE": "2026-09-04"
-  }
+  },
+  "yahooAt": "2026-06-04T15:00:21.387Z"
 }
