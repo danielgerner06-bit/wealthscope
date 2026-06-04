@@ -194,15 +194,22 @@ und es KEINEN einzigen Hold, Neutral, Halten, Underperform oder Sell gibt.
 
 Aktien: ${list}
 
-WICHTIG — sei MISSTRAUISCH und gründlich:
-- Schau auf MEHRERE Quellen (MarketScreener, TipRanks, Investing.com, Yahoo Finance, MarketBeat).
-- Schon EINE Quelle mit mindestens einem Hold/Neutral/Underperform/Sell bedeutet: NICHT 100%.
-- Gerade breit beobachtete Aktien (viele Analysten) haben fast immer mind. einen Hold — prüfe das besonders kritisch.
-- Bei Unsicherheit oder widersprüchlichen Quellen: als NICHT bestätigt werten.
+So gehst du vor (die Buy/Hold/Sell-Verteilung steht als TEXT auf diesen Seiten — lies sie dort ab,
+NICHT aus einem Diagrammbild):
+- TipRanks "Forecast"-Seite (z.B. tipranks.com/stocks/<ticker>/forecast): nennt "X Buy, Y Hold, Z Sell".
+- MarketBeat "forecast": nennt die Aufteilung im Text.
+- Investing.com "consensus-estimates", Yahoo Finance "analysis", stockanalysis.com/ratings.
+
+REGELN (sei MISSTRAUISCH):
+- Schon EINE seriöse Quelle mit mind. einem Hold/Neutral/Underperform/Sell bedeutet: NICHT 100% -> ablehnen.
+- Breit beobachtete Aktien (viele Analysten) haben fast immer mind. einen Hold — prüfe besonders kritisch.
+- Du MUSST mindestens ZWEI unabhängige Quellen nennen, die übereinstimmend 0 Hold UND 0 Sell zeigen.
+  Findest du nicht zwei übereinstimmende Quellen -> als NICHT bestätigt werten.
+- Bei Unsicherheit oder widersprüchlichen Quellen IMMER ablehnen (lieber zu Unrecht raus als zu Unrecht drin).
 
 Gib NUR ein JSON-Array zurück, ein Objekt je Aktie:
-{ "ticker": "...", "alleKaufen": true|false, "holdGefunden": <Zahl der gefundenen Hold/Neutral>, "sellGefunden": <Zahl Sell/Underperform>, "quelle": "wo geprüft" }
-"alleKaufen" nur dann true, wenn du über mehrere Quellen SICHER bist, dass es 0 Hold und 0 Sell gibt.
+{ "ticker": "...", "alleKaufen": true|false, "holdGefunden": <Zahl Hold/Neutral>, "sellGefunden": <Zahl Sell/Underperform>, "quellen": ["Quelle 1","Quelle 2"] }
+"alleKaufen" nur true, wenn MINDESTENS ZWEI Quellen übereinstimmend 0 Hold und 0 Sell zeigen.
 Kein Text außerhalb des JSON.`;
 
   let arr;
@@ -215,8 +222,12 @@ Kein Text außerhalb des JSON.`;
     const tk = String(o.ticker).toUpperCase();
     const hold = Number(o.holdGefunden);
     const sell = Number(o.sellGefunden);
-    // NUR bestätigen, wenn explizit alleKaufen=true UND 0 Hold UND 0 Sell gemeldet.
-    if (o.alleKaufen === true && (!isFinite(hold) || hold === 0) && (!isFinite(sell) || sell === 0)) {
+    const srcCount = Array.isArray(o.quellen) ? o.quellen.filter(Boolean).length : 0;
+    // NUR bestätigen, wenn: alleKaufen=true UND 0 Hold UND 0 Sell UND mind. 2 genannte Quellen.
+    if (o.alleKaufen === true
+        && (isFinite(hold) && hold === 0)
+        && (isFinite(sell) && sell === 0)
+        && srcCount >= 2) {
       confirmed.add(tk);
     }
   }
