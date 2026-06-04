@@ -109,9 +109,9 @@ const today = () => new Date().toISOString().slice(0, 10);
         const sum = (c.buy || 0) + (c.outperform || 0) + (c.hold || 0) + (c.underperform || 0) + (c.sell || 0);
         // inkonsistent ODER Hold/Under/Sell>0 ODER ungültiger Link -> raus
         if ((s.analysts && sum > 0 && s.analysts !== sum) || c.hold || c.underperform || c.sell || !validMsLink(s.ratingUrl)) { delete db[tk]; nInc++; }
-      } else if ((s.miss || 0) >= 1) {
-        // schon mind. 1× erfolglos re-validiert, immer noch keine sauberen MS-Counts -> raus.
-        // (Frische Funde mit miss=0 bleiben, bekommen aber beim nächsten Lauf eine Chance.)
+      } else {
+        // Gemini-Perle OHNE saubere MS-Counts (Altbestand/nie sauber gelesen) -> raus.
+        // Erfüllt sie den strengen Ablauf wirklich (100%, Link), findet die Discovery sie neu.
         delete db[tk]; nNo++;
       }
     }
