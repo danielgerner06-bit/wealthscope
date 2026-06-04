@@ -303,14 +303,10 @@
     requestAnimationFrame(() => m.classList.add('show'));   // Einblend-Animation
   }
 
-  // Direktlink zur geprüften MarketScreener-Consensus-Seite (URL serverseitig validiert).
-  // Plus eine Namens-Suche als Gegencheck (falls man die exakte Seite verifizieren will).
+  // NUR der eine MarketScreener-Consensus-Direktlink dieser Aktie (serverseitig validiert).
+  // Keine Suche, kein zweiter Link — genau diese Seite, von der die Daten gezählt wurden.
   function verifyLinks(st) {
-    const q = encodeURIComponent((st.name || st.ticker || '').replace(/\s+(SE|AG|N\.?V\.?|S\.?A\.?|Corp\.?|Inc\.?|Ltd\.?|PLC|Co\.?|KGaA|Group|Holding|Vz\.?)\b/gi, '').trim() || st.ticker || '');
-    const links = [];
-    if (st.ratingUrl) links.push({ name: 'MarketScreener (Quelle)', url: st.ratingUrl });
-    links.push({ name: links.length ? 'Suche' : 'Auf MarketScreener suchen', url: 'https://www.marketscreener.com/search/?q=' + q });
-    return links;
+    return st.ratingUrl ? [{ name: 'MarketScreener Consensus', url: st.ratingUrl }] : [];
   }
   function closeStockModal() { const m = document.getElementById('stkModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
 

@@ -90,13 +90,13 @@ function normRating(o) {
     const BUY = buy ?? 0, OUTP = outp ?? 0, H = hold ?? 0, U = under ?? 0, S = sell ?? 0;
     const total = BUY + OUTP + H + U + S;
     const declared = Number(o.analysts ?? o.analystCount ?? o.anzahlAnalysten);
-    // STRENG: Gemini MUSS die Gesamtzahl separat nennen UND sie muss EXAKT der Summe
-    // entsprechen (kein Toleranzfenster). Ohne separate Zahl oder bei Abweichung -> verwerfen.
-    // (So fängt man Fehlzählungen wie "44 statt 35 Buy" ab, die sonst durchrutschen.)
+    // EXAKTER Ablauf: Hold/Underperform/Sell MÜSSEN alle 0 sein (sonst nicht 100% -> raus).
+    // Gemini MUSS die Gesamtzahl separat nennen und sie muss EXAKT der Summe entsprechen.
     if (total <= 0) countsBad = true;
+    else if (H > 0 || U > 0 || S > 0) countsBad = true;                         // kein 100%
     else if (!isFinite(declared) || declared <= 0 || declared !== total) countsBad = true;
     else {
-      buyPct = Math.round(((BUY + OUTP) / total) * 100);
+      buyPct = 100;                                  // per Definition (nur Buy+Outperform)
       outperformPct = Math.round((OUTP / total) * 100);
       analysts = total;
     }
@@ -113,27 +113,29 @@ function normRating(o) {
   return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts, ratingSource: 'marketscreener', ratingUrl: link, countsBad };
 }
 
-// STRENGE Regeln für die Analysten-Verteilung — AUSSCHLIESSLICH von MarketScreener.
-// (MarketScreener ist konservativer: nur Bank-Analysten, feine 5-Stufen-Skala, erfasst Hold
-//  zuverlässiger als TipRanks -> für ein 100%-Kriterium die verlässlichere Quelle.)
+// EXAKTER, EINZIG ERLAUBTER Ablauf (vom Nutzer vorgegeben) — nur MarketScreener.
 const RATING_RULES = `
-QUELLE — nutze AUSSCHLIESSLICH die MarketScreener-Consensus-Seite der Aktie (über Google finden):
- https://www.marketscreener.com/quote/stock/FIRMENNAME-ID/consensus/
-Lies dort unter "Analyst Consensus Detail" die ANZAHL der Analysten je Stufe:
- Buy, Outperform, Hold, Underperform, Sell ("Without Opinion" ignorieren).
-KEINE andere Quelle (kein TipRanks, kein Investing.com etc.) — nur MarketScreener.
+GENAUER ABLAUF (nur dieser ist erlaubt, sonst Aktie weglassen):
+1) Suche die Aktie auf MarketScreener und finde ihre EXAKTE Consensus-URL im Format:
+   https://www.marketscreener.com/quote/stock/FIRMENNAME-ID/consensus/
+   (Beispiel: https://www.marketscreener.com/quote/stock/AUTODESK-INC-40246776/consensus/)
+2) Öffne GENAU diese Seite und sieh dir das Widget "Analyst Consensus Detail" an.
+3) Prüfe dort die Stufen: Buy, Outperform, Hold, Underperform, Sell.
+   -> Hold, Underperform und Sell MÜSSEN ALLE = 0 sein.
+4) Wenn ja: zähle Buy und Outperform und gib die Aktie aus (mit genau dieser URL).
+   Wenn nein (irgendein Hold/Underperform/Sell > 0): Aktie NICHT ausgeben.
 
-Gib die rohen ZÄHLER zurück (NICHT selbst Prozente rechnen). Pflichtfelder je Aktie:
+KEINE andere Quelle (kein TipRanks, kein Investing.com). Keine Schätzung, keine geratene URL.
+Pflichtfelder je ausgegebener Aktie:
  - source: "marketscreener"
- - url: die VOLLSTÄNDIGE URL der Consensus-Seite (…/quote/stock/…/consensus/)
- - analysts: Gesamtzahl (MUSS exakt der Summe der Stufen entsprechen!)
- - buy, outperform, hold, underperform, sell  (Anzahl je Stufe)
+ - url: die VOLLSTÄNDIGE Consensus-URL aus Schritt 1 (…/quote/stock/…/consensus/)
+ - analysts: Gesamtzahl (= Buy + Outperform, da Hold/Underperform/Sell = 0)
+ - buy, outperform   (Anzahl je Stufe)
+ - hold, underperform, sell  (müssen 0 sein)
  - ticker, name, land, yahoo (Yahoo-Symbol inkl. Suffix z.B. "KTN.DE","NVDA")
  - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
  - upside (% oder null), pe (KGV-Zahl oder null bei Verlust)
-
-STRENG: Verteile ALLE Analysten auf die Stufen (nicht alle in eine). Summe der Stufen = analysts.
-Findest du die Aktie nicht eindeutig auf MarketScreener, oder bist du unsicher -> WEGLASSEN.`;
+Summe der Stufen MUSS = analysts. Unsicher oder Aktie nicht eindeutig gefunden -> WEGLASSEN.`;
 
 /* (A) Kandidaten prüfen ------------------------------------------------ */
 export async function checkCandidates(key, names) {

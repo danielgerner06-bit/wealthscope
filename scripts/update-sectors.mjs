@@ -81,7 +81,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   // Einmalig (REVALIDATE_TAG): alle Gemini-Perlen zur Neuprüfung gegen die feste Quelle
   // (MarketScreener) freigeben -> recheckAt löschen, damit die Re-Validierung sie über die
   // nächsten Läufe neu bewertet und inkonsistente Altdaten (gemischte Quellen) ersetzt/aussortiert.
-  const REVALIDATE_TAG = 'ms-exact-sum-v5';   // exakte Summe=analysts -> alle neu prüfen
+  const REVALIDATE_TAG = 'ms-no-hold-v6';   // Hold/Underperform/Sell müssen 0 sein -> alle neu prüfen
   if (purged) console.log(`Bereinigt: ${purged} OTC-Geister-Treffer entfernt.`);
 
   // Kriteriums-Bereinigung: bereits aufgenommene Treffer, die das aktuelle Kauf-%-Kriterium
