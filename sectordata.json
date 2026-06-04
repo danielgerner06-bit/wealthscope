@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T10:00:21.560Z",
+  "updatedAt": "2026-06-04T10:10:33.560Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -288,6 +288,37 @@
   ],
   "topStocks": [
     {
+      "ticker": "PRAX",
+      "name": "Praxis Precision Medicines, Inc.",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 17,
+      "upside": 74,
+      "yahoo": "PRAX",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 14,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "msUrl": "https://www.marketscreener.com/quote/stock/PRAXIS-PRECISION-MEDICINES-INC-44041345/consensus/",
+      "via": "gemini-discover",
+      "source": "web",
+      "seen": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1,
+      "perf6m": 12.48,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -20.47,
+      "pe": null,
+      "eps": -13.4,
+      "div": 0,
+      "enrichAt": "2026-06-04"
+    },
+    {
       "ticker": "FRE.DE",
       "name": "Fresenius SE & Co. KGaA",
       "sector": "health",
@@ -339,6 +370,29 @@
       "div": null
     },
     {
+      "ticker": "DTE.DE",
+      "name": "Deutsche Telekom AG",
+      "sector": "comm",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 17,
+      "upside": 35,
+      "yahoo": "DTE.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener 2026-06-03",
+      "seen": "2026-06-03",
+      "miss": 2,
+      "perf6m": 5.22,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": 4.21,
+      "pe": 15.5,
+      "eps": 1.81,
+      "div": 3.46,
+      "enrichAt": "2026-06-03",
+      "recheckAt": "2026-06-03"
+    },
+    {
       "ticker": "SRT",
       "name": "Sartorius Stedim Biotech",
       "sector": "health",
@@ -368,29 +422,6 @@
       "eps": 2.75,
       "div": 0.39,
       "enrichAt": "2026-06-04"
-    },
-    {
-      "ticker": "DTE.DE",
-      "name": "Deutsche Telekom AG",
-      "sector": "comm",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 17,
-      "upside": 35,
-      "yahoo": "DTE.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "marketscreener 2026-06-03",
-      "seen": "2026-06-03",
-      "miss": 2,
-      "perf6m": 5.22,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 4.21,
-      "pe": 15.5,
-      "eps": 1.81,
-      "div": 3.46,
-      "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
     },
     {
       "ticker": "TM",
@@ -462,6 +493,37 @@
       "div": 4.3,
       "enrichAt": "2026-06-03",
       "recheckAt": "2026-06-03"
+    },
+    {
+      "ticker": "VRDN",
+      "name": "Veridian Therapeutics, Inc.",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 16,
+      "upside": 28,
+      "yahoo": "VRDN",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 14,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "msUrl": "https://www.marketscreener.com/quote/stock/VERIDIAN-THERAPEUTICS-INC-44041344/consensus/",
+      "via": "gemini-discover",
+      "source": "web",
+      "seen": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1,
+      "perf6m": -48.94,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -8.1,
+      "pe": null,
+      "eps": -3.35,
+      "div": 0,
+      "enrichAt": "2026-06-04"
     },
     {
       "ticker": "KTN",
@@ -809,6 +871,37 @@
       "recheckAt": "2026-06-03"
     },
     {
+      "ticker": "CRDO",
+      "name": "Credo Technology Group",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 18,
+      "upside": 8,
+      "yahoo": "CRDO",
+      "peGemini": 98.3,
+      "ratingCounts": {
+        "buy": 18,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "msUrl": "https://www.marketscreener.com/quote/stock/CREDO-TECHNOLOGY-GROUP-HOLDING-LTD-13023812/consensus/",
+      "via": "gemini",
+      "source": "web",
+      "seen": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1,
+      "perf6m": 26.36,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 14.58,
+      "pe": 117.9,
+      "eps": 1.82,
+      "div": 0,
+      "enrichAt": "2026-06-04"
+    },
+    {
       "ticker": "ASMI",
       "name": "ASM International NV",
       "sector": "ai_semi",
@@ -1021,37 +1114,6 @@
       "div": null
     },
     {
-      "ticker": "CRDO",
-      "name": "Credo Technology Group",
-      "sector": "ai_semi",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 18,
-      "upside": 8,
-      "yahoo": "CRDO",
-      "peGemini": 98.3,
-      "ratingCounts": {
-        "buy": 18,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "msUrl": "https://www.marketscreener.com/quote/stock/CREDO-TECHNOLOGY-GROUP-HOLDING-LTD-13023812/consensus/",
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-04",
-      "recheckAt": "2026-06-04",
-      "miss": 1,
-      "perf6m": 26.36,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": 14.58,
-      "pe": 117.9,
-      "eps": 1.82,
-      "div": 0,
-      "enrichAt": "2026-06-04"
-    },
-    {
       "ticker": "A000660",
       "name": "SK Hynix Inc",
       "sector": "ai_semi",
@@ -1070,6 +1132,37 @@
       "pe": null,
       "div": 0.13,
       "enrichAt": "2026-06-03"
+    },
+    {
+      "ticker": "BESI",
+      "name": "BE Semiconductor Industries NV",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 22,
+      "upside": -12,
+      "yahoo": "BESI.AS",
+      "peGemini": 49.4,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 23,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "msUrl": "https://www.marketscreener.com/quote/stock/BE-SEMICONDUCTOR-INDUSTRIES-NV-6080660/consensus/",
+      "via": "gemini",
+      "source": "web",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": 108.15,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 13.11,
+      "pe": 151.8,
+      "eps": 1.9,
+      "div": 0.55,
+      "enrichAt": "2026-06-04"
     },
     {
       "ticker": "IFX.DE",
@@ -1161,37 +1254,6 @@
       "eps": -28.51,
       "div": 0.63,
       "enrichAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
-    },
-    {
-      "ticker": "ON",
-      "name": "ON Semiconductor Corporation",
-      "sector": "ai_semi",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 33,
-      "upside": null,
-      "yahoo": "ON.O",
-      "peGemini": null,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 33,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "msUrl": "https://www.marketscreener.com/quote/stock/ON-SEMICONDUCTOR-CORPORATION-6407065/consensus/",
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
-      "perf6m": 134.79,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 27.87,
-      "pe": 98.5,
-      "eps": 1.36,
-      "div": 0,
-      "enrichAt": "2026-06-03",
-      "miss": 0,
       "recheckAt": "2026-06-03"
     },
     {
@@ -1624,37 +1686,6 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-03"
-    },
-    {
-      "ticker": "BESI",
-      "name": "BE Semiconductor Industries NV",
-      "sector": "ai_semi",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 22,
-      "upside": -12,
-      "yahoo": "BESI.AS",
-      "peGemini": 49.4,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 23,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "msUrl": "https://www.marketscreener.com/quote/stock/BE-SEMICONDUCTOR-INDUSTRIES-NV-6080660/consensus/",
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-04",
-      "miss": 0,
-      "recheckAt": "2026-06-04",
-      "perf6m": 108.15,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": 13.11,
-      "pe": 151.8,
-      "eps": 1.9,
-      "div": 0.55,
-      "enrichAt": "2026-06-04"
     }
   ],
   "sectorNotes": {
@@ -1771,28 +1802,28 @@
   "news": {
     "items": [
       {
-        "text": "US-Börsen: Wall Street setzt Rekordjagd fort – Alphabet schürt KI-Sorgen.",
-        "stamp": "02.06.26"
+        "text": "Bitcoin stürzt ab: Wertverlust von Milliarden.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "Iran: Keine Gespräche mehr mit den USA nach Verhandlungsstockung.",
-        "stamp": "02.06.26"
+        "text": "Hochtief steigt in den DAX auf, Porsche SE verdrängt.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "Eurozone-Inflation steigt im Mai auf 3,2 Prozent – Ölpreise treiben Preise.",
-        "stamp": "02.06.26"
+        "text": "SpaceX-Aktie: 135 USD pro Aktie, Anleger stehen Schlange.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "Merz sichert Ungarn Unterstützung für Rückkehr \"in die Mitte Europas\" zu.",
-        "stamp": "02.06.26"
+        "text": "Google muss KI-Suche öffnen wegen Kartellrecht.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "Russland: Massive Luftangriffe auf Kiew – Tote und Verletzte.",
-        "stamp": "02.06.26"
+        "text": "Marvell Technology Aktie außer Kontrolle geraten.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "EZB: Euro-Bedeutung an weltweiten Finanzmärkten wächst.",
-        "stamp": "02.06.26"
+        "text": "Broadcom enttäuscht mit KI-Chip-Prognose, Aktie fällt.",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -1800,8 +1831,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 5567,
-    "candCursor": 28,
+    "lastCursor": 5867,
+    "candCursor": 36,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -1953,50 +1984,66 @@
       "Arch Capital Group Ltd.",
       "Marvell Technology, Inc.",
       "Super Micro Computer, Inc.",
-      "Ambarella, Inc."
+      "Ambarella, Inc.",
+      "Praxis Precision Medicines, Inc.",
+      "Veridian Therapeutics, Inc."
     ],
     "noteCursor": 8,
-    "focusCursor": 5,
+    "focusCursor": 6,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 176,
-      "cons_def": 90,
-      "materials": 113,
-      "health": 410,
-      "finance": 366,
-      "energy": 164,
-      "hardware": 104,
-      "software": 305,
-      "industrial": 144,
-      "utilities": 66,
-      "comm": 70,
-      "ai_semi": 57,
-      "realestate": 30
+      "cons_cycl": 181,
+      "cons_def": 94,
+      "materials": 118,
+      "health": 436,
+      "finance": 378,
+      "energy": 173,
+      "hardware": 105,
+      "software": 321,
+      "industrial": 146,
+      "utilities": 71,
+      "comm": 72,
+      "ai_semi": 64,
+      "realestate": 34
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "ORLA",
+      "ORLY",
+      "ORMP",
+      "ORN",
+      "ORRF",
+      "OSBC",
+      "OSCR",
+      "OSG",
+      "OSIS",
+      "OSK",
+      "OSPN",
+      "OSRH",
+      "OSS",
+      "OSTX"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 178,
-      "cons_def": 90,
-      "materials": 116,
-      "health": 415,
-      "finance": 372,
-      "energy": 166,
-      "hardware": 107,
-      "software": 313,
-      "industrial": 149,
-      "utilities": 72,
-      "comm": 71,
-      "ai_semi": 67,
-      "realestate": 30
+      "cons_cycl": 183,
+      "cons_def": 94,
+      "materials": 121,
+      "health": 443,
+      "finance": 384,
+      "energy": 175,
+      "hardware": 108,
+      "software": 329,
+      "industrial": 151,
+      "utilities": 77,
+      "comm": 73,
+      "ai_semi": 73,
+      "realestate": 34
     },
-    "heavyAt": "2026-06-04T04:05:04.760Z",
+    "heavyAt": "2026-06-04T10:04:34.697Z",
     "revalidateTag": "ms-counts-consistency-v3",
     "fmpRetryTag": "grades-summary-fix"
   },
   "blacklist": {
     "MUM": "2026-09-03"
-  },
-  "yahooAt": "2026-06-04T10:00:21.560Z"
+  }
 }
