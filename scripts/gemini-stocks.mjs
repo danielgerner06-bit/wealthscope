@@ -49,12 +49,18 @@ async function groundedJSON(key, prompt) {
     const text = cand?.content?.parts?.map(p => p.text).filter(Boolean).join('').trim() || '';
     const sources = (cand?.groundingMetadata?.groundingChunks || [])
       .map(c => c.web?.title || c.web?.uri).filter(Boolean);
-    if (process.env.GEMINI_DEBUG && !text) {
-      console.log(`  [groundedJSON LEER] finishReason=${cand?.finishReason} promptFeedback=${JSON.stringify(j.promptFeedback)} parts=${JSON.stringify(cand?.content?.parts)?.slice(0,200)} usage=${JSON.stringify(j.usageMetadata)}`);
+    // flash-lite liefert mit Grounding NICHT-DETERMINISTISCH mal eine leere Antwort
+    // (finishReason=STOP, aber parts=undefined). Das ist transient -> kurz warten und erneut
+    // versuchen, statt aufzugeben. Erst nach mehreren Leerläufen leer zurückgeben.
+    if (!text) {
+      if (process.env.GEMINI_DEBUG) {
+        console.log(`  [groundedJSON LEER #${attempt + 1}] finishReason=${cand?.finishReason} usage=${JSON.stringify(j.usageMetadata)}`);
+      }
+      if (attempt < 4) { await new Promise(r => setTimeout(r, 1500 * (attempt + 1))); continue; }
     }
     return { text, sources };
   }
-  throw new Error(lastErr);
+  return { text: '', sources: [] };   // alle Versuche leer -> leer zurück (kein harter Fehler)
 }
 
 // Extrahiert das erste JSON-Array/-Objekt aus einem Text (Grounding erlaubt kein responseMimeType=json).
