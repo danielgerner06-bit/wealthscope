@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T13:16:31.828Z",
+  "updatedAt": "2026-06-04T13:33:45.341Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -287,37 +287,6 @@
     }
   ],
   "topStocks": [
-    {
-      "ticker": "PRAX",
-      "name": "Praxis Precision Medicines, Inc.",
-      "sector": "health",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 17,
-      "upside": 74,
-      "yahoo": "PRAX",
-      "peGemini": null,
-      "ratingCounts": {
-        "buy": 14,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "msUrl": "https://www.marketscreener.com/quote/stock/PRAXIS-PRECISION-MEDICINES-INC-44041345/consensus/",
-      "via": "gemini-discover",
-      "source": "web",
-      "seen": "2026-06-04",
-      "recheckAt": "2026-06-04",
-      "miss": 1,
-      "perf6m": 12.48,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": -20.47,
-      "pe": null,
-      "eps": -13.4,
-      "div": 0,
-      "enrichAt": "2026-06-04"
-    },
     {
       "ticker": "FRE.DE",
       "name": "Fresenius SE & Co. KGaA",
@@ -1099,29 +1068,6 @@
       "enrichAt": "2026-06-04"
     },
     {
-      "ticker": "IFX.DE",
-      "name": "Infineon Technologies AG",
-      "sector": "ai_semi",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 24,
-      "upside": -13,
-      "yahoo": "IFX.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
-      "perf6m": 139.49,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 54.03,
-      "pe": 107.3,
-      "eps": 0.82,
-      "div": 0.4,
-      "enrichAt": "2026-06-03",
-      "msUrl": "https://www.marketscreener.com/quote/stock/INFINEON-TECHNOLOGIES-AG-6231/consensus/",
-      "miss": 0
-    },
-    {
       "ticker": "WCH",
       "name": "WCH Service AG",
       "sector": "industrial",
@@ -1166,6 +1112,37 @@
       "div": 2.67,
       "enrichAt": "2026-06-03",
       "tdAt": "2026-06-03"
+    },
+    {
+      "ticker": "IFX.DE",
+      "name": "Infineon Technologies AG",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 24,
+      "upside": -20,
+      "yahoo": "IFX.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "web",
+      "seen": "2026-06-04",
+      "perf6m": 139.49,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": 54.03,
+      "pe": 107.3,
+      "eps": 0.82,
+      "div": 0.4,
+      "enrichAt": "2026-06-03",
+      "msUrl": "https://www.marketscreener.com/quote/stock/INFINEON-TECHNOLOGIES-AG-6231004/consensus/",
+      "miss": 0,
+      "ratingCounts": {
+        "buy": 24,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "recheckAt": "2026-06-04"
     },
     {
       "ticker": "6723",
@@ -1736,28 +1713,24 @@
   "news": {
     "items": [
       {
-        "text": "Bitcoin stürzt ab: Wertverlust von Milliarden.",
+        "text": "Geopolitik: Iran betont Kontakte trotz US-Spekulationen.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Hochtief steigt in den DAX auf, Porsche SE verdrängt.",
+        "text": "DAX-Rückschlag setzt sich fort, Rekordjagd in USA/Asien stockt.",
         "stamp": "04.06.26"
       },
       {
-        "text": "SpaceX-Aktie: 135 USD pro Aktie, Anleger stehen Schlange.",
-        "stamp": "04.06.26"
+        "text": "US-Notenbankchef Warsh plant weitreichende Reformen der Fed.",
+        "stamp": "03.06.26"
       },
       {
-        "text": "Google muss KI-Suche öffnen wegen Kartellrecht.",
-        "stamp": "04.06.26"
+        "text": "Datendiebstahl bei Unimed betrifft über 135.000 Personen.",
+        "stamp": "03.06.26"
       },
       {
-        "text": "Marvell Technology Aktie außer Kontrolle geraten.",
-        "stamp": "04.06.26"
-      },
-      {
-        "text": "Broadcom enttäuscht mit KI-Chip-Prognose, Aktie fällt.",
-        "stamp": "04.06.26"
+        "text": "Merck-Aktie erreicht neues 52-Wochen-Hoch trotz Dax-Schwäche.",
+        "stamp": "03.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -1765,8 +1738,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 5867,
-    "candCursor": 36,
+    "lastCursor": 6167,
+    "candCursor": 44,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -1923,57 +1896,55 @@
       "Veridian Therapeutics, Inc."
     ],
     "noteCursor": 8,
-    "focusCursor": 6,
+    "focusCursor": 7,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 181,
-      "cons_def": 94,
-      "materials": 118,
-      "health": 436,
-      "finance": 378,
-      "energy": 173,
-      "hardware": 105,
-      "software": 321,
-      "industrial": 146,
-      "utilities": 71,
+      "cons_cycl": 190,
+      "cons_def": 98,
+      "materials": 119,
+      "health": 458,
+      "finance": 398,
+      "energy": 180,
+      "hardware": 110,
+      "software": 347,
+      "industrial": 155,
+      "utilities": 74,
       "comm": 72,
-      "ai_semi": 64,
+      "ai_semi": 66,
       "realestate": 34
     },
     "pendingReject": [
-      "ORLA",
-      "ORLY",
-      "ORMP",
-      "ORN",
-      "ORRF",
-      "OSBC",
-      "OSCR",
-      "OSG",
-      "OSIS",
-      "OSK",
-      "OSPN",
-      "OSRH",
-      "OSS",
-      "OSTX"
+      "PLPC",
+      "PLRX",
+      "PLSE",
+      "PLTK",
+      "PLTR",
+      "PLUG",
+      "PLUR",
+      "PLUS",
+      "PLX",
+      "PLXS",
+      "PLYX",
+      "PM"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 183,
-      "cons_def": 94,
+      "cons_cycl": 191,
+      "cons_def": 98,
       "materials": 121,
-      "health": 443,
-      "finance": 384,
-      "energy": 175,
-      "hardware": 108,
-      "software": 329,
-      "industrial": 151,
-      "utilities": 77,
+      "health": 463,
+      "finance": 404,
+      "energy": 182,
+      "hardware": 113,
+      "software": 355,
+      "industrial": 160,
+      "utilities": 80,
       "comm": 73,
-      "ai_semi": 73,
+      "ai_semi": 75,
       "realestate": 34
     },
-    "heavyAt": "2026-06-04T10:04:34.697Z",
+    "heavyAt": "2026-06-04T13:27:49.658Z",
     "revalidateTag": "ms-counts-consistency-v3",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1982,6 +1953,5 @@
     "SOGN.SW": "2026-09-04",
     "VOW3.DE": "2026-09-04",
     "HEI.DE": "2026-09-04"
-  },
-  "yahooAt": "2026-06-04T13:00:21.382Z"
+  }
 }
