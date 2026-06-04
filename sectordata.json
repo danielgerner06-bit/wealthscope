@@ -401,28 +401,28 @@
   "news": {
     "items": [
       {
-        "text": "SoftBank plant gigantische KI-Rechenzentren in Frankreich",
+        "text": "Irland meldet drastischen BIP-Einbruch im 1. Quartal",
         "stamp": "04.06.26"
       },
       {
-        "text": "Bermuda wagt historisches Krypto-Experiment",
+        "text": "Eurozone: Einzelhandelsumsätze im April stärker als erwartet gesunken",
         "stamp": "04.06.26"
       },
       {
-        "text": "US-Börsen uneinheitlich – Gewinnmitnahmen im Technologiesektor",
+        "text": "Kanada stellt KI-Strategie mit Milliardenförderung vor",
         "stamp": "04.06.26"
       },
       {
-        "text": "US-Militär verbannt China-Wolfram: Profitiert Western Star Resources?",
-        "stamp": "03.06.26"
+        "text": "Dryden Gold Corp. meldet neue hochgradige Bohrergebnisse",
+        "stamp": "04.06.26"
       },
       {
-        "text": "EU will Abhängigkeit von US-Tech-Infrastruktur verringern",
-        "stamp": "03.06.26"
+        "text": "Trans Canada Gold Corp. kurz vor Abschluss von Transaktion",
+        "stamp": "04.06.26"
       },
       {
-        "text": "US-Privatsektor mit robustem Stellenzuwachs im Mai",
-        "stamp": "03.06.26"
+        "text": "EU entlastet Banken bei neuen Handelsregeln",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -430,8 +430,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 4234,
-    "candCursor": 48,
+    "lastCursor": 4534,
+    "candCursor": 56,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -637,42 +637,45 @@
       "Ultra Clean Holdings, Inc."
     ],
     "noteCursor": 8,
-    "focusCursor": 6,
+    "focusCursor": 7,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 355,
-      "cons_def": 177,
-      "materials": 230,
-      "health": 943,
-      "finance": 723,
-      "energy": 322,
-      "hardware": 221,
-      "software": 664,
-      "industrial": 297,
-      "utilities": 131,
-      "comm": 148,
-      "ai_semi": 126,
-      "realestate": 63
+      "cons_cycl": 364,
+      "cons_def": 186,
+      "materials": 237,
+      "health": 967,
+      "finance": 734,
+      "energy": 332,
+      "hardware": 229,
+      "software": 673,
+      "industrial": 303,
+      "utilities": 132,
+      "comm": 151,
+      "ai_semi": 130,
+      "realestate": 66
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "LBRX",
+      "LC"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 355,
-      "cons_def": 177,
-      "materials": 230,
-      "health": 943,
-      "finance": 723,
-      "energy": 322,
-      "hardware": 221,
-      "software": 664,
-      "industrial": 297,
-      "utilities": 131,
-      "comm": 148,
-      "ai_semi": 126,
-      "realestate": 63
+      "cons_cycl": 364,
+      "cons_def": 186,
+      "materials": 237,
+      "health": 967,
+      "finance": 734,
+      "energy": 332,
+      "hardware": 229,
+      "software": 673,
+      "industrial": 303,
+      "utilities": 132,
+      "comm": 151,
+      "ai_semi": 130,
+      "realestate": 66
     },
-    "heavyAt": "2026-06-04T21:46:51.044Z",
+    "heavyAt": "2026-06-04T21:54:30.372Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
