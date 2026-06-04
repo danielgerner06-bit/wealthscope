@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T22:23:27.890Z",
+  "updatedAt": "2026-06-04T22:30:13.547Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -401,24 +401,12 @@
   "news": {
     "items": [
       {
-        "text": "US-Notenbank: Fed-Zinsentscheid beeinflusst Märkte weltweit",
+        "text": "Geopolitik, Märkte und Konzerne: Europa im globalen Spannungsfeld.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Russische Wirtschaft wankt: Angst vor Kriegskosten",
+        "text": "Eurokurs kehrt zurück über 1,16 US-Dollar – Brent-Öl fällt unter 75 Dollar.",
         "stamp": "04.06.26"
-      },
-      {
-        "text": "SAP und Airbus führen den DAX an",
-        "stamp": "04.06.26"
-      },
-      {
-        "text": "Geopolitik und Welthandel: Welt im Umbruch",
-        "stamp": "03.06.26"
-      },
-      {
-        "text": "KI-Boom setzt Geldpolitik der Federal Reserve unter Druck",
-        "stamp": "02.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -426,8 +414,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 5434,
-    "candCursor": 80,
+    "lastCursor": 5734,
+    "candCursor": 88,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -636,49 +624,61 @@
       "Alstom SA",
       "IMCD N.V.",
       "2G Energy AG",
-      "OHB SE"
+      "OHB SE",
+      "Arlo Technologies",
+      "First Watch Restaurant Group",
+      "Mama's Creations",
+      "Viant Technology",
+      "RealReal",
+      "MP Materials",
+      "Napco Security Technologies",
+      "Septerna, Inc.",
+      "Kornit Digital",
+      "AngioDynamics"
     ],
     "noteCursor": 8,
-    "focusCursor": 2,
+    "focusCursor": 3,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 387,
-      "cons_def": 198,
-      "materials": 260,
-      "health": 1028,
-      "finance": 773,
-      "energy": 348,
-      "hardware": 241,
-      "software": 710,
-      "industrial": 320,
-      "utilities": 137,
-      "comm": 161,
-      "ai_semi": 140,
-      "realestate": 68
+      "cons_cycl": 389,
+      "cons_def": 203,
+      "materials": 264,
+      "health": 1053,
+      "finance": 787,
+      "energy": 357,
+      "hardware": 244,
+      "software": 724,
+      "industrial": 324,
+      "utilities": 142,
+      "comm": 162,
+      "ai_semi": 145,
+      "realestate": 70
     },
     "pendingReject": [
-      "NGVT",
-      "NI",
-      "NIC"
+      "OGE",
+      "OGEN",
+      "OGI",
+      "OGN",
+      "OGS"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 387,
-      "cons_def": 198,
-      "materials": 260,
-      "health": 1028,
-      "finance": 773,
-      "energy": 348,
-      "hardware": 241,
-      "software": 710,
-      "industrial": 320,
-      "utilities": 137,
-      "comm": 161,
-      "ai_semi": 140,
-      "realestate": 68
+      "cons_cycl": 389,
+      "cons_def": 203,
+      "materials": 264,
+      "health": 1053,
+      "finance": 787,
+      "energy": 357,
+      "hardware": 244,
+      "software": 724,
+      "industrial": 324,
+      "utilities": 142,
+      "comm": 162,
+      "ai_semi": 145,
+      "realestate": 70
     },
-    "heavyAt": "2026-06-04T22:17:01.713Z",
+    "heavyAt": "2026-06-04T22:24:10.085Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
