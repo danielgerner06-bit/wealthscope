@@ -97,7 +97,6 @@ const today = () => new Date().toISOString().slice(0, 10);
   // Bereinigung (am Anfang UND am Ende): entfernt Gemini-Perlen, die den strengen MS-Ablauf
   // NICHT (mehr) erfüllen — inkonsistente Counts ODER (nach mind. 1 Re-Validierungs-Versuch)
   // weiterhin ohne gültige MS-Counts + /consensus/-Link. So bleibt nur, was den Ablauf besteht.
-  const validMsLink = u => !!u && /^https?:\/\/(www\.)?marketscreener\.com\/quote\/stock\/[^\/]+\//i.test(u) && /consensus\/?$/i.test(u);
   const cleanInconsistent = (label) => {
     let nInc = 0, nNo = 0;
     for (const tk of Object.keys(db)) {
@@ -107,15 +106,19 @@ const today = () => new Date().toISOString().slice(0, 10);
       const cleanCounts = c && !('strongBuy' in c);
       if (cleanCounts) {
         const sum = (c.buy || 0) + (c.outperform || 0) + (c.hold || 0) + (c.underperform || 0) + (c.sell || 0);
-        // inkonsistent ODER Hold/Under/Sell>0 ODER ungültiger Link -> raus
-        if ((s.analysts && sum > 0 && s.analysts !== sum) || c.hold || c.underperform || c.sell || !validMsLink(s.ratingUrl)) { delete db[tk]; nInc++; }
+        // inkonsistent (analysts != Summe) ODER irgendein Hold/Underperform/Sell > 0 -> raus.
+        // (MS-Link ist KEIN Kriterium mehr — Geminis IDs waren unzuverlässig.)
+        if ((s.analysts && sum > 0 && s.analysts !== sum) || c.hold || c.underperform || c.sell) { delete db[tk]; nInc++; }
+        // zusätzlich: noch nicht unabhängig gegengeprüfte Perlen NICHT anzeigen -> raus,
+        // bis verifyNoHold sie bestätigt (verifiedAt gesetzt). "Im Zweifel raus".
+        else if (!s.verifiedAt) { delete db[tk]; nNo++; }
       } else {
-        // Gemini-Perle OHNE saubere MS-Counts (Altbestand/nie sauber gelesen) -> raus.
-        // Erfüllt sie den strengen Ablauf wirklich (100%, Link), findet die Discovery sie neu.
+        // Gemini-Perle OHNE saubere Counts -> raus. Erfüllt sie den Ablauf wirklich,
+        // kommt sie über checkCandidates + Gegenprüfung sauber zurück.
         delete db[tk]; nNo++;
       }
     }
-    if (nInc || nNo) console.log(`Bereinigt (${label}): ${nInc} inkonsistent, ${nNo} ohne gültige MS-Daten entfernt.`);
+    if (nInc || nNo) console.log(`Bereinigt (${label}): ${nInc} inkonsistent, ${nNo} unbestätigt/ohne Counts entfernt.`);
   };
   cleanInconsistent('Start');
 

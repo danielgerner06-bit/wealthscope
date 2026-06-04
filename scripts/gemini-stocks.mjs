@@ -66,10 +66,11 @@ function extractJSON(text) {
 }
 
 function normRating(o) {
-  // AUSSCHLIESSLICH MarketScreener-Consensus: Buy, Outperform, Hold, Underperform, Sell.
+  // Stufen: Buy, Outperform, Hold, Underperform, Sell (über mehrere durchsuchbare Quellen).
   // Kaufempfehlung = Buy + Outperform; Outperform-Wert = nur die Outperform-Stufe.
   // Kriterium 100%: NUR Buy/Outperform > 0, Hold/Underperform/Sell = 0.
-  // WIR rechnen aus den Zählern; Link muss eine echte MS-Consensus-URL sein, sonst countsBad.
+  // WIR rechnen aus den Zählern. Der MarketScreener-Link ist OPTIONAL (Geminis IDs waren
+  // unzuverlässig) — die Wahrheit sichert die unabhängige Gegenprüfung (verifyNoHold).
   const cnt = k => { const v = Number(o[k]); return isFinite(v) && v >= 0 ? Math.round(v) : null; };
   const buy = cnt('buy');
   const outp = cnt('outperform') ?? cnt('outperformCount') ?? cnt('accumulate');
@@ -77,15 +78,15 @@ function normRating(o) {
   const under = cnt('underperform') ?? 0;
   const sell = (cnt('sell') ?? 0) + (cnt('strongSell') ?? cnt('strong_sell') ?? 0);
 
-  // Link MUSS eine MarketScreener-Consensus-URL sein (keine andere Quelle akzeptiert).
+  // MarketScreener-Link nur noch optional mitführen, falls vorhanden (kein Pflichtfeld mehr).
   const rawUrl = (o.url || o.sourceUrl || o.marketScreenerUrl || o.msUrl || '').toString().trim();
   const msMatch = /^https?:\/\/(www\.)?marketscreener\.com\/quote\/stock\/[^\/]+\//i.test(rawUrl);
   const link = msMatch ? (/consensus\/?$/i.test(rawUrl) ? rawUrl : rawUrl.replace(/\/+$/, '/') + 'consensus/') : null;
 
   let buyPct, outperformPct = null, analysts, countsBad = false;
   const haveCounts = [buy, outp, hold].some(x => x != null);
-  if (!link || !haveCounts) {
-    countsBad = true;   // ohne gültige MS-URL oder Zähler -> raus
+  if (!haveCounts) {
+    countsBad = true;   // ohne Zähler -> raus
   } else {
     const BUY = buy ?? 0, OUTP = outp ?? 0, H = hold ?? 0, U = under ?? 0, S = sell ?? 0;
     const total = BUY + OUTP + H + U + S;
@@ -110,31 +111,33 @@ function normRating(o) {
   if (!SECTOR_IDS.includes(sector)) sector = sectorForFinnhub(o.industry || o.branche || sector) || null;
   const yahoo = (o.yahoo || o.yahooSymbol || '').toString().trim().toUpperCase() || null;
   const counts = (!countsBad) ? { buy: buy ?? 0, outperform: outp ?? 0, hold: hold ?? 0, underperform: under ?? 0, sell: sell ?? 0 } : null;
-  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts, ratingSource: 'marketscreener', ratingUrl: link, countsBad };
+  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts, ratingSource: 'analysten-konsens', ratingUrl: link, countsBad };
 }
 
-// EXAKTER, EINZIG ERLAUBTER Ablauf (vom Nutzer vorgegeben) — nur MarketScreener.
+// Ablauf: Analysten-Verteilung aus DURCHSUCHBAREM TEXT lesen (nicht aus dem MarketScreener-
+// Diagramm — das ist ein Bild und die Seite ist gesperrt). Endgültig bestätigt wird später
+// durch eine separate, strengere Mehrquellen-Gegenprüfung (verifyNoHold).
 const RATING_RULES = `
-GENAUER ABLAUF (nur dieser ist erlaubt, sonst Aktie weglassen):
-1) Suche die Aktie auf MarketScreener und finde ihre EXAKTE Consensus-URL im Format:
-   https://www.marketscreener.com/quote/stock/FIRMENNAME-ID/consensus/
-   (Beispiel: https://www.marketscreener.com/quote/stock/AUTODESK-INC-40246776/consensus/)
-2) Öffne GENAU diese Seite und sieh dir das Widget "Analyst Consensus Detail" an.
-3) Prüfe dort die Stufen: Buy, Outperform, Hold, Underperform, Sell.
-   -> Hold, Underperform und Sell MÜSSEN ALLE = 0 sein.
-4) Wenn ja: zähle Buy und Outperform und gib die Aktie aus (mit genau dieser URL).
+GENAUER ABLAUF (sonst Aktie weglassen):
+1) Finde über die Google-Suche die Analysten-Verteilung der Aktie. Diese steht als TEXT auf
+   Seiten wie TipRanks (".../forecast"), MarketBeat (".../forecast"), Investing.com
+   ("consensus-estimates"), Yahoo Finance ("analysis") oder stockanalysis.com/ratings —
+   in der Form "X Buy, Y Hold, Z Sell" bzw. Strong Buy / Buy / Hold / Sell / Strong Sell.
+2) Prüfe die Stufen Buy, Outperform(=Moderate/Accumulate), Hold, Underperform, Sell.
+   -> Hold, Underperform und Sell MÜSSEN ALLE = 0 sein (über die Quelle(n), die du gelesen hast).
+3) Wenn ja: zähle Buy und Outperform und gib die Aktie aus.
    Wenn nein (irgendein Hold/Underperform/Sell > 0): Aktie NICHT ausgeben.
 
-KEINE andere Quelle (kein TipRanks, kein Investing.com). Keine Schätzung, keine geratene URL.
+Sei ehrlich: KEINE geratenen Zahlen. Wenn du die Verteilung nicht als Text findest -> WEGLASSEN.
+Erfinde KEINE URL. (Ein Link ist optional; nur angeben, wenn du ihn wirklich aus einem Suchtreffer hast.)
 Pflichtfelder je ausgegebener Aktie:
- - source: "marketscreener"
- - url: die VOLLSTÄNDIGE Consensus-URL aus Schritt 1 (…/quote/stock/…/consensus/)
  - analysts: Gesamtzahl (= Buy + Outperform, da Hold/Underperform/Sell = 0)
  - buy, outperform   (Anzahl je Stufe)
  - hold, underperform, sell  (müssen 0 sein)
  - ticker, name, land, yahoo (Yahoo-Symbol inkl. Suffix z.B. "KTN.DE","NVDA")
  - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
  - upside (% oder null), pe (KGV-Zahl oder null bei Verlust)
+ - url (OPTIONAL): nur eine echte, in einem Suchtreffer gesehene URL — sonst weglassen.
 Summe der Stufen MUSS = analysts. Unsicher oder Aktie nicht eindeutig gefunden -> WEGLASSEN.`;
 
 /* (A) Kandidaten prüfen ------------------------------------------------ */

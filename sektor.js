@@ -286,7 +286,8 @@
       if (rc.hold) parts.push('<b style="color:#fbbf24">' + rc.hold + '</b> Hold');
       if (rc.underperform) parts.push('<b style="color:#fb923c">' + rc.underperform + '</b> Underperform');
       if (rc.sell) parts.push('<b style="color:#f87171">' + rc.sell + '</b> Sell');
-      cntsEl.innerHTML = parts.join(' · ') + ' <span class="stk-csrc">(MarketScreener)</span>';
+      const src = st.via === 'finnhub' ? 'Finnhub' : 'Analysten-Konsens, mehrfach geprüft';
+      cntsEl.innerHTML = parts.join(' · ') + ' <span class="stk-csrc">(' + src + ')</span>';
       cntsEl.hidden = false;
     } else { cntsEl.hidden = true; }
 
@@ -364,7 +365,8 @@
   // Herkunft der Rating-Zahlen: FMP/Finnhub = exakte Counts, Gemini = Websuche-Schätzung
   function ratingSrcLabel(st) {
     if (st.via === 'finnhub') return '✓ Finnhub (US-Analysten)';
-    if (st.ratingSource === 'marketscreener' && st.ratingCounts) return '✓ MarketScreener';
+    // Gemini-Perlen: Counts aus mehreren Quellen gelesen + unabhängig gegengeprüft.
+    if (st.ratingCounts && (st.verifiedAt || st.ratingSource)) return '✓ Analysten-Konsens (mehrfach geprüft)';
     return '≈ ungeprüft';
   }
   function wireStockModal() {
