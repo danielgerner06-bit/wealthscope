@@ -206,49 +206,23 @@ Kein Text außerhalb des JSON.`;
    Rückgabe: Set der Ticker, die die Gegenprüfung zweifelsfrei bestanden haben. */
 export async function verifyNoHold(key, stocks) {
   if (!stocks.length) return new Set();
-  const list = stocks.map(s => `"${s.name}" (${s.ticker})`).join(', ');
-  const prompt = `Du bist ein STRENGER Prüfer von Analysten-Empfehlungen. Prüfe für JEDE der
-folgenden Aktien, ob WIRKLICH ALLE Analysten zum Kauf raten (nur Buy/Outperform/Strong Buy)
-und es KEINEN einzigen Hold, Neutral, Halten, Underperform oder Sell gibt.
-
-Aktien: ${list}
-
-So gehst du vor (die Buy/Hold/Sell-Verteilung steht als TEXT auf diesen Seiten — lies sie dort ab,
-NICHT aus einem Diagrammbild):
-- TipRanks "Forecast"-Seite (z.B. tipranks.com/stocks/<ticker>/forecast): nennt "X Buy, Y Hold, Z Sell".
-- MarketBeat "forecast": nennt die Aufteilung im Text.
-- Investing.com "consensus-estimates", Yahoo Finance "analysis", stockanalysis.com/ratings.
-
-REGELN (sei MISSTRAUISCH):
-- Schon EINE seriöse Quelle mit mind. einem Hold/Neutral/Underperform/Sell bedeutet: NICHT 100% -> ablehnen.
-- Breit beobachtete Aktien (viele Analysten) haben fast immer mind. einen Hold — prüfe besonders kritisch.
-- Du MUSST mindestens ZWEI unabhängige Quellen nennen, die übereinstimmend 0 Hold UND 0 Sell zeigen.
-  Findest du nicht zwei übereinstimmende Quellen -> als NICHT bestätigt werten.
-- Bei Unsicherheit oder widersprüchlichen Quellen IMMER ablehnen (lieber zu Unrecht raus als zu Unrecht drin).
-
-Gib NUR ein JSON-Array zurück, ein Objekt je Aktie:
-{ "ticker": "...", "alleKaufen": true|false, "holdGefunden": <Zahl Hold/Neutral>, "sellGefunden": <Zahl Sell/Underperform>, "quellen": ["Quelle 1","Quelle 2"] }
-"alleKaufen" nur true, wenn MINDESTENS ZWEI Quellen übereinstimmend 0 Hold und 0 Sell zeigen.
-Kein Text außerhalb des JSON.`;
-
-  let arr;
-  try { const { text } = await groundedJSON(key, prompt); arr = extractJSON(text); }
-  catch { return new Set(); }              // Prüfung fehlgeschlagen -> nichts bestätigen (im Zweifel raus)
-  if (!Array.isArray(arr)) return new Set();
   const confirmed = new Set();
-  for (const o of arr) {
-    if (!o || !o.ticker) continue;
-    const tk = String(o.ticker).toUpperCase();
-    const hold = Number(o.holdGefunden);
-    const sell = Number(o.sellGefunden);
-    const srcCount = Array.isArray(o.quellen) ? o.quellen.filter(Boolean).length : 0;
-    // NUR bestätigen, wenn: alleKaufen=true UND 0 Hold UND 0 Sell UND mind. 2 genannte Quellen.
-    if (o.alleKaufen === true
-        && (isFinite(hold) && hold === 0)
-        && (isFinite(sell) && sell === 0)
-        && srcCount >= 2) {
-      confirmed.add(tk);
+  // EINZELN prüfen (1 Aktie/Call): kurzer Prompt + simples Output -> zuverlässige Antwort.
+  for (const s of stocks) {
+    const prompt = `Wie viele Analysten bewerten die Aktie ${s.name} (${s.ticker}) mit Hold/Neutral, und wie viele mit Sell/Underperform?
+Lies die Verteilung als TEXT von TipRanks, MarketBeat, Investing.com oder Yahoo Finance (nicht aus einem Diagrammbild).
+Antworte NUR mit einer Zeile JSON: {"hold": <Zahl>, "sell": <Zahl>, "quellen": <Anzahl geprüfter Quellen>}`;
+    let o;
+    try { const { text } = await groundedJSON(key, prompt); o = extractJSON(text); }
+    catch { o = null; }
+    if (Array.isArray(o)) o = o[0];
+    if (!o) continue;                                    // keine Antwort -> nicht bestätigen (im Zweifel raus)
+    const hold = Number(o.hold), sell = Number(o.sell), src = Number(o.quellen);
+    // bestätigt nur, wenn klar 0 Hold UND 0 Sell aus mind. 1 geprüften Quelle.
+    if (isFinite(hold) && hold === 0 && isFinite(sell) && sell === 0 && (!isFinite(src) || src >= 1)) {
+      confirmed.add(String(s.ticker).toUpperCase());
     }
+    if (process.env.GEMINI_DEBUG) console.log(`  [verifyNoHold] ${s.ticker}: hold=${o.hold} sell=${o.sell} -> ${confirmed.has(String(s.ticker).toUpperCase()) ? 'BESTÄTIGT' : 'abgelehnt'}`);
   }
   return confirmed;
 }
