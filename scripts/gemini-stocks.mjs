@@ -131,12 +131,14 @@ function normRating(o) {
 // durch eine separate, strengere Mehrquellen-Gegenprüfung (verifyNoHold).
 const RATING_RULES = `
 GENAUER ABLAUF (sonst Aktie weglassen):
-1) Finde über die Google-Suche die Analysten-Verteilung der Aktie. Diese steht als TEXT auf
-   Seiten wie TipRanks (".../forecast"), MarketBeat (".../forecast"), Investing.com
-   ("consensus-estimates"), Yahoo Finance ("analysis") oder stockanalysis.com/ratings —
-   in der Form "X Buy, Y Hold, Z Sell" bzw. Strong Buy / Buy / Hold / Sell / Strong Sell.
+1) Finde über die Google-Suche die Verteilung der Empfehlungen ECHTER Sell-Side-Analysten
+   (Investmentbanken/Broker). Sie steht als TEXT auf TipRanks (".../forecast"),
+   MarketScreener-Consensus, Investing.com ("consensus-estimates") oder Yahoo Finance
+   ("analysis") — in der Form "X Buy, Y Hold, Z Sell" bzw. Strong Buy / Buy / Hold / Sell.
+   IGNORIERE algorithmische Rating-Dienste (Weiss Ratings, Wall Street Zen, Zacks Rank,
+   StockInvest, Barchart Opinion, TipRanks Smart Score) — das sind KEINE Analysten.
 2) Prüfe die Stufen Buy, Outperform(=Moderate/Accumulate), Hold, Underperform, Sell.
-   -> Hold, Underperform und Sell MÜSSEN ALLE = 0 sein (über die Quelle(n), die du gelesen hast).
+   -> Hold, Underperform und Sell MÜSSEN ALLE = 0 sein (echte Analysten).
 3) Wenn ja: zähle Buy und Outperform und gib die Aktie aus.
    Wenn nein (irgendein Hold/Underperform/Sell > 0): Aktie NICHT ausgeben.
 
@@ -199,18 +201,23 @@ Kein Text außerhalb des JSON.`;
 }
 
 /* (A2) ZWEITE, UNABHÄNGIGE Verifizierung — "im Zweifel raus".
-   Eine Perle wird nur behalten, wenn eine SKEPTISCHE Gegenprüfung über MEHRERE
-   Quellen (nicht nur MarketScreener) bestätigt: KEIN einziger Hold/Underperform/
-   Sell. Findet auch nur EINE seriöse Quelle einen Hold/Sell -> Aktie RAUS.
-   Das fängt die Fälle ab, in denen die Erstprüfung "Hold=0" nur behauptet hat.
+   Eine Perle wird nur behalten, wenn eine SKEPTISCHE Gegenprüfung bestätigt: KEIN
+   einziger Hold/Underperform/Sell von ECHTEN Sell-Side-Analysten (Investmentbanken/Broker).
+   WICHTIG: algorithmische Rating-Dienste (Weiss Ratings, Wall Street Zen, Zacks Rank,
+   TipRanks Smart Score, StockInvest, Argus quant) zählen NICHT als Analysten — genau die
+   erzeugen die Schein-Widersprüche (z.B. Ocugen: alle Bank-Analysten Buy, aber Weiss/WSZ
+   "Sell"). MarketScreener & TipRanks zählen nur Bank-Analysten -> das ist die Wahrheit.
    Rückgabe: Set der Ticker, die die Gegenprüfung zweifelsfrei bestanden haben. */
 export async function verifyNoHold(key, stocks) {
   if (!stocks.length) return new Set();
   const confirmed = new Set();
   // EINZELN prüfen (1 Aktie/Call): kurzer Prompt + simples Output -> zuverlässige Antwort.
   for (const s of stocks) {
-    const prompt = `Wie viele Analysten bewerten die Aktie ${s.name} (${s.ticker}) mit Hold/Neutral, und wie viele mit Sell/Underperform?
-Lies die Verteilung als TEXT von TipRanks, MarketBeat, Investing.com oder Yahoo Finance (nicht aus einem Diagrammbild).
+    const prompt = `Zähle die Empfehlungen ECHTER Sell-Side-Analysten (von Investmentbanken/Brokern wie Goldman Sachs, Morgan Stanley, Oppenheimer, Berenberg, Canaccord usw.) für die Aktie ${s.name} (${s.ticker}).
+Nutze MarketScreener "Analyst Consensus Detail" und TipRanks "Forecast" (die zählen nur echte Analysten).
+IGNORIERE algorithmische/quantitative Rating-Dienste — diese sind KEINE Analysten und dürfen NICHT mitgezählt werden:
+Weiss Ratings, Wall Street Zen, Zacks Rank, StockInvest, Argus (quant), TipRanks Smart Score, Barchart Opinion, Marketbeat-eigene Scores.
+Frage: Wie viele ECHTE Analysten bewerten mit Hold/Neutral, wie viele mit Sell/Underperform?
 Antworte NUR mit einer Zeile JSON: {"hold": <Zahl>, "sell": <Zahl>, "quellen": <Anzahl geprüfter Quellen>}`;
     let o;
     try { const { text } = await groundedJSON(key, prompt); o = extractJSON(text); }
