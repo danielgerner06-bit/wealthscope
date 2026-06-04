@@ -14,6 +14,10 @@ on:
         description: 'Vollen Lauf erzwingen (Gemini+Finnhub, ignoriert 6h-Takt)'
         type: boolean
         default: false
+      debug:
+        description: 'Gemini-Debug-Logging (rohe Antworten/Verwerfungsgründe)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -34,6 +38,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           # bei manuellem "force_heavy" das 6h-Gating überbrücken (HEAVY_GAP_H=0 -> immer voll)
           HEAVY_GAP_H: ${{ (github.event_name == 'workflow_dispatch' && inputs.force_heavy) && '0' || '' }}
+          GEMINI_DEBUG: ${{ (github.event_name == 'workflow_dispatch' && inputs.debug) && '1' || '' }}
         run: node scripts/update-sectors.mjs
 
       - name: Änderungen committen

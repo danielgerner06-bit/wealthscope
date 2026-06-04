@@ -152,20 +152,23 @@ Kein Text außerhalb des JSON.`;
 
   const { text, sources } = await groundedJSON(key, prompt);
   const arr = extractJSON(text);
+  if (process.env.GEMINI_DEBUG) console.log(`[checkCandidates] rohtext=${(text||'').length}z, extrahiert=${Array.isArray(arr)?arr.length:'KEIN-ARRAY'}, rohanfang=${JSON.stringify((text||'').slice(0,160))}`);
   if (!Array.isArray(arr)) return [];
   // Identitäts-Schutz: zurückgegebenes Objekt muss zu EINER angefragten Aktie passen
   // (Ticker ODER Firmenname-Kern), sonst hat Gemini eine ANDERE Firma erwischt -> verwerfen.
   const wantTickers = new Set(names.map(n => (n.match(/\(([^)]+)\)/) || [])[1]).filter(Boolean).map(t => t.toUpperCase()));
   const wantNameKeys = names.map(n => nameKey(n.replace(/\([^)]*\)/, ''))).filter(Boolean);
   const out = [];
+  let dbgId = 0, dbgSec = 0, dbgQual = 0;
   for (const o of arr) {
     if (!o || !o.ticker) continue;
     const tk = String(o.ticker).toUpperCase();
     const nk = nameKey(o.name || '');
     const idOk = wantTickers.has(tk) || wantNameKeys.some(w => nk && (w.includes(nk) || nk.includes(w)));
-    if (!idOk) continue;   // andere Firma als angefragt -> nicht übernehmen
+    if (!idOk) { dbgId++; continue; }   // andere Firma als angefragt -> nicht übernehmen
     const r = normRating(o);
-    if (!r.sector) continue;
+    if (!r.sector) { dbgSec++; continue; }
+    if (!qualifies(r)) { dbgQual++; if (process.env.GEMINI_DEBUG) console.log(`  [verworfen] ${tk}: counts=${JSON.stringify(o.buy)}/${JSON.stringify(o.hold)}/${JSON.stringify(o.sell)} analysts=${JSON.stringify(o.analysts)} countsBad=${r.countsBad}`); continue; }
     if (qualifies(r)) {
       out.push({
         ticker: String(o.ticker).toUpperCase(),
@@ -179,6 +182,7 @@ Kein Text außerhalb des JSON.`;
       });
     }
   }
+  if (process.env.GEMINI_DEBUG) console.log(`[checkCandidates] Treffer=${out.length} | verworfen: id=${dbgId} keinSektor=${dbgSec} nicht100%=${dbgQual}`);
   return out;
 }
 
