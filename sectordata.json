@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T13:14:21.025Z",
+  "updatedAt": "2026-06-04T13:15:38.023Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -605,30 +605,6 @@
       "peGemini": null,
       "tdAt": "2026-06-03",
       "fmpAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
-    },
-    {
-      "ticker": "VOW3.DE",
-      "name": "Volkswagen AG Vz.",
-      "sector": "cons_cycl",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 21,
-      "upside": 23,
-      "yahoo": "VOW3.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
-      "perf6m": -14.12,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 6.89,
-      "pe": 7.3,
-      "eps": 12.21,
-      "div": 5.78,
-      "enrichAt": "2026-06-03",
-      "msUrl": "https://www.marketscreener.com/quote/stock/VOLKSWAGEN-AG-6402/consensus/",
-      "miss": 1,
       "recheckAt": "2026-06-03"
     },
     {
@@ -2027,7 +2003,8 @@
   },
   "blacklist": {
     "MUM": "2026-09-03",
-    "SOGN.SW": "2026-09-04"
+    "SOGN.SW": "2026-09-04",
+    "VOW3.DE": "2026-09-04"
   },
   "yahooAt": "2026-06-04T13:00:21.382Z"
 }
