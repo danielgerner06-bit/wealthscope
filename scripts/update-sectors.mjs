@@ -94,16 +94,19 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
   if (belowCut) console.log(`Bereinigt: ${belowCut} Treffer unter ${MIN_BUY_PCT}% Kauf entfernt.`);
 
-  // Inkonsistenz-Bereinigung: Gemini-Perlen, deren gespeicherte Stufen-Summe NICHT EXAKT der
-  // Analystenzahl entspricht, sind fehlerhaft abgelesen -> entfernen (saubere Version kommt neu).
-  let inconsistent = 0;
-  for (const tk of Object.keys(db)) {
-    const s = db[tk], c = s.ratingCounts;
-    if (!c || ('strongBuy' in c)) continue;   // kein/altes Format -> Re-Validierung kümmert sich
-    const sum = (c.buy || 0) + (c.outperform || 0) + (c.hold || 0) + (c.underperform || 0) + (c.sell || 0);
-    if (s.analysts && sum > 0 && s.analysts !== sum) { delete db[tk]; inconsistent++; }
-  }
-  if (inconsistent) console.log(`Bereinigt: ${inconsistent} Perlen mit inkonsistenten Counts (Summe≠Analysten) entfernt.`);
+  // Inkonsistenz-Bereinigung (Funktion, wird am Anfang UND am Ende aufgerufen — damit auch
+  // von Discovery/Re-Validierung neu eingebrachte fehlerhafte Counts vor dem Speichern fliegen).
+  const cleanInconsistent = (label) => {
+    let n = 0;
+    for (const tk of Object.keys(db)) {
+      const s = db[tk], c = s.ratingCounts;
+      if (!c || ('strongBuy' in c)) continue;
+      const sum = (c.buy || 0) + (c.outperform || 0) + (c.hold || 0) + (c.underperform || 0) + (c.sell || 0);
+      if (s.analysts && sum > 0 && s.analysts !== sum) { delete db[tk]; n++; }
+    }
+    if (n) console.log(`Bereinigt (${label}): ${n} Perlen mit inkonsistenten Counts (Summe≠Analysten) entfernt.`);
+  };
+  cleanInconsistent('Start');
 
   // Persistenter Scan-/Kandidaten-Zustand.
   const scan = prev?.scan || { universe: 0, scanned: 0, lastCursor: 0, candCursor: 0 };
@@ -282,6 +285,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   // gesperrte Ticker (Lösch-Button, 3-Monats-Sperre) NICHT aufnehmen — auch wenn der
   // Scan/Discovery sie zwischenzeitlich wieder gefunden hat.
   for (const tk of Object.keys(db)) if (isBlacklisted(tk)) delete db[tk];
+  cleanInconsistent('Ende');   // von Discovery/Re-Validierung neu eingebrachte Fehler vor dem Speichern raus
   let topStocks = Object.values(db)
     .sort((a, b) => (b.upside ?? -999) - (a.upside ?? -999) || (b.buyPct || 0) - (a.buyPct || 0));
 
