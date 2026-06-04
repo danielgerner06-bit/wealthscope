@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T18:14:46.549Z",
+  "updatedAt": "2026-06-04T18:24:01.070Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,15 +147,15 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 13.54,
+      "perf": 13.52,
       "avg30": -0.84,
-      "perf6m": -3.72
+      "perf6m": -3.74
     },
     {
       "id": "ai_semi",
-      "perf": 30.78,
+      "perf": 31,
       "avg30": 8.55,
-      "perf6m": 105.13
+      "perf6m": 105.49
     },
     {
       "id": "hardware",
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -2.8,
+      "perf": -2.82,
       "avg30": 0.98,
-      "perf6m": -2.06
+      "perf6m": -2.08
     },
     {
       "id": "health",
@@ -183,15 +183,15 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -0.82,
+      "perf": -0.84,
       "avg30": 1.03,
-      "perf6m": -0.96
+      "perf6m": -0.97
     },
     {
       "id": "cons_def",
-      "perf": -2.44,
+      "perf": -2.53,
       "avg30": 0.41,
-      "perf6m": 3.43
+      "perf6m": 3.33
     },
     {
       "id": "industrial",
@@ -213,9 +213,9 @@
     },
     {
       "id": "utilities",
-      "perf": -5.59,
+      "perf": -5.62,
       "avg30": 0.98,
-      "perf6m": -1.07
+      "perf6m": -1.11
     },
     {
       "id": "realestate",
@@ -229,19 +229,19 @@
       "id": "usa",
       "perf": 5.14,
       "avg30": 1.96,
-      "perf6m": 11.18
+      "perf6m": 11.17
     },
     {
       "id": "europe",
-      "perf": 2.31,
+      "perf": 2.33,
       "avg30": 1.29,
-      "perf6m": 9.06
+      "perf6m": 9.08
     },
     {
       "id": "germany",
-      "perf": 1.87,
+      "perf": 1.8,
       "avg30": 0.33,
-      "perf6m": 5.45
+      "perf6m": 5.38
     },
     {
       "id": "japan",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": -2.25,
+      "perf": -2.28,
       "avg30": -1.06,
-      "perf6m": -11.62
+      "perf6m": -11.65
     },
     {
       "id": "latam",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 4.57,
+      "perf": 4.59,
       "avg30": 1.84,
-      "perf6m": 11.05
+      "perf6m": 11.08
     }
   ],
   "topStocks": [
@@ -587,36 +587,6 @@
       "miss": 1
     },
     {
-      "ticker": "SND",
-      "name": "Schneider Electric SE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 24,
-      "upside": 7,
-      "yahoo": "SU.PA",
-      "peGemini": null,
-      "ratingCounts": {
-        "buy": 23,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/SCHNEIDER-ELECTRIC-SE-4719/consensus/",
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-04",
-      "perf6m": 19.32,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": 3.55,
-      "pe": 35.4,
-      "eps": 7.96,
-      "div": 1.48,
-      "enrichAt": "2026-06-04"
-    },
-    {
       "ticker": "EOAN",
       "name": "E.ON SE",
       "sector": "utilities",
@@ -717,33 +687,35 @@
       "miss": 1
     },
     {
-      "ticker": "ALFA",
-      "name": "Alfa Laval AB",
-      "sector": "industrial",
+      "ticker": "SMHN",
+      "name": "Süss MicroTec SE",
+      "sector": "hardware",
       "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 17,
-      "upside": 1,
-      "yahoo": "ALFA.ST",
+      "outperformPct": 0,
+      "analysts": 8,
+      "upside": 4,
+      "yahoo": "SMHN.DE",
       "peGemini": null,
       "ratingCounts": {
-        "buy": 0,
-        "outperform": 17,
+        "buy": 8,
+        "outperform": 0,
         "hold": 0,
         "underperform": 0,
         "sell": 0
       },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/ALFA-LAVAL-AB-4744/consensus/",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/SUSS-MICROTEC-SE-6090017/consensus/",
       "via": "gemini",
       "source": "marketscreener",
       "seen": "2026-06-04",
-      "perf6m": 15.86,
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": 142.19,
       "perf6mAt": "2026-06-04",
-      "perf1mBefore": -1.83,
-      "pe": 27.4,
-      "eps": 19.79,
-      "div": 1.67,
+      "perf1mBefore": 20.69,
+      "pe": 32.1,
+      "eps": 2.95,
+      "div": 0.04,
       "enrichAt": "2026-06-04"
     },
     {
@@ -774,6 +746,38 @@
       "pe": 7.5,
       "eps": 31.64,
       "div": 6.75,
+      "enrichAt": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1
+    },
+    {
+      "ticker": "ALFA",
+      "name": "Alfa Laval AB",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 17,
+      "upside": 1,
+      "yahoo": "ALFA.ST",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 17,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/ALFA-LAVAL-AB-4744/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 15.86,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -1.83,
+      "pe": 27.4,
+      "eps": 19.79,
+      "div": 1.67,
       "enrichAt": "2026-06-04",
       "recheckAt": "2026-06-04",
       "miss": 1
@@ -2032,7 +2036,9 @@
       "pe": 8.8,
       "eps": 10.61,
       "div": 10.68,
-      "enrichAt": "2026-06-04"
+      "enrichAt": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1
     },
     {
       "ticker": "ASM.AS",
@@ -2091,134 +2097,6 @@
       "pe": null,
       "eps": -1.42,
       "div": 0,
-      "enrichAt": "2026-06-04"
-    },
-    {
-      "ticker": "AOF",
-      "name": "ATOSS Software SE",
-      "sector": "software",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 8,
-      "upside": 59,
-      "yahoo": "AOF.DE",
-      "peGemini": null,
-      "ratingCounts": {
-        "buy": 7,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/ATOSS-SOFTWARE-SE-6090007/consensus/",
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-04",
-      "miss": 0,
-      "recheckAt": "2026-06-04",
-      "perf6m": -33.22,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": 2.89,
-      "pe": 26.1,
-      "eps": 3.04,
-      "div": 2.95,
-      "enrichAt": "2026-06-04"
-    },
-    {
-      "ticker": "SMHN",
-      "name": "Süss MicroTec SE",
-      "sector": "hardware",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 8,
-      "upside": 4,
-      "yahoo": "SMHN.DE",
-      "peGemini": null,
-      "ratingCounts": {
-        "buy": 8,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/SUSS-MICROTEC-SE-6090017/consensus/",
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-04",
-      "miss": 0,
-      "recheckAt": "2026-06-04",
-      "perf6m": 142.19,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": 20.69,
-      "pe": 32.1,
-      "eps": 2.95,
-      "div": 0.04,
-      "enrichAt": "2026-06-04"
-    },
-    {
-      "ticker": "CBK",
-      "name": "Commerzbank AG",
-      "sector": "finance",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 13,
-      "upside": 9,
-      "yahoo": "CBK.DE",
-      "peGemini": null,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 16,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/COMMERZBANK-AG-6090014/consensus/",
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-04",
-      "miss": 0,
-      "recheckAt": "2026-06-04",
-      "perf6m": 7.63,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": 2.78,
-      "pe": 16.9,
-      "eps": 2.17,
-      "div": 3.02,
-      "enrichAt": "2026-06-04"
-    },
-    {
-      "ticker": "COK",
-      "name": "Cancom SE",
-      "sector": "software",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 7,
-      "upside": 3,
-      "yahoo": "COK.DE",
-      "peGemini": null,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 8,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/CANCOM-SE-6090010/consensus/",
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-04",
-      "miss": 0,
-      "recheckAt": "2026-06-04",
-      "perf6m": 0.18,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": 6.92,
-      "pe": 50.3,
-      "eps": 0.55,
-      "div": 3.68,
       "enrichAt": "2026-06-04"
     }
   ],
@@ -2336,27 +2214,23 @@
   "news": {
     "items": [
       {
-        "text": "BOJ signalisiert mögliche Zinserhöhung; Yen schwächelt.",
+        "text": "Geopolitik belastet Märkte, BOJ signalisiert Zinserhöhung.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Geopolitik: Brüchiger Waffenstillstand im Nahen Osten.",
+        "text": "SpaceX plant IPO, Finanzwelt aufmerksam.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Broadcom-Ausblick enttäuscht trotz Umsatzplus.",
+        "text": "Broadcom-Ausblick enttäuscht, KI-Aktien unter Druck.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Goldman Sachs: Aktienrenditen moderater, Rücksetzer Kaufgelegenheiten.",
+        "text": "US-Notenbank hebt Leitzins leicht an.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Kanada legt KI-Strategie mit Milliardenförderung auf.",
-        "stamp": "04.06.26"
-      },
-      {
-        "text": "EU: Bund darf bei Stromnetzbetreiber Tennet einsteigen.",
+        "text": "US-Militär verbannt China-Wolfram, Aktie profitiert.",
         "stamp": "04.06.26"
       }
     ],
@@ -2365,8 +2239,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 34,
-    "candCursor": 116,
+    "lastCursor": 334,
+    "candCursor": 124,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -2533,42 +2407,42 @@
       "Xinyi Solar Holdings Limited"
     ],
     "noteCursor": 8,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 254,
-      "cons_def": 129,
-      "materials": 163,
-      "health": 641,
-      "finance": 509,
-      "energy": 242,
-      "hardware": 157,
-      "software": 477,
-      "industrial": 206,
-      "utilities": 93,
-      "comm": 103,
-      "ai_semi": 91,
-      "realestate": 42
+      "cons_cycl": 259,
+      "cons_def": 130,
+      "materials": 165,
+      "health": 670,
+      "finance": 523,
+      "energy": 244,
+      "hardware": 158,
+      "software": 492,
+      "industrial": 214,
+      "utilities": 97,
+      "comm": 106,
+      "ai_semi": 98,
+      "realestate": 44
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 256,
-      "cons_def": 129,
-      "materials": 169,
-      "health": 650,
-      "finance": 517,
-      "energy": 245,
-      "hardware": 160,
-      "software": 490,
-      "industrial": 212,
-      "utilities": 98,
-      "comm": 104,
-      "ai_semi": 101,
-      "realestate": 43
+      "cons_cycl": 261,
+      "cons_def": 130,
+      "materials": 171,
+      "health": 679,
+      "finance": 530,
+      "energy": 247,
+      "hardware": 161,
+      "software": 503,
+      "industrial": 219,
+      "utilities": 102,
+      "comm": 107,
+      "ai_semi": 108,
+      "realestate": 45
     },
-    "heavyAt": "2026-06-04T18:02:51.049Z",
+    "heavyAt": "2026-06-04T18:15:19.719Z",
     "revalidateTag": "ms-no-hold-v6",
     "fmpRetryTag": "grades-summary-fix"
   },
