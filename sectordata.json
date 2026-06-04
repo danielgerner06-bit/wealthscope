@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T14:00:21.376Z",
+  "updatedAt": "2026-06-04T14:13:34.178Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 14.12,
+      "perf": 14.41,
       "avg30": -0.84,
-      "perf6m": -3.22
+      "perf6m": -2.98
     },
     {
       "id": "ai_semi",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": -1.84,
+      "perf": -1.77,
       "avg30": 2.96,
-      "perf6m": 28.9
+      "perf6m": 29
     },
     {
       "id": "materials",
@@ -213,9 +213,9 @@
     },
     {
       "id": "utilities",
-      "perf": -5.47,
+      "perf": -5.39,
       "avg30": 0.98,
-      "perf6m": -0.95
+      "perf6m": -0.87
     },
     {
       "id": "realestate",
@@ -233,27 +233,27 @@
     },
     {
       "id": "europe",
-      "perf": 2.07,
+      "perf": 2.08,
       "avg30": 1.29,
-      "perf6m": 8.8
+      "perf6m": 8.82
     },
     {
       "id": "germany",
-      "perf": 2.1,
+      "perf": 2.02,
       "avg30": 0.33,
-      "perf6m": 5.7
+      "perf6m": 5.61
     },
     {
       "id": "japan",
-      "perf": 6.24,
+      "perf": 6.01,
       "avg30": 2.15,
-      "perf6m": 13.67
+      "perf6m": 13.43
     },
     {
       "id": "china",
-      "perf": -2.23,
+      "perf": -2.3,
       "avg30": 0.39,
-      "perf6m": -9.99
+      "perf6m": -10.06
     },
     {
       "id": "em",
@@ -269,21 +269,21 @@
     },
     {
       "id": "india",
-      "perf": -2.22,
+      "perf": -2.27,
       "avg30": -1.06,
-      "perf6m": -11.6
+      "perf6m": -11.64
     },
     {
       "id": "latam",
-      "perf": -6.08,
+      "perf": -6.04,
       "avg30": 3.12,
-      "perf6m": 9.15
+      "perf6m": 9.2
     },
     {
       "id": "world",
-      "perf": 4.02,
+      "perf": 4.03,
       "avg30": 1.83,
-      "perf6m": 10.47
+      "perf6m": 10.48
     }
   ],
   "topStocks": [
@@ -311,57 +311,6 @@
       "miss": 1
     },
     {
-      "ticker": "SBS",
-      "name": "Stratec SE",
-      "sector": "health",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 6,
-      "upside": 49,
-      "yahoo": "STRA.DE",
-      "peGemini": null,
-      "msUrl": "https://www.marketscreener.com/quote/stock/STRATEC-SE-7461006/consensus/",
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
-      "miss": 0,
-      "perf1mBefore": null,
-      "enrichAt": "2026-06-03",
-      "div": null
-    },
-    {
-      "ticker": "SBS.DE",
-      "name": "Stratec SE",
-      "sector": "health",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 5,
-      "upside": 52,
-      "yahoo": "SBS.DE",
-      "peGemini": null,
-      "ratingCounts": {
-        "buy": 6,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/STRATEC-SE-6175210/consensus/",
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-04",
-      "miss": 0,
-      "recheckAt": "2026-06-04",
-      "perf6m": -26.83,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": -1.77,
-      "pe": null,
-      "eps": -0.28,
-      "div": 3.63,
-      "enrichAt": "2026-06-04"
-    },
-    {
       "ticker": "DTE.DE",
       "name": "Deutsche Telekom AG",
       "sector": "comm",
@@ -382,16 +331,8 @@
       "eps": 1.81,
       "div": 3.46,
       "enrichAt": "2026-06-03",
-      "ratingCounts": {
-        "buy": 17,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/DEUTSCHE-TELEKOM-AG-6173049/consensus/",
-      "recheckAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/DEUTSCHE-TELEKOM-AG-6173049/consensus/"
     },
     {
       "ticker": "TM",
@@ -415,62 +356,8 @@
       "enrichAt": "2026-06-03",
       "msUrl": "https://www.marketscreener.com/quote/stock/TOYOTA-MOTOR-CORP-4733/consensus/",
       "miss": 0,
-      "ratingCounts": {
-        "buy": 18,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/TOYOTA-MOTOR-CORP-6040515/consensus/",
-      "recheckAt": "2026-06-04"
-    },
-    {
-      "ticker": "SRT",
-      "name": "Sartorius Stedim Biotech",
-      "sector": "health",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 14,
-      "upside": 32,
-      "yahoo": "DIM.PA",
-      "peGemini": null,
-      "msUrl": "https://www.marketscreener.com/quote/stock/SARTORIUS-STEDIM-BIOTECH-4010/consensus/",
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-04",
-      "miss": 0,
-      "perf6m": -17.52,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": 8.65,
-      "pe": 64.2,
-      "eps": 2.75,
-      "div": 0.39,
-      "enrichAt": "2026-06-04"
-    },
-    {
-      "ticker": "TCS",
-      "name": "Tata Consultancy Services Limited",
-      "sector": "software",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 43,
-      "upside": 31,
-      "yahoo": "TCS.NS",
-      "peGemini": null,
-      "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/Tata-Consultancy-Services-Limited-532540/consensus/",
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-04",
-      "perf6m": -30.74,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": -7.81,
-      "pe": 16.5,
-      "eps": 136.07,
-      "div": 5.53,
-      "enrichAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/TOYOTA-MOTOR-CORP-6040515/consensus/"
     },
     {
       "ticker": "4502",
@@ -517,16 +404,8 @@
       "perf1mBefore": -4.47,
       "tdAt": "2026-06-03",
       "msUrl": "https://www.marketscreener.com/quote/stock/INIT-INNOVATION-IN-TRAFFIC-SYSTEMS-SE-5759807/consensus/",
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/INIT-INNOVATION-IN-TRAFFIC-SYSTEMS-SE-6000779/consensus/",
-      "recheckAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/INIT-INNOVATION-IN-TRAFFIC-SYSTEMS-SE-6000779/consensus/"
     },
     {
       "ticker": "VRDN",
@@ -552,38 +431,6 @@
       "enrichAt": "2026-06-04"
     },
     {
-      "ticker": "4502.T",
-      "name": "Takeda Pharmaceutical Co Ltd",
-      "sector": "health",
-      "buyPct": 100,
-      "outperformPct": 33,
-      "analysts": 15,
-      "upside": 27,
-      "yahoo": "4502.T",
-      "peGemini": null,
-      "ratingCounts": {
-        "buy": 10,
-        "outperform": 5,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/TAKEDA-PHARMACEUTICAL-CO-LTD-6702143/consensus/",
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-04",
-      "miss": 0,
-      "recheckAt": "2026-06-04",
-      "perf6m": 8.77,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": -8.4,
-      "pe": 40.5,
-      "eps": 119.65,
-      "div": 4.3,
-      "enrichAt": "2026-06-04"
-    },
-    {
       "ticker": "MUV2.DE",
       "name": "Münchener Rückversicherungs-Gesellschaft AG in München",
       "sector": "finance",
@@ -606,40 +453,6 @@
       "miss": 2
     },
     {
-      "ticker": "VBK",
-      "name": "Verbio SE",
-      "sector": "energy",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 4,
-      "upside": 18,
-      "yahoo": "VBK.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-04",
-      "perf6m": 108.51,
-      "perf6mAt": "2026-06-02",
-      "pe": null,
-      "eps": -1.18,
-      "enrichAt": "2026-06-02",
-      "miss": 0,
-      "div": 1.07,
-      "perf1mBefore": 3.49,
-      "tdAt": "2026-06-03",
-      "msUrl": "https://www.marketscreener.com/quote/stock/VERBIO-SE-100027/consensus/",
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/VERBIO-SE-11058110/consensus/",
-      "recheckAt": "2026-06-04"
-    },
-    {
       "ticker": "NVEE",
       "name": "NV5 Global, Inc.",
       "sector": "industrial",
@@ -657,29 +470,6 @@
       "perf1mBefore": null,
       "enrichAt": "2026-06-03",
       "div": null
-    },
-    {
-      "ticker": "RWE",
-      "name": "RWE AG",
-      "sector": "utilities",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 19,
-      "upside": 14,
-      "yahoo": "RWE.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-03",
-      "miss": 2,
-      "perf6m": 26.73,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": -6.85,
-      "pe": 17.5,
-      "eps": 3.26,
-      "div": 2.18,
-      "enrichAt": "2026-06-03",
-      "tdAt": "2026-06-03"
     },
     {
       "ticker": "EOAN",
@@ -703,16 +493,8 @@
       "enrichAt": "2026-06-03",
       "miss": 0,
       "tdAt": "2026-06-03",
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 18,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/E-ON-SE-41758/consensus/",
-      "recheckAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/E-ON-SE-41758/consensus/"
     },
     {
       "ticker": "SRT.PA",
@@ -724,20 +506,12 @@
       "upside": 9,
       "yahoo": "SRT.PA",
       "peGemini": null,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 20,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
       "ratingUrl": "https://www.marketscreener.com/quote/stock/SARTORIUS-STEDIM-BIOTECH-6041220/consensus/",
       "via": "gemini",
       "source": "marketscreener",
       "seen": "2026-06-04",
       "miss": 0,
-      "recheckAt": "2026-06-04",
       "perf1mBefore": null,
       "enrichAt": "2026-06-04",
       "div": null
@@ -785,16 +559,8 @@
       "pe": 33.9,
       "div": 1.45,
       "enrichAt": "2026-06-03",
-      "ratingCounts": {
-        "buy": 27,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/LINDE-PLC-10716/consensus/",
-      "recheckAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/LINDE-PLC-10716/consensus/"
     },
     {
       "ticker": "ASMI",
@@ -818,28 +584,6 @@
       "eps": 20.19,
       "div": 0.36,
       "enrichAt": "2026-06-04"
-    },
-    {
-      "ticker": "2317",
-      "name": "Hon Hai Precision Industry Co Ltd",
-      "sector": "hardware",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 18,
-      "upside": 1,
-      "yahoo": "2317.TW",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "marketscreener",
-      "seen": "2026-06-03",
-      "miss": 2,
-      "perf6m": 31.95,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 34.18,
-      "pe": 23.1,
-      "eps": 13.39,
-      "div": 2.39,
-      "enrichAt": "2026-06-03"
     },
     {
       "ticker": "WKL.DE",
@@ -881,16 +625,8 @@
       "div": 0.31,
       "enrichAt": "2026-06-03",
       "miss": 2,
-      "ratingCounts": {
-        "buy": 36,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/LAM-RESEARCH-CORPORATION-128073062/consensus/",
-      "recheckAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/LAM-RESEARCH-CORPORATION-128073062/consensus/"
     },
     {
       "ticker": "NBIS",
@@ -910,16 +646,8 @@
       "perf1mBefore": null,
       "enrichAt": "2026-06-04",
       "div": null,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 16,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/NEBIUS-GROUP-NV-17100042/consensus/",
-      "recheckAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/NEBIUS-GROUP-NV-17100042/consensus/"
     },
     {
       "ticker": "A000660",
@@ -940,17 +668,9 @@
       "pe": null,
       "div": 0.13,
       "enrichAt": "2026-06-03",
-      "ratingCounts": {
-        "buy": 38,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
       "ratingUrl": "https://www.marketscreener.com/quote/stock/SK-HYNIX-INC-6000105/consensus/",
-      "miss": 0,
-      "recheckAt": "2026-06-04"
+      "miss": 0
     },
     {
       "ticker": "BESI",
@@ -974,16 +694,8 @@
       "eps": 1.9,
       "div": 0.55,
       "enrichAt": "2026-06-04",
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 23,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/BE-SEMICONDUCTOR-INDUSTRIES-NV-6000107/consensus/",
-      "recheckAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/BE-SEMICONDUCTOR-INDUSTRIES-NV-6000107/consensus/"
     },
     {
       "ticker": "WCH",
@@ -1077,6 +789,233 @@
       "enrichAt": "2026-06-03"
     },
     {
+      "ticker": "2317",
+      "name": "Hon Hai Precision Industry Co Ltd",
+      "sector": "hardware",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 20,
+      "upside": null,
+      "yahoo": "2317.TW",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "perf6m": 31.95,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": 34.18,
+      "pe": 23.1,
+      "eps": 13.39,
+      "div": 2.39,
+      "enrichAt": "2026-06-03",
+      "ratingCounts": {
+        "buy": 20,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/HON-HAI-PRECISION-INDUSTRY-CO-LTD-4010454/consensus/",
+      "recheckAt": "2026-06-04"
+    },
+    {
+      "ticker": "SBS",
+      "name": "Stratec SE",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 6,
+      "upside": null,
+      "yahoo": "SBS.DE",
+      "peGemini": null,
+      "msUrl": "https://www.marketscreener.com/quote/stock/STRATEC-SE-7461006/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "perf1mBefore": null,
+      "enrichAt": "2026-06-03",
+      "div": null,
+      "ratingCounts": {
+        "buy": 6,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/STRATEC-SE-4024721/consensus/",
+      "recheckAt": "2026-06-04",
+      "perf6m": -26.83,
+      "perf6mAt": "2026-06-04"
+    },
+    {
+      "ticker": "SRT",
+      "name": "Sartorius Stedim Biotech",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 20,
+      "upside": null,
+      "yahoo": "SRT.PA",
+      "peGemini": null,
+      "msUrl": "https://www.marketscreener.com/quote/stock/SARTORIUS-STEDIM-BIOTECH-4010/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "perf6m": -17.52,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 8.65,
+      "pe": 64.2,
+      "eps": 2.75,
+      "div": 0.39,
+      "enrichAt": "2026-06-04",
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 20,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/SARTORIUS-STEDIM-BIOTECH-4024705/consensus/",
+      "recheckAt": "2026-06-04"
+    },
+    {
+      "ticker": "TCS",
+      "name": "Tata Consultancy Services Limited",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 43,
+      "upside": null,
+      "yahoo": "TCS.NS",
+      "peGemini": null,
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/TATA-CONSULTANCY-SERVICES-LIMITED-4042001/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": -30.74,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -7.81,
+      "pe": 16.5,
+      "eps": 136.07,
+      "div": 5.53,
+      "enrichAt": "2026-06-04",
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 43,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "miss": 0,
+      "recheckAt": "2026-06-04"
+    },
+    {
+      "ticker": "4502.T",
+      "name": "Takeda Pharmaceutical Co Ltd",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 15,
+      "upside": null,
+      "yahoo": "4502.T",
+      "peGemini": null,
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/TAKEDA-PHARMACEUTICAL-CO-LTD-4042000/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "perf6m": 8.77,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -8.4,
+      "pe": 40.5,
+      "eps": 119.65,
+      "div": 4.3,
+      "enrichAt": "2026-06-04",
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 15,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "recheckAt": "2026-06-04"
+    },
+    {
+      "ticker": "VBK",
+      "name": "Verbio SE",
+      "sector": "materials",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 4,
+      "upside": null,
+      "yahoo": "VBK.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 108.51,
+      "perf6mAt": "2026-06-02",
+      "pe": null,
+      "eps": -1.18,
+      "enrichAt": "2026-06-02",
+      "miss": 0,
+      "div": 1.07,
+      "perf1mBefore": 3.49,
+      "tdAt": "2026-06-03",
+      "msUrl": "https://www.marketscreener.com/quote/stock/VERBIO-SE-100027/consensus/",
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/VERBIO-SE-12541397/consensus/",
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "recheckAt": "2026-06-04"
+    },
+    {
+      "ticker": "RWE",
+      "name": "RWE AG",
+      "sector": "utilities",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 19,
+      "upside": null,
+      "yahoo": "RWE.DE",
+      "peGemini": null,
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "perf6m": 26.73,
+      "perf6mAt": "2026-06-03",
+      "perf1mBefore": -6.85,
+      "pe": 17.5,
+      "eps": 3.26,
+      "div": 2.18,
+      "enrichAt": "2026-06-03",
+      "tdAt": "2026-06-03",
+      "ratingCounts": {
+        "buy": 19,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/RWE-AG-4041995/consensus/",
+      "recheckAt": "2026-06-04"
+    },
+    {
       "ticker": "YSN",
       "name": "SECUNET SECURITY NETWORKS AG",
       "sector": "software",
@@ -1098,16 +1037,8 @@
       "div": 1.26,
       "perf1mBefore": 12.42,
       "tdAt": "2026-06-03",
-      "ratingCounts": {
-        "buy": 2,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/SECUNET-SECURITY-NETWORKS-AG-7340303/consensus/",
-      "recheckAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/SECUNET-SECURITY-NETWORKS-AG-7340303/consensus/"
     },
     {
       "ticker": "VIV.PA",
@@ -1130,16 +1061,8 @@
       "div": 1.7,
       "enrichAt": "2026-06-03",
       "miss": 0,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 8,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/VIVENDI-SE-6503/consensus/",
-      "recheckAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/VIVENDI-SE-6503/consensus/"
     },
     {
       "ticker": "EON",
@@ -1163,16 +1086,8 @@
       "div": 3.2,
       "enrichAt": "2026-06-03",
       "tdAt": "2026-06-03",
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 18,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
       "ratingSource": "marketscreener",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/EON-SE-6707/consensus/",
-      "recheckAt": "2026-06-04"
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/EON-SE-6707/consensus/"
     },
     {
       "ticker": "CRH",
@@ -1628,6 +1543,186 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-03"
+    },
+    {
+      "ticker": "RWE.DE",
+      "name": "RWE AG",
+      "sector": "energy",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 19,
+      "upside": 12,
+      "yahoo": "RWE.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 19,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/RWE-AG-6780910/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 29.24,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -5.25,
+      "pe": 17.2,
+      "eps": 3.26,
+      "div": 2.1,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "BNP.PA",
+      "name": "BNP Paribas SA",
+      "sector": "finance",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 19,
+      "upside": null,
+      "yahoo": "BNP.PA",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 19,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/BNP-PARIBAS-SA-4500/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 23.97,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 5.33,
+      "pe": 8.8,
+      "eps": 10.61,
+      "div": 10.68,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "IBE.MC",
+      "name": "Iberdrola S.A.",
+      "sector": "utilities",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 22,
+      "upside": 1,
+      "yahoo": "IBE.MC",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 23,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/IBERDROLA-SA-6780914/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 8.94,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -0.84,
+      "pe": 24.6,
+      "eps": 0.8,
+      "div": 3.49,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "UBSG.SW",
+      "name": "UBS Group AG",
+      "sector": "finance",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 17,
+      "upside": 4,
+      "yahoo": "UBSG.SW",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 12,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/UBS-GROUP-AG-6780915/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 15.01,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 8.38,
+      "pe": 17.1,
+      "eps": 2.19,
+      "div": 2.31,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "INGA.AS",
+      "name": "ING Groep N.V.",
+      "sector": "finance",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 19,
+      "upside": 6,
+      "yahoo": "INGA.AS",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 19,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/ING-GROEP-NV-6780913/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 16.05,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 8.13,
+      "pe": 12,
+      "eps": 2.19,
+      "div": 4.13,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "DB1.DE",
+      "name": "Deutsche Börse AG",
+      "sector": "finance",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 12,
+      "upside": 16,
+      "yahoo": "DB1.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 12,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/DEUTSCHE-BORSE-AG-6780911/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 8.91,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -5.26,
+      "pe": 22,
+      "eps": 11.23,
+      "div": 1.74,
+      "enrichAt": "2026-06-04"
     }
   ],
   "sectorNotes": {
@@ -1744,28 +1839,28 @@
   "news": {
     "items": [
       {
-        "text": "Europas Börsen freundlich, DAX steigt auf 24.943 Zähler.",
+        "text": "Broadcom enttäuscht: KI-Chip-Prognose bleibt hinter Erwartungen.",
         "stamp": "04.06.26"
       },
       {
-        "text": "KI-Euphorie kippt: Broadcom-Schock, Aktie stürzt zweistellig ab.",
+        "text": "SpaceX setzt Ausgabepreis für Rekord-Börsengang fest.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Tech-Sell-off: SoftBank-Crash löst weltweiten Abverkauf aus.",
-        "stamp": "03.06.26"
+        "text": "DAX erholt sich, 25.000er-Marke zurückerobert.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "USA: Offene Stellen gestiegen, Neueinstellungen gesunken im April.",
-        "stamp": "02.06.26"
+        "text": "Ölpreise hängen im politischen Hin und Her fest.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "Fed-Präsidentin Hammack: Zinspolitik muss Inflation bekämpfen.",
-        "stamp": "02.06.26"
+        "text": "Bank of Japan erwägt Zinsschritt im Juni.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "BoE-Direktorin Greene: Zinserhöhung wird wahrscheinlicher.",
-        "stamp": "02.06.26"
+        "text": "AeroVironment erhält US-Armee-Drohnenauftrag über 117 Mio. Dollar.",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -1773,8 +1868,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 7067,
-    "candCursor": 68,
+    "lastCursor": 7367,
+    "candCursor": 76,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -1931,47 +2026,43 @@
       "Veridian Therapeutics, Inc."
     ],
     "noteCursor": 8,
-    "focusCursor": 2,
+    "focusCursor": 3,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 211,
-      "cons_def": 108,
-      "materials": 132,
-      "health": 526,
-      "finance": 435,
-      "energy": 199,
-      "hardware": 127,
-      "software": 394,
-      "industrial": 172,
-      "utilities": 79,
-      "comm": 78,
-      "ai_semi": 77,
-      "realestate": 40
-    },
-    "pendingReject": [
-      "SIDU",
-      "SIG",
-      "SIGI"
-    ],
-    "evaluatedBySector": {
-      "cons_cycl": 213,
-      "cons_def": 108,
-      "materials": 135,
-      "health": 534,
-      "finance": 440,
-      "energy": 201,
+      "cons_cycl": 215,
+      "cons_def": 115,
+      "materials": 137,
+      "health": 548,
+      "finance": 447,
+      "energy": 207,
       "hardware": 131,
-      "software": 404,
-      "industrial": 176,
-      "utilities": 85,
-      "comm": 79,
-      "ai_semi": 84,
-      "realestate": 40
+      "software": 409,
+      "industrial": 177,
+      "utilities": 81,
+      "comm": 81,
+      "ai_semi": 81,
+      "realestate": 42
     },
-    "heavyAt": "2026-06-04T14:00:34.070Z",
-    "revalidateTag": "ms-exact-sum-v5",
+    "pendingReject": [],
+    "evaluatedBySector": {
+      "cons_cycl": 217,
+      "cons_def": 115,
+      "materials": 141,
+      "health": 555,
+      "finance": 456,
+      "energy": 209,
+      "hardware": 135,
+      "software": 419,
+      "industrial": 181,
+      "utilities": 88,
+      "comm": 82,
+      "ai_semi": 88,
+      "realestate": 42
+    },
+    "heavyAt": "2026-06-04T14:07:21.169Z",
+    "revalidateTag": "ms-no-hold-v6",
     "fmpRetryTag": "grades-summary-fix"
   },
   "blacklist": {
@@ -1979,6 +2070,5 @@
     "SOGN.SW": "2026-09-04",
     "VOW3.DE": "2026-09-04",
     "HEI.DE": "2026-09-04"
-  },
-  "yahooAt": "2026-06-04T14:00:21.376Z"
+  }
 }
