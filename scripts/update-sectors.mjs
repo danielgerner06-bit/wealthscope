@@ -16,7 +16,7 @@ import { SECTORS, REGIONS, sectorForFinnhub } from './sectors.mjs';
 import { buildNotes, buildNews, buildFactorInsight } from './insight.mjs';
 import { scanAnalystStocks } from './finnhub.mjs';
 import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock, fetchSectorOf, perfBetween } from './prices.mjs';
-import { checkCandidates, discoverNew, MIN_BUY_PCT } from './gemini-stocks.mjs';
+import { checkCandidates, discoverNew, verifyNoHold, MIN_BUY_PCT } from './gemini-stocks.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
 import { loadHistory, saveHistory, snapshotStocks, measureMilestones, pruneHistory, computeFindings } from './history.mjs';
@@ -81,7 +81,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   // Einmalig (REVALIDATE_TAG): alle Gemini-Perlen zur Neuprüfung gegen die feste Quelle
   // (MarketScreener) freigeben -> recheckAt löschen, damit die Re-Validierung sie über die
   // nächsten Läufe neu bewertet und inkonsistente Altdaten (gemischte Quellen) ersetzt/aussortiert.
-  const REVALIDATE_TAG = 'ms-no-hold-v6';   // Hold/Underperform/Sell müssen 0 sein -> alle neu prüfen
+  const REVALIDATE_TAG = 'ms-verify-v7';   // unabhängige Gegenprüfung (verifyNoHold) -> alle neu prüfen
   if (purged) console.log(`Bereinigt: ${purged} OTC-Geister-Treffer entfernt.`);
 
   // Kriteriums-Bereinigung: bereits aufgenommene Treffer, die das aktuelle Kauf-%-Kriterium
@@ -221,20 +221,13 @@ const today = () => new Date().toISOString().slice(0, 10);
     try {
       const knownNames = Object.values(db).map(s => s.name).concat(candidates);
       const found = await discoverNew(GEMINI_KEY, knownNames, focus);
-      let added = 0, promoted = 0;
+      // Discovery erzeugt NIE direkt Perlen — nur Kandidaten. Aufnahme erst über
+      // checkCandidates + unabhängige Gegenprüfung (verifyNoHold). "Im Zweifel raus".
+      let queued = 0;
       for (const f of found) {
-        const hasCleanCounts = f.ratingCounts && !('strongBuy' in f.ratingCounts) && !f.countsBad;
-        if (hasCleanCounts) {
-          // Bereits beim Entdecken sauber gelesen (Counts + gültiger MS-Link) -> direkt Perle.
-          if (!db[f.ticker]) added++;
-          db[f.ticker] = { ...db[f.ticker], ...f };
-          promoted++;
-        }
-        // IMMER nur als Kandidat vormerken (NICHT roh als Perle einfügen). Erst checkCandidates
-        // mit dem strengen MS-Ablauf entscheidet -> keine counts-losen Perlen im JSON.
-        if (f.name && !candidates.includes(f.name)) candidates.push(f.name);
+        if (f.name && !candidates.includes(f.name)) { candidates.push(f.name); queued++; }
       }
-      console.log(`Gemini-Discovery (${focus}): ${found.length} Vorschläge, ${added} neu (${promoted} mit sauberen Counts direkt übernommen).`);
+      console.log(`Gemini-Discovery (${focus}): ${found.length} Vorschläge, ${queued} als Kandidat vorgemerkt (Aufnahme erst nach Gegenprüfung).`);
     } catch (e) { noteGeminiError(e); console.error('Discovery fehlgeschlagen:', e.message); }
   }
 
@@ -248,14 +241,18 @@ const today = () => new Date().toISOString().slice(0, 10);
       for (let i = 0; i < Math.min(CAND_BUDGET, n); i++) slice.push(candidates[(start + i) % n]);
       scan.candCursor = (start + slice.length) % n;
       const hits = await checkCandidates(GEMINI_KEY, slice);
-      // NUR Treffer mit sauberen MS-Counts als Perle übernehmen — counts-lose verwerfen.
+      // Stufe 1: nur Treffer mit sauberen MS-Counts kommen in die engere Wahl.
+      const clean = hits.filter(h => h.ratingCounts && !('strongBuy' in h.ratingCounts) && !h.countsBad);
+      // Stufe 2: UNABHÄNGIGE Gegenprüfung über mehrere Quellen ("im Zweifel raus").
+      // Nur Aktien, die KEINEN Hold/Sell haben, werden tatsächlich Perle.
+      let confirmed = new Set();
+      if (clean.length) { useGemini(); confirmed = await verifyNoHold(GEMINI_KEY, clean); }
       let kept = 0;
-      for (const h of hits) {
-        const ok = h.ratingCounts && !('strongBuy' in h.ratingCounts) && !h.countsBad;
-        if (!ok) continue;
-        db[h.ticker] = { ...db[h.ticker], ...h }; kept++;
+      for (const h of clean) {
+        if (!confirmed.has(h.ticker.toUpperCase())) continue;   // Gegenprüfung nicht bestanden -> NICHT aufnehmen
+        db[h.ticker] = { ...db[h.ticker], ...h, verifiedAt: today() }; kept++;
       }
-      console.log(`Gemini-Kandidaten: ${slice.length} geprüft, ${kept}/${hits.length} mit sauberen Counts übernommen.`);
+      console.log(`Gemini-Kandidaten: ${slice.length} geprüft, ${clean.length} mit Counts, ${kept} nach Gegenprüfung aufgenommen.`);
     } catch (e) { noteGeminiError(e); console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
   }
 
@@ -266,7 +263,9 @@ const today = () => new Date().toISOString().slice(0, 10);
   if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
     const allDue = Object.values(db)
       .filter(s => s.via && s.via.startsWith('gemini'))
-      .filter(s => !s.recheckAt || (nowMs - Date.parse(s.recheckAt)) > RECHECK_AGE);
+      .filter(s => !s.verifiedAt || !s.recheckAt || (nowMs - Date.parse(s.recheckAt)) > RECHECK_AGE)
+      // noch nie unabhängig gegengeprüfte Perlen zuerst (Bestand schnell verifizieren/aussortieren)
+      .sort((a, b) => (a.verifiedAt ? 1 : 0) - (b.verifiedAt ? 1 : 0));
     const BATCH = Number(process.env.RECHECK_BUDGET || 8);        // Namen pro Gemini-Call (klein -> saubere Daten je Aktie)
     const ROUNDS = Number(process.env.RECHECK_ROUNDS || 3);       // Batches pro Lauf (Paid Tier -> schnellerer Abbau des Rückstands)
     const MAX_MISS = Number(process.env.RECHECK_MAX_MISS || 3);
@@ -279,20 +278,20 @@ const today = () => new Date().toISOString().slice(0, 10);
         const names = due.map(b => b.name + ' (' + b.ticker + ')');
         const stillOk = (await checkCandidates(GEMINI_KEY, names))
           .filter(s => s.ratingCounts && !('strongBuy' in s.ratingCounts) && !s.countsBad);  // nur saubere Counts gelten als "ok"
-        const okSet = new Set(stillOk.map(s => s.ticker));
-        // Treffer mit sauberen Counts -> Daten aktualisieren, miss zurücksetzen.
-        for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s, miss: 0, recheckAt: today() };
-        // Nicht-Treffer: NUR zählen, wenn die Perle SCHON saubere Counts hatte (dann ist ein
-        // Wegfall ein echtes Signal "erfüllt 100% nicht mehr"). Perlen ohne bisherige Counts
-        // (Altbestand / Gemini las nicht sauber) NICHT bestrafen -> später erneut versuchen.
+        // UNABHÄNGIGE Gegenprüfung ("im Zweifel raus"): bestätigt eine skeptische
+        // Mehrquellen-Prüfung 0 Hold/Sell? Nur dann bleibt die Perle.
+        let confirmed = new Set();
+        if (stillOk.length) { useGemini(); confirmed = await verifyNoHold(GEMINI_KEY, stillOk); }
+        const okSet = new Set(stillOk.filter(s => confirmed.has(s.ticker.toUpperCase())).map(s => s.ticker));
+        // Bestätigte Treffer -> Daten aktualisieren, miss zurücksetzen.
+        for (const s of stillOk) if (confirmed.has(s.ticker.toUpperCase())) {
+          db[s.ticker] = { ...db[s.ticker], ...s, miss: 0, recheckAt: today(), verifiedAt: today() };
+        }
+        // Alles, was die Gegenprüfung NICHT besteht (Hold/Sell gefunden ODER unsicher),
+        // wird SOFORT entfernt — gemäß Vorgabe lieber raus als fälschlich drin lassen.
         for (const b of due) {
           if (okSet.has(b.ticker) || !db[b.ticker]) continue;
-          const hadCounts = db[b.ticker].ratingCounts && !('strongBuy' in db[b.ticker].ratingCounts);
-          if (!hadCounts) continue;   // noch nie sauber gelesen -> KEIN recheckAt -> nächster Lauf versucht erneut
-          db[b.ticker].recheckAt = today();
-          const m = (db[b.ticker].miss || 0) + 1;
-          if (m >= MAX_MISS) { delete db[b.ticker]; dropped++; }
-          else db[b.ticker].miss = m;
+          delete db[b.ticker]; dropped++;
         }
         checked += due.length;
       } catch (e) { noteGeminiError(e); console.error('Re-Validierung fehlgeschlagen:', e.message); break; }

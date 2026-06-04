@@ -290,10 +290,11 @@
       cntsEl.hidden = false;
     } else { cntsEl.hidden = true; }
 
-    // Nachschau-Link: der ECHTE Direktlink zur geprüften Quelle (MS-Consensus bzw. TipRanks-
-    // Forecast). Fallback: Suche, wenn (noch) kein Direktlink da ist.
-    document.getElementById('stkModalLinks').innerHTML =
-      verifyLinks(st).map(l => '<a class="stk-link" href="' + l.url + '" target="_blank" rel="noopener">' + l.name + ' ↗</a>').join('');
+    // KEIN Nachschau-Link mehr: Die von Gemini gelieferten MarketScreener-IDs waren
+    // nicht verlässlich (führten zur Startseite). Statt eines toten Links verlassen wir
+    // uns auf die unabhängig gegengeprüften Daten. Link-Bereich bleibt leer/ausgeblendet.
+    const linksEl = document.getElementById('stkModalLinks');
+    if (linksEl) { linksEl.innerHTML = ''; linksEl.hidden = true; }
 
     // Lösch-Leiste (nur mit Admin-Passwort): Aktie löschen & 3 Monate sperren
     renderDeleteBar(st);
@@ -303,11 +304,6 @@
     requestAnimationFrame(() => m.classList.add('show'));   // Einblend-Animation
   }
 
-  // NUR der eine MarketScreener-Consensus-Direktlink dieser Aktie (serverseitig validiert).
-  // Keine Suche, kein zweiter Link — genau diese Seite, von der die Daten gezählt wurden.
-  function verifyLinks(st) {
-    return st.ratingUrl ? [{ name: 'MarketScreener Consensus', url: st.ratingUrl }] : [];
-  }
   function closeStockModal() { const m = document.getElementById('stkModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
 
   /* ---------- Admin-Modus (Session) + Aktie löschen + 3 Monate sperren ---------- */

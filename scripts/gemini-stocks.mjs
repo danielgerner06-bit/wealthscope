@@ -179,6 +179,50 @@ Kein Text außerhalb des JSON.`;
   return out;
 }
 
+/* (A2) ZWEITE, UNABHÄNGIGE Verifizierung — "im Zweifel raus".
+   Eine Perle wird nur behalten, wenn eine SKEPTISCHE Gegenprüfung über MEHRERE
+   Quellen (nicht nur MarketScreener) bestätigt: KEIN einziger Hold/Underperform/
+   Sell. Findet auch nur EINE seriöse Quelle einen Hold/Sell -> Aktie RAUS.
+   Das fängt die Fälle ab, in denen die Erstprüfung "Hold=0" nur behauptet hat.
+   Rückgabe: Set der Ticker, die die Gegenprüfung zweifelsfrei bestanden haben. */
+export async function verifyNoHold(key, stocks) {
+  if (!stocks.length) return new Set();
+  const list = stocks.map(s => `"${s.name}" (${s.ticker})`).join(', ');
+  const prompt = `Du bist ein STRENGER Prüfer von Analysten-Empfehlungen. Prüfe für JEDE der
+folgenden Aktien, ob WIRKLICH ALLE Analysten zum Kauf raten (nur Buy/Outperform/Strong Buy)
+und es KEINEN einzigen Hold, Neutral, Halten, Underperform oder Sell gibt.
+
+Aktien: ${list}
+
+WICHTIG — sei MISSTRAUISCH und gründlich:
+- Schau auf MEHRERE Quellen (MarketScreener, TipRanks, Investing.com, Yahoo Finance, MarketBeat).
+- Schon EINE Quelle mit mindestens einem Hold/Neutral/Underperform/Sell bedeutet: NICHT 100%.
+- Gerade breit beobachtete Aktien (viele Analysten) haben fast immer mind. einen Hold — prüfe das besonders kritisch.
+- Bei Unsicherheit oder widersprüchlichen Quellen: als NICHT bestätigt werten.
+
+Gib NUR ein JSON-Array zurück, ein Objekt je Aktie:
+{ "ticker": "...", "alleKaufen": true|false, "holdGefunden": <Zahl der gefundenen Hold/Neutral>, "sellGefunden": <Zahl Sell/Underperform>, "quelle": "wo geprüft" }
+"alleKaufen" nur dann true, wenn du über mehrere Quellen SICHER bist, dass es 0 Hold und 0 Sell gibt.
+Kein Text außerhalb des JSON.`;
+
+  let arr;
+  try { const { text } = await groundedJSON(key, prompt); arr = extractJSON(text); }
+  catch { return new Set(); }              // Prüfung fehlgeschlagen -> nichts bestätigen (im Zweifel raus)
+  if (!Array.isArray(arr)) return new Set();
+  const confirmed = new Set();
+  for (const o of arr) {
+    if (!o || !o.ticker) continue;
+    const tk = String(o.ticker).toUpperCase();
+    const hold = Number(o.holdGefunden);
+    const sell = Number(o.sellGefunden);
+    // NUR bestätigen, wenn explizit alleKaufen=true UND 0 Hold UND 0 Sell gemeldet.
+    if (o.alleKaufen === true && (!isFinite(hold) || hold === 0) && (!isFinite(sell) || sell === 0)) {
+      confirmed.add(tk);
+    }
+  }
+  return confirmed;
+}
+
 /* (B) Neue unbekannte Werte entdecken ---------------------------------
    `focus` lenkt die Suche auf eine Region/Branche, damit über mehrere Läufe
    verschiedene Werte gefunden werden (z. B. "deutsche Small-Caps", "Biotech").  */
