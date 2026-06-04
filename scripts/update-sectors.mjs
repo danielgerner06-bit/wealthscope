@@ -94,17 +94,28 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
   if (belowCut) console.log(`Bereinigt: ${belowCut} Treffer unter ${MIN_BUY_PCT}% Kauf entfernt.`);
 
-  // Inkonsistenz-Bereinigung (Funktion, wird am Anfang UND am Ende aufgerufen — damit auch
-  // von Discovery/Re-Validierung neu eingebrachte fehlerhafte Counts vor dem Speichern fliegen).
+  // Bereinigung (am Anfang UND am Ende): entfernt Gemini-Perlen, die den strengen MS-Ablauf
+  // NICHT (mehr) erfüllen — inkonsistente Counts ODER (nach mind. 1 Re-Validierungs-Versuch)
+  // weiterhin ohne gültige MS-Counts + /consensus/-Link. So bleibt nur, was den Ablauf besteht.
+  const validMsLink = u => !!u && /^https?:\/\/(www\.)?marketscreener\.com\/quote\/stock\/[^\/]+\//i.test(u) && /consensus\/?$/i.test(u);
   const cleanInconsistent = (label) => {
-    let n = 0;
+    let nInc = 0, nNo = 0;
     for (const tk of Object.keys(db)) {
-      const s = db[tk], c = s.ratingCounts;
-      if (!c || ('strongBuy' in c)) continue;
-      const sum = (c.buy || 0) + (c.outperform || 0) + (c.hold || 0) + (c.underperform || 0) + (c.sell || 0);
-      if (s.analysts && sum > 0 && s.analysts !== sum) { delete db[tk]; n++; }
+      const s = db[tk];
+      if (!(s.via && s.via.startsWith('gemini'))) continue;
+      const c = s.ratingCounts;
+      const cleanCounts = c && !('strongBuy' in c);
+      if (cleanCounts) {
+        const sum = (c.buy || 0) + (c.outperform || 0) + (c.hold || 0) + (c.underperform || 0) + (c.sell || 0);
+        // inkonsistent ODER Hold/Under/Sell>0 ODER ungültiger Link -> raus
+        if ((s.analysts && sum > 0 && s.analysts !== sum) || c.hold || c.underperform || c.sell || !validMsLink(s.ratingUrl)) { delete db[tk]; nInc++; }
+      } else if ((s.miss || 0) >= 1) {
+        // schon mind. 1× erfolglos re-validiert, immer noch keine sauberen MS-Counts -> raus.
+        // (Frische Funde mit miss=0 bleiben, bekommen aber beim nächsten Lauf eine Chance.)
+        delete db[tk]; nNo++;
+      }
     }
-    if (n) console.log(`Bereinigt (${label}): ${n} Perlen mit inkonsistenten Counts (Summe≠Analysten) entfernt.`);
+    if (nInc || nNo) console.log(`Bereinigt (${label}): ${nInc} inkonsistent, ${nNo} ohne gültige MS-Daten entfernt.`);
   };
   cleanInconsistent('Start');
 
