@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T21:00:21.449Z",
+  "updatedAt": "2026-06-04T21:09:24.232Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -401,20 +401,28 @@
   "news": {
     "items": [
       {
-        "text": "EU lockert Handelsregeln für Banken wegen neuer Kapitalvorschriften.",
+        "text": "EU plant Schlupfloch für höhere Staatsschulden für Wärmepumpen.",
         "stamp": "04.06.26"
       },
       {
-        "text": "SoftBank plant gigantische KI-Rechenzentren in Frankreich.",
+        "text": "Trump-Macht schwindet, Iran-Krieg festgefahren, interne Niederlagen.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Stahlwerke drosseln Produktion wegen Bahnchaos.",
+        "text": "Russische Experten zweifeln erstmals an Putins Ukrainekrieg.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Neuer Fed-Chef Warsh will Reformen und stellt Inflationsmaß infrage.",
-        "stamp": "03.06.26"
+        "text": "Edgemont Gold Corp.: Genehmigung von Aktionären für Transaktion mit Laiva.",
+        "stamp": "04.06.26"
+      },
+      {
+        "text": "Trans Canada Gold Corp. kurz vor Abschluss von Transaktion.",
+        "stamp": "04.06.26"
+      },
+      {
+        "text": "Dryden Gold Corp. meldet neue hochgradige Goldfunde.",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -422,8 +430,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 2434,
-    "candCursor": 0,
+    "lastCursor": 2734,
+    "candCursor": 8,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -621,63 +629,50 @@
       "Iberdrola, S.A."
     ],
     "noteCursor": 8,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 314,
-      "cons_def": 157,
-      "materials": 199,
-      "health": 828,
-      "finance": 624,
-      "energy": 282,
-      "hardware": 196,
-      "software": 597,
-      "industrial": 255,
-      "utilities": 113,
-      "comm": 130,
-      "ai_semi": 115,
-      "realestate": 54
+      "cons_cycl": 318,
+      "cons_def": 160,
+      "materials": 208,
+      "health": 854,
+      "finance": 636,
+      "energy": 292,
+      "hardware": 199,
+      "software": 606,
+      "industrial": 263,
+      "utilities": 119,
+      "comm": 132,
+      "ai_semi": 116,
+      "realestate": 55
     },
     "pendingReject": [
-      "EA",
-      "EAF",
-      "EAT",
-      "EBAY",
-      "EBC",
-      "EBET",
-      "EBF",
-      "EBMT",
-      "EBS",
-      "ECG",
-      "ECL",
-      "ECO",
-      "ECOR",
-      "ECPG",
-      "ECVT",
-      "ECX",
-      "ED",
-      "EDBL",
-      "EDIT",
-      "EDRY"
+      "EVR",
+      "EVRG",
+      "EVTC",
+      "EVTL",
+      "EVTV",
+      "EW",
+      "EWBC"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 314,
-      "cons_def": 157,
-      "materials": 199,
-      "health": 828,
-      "finance": 624,
-      "energy": 282,
-      "hardware": 196,
-      "software": 597,
-      "industrial": 255,
-      "utilities": 113,
-      "comm": 130,
-      "ai_semi": 115,
-      "realestate": 54
+      "cons_cycl": 318,
+      "cons_def": 160,
+      "materials": 208,
+      "health": 854,
+      "finance": 636,
+      "energy": 292,
+      "hardware": 199,
+      "software": 606,
+      "industrial": 263,
+      "utilities": 119,
+      "comm": 132,
+      "ai_semi": 116,
+      "realestate": 55
     },
-    "heavyAt": "2026-06-04T20:48:24.199Z",
+    "heavyAt": "2026-06-04T21:00:55.305Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -686,6 +681,5 @@
     "SOGN.SW": "2026-09-04",
     "VOW3.DE": "2026-09-04",
     "HEI.DE": "2026-09-04"
-  },
-  "yahooAt": "2026-06-04T21:00:21.449Z"
+  }
 }
