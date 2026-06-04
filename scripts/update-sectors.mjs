@@ -221,13 +221,20 @@ const today = () => new Date().toISOString().slice(0, 10);
     try {
       const knownNames = Object.values(db).map(s => s.name).concat(candidates);
       const found = await discoverNew(GEMINI_KEY, knownNames, focus);
-      let added = 0;
+      let added = 0, promoted = 0;
       for (const f of found) {
-        if (!db[f.ticker]) added++;
-        db[f.ticker] = { ...db[f.ticker], ...f };
+        const hasCleanCounts = f.ratingCounts && !('strongBuy' in f.ratingCounts) && !f.countsBad;
+        if (hasCleanCounts) {
+          // Bereits beim Entdecken sauber gelesen (Counts + gültiger MS-Link) -> direkt Perle.
+          if (!db[f.ticker]) added++;
+          db[f.ticker] = { ...db[f.ticker], ...f };
+          promoted++;
+        }
+        // IMMER nur als Kandidat vormerken (NICHT roh als Perle einfügen). Erst checkCandidates
+        // mit dem strengen MS-Ablauf entscheidet -> keine counts-losen Perlen im JSON.
         if (f.name && !candidates.includes(f.name)) candidates.push(f.name);
       }
-      console.log(`Gemini-Discovery (${focus}): ${found.length} Vorschläge, ${added} neu.`);
+      console.log(`Gemini-Discovery (${focus}): ${found.length} Vorschläge, ${added} neu (${promoted} mit sauberen Counts direkt übernommen).`);
     } catch (e) { noteGeminiError(e); console.error('Discovery fehlgeschlagen:', e.message); }
   }
 
@@ -241,8 +248,14 @@ const today = () => new Date().toISOString().slice(0, 10);
       for (let i = 0; i < Math.min(CAND_BUDGET, n); i++) slice.push(candidates[(start + i) % n]);
       scan.candCursor = (start + slice.length) % n;
       const hits = await checkCandidates(GEMINI_KEY, slice);
-      for (const h of hits) db[h.ticker] = { ...db[h.ticker], ...h };
-      console.log(`Gemini-Kandidaten: ${slice.length} geprüft, ${hits.length} Treffer.`);
+      // NUR Treffer mit sauberen MS-Counts als Perle übernehmen — counts-lose verwerfen.
+      let kept = 0;
+      for (const h of hits) {
+        const ok = h.ratingCounts && !('strongBuy' in h.ratingCounts) && !h.countsBad;
+        if (!ok) continue;
+        db[h.ticker] = { ...db[h.ticker], ...h }; kept++;
+      }
+      console.log(`Gemini-Kandidaten: ${slice.length} geprüft, ${kept}/${hits.length} mit sauberen Counts übernommen.`);
     } catch (e) { noteGeminiError(e); console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
   }
 
@@ -264,7 +277,8 @@ const today = () => new Date().toISOString().slice(0, 10);
       round++; useGemini();
       try {
         const names = due.map(b => b.name + ' (' + b.ticker + ')');
-        const stillOk = await checkCandidates(GEMINI_KEY, names);
+        const stillOk = (await checkCandidates(GEMINI_KEY, names))
+          .filter(s => s.ratingCounts && !('strongBuy' in s.ratingCounts) && !s.countsBad);  // nur saubere Counts gelten als "ok"
         const okSet = new Set(stillOk.map(s => s.ticker));
         // Treffer mit sauberen Counts -> Daten aktualisieren, miss zurücksetzen.
         for (const s of stillOk) db[s.ticker] = { ...db[s.ticker], ...s, miss: 0, recheckAt: today() };
