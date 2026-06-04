@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T19:00:21.751Z",
+  "updatedAt": "2026-06-04T19:36:33.063Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,15 +147,15 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 13.69,
+      "perf": 13.94,
       "avg30": -0.84,
-      "perf6m": -3.59
+      "perf6m": -3.38
     },
     {
       "id": "ai_semi",
-      "perf": 30.24,
+      "perf": 30.49,
       "avg30": 8.55,
-      "perf6m": 104.3
+      "perf6m": 104.68
     },
     {
       "id": "hardware",
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -2.84,
+      "perf": -2.87,
       "avg30": 0.98,
-      "perf6m": -2.1
+      "perf6m": -2.13
     },
     {
       "id": "health",
@@ -183,15 +183,15 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -0.77,
+      "perf": -0.68,
       "avg30": 1.03,
-      "perf6m": -0.91
+      "perf6m": -0.81
     },
     {
       "id": "cons_def",
-      "perf": -2.48,
-      "avg30": 0.41,
-      "perf6m": 3.39
+      "perf": -2.61,
+      "avg30": 0.4,
+      "perf6m": 3.25
     },
     {
       "id": "industrial",
@@ -207,15 +207,15 @@
     },
     {
       "id": "materials",
-      "perf": 0.36,
+      "perf": 0.54,
       "avg30": 1.48,
-      "perf6m": 15.57
+      "perf6m": 15.78
     },
     {
       "id": "utilities",
-      "perf": -5.57,
+      "perf": -5.33,
       "avg30": 0.98,
-      "perf6m": -1.06
+      "perf6m": -0.8
     },
     {
       "id": "realestate",
@@ -227,21 +227,21 @@
   "bars30Region": [
     {
       "id": "usa",
-      "perf": 5.14,
+      "perf": 5.19,
       "avg30": 1.96,
-      "perf6m": 11.18
+      "perf6m": 11.22
     },
     {
       "id": "europe",
-      "perf": 2.36,
+      "perf": 2.39,
       "avg30": 1.29,
-      "perf6m": 9.12
+      "perf6m": 9.15
     },
     {
       "id": "germany",
-      "perf": 1.8,
+      "perf": 1.83,
       "avg30": 0.33,
-      "perf6m": 5.38
+      "perf6m": 5.42
     },
     {
       "id": "japan",
@@ -275,15 +275,15 @@
     },
     {
       "id": "latam",
-      "perf": -6.04,
+      "perf": -6.08,
       "avg30": 3.12,
-      "perf6m": 9.2
+      "perf6m": 9.15
     },
     {
       "id": "world",
-      "perf": 4.62,
+      "perf": 4.64,
       "avg30": 1.84,
-      "perf6m": 11.1
+      "perf6m": 11.12
     }
   ],
   "topStocks": [
@@ -316,29 +316,6 @@
       "div": null,
       "enrichAt": "2026-06-04",
       "recheckAt": "2026-06-04",
-      "miss": 1
-    },
-    {
-      "ticker": "FRE.DE",
-      "name": "Fresenius SE & Co. KGaA",
-      "sector": "health",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 14,
-      "upside": 50,
-      "yahoo": "FRE.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
-      "perf6m": -24.37,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": -11.28,
-      "pe": 13.4,
-      "eps": 2.68,
-      "div": 2.88,
-      "enrichAt": "2026-06-03",
-      "msUrl": "https://www.marketscreener.com/quote/stock/FRESENIUS-SE-CO-KGAA-5785/consensus/",
       "miss": 1
     },
     {
@@ -402,6 +379,36 @@
       "div": null
     },
     {
+      "ticker": "BAYN",
+      "name": "Bayer AG",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 19,
+      "upside": 39,
+      "yahoo": "BAYN.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 19,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/BAYER-AG-40477/consensus/",
+      "via": "gemini-discover",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 3.35,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -7.31,
+      "pe": null,
+      "eps": -2.19,
+      "div": 0.32,
+      "enrichAt": "2026-06-04"
+    },
+    {
       "ticker": "DTE.DE",
       "name": "Deutsche Telekom AG",
       "sector": "comm",
@@ -454,26 +461,36 @@
       "miss": 1
     },
     {
-      "ticker": "MUV2.DE",
-      "name": "Münchener Rückversicherungs-Gesellschaft AG in München",
-      "sector": "finance",
+      "ticker": "ABP",
+      "name": "Azienda Bresciana Petroli Nocivelli S.p.A.",
+      "sector": "energy",
       "buyPct": 100,
-      "outperformPct": 33,
-      "analysts": 17,
-      "upside": 26,
-      "yahoo": "MUV2.DE",
-      "peGemini": 12.7,
+      "outperformPct": 0,
+      "analysts": 1,
+      "upside": 67,
+      "yahoo": "ABP.MI",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 1,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/AZIENDA-BRESCIANA-PETROLI-NOCIVELLI-SPA-12370208/consensus/",
       "via": "gemini-discover",
       "source": "marketscreener",
-      "seen": "2026-06-03",
-      "perf6m": -16.9,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": -13.38,
-      "pe": 8.4,
-      "eps": 52.2,
-      "div": 5.42,
-      "enrichAt": "2026-06-03",
-      "miss": 2
+      "seen": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1,
+      "perf6m": -28.28,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -21.21,
+      "pe": 13,
+      "eps": 0.4,
+      "div": 1.35,
+      "enrichAt": "2026-06-04"
     },
     {
       "ticker": "4772.TW",
@@ -502,25 +519,6 @@
       "div": null,
       "recheckAt": "2026-06-04",
       "miss": 1
-    },
-    {
-      "ticker": "NVEE",
-      "name": "NV5 Global, Inc.",
-      "sector": "industrial",
-      "buyPct": 100,
-      "outperformPct": 20,
-      "analysts": 5,
-      "upside": 17,
-      "yahoo": "NVEE",
-      "peGemini": 23.7,
-      "msUrl": "https://www.marketscreener.com/quote/stock/NV5-GLOBAL-INC-25071319/consensus/",
-      "via": "gemini-discover",
-      "source": "web",
-      "seen": "2026-06-03",
-      "miss": 1,
-      "perf1mBefore": null,
-      "enrichAt": "2026-06-03",
-      "div": null
     },
     {
       "ticker": "DB1.DE",
@@ -553,6 +551,67 @@
       "enrichAt": "2026-06-04",
       "recheckAt": "2026-06-04",
       "miss": 1
+    },
+    {
+      "ticker": "GLE",
+      "name": "Société Générale",
+      "sector": "finance",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 20,
+      "upside": 14,
+      "yahoo": "GLE.PA",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 20,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/SOCIETE-GENERALE-SA-40460/consensus/",
+      "via": "gemini-discover",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1,
+      "perf6m": 12.8,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 6.64,
+      "pe": 10.1,
+      "eps": 7.04,
+      "div": 2.29,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "SKA B",
+      "name": "Skanska AB",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 9,
+      "upside": 13,
+      "yahoo": "SKAB.ST",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 9,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/SKANSKA-AB-6140790/consensus/",
+      "via": "gemini-discover",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1,
+      "perf1mBefore": null,
+      "pe": null,
+      "div": null,
+      "enrichAt": "2026-06-04"
     },
     {
       "ticker": "RWE.DE",
@@ -630,29 +689,6 @@
       "perf1mBefore": null,
       "enrichAt": "2026-06-04",
       "div": null
-    },
-    {
-      "ticker": "CRDO",
-      "name": "Credo Technology Group",
-      "sector": "ai_semi",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 18,
-      "upside": 8,
-      "yahoo": "CRDO",
-      "peGemini": 98.3,
-      "msUrl": "https://www.marketscreener.com/quote/stock/CREDO-TECHNOLOGY-GROUP-HOLDING-LTD-13023812/consensus/",
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-04",
-      "miss": 1,
-      "perf6m": 26.36,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": 14.58,
-      "pe": 117.9,
-      "eps": 1.82,
-      "div": 0,
-      "enrichAt": "2026-06-04"
     },
     {
       "ticker": "INGA.AS",
@@ -781,70 +817,6 @@
       "enrichAt": "2026-06-04",
       "recheckAt": "2026-06-04",
       "miss": 1
-    },
-    {
-      "ticker": "WKL.DE",
-      "name": "Wacker Chemie AG",
-      "sector": "materials",
-      "buyPct": 100,
-      "outperformPct": 50,
-      "analysts": 2,
-      "upside": 0,
-      "yahoo": "WKL.DE",
-      "peGemini": 14.1,
-      "via": "gemini-discover",
-      "source": "marketscreener",
-      "seen": "2026-06-03",
-      "perf1mBefore": null,
-      "enrichAt": "2026-06-03",
-      "div": null,
-      "miss": 1
-    },
-    {
-      "ticker": "WCH",
-      "name": "WCH Service AG",
-      "sector": "industrial",
-      "buyPct": 100,
-      "outperformPct": 50,
-      "analysts": 14,
-      "upside": -18,
-      "yahoo": "WCH.DE",
-      "peGemini": 18,
-      "via": "gemini-discover",
-      "source": "Aktiencheck.de",
-      "seen": "2026-06-03",
-      "perf6m": 58.13,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 10.26,
-      "pe": null,
-      "eps": -16.16,
-      "div": 2.67,
-      "enrichAt": "2026-06-03",
-      "miss": 1,
-      "tdAt": "2026-06-03"
-    },
-    {
-      "ticker": "WKL",
-      "name": "Wacker Chemie AG",
-      "sector": "materials",
-      "buyPct": 100,
-      "outperformPct": 70,
-      "analysts": 14,
-      "upside": -18,
-      "yahoo": "WCH.DE",
-      "peGemini": 14.5,
-      "via": "gemini-discover",
-      "source": "Finanznachrichten.de",
-      "seen": "2026-06-03",
-      "miss": 2,
-      "perf6m": 58.13,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 10.26,
-      "pe": null,
-      "eps": -16.16,
-      "div": 2.67,
-      "enrichAt": "2026-06-03",
-      "tdAt": "2026-06-03"
     },
     {
       "ticker": "001740.KS",
@@ -1986,29 +1958,6 @@
       "msUrl": "https://www.marketscreener.com/quote/stock/PVA-TEPLA-AG-6000001/consensus/"
     },
     {
-      "ticker": "HYQ",
-      "name": "Hypoport SE",
-      "sector": "finance",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 4,
-      "upside": null,
-      "yahoo": "HYQ.DE",
-      "peGemini": null,
-      "msUrl": "https://www.marketscreener.com/quote/stock/HYPOPORT-SE-5493365/consensus/",
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
-      "miss": 1,
-      "perf6m": -36.03,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 2.78,
-      "pe": 18.8,
-      "eps": 4.23,
-      "div": 0,
-      "enrichAt": "2026-06-03"
-    },
-    {
       "ticker": "BNP.PA",
       "name": "BNP Paribas SA",
       "sector": "finance",
@@ -2097,6 +2046,200 @@
       "pe": null,
       "eps": -1.42,
       "div": 0,
+      "enrichAt": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1
+    },
+    {
+      "ticker": "RI",
+      "name": "Pernod Ricard",
+      "sector": "cons_def",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 18,
+      "upside": 42,
+      "yahoo": "RI.PA",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 19,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/PERNOD-RICARD-2299/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": -20.31,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -5.28,
+      "pe": 10.9,
+      "eps": 5.6,
+      "div": 7.72,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "BEI",
+      "name": "Beiersdorf AG",
+      "sector": "cons_def",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 19,
+      "upside": 31,
+      "yahoo": "BEI.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 11,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/BEIERSDORF-AG-23600/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": -25.55,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -5.03,
+      "pe": 15.9,
+      "eps": 4.25,
+      "div": 1.49,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "RHM",
+      "name": "Rheinmetall AG",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 21,
+      "upside": 59,
+      "yahoo": "RHM.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 21,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/RHEINMETALL-AG-40472/consensus/",
+      "via": "gemini-discover",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1,
+      "perf6m": -22.18,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -16.73,
+      "pe": 53.3,
+      "eps": 22.33,
+      "div": 0.96,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "SAX",
+      "name": "Ströer SE & Co. KGaA",
+      "sector": "cons_cycl",
+      "buyPct": 100,
+      "outperformPct": 67,
+      "analysts": 11,
+      "upside": 42,
+      "yahoo": "SAX.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 1,
+        "outperform": 2,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/STRÖER-SE-CO-KGAA-3400617/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": -1,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -4.25,
+      "pe": 16,
+      "eps": 2.21,
+      "div": 5.21,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "CDA",
+      "name": "Compagnie des Alpes",
+      "sector": "cons_cycl",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 6,
+      "upside": 23,
+      "yahoo": "CDA.PA",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 6,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/COMPAGNIE-DES-ALPES-12400/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": -8.11,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 4.35,
+      "pe": 9.6,
+      "eps": 2.31,
+      "div": 4.98,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "SL",
+      "name": "Sanlorenzo S.p.A.",
+      "sector": "industrial",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 8,
+      "upside": 21,
+      "yahoo": "SL.MI",
+      "peGemini": 11.8,
+      "ratingCounts": {
+        "buy": 8,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/SANLORENZO-S-P-A-14047076/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "miss": 0,
+      "recheckAt": "2026-06-04",
+      "perf6m": 29.19,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 17.11,
+      "pe": 12.6,
+      "eps": 3.04,
+      "div": 2.7,
       "enrichAt": "2026-06-04"
     }
   ],
@@ -2214,24 +2357,24 @@
   "news": {
     "items": [
       {
-        "text": "Geopolitik belastet Märkte, BOJ signalisiert Zinserhöhung.",
+        "text": "US-Militär verbannt China-Wolfram: Profitiert Western Star Resources?",
         "stamp": "04.06.26"
       },
       {
-        "text": "SpaceX plant IPO, Finanzwelt aufmerksam.",
+        "text": "Geopolitik und KI-Boom prägen Marktgeschehen",
         "stamp": "04.06.26"
       },
       {
-        "text": "Broadcom-Ausblick enttäuscht, KI-Aktien unter Druck.",
+        "text": "Trump rechnet mit Einigung mit Iran",
         "stamp": "04.06.26"
       },
       {
-        "text": "US-Notenbank hebt Leitzins leicht an.",
+        "text": "Australien: Wirtschaftswachstum verlangsamt sich",
         "stamp": "04.06.26"
       },
       {
-        "text": "US-Militär verbannt China-Wolfram, Aktie profitiert.",
-        "stamp": "04.06.26"
+        "text": "Fed-Reformen: Warsh äußert sich zur Unabhängigkeit",
+        "stamp": "03.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -2239,8 +2382,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 334,
-    "candCursor": 124,
+    "lastCursor": 634,
+    "candCursor": 132,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -2404,45 +2547,71 @@
       "SK Networks Company Limited",
       "PharmaResearch Co., Ltd.",
       "MP Materials Corp.",
-      "Xinyi Solar Holdings Limited"
+      "Xinyi Solar Holdings Limited",
+      "Skanska AB",
+      "Société Générale",
+      "Pernod Ricard",
+      "Beiersdorf AG",
+      "Ströer SE & Co. KGaA",
+      "Compagnie des Alpes",
+      "Azienda Bresciana Petroli Nocivelli S.p.A.",
+      "Sanlorenzo S.p.A."
     ],
     "noteCursor": 8,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 259,
-      "cons_def": 130,
-      "materials": 165,
-      "health": 670,
-      "finance": 523,
-      "energy": 244,
-      "hardware": 158,
-      "software": 492,
-      "industrial": 214,
-      "utilities": 97,
-      "comm": 106,
-      "ai_semi": 98,
+      "cons_cycl": 267,
+      "cons_def": 132,
+      "materials": 172,
+      "health": 697,
+      "finance": 529,
+      "energy": 249,
+      "hardware": 164,
+      "software": 506,
+      "industrial": 217,
+      "utilities": 98,
+      "comm": 107,
+      "ai_semi": 105,
       "realestate": 44
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "AROC",
+      "AROW",
+      "ARQ",
+      "ARQQ",
+      "ARQT",
+      "ARRY",
+      "ARTL",
+      "ARTV",
+      "ARVN",
+      "ARW",
+      "ARWR",
+      "ARX",
+      "ARXS",
+      "AS",
+      "ASAN",
+      "ASB",
+      "ASC"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 261,
-      "cons_def": 130,
-      "materials": 171,
-      "health": 679,
-      "finance": 530,
-      "energy": 247,
-      "hardware": 161,
-      "software": 503,
-      "industrial": 219,
-      "utilities": 102,
-      "comm": 107,
-      "ai_semi": 108,
+      "cons_cycl": 271,
+      "cons_def": 134,
+      "materials": 176,
+      "health": 706,
+      "finance": 535,
+      "energy": 253,
+      "hardware": 167,
+      "software": 517,
+      "industrial": 223,
+      "utilities": 103,
+      "comm": 108,
+      "ai_semi": 114,
       "realestate": 45
     },
-    "heavyAt": "2026-06-04T18:15:19.719Z",
+    "heavyAt": "2026-06-04T19:28:05.020Z",
     "revalidateTag": "ms-no-hold-v6",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2451,6 +2620,5 @@
     "SOGN.SW": "2026-09-04",
     "VOW3.DE": "2026-09-04",
     "HEI.DE": "2026-09-04"
-  },
-  "yahooAt": "2026-06-04T19:00:21.751Z"
+  }
 }
