@@ -215,7 +215,7 @@
       const metric = stockMetric(st);
       const meta = [];
       if (st.buyPct != null) meta.push('Kauf ' + st.buyPct + '%');
-      if (st.outperformPct != null) meta.push('S.Buy ' + st.outperformPct + '%');
+      if (st.outperformPct != null) meta.push('Outp. ' + st.outperformPct + '%');
       if (st.analysts != null) meta.push(st.analysts + ' Analyst' + (st.analysts === 1 ? '' : 'en'));
       if (st.div != null && st.div > 0) meta.push('Div ' + st.div + '%');
       row.innerHTML =
@@ -254,7 +254,7 @@
     const hero = [
       { lbl: 'Kursziel-Potenzial', val: pct(st.upside), s: sc(st.upside, 0, 50) },
       { lbl: 'Kaufempfehlung', val: st.buyPct == null ? '–' : st.buyPct + '%', s: sc(st.buyPct, 50, 100) },
-      { lbl: 'Strong Buy', val: st.outperformPct == null ? '–' : st.outperformPct + '%', s: sc(st.outperformPct, 0, 100) },
+      { lbl: 'Outperform', val: st.outperformPct == null ? '–' : st.outperformPct + '%', s: sc(st.outperformPct, 0, 100) },
     ];
     document.getElementById('stkModalHero').innerHTML = hero.map(h =>
       '<div class="stk-hero" style="--c:' + hsl(h.s) + '">' +
@@ -275,8 +275,8 @@
       '<div class="stk-stat"><div class="stk-stat-val" style="color:' + hsl(t.s) + '">' + t.val + '</div>' +
       '<div class="stk-stat-lbl">' + t.lbl + '</div></div>').join('');
 
-    // rohe Analysten-Verteilung (volle Transparenz, MarketScreener-Stufen).
-    // Nur das aktuelle MS-Format (buy/outperform) anzeigen; altes Format (strongBuy) ignorieren.
+    // rohe Analysten-Verteilung (volle Transparenz). MS: Buy/Outperform/Hold/Underperform/Sell.
+    // TipRanks: Buy/Hold/Sell. Altes strongBuy-Format ignorieren.
     const rc = st.ratingCounts;
     const cntsEl = document.getElementById('stkModalCounts');
     if (rc && !('strongBuy' in rc) && (rc.buy || rc.outperform || rc.hold || rc.underperform || rc.sell)) {
@@ -286,11 +286,12 @@
       if (rc.hold) parts.push('<b style="color:#fbbf24">' + rc.hold + '</b> Hold');
       if (rc.underperform) parts.push('<b style="color:#fb923c">' + rc.underperform + '</b> Underperform');
       if (rc.sell) parts.push('<b style="color:#f87171">' + rc.sell + '</b> Sell');
-      cntsEl.innerHTML = 'Analysten: ' + parts.join(' · ');
+      cntsEl.innerHTML = parts.join(' · ') + ' <span class="stk-csrc">(MarketScreener)</span>';
       cntsEl.hidden = false;
     } else { cntsEl.hidden = true; }
 
-    // Nachschau-Links: extern auf Analysten-Seiten zum Selber-Prüfen
+    // Nachschau-Link: der ECHTE Direktlink zur geprüften Quelle (MS-Consensus bzw. TipRanks-
+    // Forecast). Fallback: Suche, wenn (noch) kein Direktlink da ist.
     document.getElementById('stkModalLinks').innerHTML =
       verifyLinks(st).map(l => '<a class="stk-link" href="' + l.url + '" target="_blank" rel="noopener">' + l.name + ' ↗</a>').join('');
 
@@ -302,18 +303,14 @@
     requestAnimationFrame(() => m.classList.add('show'));   // Einblend-Animation
   }
 
-  // MarketScreener-Direktlink (von Gemini hinterlegt) — genau diese Aktie, eindeutig.
-  // Fällt zurück auf die MarketScreener-Suche, wenn (noch) keine Direkt-URL da ist.
+  // Direktlink zur geprüften MarketScreener-Consensus-Seite (URL serverseitig validiert).
+  // Plus eine Namens-Suche als Gegencheck (falls man die exakte Seite verifizieren will).
   function verifyLinks(st) {
-    // Sicherheit: NICHT die von Gemini gelieferte Direkt-URL nutzen — die ID kann erfunden
-    // sein und auf eine völlig andere Firma zeigen (Name in der URL ist nur Kosmetik,
-    // MarketScreener routet über die Nummer). Stattdessen IMMER über die Suche mit dem
-    // echten Firmennamen — landet zuverlässig bei der richtigen Aktie, nie bei einer falschen.
     const q = encodeURIComponent((st.name || st.ticker || '').replace(/\s+(SE|AG|N\.?V\.?|S\.?A\.?|Corp\.?|Inc\.?|Ltd\.?|PLC|Co\.?|KGaA|Group|Holding|Vz\.?)\b/gi, '').trim() || st.ticker || '');
-    return [
-      { name: 'Auf MarketScreener suchen', url: 'https://www.marketscreener.com/search/?q=' + q },
-      { name: 'TipRanks', url: 'https://www.tipranks.com/search?query=' + q },
-    ];
+    const links = [];
+    if (st.ratingUrl) links.push({ name: 'MarketScreener (Quelle)', url: st.ratingUrl });
+    links.push({ name: links.length ? 'Suche' : 'Auf MarketScreener suchen', url: 'https://www.marketscreener.com/search/?q=' + q });
+    return links;
   }
   function closeStockModal() { const m = document.getElementById('stkModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
 
@@ -374,10 +371,9 @@
   function viaLabel(v) { if (!v) return '–'; if (v.startsWith('gemini')) return 'KI-Websuche (Gemini)'; if (v === 'finnhub') return 'Finnhub (US-Analysten)'; return v; }
   // Herkunft der Rating-Zahlen: FMP/Finnhub = exakte Counts, Gemini = Websuche-Schätzung
   function ratingSrcLabel(st) {
-    if (st.ratingSrc === 'twelvedata') return '✓ exakte Daten (Twelve Data)';
-    if (st.ratingSrc === 'fmp') return '✓ exakte Daten (FMP)';
-    if (st.via === 'finnhub') return '✓ exakte Daten (Finnhub)';
-    return '≈ Websuche-Schätzung';
+    if (st.via === 'finnhub') return '✓ Finnhub (US-Analysten)';
+    if (st.ratingSource === 'marketscreener' && st.ratingCounts) return '✓ MarketScreener';
+    return '≈ ungeprüft';
   }
   function wireStockModal() {
     const m = document.getElementById('stkModal');

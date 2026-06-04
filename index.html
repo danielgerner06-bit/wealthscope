@@ -571,7 +571,7 @@
           <input type="text" inputmode="numeric" id="fltUpside" placeholder="Ziel≥" title="Kursziel-Potenzial mindestens (%)" aria-label="Analystenziel-Potenzial minimal in Prozent">
           <input type="text" inputmode="numeric" id="fltPerf6m" placeholder="6M≤" title="6-Monats-Performance höchstens (%)" aria-label="6-Monats-Performance höchstens in Prozent">
           <input type="text" inputmode="numeric" id="fltPre1m" placeholder="1M≤" title="Kursentwicklung im Monat VOR Aufnahme — höchstens (%)" aria-label="1-Monats-Performance vor Aufnahme höchstens in Prozent">
-          <input type="text" inputmode="numeric" id="fltOutperf" placeholder="S.Buy≥" title="Strong-Buy-Anteil mindestens (%)" aria-label="Strong-Buy-Anteil minimal in Prozent">
+          <input type="text" inputmode="numeric" id="fltOutperf" placeholder="Outp≥" title="Outperform-Anteil mindestens (%)" aria-label="Outperform-Anteil minimal in Prozent">
           <input type="text" inputmode="numeric" id="fltPe" placeholder="KGV≤" title="KGV höchstens — 0 zeigt unprofitable (ohne KGV)" aria-label="KGV maximal, 0 für ohne KGV">
           <input type="text" inputmode="numeric" id="fltAnalysts" placeholder="Anal≥" title="Anzahl Analysten mindestens" aria-label="Anzahl Analysten minimal">
           <input type="text" inputmode="numeric" id="fltDiv" placeholder="Div≥" title="Dividendenrendite mindestens (%)" aria-label="Dividendenrendite minimal in Prozent">
@@ -584,7 +584,7 @@
           <button data-key="upside" class="active desc">Ziel</button>
           <button data-key="perf6m">6M</button>
           <button data-key="perf1mBefore" title="1-Monats-Kurs vor Aufnahme">1M</button>
-          <button data-key="outperformPct">S.Buy</button>
+          <button data-key="outperformPct">Outp.</button>
           <button data-key="pe">KGV</button>
           <button data-key="div">Div.</button>
           <button data-key="analysts">Analyst.</button>
@@ -664,7 +664,7 @@
           <label>X-Achse (Faktor)
             <select id="anaXFactor">
               <option value="pe">KGV</option>
-              <option value="outperformPct">Strong&nbsp;Buy&nbsp;%</option>
+              <option value="outperformPct">Outperform&nbsp;%</option>
               <option value="upside">Kursziel-Potenzial&nbsp;%</option>
               <option value="div">Dividende&nbsp;%</option>
               <option value="analysts">Analysten</option>
@@ -685,7 +685,7 @@
             </div>
           </div>
           <label>Kauf ≥%<input type="text" inputmode="numeric" id="afBuy" placeholder="–"></label>
-          <label>S.Buy ≥%<input type="text" inputmode="numeric" id="afOutp" placeholder="–"></label>
+          <label>Outp ≥%<input type="text" inputmode="numeric" id="afOutp" placeholder="–"></label>
           <label>Ziel ≥%<input type="text" inputmode="numeric" id="afUpside" placeholder="–"></label>
           <label>Div ≥%<input type="text" inputmode="numeric" id="afDiv" placeholder="–"></label>
           <label>Analyst ≥<input type="text" inputmode="numeric" id="afAnalysts" placeholder="–"></label>

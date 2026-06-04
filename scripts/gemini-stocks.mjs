@@ -66,93 +66,81 @@ function extractJSON(text) {
 }
 
 function normRating(o) {
-  // MarketScreener-Skala (best->schlecht): Buy, Outperform, Hold, Underperform, Sell.
-  // Kaufempfehlung = Buy + Outperform; "Strong Buy"-Wert (outperformPct) = NUR Outperform.
-  // BEVORZUGT rohe Zähler -> WIR rechnen die Prozente (Gemini kann nicht "100" raten).
+  // AUSSCHLIESSLICH MarketScreener-Consensus: Buy, Outperform, Hold, Underperform, Sell.
+  // Kaufempfehlung = Buy + Outperform; Outperform-Wert = nur die Outperform-Stufe.
+  // Kriterium 100%: NUR Buy/Outperform > 0, Hold/Underperform/Sell = 0.
+  // WIR rechnen aus den Zählern; Link muss eine echte MS-Consensus-URL sein, sonst countsBad.
   const cnt = k => { const v = Number(o[k]); return isFinite(v) && v >= 0 ? Math.round(v) : null; };
   const buy = cnt('buy');
   const outp = cnt('outperform') ?? cnt('outperformCount') ?? cnt('accumulate');
   const hold = cnt('hold');
   const under = cnt('underperform') ?? 0;
   const sell = (cnt('sell') ?? 0) + (cnt('strongSell') ?? cnt('strong_sell') ?? 0);
-  let buyPct, outperformPct, analysts, countsBad = false;
+
+  // Link MUSS eine MarketScreener-Consensus-URL sein (keine andere Quelle akzeptiert).
+  const rawUrl = (o.url || o.sourceUrl || o.marketScreenerUrl || o.msUrl || '').toString().trim();
+  const msMatch = /^https?:\/\/(www\.)?marketscreener\.com\/quote\/stock\/[^\/]+\//i.test(rawUrl);
+  const link = msMatch ? (/consensus\/?$/i.test(rawUrl) ? rawUrl : rawUrl.replace(/\/+$/, '/') + 'consensus/') : null;
+
+  let buyPct, outperformPct = null, analysts, countsBad = false;
   const haveCounts = [buy, outp, hold].some(x => x != null);
-  if (haveCounts) {
+  if (!link || !haveCounts) {
+    countsBad = true;   // ohne gültige MS-URL oder Zähler -> raus
+  } else {
     const BUY = buy ?? 0, OUTP = outp ?? 0, H = hold ?? 0, U = under ?? 0, S = sell ?? 0;
     const total = BUY + OUTP + H + U + S;
-    // Konsistenz-Check: Geminis separat genannte Analystenzahl MUSS zur Stufen-Summe passen.
-    // Weicht sie stark ab (z. B. analysts:17 aber Counts ergeben 3), hat Gemini die Tabelle
-    // falsch abgelesen -> Daten verwerfen statt Müll speichern.
     const declared = Number(o.analysts ?? o.analystCount ?? o.anzahlAnalysten);
-    if (isFinite(declared) && declared > 0 && Math.abs(declared - total) > Math.max(1, total * 0.15)) {
-      countsBad = true;
-    } else if (total > 0) {
-      buyPct = Math.round(((BUY + OUTP) / total) * 100);   // Kaufempfehlung = Buy + Outperform
-      outperformPct = Math.round((OUTP / total) * 100);    // nur die Outperform-Stufe
+    if (total <= 0) countsBad = true;
+    else if (isFinite(declared) && declared > 0 && Math.abs(declared - total) > Math.max(1, total * 0.15)) countsBad = true;
+    else {
+      buyPct = Math.round(((BUY + OUTP) / total) * 100);
+      outperformPct = Math.round((OUTP / total) * 100);
       analysts = total;
     }
   }
-  // KEIN Fallback auf fertige Prozente mehr: wir wollen NUR Aktien mit echten,
-  // konsistenten Stufen-Zählern. Ohne saubere Counts -> countsBad -> nicht aufnehmen.
-  if (buyPct == null) {
-    countsBad = true;
-    buyPct = Math.round(Number(o.buyPct ?? o.buy_percent ?? o.kaufProzent));   // nur für Anzeige/Sortierung
-    const rawOutp = o.outperformPct ?? o.outperform_percent ?? o.outperformProzent;
-    const outpNum = Math.round(Number(rawOutp));
-    outperformPct = (rawOutp == null || !isFinite(outpNum)) ? null : outpNum;
-    analysts = Number(o.analysts ?? o.analystCount ?? o.anzahlAnalysten) || null;
-  }
+
   let upside = (o.upside != null && isFinite(Number(o.upside))) ? Math.round(Number(o.upside)) : null;
-  // Plausibilität: unrealistische Kursziele (oft veraltete/falsche Websuche-Treffer) verwerfen.
   if (upside != null && (upside < -50 || upside > 120)) upside = null;
   let pe = (o.pe ?? o.kgv ?? o.peRatio) != null ? +Number(o.pe ?? o.kgv ?? o.peRatio).toFixed(1) : null;
-  if (pe != null && (!isFinite(pe) || pe <= 0 || pe > 500)) pe = null;  // negatives/absurdes KGV verwerfen
+  if (pe != null && (!isFinite(pe) || pe <= 0 || pe > 500)) pe = null;
   let sector = o.sector;
   if (!SECTOR_IDS.includes(sector)) sector = sectorForFinnhub(o.industry || o.branche || sector) || null;
-  // Yahoo-Symbol für die Kursabfrage (z. B. KTN.DE, FRA.DE); fällt sonst auf Ticker zurück.
   const yahoo = (o.yahoo || o.yahooSymbol || '').toString().trim().toUpperCase() || null;
-  // rohe Zähler zur Transparenz im Detail-Popup mitgeben (MarketScreener-Stufen)
-  const counts = haveCounts ? { buy: buy ?? 0, outperform: outp ?? 0, hold: hold ?? 0, underperform: under ?? 0, sell: sell ?? 0 } : null;
-  // MarketScreener-Direktlink validieren: nur echte Consensus-/quote-URLs übernehmen.
-  let msUrl = (o.marketScreenerUrl || o.marketscreenerUrl || o.msUrl || '').toString().trim();
-  if (!/^https?:\/\/(www\.)?marketscreener\.com\/quote\/stock\//i.test(msUrl)) msUrl = null;
-  else if (!/consensus\/?$/i.test(msUrl)) msUrl = msUrl.replace(/\/?$/, '/').replace(/\/+$/, '/') + 'consensus/';
-  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts, msUrl, countsBad };
+  const counts = (!countsBad) ? { buy: buy ?? 0, outperform: outp ?? 0, hold: hold ?? 0, underperform: under ?? 0, sell: sell ?? 0 } : null;
+  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts, ratingSource: 'marketscreener', ratingUrl: link, countsBad };
 }
+
+// STRENGE Regeln für die Analysten-Verteilung — AUSSCHLIESSLICH von MarketScreener.
+// (MarketScreener ist konservativer: nur Bank-Analysten, feine 5-Stufen-Skala, erfasst Hold
+//  zuverlässiger als TipRanks -> für ein 100%-Kriterium die verlässlichere Quelle.)
+const RATING_RULES = `
+QUELLE — nutze AUSSCHLIESSLICH die MarketScreener-Consensus-Seite der Aktie (über Google finden):
+ https://www.marketscreener.com/quote/stock/FIRMENNAME-ID/consensus/
+Lies dort unter "Analyst Consensus Detail" die ANZAHL der Analysten je Stufe:
+ Buy, Outperform, Hold, Underperform, Sell ("Without Opinion" ignorieren).
+KEINE andere Quelle (kein TipRanks, kein Investing.com etc.) — nur MarketScreener.
+
+Gib die rohen ZÄHLER zurück (NICHT selbst Prozente rechnen). Pflichtfelder je Aktie:
+ - source: "marketscreener"
+ - url: die VOLLSTÄNDIGE URL der Consensus-Seite (…/quote/stock/…/consensus/)
+ - analysts: Gesamtzahl (MUSS exakt der Summe der Stufen entsprechen!)
+ - buy, outperform, hold, underperform, sell  (Anzahl je Stufe)
+ - ticker, name, land, yahoo (Yahoo-Symbol inkl. Suffix z.B. "KTN.DE","NVDA")
+ - sector: GENAU eine dieser IDs: ${SECTOR_LIST}
+ - upside (% oder null), pe (KGV-Zahl oder null bei Verlust)
+
+STRENG: Verteile ALLE Analysten auf die Stufen (nicht alle in eine). Summe der Stufen = analysts.
+Findest du die Aktie nicht eindeutig auf MarketScreener, oder bist du unsicher -> WEGLASSEN.`;
 
 /* (A) Kandidaten prüfen ------------------------------------------------ */
 export async function checkCandidates(key, names) {
   if (!names.length) return [];
-  const prompt = `Du recherchierst Analysten-Empfehlungen für Aktien über die Google-Suche.
-
-WICHTIG: Finde für jede Aktie die EXAKTE MarketScreener-Consensus-Seite über die Google-Suche.
-Das URL-Format ist: https://www.marketscreener.com/quote/stock/FIRMENNAME-ID/consensus/
-(z. B. .../quote/stock/MICROSOFT-CORPORATION-4835/consensus/). Lies die Analysten-Verteilung
-GENAU von dieser Seite. Findest du die Aktie dort nicht eindeutig -> NICHT ausgeben.
-
+  const prompt = `Du recherchierst Analysten-Empfehlungen für Aktien.
 Prüfe GENAU diese Aktien: ${names.map(n => '"' + n + '"').join(', ')}.
+${RATING_RULES}
 
-MarketScreener-Skala (best zu schlecht): Buy, Outperform, Hold, Underperform, Sell. Lies die
-ANZAHL der Analysten JE Stufe AB und gib diese ZÄHLER zurück — NICHT selbst Prozente rechnen.
-ENTSCHEIDEND: Die SUMME aller Stufen-Zähler MUSS exakt der Gesamtzahl der Analysten entsprechen.
-Verteile ALLE Analysten auf die richtigen Stufen — packe nicht einfach alle in eine Stufe.
-Beispiel: 17 Analysten gesamt, davon 9 Buy, 5 Outperform, 3 Hold -> buy:9, outperform:5, hold:3
-(Summe 17). Wenn du die genaue Verteilung nicht sicher ablesen kannst -> Aktie WEGLASSEN.
-- ticker (Börsenkürzel), name, land
-- marketScreenerUrl: die VOLLSTÄNDIGE URL der Consensus-Seite (…/quote/stock/…/consensus/)
-- analysts: Gesamtzahl der Analysten (muss = Summe der Stufen sein)
-- buy: Anzahl "Buy" (höchste Stufe)
-- outperform: Anzahl "Outperform" (zweithöchste)
-- hold: Anzahl "Hold"
-- underperform: Anzahl "Underperform"
-- sell: Anzahl "Sell"
-- sector: GENAU eine dieser IDs anhand der Branche: ${SECTOR_LIST}
-- upside: Kursziel-Potenzial in % falls auffindbar, sonst null
-- pe: aktuelles KGV (Kurs-Gewinn-Verhältnis) als Zahl; bei Verlust null
-- yahoo: das Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "FRA.DE", "NVDA"), für Kursabfragen
-
-Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, deren Analysten-Verteilung du bei
-MarketScreener sicher gefunden hast. Ohne klare Zähler weglassen. Kein Text außerhalb des JSON.`;
+Gib NUR ein JSON-Array zurück, ein Objekt je Aktie, die du sicher belegen konntest.
+Kein Text außerhalb des JSON.`;
 
   const { text, sources } = await groundedJSON(key, prompt);
   const arr = extractJSON(text);
@@ -176,8 +164,9 @@ MarketScreener sicher gefunden hast. Ohne klare Zähler weglassen. Kein Text au�
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe, ratingCounts: r.ratingCounts, msUrl: r.msUrl,
-        via: 'gemini', source: o.source || sources[0] || 'web',
+        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe,
+        ratingCounts: r.ratingCounts, ratingSource: r.ratingSource, ratingUrl: r.ratingUrl,
+        via: 'gemini', source: r.ratingSource,
         seen: new Date().toISOString().slice(0, 10),
       });
     }
@@ -193,31 +182,13 @@ export async function discoverNew(key, knownNames, focus = '') {
   const focusLine = focus
     ? `Lege diesmal den Schwerpunkt auf: ${focus}. `
     : '';
-  const prompt = `Du suchst über die Google-Suche WELTWEIT kleine bis mittelgroße, eher UNBEKANNTE Aktien (Small-/Mid-Caps, gern aus Deutschland/Europa, aber auch USA/Asien), die von Analysten überwiegend mit Kaufempfehlungen bewertet werden. ${focusLine}
-
-WICHTIG für konsistente, nachprüfbare Daten: Prüfe die Analysten-Verteilung jeder vorgeschlagenen
-Aktie AUSSCHLIESSLICH auf MarketScreener (marketscreener.com, Consensus-Seite). Findest du sie
-dort nicht oder ist die Verteilung unklar -> Aktie NICHT vorschlagen (nicht aus anderer Quelle raten).
-
-Kriterium: buyPct (Buy + Strong Buy) >= ${MIN_BUY_PCT} (Prozent aller Empfehlungen). Anzahl Analysten egal (auch 1-3 reicht). Unternehmensgröße egal — je unbekannter/kleiner, desto besser. KEINE Mega-Caps (kein Apple, Microsoft, Nvidia, Amazon, Alphabet, Meta usw.).
-
+  const prompt = `Du suchst über die Google-Suche WELTWEIT kleine bis mittelgroße, eher UNBEKANNTE Aktien (Small-/Mid-Caps, gern aus Deutschland/Europa, aber auch USA/Asien), bei denen ALLE Analysten zum Kauf raten (nur Buy/Outperform, KEIN Hold/Sell). ${focusLine}
+Unternehmensgröße egal — je unbekannter/kleiner, desto besser. KEINE Mega-Caps (kein Apple, Microsoft, Nvidia, Amazon, Alphabet, Meta usw.).
 Schlage NUR Aktien vor, die NICHT in dieser Liste bereits bekannter Werte stehen: ${known || '(noch keine)'}.
+${RATING_RULES}
 
-Prüfe jede Aktie auf ihrer EXAKTEN MarketScreener-Consensus-Seite
-(https://www.marketscreener.com/quote/stock/FIRMENNAME-ID/consensus/) und lies die Verteilung
-GENAU dort ab. MarketScreener-Skala (best->schlecht): Buy, Outperform, Hold, Underperform, Sell.
-Gib die ZÄHLER zurück (NICHT selbst Prozente rechnen). Die SUMME der Stufen MUSS = Gesamtzahl
-Analysten sein; verteile ALLE Analysten (nicht alle in eine Stufe). Unsicher -> weglassen.
-- ticker, name, land
-- marketScreenerUrl: vollständige URL der Consensus-Seite
-- analysts: Gesamtzahl (= Summe der Stufen)
-- buy / outperform / hold / underperform / sell = Anzahl Analysten je Stufe (Buy=höchste)
-- sector: GENAU eine dieser IDs: ${SECTOR_LIST}
-- upside (% oder null)
-- pe: aktuelles KGV als Zahl; bei Verlust null
-- yahoo: Yahoo-Finance-Symbol inkl. Börsensuffix (z. B. "KTN.DE", "NVDA")
-
-Gib NUR ein JSON-Array mit bis zu 10 Aktien zurück, deren Verteilung du bei MarketScreener sicher gefunden hast. Kein Text außerhalb des JSON.`;
+Gib NUR ein JSON-Array mit bis zu 10 Aktien zurück, deren Verteilung du auf einer der beiden
+Quellen sicher belegt hast. Kein Text außerhalb des JSON.`;
 
   const { text, sources } = await groundedJSON(key, prompt);
   const arr = extractJSON(text);
@@ -233,8 +204,9 @@ Gib NUR ein JSON-Array mit bis zu 10 Aktien zurück, deren Verteilung du bei Mar
         name: o.name || o.ticker,
         sector: r.sector,
         buyPct: r.buyPct, outperformPct: r.outperformPct,
-        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe, ratingCounts: r.ratingCounts, msUrl: r.msUrl,
-        via: 'gemini-discover', source: o.source || sources[0] || 'web',
+        analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe,
+        ratingCounts: r.ratingCounts, ratingSource: r.ratingSource, ratingUrl: r.ratingUrl,
+        via: 'gemini-discover', source: r.ratingSource,
         seen: new Date().toISOString().slice(0, 10),
       });
     }
