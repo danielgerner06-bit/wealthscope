@@ -90,8 +90,11 @@ function normRating(o) {
     const BUY = buy ?? 0, OUTP = outp ?? 0, H = hold ?? 0, U = under ?? 0, S = sell ?? 0;
     const total = BUY + OUTP + H + U + S;
     const declared = Number(o.analysts ?? o.analystCount ?? o.anzahlAnalysten);
+    // STRENG: Gemini MUSS die Gesamtzahl separat nennen UND sie muss EXAKT der Summe
+    // entsprechen (kein Toleranzfenster). Ohne separate Zahl oder bei Abweichung -> verwerfen.
+    // (So fängt man Fehlzählungen wie "44 statt 35 Buy" ab, die sonst durchrutschen.)
     if (total <= 0) countsBad = true;
-    else if (isFinite(declared) && declared > 0 && Math.abs(declared - total) > Math.max(1, total * 0.15)) countsBad = true;
+    else if (!isFinite(declared) || declared <= 0 || declared !== total) countsBad = true;
     else {
       buyPct = Math.round(((BUY + OUTP) / total) * 100);
       outperformPct = Math.round((OUTP / total) * 100);
