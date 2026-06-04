@@ -274,6 +274,10 @@ const today = () => new Date().toISOString().slice(0, 10);
   if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
     const allDue = Object.values(db)
       .filter(s => s.via && s.via.startsWith('gemini'))
+      // GERADE in diesem Lauf gegengeprüfte (verifiedAt = heute) NICHT erneut prüfen —
+      // sonst löscht ein zufällig leerer Zweit-Call die frisch aufgenommene Perle sofort.
+      .filter(s => s.verifiedAt !== today())
+      // fällig: noch nie gegengeprüft ODER letzte Prüfung > RECHECK_AGE her
       .filter(s => !s.verifiedAt || !s.recheckAt || (nowMs - Date.parse(s.recheckAt)) > RECHECK_AGE)
       // noch nie unabhängig gegengeprüfte Perlen zuerst (Bestand schnell verifizieren/aussortieren)
       .sort((a, b) => (a.verifiedAt ? 1 : 0) - (b.verifiedAt ? 1 : 0));
@@ -286,23 +290,24 @@ const today = () => new Date().toISOString().slice(0, 10);
       if (!due.length) break;
       round++; useGemini();
       try {
-        const names = due.map(b => b.name + ' (' + b.ticker + ')');
-        const stillOk = (await checkCandidates(GEMINI_KEY, names))
-          .filter(s => s.ratingCounts && !('strongBuy' in s.ratingCounts) && !s.countsBad);  // nur saubere Counts gelten als "ok"
-        // UNABHÄNGIGE Gegenprüfung ("im Zweifel raus"): bestätigt eine skeptische
-        // Mehrquellen-Prüfung 0 Hold/Sell? Nur dann bleibt die Perle.
-        let confirmed = new Set();
-        if (stillOk.length) { useGemini(); confirmed = await verifyNoHold(GEMINI_KEY, stillOk); }
-        const okSet = new Set(stillOk.filter(s => confirmed.has(s.ticker.toUpperCase())).map(s => s.ticker));
-        // Bestätigte Treffer -> Daten aktualisieren, miss zurücksetzen.
-        for (const s of stillOk) if (confirmed.has(s.ticker.toUpperCase())) {
-          db[s.ticker] = { ...db[s.ticker], ...s, miss: 0, recheckAt: today(), verifiedAt: today() };
-        }
-        // Alles, was die Gegenprüfung NICHT besteht (Hold/Sell gefunden ODER unsicher),
-        // wird SOFORT entfernt — gemäß Vorgabe lieber raus als fälschlich drin lassen.
+        // Direkte, einzelne Gegenprüfung jeder fälligen Perle (verifyNoHold gibt das
+        // bestätigte Set zurück; intern wird Hold/Sell je Aktie ermittelt).
+        useGemini();
+        const confirmed = await verifyNoHold(GEMINI_KEY, due);
         for (const b of due) {
-          if (okSet.has(b.ticker) || !db[b.ticker]) continue;
-          delete db[b.ticker]; dropped++;
+          if (!db[b.ticker]) continue;
+          if (confirmed.has(b.ticker.toUpperCase())) {
+            // weiterhin 0 Hold/0 Sell bestätigt -> frisch halten, miss zurücksetzen
+            db[b.ticker].recheckAt = today(); db[b.ticker].verifiedAt = today(); db[b.ticker].miss = 0;
+          } else {
+            // NICHT bestätigt: kann "Hold gefunden" ODER nur ein leerer/technischer Aussetzer
+            // sein. Nicht sofort löschen (leere Antwort ist kein Hold-Beweis), sondern miss
+            // zählen; erst nach MAX_MISS echten Fehlschlägen raus. recheckAt NICHT setzen,
+            // damit der nächste Lauf es zeitnah erneut versucht.
+            const m = (db[b.ticker].miss || 0) + 1;
+            if (m >= MAX_MISS) { delete db[b.ticker]; dropped++; }
+            else db[b.ticker].miss = m;
+          }
         }
         checked += due.length;
       } catch (e) { noteGeminiError(e); console.error('Re-Validierung fehlgeschlagen:', e.message); break; }
