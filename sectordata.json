@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T22:30:13.547Z",
+  "updatedAt": "2026-06-04T22:37:06.519Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -401,11 +401,27 @@
   "news": {
     "items": [
       {
-        "text": "Geopolitik, Märkte und Konzerne: Europa im globalen Spannungsfeld.",
+        "text": "Börsen: DAX und europäische Indizes schließen freundlich, US-Börsen uneinheitlich.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Eurokurs kehrt zurück über 1,16 US-Dollar – Brent-Öl fällt unter 75 Dollar.",
+        "text": "SAP und Airbus führen DAX an, S&P 500 im Plus.",
+        "stamp": "04.06.26"
+      },
+      {
+        "text": "Ölpreis-Schwankungen: Nervosität an Europas Börsen lässt nach.",
+        "stamp": "04.06.26"
+      },
+      {
+        "text": "US-Militär verbannt China-Wolfram: Profitiert Western Star Resources?",
+        "stamp": "04.06.26"
+      },
+      {
+        "text": "Iran-Krieg beeinflusst Einkaufskorb: Erst Öl, dann Lebensmittelpreise.",
+        "stamp": "04.06.26"
+      },
+      {
+        "text": "NVIDIA Corp. und KI-Aktien vor Neubewertung nach Broadcom-Zahlen.",
         "stamp": "04.06.26"
       }
     ],
@@ -414,8 +430,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 5734,
-    "candCursor": 88,
+    "lastCursor": 6034,
+    "candCursor": 96,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -637,48 +653,62 @@
       "AngioDynamics"
     ],
     "noteCursor": 8,
-    "focusCursor": 3,
+    "focusCursor": 4,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 389,
-      "cons_def": 203,
-      "materials": 264,
-      "health": 1053,
-      "finance": 787,
-      "energy": 357,
-      "hardware": 244,
-      "software": 724,
-      "industrial": 324,
-      "utilities": 142,
-      "comm": 162,
-      "ai_semi": 145,
-      "realestate": 70
+      "cons_cycl": 396,
+      "cons_def": 204,
+      "materials": 268,
+      "health": 1079,
+      "finance": 801,
+      "energy": 368,
+      "hardware": 249,
+      "software": 748,
+      "industrial": 329,
+      "utilities": 147,
+      "comm": 164,
+      "ai_semi": 147,
+      "realestate": 73
     },
     "pendingReject": [
-      "OGE",
-      "OGEN",
-      "OGI",
-      "OGN",
-      "OGS"
+      "PDEX",
+      "PDFS",
+      "PDLB",
+      "PDS",
+      "PDSB",
+      "PDYN",
+      "PEBO",
+      "PED",
+      "PEG",
+      "PEGA",
+      "PEGX",
+      "PEN",
+      "PENG",
+      "PENN",
+      "PEP",
+      "PEPG",
+      "PERF",
+      "PERI",
+      "PESI"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 389,
-      "cons_def": 203,
-      "materials": 264,
-      "health": 1053,
-      "finance": 787,
-      "energy": 357,
-      "hardware": 244,
-      "software": 724,
-      "industrial": 324,
-      "utilities": 142,
-      "comm": 162,
-      "ai_semi": 145,
-      "realestate": 70
+      "cons_cycl": 396,
+      "cons_def": 204,
+      "materials": 268,
+      "health": 1079,
+      "finance": 801,
+      "energy": 368,
+      "hardware": 249,
+      "software": 748,
+      "industrial": 329,
+      "utilities": 147,
+      "comm": 164,
+      "ai_semi": 147,
+      "realestate": 73
     },
-    "heavyAt": "2026-06-04T22:24:10.085Z",
+    "heavyAt": "2026-06-04T22:30:36.915Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
