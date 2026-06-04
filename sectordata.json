@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T13:15:38.023Z",
+  "updatedAt": "2026-06-04T13:16:31.828Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -605,30 +605,6 @@
       "peGemini": null,
       "tdAt": "2026-06-03",
       "fmpAt": "2026-06-03",
-      "recheckAt": "2026-06-03"
-    },
-    {
-      "ticker": "HEI.DE",
-      "name": "Heidelberg Materials AG",
-      "sector": "materials",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 19,
-      "upside": 21,
-      "yahoo": "HEI.DE",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
-      "perf6m": -15.76,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": -2.94,
-      "pe": 15.9,
-      "eps": 11.16,
-      "div": 1.96,
-      "enrichAt": "2026-06-03",
-      "msUrl": "https://www.marketscreener.com/quote/stock/HEIDELBERG-MATERIALS-AG-6047/consensus/",
-      "miss": 1,
       "recheckAt": "2026-06-03"
     },
     {
@@ -2004,7 +1980,8 @@
   "blacklist": {
     "MUM": "2026-09-03",
     "SOGN.SW": "2026-09-04",
-    "VOW3.DE": "2026-09-04"
+    "VOW3.DE": "2026-09-04",
+    "HEI.DE": "2026-09-04"
   },
   "yahooAt": "2026-06-04T13:00:21.382Z"
 }
