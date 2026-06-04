@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T21:09:24.232Z",
+  "updatedAt": "2026-06-04T21:20:11.709Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -401,28 +401,28 @@
   "news": {
     "items": [
       {
-        "text": "EU plant Schlupfloch für höhere Staatsschulden für Wärmepumpen.",
+        "text": "US-Aktien uneinheitlich, Gewinnmitnahmen im Technologiesektor.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Trump-Macht schwindet, Iran-Krieg festgefahren, interne Niederlagen.",
+        "text": "Ölpreise sinken, Brentöl unter 95 Dollar, Nervosität lässt nach.",
         "stamp": "04.06.26"
       },
       {
-        "text": "Russische Experten zweifeln erstmals an Putins Ukrainekrieg.",
-        "stamp": "04.06.26"
+        "text": "EU will Abhängigkeit von US-Tech-Infrastruktur verringern.",
+        "stamp": "03.06.26"
       },
       {
-        "text": "Edgemont Gold Corp.: Genehmigung von Aktionären für Transaktion mit Laiva.",
-        "stamp": "04.06.26"
+        "text": "Iran-Krieg beeinflusst Lebensmittelpreise, Chancen für Rohstoffanleger.",
+        "stamp": "03.06.26"
       },
       {
-        "text": "Trans Canada Gold Corp. kurz vor Abschluss von Transaktion.",
-        "stamp": "04.06.26"
+        "text": "US-Dienstleistungssektor wächst stärker als erwartet im Mai.",
+        "stamp": "03.06.26"
       },
       {
-        "text": "Dryden Gold Corp. meldet neue hochgradige Goldfunde.",
-        "stamp": "04.06.26"
+        "text": "Dax fällt unter 25.000 Punkte wegen Geopolitik und Unternehmensnachrichten.",
+        "stamp": "03.06.26"
       }
     ],
     "date": "2026-06-04"
@@ -430,8 +430,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 2734,
-    "candCursor": 8,
+    "lastCursor": 3034,
+    "candCursor": 16,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -629,50 +629,42 @@
       "Iberdrola, S.A."
     ],
     "noteCursor": 8,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 318,
-      "cons_def": 160,
-      "materials": 208,
-      "health": 854,
-      "finance": 636,
-      "energy": 292,
-      "hardware": 199,
-      "software": 606,
-      "industrial": 263,
-      "utilities": 119,
-      "comm": 132,
-      "ai_semi": 116,
-      "realestate": 55
+      "cons_cycl": 330,
+      "cons_def": 162,
+      "materials": 213,
+      "health": 865,
+      "finance": 672,
+      "energy": 299,
+      "hardware": 203,
+      "software": 616,
+      "industrial": 269,
+      "utilities": 123,
+      "comm": 137,
+      "ai_semi": 117,
+      "realestate": 57
     },
-    "pendingReject": [
-      "EVR",
-      "EVRG",
-      "EVTC",
-      "EVTL",
-      "EVTV",
-      "EW",
-      "EWBC"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 318,
-      "cons_def": 160,
-      "materials": 208,
-      "health": 854,
-      "finance": 636,
-      "energy": 292,
-      "hardware": 199,
-      "software": 606,
-      "industrial": 263,
-      "utilities": 119,
-      "comm": 132,
-      "ai_semi": 116,
-      "realestate": 55
+      "cons_cycl": 330,
+      "cons_def": 162,
+      "materials": 213,
+      "health": 865,
+      "finance": 672,
+      "energy": 299,
+      "hardware": 203,
+      "software": 616,
+      "industrial": 269,
+      "utilities": 123,
+      "comm": 137,
+      "ai_semi": 117,
+      "realestate": 57
     },
-    "heavyAt": "2026-06-04T21:00:55.305Z",
+    "heavyAt": "2026-06-04T21:14:25.285Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
