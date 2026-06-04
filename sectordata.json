@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-04",
-  "updatedAt": "2026-06-04T17:43:03.376Z",
+  "updatedAt": "2026-06-04T17:51:43.919Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -153,9 +153,9 @@
     },
     {
       "id": "ai_semi",
-      "perf": 30.05,
+      "perf": 30.13,
       "avg30": 8.55,
-      "perf6m": 104
+      "perf6m": 104.12
     },
     {
       "id": "hardware",
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -2.64,
+      "perf": -2.71,
       "avg30": 0.98,
-      "perf6m": -1.9
+      "perf6m": -1.98
     },
     {
       "id": "health",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -0.66,
+      "perf": -0.84,
       "avg30": 1.03,
-      "perf6m": -0.8
+      "perf6m": -0.98
     },
     {
       "id": "cons_def",
@@ -207,15 +207,15 @@
     },
     {
       "id": "materials",
-      "perf": 0.38,
-      "avg30": 1.48,
-      "perf6m": 15.6
+      "perf": 0.33,
+      "avg30": 1.47,
+      "perf6m": 15.54
     },
     {
       "id": "utilities",
-      "perf": -5.59,
+      "perf": -5.67,
       "avg30": 0.98,
-      "perf6m": -1.07
+      "perf6m": -1.16
     },
     {
       "id": "realestate",
@@ -227,15 +227,15 @@
   "bars30Region": [
     {
       "id": "usa",
-      "perf": 5.09,
+      "perf": 5.08,
       "avg30": 1.96,
-      "perf6m": 11.12
+      "perf6m": 11.11
     },
     {
       "id": "europe",
-      "perf": 2.28,
+      "perf": 2.29,
       "avg30": 1.29,
-      "perf6m": 9.03
+      "perf6m": 9.04
     },
     {
       "id": "germany",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": -2.24,
+      "perf": -2.29,
       "avg30": -1.06,
-      "perf6m": -11.61
+      "perf6m": -11.66
     },
     {
       "id": "latam",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 4.43,
+      "perf": 4.46,
       "avg30": 1.84,
-      "perf6m": 10.9
+      "perf6m": 10.93
     }
   ],
   "topStocks": [
@@ -818,7 +818,9 @@
       "perf1mBefore": 85.03,
       "pe": null,
       "div": 1.95,
-      "enrichAt": "2026-06-04"
+      "enrichAt": "2026-06-04",
+      "recheckAt": "2026-06-04",
+      "miss": 1
     },
     {
       "ticker": "2317",
@@ -1738,30 +1740,6 @@
       "perf6mAt": "2026-06-03"
     },
     {
-      "ticker": "UBS",
-      "name": "UBS Group AG",
-      "sector": "finance",
-      "buyPct": 100,
-      "outperformPct": 100,
-      "analysts": 17,
-      "upside": null,
-      "yahoo": "UBSG.SW",
-      "peGemini": null,
-      "via": "gemini",
-      "source": "web",
-      "seen": "2026-06-03",
-      "perf6m": 20.01,
-      "perf6mAt": "2026-06-03",
-      "perf1mBefore": 9.33,
-      "pe": 17.2,
-      "eps": 2.18,
-      "div": 2.27,
-      "enrichAt": "2026-06-03",
-      "miss": 0,
-      "tdAt": "2026-06-03",
-      "msUrl": "https://www.marketscreener.com/quote/stock/UBS-GROUP-AG-6000101/consensus/"
-    },
-    {
       "ticker": "COK.DE",
       "name": "Cancom SE",
       "sector": "software",
@@ -1936,6 +1914,156 @@
       "pe": null,
       "div": null,
       "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "ADPT",
+      "name": "Adaptive Biotechnologies Corporation",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 7,
+      "upside": 16,
+      "yahoo": "ADPT",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 8,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/ADAPTIVE-BIOTECHNOLOGIES-CORP-31718087/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 6.96,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 15.56,
+      "pe": null,
+      "eps": -0.32,
+      "div": 0,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "CRBU",
+      "name": "Caribou Biosciences, Inc.",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 7,
+      "upside": null,
+      "yahoo": "CRBU",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 7,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/CARIBOU-BIOSCIENCES-INC-45500271/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": 9.74,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": 5.83,
+      "pe": null,
+      "eps": -1.42,
+      "div": 0,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "PLTK",
+      "name": "Playtika Holding Corp.",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 100,
+      "analysts": 11,
+      "upside": 59,
+      "yahoo": "PLTK",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 12,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/PLAYTIKA-HOLDING-CORP-31718087/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": -24.29,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -12.43,
+      "pe": null,
+      "eps": -0.78,
+      "div": 12.46,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "IRTC",
+      "name": "iRhythm Technologies, Inc.",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 14,
+      "upside": 67,
+      "yahoo": "IRTC",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 15,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/IRHYTHM-TECHNOLOGIES-INC-31718087/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": -40.85,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -10.35,
+      "pe": null,
+      "eps": -0.85,
+      "div": 0,
+      "enrichAt": "2026-06-04"
+    },
+    {
+      "ticker": "FRE",
+      "name": "Fresenius SE & Co. KGaA",
+      "sector": "health",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 14,
+      "upside": 49,
+      "yahoo": "FRE.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 14,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "marketscreener",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/FRESENIUS-SE-CO-KGAA-31718087/consensus/",
+      "via": "gemini",
+      "source": "marketscreener",
+      "seen": "2026-06-04",
+      "perf6m": -23.5,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -8.96,
+      "pe": 13.7,
+      "eps": 2.68,
+      "div": 2.92,
+      "enrichAt": "2026-06-04"
     }
   ],
   "sectorNotes": {
@@ -2052,27 +2180,27 @@
   "news": {
     "items": [
       {
-        "text": "Russland räumt nach Drohnenangriffen Rückgang bei Ölförderung ein.",
+        "text": "EU besorgt über Chinas Umgehung von Russland-Sanktionen",
         "stamp": "04.06.26"
       },
       {
-        "text": "Hisbollah lehnt Bedingungen zur Waffenruhe mit Israel ab.",
+        "text": "Russland räumt Fördermengeneinbußen nach Drohnenangriffen ein",
         "stamp": "04.06.26"
       },
       {
-        "text": "US-Arbeitslosenhilfe steigt unerwartet, Schweizer Arbeitslosenquote leicht höher.",
+        "text": "Breite Anlegerstimmung schwankt im negativen Bereich",
         "stamp": "04.06.26"
       },
       {
-        "text": "US-Industriestimmung und Auftragseingang im Mai besser als erwartet.",
+        "text": "OECD senkt Wachstumsprognose für 2026 leicht",
         "stamp": "03.06.26"
       },
       {
-        "text": "US-Börsen starten verhalten, Ölpreis steigt wegen Nahost-Konflikt.",
+        "text": "Australiens Wirtschaftswachstum verlangsamt sich im ersten Quartal",
         "stamp": "03.06.26"
       },
       {
-        "text": "CEWE Stiftung: 17. Dividendensteigerung in Folge bei Hauptversammlung.",
+        "text": "Fed lässt Zinsen im Juni wohl unverändert",
         "stamp": "03.06.26"
       }
     ],
@@ -2081,8 +2209,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 7967,
-    "candCursor": 92,
+    "lastCursor": 8267,
+    "candCursor": 100,
     "candidates": [
       "innoscripta SE",
       "Smartbroker Holding AG",
@@ -2247,42 +2375,42 @@
       "PharmaResearch Co., Ltd."
     ],
     "noteCursor": 8,
-    "focusCursor": 5,
+    "focusCursor": 6,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-04",
     "seenBySector": {
-      "cons_cycl": 228,
-      "cons_def": 120,
-      "materials": 147,
-      "health": 587,
-      "finance": 472,
-      "energy": 224,
-      "hardware": 141,
-      "software": 433,
-      "industrial": 189,
-      "utilities": 85,
-      "comm": 92,
-      "ai_semi": 85,
+      "cons_cycl": 237,
+      "cons_def": 124,
+      "materials": 153,
+      "health": 603,
+      "finance": 488,
+      "energy": 229,
+      "hardware": 146,
+      "software": 446,
+      "industrial": 191,
+      "utilities": 87,
+      "comm": 97,
+      "ai_semi": 88,
       "realestate": 42
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 230,
-      "cons_def": 120,
-      "materials": 153,
-      "health": 595,
-      "finance": 480,
-      "energy": 225,
-      "hardware": 143,
-      "software": 445,
-      "industrial": 193,
-      "utilities": 91,
-      "comm": 93,
-      "ai_semi": 95,
+      "cons_cycl": 239,
+      "cons_def": 124,
+      "materials": 159,
+      "health": 615,
+      "finance": 495,
+      "energy": 230,
+      "hardware": 148,
+      "software": 459,
+      "industrial": 195,
+      "utilities": 93,
+      "comm": 98,
+      "ai_semi": 98,
       "realestate": 43
     },
-    "heavyAt": "2026-06-04T17:33:39.728Z",
+    "heavyAt": "2026-06-04T17:44:14.148Z",
     "revalidateTag": "ms-no-hold-v6",
     "fmpRetryTag": "grades-summary-fix"
   },
