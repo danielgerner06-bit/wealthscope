@@ -277,6 +277,8 @@
       { lbl: 'Dividende', val: st.div == null ? '–' : st.div + '%', s: sc(st.div, 0, 5) },
       { lbl: '6 Monate', val: pct(st.perf6m), s: sc(st.perf6m, -20, 30) },
       { lbl: '1M vor Aufn.', val: pct(st.perf1mBefore), s: sc(st.perf1mBefore, -20, 30) },
+      // Aktien-PSI: Analysten-Gunst relativ zur Kursposition der AKTIE (×1000), hoch = Aufholpotenzial
+      { lbl: 'Ψ Aktie', val: st.aktienPsi == null ? '–' : fmtSmall(st.aktienPsi * 1000), s: sc(st.aktienPsi, 0, 0.05) },
       { lbl: 'Gefunden', val: seenStr, s: null },
     ];
     document.getElementById('stkModalStats').innerHTML = stats.map(t =>

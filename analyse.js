@@ -19,6 +19,8 @@
     { key: 'div', label: 'Dividende', step: 1 },
     { key: 'analysts', label: 'Analysten', step: 5 },
     { key: 'perf1mBefore', label: '1M vor Aufnahme', step: 10 },
+    // Aktien-PSI ×1000 (sonst zu kleine Werte für die Bündelung)
+    { key: 'aktienPsiX', label: 'Ψ Aktie', step: 5 },
   ];
   const stepOf = key => (FACTORS.find(f => f.key === key) || {}).step || 5;
   const filt = {};
@@ -34,6 +36,10 @@
     // Analyse bleibt "0/0", bis nach ~1 Monat die ersten echten Monatswerte reifen.
     HIST = Object.values(h.entries || {}).filter(x => monthsOf(x) > 0);
     SECT = d.sectors || []; REG = d.regions || [];
+    // aktuellen Aktien-PSI (×1000, für die Bündelung) aus den Live-Daten je Ticker anhängen.
+    const psiByTicker = {};
+    (d.topStocks || []).forEach(s => { if (s.aktienPsi != null) psiByTicker[s.ticker] = s.aktienPsi; });
+    HIST.forEach(x => { const p = psiByTicker[x.ticker]; x.aktienPsiX = p != null ? +(p * 1000).toFixed(2) : null; });
     HIST._kiObj = h;
   }
   const secName = id => (SECT.find(s => s.id === id) || {}).name || id;
