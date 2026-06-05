@@ -23,6 +23,14 @@
   }
 
   const fmtPct = (v, dp = 1) => (Number(v) > 0 ? '+' : '') + (Number(v) || 0).toFixed(dp) + '%';
+  // kleine Kennzahlen lesbar machen: genug Nachkommastellen, dass nie "0" steht (außer echt 0).
+  // >=10 ohne Komma, >=1 eine Stelle, sonst zwei — Komma als Dezimaltrenner.
+  const fmtSmall = v => {
+    const n = Number(v) || 0;
+    if (n === 0) return '0';
+    const dp = n >= 10 ? 0 : n >= 1 ? 1 : 2;
+    return n.toFixed(dp).replace('.', ',');
+  };
 
   /* ---------- Balkendiagramm: 30-Tage-Performance + Ø-360T-Referenz ---------- */
   function renderBars() {
@@ -440,8 +448,11 @@
     items.forEach(it => {
       const sec = sectorById(it.id);
       const pct = Math.round(it.anteil * 100);
-      const hitTxt = it.hitRate != null ? Math.round(it.hitRate * 100) + '%' : '–';
-      const scoreTxt = it.psi.toFixed(2).replace('.', ',');
+      // Trefferquote ist winzig (wenige Perlen / tausende geprüfte Aktien) -> in PROMILLE (‰)
+      // anzeigen, damit überhaupt etwas erkennbar ist statt gerundet "0%".
+      const hitTxt = it.hitRate != null ? fmtSmall(it.hitRate * 1000) + '‰' : '–';
+      // PSI ebenfalls hochskaliert (×1000), sonst stünde überall "0,00".
+      const scoreTxt = fmtSmall(it.psi * 1000);
       const barPct = Math.round((it.n / max) * 100);
       const row = document.createElement('button');
       row.className = 'sek-rank-row' + (sectorFilter === it.id ? ' active' : '');
