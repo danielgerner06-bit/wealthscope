@@ -35,11 +35,14 @@ export async function verifyAcrossSources(ticker, yahoo) {
   }
   if (!results.length) return { ok: false, sources: [], reason: 'keine-quelle' };
 
-  // ALLE kennenden Quellen müssen 0 Hold UND 0 Sell zeigen.
-  const bad = results.find(r => (r.hold || 0) > 0 || (r.underperform || 0) > 0 || (r.sell || 0) > 0);
+  // ALLE kennenden Quellen müssen NULL nicht-Kauf-Empfehlungen haben. 'neg' deckt JEDE
+  // negative/neutrale Stufe ab (Hold, Sell, Strong Sell, Underperform, Neutral, Without
+  // Opinion ...) — egal wie die jeweilige Seite sie benennt. Eine einzige reicht zum Ausschluss.
+  const negOf = r => (r.neg != null ? r.neg : ((r.hold || 0) + (r.underperform || 0) + (r.sell || 0)));
+  const bad = results.find(r => negOf(r) > 0);
   if (bad) return {
     ok: false, sources: results.map(r => r.src),
-    reason: `${bad.src}: hold=${bad.hold} sell=${bad.sell}`,
+    reason: `${bad.src}: ${negOf(bad)} nicht-Kauf (hold=${bad.hold} sell=${bad.sell})`,
   };
 
   // alle einig auf 0/0 -> bestätigt. Anzeige-Counts von der Quelle mit den meisten Analysten.

@@ -146,6 +146,7 @@ export async function fetchFinnhubRatings(symbol) {
     const sb = t.strongBuy || 0, b = t.buy || 0, h = t.hold || 0, s = t.sell || 0, ss = t.strongSell || 0;
     const analysts = sb + b + h + s + ss;
     if (analysts <= 0) return null;
-    return { buy: sb, outperform: b, hold: h, underperform: 0, sell: s + ss, analysts, source: 'finnhub' };
+    const neg = h + s + ss;   // alle nicht-Kauf-Stufen
+    return { buy: sb, outperform: b, hold: h, underperform: 0, sell: s + ss, neg, analysts, source: 'finnhub' };
   } catch { return null; }
 }

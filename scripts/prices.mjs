@@ -134,8 +134,9 @@ export async function fetchYahooRatings(symbol) {
     const sb = t.strongBuy || 0, b = t.buy || 0, h = t.hold || 0, s = t.sell || 0, ss = t.strongSell || 0;
     const analysts = sb + b + h + s + ss;
     if (analysts <= 0) return null;
-    // Buy = strongBuy, Outperform = buy, Hold = hold, Sell = sell + strongSell
-    return { buy: sb, outperform: b, hold: h, underperform: 0, sell: s + ss, analysts, source: 'yahoo' };
+    const neg = h + s + ss;   // alle nicht-Kauf-Stufen (Hold/Sell/StrongSell)
+    // Buy = strongBuy, Outperform = buy
+    return { buy: sb, outperform: b, hold: h, underperform: 0, sell: s + ss, neg, analysts, source: 'yahoo' };
   } catch { return null; }
 }
 

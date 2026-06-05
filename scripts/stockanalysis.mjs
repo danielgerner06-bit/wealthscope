@@ -38,23 +38,32 @@ function urlsFor(ticker, yahoo) {
 }
 
 // Extrahiert den aktuellsten recommendations-Eintrag aus dem HTML.
+// WICHTIG: verschiedene Skalen/Stufen können vorkommen. Wir sammeln NEBEN buy/strongBuy
+// AUCH jede neutrale/negative Stufe (hold, sell, strongSell, underperform, neutral,
+// underweight, reduce, withoutOpinion) ein -> 'neg' = Summe ALLER nicht-Buy-Stufen.
+// So rutscht keine Aktie durch, nur weil eine Quelle die Stufe anders benennt.
 function parseLatest(html) {
   const i = html.indexOf('recommendations:[');
   if (i < 0) return null;
-  // grob das Array bis zur schließenden Klammer schneiden
   const seg = html.slice(i, i + 8000);
-  // alle {…}-Objekte mit den Rating-Feldern einsammeln
   const re = /\{[^{}]*?\bdate:"(\d{4}-\d{2}-\d{2})"[^{}]*?\}/g;
   let m, best = null, bestDate = '';
   const num = (obj, k) => { const r = new RegExp('\\b' + k + ':(-?\\d+)').exec(obj); return r ? Number(r[1]) : null; };
+  // Felder, die NICHT "Kauf" sind -> zählen als Holds/Sells (Ausschluss vom 100%-Kriterium).
+  const NEG_KEYS = ['hold', 'sell', 'strongSell', 'underperform', 'underweight', 'reduce',
+                    'neutral', 'marketPerform', 'equalWeight', 'withoutOpinion', 'noOpinion'];
   while ((m = re.exec(seg))) {
     const obj = m[0], date = m[1];
     if (date <= bestDate) continue;
-    const strongBuy = num(obj, 'strongBuy'), buy = num(obj, 'buy'),
-          hold = num(obj, 'hold'), sell = num(obj, 'sell'), strongSell = num(obj, 'strongSell');
+    const strongBuy = num(obj, 'strongBuy'), buy = num(obj, 'buy');
     if (strongBuy == null && buy == null) continue;
+    // Hold/Sell separat (für Anzeige) + Gesamtsumme aller negativen/neutralen Stufen.
+    const hold = num(obj, 'hold') || 0;
+    const sell = (num(obj, 'sell') || 0) + (num(obj, 'strongSell') || 0);
+    let neg = 0;
+    for (const k of NEG_KEYS) { const v = num(obj, k); if (v) neg += v; }
     bestDate = date;
-    best = { strongBuy: strongBuy || 0, buy: buy || 0, hold: hold || 0, sell: sell || 0, strongSell: strongSell || 0, date };
+    best = { strongBuy: strongBuy || 0, buy: buy || 0, hold, sell, neg, date };
   }
   return best;
 }
@@ -71,12 +80,17 @@ export async function fetchRatingCounts(ticker, yahoo) {
     } catch { continue; }
     const r = parseLatest(html);
     if (!r) continue;
-    // Mapping: Buy=strongBuy, Outperform=buy, Hold=hold, Sell=sell+strongSell
-    const buy = r.strongBuy, outperform = r.buy, hold = r.hold, underperform = 0,
-          sell = r.sell + r.strongSell;
-    const analysts = buy + outperform + hold + underperform + sell;
+    // Mapping auf unsere Skala: Buy=strongBuy, Outperform=buy.
+    // 'neg' = ALLE nicht-Kauf-Stufen (Hold/Sell/Underperform/Neutral/Without Opinion...).
+    // hold/sell separat nur zur Anzeige; fürs 100%-Kriterium zählt neg===0.
+    const buy = r.strongBuy, outperform = r.buy;
+    const analysts = buy + outperform + r.neg;
     if (analysts <= 0) continue;
-    return { buy, outperform, hold, underperform, sell, analysts, date: r.date, source: 'stockanalysis' };
+    return {
+      buy, outperform, hold: r.hold, underperform: 0, sell: r.sell,
+      neg: r.neg,                       // Summe aller nicht-Kauf-Empfehlungen
+      analysts, date: r.date, source: 'stockanalysis',
+    };
   }
   return null;
 }
