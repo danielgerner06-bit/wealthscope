@@ -91,7 +91,10 @@ const today = () => new Date().toISOString().slice(0, 10);
   let belowCut = 0;
   for (const tk of Object.keys(db)) {
     const bp = db[tk].buyPct;
-    if (bp != null && bp < MIN_BUY_PCT) { delete db[tk]; belowCut++; }
+    if (bp != null && bp < MIN_BUY_PCT) {
+      if (process.env.GEMINI_DEBUG && /OCGN|KTN|A1OS/i.test(tk)) console.log(`[DEL belowCut] ${tk} buyPct=${bp}`);
+      delete db[tk]; belowCut++;
+    }
   }
   if (belowCut) console.log(`Bereinigt: ${belowCut} Treffer unter ${MIN_BUY_PCT}% Kauf entfernt.`);
 
@@ -109,10 +112,16 @@ const today = () => new Date().toISOString().slice(0, 10);
         const sum = (c.buy || 0) + (c.outperform || 0) + (c.hold || 0) + (c.underperform || 0) + (c.sell || 0);
         // inkonsistent (analysts != Summe) ODER irgendein Hold/Underperform/Sell > 0 -> raus.
         // (MS-Link ist KEIN Kriterium mehr — Geminis IDs waren unzuverlässig.)
-        if ((s.analysts && sum > 0 && s.analysts !== sum) || c.hold || c.underperform || c.sell) { delete db[tk]; nInc++; }
+        if ((s.analysts && sum > 0 && s.analysts !== sum) || c.hold || c.underperform || c.sell) {
+          if (process.env.GEMINI_DEBUG && /OCGN|KTN|A1OS/i.test(tk)) console.log(`[DEL ${label} inkons] ${tk} analysts=${s.analysts} sum=${sum} hold=${c.hold} sell=${c.sell}`);
+          delete db[tk]; nInc++;
+        }
         // zusätzlich: noch nicht unabhängig gegengeprüfte Perlen NICHT anzeigen -> raus,
         // bis verifyNoHold sie bestätigt (verifiedAt gesetzt). "Im Zweifel raus".
-        else if (!s.verifiedAt) { delete db[tk]; nNo++; }
+        else if (!s.verifiedAt) {
+          if (process.env.GEMINI_DEBUG && /OCGN|KTN|A1OS/i.test(tk)) console.log(`[DEL ${label} unverif] ${tk} verifiedAt=${s.verifiedAt}`);
+          delete db[tk]; nNo++;
+        }
       } else {
         // Gemini-Perle OHNE saubere Counts -> raus. Erfüllt sie den Ablauf wirklich,
         // kommt sie über checkCandidates + Gegenprüfung sauber zurück.
