@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T11:27:14.551Z",
+  "updatedAt": "2026-06-05T11:49:13.229Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -532,28 +532,28 @@
   "news": {
     "items": [
       {
-        "text": "DAX erwartet schwächer: Gewinnmitnahmen nach Halbleiterrally.",
+        "text": "Eurozone schrumpft unerwartet: Irland korrigiert Daten nach unten.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Broadcom zeigt neues Problem der KI-Aktien: Rekordquartal enttäuscht.",
+        "text": "KI-Aktien unter Druck: Broadcom-Schock lässt Kurse in Asien einbrechen.",
         "stamp": "05.06.26"
       },
       {
-        "text": "SAP-Aktie mit Kurssprung: Trendwende nach KI-Aussagen von Nvidia-Chef?",
+        "text": "Stahlwerke drosseln Produktion wegen Bahnchaos in Deutschland.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Porsche fliegt aus dem DAX, Baukonzern rückt nach.",
+        "text": "RBC stuft Vestas Wind Systems auf 'Outperform' herauf.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Nvidia-Chef sieht steigenden Bedarf an Software: SAP profitiert.",
-        "stamp": "05.06.26"
+        "text": "Geopolitik belastet Märkte: BOJ signalisiert Zinserhöhung, Yen schwächelt.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "US-Regierung plant Gespräche über staatliche KI-Beteiligungen.",
-        "stamp": "05.06.26"
+        "text": "Software-Aktien vor Comeback? Analysten sehen hohes Aufholpotenzial.",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-05"
@@ -561,8 +561,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 201,
-    "candCursor": 8,
+    "lastCursor": 501,
+    "candCursor": 16,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "Kontron AG (KTN.DE)",
@@ -821,42 +821,45 @@
       "BioVie Inc."
     ],
     "noteCursor": 9,
-    "focusCursor": 6,
+    "focusCursor": 7,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 469,
-      "cons_def": 239,
-      "materials": 314,
-      "health": 1293,
-      "finance": 928,
-      "energy": 434,
-      "hardware": 298,
-      "software": 896,
-      "industrial": 388,
-      "utilities": 170,
-      "comm": 197,
-      "ai_semi": 178,
-      "realestate": 81
+      "cons_cycl": 474,
+      "cons_def": 241,
+      "materials": 320,
+      "health": 1318,
+      "finance": 942,
+      "energy": 436,
+      "hardware": 301,
+      "software": 913,
+      "industrial": 396,
+      "utilities": 171,
+      "comm": 199,
+      "ai_semi": 187,
+      "realestate": 83
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "ANY",
+      "AON"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 469,
-      "cons_def": 239,
-      "materials": 314,
-      "health": 1293,
-      "finance": 928,
-      "energy": 434,
-      "hardware": 299,
-      "software": 899,
-      "industrial": 388,
-      "utilities": 170,
-      "comm": 197,
-      "ai_semi": 178,
-      "realestate": 81
+      "cons_cycl": 474,
+      "cons_def": 241,
+      "materials": 320,
+      "health": 1318,
+      "finance": 942,
+      "energy": 436,
+      "hardware": 302,
+      "software": 916,
+      "industrial": 396,
+      "utilities": 171,
+      "comm": 199,
+      "ai_semi": 187,
+      "realestate": 83
     },
-    "heavyAt": "2026-06-05T11:21:06.291Z",
+    "heavyAt": "2026-06-05T11:42:42.949Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
