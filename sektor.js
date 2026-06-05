@@ -161,7 +161,7 @@
   };
 
   /* ---------- Analysten-Perlen mit Filter + Sortierung ---------- */
-  const filters = { pe: null, perf6m: null, perf1mBefore: null, outperformPct: null, upside: null, analysts: null, div: null };
+  const filters = { pe: null, perf6m: null, perf1mBefore: null, strongBuyPct: null, upside: null, analysts: null, div: null };
   let sectorFilter = null;   // aktiver Sektor-Filter (Klick auf Balken)
   let rankSort = { key: 'anteil', dir: -1 };   // Sortierung im Sektor-Ranking-Popup
 
@@ -176,7 +176,7 @@
     if (filters.perf6m != null && !(s.perf6m != null && s.perf6m <= filters.perf6m)) return false;
     // 1M-vor-Aufnahme HÖCHSTENS (Momentum-Filter: nicht schon vorher explodiert)
     if (filters.perf1mBefore != null && !(s.perf1mBefore != null && s.perf1mBefore <= filters.perf1mBefore)) return false;
-    if (filters.outperformPct != null && !(s.outperformPct != null && s.outperformPct >= filters.outperformPct)) return false;
+    if (filters.strongBuyPct != null && !(s.strongBuyPct != null && s.strongBuyPct >= filters.strongBuyPct)) return false;
     if (filters.upside != null && !(s.upside != null && s.upside >= filters.upside)) return false;
     if (filters.analysts != null && !(s.analysts != null && s.analysts >= filters.analysts)) return false;
     if (filters.div != null && !(s.div != null && s.div >= filters.div)) return false;
@@ -215,7 +215,7 @@
       const metric = stockMetric(st);
       const meta = [];
       if (st.buyPct != null) meta.push('Kauf ' + st.buyPct + '%');
-      if (st.outperformPct != null) meta.push('Outp. ' + st.outperformPct + '%');
+      if (st.strongBuyPct != null) meta.push('S.Buy ' + st.strongBuyPct + '%');
       if (st.analysts != null) meta.push(st.analysts + ' Analyst' + (st.analysts === 1 ? '' : 'en'));
       if (st.div != null && st.div > 0) meta.push('Div ' + st.div + '%');
       row.innerHTML =
@@ -254,7 +254,7 @@
     const hero = [
       { lbl: 'Kursziel-Potenzial', val: pct(st.upside), s: sc(st.upside, 0, 50) },
       { lbl: 'Kaufempfehlung', val: st.buyPct == null ? '–' : st.buyPct + '%', s: sc(st.buyPct, 50, 100) },
-      { lbl: 'Outperform', val: st.outperformPct == null ? '–' : st.outperformPct + '%', s: sc(st.outperformPct, 0, 100) },
+      { lbl: 'Strong Buy', val: st.strongBuyPct == null ? '–' : st.strongBuyPct + '%', s: sc(st.strongBuyPct, 0, 100) },
     ];
     document.getElementById('stkModalHero').innerHTML = hero.map(h =>
       '<div class="stk-hero" style="--c:' + hsl(h.s) + '">' +
@@ -275,18 +275,23 @@
       '<div class="stk-stat"><div class="stk-stat-val" style="color:' + hsl(t.s) + '">' + t.val + '</div>' +
       '<div class="stk-stat-lbl">' + t.lbl + '</div></div>').join('');
 
-    // rohe Analysten-Verteilung (volle Transparenz). MS: Buy/Outperform/Hold/Underperform/Sell.
-    // TipRanks: Buy/Hold/Sell. Altes strongBuy-Format ignorieren.
+    // rohe Analysten-Verteilung (volle Transparenz). Skala: Strong Buy / Buy / Hold / Sell.
+    // Strong Buy = das extremere Kauf-Level zu Buy. Feld buy = Strong Buy, outperform = Buy.
     const rc = st.ratingCounts;
     const cntsEl = document.getElementById('stkModalCounts');
     if (rc && !('strongBuy' in rc) && (rc.buy || rc.outperform || rc.hold || rc.underperform || rc.sell)) {
       const parts = [];
-      if (rc.buy) parts.push('<b style="color:#34d399">' + rc.buy + '</b> Buy');
-      if (rc.outperform) parts.push('<b style="color:#86efac">' + rc.outperform + '</b> Outperform');
+      if (rc.buy) parts.push('<b style="color:#34d399">' + rc.buy + '</b> Strong&nbsp;Buy');
+      if (rc.outperform) parts.push('<b style="color:#86efac">' + rc.outperform + '</b> Buy');
       if (rc.hold) parts.push('<b style="color:#fbbf24">' + rc.hold + '</b> Hold');
       if (rc.underperform) parts.push('<b style="color:#fb923c">' + rc.underperform + '</b> Underperform');
       if (rc.sell) parts.push('<b style="color:#f87171">' + rc.sell + '</b> Sell');
-      const src = st.via === 'finnhub' ? 'Finnhub' : 'Analysten-Konsens, mehrfach geprüft';
+      // genaue Quelle(n) auf denen geprüft wurde, platzsparend (z.B. "stockanalysis · yahoo")
+      const srcMap = { stockanalysis: 'stockanalysis', yahoo: 'Yahoo', finnhub: 'Finnhub', gemini: 'KI-Recherche' };
+      let src;
+      if (st.via === 'finnhub') src = 'Finnhub';
+      else if (st.verifiedSource) src = st.verifiedSource.split('+').map(s => srcMap[s] || s).join(' · ');
+      else src = 'Analysten-Konsens';
       cntsEl.innerHTML = parts.join(' · ') + ' <span class="stk-csrc">(' + src + ')</span>';
       cntsEl.hidden = false;
     } else { cntsEl.hidden = true; }
@@ -362,11 +367,12 @@
     return suf ? (map[suf] || 'world') : 'usa';
   }
   function viaLabel(v) { if (!v) return '–'; if (v.startsWith('gemini')) return 'KI-Websuche (Gemini)'; if (v === 'finnhub') return 'Finnhub (US-Analysten)'; return v; }
-  // Herkunft der Rating-Zahlen: FMP/Finnhub = exakte Counts, Gemini = Websuche-Schätzung
+  // Herkunft der Rating-Zahlen: die genaue(n) Quelle(n), auf denen geprüft/abgeglichen wurde.
   function ratingSrcLabel(st) {
-    if (st.via === 'finnhub') return '✓ Finnhub (US-Analysten)';
-    // Gemini-Perlen: Counts aus mehreren Quellen gelesen + unabhängig gegengeprüft.
-    if (st.ratingCounts && (st.verifiedAt || st.ratingSource)) return '✓ Analysten-Konsens (mehrfach geprüft)';
+    if (st.via === 'finnhub') return '✓ Finnhub';
+    const srcMap = { stockanalysis: 'stockanalysis', yahoo: 'Yahoo', finnhub: 'Finnhub', gemini: 'KI-Recherche' };
+    if (st.verifiedSource) return '✓ ' + st.verifiedSource.split('+').map(s => srcMap[s] || s).join(' · ');
+    if (st.ratingCounts && st.verifiedAt) return '✓ Analysten-Konsens';
     return '≈ ungeprüft';
   }
   function wireStockModal() {
@@ -489,7 +495,7 @@
     let v, label, cls = 'sek-stock-val';
     if (sortKey === 'perf6m') { v = st.perf6m; label = v != null ? fmtPct(v) : '—'; cls += v >= 0 ? ' up' : ' down'; }
     else if (sortKey === 'perf1mBefore') { v = st.perf1mBefore; label = v != null ? fmtPct(v) : '—'; cls += v >= 0 ? ' up' : ' down'; }
-    else if (sortKey === 'outperformPct') { v = st.outperformPct; label = v != null ? v + '%' : '—'; }
+    else if (sortKey === 'strongBuyPct') { v = st.strongBuyPct; label = v != null ? v + '%' : '—'; }
     else if (sortKey === 'analysts') { v = st.analysts; label = v != null ? v + ' An.' : '—'; }
     else if (sortKey === 'pe') { v = st.pe; label = v != null ? 'KGV ' + v : 'KGV —'; }
     else if (sortKey === 'div') { v = st.div; label = v != null ? v + '% Div' : '— Div'; }
@@ -526,7 +532,7 @@
   }
 
   function wireFilter() {
-    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltPre1m: 'perf1mBefore', fltOutperf: 'outperformPct', fltUpside: 'upside', fltAnalysts: 'analysts', fltDiv: 'div' };
+    const map = { fltPe: 'pe', fltPerf6m: 'perf6m', fltPre1m: 'perf1mBefore', fltStrongBuy: 'strongBuyPct', fltUpside: 'upside', fltAnalysts: 'analysts', fltDiv: 'div' };
     Object.keys(map).forEach(id => {
       const el = document.getElementById(id);
       // Browser-Autovervollständigung aus -> keine alten Eingaben poppen mehr auf
@@ -541,7 +547,7 @@
     });
     document.getElementById('fltClear').addEventListener('click', () => {
       Object.keys(map).forEach(id => { document.getElementById(id).value = ''; });
-      filters.pe = filters.perf6m = filters.perf1mBefore = filters.outperformPct = filters.upside = filters.analysts = filters.div = null;
+      filters.pe = filters.perf6m = filters.perf1mBefore = filters.strongBuyPct = filters.upside = filters.analysts = filters.div = null;
       sectorFilter = null;
       renderStocks();
     });

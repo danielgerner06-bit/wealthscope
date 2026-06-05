@@ -14,7 +14,7 @@
   // step = feste Bündelungs-Schrittweite je Faktor (z. B. KGV in 5er-Schritten)
   const FACTORS = [
     { key: 'pe', label: 'KGV', step: 5 },
-    { key: 'outperformPct', label: 'Outperform', step: 10 },
+    { key: 'strongBuyPct', label: 'Strong Buy', step: 10 },
     { key: 'upside', label: 'Kursziel', step: 10 },
     { key: 'div', label: 'Dividende', step: 1 },
     { key: 'analysts', label: 'Analysten', step: 5 },
@@ -54,7 +54,7 @@
     if (filt.peMin != null && !(s.pe != null && s.pe >= filt.peMin)) return false;
     if (filt.peMax != null && !(s.pe != null && s.pe <= filt.peMax)) return false;
     if (filt.buy != null && !(s.buyPct != null && s.buyPct >= filt.buy)) return false;
-    if (filt.outp != null && !(s.outperformPct != null && s.outperformPct >= filt.outp)) return false;
+    if (filt.sbuy != null && !(s.strongBuyPct != null && s.strongBuyPct >= filt.sbuy)) return false;
     if (filt.upside != null && !(s.upside != null && s.upside >= filt.upside)) return false;
     if (filt.div != null && !(s.div != null && s.div >= filt.div)) return false;
     if (filt.analysts != null && !(s.analysts != null && s.analysts >= filt.analysts)) return false;

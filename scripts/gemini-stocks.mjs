@@ -97,7 +97,7 @@ function normRating(o) {
   const msMatch = /^https?:\/\/(www\.)?marketscreener\.com\/quote\/stock\/[^\/]+\//i.test(rawUrl);
   const link = msMatch ? (/consensus\/?$/i.test(rawUrl) ? rawUrl : rawUrl.replace(/\/+$/, '/') + 'consensus/') : null;
 
-  let buyPct, outperformPct = null, analysts, countsBad = false;
+  let buyPct, strongBuyPct = null, analysts, countsBad = false;
   const haveCounts = [buy, outp, hold].some(x => x != null);
   if (!haveCounts) {
     countsBad = true;   // ohne Zähler -> raus
@@ -111,8 +111,8 @@ function normRating(o) {
     else if (H > 0 || U > 0 || S > 0) countsBad = true;                         // kein 100%
     else if (!isFinite(declared) || declared <= 0 || declared !== total) countsBad = true;
     else {
-      buyPct = 100;                                  // per Definition (nur Buy+Outperform)
-      outperformPct = Math.round((OUTP / total) * 100);
+      buyPct = 100;                                  // per Definition (alle Buy/Strong Buy)
+      strongBuyPct = Math.round((BUY / total) * 100); // Anteil Strong Buy (extremeres Kauflevel)
       analysts = total;
     }
   }
@@ -125,7 +125,7 @@ function normRating(o) {
   if (!SECTOR_IDS.includes(sector)) sector = sectorForFinnhub(o.industry || o.branche || sector) || null;
   const yahoo = (o.yahoo || o.yahooSymbol || '').toString().trim().toUpperCase() || null;
   const counts = (!countsBad) ? { buy: buy ?? 0, outperform: outp ?? 0, hold: hold ?? 0, underperform: under ?? 0, sell: sell ?? 0 } : null;
-  return { buyPct, outperformPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts, ratingSource: 'analysten-konsens', ratingUrl: link, countsBad };
+  return { buyPct, strongBuyPct, analysts, upside, pe, sector, yahoo, ratingCounts: counts, ratingSource: 'analysten-konsens', ratingUrl: link, countsBad };
 }
 
 // Ablauf: Analysten-Verteilung aus DURCHSUCHBAREM TEXT lesen (nicht aus dem MarketScreener-
@@ -190,7 +190,7 @@ Kein Text außerhalb des JSON.`;
         ticker: String(o.ticker).toUpperCase(),
         name: o.name || o.ticker,
         sector: r.sector,
-        buyPct: r.buyPct, outperformPct: r.outperformPct,
+        buyPct: r.buyPct, strongBuyPct: r.strongBuyPct,
         analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe,
         ratingCounts: r.ratingCounts, ratingSource: r.ratingSource, ratingUrl: r.ratingUrl,
         via: 'gemini', source: r.ratingSource,
@@ -276,7 +276,7 @@ Quellen sicher belegt hast. Kein Text außerhalb des JSON.`;
         ticker: String(o.ticker).toUpperCase(),
         name: o.name || o.ticker,
         sector: r.sector,
-        buyPct: r.buyPct, outperformPct: r.outperformPct,
+        buyPct: r.buyPct, strongBuyPct: r.strongBuyPct,
         analysts: r.analysts, upside: r.upside, yahoo: r.yahoo, peGemini: r.pe,
         ratingCounts: r.ratingCounts, ratingSource: r.ratingSource, ratingUrl: r.ratingUrl,
         via: 'gemini-discover', source: r.ratingSource,

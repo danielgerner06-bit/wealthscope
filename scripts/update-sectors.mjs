@@ -290,9 +290,11 @@ const today = () => new Date().toISOString().slice(0, 10);
         const v = await verifyStock(h);
         if (process.env.GEMINI_DEBUG) console.log(`  [verify] ${h.ticker}: ${v.ok ? 'OK ('+v.verifiedSource+')' : 'raus ('+v.reason+')'}`);
         if (!v.ok) continue;
-        // bei harten Quellen DEREN exakte Counts/Analysten übernehmen (verlässlicher als Gemini)
+        // bei harten Quellen DEREN exakte Counts/Analysten übernehmen (verlässlicher als Gemini).
+        // strongBuyPct = Anteil "Strong Buy" (= extremeres Kauflevel; counts.buy ist Strong Buy).
         const merged = v.counts
-          ? { ...h, ratingCounts: v.counts, analysts: v.analysts, outperformPct: Math.round((v.counts.outperform / v.analysts) * 100) }
+          ? { ...h, ratingCounts: v.counts, analysts: v.analysts,
+              strongBuyPct: Math.round((v.counts.buy / v.analysts) * 100) }
           : h;
         db[h.ticker] = { ...db[h.ticker], ...merged, verifiedAt: today(), verifiedSource: v.verifiedSource };
         kept++;

@@ -31,7 +31,7 @@ function metaFrom(s, sym) {
   return {
     ticker: s.ticker, name: s.name, yahoo: sym,
     sector: s.sector, region: regionOf(sym),
-    buyPct: s.buyPct ?? null, outperformPct: s.outperformPct ?? null,
+    buyPct: s.buyPct ?? null, strongBuyPct: s.strongBuyPct ?? null,
     upside: s.upside ?? null, pe: s.pe ?? null, perf6mAtAdd: s.perf6m ?? null,
     perf1mBefore: s.perf1mBefore ?? null,
     analysts: s.analysts ?? null, div: s.div ?? null,
@@ -115,7 +115,7 @@ export function computeFindings(hist) {
   const avg = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : null;
   const buckets = {
     KGV: s => s.pe == null ? null : s.pe < 15 ? '<15' : s.pe < 25 ? '15-25' : s.pe < 40 ? '25-40' : '40+',
-    Outperform: s => s.outperformPct == null ? null : s.outperformPct < 70 ? '<70%' : s.outperformPct < 85 ? '70-85%' : s.outperformPct < 95 ? '85-95%' : '95%+',
+    'Strong Buy': s => s.strongBuyPct == null ? null : s.strongBuyPct < 70 ? '<70%' : s.strongBuyPct < 85 ? '70-85%' : s.strongBuyPct < 95 ? '85-95%' : '95%+',
     Kursziel: s => s.upside == null ? null : s.upside < 10 ? '<10%' : s.upside < 25 ? '10-25%' : s.upside < 40 ? '25-40%' : '40%+',
     Dividende: s => s.div == null ? null : s.div === 0 ? 'keine' : s.div < 2 ? '<2%' : s.div < 4 ? '2-4%' : '4%+',
     Analysten: s => s.analysts == null ? null : s.analysts < 5 ? '1-4' : s.analysts < 15 ? '5-14' : '15+',

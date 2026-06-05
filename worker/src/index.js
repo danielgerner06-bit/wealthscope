@@ -198,7 +198,7 @@ function regionOf(sym) {
 function metaFrom(s, sym) {
   return {
     ticker: s.ticker, name: s.name, yahoo: sym, sector: s.sector, region: regionOf(sym),
-    buyPct: s.buyPct ?? null, outperformPct: s.outperformPct ?? null,
+    buyPct: s.buyPct ?? null, strongBuyPct: s.strongBuyPct ?? null,
     upside: s.upside ?? null, pe: s.pe ?? null, perf6mAtAdd: s.perf6m ?? null,
     perf1mBefore: s.perf1mBefore ?? null, analysts: s.analysts ?? null, div: s.div ?? null,
   };

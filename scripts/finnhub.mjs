@@ -66,9 +66,9 @@ export async function scanAnalystStocks(key, state, budget) {
         const total = (r.strongBuy || 0) + (r.buy || 0) + (r.hold || 0) + (r.sell || 0) + (r.strongSell || 0);
         if (total > 0) {
           const buyPct = Math.round(((r.strongBuy + r.buy) / total) * 100);
-          const outperformPct = Math.round((r.strongBuy / total) * 100);
+          const strongBuyPct = Math.round((r.strongBuy / total) * 100);   // Anteil Strong Buy
           if (buyPct >= MIN_BUY_PCT) {
-            checked.push({ ticker: sym, buyPct, outperformPct, analysts: total });
+            checked.push({ ticker: sym, buyPct, strongBuyPct, analysts: total });
           } else {
             rejected.push(sym);          // geprüft, aber abgelehnt -> für Trefferquote
             delete state.db[sym];        // war evtl. mal Treffer -> jetzt nicht mehr
@@ -97,7 +97,7 @@ export async function scanAnalystStocks(key, state, budget) {
         name: prof.name || hit.ticker,
         sector,
         buyPct: hit.buyPct,
-        outperformPct: hit.outperformPct,
+        strongBuyPct: hit.strongBuyPct,
         analysts: hit.analysts,
         upside: upside != null ? upside : (state.db[hit.ticker]?.upside ?? null),
         via: 'finnhub', source: 'Finnhub',
