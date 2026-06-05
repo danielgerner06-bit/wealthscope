@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-04",
-  "updatedAt": "2026-06-05T01:00:21.638Z",
+  "updated": "2026-06-05",
+  "updatedAt": "2026-06-05T01:56:52.093Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -288,6 +288,37 @@
   ],
   "topStocks": [
     {
+      "ticker": "A1OS",
+      "name": "All for One Group SE",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 4,
+      "upside": 41,
+      "yahoo": "A1OS.DE",
+      "peGemini": 18.2,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "analysten-konsens",
+      "ratingUrl": "https://www.marketscreener.com/quote/stock/ALL-FOR-ONE-GROUP-SE-542171/consensus/",
+      "via": "gemini",
+      "source": "analysten-konsens",
+      "seen": "2026-06-04",
+      "verifiedAt": "2026-06-04",
+      "perf6m": -22.99,
+      "perf6mAt": "2026-06-04",
+      "perf1mBefore": -9.12,
+      "pe": 28.8,
+      "eps": 1.13,
+      "div": 3.69,
+      "enrichAt": "2026-06-04"
+    },
+    {
       "ticker": "KTN",
       "name": "Kontron AG",
       "sector": "hardware",
@@ -347,37 +378,6 @@
       "pe": 425,
       "eps": 0.1,
       "div": 0,
-      "enrichAt": "2026-06-04"
-    },
-    {
-      "ticker": "A1OS",
-      "name": "All for One Group SE",
-      "sector": "software",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 4,
-      "upside": 41,
-      "yahoo": "A1OS.DE",
-      "peGemini": 18.2,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "analysten-konsens",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/ALL-FOR-ONE-GROUP-SE-542171/consensus/",
-      "via": "gemini",
-      "source": "analysten-konsens",
-      "seen": "2026-06-04",
-      "verifiedAt": "2026-06-04",
-      "perf6m": -22.99,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": -9.12,
-      "pe": 28.8,
-      "eps": 1.13,
-      "div": 3.69,
       "enrichAt": "2026-06-04"
     },
     {
@@ -817,6 +817,5 @@
     "SOGN.SW": "2026-09-04",
     "VOW3.DE": "2026-09-04",
     "HEI.DE": "2026-09-04"
-  },
-  "yahooAt": "2026-06-05T01:00:21.638Z"
+  }
 }
