@@ -533,28 +533,24 @@
   "news": {
     "items": [
       {
-        "text": "Ölpreise stabil – Anleger warten auf Signale im Iran-Konflikt.",
+        "text": "EZB vor Zinsentscheid: Nächste Zinserhöhung \"mit hoher Wahrscheinlichkeit\"",
         "stamp": "05.06.26"
       },
       {
-        "text": "Europäische Märkte starten leichter – Technologieaktien fallen.",
+        "text": "KI-Aktien brechen ein: Broadcom-Schock trifft asiatische Chipwerte",
         "stamp": "05.06.26"
       },
       {
-        "text": "KI-Aktien unter Druck nach Broadcom-Schock – Sorge vor Blasenbildung.",
+        "text": "Uran-Bullenmarkt: UraniumX startet Bohrprogramm im Athabasca-Becken",
         "stamp": "05.06.26"
       },
       {
-        "text": "US-Notenbank Fed lässt Leitzins unverändert – Auswirkungen für Anleger.",
-        "stamp": "04.06.26"
+        "text": "US-Rohstoffboom: Trump-Förderung als Mega-Hebel für Börsenneulinge",
+        "stamp": "05.06.26"
       },
       {
-        "text": "Iran-Konflikt: Analysten warnen vor unterschätzten Folgen für den Ölpreis.",
-        "stamp": "04.06.26"
-      },
-      {
-        "text": "Schwedens Inflation dämpft sich – Riksbank pausiert Zinserhöhungen.",
-        "stamp": "04.06.26"
+        "text": "Iran-Konflikt: Geopolitik bewegt Finanz- und Rohstoffmärkte",
+        "stamp": "05.06.26"
       }
     ],
     "date": "2026-06-05"
@@ -562,8 +558,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 8434,
-    "candCursor": 56,
+    "lastCursor": 8734,
+    "candCursor": 64,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "Kontron AG (KTN.DE)",
@@ -817,42 +813,42 @@
       "VSE Corp"
     ],
     "noteCursor": 9,
-    "focusCursor": 4,
+    "focusCursor": 5,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 451,
-      "cons_def": 234,
-      "materials": 307,
-      "health": 1250,
-      "finance": 909,
-      "energy": 424,
-      "hardware": 291,
-      "software": 866,
-      "industrial": 375,
-      "utilities": 162,
-      "comm": 192,
-      "ai_semi": 173,
+      "cons_cycl": 461,
+      "cons_def": 237,
+      "materials": 313,
+      "health": 1263,
+      "finance": 921,
+      "energy": 432,
+      "hardware": 295,
+      "software": 878,
+      "industrial": 384,
+      "utilities": 167,
+      "comm": 193,
+      "ai_semi": 174,
       "realestate": 81
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 451,
-      "cons_def": 234,
-      "materials": 307,
-      "health": 1250,
-      "finance": 909,
-      "energy": 424,
-      "hardware": 292,
-      "software": 868,
-      "industrial": 376,
-      "utilities": 162,
-      "comm": 192,
-      "ai_semi": 173,
+      "cons_cycl": 461,
+      "cons_def": 237,
+      "materials": 313,
+      "health": 1263,
+      "finance": 921,
+      "energy": 432,
+      "hardware": 296,
+      "software": 880,
+      "industrial": 385,
+      "utilities": 167,
+      "comm": 193,
+      "ai_semi": 174,
       "realestate": 81
     },
-    "heavyAt": "2026-06-05T10:47:50.821Z",
+    "heavyAt": "2026-06-05T10:58:31.025Z",
     "revalidateTag": "ms-verify-v8",
     "fmpRetryTag": "grades-summary-fix"
   },
