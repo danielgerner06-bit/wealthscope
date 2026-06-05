@@ -1533,8 +1533,11 @@ html.preselect #hubScreen { display: none !important; }
 .stk-title { min-width: 0; }
 .stk-tk { font-weight: 800; }
 .stk-nm { color: var(--s-muted); font-weight: 600; font-size: 0.95rem; }
-.stk-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-.stk-badge { font-size: 0.66rem; font-weight: 700; padding: 3px 9px; border-radius: 99px; background: rgba(148,163,184,0.1); border: 1px solid var(--s-border); color: var(--s-muted); white-space: nowrap; }
+/* Badges (Sektor · Region · Quelle · Datum) IMMER in EINER Zeile; bei Platzmangel
+   horizontal scrollbar statt Umbruch. */
+.stk-badges { display: flex; flex-wrap: nowrap; gap: 5px; margin-top: 8px; overflow-x: auto; scrollbar-width: none; }
+.stk-badges::-webkit-scrollbar { display: none; }
+.stk-badge { flex: 0 0 auto; font-size: 0.62rem; font-weight: 700; padding: 3px 8px; border-radius: 99px; background: rgba(148,163,184,0.1); border: 1px solid var(--s-border); color: var(--s-muted); white-space: nowrap; }
 .stk-badge-src { background: rgba(34,211,153,0.1); border-color: rgba(34,211,153,0.3); color: #34d399; }
 
 .stk-hero-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px; }
@@ -1616,17 +1619,18 @@ html.preselect #hubScreen { display: none !important; }
 }
 .sek-rank-pop[hidden] { display: none; }
 .sek-rank-pop-head { font-size: 0.78rem; font-weight: 800; color: var(--s-text); margin-bottom: 6px; }
-.sek-rank-cols { display: grid; grid-template-columns: 1fr 34px 42px 40px; gap: 8px; padding: 0 8px 6px; font-size: 0.6rem; font-weight: 700; color: var(--s-faint); text-transform: uppercase; letter-spacing: 0.3px; }
-.sek-rank-cols span:not(:first-child) { text-align: right; }
-.sek-rank-cols .sortable { cursor: pointer; transition: color .12s; user-select: none; }
+.sek-rank-cols { display: grid; grid-template-columns: 1fr 48px 52px 46px; gap: 8px; padding: 0 8px 6px; font-size: 0.6rem; font-weight: 700; color: var(--s-faint); text-transform: uppercase; letter-spacing: 0.3px; }
+/* Header-Zellen nie umbrechen -> Sortier-Pfeil bleibt in DERSELBEN Zeile wie der Text */
+.sek-rank-cols span:not(:first-child) { text-align: right; white-space: nowrap; }
+.sek-rank-cols .sortable { cursor: pointer; transition: color .12s; user-select: none; white-space: nowrap; }
 .sek-rank-cols .sortable:hover { color: var(--s-text); }
 .sek-rank-cols .sortable.active { color: var(--s-accent); }
-.sek-rank-cols .sortable.active.desc::after { content: ' ▾'; }
-.sek-rank-cols .sortable.active.asc::after { content: ' ▴'; }
+.sek-rank-cols .sortable.active.desc::after { content: '▾'; margin-left: 2px; }
+.sek-rank-cols .sortable.active.asc::after { content: '▴'; margin-left: 2px; }
 .sek-rank-list { display: flex; flex-direction: column; gap: 3px; max-height: 320px; overflow-y: auto; scrollbar-width: none; }
 .sek-rank-list::-webkit-scrollbar { display: none; }
 .sek-rank-row {
-  display: grid; grid-template-columns: 1fr 34px 42px 40px; align-items: center; gap: 8px;
+  display: grid; grid-template-columns: 1fr 48px 52px 46px; align-items: center; gap: 8px;
   background: none; border: 1px solid transparent; border-radius: 8px; padding: 6px 8px;
   cursor: pointer; text-align: left; transition: background .12s, border-color .12s;
 }
