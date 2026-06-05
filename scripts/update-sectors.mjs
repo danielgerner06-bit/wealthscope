@@ -209,7 +209,12 @@ const today = () => new Date().toISOString().slice(0, 10);
       // abgelehnte Ticker zur Sektor-Auflösung vormerken (max. 300 in der Queue)
       for (const t of (state._rejected || [])) if (!scan.pendingReject.includes(t)) scan.pendingReject.push(t);
       if (scan.pendingReject.length > 2000) scan.pendingReject = scan.pendingReject.slice(-2000);
-      console.log(`Finnhub-Scan: ${scan.scanned}/${scan.universe} geprüft, ${(state._rejected || []).length} abgelehnt.`);
+      // Finnhub-Funde NICHT direkt aufnehmen -> als Kandidaten vorne einreihen, damit sie
+      // der Multi-Quellen-Konsens prüft (gleiches strenges Kriterium wie überall).
+      let fhNew = 0;
+      for (const c of (state._finnhubCandidates || [])) if (!candidates.includes(c)) { candidates.unshift(c); fhNew++; }
+      if (fhNew) scan.candCursor = 0;   // neue Finnhub-Kandidaten stehen vorne -> zuerst prüfen
+      console.log(`Finnhub-Scan: ${scan.scanned}/${scan.universe} geprüft, ${(state._finnhubCandidates || []).length} Treffer -> ${fhNew} neue Kandidaten, ${(state._rejected || []).length} abgelehnt.`);
     } catch (e) { console.error('Finnhub-Scan fehlgeschlagen:', e.message); }
   }
 

@@ -79,32 +79,19 @@ export async function scanAnalystStocks(key, state, budget) {
   }
   state._rejected = rejected;   // dem Aufrufer mitgeben
 
-  // Treffer mit Profil (Name, Sektor) und Kursziel anreichern.
+  // Treffer NICHT direkt als Perle aufnehmen, sondern als KANDIDATEN zurückgeben.
+  // Die eigentliche Aufnahme entscheidet danach der Multi-Quellen-Konsens
+  // (verifyAcrossSources in update-sectors), genau wie bei allen anderen Quellen.
+  // So gilt überall dasselbe strenge Kriterium (kein Finnhub-Alleingang).
+  const candidates = [];
   for (const hit of checked) {
     try {
       const prof = await fh(`/stock/profile2?symbol=${hit.ticker}`, key);
-      const sector = sectorForFinnhub(prof.finnhubIndustry);
-      if (!sector) { continue; } // ohne klaren Sektor nicht aufnehmen
-      let upside = null;
-      try {
-        const pt = await fh(`/stock/price-target?symbol=${hit.ticker}`, key);
-        const q = await fh(`/quote?symbol=${hit.ticker}`, key);
-        if (pt.targetMean && q.c) upside = Math.round(((pt.targetMean - q.c) / q.c) * 100);
-      } catch { /* Kursziel optional */ }
-      state.db[hit.ticker] = {
-        ...state.db[hit.ticker],
-        ticker: hit.ticker,
-        name: prof.name || hit.ticker,
-        sector,
-        buyPct: hit.buyPct,
-        strongBuyPct: hit.strongBuyPct,
-        analysts: hit.analysts,
-        upside: upside != null ? upside : (state.db[hit.ticker]?.upside ?? null),
-        via: 'finnhub', source: 'Finnhub',
-        seen: new Date().toISOString().slice(0, 10),
-      };
+      const name = prof.name || hit.ticker;
+      candidates.push(`${name} (${hit.ticker})`);
     } catch { /* Profil-Fehler ignorieren */ }
   }
+  state._finnhubCandidates = candidates;
 
   state.scan.lastCursor = cursor;
   state.scan.scanned = Math.min(state.scan.scanned + used, n);
