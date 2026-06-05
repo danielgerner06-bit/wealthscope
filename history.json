@@ -6259,7 +6259,7 @@
       "sector": "software",
       "region": "europe",
       "buyPct": 100,
-      "outperformPct": 0,
+      "outperformPct": null,
       "upside": null,
       "pe": 16.6,
       "perf6mAtAdd": -8.43,
@@ -6385,7 +6385,8 @@
       "seen": "2026-06-05",
       "seenMs": 1780617600000,
       "startPrice": 11.924999713897705,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "A1OS.DE": {
       "ticker": "A1OS.DE",
@@ -6404,7 +6405,8 @@
       "seen": "2026-06-05",
       "seenMs": 1780617600000,
       "startPrice": 32.599998474121094,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "IXX.DE": {
       "ticker": "IXX.DE",
@@ -6423,7 +6425,8 @@
       "seen": "2026-06-05",
       "seenMs": 1780617600000,
       "startPrice": 52.75,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
