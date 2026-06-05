@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T13:00:09.820Z",
+  "updatedAt": "2026-06-05T13:09:33.598Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -288,6 +288,41 @@
   ],
   "topStocks": [
     {
+      "ticker": "SB1",
+      "name": "Smartbroker Holding AG",
+      "sector": "finance",
+      "buyPct": 100,
+      "strongBuyPct": 100,
+      "analysts": 4,
+      "upside": 52,
+      "yahoo": "SB1.DE",
+      "peGemini": null,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "analysten-konsens",
+      "ratingUrl": null,
+      "via": "gemini",
+      "source": "analysten-konsens",
+      "seen": "2026-06-05",
+      "verifiedAt": "2026-06-05",
+      "verifiedSource": "stockanalysis+yahoo",
+      "perf6m": -18.43,
+      "perf6mAt": "2026-06-05",
+      "perf30": -7.36,
+      "perf1mBefore": -7.56,
+      "pe": null,
+      "eps": -0.27,
+      "div": 0,
+      "enrichAt": "2026-06-05",
+      "sektorPsi": 0.0132,
+      "aktienPsi": 0.0382
+    },
+    {
       "ticker": "KTN.DE",
       "name": "Kontron AG",
       "sector": "hardware",
@@ -319,8 +354,8 @@
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.004,
-      "aktienPsi": 0.003
+      "sektorPsi": 0.0039,
+      "aktienPsi": 0.0029
     },
     {
       "ticker": "HYQ.DE",
@@ -354,8 +389,8 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0067,
-      "aktienPsi": 0.0192
+      "sektorPsi": 0.0132,
+      "aktienPsi": 0.0024
     }
   ],
   "sectorNotes": {
@@ -471,24 +506,28 @@
   "news": {
     "items": [
       {
-        "text": "EZB vor Zinsentscheid: Steigende Inflation und Iran-Konflikt treiben Zinsdebatte",
+        "text": "EZB vor Zinsentscheid: Steigende Inflation, erhöhter Druck.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Wirtschaft in Eurozone schrumpft überraschend; Irland korrigiert Daten",
-        "stamp": "05.06.26"
+        "text": "Geopolitik, Märkte und Konzerne: Europa im globalen Spannungsfeld.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "Deutsche Autobauer verlieren international den Anschluss an Konkurrenz",
-        "stamp": "05.06.26"
+        "text": "Fed erhöht Leitzins erstmals seit einem Jahr leicht.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "DAX erwartet leichter – US-Arbeitsmarktdaten und Geopolitik im Fokus",
-        "stamp": "05.06.26"
+        "text": "US-Arbeitsmarktbericht im Fokus: Erwartungen für Mai.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "Notenbanken weltweit stehen vor wichtigen geldpolitischen Entscheidungen",
-        "stamp": "05.06.26"
+        "text": "Gold im Spannungsfeld der Iran-Krise: Geopolitik treibt Preise.",
+        "stamp": "04.06.26"
+      },
+      {
+        "text": "Software-Schwäche hält an: CrowdStrike-Zahlen enttäuschen.",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-05"
@@ -496,8 +535,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 2301,
-    "candCursor": 8,
+    "lastCursor": 2601,
+    "candCursor": 16,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "Kontron AG (KTN.DE)",
@@ -780,58 +819,42 @@
       "Payoneer Global Inc."
     ],
     "noteCursor": 9,
-    "focusCursor": 5,
+    "focusCursor": 6,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 522,
-      "cons_def": 266,
-      "materials": 348,
-      "health": 1448,
-      "finance": 1038,
-      "energy": 468,
-      "hardware": 333,
-      "software": 997,
-      "industrial": 431,
-      "utilities": 185,
-      "comm": 221,
-      "ai_semi": 198,
-      "realestate": 91
+      "cons_cycl": 527,
+      "cons_def": 268,
+      "materials": 356,
+      "health": 1474,
+      "finance": 1046,
+      "energy": 479,
+      "hardware": 338,
+      "software": 1013,
+      "industrial": 437,
+      "utilities": 191,
+      "comm": 224,
+      "ai_semi": 199,
+      "realestate": 93
     },
-    "pendingReject": [
-      "DOCN",
-      "DOCS",
-      "DOCU",
-      "DOLE",
-      "DOMH",
-      "DOMO",
-      "DOO",
-      "DORM",
-      "DOUG",
-      "DOV",
-      "DOW",
-      "DOX",
-      "DPRO",
-      "DPZ",
-      "DRCT"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 522,
-      "cons_def": 266,
-      "materials": 348,
-      "health": 1448,
-      "finance": 1039,
-      "energy": 468,
-      "hardware": 334,
-      "software": 997,
-      "industrial": 431,
-      "utilities": 185,
-      "comm": 221,
-      "ai_semi": 198,
-      "realestate": 91
+      "cons_cycl": 527,
+      "cons_def": 268,
+      "materials": 356,
+      "health": 1474,
+      "finance": 1048,
+      "energy": 479,
+      "hardware": 339,
+      "software": 1013,
+      "industrial": 437,
+      "utilities": 191,
+      "comm": 224,
+      "ai_semi": 199,
+      "realestate": 93
     },
-    "heavyAt": "2026-06-05T12:50:47.608Z",
+    "heavyAt": "2026-06-05T13:03:25.218Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -842,6 +865,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-05T13:00:09.820Z"
+  }
 }
