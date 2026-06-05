@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T08:40:13.252Z",
+  "updatedAt": "2026-06-05T09:00:21.655Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -902,5 +902,6 @@
     "SOGN.SW": "2026-09-04",
     "VOW3.DE": "2026-09-04",
     "HEI.DE": "2026-09-04"
-  }
+  },
+  "yahooAt": "2026-06-05T09:00:21.655Z"
 }
