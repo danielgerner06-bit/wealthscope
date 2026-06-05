@@ -15,7 +15,7 @@ import fs from 'node:fs';
 import { SECTORS, REGIONS, sectorForFinnhub } from './sectors.mjs';
 import { buildNotes, buildNews, buildFactorInsight } from './insight.mjs';
 import { scanAnalystStocks } from './finnhub.mjs';
-import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock, fetchSectorOf, perfBetween } from './prices.mjs';
+import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, fetchStockPerf30, enrichStock, fetchSectorOf, perfBetween } from './prices.mjs';
 import { checkCandidates, discoverNew, verifyNoHold, MIN_BUY_PCT } from './gemini-stocks.mjs';
 import { verifyAcrossSources } from './ratings.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
@@ -111,17 +111,15 @@ const today = () => new Date().toISOString().slice(0, 10);
       const cleanCounts = c && !('strongBuy' in c);
       if (cleanCounts) {
         const sum = (c.buy || 0) + (c.outperform || 0) + (c.hold || 0) + (c.underperform || 0) + (c.sell || 0);
-        // inkonsistent (analysts != Summe) ODER irgendein Hold/Underperform/Sell > 0 -> raus.
-        // (MS-Link ist KEIN Kriterium mehr — Geminis IDs waren unzuverlässig.)
+        // NUR löschen, wenn die Counts SELBST das Kriterium verletzen: inkonsistent
+        // (analysts != Summe) ODER irgendein Hold/Underperform/Sell > 0.
+        // WICHTIG: fehlendes verifiedAt ist KEIN Löschgrund mehr — saubere Counts (0 Hold)
+        // bedeuten bereits "erfüllt 100%". Eine Perle wird erst entfernt, wenn die
+        // Re-Validierung sie AKTIV widerlegt (sonst gingen bei einem Gemini-Aussetzer/
+        // recheckAt-Reset alle echten Perlen still verloren — der "Ocugen-Bug").
         if ((s.analysts && sum > 0 && s.analysts !== sum) || c.hold || c.underperform || c.sell) {
           if (process.env.GEMINI_DEBUG && /OCGN|KTN|A1OS/i.test(tk)) console.log(`[DEL ${label} inkons] ${tk} analysts=${s.analysts} sum=${sum} hold=${c.hold} sell=${c.sell}`);
           delete db[tk]; nInc++;
-        }
-        // zusätzlich: noch nicht unabhängig gegengeprüfte Perlen NICHT anzeigen -> raus,
-        // bis verifyNoHold sie bestätigt (verifiedAt gesetzt). "Im Zweifel raus".
-        else if (!s.verifiedAt) {
-          if (process.env.GEMINI_DEBUG && /OCGN|KTN|A1OS/i.test(tk)) console.log(`[DEL ${label} unverif] ${tk} verifiedAt=${s.verifiedAt}`);
-          delete db[tk]; nNo++;
         }
       } else {
         // Gemini-Perle OHNE saubere Counts -> raus. Erfüllt sie den Ablauf wirklich,
@@ -372,8 +370,11 @@ const today = () => new Date().toISOString().slice(0, 10);
   for (const s of needPerf) {
     const v = await fetchStockPerf6m(s.yahoo || s.ticker);   // Yahoo-Symbol bevorzugen (z. B. KTN.DE)
     if (v != null) { s.perf6m = v; s.perf6mAt = today(); db[s.ticker] = { ...db[s.ticker], perf6m: v, perf6mAt: s.perf6mAt }; }
+    // 30-Tage-Performance der Aktie (für den Aktien-PSI) im selben Zug holen.
+    const v30 = await fetchStockPerf30(s.yahoo || s.ticker);
+    if (v30 != null) { s.perf30 = v30; db[s.ticker] = { ...db[s.ticker], perf30: v30 }; }
   }
-  if (needPerf.length) console.log(`6M-Performance für ${needPerf.length} Aktien aktualisiert.`);
+  if (needPerf.length) console.log(`6M+30T-Performance für ${needPerf.length} Aktien aktualisiert.`);
 
   /* 3a2) 1-Monats-Performance VOR Aufnahme (Momentum) je Perle, EINMALIG aus Yahoo.
      = Kursentwicklung im Monat vor dem seen-Datum. Fix gespeichert (ändert sich nicht). */
@@ -502,6 +503,44 @@ const today = () => new Date().toISOString().slice(0, 10);
     evaluatedBySector[s.sector] = (evaluatedBySector[s.sector] || 0) + 1;   // Perle = geprüfter Treffer
   }
   scan.evaluatedBySector = evaluatedBySector;
+
+  /* PSI je Aktie speichern (beim Holen gemerkt). Zwei Werte, gleiche Formel wie im Frontend:
+       PSI = hitRate / relPos
+     - hitRate = Perlen / geprüfte Aktien des Sektors (Trefferquote des Sektors)
+     - relPos  = relative 30T-Performance-Position (0.05..1); niedrig = unten = Aufholpotenzial
+     sektorPsi: relPos aus der SEKTOR-30T-Performance (bars30).
+     aktienPsi: relPos aus der 30T-Performance der AKTIE selbst (s.perf30). */
+  {
+    const perfMap = {};
+    (bars30 || []).forEach(b => { perfMap[b.id] = b.perf; });
+    // Spanne der Sektor-30T-Performance (für relPos der Sektoren)
+    const secPerfs = Object.values(perfMap).filter(v => v != null);
+    const sMin = secPerfs.length ? Math.min(...secPerfs) : 0;
+    const sMax = secPerfs.length ? Math.max(...secPerfs) : 1;
+    const sSpan = (sMax - sMin) || 1;
+    // Spanne der Aktien-30T-Performance (für relPos der einzelnen Aktien)
+    const stPerfs = topStocks.map(s => s.perf30).filter(v => v != null);
+    const aMin = stPerfs.length ? Math.min(...stPerfs) : 0;
+    const aMax = stPerfs.length ? Math.max(...stPerfs) : 1;
+    const aSpan = (aMax - aMin) || 1;
+    // Trefferquote je Sektor
+    const hitOf = sec => {
+      const n = topStocks.filter(s => s.sector === sec).length;
+      const seen = evaluatedBySector[sec] || n;
+      return seen > 0 ? Math.min(1, n / Math.max(n, seen)) : 0;
+    };
+    for (const s of topStocks) {
+      if (!s.sector) { s.sektorPsi = null; s.aktienPsi = null; continue; }
+      const hit = hitOf(s.sector);
+      const secPerf = perfMap[s.sector];
+      const relSec = secPerf != null ? Math.max(0.05, (secPerf - sMin) / sSpan) : 1;
+      s.sektorPsi = +(hit / relSec).toFixed(4);
+      // Aktien-PSI: gleiche Trefferquote, aber relPos aus der 30T-Performance der AKTIE.
+      const relAkt = s.perf30 != null ? Math.max(0.05, (s.perf30 - aMin) / aSpan) : 1;
+      s.aktienPsi = +(hit / relAkt).toFixed(4);
+      db[s.ticker] = { ...db[s.ticker], perf30: s.perf30 ?? null, sektorPsi: s.sektorPsi, aktienPsi: s.aktienPsi };
+    }
+  }
 
   const out = {
     updated: today(),

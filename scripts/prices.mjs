@@ -218,3 +218,18 @@ export async function fetchStockPerf6m(ticker) {
     return null;
   }
 }
+
+// 30-Tage-Kursperformance einer Aktie (~21 Handelstage), analog zur Sektor-30T-Performance.
+// Für den Aktien-PSI (relative Kursposition der Aktie statt des Sektors).
+export async function fetchStockPerf30(ticker) {
+  try {
+    const c = await closes(ticker, '3mo');
+    if (c.length <= W30 + 2) return null;
+    const end = trailMed(c, c.length - 1);
+    const ref = trailMed(c, c.length - 1 - W30);
+    if (!ref || !end) return null;
+    return +(((end - ref) / ref) * 100).toFixed(2);
+  } catch {
+    return null;
+  }
+}
