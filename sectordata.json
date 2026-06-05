@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T14:00:09.851Z",
+  "updatedAt": "2026-06-05T14:11:18.783Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -2.75,
+      "perf": -3,
       "avg30": 0.95,
-      "perf6m": -1.93
+      "perf6m": -2.18
     },
     {
       "id": "health",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 1.39,
+      "perf": 1.62,
       "avg30": 1.7,
-      "perf6m": 14.43
+      "perf6m": 14.7
     },
     {
       "id": "energy",
@@ -233,9 +233,9 @@
     },
     {
       "id": "europe",
-      "perf": 1.58,
+      "perf": 1.72,
       "avg30": 1.3,
-      "perf6m": 8.28
+      "perf6m": 8.43
     },
     {
       "id": "germany",
@@ -313,14 +313,13 @@
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -18.43,
       "perf6mAt": "2026-06-05",
-      "perf30": -7.36,
       "perf1mBefore": -7.56,
       "pe": null,
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
       "sektorPsi": 0.0085,
-      "aktienPsi": 0.0176
+      "sektorPsiAtAdd": 0.0085
     },
     {
       "ticker": "A1OS.DE",
@@ -344,15 +343,14 @@
       "seen": "2026-06-05",
       "perf6m": -22.75,
       "perf6mAt": "2026-06-05",
-      "perf30": -11.41,
       "perf1mBefore": -11.41,
       "upside": 41,
       "pe": 28.8,
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0079,
-      "aktienPsi": 0.1153
+      "sektorPsi": 0.0078,
+      "sektorPsiAtAdd": 0.0078
     },
     {
       "ticker": "IXX.DE",
@@ -376,15 +374,14 @@
       "seen": "2026-06-05",
       "perf6m": 15.89,
       "perf6mAt": "2026-06-05",
-      "perf30": -2.78,
       "perf1mBefore": -2.31,
       "upside": 27,
       "pe": 35.7,
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0079,
-      "aktienPsi": 0.0263
+      "sektorPsi": 0.0078,
+      "sektorPsiAtAdd": 0.0078
     },
     {
       "ticker": "KTN.DE",
@@ -412,14 +409,13 @@
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": 6.64,
       "perf6mAt": "2026-06-05",
-      "perf30": 3.81,
       "perf1mBefore": 3.94,
       "pe": 11.2,
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.01,
-      "aktienPsi": 0.0057
+      "sektorPsi": 0.0095,
+      "sektorPsiAtAdd": 0.0095
     },
     {
       "ticker": "HYQ.DE",
@@ -447,14 +443,13 @@
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -38.35,
       "perf6mAt": "2026-06-05",
-      "perf30": 1.43,
       "perf1mBefore": 2.18,
       "pe": 18.9,
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
       "sektorPsi": 0.0085,
-      "aktienPsi": 0.0056
+      "sektorPsiAtAdd": 0.0085
     },
     {
       "ticker": "1INN.DE",
@@ -478,46 +473,45 @@
       "seen": "2026-06-05",
       "perf6m": -8.43,
       "perf6mAt": "2026-06-05",
-      "perf30": 27.95,
       "perf1mBefore": 28.32,
       "pe": 16.6,
       "eps": 5.01,
       "div": 4.62,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0016,
-      "aktienPsi": 0.001
+      "sektorPsi": 0.0015,
+      "sektorPsiAtAdd": 0.0015
     }
   ],
   "psiHistory": [
     {
-      "t": "SB1",
+      "t": "1INN.DE",
       "d": "2026-06-05",
-      "v": 0.0176
+      "v": 0.0015
     },
     {
       "t": "A1OS.DE",
       "d": "2026-06-05",
-      "v": 0.1153
+      "v": 0.0078
     },
     {
       "t": "IXX.DE",
       "d": "2026-06-05",
-      "v": 0.0263
+      "v": 0.0078
     },
     {
-      "t": "KTN.DE",
+      "t": "SB1",
       "d": "2026-06-05",
-      "v": 0.0057
+      "v": 0.0085
     },
     {
       "t": "HYQ.DE",
       "d": "2026-06-05",
-      "v": 0.0056
+      "v": 0.0085
     },
     {
-      "t": "1INN.DE",
+      "t": "KTN.DE",
       "d": "2026-06-05",
-      "v": 0.001
+      "v": 0.0095
     }
   ],
   "sectorNotes": {
@@ -633,28 +627,24 @@
   "news": {
     "items": [
       {
-        "text": "Eurozone schrumpft überraschend – schwache Daten aus Irland",
+        "text": "Eurozone schrumpft überraschend; EZB erwartet Leitzinserhöhung.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Lufthansa-Flugzeug nach Panne mit Fahrwerk abgeschleppt.",
+        "text": "US-Arbeitsmarktdaten im Fokus; Dax vor dem Wochenende ohne klare Richtung.",
         "stamp": "05.06.26"
       },
       {
-        "text": "KI-Blase vor dem Platzen? Vier Gefahren bedrohen Mega-Boom.",
+        "text": "KI-Boom treibt Vermögen der Reichen; Broadcom-Schock bremst KI-Aktien.",
         "stamp": "05.06.26"
       },
       {
-        "text": "US-Arbeitsmarktdaten im Fokus: Impuls für DAX, Nasdaq & Gold?",
+        "text": "Erdgas testet Widerstand inmitten der Nachfrageerholung und LNG-Risiken.",
         "stamp": "05.06.26"
       },
       {
-        "text": "EZB-Zinserhöhung \"mit hoher Wahrscheinlichkeit\" wegen Iran-Konflikt",
+        "text": "Offener Brief Selenskyjs an Putin; Müdigkeit gegenüber Russland wächst.",
         "stamp": "05.06.26"
-      },
-      {
-        "text": "Geopolitik: Iran-Konflikt beeinflusst Märkte und Ölpreise.",
-        "stamp": "02.06.26"
       }
     ],
     "date": "2026-06-05"
@@ -662,8 +652,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 3201,
-    "candCursor": 16,
+    "lastCursor": 3501,
+    "candCursor": 24,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -946,42 +936,42 @@
       "Payoneer Global Inc."
     ],
     "noteCursor": 9,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 543,
-      "cons_def": 273,
-      "materials": 366,
-      "health": 1499,
-      "finance": 1101,
-      "energy": 492,
-      "hardware": 345,
-      "software": 1035,
-      "industrial": 451,
-      "utilities": 198,
-      "comm": 230,
-      "ai_semi": 200,
+      "cons_cycl": 555,
+      "cons_def": 275,
+      "materials": 371,
+      "health": 1515,
+      "finance": 1107,
+      "energy": 498,
+      "hardware": 350,
+      "software": 1051,
+      "industrial": 461,
+      "utilities": 199,
+      "comm": 234,
+      "ai_semi": 202,
       "realestate": 99
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 543,
-      "cons_def": 273,
-      "materials": 366,
-      "health": 1499,
-      "finance": 1103,
-      "energy": 492,
-      "hardware": 347,
-      "software": 1036,
-      "industrial": 452,
-      "utilities": 198,
-      "comm": 230,
-      "ai_semi": 200,
+      "cons_cycl": 555,
+      "cons_def": 275,
+      "materials": 371,
+      "health": 1515,
+      "finance": 1109,
+      "energy": 498,
+      "hardware": 352,
+      "software": 1052,
+      "industrial": 462,
+      "utilities": 199,
+      "comm": 234,
+      "ai_semi": 202,
       "realestate": 99
     },
-    "heavyAt": "2026-06-05T13:46:47.717Z",
+    "heavyAt": "2026-06-05T14:04:22.477Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -992,6 +982,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-05T14:00:09.851Z"
+  }
 }

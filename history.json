@@ -5965,7 +5965,8 @@
       "seenMs": 1780531200000,
       "startPrice": 23.369999885559082,
       "perf": [],
-      "strongBuyPct": 71
+      "strongBuyPct": 71,
+      "sektorPsiAtAdd": null
     },
     "A214450": {
       "ticker": "A214450",
@@ -6270,7 +6271,8 @@
       "seenMs": 1780531200000,
       "startPrice": 86.79999923706055,
       "perf": [],
-      "strongBuyPct": 100
+      "strongBuyPct": 100,
+      "sektorPsiAtAdd": null
     },
     "TPE": {
       "ticker": "TPE",
@@ -6366,7 +6368,8 @@
       "seenMs": 1780617600000,
       "startPrice": 80.36249923706055,
       "perf": [],
-      "outperformPct": null
+      "outperformPct": null,
+      "sektorPsiAtAdd": null
     },
     "SB1": {
       "ticker": "SB1",
@@ -6386,7 +6389,8 @@
       "seenMs": 1780617600000,
       "startPrice": 11.924999713897705,
       "perf": [],
-      "outperformPct": null
+      "outperformPct": null,
+      "sektorPsiAtAdd": null
     },
     "A1OS.DE": {
       "ticker": "A1OS.DE",
@@ -6406,7 +6410,8 @@
       "seenMs": 1780617600000,
       "startPrice": 32.599998474121094,
       "perf": [],
-      "outperformPct": null
+      "outperformPct": null,
+      "sektorPsiAtAdd": null
     },
     "IXX.DE": {
       "ticker": "IXX.DE",
@@ -6426,7 +6431,8 @@
       "seenMs": 1780617600000,
       "startPrice": 52.75,
       "perf": [],
-      "outperformPct": null
+      "outperformPct": null,
+      "sektorPsiAtAdd": null
     }
   },
   "findings": {
