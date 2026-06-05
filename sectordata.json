@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T10:38:50.426Z",
+  "updatedAt": "2026-06-05T10:47:23.193Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -533,28 +533,28 @@
   "news": {
     "items": [
       {
-        "text": "POB AG emittiert Wandelschuldverschreibung für Wachstumsperspektiven.",
+        "text": "US-Arbeitsmarkt robust trotz globaler Stürme; Fed hält Zinsen stabil",
         "stamp": "05.06.26"
       },
       {
-        "text": "US-Notenbank Fed: Inflation zu hoch, Zinsen könnten angehoben werden.",
+        "text": "Broadcom-Ausblick bremst Tech-Aktien; DAX erwartet schwächer",
         "stamp": "05.06.26"
       },
       {
-        "text": "Indiens Zentralbank hält Zinsen wegen Iran-Krise stabil.",
+        "text": "Pflegereform: Höhere Beitragsgrenze trifft Millionen Beschäftigte",
         "stamp": "05.06.26"
       },
       {
-        "text": "Chinas Exportwachstum und Inflation im Fokus.",
-        "stamp": "05.06.26"
+        "text": "KI-Aktien unter Druck nach Broadcom-Schock; Platzt KI-Blase?",
+        "stamp": "04.06.26"
       },
       {
-        "text": "DAX erwartet moderat, US-Jobdaten und Geopolitik im Blick.",
-        "stamp": "05.06.26"
+        "text": "Siemens Energy-Aktie gesucht; Rückkauf eigener Aktien gestartet",
+        "stamp": "04.06.26"
       },
       {
-        "text": "Himax Technologies Aktie verzeichnet deutlichen Kursrutsch.",
-        "stamp": "05.06.26"
+        "text": "Schwedens Inflation dämpft sich; Riksbank pausiert Zinserhöhungen",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-05"
@@ -562,8 +562,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 7834,
-    "candCursor": 40,
+    "lastCursor": 8134,
+    "candCursor": 48,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "Kontron AG (KTN.DE)",
@@ -811,42 +811,42 @@
       "Zignago Vetro S.p.A."
     ],
     "noteCursor": 9,
-    "focusCursor": 2,
+    "focusCursor": 3,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 435,
-      "cons_def": 229,
-      "materials": 295,
-      "health": 1206,
-      "finance": 879,
-      "energy": 409,
-      "hardware": 277,
-      "software": 842,
-      "industrial": 367,
-      "utilities": 159,
-      "comm": 180,
-      "ai_semi": 167,
+      "cons_cycl": 444,
+      "cons_def": 231,
+      "materials": 301,
+      "health": 1224,
+      "finance": 897,
+      "energy": 416,
+      "hardware": 284,
+      "software": 854,
+      "industrial": 371,
+      "utilities": 160,
+      "comm": 185,
+      "ai_semi": 170,
       "realestate": 81
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 435,
-      "cons_def": 229,
-      "materials": 295,
-      "health": 1207,
-      "finance": 879,
-      "energy": 409,
-      "hardware": 278,
-      "software": 844,
-      "industrial": 367,
-      "utilities": 159,
-      "comm": 180,
-      "ai_semi": 167,
+      "cons_cycl": 444,
+      "cons_def": 231,
+      "materials": 301,
+      "health": 1224,
+      "finance": 897,
+      "energy": 416,
+      "hardware": 285,
+      "software": 856,
+      "industrial": 372,
+      "utilities": 160,
+      "comm": 185,
+      "ai_semi": 170,
       "realestate": 81
     },
-    "heavyAt": "2026-06-05T10:27:41.983Z",
+    "heavyAt": "2026-06-05T10:39:38.365Z",
     "revalidateTag": "ms-verify-v8",
     "fmpRetryTag": "grades-summary-fix"
   },
