@@ -118,6 +118,27 @@ export async function fetchSectorOf(symbol) {
   } catch { return null; }
 }
 
+// Yahoo recommendationTrend: aktuellste Buy/Hold/Sell-Verteilung (echte Analysten, kostenlos).
+// Skala: strongBuy, buy, hold, sell, strongSell. Rückgabe auf unserer Skala oder null.
+export async function fetchYahooRatings(symbol) {
+  try {
+    await ensureCrumb();
+    const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(symbol)}`
+      + `?modules=recommendationTrend&crumb=${encodeURIComponent(_crumb)}`;
+    const res = await fetch(url, { headers: { 'User-Agent': UA, 'Cookie': _cookie } });
+    if (res.status === 401 || res.status === 403) { _crumb = null; return null; }
+    if (!res.ok) return null;
+    const trend = (await res.json())?.quoteSummary?.result?.[0]?.recommendationTrend?.trend;
+    if (!Array.isArray(trend) || !trend.length) return null;
+    const t = trend.find(x => x.period === '0m') || trend[0];   // aktuellster Zeitraum
+    const sb = t.strongBuy || 0, b = t.buy || 0, h = t.hold || 0, s = t.sell || 0, ss = t.strongSell || 0;
+    const analysts = sb + b + h + s + ss;
+    if (analysts <= 0) return null;
+    // Buy = strongBuy, Outperform = buy, Hold = hold, Sell = sell + strongSell
+    return { buy: sb, outperform: b, hold: h, underperform: 0, sell: s + ss, analysts, source: 'yahoo' };
+  } catch { return null; }
+}
+
 // Liefert { price, target, upside, pe, eps, analysts } für ein Symbol (oder Teilwerte/null).
 export async function enrichStock(symbol) {
   try {

@@ -17,6 +17,7 @@ import { buildNotes, buildNews, buildFactorInsight } from './insight.mjs';
 import { scanAnalystStocks } from './finnhub.mjs';
 import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock, fetchSectorOf, perfBetween } from './prices.mjs';
 import { checkCandidates, discoverNew, verifyNoHold, MIN_BUY_PCT } from './gemini-stocks.mjs';
+import { verifyAcrossSources } from './ratings.mjs';
 import { SEED_CANDIDATES } from './candidates.mjs';
 import { SEED_SECTOR_NOTES, SEED_REGION_NOTES } from './seed-notes.mjs';
 import { loadHistory, saveHistory, snapshotStocks, measureMilestones, pruneHistory, computeFindings } from './history.mjs';
@@ -82,7 +83,7 @@ const today = () => new Date().toISOString().slice(0, 10);
   // Einmalig (REVALIDATE_TAG): alle Gemini-Perlen zur Neuprüfung gegen die feste Quelle
   // (MarketScreener) freigeben -> recheckAt löschen, damit die Re-Validierung sie über die
   // nächsten Läufe neu bewertet und inkonsistente Altdaten (gemischte Quellen) ersetzt/aussortiert.
-  const REVALIDATE_TAG = 'ms-verify-v8';   // strengere Gegenprüfung (sicher=true + 2 Quellen) -> alle neu prüfen
+  const REVALIDATE_TAG = 'multi-source-v9';   // Multi-Quellen-Konsens (stockanalysis+Yahoo+Finnhub) -> alle neu prüfen
   if (purged) console.log(`Bereinigt: ${purged} OTC-Geister-Treffer entfernt.`);
 
   // Kriteriums-Bereinigung: bereits aufgenommene Treffer, die das aktuelle Kauf-%-Kriterium
@@ -252,6 +253,25 @@ const today = () => new Date().toISOString().slice(0, 10);
     } catch (e) { noteGeminiError(e); console.error('Discovery fehlgeschlagen:', e.message); }
   }
 
+  /* Zentrale Verifizierung: Multi-Quellen-Konsens (stockanalysis + Yahoo + Finnhub).
+     Eine Aktie wird nur bestätigt, wenn ALLE Quellen, die sie kennen, übereinstimmend
+     0 Hold/0 Sell zeigen. Widerspricht eine seriöse Quelle -> raus. Gemini-Gegenprüfung
+     nur als LETZTER Fallback, wenn KEINE harte Quelle die Aktie kennt ("im Zweifel raus"). */
+  const verifyStock = async (h) => {
+    const v = await verifyAcrossSources(h.ticker, h.yahoo);
+    if (v.sources.length) {   // mind. eine harte Quelle kannte die Aktie -> deren Urteil zählt
+      return v.ok
+        ? { ok: true, counts: v.counts, analysts: v.analysts, verifiedSource: v.sources.join('+') }
+        : { ok: false, reason: v.reason };
+    }
+    // keine harte Quelle kennt sie -> Geminis Mehrquellen-Gegenprüfung als Fallback
+    if (!GEMINI_KEY || !geminiBudgetLeft()) return { ok: false, reason: 'keine-quelle' };
+    useGemini();
+    const conf = await verifyNoHold(GEMINI_KEY, [h]);
+    return conf.has(String(h.ticker).toUpperCase())
+      ? { ok: true, verifiedSource: 'gemini' } : { ok: false, reason: 'gemini-abgelehnt' };
+  };
+
   /* 2b) Gemini: Kandidaten prüfen (rollierend) ---------------------- */
   if (GEMINI_KEY && heavyDue && geminiBudgetLeft() && candidates.length) {
     useGemini();
@@ -262,18 +282,22 @@ const today = () => new Date().toISOString().slice(0, 10);
       for (let i = 0; i < Math.min(CAND_BUDGET, n); i++) slice.push(candidates[(start + i) % n]);
       scan.candCursor = (start + slice.length) % n;
       const hits = await checkCandidates(GEMINI_KEY, slice);
-      // Stufe 1: nur Treffer mit sauberen MS-Counts kommen in die engere Wahl.
+      // Stufe 1: nur Treffer mit sauberen Counts kommen in die engere Wahl.
       const clean = hits.filter(h => h.ratingCounts && !('strongBuy' in h.ratingCounts) && !h.countsBad);
-      // Stufe 2: UNABHÄNGIGE Gegenprüfung über mehrere Quellen ("im Zweifel raus").
-      // Nur Aktien, die KEINEN Hold/Sell haben, werden tatsächlich Perle.
-      let confirmed = new Set();
-      if (clean.length) { useGemini(); confirmed = await verifyNoHold(GEMINI_KEY, clean); }
+      // Stufe 2: Multi-Quellen-Konsens. "Im Zweifel raus".
       let kept = 0;
       for (const h of clean) {
-        if (!confirmed.has(h.ticker.toUpperCase())) continue;   // Gegenprüfung nicht bestanden -> NICHT aufnehmen
-        db[h.ticker] = { ...db[h.ticker], ...h, verifiedAt: today() }; kept++;
+        const v = await verifyStock(h);
+        if (process.env.GEMINI_DEBUG) console.log(`  [verify] ${h.ticker}: ${v.ok ? 'OK ('+v.verifiedSource+')' : 'raus ('+v.reason+')'}`);
+        if (!v.ok) continue;
+        // bei harten Quellen DEREN exakte Counts/Analysten übernehmen (verlässlicher als Gemini)
+        const merged = v.counts
+          ? { ...h, ratingCounts: v.counts, analysts: v.analysts, outperformPct: Math.round((v.counts.outperform / v.analysts) * 100) }
+          : h;
+        db[h.ticker] = { ...db[h.ticker], ...merged, verifiedAt: today(), verifiedSource: v.verifiedSource };
+        kept++;
       }
-      console.log(`Gemini-Kandidaten: ${slice.length} geprüft, ${clean.length} mit Counts, ${kept} nach Gegenprüfung aufgenommen.`);
+      console.log(`Gemini-Kandidaten: ${slice.length} geprüft, ${clean.length} mit Counts, ${kept} nach Multi-Quellen-Konsens aufgenommen.`);
     } catch (e) { noteGeminiError(e); console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
   }
 
@@ -298,28 +322,28 @@ const today = () => new Date().toISOString().slice(0, 10);
     while (round < ROUNDS && geminiBudgetLeft()) {
       const due = allDue.slice(round * BATCH, round * BATCH + BATCH);
       if (!due.length) break;
-      round++; useGemini();
+      round++;
       try {
-        // Direkte, einzelne Gegenprüfung jeder fälligen Perle (verifyNoHold gibt das
-        // bestätigte Set zurück; intern wird Hold/Sell je Aktie ermittelt).
-        useGemini();
-        const confirmed = await verifyNoHold(GEMINI_KEY, due);
+        // Jede fällige Perle über den Multi-Quellen-Konsens prüfen.
         for (const b of due) {
           if (!db[b.ticker]) continue;
-          if (confirmed.has(b.ticker.toUpperCase())) {
-            // weiterhin 0 Hold/0 Sell bestätigt -> frisch halten, miss zurücksetzen
+          const v = await verifyStock(b);
+          if (v.ok) {
+            // weiterhin auf allen Quellen 0 Hold/0 Sell -> frisch halten, ggf. Counts aktualisieren
+            if (v.counts) { db[b.ticker].ratingCounts = v.counts; db[b.ticker].analysts = v.analysts; }
             db[b.ticker].recheckAt = today(); db[b.ticker].verifiedAt = today(); db[b.ticker].miss = 0;
-          } else {
-            // NICHT bestätigt: kann "Hold gefunden" ODER nur ein leerer/technischer Aussetzer
-            // sein. Nicht sofort löschen (leere Antwort ist kein Hold-Beweis), sondern miss
-            // zählen; erst nach MAX_MISS echten Fehlschlägen raus. recheckAt NICHT setzen,
-            // damit der nächste Lauf es zeitnah erneut versucht.
+          } else if (v.reason === 'keine-quelle') {
+            // KEINE harte Quelle kennt sie + Gemini-Fallback unklar -> nicht sofort löschen
+            // (kein echter Hold-Beweis), miss zählen; erst nach MAX_MISS raus.
             const m = (db[b.ticker].miss || 0) + 1;
             if (m >= MAX_MISS) { delete db[b.ticker]; dropped++; }
             else db[b.ticker].miss = m;
+          } else {
+            // eine seriöse Quelle fand Hold/Sell -> ECHTES Signal, sofort raus.
+            delete db[b.ticker]; dropped++;
           }
+          checked++;
         }
-        checked += due.length;
       } catch (e) { noteGeminiError(e); console.error('Re-Validierung fehlgeschlagen:', e.message); break; }
     }
     if (checked) console.log(`Re-Validierung: ${checked} geprüft (${round} Batches), ${dropped} entfernt, ${Math.max(0, allDue.length - checked)} verbleibend.`);

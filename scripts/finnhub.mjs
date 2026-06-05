@@ -131,3 +131,21 @@ export async function fetchMetric(ticker, key) {
     return { pe: null, eps: null };
   }
 }
+
+/* Aktuelle Analysten-Empfehlungsverteilung (US-Aktien) via Finnhub /stock/recommendation.
+   Skala: strongBuy, buy, hold, sell, strongSell. Rückgabe auf unserer Skala oder null.
+   Key aus FINNHUB_API_KEY (wie der restliche Scan). */
+export async function fetchFinnhubRatings(symbol) {
+  const key = process.env.FINNHUB_API_KEY;
+  if (!key || !symbol) return null;
+  try {
+    const arr = await fh(`/stock/recommendation?symbol=${encodeURIComponent(symbol)}`, key);
+    if (!Array.isArray(arr) || !arr.length) return null;
+    // neuester Eintrag zuerst (Finnhub liefert absteigend nach period)
+    const t = arr[0];
+    const sb = t.strongBuy || 0, b = t.buy || 0, h = t.hold || 0, s = t.sell || 0, ss = t.strongSell || 0;
+    const analysts = sb + b + h + s + ss;
+    if (analysts <= 0) return null;
+    return { buy: sb, outperform: b, hold: h, underperform: 0, sell: s + ss, analysts, source: 'finnhub' };
+  } catch { return null; }
+}
