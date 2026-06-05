@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T10:24:13.509Z",
+  "updatedAt": "2026-06-05T10:38:50.426Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -309,7 +309,6 @@
       "via": "gemini",
       "source": "analysten-konsens",
       "seen": "2026-06-04",
-      "verifiedAt": "2026-06-05",
       "perf6m": -22.99,
       "perf6mAt": "2026-06-04",
       "perf1mBefore": -9.12,
@@ -318,7 +317,8 @@
       "div": 3.69,
       "enrichAt": "2026-06-04",
       "miss": 0,
-      "recheckAt": "2026-06-05"
+      "recheckAt": "2026-06-05",
+      "verifiedAt": "2026-06-05"
     },
     {
       "ticker": "IXX",
@@ -342,14 +342,16 @@
       "via": "gemini",
       "source": "analysten-konsens",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-06-05",
       "perf6m": 16.23,
       "perf6mAt": "2026-06-05",
       "perf1mBefore": -1.76,
       "pe": 36.1,
       "eps": 1.47,
       "div": 1.51,
-      "enrichAt": "2026-06-05"
+      "enrichAt": "2026-06-05",
+      "recheckAt": "2026-06-05",
+      "verifiedAt": "2026-06-05",
+      "miss": 0
     },
     {
       "ticker": "KTN",
@@ -373,7 +375,6 @@
       "via": "gemini",
       "source": "analysten-konsens",
       "seen": "2026-06-04",
-      "verifiedAt": "2026-06-05",
       "perf6m": 3.83,
       "perf6mAt": "2026-06-04",
       "perf1mBefore": 3.54,
@@ -381,8 +382,9 @@
       "eps": 2.09,
       "div": 2.58,
       "enrichAt": "2026-06-04",
+      "miss": 0,
       "recheckAt": "2026-06-05",
-      "miss": 0
+      "verifiedAt": "2026-06-05"
     },
     {
       "ticker": "OCGN",
@@ -406,7 +408,6 @@
       "via": "gemini",
       "source": "analysten-konsens",
       "seen": "2026-06-04",
-      "verifiedAt": "2026-06-05",
       "perf6m": 10.74,
       "perf6mAt": "2026-06-04",
       "perf1mBefore": -10.4,
@@ -414,8 +415,9 @@
       "eps": -0.24,
       "div": 0,
       "enrichAt": "2026-06-04",
+      "miss": 0,
       "recheckAt": "2026-06-05",
-      "miss": 0
+      "verifiedAt": "2026-06-05"
     }
   ],
   "sectorNotes": {
@@ -531,28 +533,28 @@
   "news": {
     "items": [
       {
-        "text": "KI-Ausverkauf: Broadcom-Schock lässt KI-Aktien einbrechen.",
+        "text": "POB AG emittiert Wandelschuldverschreibung für Wachstumsperspektiven.",
         "stamp": "05.06.26"
       },
       {
-        "text": "DAX-FLASH: Wieder schwächer - Gewinnmitnahmen nach Halbleiterrally.",
+        "text": "US-Notenbank Fed: Inflation zu hoch, Zinsen könnten angehoben werden.",
         "stamp": "05.06.26"
       },
       {
-        "text": "SAP-Aktie mit 5% Kurssprung: Startschuss für Trendwende?",
+        "text": "Indiens Zentralbank hält Zinsen wegen Iran-Krise stabil.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Techwerte unter Druck nach KI-Ausblick von Broadcom.",
+        "text": "Chinas Exportwachstum und Inflation im Fokus.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Fed belässt Zinsen unverändert – Marktreaktion bleibt verhalten.",
+        "text": "DAX erwartet moderat, US-Jobdaten und Geopolitik im Blick.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Schwedens Inflation gibt Riksbank Atempause bei Zinsen.",
-        "stamp": "04.06.26"
+        "text": "Himax Technologies Aktie verzeichnet deutlichen Kursrutsch.",
+        "stamp": "05.06.26"
       }
     ],
     "date": "2026-06-05"
@@ -560,8 +562,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 7534,
-    "candCursor": 32,
+    "lastCursor": 7834,
+    "candCursor": 40,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "Kontron AG (KTN.DE)",
@@ -794,46 +796,58 @@
       "Rithm Capital Corp.",
       "Firstsun Capital Bancorp",
       "AirBoss of America Corp.",
-      "Syarikat Takaful Malaysia Keluarga Berhad"
+      "Syarikat Takaful Malaysia Keluarga Berhad",
+      "All for One Group SE",
+      "Kontron AG",
+      "Ocugen, Inc.",
+      "SECO S.p.A.",
+      "LU-VE S.p.A.",
+      "Orsero S.p.A.",
+      "Wiit S.p.A.",
+      "Fine Foods & Pharmaceuticals N.T.M. S.p.A.",
+      "Generalfinance S.p.A.",
+      "Next Geosolutions S.p.A.",
+      "SIT S.p.A.",
+      "Zignago Vetro S.p.A."
     ],
     "noteCursor": 9,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 430,
-      "cons_def": 227,
-      "materials": 287,
-      "health": 1183,
-      "finance": 866,
-      "energy": 400,
-      "hardware": 273,
-      "software": 828,
-      "industrial": 358,
-      "utilities": 157,
-      "comm": 175,
-      "ai_semi": 165,
+      "cons_cycl": 435,
+      "cons_def": 229,
+      "materials": 295,
+      "health": 1206,
+      "finance": 879,
+      "energy": 409,
+      "hardware": 277,
+      "software": 842,
+      "industrial": 367,
+      "utilities": 159,
+      "comm": 180,
+      "ai_semi": 167,
       "realestate": 81
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 430,
-      "cons_def": 227,
-      "materials": 287,
-      "health": 1184,
-      "finance": 866,
-      "energy": 400,
-      "hardware": 274,
-      "software": 831,
-      "industrial": 359,
-      "utilities": 157,
-      "comm": 175,
-      "ai_semi": 165,
+      "cons_cycl": 435,
+      "cons_def": 229,
+      "materials": 295,
+      "health": 1207,
+      "finance": 879,
+      "energy": 409,
+      "hardware": 278,
+      "software": 844,
+      "industrial": 367,
+      "utilities": 159,
+      "comm": 180,
+      "ai_semi": 167,
       "realestate": 81
     },
-    "heavyAt": "2026-06-05T10:21:30.910Z",
-    "revalidateTag": "ms-verify-v7",
+    "heavyAt": "2026-06-05T10:27:41.983Z",
+    "revalidateTag": "ms-verify-v8",
     "fmpRetryTag": "grades-summary-fix"
   },
   "blacklist": {
