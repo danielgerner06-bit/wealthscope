@@ -251,12 +251,13 @@
     const scInv = (v, lo, hi) => v == null ? null : 1 - Math.max(0, Math.min(1, (v - lo) / (hi - lo)));
     const hsl = s => s == null ? '#cbd5e1' : 'hsl(' + Math.round(s * 130) + ',78%,60%)';
 
-    // Kopf-Badges: Sektor + Region + Quelle der Ratings
+    // Kopf-Badges: Sektor + Region + Quelle der Ratings + Aufnahmedatum (platzsparend)
     const region = regionName(st.region || regionOfSym(st.yahoo || st.ticker));
     document.getElementById('stkModalBadges').innerHTML =
       '<span class="stk-badge" style="border-color:' + sec.color + '55;color:' + sec.color + '">' + sec.name + '</span>' +
       '<span class="stk-badge">' + region + '</span>' +
-      '<span class="stk-badge stk-badge-src">' + ratingSrcLabel(st) + '</span>';
+      '<span class="stk-badge stk-badge-src">' + ratingSrcLabel(st) + '</span>' +
+      (st.seen ? '<span class="stk-badge" title="Aufnahmedatum">seit ' + seenStr + '</span>' : '');
 
     // 3 große Highlight-Kacheln (die wichtigsten Zahlen, ring-gefärbt)
     const hero = [
@@ -279,32 +280,15 @@
       { lbl: '1M vor Aufn.', val: pct(st.perf1mBefore), s: sc(st.perf1mBefore, -20, 30) },
       // Aktien-PSI: Analysten-Gunst relativ zur Kursposition der AKTIE (×1000), hoch = Aufholpotenzial
       { lbl: 'Ψ Aktie', val: st.aktienPsi == null ? '–' : fmtSmall(st.aktienPsi * 1000), s: sc(st.aktienPsi, 0, 0.05) },
-      { lbl: 'Gefunden', val: seenStr, s: null },
     ];
     document.getElementById('stkModalStats').innerHTML = stats.map(t =>
       '<div class="stk-stat"><div class="stk-stat-val" style="color:' + hsl(t.s) + '">' + t.val + '</div>' +
       '<div class="stk-stat-lbl">' + t.lbl + '</div></div>').join('');
 
-    // rohe Analysten-Verteilung (volle Transparenz). Skala: Strong Buy / Buy / Hold / Sell.
-    // Strong Buy = das extremere Kauf-Level zu Buy. Feld buy = Strong Buy, outperform = Buy.
-    const rc = st.ratingCounts;
+    // Counts-Verteilungs-Feld entfernt (es machte das Popup zu lang/scrollbar). Die
+    // Strong-Buy/Buy-Werte stehen bereits oben in den Hero-Kacheln; die Quelle im Badge.
     const cntsEl = document.getElementById('stkModalCounts');
-    if (rc && !('strongBuy' in rc) && (rc.buy || rc.outperform || rc.hold || rc.underperform || rc.sell)) {
-      const parts = [];
-      if (rc.buy) parts.push('<b style="color:#34d399">' + rc.buy + '</b> Strong&nbsp;Buy');
-      if (rc.outperform) parts.push('<b style="color:#86efac">' + rc.outperform + '</b> Buy');
-      if (rc.hold) parts.push('<b style="color:#fbbf24">' + rc.hold + '</b> Hold');
-      if (rc.underperform) parts.push('<b style="color:#fb923c">' + rc.underperform + '</b> Underperform');
-      if (rc.sell) parts.push('<b style="color:#f87171">' + rc.sell + '</b> Sell');
-      // genaue Quelle(n) auf denen geprüft wurde, platzsparend (z.B. "stockanalysis · yahoo")
-      const srcMap = { stockanalysis: 'stockanalysis', yahoo: 'Yahoo', finnhub: 'Finnhub', gemini: 'KI-Recherche' };
-      let src;
-      if (st.via === 'finnhub') src = 'Finnhub';
-      else if (st.verifiedSource) src = st.verifiedSource.split('+').map(s => srcMap[s] || s).join(' · ');
-      else src = 'Analysten-Konsens';
-      cntsEl.innerHTML = parts.join(' · ') + ' <span class="stk-csrc">(' + src + ')</span>';
-      cntsEl.hidden = false;
-    } else { cntsEl.hidden = true; }
+    if (cntsEl) cntsEl.hidden = true;
 
     // KEIN Nachschau-Link mehr: Die von Gemini gelieferten MarketScreener-IDs waren
     // nicht verlässlich (führten zur Startseite). Statt eines toten Links verlassen wir
