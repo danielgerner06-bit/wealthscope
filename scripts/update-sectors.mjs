@@ -274,35 +274,69 @@ const today = () => new Date().toISOString().slice(0, 10);
       ? { ok: true, verifiedSource: 'gemini' } : { ok: false, reason: 'gemini-abgelehnt' };
   };
 
-  /* 2b) Gemini: Kandidaten prüfen (rollierend) ---------------------- */
-  if (GEMINI_KEY && heavyDue && geminiBudgetLeft() && candidates.length) {
-    useGemini();
+  // Firmenname auf Vergleichskern reduzieren (für Meta-Zuordnung Gemini <-> Kandidat).
+  const nameKeyOf = s => String(s || '').toLowerCase()
+    .replace(/\b(se|ag|nv|sa|corp|corporation|inc|incorporated|ltd|limited|plc|co|kgaa|group|holding|holdings|company|the)\b/g, '')
+    .replace(/[^a-z0-9]/g, '');
+
+  /* 2b) Kandidaten prüfen (rollierend) ----------------------------------
+     Gemini liefert NUR Metadaten (Ticker/Name/Sektor/Yahoo-Symbol). Die eigentliche
+     Aufnahme-Entscheidung trifft IMMER der Multi-Quellen-Konsens (stockanalysis/Yahoo/
+     Finnhub) — auch wenn Gemini gerade ausfällt (503). So hängt keine echte Perle an
+     Geminis Verfügbarkeit. Gemini-Counts dienen nur als Fallback, falls keine harte
+     Quelle die Aktie kennt. */
+  if (heavyDue && candidates.length) {
     try {
       const n = candidates.length;
       const start = (scan.candCursor || 0) % n;
       const slice = [];
       for (let i = 0; i < Math.min(CAND_BUDGET, n); i++) slice.push(candidates[(start + i) % n]);
       scan.candCursor = (start + slice.length) % n;
-      const hits = await checkCandidates(GEMINI_KEY, slice);
-      // Stufe 1: nur Treffer mit sauberen Counts kommen in die engere Wahl.
-      const clean = hits.filter(h => h.ratingCounts && !('strongBuy' in h.ratingCounts) && !h.countsBad);
-      // Stufe 2: Multi-Quellen-Konsens. "Im Zweifel raus".
-      let kept = 0;
-      for (const h of clean) {
-        const v = await verifyStock(h);
-        if (process.env.GEMINI_DEBUG) console.log(`  [verify] ${h.ticker}: ${v.ok ? 'OK ('+v.verifiedSource+')' : 'raus ('+v.reason+')'}`);
+
+      // Gemini-Metadaten (Sektor/Yahoo/Name) holen — optional, scheitert bei 503 still.
+      let hits = [];
+      if (GEMINI_KEY && geminiBudgetLeft()) {
+        useGemini();
+        try { hits = await checkCandidates(GEMINI_KEY, slice); }
+        catch (e) { noteGeminiError(e); console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
+      }
+      const byKey = {};
+      hits.forEach(h => { byKey[nameKeyOf(h.name)] = h; if (h.ticker) byKey[h.ticker.toUpperCase()] = h; });
+
+      // Aus jedem Kandidaten-String Name + (Ticker) ziehen.
+      let kept = 0, tried = 0;
+      for (const cand of slice) {
+        const m = cand.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+        const name = (m ? m[1] : cand).trim();
+        const ticker = (m ? m[2] : '').trim().toUpperCase();
+        const meta = byKey[ticker] || byKey[nameKeyOf(name)] || {};
+        const yahoo = meta.yahoo || (/\.[A-Z]+$/.test(ticker) ? ticker : null);
+        const probe = { ticker: meta.ticker || ticker || name, name, yahoo, sector: meta.sector,
+                        ratingCounts: meta.ratingCounts, countsBad: meta.countsBad };
+        if (!probe.ticker) continue;
+        tried++;
+        const v = await verifyStock(probe);
+        if (process.env.GEMINI_DEBUG) console.log(`  [verify] ${probe.ticker}: ${v.ok ? 'OK ('+v.verifiedSource+')' : 'raus ('+v.reason+')'}`);
         if (!v.ok) continue;
-        // bei harten Quellen DEREN exakte Counts/Analysten übernehmen (verlässlicher als Gemini).
-        // strongBuyPct = Anteil "Strong Buy" (= extremeres Kauflevel; counts.buy ist Strong Buy).
-        const merged = v.counts
-          ? { ...h, ratingCounts: v.counts, analysts: v.analysts,
-              strongBuyPct: Math.round((v.counts.buy / v.analysts) * 100) }
-          : h;
-        db[h.ticker] = { ...db[h.ticker], ...merged, verifiedAt: today(), verifiedSource: v.verifiedSource };
+        // Sektor sicherstellen (für Anzeige/Trefferquote) — aus Gemini-Meta oder via Yahoo.
+        let sector = meta.sector;
+        if (!sector && yahoo) { const info = await fetchSectorOf(yahoo); sector = info ? sectorForFinnhub(info.industry || info.sector) : null; }
+        if (!sector) continue;   // ohne Sektor nicht aufnehmen
+        const counts = v.counts || meta.ratingCounts;
+        const analysts = v.analysts ?? meta.analysts;
+        db[probe.ticker] = {
+          ...db[probe.ticker],
+          ticker: probe.ticker, name, yahoo, sector,
+          buyPct: 100, ratingCounts: counts, analysts,
+          strongBuyPct: counts ? Math.round((counts.buy / analysts) * 100) : null,
+          via: 'gemini', source: v.verifiedSource,
+          verifiedAt: today(), verifiedSource: v.verifiedSource,
+          seen: db[probe.ticker]?.seen || today(),
+        };
         kept++;
       }
-      console.log(`Gemini-Kandidaten: ${slice.length} geprüft, ${clean.length} mit Counts, ${kept} nach Multi-Quellen-Konsens aufgenommen.`);
-    } catch (e) { noteGeminiError(e); console.error('Gemini-Kandidatencheck fehlgeschlagen:', e.message); }
+      console.log(`Kandidaten: ${slice.length} im Slice, ${tried} geprüft, ${kept} nach Multi-Quellen-Konsens aufgenommen.`);
+    } catch (e) { console.error('Kandidatenprüfung fehlgeschlagen:', e.message); }
   }
 
   /* 2b2) Bestehende Gemini-Perlen RE-VALIDIEREN — nur 1× pro WOCHE je Perle.
