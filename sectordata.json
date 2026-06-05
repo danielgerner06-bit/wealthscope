@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T10:00:21.476Z",
+  "updatedAt": "2026-06-05T10:21:01.025Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -348,7 +348,38 @@
       "eps": 1.13,
       "div": 3.69,
       "enrichAt": "2026-06-04",
-      "miss": 1
+      "miss": 2
+    },
+    {
+      "ticker": "IXX",
+      "name": "Init Innovation in Traffic Systems SE",
+      "sector": "software",
+      "buyPct": 100,
+      "outperformPct": 0,
+      "analysts": 2,
+      "upside": 26,
+      "yahoo": "IXX.DE",
+      "peGemini": 22.6,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "analysten-konsens",
+      "ratingUrl": null,
+      "via": "gemini",
+      "source": "analysten-konsens",
+      "seen": "2026-06-05",
+      "verifiedAt": "2026-06-05",
+      "perf6m": 16.23,
+      "perf6mAt": "2026-06-05",
+      "perf1mBefore": -1.76,
+      "pe": 36.1,
+      "eps": 1.47,
+      "div": 1.51,
+      "enrichAt": "2026-06-05"
     },
     {
       "ticker": "KTN",
@@ -382,37 +413,6 @@
       "enrichAt": "2026-06-04",
       "recheckAt": "2026-06-05",
       "miss": 0
-    },
-    {
-      "ticker": "IXX",
-      "name": "Init Innovation in Traffic Systems SE",
-      "sector": "software",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 2,
-      "upside": 26,
-      "yahoo": "IXX.DE",
-      "peGemini": 22.6,
-      "ratingCounts": {
-        "buy": 2,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "analysten-konsens",
-      "ratingUrl": null,
-      "via": "gemini",
-      "source": "analysten-konsens",
-      "seen": "2026-06-05",
-      "verifiedAt": "2026-06-05",
-      "perf6m": 16.23,
-      "perf6mAt": "2026-06-05",
-      "perf1mBefore": -1.76,
-      "pe": 36.1,
-      "eps": 1.47,
-      "div": 1.51,
-      "enrichAt": "2026-06-05"
     },
     {
       "ticker": "TPE",
@@ -594,28 +594,28 @@
   "news": {
     "items": [
       {
-        "text": "US-Börsen schwanken zwischen Politik und KI-Euphorie.",
+        "text": "Broadcom-Schock: KI-Aktien brechen in Asien ein, Sorge vor Platzen der KI-Blase.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Dax niedriger erwartet wegen US-Daten und Geopolitik.",
+        "text": "US-Regierung führt erste Gespräche über Staatsbeteiligungen an KI-Unternehmen.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Ackman baut Portfolio um: Milliarden-Einstieg bei Microsoft.",
+        "text": "Fitch senkt globale Wachstumsprognose, erhöht Ölpreis-Ausblick.",
         "stamp": "05.06.26"
       },
       {
-        "text": "US-Militär verbannt China-Wolfram: Profitiert Western Star?",
+        "text": "Iran-Krieg beeinflusst Lebensmittelpreise und birgt Unsicherheiten für Ölmarkt.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Russlands Präsident Putin spricht auf Wirtschaftsforum.",
-        "stamp": "05.06.26"
+        "text": "DAX und S&P 500 im Plus, Techwerte nach Broadcom-Ausblick unter Druck.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "US versteigert Bohrrechte in arktischem Naturschutzgebiet.",
-        "stamp": "05.06.26"
+        "text": "SAP-Aktie mit Kurssprung: Ist das der Startschuss für eine Trendwende?",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-05"
@@ -623,8 +623,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 6934,
-    "candCursor": 16,
+    "lastCursor": 7234,
+    "candCursor": 24,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "Kontron AG (KTN.DE)",
@@ -852,48 +852,50 @@
       "Napco Security Technologies, Inc.",
       "Talos Energy Inc.",
       "Northern Oil and Gas, Inc.",
-      "Patterson-UTI Energy, Inc."
+      "Patterson-UTI Energy, Inc.",
+      "Southwest Gas Holdings Inc.",
+      "Rithm Capital Corp.",
+      "Firstsun Capital Bancorp",
+      "AirBoss of America Corp.",
+      "Syarikat Takaful Malaysia Keluarga Berhad"
     ],
     "noteCursor": 9,
-    "focusCursor": 7,
+    "focusCursor": 0,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 418,
-      "cons_def": 216,
-      "materials": 280,
-      "health": 1148,
-      "finance": 843,
-      "energy": 385,
-      "hardware": 266,
-      "software": 802,
-      "industrial": 351,
+      "cons_cycl": 424,
+      "cons_def": 223,
+      "materials": 286,
+      "health": 1168,
+      "finance": 856,
+      "energy": 394,
+      "hardware": 269,
+      "software": 813,
+      "industrial": 355,
       "utilities": 153,
-      "comm": 169,
-      "ai_semi": 160,
-      "realestate": 76
+      "comm": 173,
+      "ai_semi": 164,
+      "realestate": 80
     },
-    "pendingReject": [
-      "SD",
-      "SDA"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 418,
-      "cons_def": 216,
-      "materials": 280,
-      "health": 1149,
-      "finance": 843,
-      "energy": 385,
-      "hardware": 267,
-      "software": 805,
-      "industrial": 352,
+      "cons_cycl": 424,
+      "cons_def": 223,
+      "materials": 286,
+      "health": 1169,
+      "finance": 856,
+      "energy": 394,
+      "hardware": 270,
+      "software": 816,
+      "industrial": 356,
       "utilities": 153,
-      "comm": 169,
-      "ai_semi": 160,
-      "realestate": 76
+      "comm": 173,
+      "ai_semi": 164,
+      "realestate": 80
     },
-    "heavyAt": "2026-06-05T08:32:57.643Z",
+    "heavyAt": "2026-06-05T10:14:45.035Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -902,6 +904,5 @@
     "SOGN.SW": "2026-09-04",
     "VOW3.DE": "2026-09-04",
     "HEI.DE": "2026-09-04"
-  },
-  "yahooAt": "2026-06-05T10:00:21.476Z"
+  }
 }
