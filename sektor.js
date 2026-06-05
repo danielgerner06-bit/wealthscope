@@ -468,10 +468,12 @@
     const rows = Object.keys(counts).map(id => ({ id, n: counts[id] })).sort((a, b) => b.n - a.n);
     const max = rows.length ? rows[0].n : 1;
 
-    // 30T-Kursperformance je Sektor + Spanne (für relPos / Value-Score)
+    // 30T-Kursperformance je Sektor + Spanne (für relPos / Ψ). Spanne über ALLE Sektoren
+    // (nicht nur die mit Perlen) — IDENTISCH zur Pipeline, damit der Ψ hier exakt dem
+    // sektorPsi im Aktien-Popup entspricht (sonst zwei verschiedene Werte für denselben Sektor).
     const perfMap = {};
     (DATA.bars30 || []).forEach(b => { perfMap[b.id] = b.perf; });
-    const perfs = rows.map(r => perfMap[r.id]).filter(v => v != null);
+    const perfs = (DATA.bars30 || []).map(b => b.perf).filter(v => v != null);
     const perfMin = perfs.length ? Math.min(...perfs) : 0;
     const perfMax = perfs.length ? Math.max(...perfs) : 1;
     const perfSpan = (perfMax - perfMin) || 1;
