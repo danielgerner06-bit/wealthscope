@@ -642,14 +642,14 @@
         <button class="sek-modal-x" data-close aria-label="Schließen">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
-        <h3 id="psiInfoTitle" class="psi-info-title">Ψ Aktie · Psi-Wert</h3>
+        <h3 id="psiInfoTitle" class="psi-info-title">Ψ Sektor · Psi-Wert</h3>
         <p class="psi-info-desc">
-          Der Psi-Wert misst die <b>Analysten-Gunst relativ zur Kursposition</b> der Aktie:
-          hoch = viele Kaufempfehlungen, obwohl der Kurs zuletzt zurückblieb → <b>Aufholpotenzial</b>.
+          Der Psi-Wert misst die <b>Analysten-Gunst relativ zur Kursposition des Sektors</b>:
+          hoch = viele Perlen im Sektor, obwohl dieser zuletzt zurückblieb → <b>Aufholpotenzial</b>.
         </p>
-        <div class="psi-info-formula">Ψ = Trefferquote(Sektor) ÷ relative&nbsp;30-Tage-Kursposition&nbsp;der&nbsp;Aktie</div>
+        <div class="psi-info-formula">Ψ = Trefferquote(Sektor) ÷ relative&nbsp;30-Tage-Kursposition&nbsp;des&nbsp;Sektors</div>
         <p class="psi-info-sub">Verteilung aller je gefundenen echten Perlen — wo liegt dieser Wert?</p>
-        <canvas id="psiInfoChart" height="170"></canvas>
+        <div class="psi-chart-wrap"><canvas id="psiInfoChart"></canvas></div>
         <div class="psi-info-marker" id="psiInfoMarker"></div>
       </div>
     </div>
