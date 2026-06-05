@@ -324,14 +324,16 @@ const today = () => new Date().toISOString().slice(0, 10);
         if (process.env.GEMINI_DEBUG) console.log(`  [verify] ${probe.ticker}: ${v.ok ? 'OK ('+v.verifiedSource+')' : 'raus ('+v.reason+')'}`);
         if (!v.ok) continue;
         // Sektor sicherstellen (für Anzeige/Trefferquote) — aus Gemini-Meta oder via Yahoo.
+        // Bei US-Tickern (kein Suffix) ist der Ticker selbst das Yahoo-Symbol.
         let sector = meta.sector;
-        if (!sector && yahoo) { const info = await fetchSectorOf(yahoo); sector = info ? sectorForFinnhub(info.industry || info.sector) : null; }
+        const symForSector = yahoo || (/^[A-Z]{1,5}$/.test(ticker) ? ticker : null);
+        if (!sector && symForSector) { const info = await fetchSectorOf(symForSector); sector = info ? sectorForFinnhub(info.industry || info.sector) : null; }
         if (!sector) continue;   // ohne Sektor nicht aufnehmen
         const counts = v.counts || meta.ratingCounts;
         const analysts = v.analysts ?? meta.analysts;
         db[probe.ticker] = {
           ...db[probe.ticker],
-          ticker: probe.ticker, name, yahoo, sector,
+          ticker: probe.ticker, name, yahoo: yahoo || symForSector || null, sector,
           buyPct: 100, ratingCounts: counts, analysts,
           strongBuyPct: counts ? Math.round((counts.buy / analysts) * 100) : null,
           via: 'gemini', source: v.verifiedSource,
