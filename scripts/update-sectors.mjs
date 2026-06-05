@@ -99,24 +99,27 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
   if (belowCut) console.log(`Bereinigt: ${belowCut} Treffer unter ${MIN_BUY_PCT}% Kauf entfernt.`);
 
-  // Bereinigung (am Anfang UND am Ende): entfernt Gemini-Perlen, die den strengen MS-Ablauf
-  // NICHT (mehr) erfüllen — inkonsistente Counts ODER (nach mind. 1 Re-Validierungs-Versuch)
-  // weiterhin ohne gültige MS-Counts + /consensus/-Link. So bleibt nur, was den Ablauf besteht.
+  // WOCHEN-LÖSCHSCHUTZ: eine in den letzten 7 Tagen bestätigte Perle ist geschützt und darf
+  // von KEINER Bereinigung/keinem Reset entfernt werden. So gehen einmal echt bestätigte
+  // Perlen nie durch einen Gemini-Aussetzer/Reset still verloren. Entfernt werden sie nur
+  // durch einen AKTIVEN Hold-Fund in der Re-Validierung (nach Ablauf der Schutzwoche).
+  const PROTECT_MS = 7 * 86400000;
+  const isProtected = s => s.verifiedAt && (nowMs - Date.parse(s.verifiedAt)) < PROTECT_MS;
+
+  // Bereinigung (am Anfang UND am Ende): entfernt nur Gemini-Perlen, deren COUNTS SELBST
+  // das Kriterium verletzen (Hold/Sell>0 oder inkonsistent) ODER die gar keine Counts haben.
   const cleanInconsistent = (label) => {
     let nInc = 0, nNo = 0;
     for (const tk of Object.keys(db)) {
       const s = db[tk];
       if (!(s.via && s.via.startsWith('gemini'))) continue;
+      if (isProtected(s)) continue;        // Wochen-Löschschutz: bestätigte Perle bleibt
       const c = s.ratingCounts;
       const cleanCounts = c && !('strongBuy' in c);
       if (cleanCounts) {
         const sum = (c.buy || 0) + (c.outperform || 0) + (c.hold || 0) + (c.underperform || 0) + (c.sell || 0);
         // NUR löschen, wenn die Counts SELBST das Kriterium verletzen: inkonsistent
         // (analysts != Summe) ODER irgendein Hold/Underperform/Sell > 0.
-        // WICHTIG: fehlendes verifiedAt ist KEIN Löschgrund mehr — saubere Counts (0 Hold)
-        // bedeuten bereits "erfüllt 100%". Eine Perle wird erst entfernt, wenn die
-        // Re-Validierung sie AKTIV widerlegt (sonst gingen bei einem Gemini-Aussetzer/
-        // recheckAt-Reset alle echten Perlen still verloren — der "Ocugen-Bug").
         if ((s.analysts && sum > 0 && s.analysts !== sum) || c.hold || c.underperform || c.sell) {
           if (process.env.GEMINI_DEBUG && /OCGN|KTN|A1OS/i.test(tk)) console.log(`[DEL ${label} inkons] ${tk} analysts=${s.analysts} sum=${sum} hold=${c.hold} sell=${c.sell}`);
           delete db[tk]; nInc++;
@@ -146,15 +149,16 @@ const today = () => new Date().toISOString().slice(0, 10);
   if (scan.revalidateTag !== REVALIDATE_TAG) {
     let freed = 0;
     for (const s of Object.values(db)) if (s.via && s.via.startsWith('gemini')) {
-      if (s.recheckAt) { delete s.recheckAt; }
-      delete s.verifiedAt;                                   // erzwingt erneute Gegenprüfung
-      // altes strongBuy-Format ist kein gültiger MS-Count -> verwerfen (wird neu ermittelt)
+      if (s.recheckAt) { delete s.recheckAt; }   // recheckAt weg -> Re-Validierung wird fällig
+      // verifiedAt NICHT löschen: der Wochen-Löschschutz bleibt erhalten, sonst würden alle
+      // bestätigten Perlen beim Tag-Wechsel ungeschützt und könnten still verschwinden.
+      // altes strongBuy-Format ist kein gültiger Count -> verwerfen (wird neu ermittelt)
       if (s.ratingCounts && ('strongBuy' in s.ratingCounts)) delete s.ratingCounts;
       if (s.name && !candidates.includes(s.name)) candidates.push(s.name);   // Name sichern -> später erneut prüfbar
       freed++;
     }
     scan.revalidateTag = REVALIDATE_TAG;
-    if (freed) console.log(`Re-Validierung freigegeben: ${freed} Gemini-Perlen werden unabhängig gegengeprüft.`);
+    if (freed) console.log(`Re-Validierung freigegeben: ${freed} Gemini-Perlen werden neu gegengeprüft (Schutz bleibt).`);
   }
 
   // Takt-Trennung: Yahoo-Daten (Kurse/Performance, kein Limit) laufen JEDEN Lauf (stündlich).
@@ -333,13 +337,15 @@ const today = () => new Date().toISOString().slice(0, 10);
             if (v.counts) { db[b.ticker].ratingCounts = v.counts; db[b.ticker].analysts = v.analysts; }
             db[b.ticker].recheckAt = today(); db[b.ticker].verifiedAt = today(); db[b.ticker].miss = 0;
           } else if (v.reason === 'keine-quelle') {
-            // KEINE harte Quelle kennt sie + Gemini-Fallback unklar -> nicht sofort löschen
-            // (kein echter Hold-Beweis), miss zählen; erst nach MAX_MISS raus.
+            // KEINE harte Quelle kennt sie + Gemini-Fallback unklar -> KEIN Hold-Beweis.
+            // miss nur zählen; geschützte Perlen (in der Schutzwoche bestätigt) NIE löschen,
+            // sonst gingen sie bei einem reinen Quellen-Aussetzer verloren.
             const m = (db[b.ticker].miss || 0) + 1;
-            if (m >= MAX_MISS) { delete db[b.ticker]; dropped++; }
+            if (m >= MAX_MISS && !isProtected(db[b.ticker])) { delete db[b.ticker]; dropped++; }
             else db[b.ticker].miss = m;
           } else {
-            // eine seriöse Quelle fand Hold/Sell -> ECHTES Signal, sofort raus.
+            // eine seriöse Quelle fand AKTIV Hold/Sell -> ECHTES Signal, raus (auch geschützte:
+            // ein belegter Hold ist ein echter Grund, anders als ein Aussetzer).
             delete db[b.ticker]; dropped++;
           }
           checked++;
