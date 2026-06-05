@@ -5954,7 +5954,7 @@
       "sector": "hardware",
       "region": "europe",
       "buyPct": 100,
-      "outperformPct": 0,
+      "outperformPct": null,
       "upside": 25,
       "pe": 11.2,
       "perf6mAtAdd": 6.64,
@@ -6364,7 +6364,8 @@
       "seen": "2026-06-05",
       "seenMs": 1780617600000,
       "startPrice": 80.36249923706055,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
