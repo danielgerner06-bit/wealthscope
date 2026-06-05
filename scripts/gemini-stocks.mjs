@@ -215,23 +215,34 @@ export async function verifyNoHold(key, stocks) {
   const confirmed = new Set();
   // EINZELN prüfen (1 Aktie/Call): kurzer Prompt + simples Output -> zuverlässige Antwort.
   for (const s of stocks) {
-    const prompt = `Zähle die Empfehlungen ECHTER Sell-Side-Analysten (von Investmentbanken/Brokern wie Goldman Sachs, Morgan Stanley, Oppenheimer, Berenberg, Canaccord usw.) für die Aktie ${s.name} (${s.ticker}).
-Nutze MarketScreener "Analyst Consensus Detail" und TipRanks "Forecast" (die zählen nur echte Analysten).
-IGNORIERE algorithmische/quantitative Rating-Dienste — diese sind KEINE Analysten und dürfen NICHT mitgezählt werden:
-Weiss Ratings, Wall Street Zen, Zacks Rank, StockInvest, Argus (quant), TipRanks Smart Score, Barchart Opinion, Marketbeat-eigene Scores.
-Frage: Wie viele ECHTE Analysten bewerten mit Hold/Neutral, wie viele mit Sell/Underperform?
-Antworte NUR mit einer Zeile JSON: {"hold": <Zahl>, "sell": <Zahl>, "quellen": <Anzahl geprüfter Quellen>}`;
+    const prompt = `Prüfe die Analysten-Empfehlungen für die Aktie ${s.name} (${s.ticker}).
+Zähle NUR ECHTE Sell-Side-Analysten von Investmentbanken/Brokern (z.B. Goldman Sachs, Morgan Stanley,
+Oppenheimer, Berenberg, Canaccord, Hauck Aufhäuser, Warburg). IGNORIERE algorithmische Rating-Dienste
+(Weiss Ratings, Wall Street Zen, Zacks Rank, StockInvest, Argus quant, TipRanks Smart Score, Barchart Opinion).
+
+Schau auf MINDESTENS ZWEI unabhängige Quellen (MarketScreener "Analyst Consensus Detail", TipRanks
+"Forecast", Investing.com, Yahoo Finance). Lies die Verteilung als TEXT.
+
+Zähle besonders sorgfältig die Hold/Neutral- und Sell/Underperform-Empfehlungen — übersieh KEINE.
+
+Antworte NUR mit einer Zeile JSON:
+{"buy": <Zahl>, "hold": <Zahl>, "sell": <Zahl>, "quellen": <Anzahl unabhängiger Quellen>, "sicher": <true nur wenn du dir über mehrere übereinstimmende Quellen ganz sicher bist, sonst false>}`;
     let o;
     try { const { text } = await groundedJSON(key, prompt); o = extractJSON(text); }
     catch { o = null; }
     if (Array.isArray(o)) o = o[0];
     if (!o) continue;                                    // keine Antwort -> nicht bestätigen (im Zweifel raus)
     const hold = Number(o.hold), sell = Number(o.sell), src = Number(o.quellen);
-    // bestätigt nur, wenn klar 0 Hold UND 0 Sell aus mind. 1 geprüften Quelle.
-    if (isFinite(hold) && hold === 0 && isFinite(sell) && sell === 0 && (!isFinite(src) || src >= 1)) {
-      confirmed.add(String(s.ticker).toUpperCase());
-    }
-    if (process.env.GEMINI_DEBUG) console.log(`  [verifyNoHold] ${s.ticker}: hold=${o.hold} sell=${o.sell} -> ${confirmed.has(String(s.ticker).toUpperCase()) ? 'BESTÄTIGT' : 'abgelehnt'}`);
+    // STRENG bestätigen — "unsicher = raus":
+    //  • Gemini muss explizit sicher=true melden,
+    //  • 0 Hold UND 0 Sell,
+    //  • mindestens 2 unabhängige Quellen geprüft (eine einzelne übersieht oft Holds).
+    const ok = o.sicher === true
+      && isFinite(hold) && hold === 0
+      && isFinite(sell) && sell === 0
+      && isFinite(src) && src >= 2;
+    if (ok) confirmed.add(String(s.ticker).toUpperCase());
+    if (process.env.GEMINI_DEBUG) console.log(`  [verifyNoHold] ${s.ticker}: hold=${o.hold} sell=${o.sell} quellen=${o.quellen} sicher=${o.sicher} -> ${ok ? 'BESTÄTIGT' : 'abgelehnt'}`);
   }
   return confirmed;
 }
