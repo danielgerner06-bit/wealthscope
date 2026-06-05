@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T10:24:05.427Z",
+  "updatedAt": "2026-06-05T10:24:13.509Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -379,39 +379,6 @@
       "pe": 11.2,
       "eps": 2.09,
       "div": 2.58,
-      "enrichAt": "2026-06-04",
-      "recheckAt": "2026-06-05",
-      "miss": 0
-    },
-    {
-      "ticker": "TPE",
-      "name": "PVA TePla AG",
-      "sector": "industrial",
-      "buyPct": 100,
-      "outperformPct": 0,
-      "analysts": 3,
-      "upside": 4,
-      "yahoo": "TPE.DE",
-      "peGemini": 26.4,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "analysten-konsens",
-      "ratingUrl": "https://www.marketscreener.com/quote/stock/PVA-TEPLA-AG-692305/consensus/",
-      "via": "gemini",
-      "source": "analysten-konsens",
-      "seen": "2026-06-04",
-      "verifiedAt": "2026-06-05",
-      "perf6m": 86.12,
-      "perf6mAt": "2026-06-04",
-      "perf1mBefore": 14.2,
-      "pe": 425,
-      "eps": 0.1,
-      "div": 0,
       "enrichAt": "2026-06-04",
       "recheckAt": "2026-06-05",
       "miss": 0
@@ -873,6 +840,7 @@
     "SOGN.SW": "2026-09-04",
     "VOW3.DE": "2026-09-04",
     "HEI.DE": "2026-09-04",
-    "AOF": "2026-09-05"
+    "AOF": "2026-09-05",
+    "TPE": "2026-09-05"
   }
 }
