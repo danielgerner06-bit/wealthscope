@@ -564,23 +564,27 @@
   "news": {
     "items": [
       {
-        "text": "EZB vor Zinsentscheid: Inflation steigt, Zinserhöhung wahrscheinlich",
+        "text": "Broadcom zeigt neues Problem der KI-Aktien; Porsche fliegt aus DAX.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Börse: Tech-Aktien unter Druck nach Broadcom-Ausblick",
+        "text": "DAX erwartet leichter Start; Anleger nehmen Gewinne mit.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Deutsche Wirtschaft schrumpft unerwartet im ersten Quartal",
+        "text": "Eurozone schrumpft überraschend - Schwache Daten aus Irland.",
         "stamp": "05.06.26"
       },
       {
-        "text": "KI verändert Arbeitsmarkt: Chancen und Risiken für Junior-Jobs",
+        "text": "Lululemon-Aktie sackt zweistellig ab - Markenkrise drückt Ausblick.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Geopolitik: China strebt Weltmacht an, Westen verliert Einfluss",
+        "text": "Deutsche Autobauer verlieren Anschluss - Margen schmelzen.",
+        "stamp": "05.06.26"
+      },
+      {
+        "text": "Schwedens Inflation gedämpft – Riksbank hält Zinspause.",
         "stamp": "04.06.26"
       }
     ],
@@ -589,8 +593,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 801,
-    "candCursor": 24,
+    "lastCursor": 1101,
+    "candCursor": 32,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "Kontron AG (KTN.DE)",
@@ -846,60 +850,64 @@
       "89bio, Inc.",
       "Tactile Systems Technology, Inc.",
       "Lantern Pharma Inc.",
-      "BioVie Inc."
+      "BioVie Inc.",
+      "Formycon AG",
+      "GFT Technologies SE",
+      "CEWE Stiftung & Co. KGaA",
+      "PNE AG",
+      "Energiekontor AG",
+      "Rubean AG",
+      "NextNav Inc.",
+      "Powell Industries, Inc."
     ],
     "noteCursor": 9,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 482,
-      "cons_def": 242,
-      "materials": 330,
-      "health": 1345,
-      "finance": 951,
-      "energy": 441,
-      "hardware": 305,
-      "software": 924,
-      "industrial": 403,
-      "utilities": 173,
-      "comm": 205,
-      "ai_semi": 191,
-      "realestate": 84
+      "cons_cycl": 491,
+      "cons_def": 244,
+      "materials": 333,
+      "health": 1363,
+      "finance": 969,
+      "energy": 446,
+      "hardware": 308,
+      "software": 933,
+      "industrial": 407,
+      "utilities": 176,
+      "comm": 208,
+      "ai_semi": 192,
+      "realestate": 85
     },
     "pendingReject": [
-      "AVPT",
-      "AVR",
-      "AVT",
-      "AVTR",
-      "AVTX",
-      "AVX",
-      "AVXL",
-      "AVY",
-      "AWHL",
-      "AWI",
-      "AWIN",
-      "AWK",
-      "AWR",
-      "AWRE"
+      "BLIN",
+      "BLK",
+      "BLKB",
+      "BLLN",
+      "BLMN",
+      "BLND",
+      "BLNE",
+      "BLNK",
+      "BLSH",
+      "BLX"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 482,
-      "cons_def": 242,
-      "materials": 330,
-      "health": 1345,
-      "finance": 952,
-      "energy": 441,
-      "hardware": 306,
-      "software": 927,
-      "industrial": 403,
-      "utilities": 173,
-      "comm": 205,
-      "ai_semi": 191,
-      "realestate": 84
+      "cons_cycl": 491,
+      "cons_def": 244,
+      "materials": 333,
+      "health": 1363,
+      "finance": 970,
+      "energy": 446,
+      "hardware": 309,
+      "software": 936,
+      "industrial": 407,
+      "utilities": 176,
+      "comm": 208,
+      "ai_semi": 192,
+      "realestate": 85
     },
-    "heavyAt": "2026-06-05T11:49:45.694Z",
+    "heavyAt": "2026-06-05T11:56:49.464Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
