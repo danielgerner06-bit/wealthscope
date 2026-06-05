@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T21:00:09.812Z",
+  "updatedAt": "2026-06-05T21:18:52.680Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0084,
+      "sektorPsi": 0.0083,
       "sektorPsiAtAdd": 0.0085
     },
     {
@@ -349,7 +349,7 @@
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0078,
+      "sektorPsi": 0.0076,
       "sektorPsiAtAdd": 0.0078
     },
     {
@@ -380,7 +380,7 @@
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0078,
+      "sektorPsi": 0.0076,
       "sektorPsiAtAdd": 0.0078
     },
     {
@@ -414,7 +414,7 @@
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.01,
+      "sektorPsi": 0.0101,
       "sektorPsiAtAdd": 0.0095
     },
     {
@@ -448,7 +448,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0084,
+      "sektorPsi": 0.0083,
       "sektorPsiAtAdd": 0.0085
     },
     {
@@ -627,24 +627,28 @@
   "news": {
     "items": [
       {
-        "text": "Wirtschaft in Eurozone schrumpft überraschend, Irland korrigiert Daten.",
+        "text": "US-Arbeitsmarktdaten übertreffen Erwartungen, Zinserhöhungsängste schüren Wall Street",
         "stamp": "05.06.26"
       },
       {
-        "text": "KI-Boom treibt Vermögen der Reichen auf Rekordhoch.",
+        "text": "Kanadische Konjunkturwächter sehen trotz Rückgang keine Rezession",
         "stamp": "05.06.26"
       },
       {
-        "text": "Deutsche Autobauer verlieren international Anschluss, China als Problem.",
+        "text": "WTO-Frühindikator deutet auf anhaltende Handelsresilienz hin",
         "stamp": "05.06.26"
       },
       {
-        "text": "US-Repräsentantenhaus stimmt für Ukraine-Paket trotz Trump.",
-        "stamp": "04.06.26"
+        "text": "KI-Blase? Analyst warnt vor Überbewertung im Technologiesektor",
+        "stamp": "05.06.26"
       },
       {
-        "text": "Schwedens Inflation sinkt, Riksbank mit Atempause bei Zinserhöhungen.",
-        "stamp": "04.06.26"
+        "text": "Meta-Aktie verliert deutlich nach Gewinnmitnahmen-Welle",
+        "stamp": "05.06.26"
+      },
+      {
+        "text": "Siemens Energy Aktie im Minus nach negativen Nachrichten",
+        "stamp": "05.06.26"
       }
     ],
     "date": "2026-06-05"
@@ -652,8 +656,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 3801,
-    "candCursor": 32,
+    "lastCursor": 4101,
+    "candCursor": 40,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -934,45 +938,47 @@
       "Planisware SA",
       "Innodata Inc.",
       "Payoneer Global Inc.",
-      "Scandinavian Astor Group AB"
+      "Scandinavian Astor Group AB",
+      "Boot Barn Holdings Inc.",
+      "NioCorp Developments Ltd."
     ],
     "noteCursor": 9,
-    "focusCursor": 2,
+    "focusCursor": 3,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 562,
-      "cons_def": 283,
-      "materials": 374,
-      "health": 1532,
-      "finance": 1124,
-      "energy": 506,
-      "hardware": 353,
-      "software": 1056,
-      "industrial": 468,
-      "utilities": 201,
-      "comm": 236,
-      "ai_semi": 203,
-      "realestate": 100
+      "cons_cycl": 565,
+      "cons_def": 285,
+      "materials": 378,
+      "health": 1565,
+      "finance": 1135,
+      "energy": 511,
+      "hardware": 359,
+      "software": 1068,
+      "industrial": 473,
+      "utilities": 205,
+      "comm": 238,
+      "ai_semi": 207,
+      "realestate": 102
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 562,
-      "cons_def": 283,
-      "materials": 374,
-      "health": 1532,
-      "finance": 1126,
-      "energy": 506,
-      "hardware": 355,
-      "software": 1057,
-      "industrial": 469,
-      "utilities": 201,
-      "comm": 236,
-      "ai_semi": 203,
-      "realestate": 100
+      "cons_cycl": 565,
+      "cons_def": 285,
+      "materials": 378,
+      "health": 1565,
+      "finance": 1137,
+      "energy": 511,
+      "hardware": 361,
+      "software": 1069,
+      "industrial": 474,
+      "utilities": 205,
+      "comm": 238,
+      "ai_semi": 207,
+      "realestate": 102
     },
-    "heavyAt": "2026-06-05T15:02:44.452Z",
+    "heavyAt": "2026-06-05T21:11:55.300Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -983,6 +989,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-05T21:00:09.812Z"
+  }
 }
