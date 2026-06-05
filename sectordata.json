@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T12:00:09.821Z",
+  "updatedAt": "2026-06-05T12:10:02.673Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -564,27 +564,27 @@
   "news": {
     "items": [
       {
-        "text": "Broadcom zeigt neues Problem der KI-Aktien; Porsche fliegt aus DAX.",
+        "text": "Dax startet vor US-Arbeitsmarktdaten ernüchtert, KI-Rally gebremst.",
         "stamp": "05.06.26"
       },
       {
-        "text": "DAX erwartet leichter Start; Anleger nehmen Gewinne mit.",
+        "text": "Goldman Sachs erwartet Verhundertfachung der KI-Umsätze von SpaceX.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Eurozone schrumpft überraschend - Schwache Daten aus Irland.",
+        "text": "Wirtschaft in der Eurozone schrumpft überraschend, Irland korrigiert Daten.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Lululemon-Aktie sackt zweistellig ab - Markenkrise drückt Ausblick.",
+        "text": "Kanada schafft 250.000 Jobs durch KI-Förderung und Konjunkturprogramm.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Deutsche Autobauer verlieren Anschluss - Margen schmelzen.",
+        "text": "Deutsche Autobauer verlieren international den Anschluss, China als Problem.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Schwedens Inflation gedämpft – Riksbank hält Zinspause.",
+        "text": "Software-Aktien vor Comeback: Bewertungabschlag so hoch wie seit Jahren nicht mehr.",
         "stamp": "04.06.26"
       }
     ],
@@ -593,8 +593,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 1101,
-    "candCursor": 32,
+    "lastCursor": 1401,
+    "candCursor": 40,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "Kontron AG (KTN.DE)",
@@ -858,56 +858,69 @@
       "Energiekontor AG",
       "Rubean AG",
       "NextNav Inc.",
-      "Powell Industries, Inc."
+      "Powell Industries, Inc.",
+      "Kalray SA",
+      "Riber SA",
+      "DO & CO AG",
+      "Thule Group AB (publ)",
+      "Sweco AB (publ)",
+      "Musti Group Oyj",
+      "Admicom Oyj",
+      "Qt Group Oyj",
+      "Nordnet AB (publ)"
     ],
     "noteCursor": 9,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 491,
-      "cons_def": 244,
-      "materials": 333,
-      "health": 1363,
-      "finance": 969,
-      "energy": 446,
-      "hardware": 308,
-      "software": 933,
-      "industrial": 407,
+      "cons_cycl": 503,
+      "cons_def": 251,
+      "materials": 335,
+      "health": 1381,
+      "finance": 992,
+      "energy": 449,
+      "hardware": 312,
+      "software": 955,
+      "industrial": 413,
       "utilities": 176,
-      "comm": 208,
-      "ai_semi": 192,
+      "comm": 210,
+      "ai_semi": 193,
       "realestate": 85
     },
     "pendingReject": [
-      "BLIN",
-      "BLK",
-      "BLKB",
-      "BLLN",
-      "BLMN",
-      "BLND",
-      "BLNE",
-      "BLNK",
-      "BLSH",
-      "BLX"
+      "CARM",
+      "CARR",
+      "CARS",
+      "CART",
+      "CASH",
+      "CASS",
+      "CASY",
+      "CAT",
+      "CATO",
+      "CATX",
+      "CATY",
+      "CAVA",
+      "CB",
+      "CBAN"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 491,
-      "cons_def": 244,
-      "materials": 333,
-      "health": 1363,
-      "finance": 970,
-      "energy": 446,
-      "hardware": 309,
-      "software": 936,
-      "industrial": 407,
+      "cons_cycl": 503,
+      "cons_def": 251,
+      "materials": 335,
+      "health": 1381,
+      "finance": 993,
+      "energy": 449,
+      "hardware": 313,
+      "software": 958,
+      "industrial": 413,
       "utilities": 176,
-      "comm": 208,
-      "ai_semi": 192,
+      "comm": 210,
+      "ai_semi": 193,
       "realestate": 85
     },
-    "heavyAt": "2026-06-05T11:56:49.464Z",
+    "heavyAt": "2026-06-05T12:03:33.791Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -918,6 +931,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-05T12:00:09.821Z"
+  }
 }
