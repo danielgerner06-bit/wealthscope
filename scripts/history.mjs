@@ -33,7 +33,7 @@ function metaFrom(s, sym) {
     sector: s.sector, region: regionOf(sym),
     buyPct: s.buyPct ?? null, strongBuyPct: s.strongBuyPct ?? null,
     upside: s.upside ?? null, pe: s.pe ?? null, perf6mAtAdd: s.perf6m ?? null,
-    perf1mBefore: s.perf1mBefore ?? null,
+    perf1mBefore: s.perf1mBefore ?? null, sektorPsiAtAdd: s.sektorPsiAtAdd ?? null,
     analysts: s.analysts ?? null, div: s.div ?? null,
   };
 }

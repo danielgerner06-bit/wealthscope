@@ -278,9 +278,9 @@
       { lbl: 'Dividende', val: st.div == null ? '–' : st.div + '%', s: sc(st.div, 0, 5) },
       { lbl: '6 Monate', val: pct(st.perf6m), s: sc(st.perf6m, -20, 30) },
       { lbl: '1M vor Aufn.', val: pct(st.perf1mBefore), s: sc(st.perf1mBefore, -20, 30) },
-      // Aktien-PSI: Analysten-Gunst relativ zur Kursposition der AKTIE (×1000), hoch = Aufholpotenzial
-      // info:true -> Info-Button über dem Wert öffnet das PSI-Erklär-Popup.
-      { lbl: 'Ψ Aktie', val: st.aktienPsi == null ? '–' : fmtSmall(st.aktienPsi * 1000), s: sc(st.aktienPsi, 0, 0.05), info: 'psi' },
+      // Sektor-PSI: Analysten-Gunst relativ zur 30T-Kursposition des SEKTORS (×1000), hoch = Aufholpotenzial.
+      // info -> Info-Button öffnet das PSI-Erklär-Popup mit Verteilung.
+      { lbl: 'Ψ Sektor', val: st.sektorPsi == null ? '–' : fmtSmall(st.sektorPsi * 1000), s: sc(st.sektorPsi, 0, 0.05), info: 'psi' },
     ];
     document.getElementById('stkModalStats').innerHTML = stats.map(t =>
       '<div class="stk-stat">' +
@@ -289,7 +289,7 @@
       '<div class="stk-stat-lbl">' + t.lbl + '</div></div>').join('');
     // Info-Button -> PSI-Popup mit Verteilung; aktuellen Wert markieren.
     const psiBtn = document.querySelector('#stkModalStats [data-psi-info]');
-    if (psiBtn) psiBtn.addEventListener('click', e => { e.stopPropagation(); openPsiInfo(st.aktienPsi); });
+    if (psiBtn) psiBtn.addEventListener('click', e => { e.stopPropagation(); openPsiInfo(st.sektorPsi); });
 
     // Counts-Verteilungs-Feld entfernt (es machte das Popup zu lang/scrollbar). Die
     // Strong-Buy/Buy-Werte stehen bereits oben in den Hero-Kacheln; die Quelle im Badge.
@@ -316,55 +316,54 @@
   let psiChart = null;
   function openPsiInfo(currentPsi) {
     const m = document.getElementById('psiInfoModal');
-    // alle je gefundenen echten PSI-Werte (×1000 für lesbare Skala)
-    const vals = (Array.isArray(DATA.psiHistory) ? DATA.psiHistory : [])
-      .map(e => e.v).filter(v => v != null && isFinite(v)).map(v => v * 1000);
     const markEl = document.getElementById('psiInfoMarker');
     const curX = currentPsi != null ? +(currentPsi * 1000).toFixed(2) : null;
+    // alle je gefundenen echten Sektor-PSI-Werte (×1000 für lesbare Skala)
+    const vals = (Array.isArray(DATA.psiHistory) ? DATA.psiHistory : [])
+      .map(e => e.v).filter(v => v != null && isFinite(v)).map(v => v * 1000);
 
-    if (vals.length < 2) {
-      markEl.textContent = curX != null
-        ? 'Dieser Wert: ' + fmtSmall(curX) + ' · noch zu wenige Daten für eine Verteilung.'
-        : 'Noch keine PSI-Historie vorhanden.';
+    // Modal ZUERST sichtbar machen, damit die Canvas eine echte Größe hat (sonst verzerrt).
+    m.hidden = false;
+    requestAnimationFrame(() => {
+      m.classList.add('show');
       if (psiChart) { psiChart.destroy(); psiChart = null; }
-    } else {
-      // Histogramm: Spanne min..max in feste Bins, Häufigkeit je Bin -> geglättete Kurve.
+      if (vals.length < 2) {
+        markEl.textContent = curX != null
+          ? 'Dieser Wert: ' + fmtSmall(curX) + ' · noch zu wenige Daten für eine Verteilung.'
+          : 'Noch keine Ψ-Historie vorhanden.';
+        return;
+      }
       const lo = Math.min(...vals), hi = Math.max(...vals);
       const span = (hi - lo) || 1;
       const BINS = Math.min(24, Math.max(8, Math.round(Math.sqrt(vals.length))));
       const counts = new Array(BINS).fill(0);
       vals.forEach(v => { let b = Math.floor(((v - lo) / span) * BINS); if (b >= BINS) b = BINS - 1; if (b < 0) b = 0; counts[b]++; });
       const labels = counts.map((_, i) => +(lo + (i + 0.5) * span / BINS).toFixed(2));
-      // leichte Glättung (gleitender Mittelwert über 3) für eine "saubere Kurve"
       const smooth = counts.map((_, i) => {
         const a = counts[i - 1] ?? counts[i], b = counts[i], c = counts[i + 1] ?? counts[i];
         return +((a + b + c) / 3).toFixed(2);
       });
       markEl.innerHTML = curX != null
-        ? 'Dieser Wert: <b>' + fmtSmall(curX) + '</b>  (Spanne ' + fmtSmall(lo) + '–' + fmtSmall(hi) + ', n=' + vals.length + ')'
+        ? 'Dieser Sektor: <b>' + fmtSmall(curX) + '</b>  (Spanne ' + fmtSmall(lo) + '–' + fmtSmall(hi) + ', n=' + vals.length + ')'
         : 'Spanne ' + fmtSmall(lo) + '–' + fmtSmall(hi) + ' (n=' + vals.length + ')';
-      const ctx = document.getElementById('psiInfoChart').getContext('2d');
-      if (psiChart) psiChart.destroy();
-      // Marker-Linie beim aktuellen Wert
       const markerLine = (curX != null) ? {
         id: 'psiMarker',
         afterDraw(c) {
-          const xs = c.scales.x;
-          const px = xs.getPixelForValue(closestLabel(labels, curX));
+          const px = c.scales.x.getPixelForValue(closestLabel(labels, curX));
           const { top, bottom } = c.chartArea;
           const g = c.ctx; g.save(); g.strokeStyle = '#f472b6'; g.lineWidth = 2; g.setLineDash([4, 3]);
           g.beginPath(); g.moveTo(px, top); g.lineTo(px, bottom); g.stroke(); g.restore();
         },
       } : { id: 'noop' };
+      const ctx = document.getElementById('psiInfoChart').getContext('2d');
       psiChart = new Chart(ctx, {
         type: 'line',
         data: { labels, datasets: [{
           data: smooth, borderColor: '#818cf8', borderWidth: 2,
-          backgroundColor: 'rgba(129,140,248,0.18)', fill: true, tension: 0.4,
-          pointRadius: 0,
+          backgroundColor: 'rgba(129,140,248,0.18)', fill: true, tension: 0.4, pointRadius: 0,
         }] },
         options: {
-          responsive: true, maintainAspectRatio: false,
+          responsive: true, maintainAspectRatio: false, animation: false,
           plugins: { legend: { display: false }, tooltip: {
             callbacks: { title: i => 'Ψ ≈ ' + i[0].label, label: c => c.parsed.y.toFixed(1) + ' Perlen' } } },
           scales: {
@@ -376,9 +375,7 @@
         },
         plugins: [markerLine],
       });
-    }
-    m.hidden = false;
-    requestAnimationFrame(() => m.classList.add('show'));
+    });
   }
   const closestLabel = (labels, x) => labels.reduce((a, b) => Math.abs(b - x) < Math.abs(a - x) ? b : a, labels[0]);
   function closePsiInfo() { const m = document.getElementById('psiInfoModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
