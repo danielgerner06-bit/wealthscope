@@ -28,9 +28,10 @@ const GEMINI_KEY = process.env.GEMINI_API_KEY;
 const SCAN_BUDGET = Number(process.env.SCAN_BUDGET || 300);   // Finnhub-Symbole pro Lauf (kostet KEIN Gemini)
 const CAND_BUDGET = Number(process.env.CAND_BUDGET || 8);     // Kandidaten je Lauf
 
-// Gemini-Budget pro Lauf. Paid Tier (1.500 grounded Calls/Tag frei) -> großzügiger
-// als früher (Free war eng). Reihenfolge im Code = Priorität.
-const GEMINI_BUDGET = Number(process.env.GEMINI_BUDGET || 20);
+// Gemini-Budget pro Lauf. Paid Tier (1.500 grounded Calls/Tag frei). verifyNoHold prüft
+// jetzt EINZELN (1 Call/Aktie) -> höheres Budget nötig, damit die Gegenprüfung nicht
+// mitten in einem Batch abgewürgt wird. Reihenfolge im Code = Priorität.
+const GEMINI_BUDGET = Number(process.env.GEMINI_BUDGET || 60);
 let geminiUsed = 0;
 let geminiDailyDead = false;   // gesetzt, sobald ein Call trotz Backoff am 429 scheitert (Tageslimit)
 const geminiBudgetLeft = () => geminiUsed < GEMINI_BUDGET && !geminiDailyDead;
