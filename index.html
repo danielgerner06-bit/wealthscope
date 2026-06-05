@@ -642,13 +642,29 @@
         <button class="sek-modal-x" data-close aria-label="Schließen">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
-        <h3 id="psiInfoTitle" class="psi-info-title">Ψ Sektor · Psi-Wert</h3>
+        <div class="psi-info-hd">
+          <span class="psi-info-glyph">Ψ</span>
+          <div>
+            <h3 id="psiInfoTitle" class="psi-info-title">Sektor-Psi</h3>
+            <p class="psi-info-tag">Aufholpotenzial des Sektors</p>
+          </div>
+        </div>
         <p class="psi-info-desc">
-          Der Psi-Wert misst die <b>Analysten-Gunst relativ zur Kursposition des Sektors</b>:
-          hoch = viele Perlen im Sektor, obwohl dieser zuletzt zurückblieb → <b>Aufholpotenzial</b>.
+          Viele <b>Analysten-Perlen</b> in einem Sektor, der zuletzt <b>zurückblieb</b> → der Sektor
+          gilt als unterbewertet mit Nachholpotenzial. Je höher Ψ, desto stärker dieses Signal.
         </p>
-        <div class="psi-info-formula">Ψ = Trefferquote(Sektor) ÷ relative&nbsp;30-Tage-Kursposition&nbsp;des&nbsp;Sektors</div>
-        <p class="psi-info-sub">Verteilung aller je gefundenen echten Perlen — wo liegt dieser Wert?</p>
+        <div class="psi-formula">
+          <span class="psi-frac">
+            <span class="psi-num">Treffer&shy;quote des Sektors</span>
+            <span class="psi-bar"></span>
+            <span class="psi-den">relative 30-Tage-Performance des Sektors</span>
+          </span>
+        </div>
+        <ul class="psi-legend">
+          <li><b>Trefferquote</b> = Perlen ÷ geprüfte Aktien des Sektors</li>
+          <li><b>rel. Performance</b> = Position in der 30-Tage-Spanne aller Sektoren (0 = schwächster, 1 = stärkster)</li>
+        </ul>
+        <p class="psi-info-sub">Verteilung aller je gefundenen Perlen</p>
         <div class="psi-chart-wrap"><canvas id="psiInfoChart"></canvas></div>
         <div class="psi-info-marker" id="psiInfoMarker"></div>
       </div>
