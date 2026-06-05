@@ -279,11 +279,17 @@
       { lbl: '6 Monate', val: pct(st.perf6m), s: sc(st.perf6m, -20, 30) },
       { lbl: '1M vor Aufn.', val: pct(st.perf1mBefore), s: sc(st.perf1mBefore, -20, 30) },
       // Aktien-PSI: Analysten-Gunst relativ zur Kursposition der AKTIE (×1000), hoch = Aufholpotenzial
-      { lbl: 'Ψ Aktie', val: st.aktienPsi == null ? '–' : fmtSmall(st.aktienPsi * 1000), s: sc(st.aktienPsi, 0, 0.05) },
+      // info:true -> Info-Button über dem Wert öffnet das PSI-Erklär-Popup.
+      { lbl: 'Ψ Aktie', val: st.aktienPsi == null ? '–' : fmtSmall(st.aktienPsi * 1000), s: sc(st.aktienPsi, 0, 0.05), info: 'psi' },
     ];
     document.getElementById('stkModalStats').innerHTML = stats.map(t =>
-      '<div class="stk-stat"><div class="stk-stat-val" style="color:' + hsl(t.s) + '">' + t.val + '</div>' +
+      '<div class="stk-stat">' +
+      (t.info ? '<button class="stk-stat-info" data-psi-info aria-label="Was ist der Psi-Wert?">i</button>' : '') +
+      '<div class="stk-stat-val" style="color:' + hsl(t.s) + '">' + t.val + '</div>' +
       '<div class="stk-stat-lbl">' + t.lbl + '</div></div>').join('');
+    // Info-Button -> PSI-Popup mit Verteilung; aktuellen Wert markieren.
+    const psiBtn = document.querySelector('#stkModalStats [data-psi-info]');
+    if (psiBtn) psiBtn.addEventListener('click', e => { e.stopPropagation(); openPsiInfo(st.aktienPsi); });
 
     // Counts-Verteilungs-Feld entfernt (es machte das Popup zu lang/scrollbar). Die
     // Strong-Buy/Buy-Werte stehen bereits oben in den Hero-Kacheln; die Quelle im Badge.
@@ -305,6 +311,77 @@
   }
 
   function closeStockModal() { const m = document.getElementById('stkModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
+
+  /* ---------- PSI-Info-Popup mit Verteilungskurve aller je gefundenen Perlen ---------- */
+  let psiChart = null;
+  function openPsiInfo(currentPsi) {
+    const m = document.getElementById('psiInfoModal');
+    // alle je gefundenen echten PSI-Werte (×1000 für lesbare Skala)
+    const vals = (Array.isArray(DATA.psiHistory) ? DATA.psiHistory : [])
+      .map(e => e.v).filter(v => v != null && isFinite(v)).map(v => v * 1000);
+    const markEl = document.getElementById('psiInfoMarker');
+    const curX = currentPsi != null ? +(currentPsi * 1000).toFixed(2) : null;
+
+    if (vals.length < 2) {
+      markEl.textContent = curX != null
+        ? 'Dieser Wert: ' + fmtSmall(curX) + ' · noch zu wenige Daten für eine Verteilung.'
+        : 'Noch keine PSI-Historie vorhanden.';
+      if (psiChart) { psiChart.destroy(); psiChart = null; }
+    } else {
+      // Histogramm: Spanne min..max in feste Bins, Häufigkeit je Bin -> geglättete Kurve.
+      const lo = Math.min(...vals), hi = Math.max(...vals);
+      const span = (hi - lo) || 1;
+      const BINS = Math.min(24, Math.max(8, Math.round(Math.sqrt(vals.length))));
+      const counts = new Array(BINS).fill(0);
+      vals.forEach(v => { let b = Math.floor(((v - lo) / span) * BINS); if (b >= BINS) b = BINS - 1; if (b < 0) b = 0; counts[b]++; });
+      const labels = counts.map((_, i) => +(lo + (i + 0.5) * span / BINS).toFixed(2));
+      // leichte Glättung (gleitender Mittelwert über 3) für eine "saubere Kurve"
+      const smooth = counts.map((_, i) => {
+        const a = counts[i - 1] ?? counts[i], b = counts[i], c = counts[i + 1] ?? counts[i];
+        return +((a + b + c) / 3).toFixed(2);
+      });
+      markEl.innerHTML = curX != null
+        ? 'Dieser Wert: <b>' + fmtSmall(curX) + '</b>  (Spanne ' + fmtSmall(lo) + '–' + fmtSmall(hi) + ', n=' + vals.length + ')'
+        : 'Spanne ' + fmtSmall(lo) + '–' + fmtSmall(hi) + ' (n=' + vals.length + ')';
+      const ctx = document.getElementById('psiInfoChart').getContext('2d');
+      if (psiChart) psiChart.destroy();
+      // Marker-Linie beim aktuellen Wert
+      const markerLine = (curX != null) ? {
+        id: 'psiMarker',
+        afterDraw(c) {
+          const xs = c.scales.x;
+          const px = xs.getPixelForValue(closestLabel(labels, curX));
+          const { top, bottom } = c.chartArea;
+          const g = c.ctx; g.save(); g.strokeStyle = '#f472b6'; g.lineWidth = 2; g.setLineDash([4, 3]);
+          g.beginPath(); g.moveTo(px, top); g.lineTo(px, bottom); g.stroke(); g.restore();
+        },
+      } : { id: 'noop' };
+      psiChart = new Chart(ctx, {
+        type: 'line',
+        data: { labels, datasets: [{
+          data: smooth, borderColor: '#818cf8', borderWidth: 2,
+          backgroundColor: 'rgba(129,140,248,0.18)', fill: true, tension: 0.4,
+          pointRadius: 0,
+        }] },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false }, tooltip: {
+            callbacks: { title: i => 'Ψ ≈ ' + i[0].label, label: c => c.parsed.y.toFixed(1) + ' Perlen' } } },
+          scales: {
+            x: { title: { display: true, text: 'Ψ-Wert (×1000)', color: '#94a3b8' },
+                 ticks: { color: '#94a3b8', maxTicksLimit: 8 }, grid: { color: 'rgba(148,163,184,0.1)' } },
+            y: { title: { display: true, text: 'Häufigkeit', color: '#94a3b8' },
+                 ticks: { color: '#94a3b8', precision: 0 }, grid: { color: 'rgba(148,163,184,0.1)' }, beginAtZero: true },
+          },
+        },
+        plugins: [markerLine],
+      });
+    }
+    m.hidden = false;
+    requestAnimationFrame(() => m.classList.add('show'));
+  }
+  const closestLabel = (labels, x) => labels.reduce((a, b) => Math.abs(b - x) < Math.abs(a - x) ? b : a, labels[0]);
+  function closePsiInfo() { const m = document.getElementById('psiInfoModal'); m.classList.remove('show'); setTimeout(() => { m.hidden = true; }, 200); }
 
   /* ---------- Admin-Modus (Session) + Aktie löschen + 3 Monate sperren ---------- */
   // adminKey nur in dieser Session (NICHT localStorage) -> bei Reload wieder aus.
@@ -373,6 +450,12 @@
     const m = document.getElementById('stkModal');
     m.addEventListener('click', e => { if (e.target.closest('[data-close]') || e.target === m || e.target.classList.contains('sek-modal-backdrop')) closeStockModal(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && !m.hidden) closeStockModal(); });
+    // PSI-Info-Popup (liegt über dem Perlen-Popup) — eigene Close-Handler
+    const pm = document.getElementById('psiInfoModal');
+    if (pm) {
+      pm.addEventListener('click', e => { if (e.target.closest('[data-close]') || e.target === pm || e.target.classList.contains('sek-modal-backdrop')) closePsiInfo(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && !pm.hidden) { e.stopPropagation(); closePsiInfo(); } });
+    }
   }
 
   /* ---------- Popup: Sektoren gerankt nach Perlen-Anzahl ---------- */

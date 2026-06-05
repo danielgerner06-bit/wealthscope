@@ -1546,9 +1546,23 @@ html.preselect #hubScreen { display: none !important; }
 .stk-hero-lbl { font-size: 0.66rem; font-weight: 700; color: var(--s-faint); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 5px; }
 
 .stk-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.stk-stat { background: rgba(148,163,184,0.05); border: 1px solid var(--s-border); border-radius: 11px; padding: 11px 10px; text-align: center; }
+.stk-stat { position: relative; background: rgba(148,163,184,0.05); border: 1px solid var(--s-border); border-radius: 11px; padding: 11px 10px; text-align: center; }
 .stk-stat-val { font-size: 1.05rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.1; }
 .stk-stat-lbl { font-size: 0.64rem; font-weight: 700; color: var(--s-faint); text-transform: uppercase; letter-spacing: 0.3px; margin-top: 4px; }
+/* kleiner Info-Button oben in einer Stat-Kachel (Ψ) */
+.stk-stat-info { position: absolute; top: 4px; right: 4px; width: 16px; height: 16px; padding: 0;
+  border: 1px solid var(--s-border); border-radius: 50%; background: rgba(129,140,248,0.18);
+  color: #a5b4fc; font-size: 0.62rem; font-weight: 800; font-style: italic; line-height: 1; cursor: pointer; }
+.stk-stat-info:hover { background: rgba(129,140,248,0.35); color: #c7d2fe; }
+/* PSI-Info-Popup */
+.psi-info-card { max-width: 440px; }
+.psi-info-title { margin: 0 0 8px; font-size: 1.15rem; font-weight: 800; }
+.psi-info-desc { margin: 0 0 12px; font-size: 0.86rem; line-height: 1.5; color: var(--s-dim); }
+.psi-info-formula { background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.25); border-radius: 9px;
+  padding: 9px 11px; font-size: 0.8rem; font-weight: 700; text-align: center; color: #c7d2fe; margin-bottom: 14px; }
+.psi-info-sub { margin: 0 0 8px; font-size: 0.74rem; font-weight: 700; color: var(--s-faint); text-transform: uppercase; letter-spacing: 0.3px; }
+.psi-info-card canvas { width: 100% !important; height: 170px !important; }
+.psi-info-marker { margin-top: 10px; font-size: 0.78rem; color: var(--s-dim); text-align: center; }
 
 /* rohe Analysten-Verteilung (Transparenz) */
 .stk-counts { margin-top: 12px; padding: 9px 12px; border-radius: 10px; background: rgba(148,163,184,0.06);

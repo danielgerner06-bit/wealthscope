@@ -550,6 +550,7 @@ const today = () => new Date().toISOString().slice(0, 10);
      - relPos  = relative 30T-Performance-Position (0.05..1); niedrig = unten = Aufholpotenzial
      sektorPsi: relPos aus der SEKTOR-30T-Performance (bars30).
      aktienPsi: relPos aus der 30T-Performance der AKTIE selbst (s.perf30). */
+  let out_psiHistory = Array.isArray(prev?.psiHistory) ? prev.psiHistory : [];
   {
     const perfMap = {};
     (bars30 || []).forEach(b => { perfMap[b.id] = b.perf; });
@@ -580,6 +581,20 @@ const today = () => new Date().toISOString().slice(0, 10);
       s.aktienPsi = +(hit / relAkt).toFixed(4);
       db[s.ticker] = { ...db[s.ticker], perf30: s.perf30 ?? null, sektorPsi: s.sektorPsi, aktienPsi: s.aktienPsi };
     }
+
+    /* PSI-Historie: sammelt die aktienPsi-Werte ECHTER (bestätigter) Perlen über die Zeit
+       -> Verteilungsdiagramm im Info-Popup ("welche PSI-Werte sind normal"). Pro Perle+Tag
+       genau EIN Eintrag (überschreibt den heutigen Wert), damit dieselbe Perle die Verteilung
+       nicht bei jedem 6h-Lauf verzerrt. Nur verifizierte Perlen mit gültigem aktienPsi. */
+    const prevHist = Array.isArray(prev?.psiHistory) ? prev.psiHistory : [];
+    const histMap = new Map(prevHist.map(e => [e.t + '|' + e.d, e]));   // key: ticker|datum
+    for (const s of topStocks) {
+      if (s.aktienPsi == null || !s.verifiedAt) continue;
+      histMap.set(s.ticker + '|' + today(), { t: s.ticker, d: today(), v: s.aktienPsi });
+    }
+    let psiHistory = [...histMap.values()].sort((a, b) => (a.d < b.d ? -1 : 1));
+    if (psiHistory.length > 5000) psiHistory = psiHistory.slice(-5000);   // Deckel
+    out_psiHistory = psiHistory;
   }
 
   const out = {
@@ -591,6 +606,7 @@ const today = () => new Date().toISOString().slice(0, 10);
     bars30,
     bars30Region,
     topStocks,
+    psiHistory: out_psiHistory,
     sectorNotes,
     regionNotes,
     news,
