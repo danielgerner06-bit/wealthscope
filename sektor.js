@@ -344,8 +344,8 @@
         return +((a + b + c) / 3).toFixed(2);
       });
       markEl.innerHTML = curX != null
-        ? 'Dieser Sektor: <b>' + fmtSmall(curX) + '</b>  (Spanne ' + fmtSmall(lo) + '–' + fmtSmall(hi) + ', n=' + vals.length + ')'
-        : 'Spanne ' + fmtSmall(lo) + '–' + fmtSmall(hi) + ' (n=' + vals.length + ')';
+        ? 'Dieser Sektor: <b>' + fmtSmall(curX) + '</b>'
+        : '';
       const markerLine = (curX != null) ? {
         id: 'psiMarker',
         afterDraw(c) {
