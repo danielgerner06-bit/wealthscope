@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T15:00:09.820Z",
+  "updatedAt": "2026-06-05T15:09:45.472Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -3.15,
+      "perf": -3.11,
       "avg30": 0.95,
-      "perf6m": -2.34
+      "perf6m": -2.29
     },
     {
       "id": "health",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -1.12,
+      "perf": -1.11,
       "avg30": 1.02,
-      "perf6m": -1.31
+      "perf6m": -1.3
     },
     {
       "id": "cons_def",
@@ -233,9 +233,9 @@
     },
     {
       "id": "europe",
-      "perf": 1.58,
+      "perf": 1.55,
       "avg30": 1.3,
-      "perf6m": 8.28
+      "perf6m": 8.25
     },
     {
       "id": "germany",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": -3,
+      "perf": -3.05,
       "avg30": -1.09,
-      "perf6m": -11.5
+      "perf6m": -11.54
     },
     {
       "id": "latam",
@@ -318,7 +318,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0085,
+      "sektorPsi": 0.0084,
       "sektorPsiAtAdd": 0.0085
     },
     {
@@ -414,7 +414,7 @@
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0095,
+      "sektorPsi": 0.0086,
       "sektorPsiAtAdd": 0.0095
     },
     {
@@ -448,7 +448,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0085,
+      "sektorPsi": 0.0084,
       "sektorPsiAtAdd": 0.0085
     },
     {
@@ -627,24 +627,24 @@
   "news": {
     "items": [
       {
-        "text": "Eurozone schrumpft überraschend; EZB erwartet Leitzinserhöhung.",
+        "text": "Wirtschaft in Eurozone schrumpft überraschend, Irland korrigiert Daten.",
         "stamp": "05.06.26"
       },
       {
-        "text": "US-Arbeitsmarktdaten im Fokus; Dax vor dem Wochenende ohne klare Richtung.",
+        "text": "KI-Boom treibt Vermögen der Reichen auf Rekordhoch.",
         "stamp": "05.06.26"
       },
       {
-        "text": "KI-Boom treibt Vermögen der Reichen; Broadcom-Schock bremst KI-Aktien.",
+        "text": "Deutsche Autobauer verlieren international Anschluss, China als Problem.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Erdgas testet Widerstand inmitten der Nachfrageerholung und LNG-Risiken.",
-        "stamp": "05.06.26"
+        "text": "US-Repräsentantenhaus stimmt für Ukraine-Paket trotz Trump.",
+        "stamp": "04.06.26"
       },
       {
-        "text": "Offener Brief Selenskyjs an Putin; Müdigkeit gegenüber Russland wächst.",
-        "stamp": "05.06.26"
+        "text": "Schwedens Inflation sinkt, Riksbank mit Atempause bei Zinserhöhungen.",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-05"
@@ -652,8 +652,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 3501,
-    "candCursor": 24,
+    "lastCursor": 3801,
+    "candCursor": 32,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -933,45 +933,46 @@
       "Sopra Steria Group SA",
       "Planisware SA",
       "Innodata Inc.",
-      "Payoneer Global Inc."
+      "Payoneer Global Inc.",
+      "Scandinavian Astor Group AB"
     ],
     "noteCursor": 9,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 555,
-      "cons_def": 275,
-      "materials": 371,
-      "health": 1515,
-      "finance": 1107,
-      "energy": 498,
-      "hardware": 350,
-      "software": 1051,
-      "industrial": 461,
-      "utilities": 199,
-      "comm": 234,
-      "ai_semi": 202,
-      "realestate": 99
+      "cons_cycl": 562,
+      "cons_def": 283,
+      "materials": 374,
+      "health": 1532,
+      "finance": 1124,
+      "energy": 506,
+      "hardware": 353,
+      "software": 1056,
+      "industrial": 468,
+      "utilities": 201,
+      "comm": 236,
+      "ai_semi": 203,
+      "realestate": 100
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 555,
-      "cons_def": 275,
-      "materials": 371,
-      "health": 1515,
-      "finance": 1109,
-      "energy": 498,
-      "hardware": 352,
-      "software": 1052,
-      "industrial": 462,
-      "utilities": 199,
-      "comm": 234,
-      "ai_semi": 202,
-      "realestate": 99
+      "cons_cycl": 562,
+      "cons_def": 283,
+      "materials": 374,
+      "health": 1532,
+      "finance": 1126,
+      "energy": 506,
+      "hardware": 355,
+      "software": 1057,
+      "industrial": 469,
+      "utilities": 201,
+      "comm": 236,
+      "ai_semi": 203,
+      "realestate": 100
     },
-    "heavyAt": "2026-06-05T14:04:22.477Z",
+    "heavyAt": "2026-06-05T15:02:44.452Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -982,6 +983,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-05T15:00:09.820Z"
+  }
 }
