@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-05",
-  "updatedAt": "2026-06-05T19:00:09.837Z",
+  "updatedAt": "2026-06-05T19:53:55.242Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 0.95,
+      "perf": 1.17,
       "avg30": 1.7,
-      "perf6m": 13.94
+      "perf6m": 14.18
     },
     {
       "id": "energy",
@@ -414,7 +414,7 @@
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0086,
+      "sektorPsi": 0.01,
       "sektorPsiAtAdd": 0.0095
     },
     {
@@ -983,6 +983,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-05T19:00:09.837Z"
+  }
 }
