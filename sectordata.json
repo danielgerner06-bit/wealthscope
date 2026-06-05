@@ -309,7 +309,7 @@
       "via": "gemini",
       "source": "analysten-konsens",
       "seen": "2026-06-04",
-      "verifiedAt": "2026-06-04",
+      "verifiedAt": "2026-06-05",
       "perf6m": -22.99,
       "perf6mAt": "2026-06-04",
       "perf1mBefore": -9.12,
@@ -317,7 +317,8 @@
       "eps": 1.13,
       "div": 3.69,
       "enrichAt": "2026-06-04",
-      "miss": 2
+      "miss": 0,
+      "recheckAt": "2026-06-05"
     },
     {
       "ticker": "IXX",
@@ -530,27 +531,27 @@
   "news": {
     "items": [
       {
-        "text": "Broadcom-Schock: KI-Aktien brechen in Asien ein, Sorge vor Platzen der KI-Blase.",
+        "text": "KI-Ausverkauf: Broadcom-Schock lässt KI-Aktien einbrechen.",
         "stamp": "05.06.26"
       },
       {
-        "text": "US-Regierung führt erste Gespräche über Staatsbeteiligungen an KI-Unternehmen.",
+        "text": "DAX-FLASH: Wieder schwächer - Gewinnmitnahmen nach Halbleiterrally.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Fitch senkt globale Wachstumsprognose, erhöht Ölpreis-Ausblick.",
+        "text": "SAP-Aktie mit 5% Kurssprung: Startschuss für Trendwende?",
         "stamp": "05.06.26"
       },
       {
-        "text": "Iran-Krieg beeinflusst Lebensmittelpreise und birgt Unsicherheiten für Ölmarkt.",
+        "text": "Techwerte unter Druck nach KI-Ausblick von Broadcom.",
         "stamp": "05.06.26"
       },
       {
-        "text": "DAX und S&P 500 im Plus, Techwerte nach Broadcom-Ausblick unter Druck.",
-        "stamp": "04.06.26"
+        "text": "Fed belässt Zinsen unverändert – Marktreaktion bleibt verhalten.",
+        "stamp": "05.06.26"
       },
       {
-        "text": "SAP-Aktie mit Kurssprung: Ist das der Startschuss für eine Trendwende?",
+        "text": "Schwedens Inflation gibt Riksbank Atempause bei Zinsen.",
         "stamp": "04.06.26"
       }
     ],
@@ -559,8 +560,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 7234,
-    "candCursor": 24,
+    "lastCursor": 7534,
+    "candCursor": 32,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "Kontron AG (KTN.DE)",
@@ -796,42 +797,42 @@
       "Syarikat Takaful Malaysia Keluarga Berhad"
     ],
     "noteCursor": 9,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-05",
     "seenBySector": {
-      "cons_cycl": 424,
-      "cons_def": 223,
-      "materials": 286,
-      "health": 1168,
-      "finance": 856,
-      "energy": 394,
-      "hardware": 269,
-      "software": 813,
-      "industrial": 355,
-      "utilities": 153,
-      "comm": 173,
-      "ai_semi": 164,
-      "realestate": 80
+      "cons_cycl": 430,
+      "cons_def": 227,
+      "materials": 287,
+      "health": 1183,
+      "finance": 866,
+      "energy": 400,
+      "hardware": 273,
+      "software": 828,
+      "industrial": 358,
+      "utilities": 157,
+      "comm": 175,
+      "ai_semi": 165,
+      "realestate": 81
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 424,
-      "cons_def": 223,
-      "materials": 286,
-      "health": 1169,
-      "finance": 856,
-      "energy": 394,
-      "hardware": 270,
-      "software": 816,
-      "industrial": 356,
-      "utilities": 153,
-      "comm": 173,
-      "ai_semi": 164,
-      "realestate": 80
+      "cons_cycl": 430,
+      "cons_def": 227,
+      "materials": 287,
+      "health": 1184,
+      "finance": 866,
+      "energy": 400,
+      "hardware": 274,
+      "software": 831,
+      "industrial": 359,
+      "utilities": 157,
+      "comm": 175,
+      "ai_semi": 165,
+      "realestate": 81
     },
-    "heavyAt": "2026-06-05T10:14:45.035Z",
+    "heavyAt": "2026-06-05T10:21:30.910Z",
     "revalidateTag": "ms-verify-v7",
     "fmpRetryTag": "grades-summary-fix"
   },
