@@ -1570,11 +1570,11 @@ html.preselect #hubScreen { display: none !important; }
 .psi-info-desc { margin: 0 0 11px; font-size: 0.84rem; line-height: 1.5; color: var(--s-dim); }
 .psi-info-desc b { color: var(--s-text); }
 /* Formel als echter Bruch (Zähler über Bruchstrich über Nenner) */
-.psi-formula { display: flex; align-items: center; justify-content: center; gap: 12px;
+.psi-formula { display: flex; align-items: center; justify-content: center; gap: 10px;
   background: linear-gradient(160deg, rgba(129,140,248,0.12), rgba(129,140,248,0.04));
   border: 1px solid rgba(129,140,248,0.28); border-radius: 13px; padding: 12px 14px; margin-bottom: 12px; }
-.psi-formula::before { content: "Ψ"; font-size: 1.35rem; font-weight: 800; color: #c7d2fe; }
-.psi-formula::after { content: "="; font-size: 1.1rem; font-weight: 700; color: var(--s-faint); margin-right: 2px; }
+.psi-sym { font-size: 1.35rem; font-weight: 800; color: #c7d2fe; }
+.psi-eq { font-size: 1.1rem; font-weight: 700; color: var(--s-faint); }
 .psi-frac { display: inline-flex; flex-direction: column; align-items: center; text-align: center; }
 .psi-num, .psi-den { font-size: 0.78rem; font-weight: 700; color: #e2e8f0; padding: 0 6px; line-height: 1.25; }
 .psi-bar { width: 100%; height: 2px; background: #818cf8; border-radius: 2px; margin: 4px 0; }
