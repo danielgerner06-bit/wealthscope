@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-06",
-  "updatedAt": "2026-06-06T21:00:07.285Z",
+  "updatedAt": "2026-06-06T21:12:29.729Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0074,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0074,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -637,28 +637,28 @@
   "news": {
     "items": [
       {
-        "text": "US-Börse uneinheitlich, Hoffnung auf Friedensgespräche im Iran-Konflikt.",
+        "text": "Meta-Aktie im freien Fall nach milliardenschwerer Kapitalmaßnahme.",
+        "stamp": "06.06.26"
+      },
+      {
+        "text": "Iran droht mit Schließung alternativer Öl-Versorgungsroute.",
+        "stamp": "06.06.26"
+      },
+      {
+        "text": "Goldpreis bricht nach US-Jobdaten ein; Sorge vor Mittwoch.",
+        "stamp": "06.06.26"
+      },
+      {
+        "text": "SpaceX IPO rückt näher: Jahrhundertchance oder teuerster Hype?",
+        "stamp": "06.06.26"
+      },
+      {
+        "text": "KI-Unternehmen OpenAI: Florida verklagt ChatGPT-Firma.",
+        "stamp": "06.06.26"
+      },
+      {
+        "text": "DAX startet mit Verlusten erwartet; US-Jobdaten und Geopolitik im Blick.",
         "stamp": "05.06.26"
-      },
-      {
-        "text": "Wall Street startet leichter, US-Arbeitsmarktdaten schüren Zinsängste.",
-        "stamp": "05.06.26"
-      },
-      {
-        "text": "Europa-Märkte leichter, Technologieaktien fallen nach Broadcom-Ausblick.",
-        "stamp": "05.06.26"
-      },
-      {
-        "text": "Selenski schlägt Putin persönliches Treffen vor; Trump reagiert erfreut.",
-        "stamp": "05.06.26"
-      },
-      {
-        "text": "Asien-Märkte fallen, Anleger nehmen Gewinne bei Tech-Schwergewichten mit.",
-        "stamp": "04.06.26"
-      },
-      {
-        "text": "DAX rutscht ab wegen Iran-Krieg und US-Zolldrohungen.",
-        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-06"
@@ -666,8 +666,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 4701,
-    "candCursor": 56,
+    "lastCursor": 5001,
+    "candCursor": 64,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -962,56 +962,50 @@
       "Century Iron and Steel Industrial Co., Ltd.",
       "GlobalWafers Co., Ltd.",
       "monday.com Ltd.",
-      "Ouster, Inc."
+      "Ouster, Inc.",
+      "Ocular Therapeutix, Inc.",
+      "Ascendis Pharma A/S",
+      "Biomea Fusion, Inc.",
+      "Capricor Therapeutics, Inc.",
+      "Liquidia Corporation"
     ],
     "noteCursor": 10,
-    "focusCursor": 5,
+    "focusCursor": 6,
     "recheckCursor": 16,
     "regionNoteCursor": 8,
     "notesDay": "2026-06-06",
     "seenBySector": {
-      "cons_cycl": 583,
-      "cons_def": 296,
-      "materials": 389,
-      "health": 1607,
-      "finance": 1156,
-      "energy": 523,
-      "hardware": 372,
-      "software": 1088,
-      "industrial": 487,
-      "utilities": 207,
-      "comm": 245,
-      "ai_semi": 213,
+      "cons_cycl": 592,
+      "cons_def": 302,
+      "materials": 397,
+      "health": 1628,
+      "finance": 1166,
+      "energy": 525,
+      "hardware": 377,
+      "software": 1104,
+      "industrial": 490,
+      "utilities": 208,
+      "comm": 248,
+      "ai_semi": 216,
       "realestate": 105
     },
-    "pendingReject": [
-      "LODE",
-      "LOGC",
-      "LOGI",
-      "LONA",
-      "LOOP",
-      "LOPE",
-      "LOVE",
-      "LOW",
-      "LPCN",
-      "LPG"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 583,
-      "cons_def": 296,
-      "materials": 389,
-      "health": 1607,
-      "finance": 1158,
-      "energy": 523,
-      "hardware": 374,
-      "software": 1089,
-      "industrial": 488,
-      "utilities": 207,
-      "comm": 245,
-      "ai_semi": 213,
+      "cons_cycl": 592,
+      "cons_def": 302,
+      "materials": 397,
+      "health": 1628,
+      "finance": 1168,
+      "energy": 525,
+      "hardware": 379,
+      "software": 1105,
+      "industrial": 491,
+      "utilities": 208,
+      "comm": 248,
+      "ai_semi": 216,
       "realestate": 105
     },
-    "heavyAt": "2026-06-06T13:52:52.248Z",
+    "heavyAt": "2026-06-06T21:04:49.386Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1022,6 +1016,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-06T21:00:07.285Z"
+  }
 }
