@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-06",
-  "updatedAt": "2026-06-06T13:00:07.371Z",
+  "updatedAt": "2026-06-06T13:59:48.905Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0082,
+      "sektorPsi": 0.0081,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0075,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0075,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.01,
+      "sektorPsi": 0.0098,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -456,7 +456,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0082,
+      "sektorPsi": 0.0081,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -637,24 +637,28 @@
   "news": {
     "items": [
       {
-        "text": "US-Tech-Aktien geben nach: KI-Rallye als Übertreibung?",
+        "text": "US-Börse uneinheitlich, Hoffnung auf Friedensgespräche im Iran-Konflikt.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Europa im Minus: Warten auf Kompromiss im Nahen Osten.",
+        "text": "Wall Street startet leichter, US-Arbeitsmarktdaten schüren Zinsängste.",
         "stamp": "05.06.26"
       },
       {
-        "text": "US-Arbeitsmarkt überrascht positiv: Zinserhöhungsängste schüren Wall Street.",
+        "text": "Europa-Märkte leichter, Technologieaktien fallen nach Broadcom-Ausblick.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Boeing prüft Anhebung der 737 MAX-Produktion auf Rekordniveau.",
+        "text": "Selenski schlägt Putin persönliches Treffen vor; Trump reagiert erfreut.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Roche-Adipositas-Medikament zeigt vielversprechende Ergebnisse.",
-        "stamp": "05.06.26"
+        "text": "Asien-Märkte fallen, Anleger nehmen Gewinne bei Tech-Schwergewichten mit.",
+        "stamp": "04.06.26"
+      },
+      {
+        "text": "DAX rutscht ab wegen Iran-Krieg und US-Zolldrohungen.",
+        "stamp": "04.06.26"
       }
     ],
     "date": "2026-06-06"
@@ -662,8 +666,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 4401,
-    "candCursor": 48,
+    "lastCursor": 4701,
+    "candCursor": 56,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -956,45 +960,58 @@
       "Lotus Pharmaceutical Co., Ltd.",
       "Fountain Shipping Co., Ltd.",
       "Century Iron and Steel Industrial Co., Ltd.",
-      "GlobalWafers Co., Ltd."
+      "GlobalWafers Co., Ltd.",
+      "monday.com Ltd.",
+      "Ouster, Inc."
     ],
     "noteCursor": 10,
-    "focusCursor": 4,
+    "focusCursor": 5,
     "recheckCursor": 16,
     "regionNoteCursor": 8,
     "notesDay": "2026-06-06",
     "seenBySector": {
-      "cons_cycl": 571,
-      "cons_def": 292,
-      "materials": 381,
-      "health": 1583,
-      "finance": 1144,
-      "energy": 515,
-      "hardware": 365,
-      "software": 1081,
-      "industrial": 480,
-      "utilities": 206,
-      "comm": 240,
-      "ai_semi": 211,
-      "realestate": 104
+      "cons_cycl": 583,
+      "cons_def": 296,
+      "materials": 389,
+      "health": 1607,
+      "finance": 1156,
+      "energy": 523,
+      "hardware": 372,
+      "software": 1088,
+      "industrial": 487,
+      "utilities": 207,
+      "comm": 245,
+      "ai_semi": 213,
+      "realestate": 105
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "LODE",
+      "LOGC",
+      "LOGI",
+      "LONA",
+      "LOOP",
+      "LOPE",
+      "LOVE",
+      "LOW",
+      "LPCN",
+      "LPG"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 571,
-      "cons_def": 292,
-      "materials": 381,
-      "health": 1583,
-      "finance": 1146,
-      "energy": 515,
-      "hardware": 367,
-      "software": 1082,
-      "industrial": 481,
-      "utilities": 206,
-      "comm": 240,
-      "ai_semi": 211,
-      "realestate": 104
+      "cons_cycl": 583,
+      "cons_def": 296,
+      "materials": 389,
+      "health": 1607,
+      "finance": 1158,
+      "energy": 523,
+      "hardware": 374,
+      "software": 1089,
+      "industrial": 488,
+      "utilities": 207,
+      "comm": 245,
+      "ai_semi": 213,
+      "realestate": 105
     },
-    "heavyAt": "2026-06-06T04:03:48.210Z",
+    "heavyAt": "2026-06-06T13:52:52.248Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1005,6 +1022,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-06T13:00:07.371Z"
+  }
 }
