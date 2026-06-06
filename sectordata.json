@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-06",
-  "updatedAt": "2026-06-06T04:00:09.823Z",
+  "updatedAt": "2026-06-06T04:11:02.082Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -309,7 +309,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-06-05",
+      "verifiedAt": "2026-06-06",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -18.43,
       "perf6mAt": "2026-06-05",
@@ -318,8 +318,10 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0083,
-      "sektorPsiAtAdd": 0.0085
+      "sektorPsi": 0.0082,
+      "sektorPsiAtAdd": 0.0085,
+      "recheckAt": "2026-06-06",
+      "miss": 0
     },
     {
       "ticker": "A1OS.DE",
@@ -338,7 +340,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-05",
+      "verifiedAt": "2026-06-06",
       "verifiedSource": "yahoo",
       "seen": "2026-06-05",
       "perf6m": -22.75,
@@ -349,8 +351,10 @@
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0076,
-      "sektorPsiAtAdd": 0.0078
+      "sektorPsi": 0.0075,
+      "sektorPsiAtAdd": 0.0078,
+      "recheckAt": "2026-06-06",
+      "miss": 0
     },
     {
       "ticker": "IXX.DE",
@@ -369,7 +373,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-05",
+      "verifiedAt": "2026-06-06",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
       "perf6m": 15.89,
@@ -380,8 +384,10 @@
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0076,
-      "sektorPsiAtAdd": 0.0078
+      "sektorPsi": 0.0075,
+      "sektorPsiAtAdd": 0.0078,
+      "recheckAt": "2026-06-06",
+      "miss": 0
     },
     {
       "ticker": "KTN.DE",
@@ -405,7 +411,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-06-05",
+      "verifiedAt": "2026-06-06",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": 6.64,
       "perf6mAt": "2026-06-05",
@@ -414,8 +420,10 @@
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0101,
-      "sektorPsiAtAdd": 0.0095
+      "sektorPsi": 0.01,
+      "sektorPsiAtAdd": 0.0095,
+      "recheckAt": "2026-06-06",
+      "miss": 0
     },
     {
       "ticker": "HYQ.DE",
@@ -439,7 +447,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-06-05",
+      "verifiedAt": "2026-06-06",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -38.35,
       "perf6mAt": "2026-06-05",
@@ -448,8 +456,10 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0083,
-      "sektorPsiAtAdd": 0.0085
+      "sektorPsi": 0.0082,
+      "sektorPsiAtAdd": 0.0085,
+      "recheckAt": "2026-06-06",
+      "miss": 0
     },
     {
       "ticker": "1INN.DE",
@@ -468,7 +478,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-05",
+      "verifiedAt": "2026-06-06",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
       "perf6m": -8.43,
@@ -479,7 +489,9 @@
       "div": 4.62,
       "enrichAt": "2026-06-05",
       "sektorPsi": 0.0015,
-      "sektorPsiAtAdd": 0.0015
+      "sektorPsiAtAdd": 0.0015,
+      "recheckAt": "2026-06-06",
+      "miss": 0
     }
   ],
   "psiHistory": [
@@ -556,9 +568,8 @@
       "date": "2026-06-05"
     },
     "energy": {
-      "text": "Energie schwankt mit Öl- und Gaspreisen sowie geopolitischen Spannungen; hohe Cashflows, aber zyklisch und volatil.",
-      "date": null,
-      "seed": true
+      "text": "Der Energiesektor schwächelt kurzfristig trotz starker 6-Monats-Performance. Geopolitische Unsicherheiten und eine schwächelnde Konjunktur belasten.",
+      "date": "2026-06-06"
     },
     "materials": {
       "text": "Rohstoffe hängen an der globalen Industrienachfrage und China; Energiewende stützt Metalle, Konjunkturflaute bremst.",
@@ -609,9 +620,8 @@
       "date": "2026-06-03"
     },
     "india": {
-      "text": "Indien mit starkem Strukturwachstum und junger Bevölkerung; hohe Bewertungen sind das Hauptrisiko.",
-      "date": null,
-      "seed": true
+      "text": "Indien: Aktien fallen wegen Sorgen um Konjunktur und hohe Zinsen. Negative 30-Tage-Entwicklung übertrifft Normalniveau deutlich.",
+      "date": "2026-06-06"
     },
     "latam": {
       "text": "Lateinamerika rohstoff- und zinsgetrieben; hohe Renditen, aber politische und Währungsrisiken.",
@@ -627,37 +637,33 @@
   "news": {
     "items": [
       {
-        "text": "US-Arbeitsmarktdaten übertreffen Erwartungen, Zinserhöhungsängste schüren Wall Street",
+        "text": "US-Tech-Aktien geben nach: KI-Rallye als Übertreibung?",
         "stamp": "05.06.26"
       },
       {
-        "text": "Kanadische Konjunkturwächter sehen trotz Rückgang keine Rezession",
+        "text": "Europa im Minus: Warten auf Kompromiss im Nahen Osten.",
         "stamp": "05.06.26"
       },
       {
-        "text": "WTO-Frühindikator deutet auf anhaltende Handelsresilienz hin",
+        "text": "US-Arbeitsmarkt überrascht positiv: Zinserhöhungsängste schüren Wall Street.",
         "stamp": "05.06.26"
       },
       {
-        "text": "KI-Blase? Analyst warnt vor Überbewertung im Technologiesektor",
+        "text": "Boeing prüft Anhebung der 737 MAX-Produktion auf Rekordniveau.",
         "stamp": "05.06.26"
       },
       {
-        "text": "Meta-Aktie verliert deutlich nach Gewinnmitnahmen-Welle",
-        "stamp": "05.06.26"
-      },
-      {
-        "text": "Siemens Energy Aktie im Minus nach negativen Nachrichten",
+        "text": "Roche-Adipositas-Medikament zeigt vielversprechende Ergebnisse.",
         "stamp": "05.06.26"
       }
     ],
-    "date": "2026-06-05"
+    "date": "2026-06-06"
   },
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 4101,
-    "candCursor": 40,
+    "lastCursor": 4401,
+    "candCursor": 48,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -940,45 +946,55 @@
       "Payoneer Global Inc.",
       "Scandinavian Astor Group AB",
       "Boot Barn Holdings Inc.",
-      "NioCorp Developments Ltd."
+      "NioCorp Developments Ltd.",
+      "WinWay Technology Co., Ltd.",
+      "Wan Hai Lines Ltd.",
+      "EZconn Corporation",
+      "Nien Made Enterprise Co., Ltd.",
+      "AblePrint Technology Co., Ltd.",
+      "Voltronic Power Technology Corp.",
+      "Lotus Pharmaceutical Co., Ltd.",
+      "Fountain Shipping Co., Ltd.",
+      "Century Iron and Steel Industrial Co., Ltd.",
+      "GlobalWafers Co., Ltd."
     ],
-    "noteCursor": 9,
-    "focusCursor": 3,
+    "noteCursor": 10,
+    "focusCursor": 4,
     "recheckCursor": 16,
-    "regionNoteCursor": 7,
-    "notesDay": "2026-06-05",
+    "regionNoteCursor": 8,
+    "notesDay": "2026-06-06",
     "seenBySector": {
-      "cons_cycl": 565,
-      "cons_def": 285,
-      "materials": 378,
-      "health": 1565,
-      "finance": 1135,
-      "energy": 511,
-      "hardware": 359,
-      "software": 1068,
-      "industrial": 473,
-      "utilities": 205,
-      "comm": 238,
-      "ai_semi": 207,
-      "realestate": 102
+      "cons_cycl": 571,
+      "cons_def": 292,
+      "materials": 381,
+      "health": 1583,
+      "finance": 1144,
+      "energy": 515,
+      "hardware": 365,
+      "software": 1081,
+      "industrial": 480,
+      "utilities": 206,
+      "comm": 240,
+      "ai_semi": 211,
+      "realestate": 104
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 565,
-      "cons_def": 285,
-      "materials": 378,
-      "health": 1565,
-      "finance": 1137,
-      "energy": 511,
-      "hardware": 361,
-      "software": 1069,
-      "industrial": 474,
-      "utilities": 205,
-      "comm": 238,
-      "ai_semi": 207,
-      "realestate": 102
+      "cons_cycl": 571,
+      "cons_def": 292,
+      "materials": 381,
+      "health": 1583,
+      "finance": 1146,
+      "energy": 515,
+      "hardware": 367,
+      "software": 1082,
+      "industrial": 481,
+      "utilities": 206,
+      "comm": 240,
+      "ai_semi": 211,
+      "realestate": 104
     },
-    "heavyAt": "2026-06-05T21:11:55.300Z",
+    "heavyAt": "2026-06-06T04:03:48.210Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -989,6 +1005,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-06T04:00:09.823Z"
+  }
 }
