@@ -578,12 +578,22 @@
     else if (sortKey === 'analysts') { v = st.analysts; label = v != null ? v + ' An.' : '—'; }
     else if (sortKey === 'pe') { v = st.pe; label = v != null ? 'KGV ' + v : 'KGV —'; }
     else if (sortKey === 'div') { v = st.div; label = v != null ? v + '% Div' : '— Div'; }
+    else if (sortKey === 'seen') { label = st.seen ? st.seen.split('-').reverse().join('.') : '—'; }
     // Ziel (Kursziel-Potenzial): Vorzeichen über fmtPct (kein "+-"), Farbe nach Richtung
     else { v = st.upside; label = v != null ? fmtPct(Math.round(v)) : '—'; cls += (v != null && v < 0) ? ' down' : ' up'; }
     return '<span class="' + cls + '">' + label + '</span>';
   }
 
   function cmp(a, b) {
+    // Aufnahmedatum: String-Vergleich (ISO "YYYY-MM-DD" sortiert chronologisch korrekt).
+    if (sortKey === 'seen') {
+      const sa = a.seen || '', sb = b.seen || '';
+      if (!sa && !sb) return (b.upside ?? -999) - (a.upside ?? -999);
+      if (!sa) return 1;
+      if (!sb) return -1;
+      if (sa === sb) return (b.upside ?? -999) - (a.upside ?? -999);
+      return sortDir === -1 ? (sa < sb ? 1 : -1) : (sa < sb ? -1 : 1);
+    }
     const va = a[sortKey], vb = b[sortKey];
     // fehlende Werte immer ans Ende
     const miss = v => v == null || !isFinite(v);
