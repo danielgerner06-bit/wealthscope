@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-07",
-  "updatedAt": "2026-06-07T12:00:10.061Z",
+  "updatedAt": "2026-06-07T14:00:28.437Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.008,
+      "sektorPsi": 0.0079,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0072,
+      "sektorPsi": 0.0071,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0072,
+      "sektorPsi": 0.0071,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0096,
+      "sektorPsi": 0.0095,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -456,7 +456,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.008,
+      "sektorPsi": 0.0079,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -635,8 +635,24 @@
   "news": {
     "items": [
       {
-        "text": "Iran-Konflikt treibt Ölpreise, belastet Aktienmärkte",
+        "text": "Silberpreis erreicht kritische Zone; 20%-Abverkauf droht.",
+        "stamp": "07.06.26"
+      },
+      {
+        "text": "Russlands Regierung warnt vor drohendem Mega-Loch in der Staatskasse.",
+        "stamp": "07.06.26"
+      },
+      {
+        "text": "EZB und Fed könnten Zinsentscheidungen angesichts neuer Inflationswellen verschieben.",
         "stamp": "06.06.26"
+      },
+      {
+        "text": "SpaceX-Börsengang sprengt alle Dimensionen; Anleger gespalten.",
+        "stamp": "05.06.26"
+      },
+      {
+        "text": "US-Arbeitsmarktdaten und Fed-Erwartungen testen iShares MSCI World ETF.",
+        "stamp": "05.06.26"
       }
     ],
     "date": "2026-06-07"
@@ -644,8 +660,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 5301,
-    "candCursor": 72,
+    "lastCursor": 5601,
+    "candCursor": 80,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -949,42 +965,42 @@
       "Rex International Holding Ltd"
     ],
     "noteCursor": 11,
-    "focusCursor": 7,
+    "focusCursor": 0,
     "recheckCursor": 16,
     "regionNoteCursor": 9,
     "notesDay": "2026-06-07",
     "seenBySector": {
       "cons_cycl": 598,
-      "cons_def": 306,
-      "materials": 405,
-      "health": 1649,
-      "finance": 1179,
-      "energy": 529,
-      "hardware": 379,
-      "software": 1116,
-      "industrial": 499,
-      "utilities": 210,
-      "comm": 253,
+      "cons_def": 309,
+      "materials": 413,
+      "health": 1673,
+      "finance": 1195,
+      "energy": 544,
+      "hardware": 384,
+      "software": 1132,
+      "industrial": 504,
+      "utilities": 214,
+      "comm": 254,
       "ai_semi": 223,
-      "realestate": 107
+      "realestate": 108
     },
     "pendingReject": [],
     "evaluatedBySector": {
       "cons_cycl": 598,
-      "cons_def": 306,
-      "materials": 405,
-      "health": 1649,
-      "finance": 1181,
-      "energy": 529,
-      "hardware": 381,
-      "software": 1117,
-      "industrial": 500,
-      "utilities": 210,
-      "comm": 253,
+      "cons_def": 309,
+      "materials": 413,
+      "health": 1673,
+      "finance": 1197,
+      "energy": 544,
+      "hardware": 386,
+      "software": 1133,
+      "industrial": 505,
+      "utilities": 214,
+      "comm": 254,
       "ai_semi": 223,
-      "realestate": 107
+      "realestate": 108
     },
-    "heavyAt": "2026-06-07T04:04:42.706Z",
+    "heavyAt": "2026-06-07T13:53:36.258Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -995,6 +1011,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-07T12:00:10.061Z"
+  }
 }
