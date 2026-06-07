@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-07",
-  "updatedAt": "2026-06-07T21:00:16.660Z",
+  "updatedAt": "2026-06-07T21:13:52.942Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0079,
+      "sektorPsi": 0.0078,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -456,7 +456,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0079,
+      "sektorPsi": 0.0078,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -635,24 +635,24 @@
   "news": {
     "items": [
       {
-        "text": "Silberpreis erreicht kritische Zone; 20%-Abverkauf droht.",
+        "text": "Trump fordert Zinssenkung der Fed – Ökonomen erwarten das Gegenteil.",
         "stamp": "07.06.26"
       },
       {
-        "text": "Russlands Regierung warnt vor drohendem Mega-Loch in der Staatskasse.",
+        "text": "Ukraine: Europa muss zur Diplomatie bereit sein.",
         "stamp": "07.06.26"
       },
       {
-        "text": "EZB und Fed könnten Zinsentscheidungen angesichts neuer Inflationswellen verschieben.",
-        "stamp": "06.06.26"
+        "text": "Ministerpräsidenten lehnen gemeinsamen Landtagswahltermin ab.",
+        "stamp": "07.06.26"
       },
       {
-        "text": "SpaceX-Börsengang sprengt alle Dimensionen; Anleger gespalten.",
-        "stamp": "05.06.26"
+        "text": "Reformpolitik: Wie sich Akzeptanz erreichen lässt.",
+        "stamp": "07.06.26"
       },
       {
-        "text": "US-Arbeitsmarktdaten und Fed-Erwartungen testen iShares MSCI World ETF.",
-        "stamp": "05.06.26"
+        "text": "Zinsentscheide, US-Daten & SpaceX-IPO: Volatile Handelswoche steht an.",
+        "stamp": "07.06.26"
       }
     ],
     "date": "2026-06-07"
@@ -660,8 +660,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 5601,
-    "candCursor": 80,
+    "lastCursor": 5901,
+    "candCursor": 88,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -962,45 +962,68 @@
       "Biomea Fusion, Inc.",
       "Capricor Therapeutics, Inc.",
       "Liquidia Corporation",
-      "Rex International Holding Ltd"
+      "Rex International Holding Ltd",
+      "Dürr AG",
+      "Jost Werke AG",
+      "adesso SE",
+      "YOC AG",
+      "B.R.A.I.N. Biotechnology Research and Information Network AG",
+      "Exasol AG"
     ],
     "noteCursor": 11,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 9,
     "notesDay": "2026-06-07",
     "seenBySector": {
-      "cons_cycl": 598,
-      "cons_def": 309,
-      "materials": 413,
-      "health": 1673,
-      "finance": 1195,
-      "energy": 544,
-      "hardware": 384,
-      "software": 1132,
-      "industrial": 504,
-      "utilities": 214,
-      "comm": 254,
-      "ai_semi": 223,
-      "realestate": 108
+      "cons_cycl": 605,
+      "cons_def": 312,
+      "materials": 418,
+      "health": 1700,
+      "finance": 1209,
+      "energy": 553,
+      "hardware": 387,
+      "software": 1145,
+      "industrial": 507,
+      "utilities": 219,
+      "comm": 256,
+      "ai_semi": 230,
+      "realestate": 112
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "OTEX",
+      "OTF",
+      "OTIS",
+      "OTLC",
+      "OTLK",
+      "OTTR",
+      "OUST",
+      "OVID",
+      "OVTZ",
+      "OVV",
+      "OWL",
+      "OWLS",
+      "OWLT",
+      "OXBR",
+      "OXM",
+      "OXSQ"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 598,
-      "cons_def": 309,
-      "materials": 413,
-      "health": 1673,
-      "finance": 1197,
-      "energy": 544,
-      "hardware": 386,
-      "software": 1133,
-      "industrial": 505,
-      "utilities": 214,
-      "comm": 254,
-      "ai_semi": 223,
-      "realestate": 108
+      "cons_cycl": 605,
+      "cons_def": 312,
+      "materials": 418,
+      "health": 1700,
+      "finance": 1211,
+      "energy": 553,
+      "hardware": 389,
+      "software": 1146,
+      "industrial": 508,
+      "utilities": 219,
+      "comm": 256,
+      "ai_semi": 230,
+      "realestate": 112
     },
-    "heavyAt": "2026-06-07T13:53:36.258Z",
+    "heavyAt": "2026-06-07T21:05:51.425Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1011,6 +1034,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-07T21:00:16.660Z"
+  }
 }
