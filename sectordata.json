@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-07",
-  "updatedAt": "2026-06-07T04:00:07.876Z",
+  "updatedAt": "2026-06-07T04:11:22.568Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0081,
+      "sektorPsi": 0.008,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0072,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0072,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0098,
+      "sektorPsi": 0.0096,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -456,7 +456,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0081,
+      "sektorPsi": 0.008,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -488,7 +488,7 @@
       "eps": 5.01,
       "div": 4.62,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0015,
+      "sektorPsi": 0.0014,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -572,9 +572,8 @@
       "date": "2026-06-06"
     },
     "materials": {
-      "text": "Rohstoffe hängen an der globalen Industrienachfrage und China; Energiewende stützt Metalle, Konjunkturflaute bremst.",
-      "date": null,
-      "seed": true
+      "text": "Der Rohstoffsektor stagniert kurzfristig (+0.17%) trotz starker Halbjahresperformance (+16.01%). Globale Konjunktureintrübung und geopolitische Unsicherheiten dämpfen die Nachfrage.",
+      "date": "2026-06-07"
     },
     "utilities": {
       "text": "Versorger zinssensibel und defensiv; stabile Dividenden, zusätzlicher Strombedarf durch KI-Rechenzentren als Wachstumstreiber.",
@@ -624,9 +623,8 @@
       "date": "2026-06-06"
     },
     "latam": {
-      "text": "Lateinamerika rohstoff- und zinsgetrieben; hohe Renditen, aber politische und Währungsrisiken.",
-      "date": null,
-      "seed": true
+      "text": "Lateinamerika: Kurzfristig schwach (-6,44%) wegen Normalisierung nach Zinsanstiegen. Langfristig positiv (+7,94%) durch robuste Konjunkturaussichten.",
+      "date": "2026-06-07"
     },
     "world": {
       "text": "Der Weltmarkt insgesamt wird von US-Technologie dominiert; Streuung über Regionen mindert Klumpenrisiken.",
@@ -637,37 +635,17 @@
   "news": {
     "items": [
       {
-        "text": "Meta-Aktie im freien Fall nach milliardenschwerer Kapitalmaßnahme.",
+        "text": "Iran-Konflikt treibt Ölpreise, belastet Aktienmärkte",
         "stamp": "06.06.26"
-      },
-      {
-        "text": "Iran droht mit Schließung alternativer Öl-Versorgungsroute.",
-        "stamp": "06.06.26"
-      },
-      {
-        "text": "Goldpreis bricht nach US-Jobdaten ein; Sorge vor Mittwoch.",
-        "stamp": "06.06.26"
-      },
-      {
-        "text": "SpaceX IPO rückt näher: Jahrhundertchance oder teuerster Hype?",
-        "stamp": "06.06.26"
-      },
-      {
-        "text": "KI-Unternehmen OpenAI: Florida verklagt ChatGPT-Firma.",
-        "stamp": "06.06.26"
-      },
-      {
-        "text": "DAX startet mit Verlusten erwartet; US-Jobdaten und Geopolitik im Blick.",
-        "stamp": "05.06.26"
       }
     ],
-    "date": "2026-06-06"
+    "date": "2026-06-07"
   },
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 5001,
-    "candCursor": 64,
+    "lastCursor": 5301,
+    "candCursor": 72,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -967,45 +945,46 @@
       "Ascendis Pharma A/S",
       "Biomea Fusion, Inc.",
       "Capricor Therapeutics, Inc.",
-      "Liquidia Corporation"
+      "Liquidia Corporation",
+      "Rex International Holding Ltd"
     ],
-    "noteCursor": 10,
-    "focusCursor": 6,
+    "noteCursor": 11,
+    "focusCursor": 7,
     "recheckCursor": 16,
-    "regionNoteCursor": 8,
-    "notesDay": "2026-06-06",
+    "regionNoteCursor": 9,
+    "notesDay": "2026-06-07",
     "seenBySector": {
-      "cons_cycl": 592,
-      "cons_def": 302,
-      "materials": 397,
-      "health": 1628,
-      "finance": 1166,
-      "energy": 525,
-      "hardware": 377,
-      "software": 1104,
-      "industrial": 490,
-      "utilities": 208,
-      "comm": 248,
-      "ai_semi": 216,
-      "realestate": 105
+      "cons_cycl": 598,
+      "cons_def": 306,
+      "materials": 405,
+      "health": 1649,
+      "finance": 1179,
+      "energy": 529,
+      "hardware": 379,
+      "software": 1116,
+      "industrial": 499,
+      "utilities": 210,
+      "comm": 253,
+      "ai_semi": 223,
+      "realestate": 107
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 592,
-      "cons_def": 302,
-      "materials": 397,
-      "health": 1628,
-      "finance": 1168,
-      "energy": 525,
-      "hardware": 379,
-      "software": 1105,
-      "industrial": 491,
-      "utilities": 208,
-      "comm": 248,
-      "ai_semi": 216,
-      "realestate": 105
+      "cons_cycl": 598,
+      "cons_def": 306,
+      "materials": 405,
+      "health": 1649,
+      "finance": 1181,
+      "energy": 529,
+      "hardware": 381,
+      "software": 1117,
+      "industrial": 500,
+      "utilities": 210,
+      "comm": 253,
+      "ai_semi": 223,
+      "realestate": 107
     },
-    "heavyAt": "2026-06-06T21:04:49.386Z",
+    "heavyAt": "2026-06-07T04:04:42.706Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1016,6 +995,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-07T04:00:07.876Z"
+  }
 }
