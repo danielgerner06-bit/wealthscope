@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-08",
-  "updatedAt": "2026-06-08T08:00:15.553Z",
+  "updatedAt": "2026-06-08T08:54:19.601Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.0076,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -456,7 +456,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.0076,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -966,39 +966,29 @@
       "cons_cycl": 613,
       "cons_def": 316,
       "materials": 419,
-      "health": 1724,
-      "finance": 1226,
-      "energy": 560,
+      "health": 1725,
+      "finance": 1229,
+      "energy": 561,
       "hardware": 391,
       "software": 1172,
-      "industrial": 515,
-      "utilities": 222,
+      "industrial": 516,
+      "utilities": 223,
       "comm": 257,
       "ai_semi": 232,
       "realestate": 112
     },
-    "pendingReject": [
-      "PMVP",
-      "PNBK",
-      "PNC",
-      "PNFP",
-      "PNNT",
-      "PNR",
-      "PNRG",
-      "PNTG",
-      "PNW"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
       "cons_cycl": 613,
       "cons_def": 316,
       "materials": 419,
-      "health": 1724,
-      "finance": 1228,
-      "energy": 560,
+      "health": 1725,
+      "finance": 1231,
+      "energy": 561,
       "hardware": 393,
       "software": 1173,
-      "industrial": 516,
-      "utilities": 222,
+      "industrial": 517,
+      "utilities": 223,
       "comm": 257,
       "ai_semi": 232,
       "realestate": 112
@@ -1014,6 +1004,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-08T08:00:15.553Z"
+  }
 }
