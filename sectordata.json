@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-07",
-  "updatedAt": "2026-06-08T04:00:18.671Z",
+  "updated": "2026-06-08",
+  "updatedAt": "2026-06-08T04:12:19.634Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0078,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0095,
+      "sektorPsi": 0.0093,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -456,7 +456,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0078,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -576,9 +576,8 @@
       "date": "2026-06-07"
     },
     "utilities": {
-      "text": "Versorger zinssensibel und defensiv; stabile Dividenden, zusätzlicher Strombedarf durch KI-Rechenzentren als Wachstumstreiber.",
-      "date": null,
-      "seed": true
+      "text": "Steigende Zinsen belasten Versorger-Aktien seit 30 Tagen stark. Langfristig bleibt der Sektor angesichts der Nullperformance seit sechs Monaten unbeeindruckt.",
+      "date": "2026-06-08"
     },
     "realestate": {
       "text": "Immobilien leiden unter hohen Finanzierungskosten; eine Zinswende nach unten wäre der wichtigste Erholungstreiber.",
@@ -627,41 +626,28 @@
       "date": "2026-06-07"
     },
     "world": {
-      "text": "Der Weltmarkt insgesamt wird von US-Technologie dominiert; Streuung über Regionen mindert Klumpenrisiken.",
-      "date": null,
-      "seed": true
+      "text": "Globale Märkte steigen stark wegen günstiger Konjunktur und KI-Boom. Die 30-Tage-Performance übertrifft das Normalniveau deutlich.",
+      "date": "2026-06-08"
     }
   },
   "news": {
     "items": [
       {
-        "text": "Trump fordert Zinssenkung der Fed – Ökonomen erwarten das Gegenteil.",
-        "stamp": "07.06.26"
+        "text": "EZB und Fed vor Zinsentscheidungen: Inflationsdruck bleibt hoch.",
+        "stamp": "06.06.26"
       },
       {
-        "text": "Ukraine: Europa muss zur Diplomatie bereit sein.",
-        "stamp": "07.06.26"
-      },
-      {
-        "text": "Ministerpräsidenten lehnen gemeinsamen Landtagswahltermin ab.",
-        "stamp": "07.06.26"
-      },
-      {
-        "text": "Reformpolitik: Wie sich Akzeptanz erreichen lässt.",
-        "stamp": "07.06.26"
-      },
-      {
-        "text": "Zinsentscheide, US-Daten & SpaceX-IPO: Volatile Handelswoche steht an.",
-        "stamp": "07.06.26"
+        "text": "Deutsche Wirtschaft: Sorge vor Rezession wächst – Inflation bleibt hoch.",
+        "stamp": "06.06.26"
       }
     ],
-    "date": "2026-06-07"
+    "date": "2026-06-08"
   },
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 5901,
-    "candCursor": 88,
+    "lastCursor": 6201,
+    "candCursor": 96,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -968,62 +954,56 @@
       "adesso SE",
       "YOC AG",
       "B.R.A.I.N. Biotechnology Research and Information Network AG",
-      "Exasol AG"
+      "Exasol AG",
+      "Edenred SE"
     ],
-    "noteCursor": 11,
-    "focusCursor": 1,
+    "noteCursor": 12,
+    "focusCursor": 2,
     "recheckCursor": 16,
-    "regionNoteCursor": 9,
-    "notesDay": "2026-06-07",
+    "regionNoteCursor": 0,
+    "notesDay": "2026-06-08",
     "seenBySector": {
-      "cons_cycl": 605,
-      "cons_def": 312,
-      "materials": 418,
-      "health": 1700,
-      "finance": 1209,
-      "energy": 553,
-      "hardware": 387,
-      "software": 1145,
-      "industrial": 507,
-      "utilities": 219,
-      "comm": 256,
-      "ai_semi": 230,
+      "cons_cycl": 613,
+      "cons_def": 316,
+      "materials": 419,
+      "health": 1724,
+      "finance": 1226,
+      "energy": 560,
+      "hardware": 391,
+      "software": 1172,
+      "industrial": 515,
+      "utilities": 222,
+      "comm": 257,
+      "ai_semi": 232,
       "realestate": 112
     },
     "pendingReject": [
-      "OTEX",
-      "OTF",
-      "OTIS",
-      "OTLC",
-      "OTLK",
-      "OTTR",
-      "OUST",
-      "OVID",
-      "OVTZ",
-      "OVV",
-      "OWL",
-      "OWLS",
-      "OWLT",
-      "OXBR",
-      "OXM",
-      "OXSQ"
+      "PMVP",
+      "PNBK",
+      "PNC",
+      "PNFP",
+      "PNNT",
+      "PNR",
+      "PNRG",
+      "PNTG",
+      "PNW"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 605,
-      "cons_def": 312,
-      "materials": 418,
-      "health": 1700,
-      "finance": 1211,
-      "energy": 553,
-      "hardware": 389,
-      "software": 1146,
-      "industrial": 508,
-      "utilities": 219,
-      "comm": 256,
-      "ai_semi": 230,
+      "cons_cycl": 613,
+      "cons_def": 316,
+      "materials": 419,
+      "health": 1724,
+      "finance": 1228,
+      "energy": 560,
+      "hardware": 393,
+      "software": 1173,
+      "industrial": 516,
+      "utilities": 222,
+      "comm": 257,
+      "ai_semi": 232,
       "realestate": 112
     },
-    "heavyAt": "2026-06-07T21:05:51.425Z",
+    "heavyAt": "2026-06-08T04:04:55.536Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1034,6 +1014,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-08T04:00:18.671Z"
+  }
 }
