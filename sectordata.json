@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.0076,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.0076,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -580,9 +580,8 @@
       "date": "2026-06-08"
     },
     "realestate": {
-      "text": "Immobilien leiden unter hohen Finanzierungskosten; eine Zinswende nach unten wäre der wichtigste Erholungstreiber.",
-      "date": null,
-      "seed": true
+      "text": "Der Immobiliensektor stagniert kurzfristig aufgrund hoher Zinsen. Langfristig zeigt er sich resilienter, was auf strukturelle Nachfrage hindeutet.",
+      "date": "2026-06-09"
     }
   },
   "regionNotes": {
@@ -599,9 +598,8 @@
       "date": "2026-06-02"
     },
     "usa": {
-      "text": "USA bleibt von Technologie und KI getrieben; robuste Wirtschaft, aber hohe Bewertungen und Abhängigkeit von wenigen Megacaps.",
-      "date": null,
-      "seed": true
+      "text": "Leichte Abkühlung der US-Konjunktur bei weiterhin robustem 6-Monats-Wachstum. Zinsen und KI treiben die Märkte, während Geopolitik und Energiepreise für Unsicherheit sorgen.",
+      "date": "2026-06-09"
     },
     "europe": {
       "text": "Europa günstiger bewertet als die USA; Industrie und Banken stützen, schwaches Wachstum und Energiekosten bremsen.",
@@ -633,17 +631,37 @@
   "news": {
     "items": [
       {
-        "text": "Iran-Konflikt treibt Ölpreise, belastet Aktienmärkte weltweit",
-        "stamp": "06.06.26"
+        "text": "US-Wirtschaft: Hypothekenkredite so hoch wie lange nicht – Gefahr?",
+        "stamp": "08.06.26"
+      },
+      {
+        "text": "Japans Wirtschaft wächst langsamer als geschätzt im Q1.",
+        "stamp": "08.06.26"
+      },
+      {
+        "text": "Gold bleibt sicherer Hafen trotz geopolitischer Unsicherheit.",
+        "stamp": "07.06.26"
+      },
+      {
+        "text": "OpenAI plant offenbar Umbau von ChatGPT zur \"Super-App\".",
+        "stamp": "07.06.26"
+      },
+      {
+        "text": "Tschernobyl: Treffer an Anlage für Kernmaterial sorgt für Besorgnis.",
+        "stamp": "07.06.26"
+      },
+      {
+        "text": "Apple schließt EU-Nutzer von neuen KI-Funktionen aus.",
+        "stamp": "07.06.26"
       }
     ],
-    "date": "2026-06-08"
+    "date": "2026-06-09"
   },
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 6801,
-    "candCursor": 112,
+    "lastCursor": 7101,
+    "candCursor": 120,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -961,45 +979,50 @@
       "DigitalOcean Holdings, Inc.",
       "Origin Materials, Inc.",
       "The Beauty Health Company",
-      "Turning Point Brands, Inc."
+      "Turning Point Brands, Inc.",
+      "Kulicke & Soffa Industries, Inc."
     ],
-    "noteCursor": 12,
-    "focusCursor": 4,
+    "noteCursor": 0,
+    "focusCursor": 5,
     "recheckCursor": 16,
-    "regionNoteCursor": 0,
-    "notesDay": "2026-06-08",
+    "regionNoteCursor": 1,
+    "notesDay": "2026-06-09",
     "seenBySector": {
-      "cons_cycl": 626,
-      "cons_def": 323,
-      "materials": 426,
-      "health": 1770,
-      "finance": 1249,
-      "energy": 575,
-      "hardware": 402,
-      "software": 1203,
-      "industrial": 529,
-      "utilities": 226,
-      "comm": 260,
-      "ai_semi": 243,
-      "realestate": 115
+      "cons_cycl": 633,
+      "cons_def": 327,
+      "materials": 433,
+      "health": 1788,
+      "finance": 1264,
+      "energy": 579,
+      "hardware": 407,
+      "software": 1217,
+      "industrial": 534,
+      "utilities": 227,
+      "comm": 263,
+      "ai_semi": 244,
+      "realestate": 118
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "SKIL",
+      "SKIN",
+      "SKLZ"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 626,
-      "cons_def": 323,
-      "materials": 426,
-      "health": 1770,
-      "finance": 1251,
-      "energy": 575,
-      "hardware": 404,
-      "software": 1204,
-      "industrial": 530,
-      "utilities": 226,
-      "comm": 260,
-      "ai_semi": 243,
-      "realestate": 115
+      "cons_cycl": 633,
+      "cons_def": 327,
+      "materials": 433,
+      "health": 1788,
+      "finance": 1266,
+      "energy": 579,
+      "hardware": 409,
+      "software": 1218,
+      "industrial": 535,
+      "utilities": 227,
+      "comm": 263,
+      "ai_semi": 244,
+      "realestate": 118
     },
-    "heavyAt": "2026-06-08T16:04:27.508Z",
+    "heavyAt": "2026-06-09T01:56:02.338Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
