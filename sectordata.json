@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-09",
-  "updatedAt": "2026-06-09T15:00:59.044Z",
+  "updatedAt": "2026-06-09T15:51:33.704Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -153,21 +153,21 @@
     },
     {
       "id": "ai_semi",
-      "perf": 11.22,
-      "avg30": 8.61,
-      "perf6m": 82.22
+      "perf": 9.08,
+      "avg30": 8.6,
+      "perf6m": 78.72
     },
     {
       "id": "hardware",
-      "perf": 6.84,
+      "perf": 6.04,
       "avg30": 3.86,
-      "perf6m": 24.82
+      "perf6m": 23.89
     },
     {
       "id": "comm",
-      "perf": -4.98,
+      "perf": -5.33,
       "avg30": 0.87,
-      "perf6m": -3.7
+      "perf6m": -4.06
     },
     {
       "id": "health",
@@ -177,15 +177,15 @@
     },
     {
       "id": "finance",
-      "perf": 1.45,
+      "perf": 1.14,
       "avg30": 0.07,
-      "perf6m": -2.53
+      "perf6m": -2.83
     },
     {
       "id": "cons_cycl",
-      "perf": -3.75,
+      "perf": -4,
       "avg30": 0.95,
-      "perf6m": -3.44
+      "perf6m": -3.69
     },
     {
       "id": "cons_def",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 0.1,
+      "perf": -0.21,
       "avg30": 1.67,
-      "perf6m": 12.68
+      "perf6m": 12.32
     },
     {
       "id": "energy",
@@ -207,15 +207,15 @@
     },
     {
       "id": "materials",
-      "perf": -2.27,
+      "perf": -2.8,
       "avg30": 1.4,
-      "perf6m": 13.98
+      "perf6m": 13.36
     },
     {
       "id": "utilities",
-      "perf": -3.29,
+      "perf": -2.87,
       "avg30": 0.91,
-      "perf6m": -0.17
+      "perf6m": 0.26
     },
     {
       "id": "realestate",
@@ -227,45 +227,45 @@
   "bars30Region": [
     {
       "id": "usa",
-      "perf": 0.55,
+      "perf": 0.51,
       "avg30": 1.93,
-      "perf6m": 7.81
+      "perf6m": 7.77
     },
     {
       "id": "europe",
-      "perf": -0.68,
+      "perf": -0.75,
       "avg30": 1.28,
-      "perf6m": 6.71
+      "perf6m": 6.63
     },
     {
       "id": "germany",
-      "perf": -1.2,
+      "perf": -1.27,
       "avg30": 0.32,
-      "perf6m": 2.43
+      "perf6m": 2.36
     },
     {
       "id": "japan",
-      "perf": 0.14,
+      "perf": -0.6,
       "avg30": 2.19,
-      "perf6m": 9.79
+      "perf6m": 8.98
     },
     {
       "id": "china",
-      "perf": -6.74,
+      "perf": -7.25,
       "avg30": 0.32,
-      "perf6m": -12.23
+      "perf6m": -12.71
     },
     {
       "id": "em",
-      "perf": -2.58,
+      "perf": -2.96,
       "avg30": 3.31,
-      "perf6m": 21
+      "perf6m": 20.52
     },
     {
       "id": "apac",
-      "perf": -0.89,
+      "perf": -1.63,
       "avg30": 3.29,
-      "perf6m": 22.17
+      "perf6m": 21.26
     },
     {
       "id": "india",
@@ -275,15 +275,15 @@
     },
     {
       "id": "latam",
-      "perf": -9.03,
+      "perf": -9.31,
       "avg30": 2.98,
-      "perf6m": 5.17
+      "perf6m": 4.86
     },
     {
       "id": "world",
-      "perf": 0.07,
+      "perf": -0.12,
       "avg30": 1.82,
-      "perf6m": 7.8
+      "perf6m": 7.59
     }
   ],
   "topStocks": [
@@ -318,7 +318,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0055,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0075,
+      "sektorPsi": 0.006,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0075,
+      "sektorPsi": 0.006,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.56,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0079,
+      "sektorPsi": 0.0052,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -456,7 +456,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0055,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -488,7 +488,7 @@
       "eps": 5.01,
       "div": 4.62,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0013,
+      "sektorPsi": 0.0011,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -631,20 +631,20 @@
   "news": {
     "items": [
       {
-        "text": "Israel greift Ziele im Iran an, Trump fordert Stopp.",
+        "text": "Geopolitik, Energie, Märkte belasten globale Wirtschaft 2026",
         "stamp": "09.06.26"
       },
       {
-        "text": "China sichert Nordkorea Unterstützung zu",
-        "stamp": "08.06.26"
+        "text": "Geopolitik und Fed-Pause stützen Dollar, Euro unter Druck",
+        "stamp": "09.06.26"
       },
       {
-        "text": "Euro über 1,16: Geopolitik und US-Daten halten Märkte in Atem",
-        "stamp": "08.06.26"
+        "text": "Aktien steigen dies- und jenseits des Atlantiks; KI-Fantasie",
+        "stamp": "09.06.26"
       },
       {
-        "text": "Dow Jones: Geopolitik trübt die Stimmung",
-        "stamp": "08.06.26"
+        "text": "US-Notenbank: Trump will keinen Einfluss auf neuen Fed-Chef",
+        "stamp": "07.06.26"
       }
     ],
     "date": "2026-06-09"
@@ -652,8 +652,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 7401,
-    "candCursor": 128,
+    "lastCursor": 7701,
+    "candCursor": 136,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -972,45 +972,53 @@
       "Origin Materials, Inc.",
       "The Beauty Health Company",
       "Turning Point Brands, Inc.",
-      "Kulicke & Soffa Industries, Inc."
+      "Kulicke & Soffa Industries, Inc.",
+      "LSB Industries, Inc.",
+      "Commercial Vehicle Group, Inc.",
+      "Tigo Energy, Inc.",
+      "Seanergy Maritime Holdings Corp.",
+      "Diana Shipping Inc.",
+      "Innovative Aerosystems, Inc.",
+      "Koppers Holdings Inc.",
+      "Tredegar Corporation"
     ],
     "noteCursor": 0,
-    "focusCursor": 6,
+    "focusCursor": 7,
     "recheckCursor": 16,
     "regionNoteCursor": 1,
     "notesDay": "2026-06-09",
     "seenBySector": {
-      "cons_cycl": 638,
-      "cons_def": 334,
-      "materials": 437,
-      "health": 1809,
-      "finance": 1276,
-      "energy": 587,
-      "hardware": 412,
-      "software": 1236,
-      "industrial": 537,
-      "utilities": 229,
-      "comm": 265,
-      "ai_semi": 247,
+      "cons_cycl": 642,
+      "cons_def": 338,
+      "materials": 442,
+      "health": 1830,
+      "finance": 1289,
+      "energy": 596,
+      "hardware": 417,
+      "software": 1249,
+      "industrial": 544,
+      "utilities": 232,
+      "comm": 270,
+      "ai_semi": 250,
       "realestate": 120
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 638,
-      "cons_def": 334,
-      "materials": 437,
-      "health": 1809,
-      "finance": 1278,
-      "energy": 587,
-      "hardware": 414,
-      "software": 1237,
-      "industrial": 538,
-      "utilities": 229,
-      "comm": 265,
-      "ai_semi": 247,
+      "cons_cycl": 642,
+      "cons_def": 338,
+      "materials": 442,
+      "health": 1830,
+      "finance": 1291,
+      "energy": 596,
+      "hardware": 419,
+      "software": 1250,
+      "industrial": 545,
+      "utilities": 232,
+      "comm": 270,
+      "ai_semi": 250,
       "realestate": 120
     },
-    "heavyAt": "2026-06-09T08:25:58.842Z",
+    "heavyAt": "2026-06-09T15:44:11.406Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1021,6 +1029,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-09T15:00:59.044Z"
+  }
 }
