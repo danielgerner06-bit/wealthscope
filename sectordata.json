@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-08",
-  "updatedAt": "2026-06-09T08:01:00.616Z",
+  "updated": "2026-06-09",
+  "updatedAt": "2026-06-09T08:33:35.676Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.68,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0076,
+      "sektorPsi": 0.0075,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.51,
       "enrichAt": "2026-06-05",
-      "sektorPsi": 0.0076,
+      "sektorPsi": 0.0075,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -631,28 +631,20 @@
   "news": {
     "items": [
       {
-        "text": "US-Wirtschaft: Hypothekenkredite so hoch wie lange nicht – Gefahr?",
+        "text": "Israel greift Ziele im Iran an, Trump fordert Stopp.",
+        "stamp": "09.06.26"
+      },
+      {
+        "text": "China sichert Nordkorea Unterstützung zu",
         "stamp": "08.06.26"
       },
       {
-        "text": "Japans Wirtschaft wächst langsamer als geschätzt im Q1.",
+        "text": "Euro über 1,16: Geopolitik und US-Daten halten Märkte in Atem",
         "stamp": "08.06.26"
       },
       {
-        "text": "Gold bleibt sicherer Hafen trotz geopolitischer Unsicherheit.",
-        "stamp": "07.06.26"
-      },
-      {
-        "text": "OpenAI plant offenbar Umbau von ChatGPT zur \"Super-App\".",
-        "stamp": "07.06.26"
-      },
-      {
-        "text": "Tschernobyl: Treffer an Anlage für Kernmaterial sorgt für Besorgnis.",
-        "stamp": "07.06.26"
-      },
-      {
-        "text": "Apple schließt EU-Nutzer von neuen KI-Funktionen aus.",
-        "stamp": "07.06.26"
+        "text": "Dow Jones: Geopolitik trübt die Stimmung",
+        "stamp": "08.06.26"
       }
     ],
     "date": "2026-06-09"
@@ -660,8 +652,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 7101,
-    "candCursor": 120,
+    "lastCursor": 7401,
+    "candCursor": 128,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -983,46 +975,42 @@
       "Kulicke & Soffa Industries, Inc."
     ],
     "noteCursor": 0,
-    "focusCursor": 5,
+    "focusCursor": 6,
     "recheckCursor": 16,
     "regionNoteCursor": 1,
     "notesDay": "2026-06-09",
     "seenBySector": {
-      "cons_cycl": 633,
-      "cons_def": 327,
-      "materials": 433,
-      "health": 1788,
-      "finance": 1264,
-      "energy": 579,
-      "hardware": 407,
-      "software": 1217,
-      "industrial": 534,
-      "utilities": 227,
-      "comm": 263,
-      "ai_semi": 244,
-      "realestate": 118
+      "cons_cycl": 638,
+      "cons_def": 334,
+      "materials": 437,
+      "health": 1809,
+      "finance": 1276,
+      "energy": 587,
+      "hardware": 412,
+      "software": 1236,
+      "industrial": 537,
+      "utilities": 229,
+      "comm": 265,
+      "ai_semi": 247,
+      "realestate": 120
     },
-    "pendingReject": [
-      "SKIL",
-      "SKIN",
-      "SKLZ"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 633,
-      "cons_def": 327,
-      "materials": 433,
-      "health": 1788,
-      "finance": 1266,
-      "energy": 579,
-      "hardware": 409,
-      "software": 1218,
-      "industrial": 535,
-      "utilities": 227,
-      "comm": 263,
-      "ai_semi": 244,
-      "realestate": 118
+      "cons_cycl": 638,
+      "cons_def": 334,
+      "materials": 437,
+      "health": 1809,
+      "finance": 1278,
+      "energy": 587,
+      "hardware": 414,
+      "software": 1237,
+      "industrial": 538,
+      "utilities": 229,
+      "comm": 265,
+      "ai_semi": 247,
+      "realestate": 120
     },
-    "heavyAt": "2026-06-09T01:56:02.338Z",
+    "heavyAt": "2026-06-09T08:25:58.842Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1033,6 +1021,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-09T08:01:00.616Z"
+  }
 }
