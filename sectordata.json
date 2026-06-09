@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-09",
-  "updatedAt": "2026-06-09T16:00:59.556Z",
+  "updatedAt": "2026-06-09T17:00:58.935Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -153,9 +153,9 @@
     },
     {
       "id": "ai_semi",
-      "perf": 7.27,
+      "perf": 6.49,
       "avg30": 8.59,
-      "perf6m": 75.76
+      "perf6m": 74.48
     },
     {
       "id": "hardware",
@@ -177,15 +177,15 @@
     },
     {
       "id": "finance",
-      "perf": 1.09,
+      "perf": 1.15,
       "avg30": 0.07,
-      "perf6m": -2.89
+      "perf6m": -2.82
     },
     {
       "id": "cons_cycl",
-      "perf": -3.95,
+      "perf": -4.19,
       "avg30": 0.95,
-      "perf6m": -3.64
+      "perf6m": -3.88
     },
     {
       "id": "cons_def",
@@ -207,15 +207,15 @@
     },
     {
       "id": "materials",
-      "perf": -2.92,
+      "perf": -2.98,
       "avg30": 1.4,
-      "perf6m": 13.22
+      "perf6m": 13.16
     },
     {
       "id": "utilities",
-      "perf": -2.8,
+      "perf": -2.43,
       "avg30": 0.91,
-      "perf6m": 0.33
+      "perf6m": 0.72
     },
     {
       "id": "realestate",
@@ -233,9 +233,9 @@
     },
     {
       "id": "europe",
-      "perf": -0.77,
+      "perf": -1.12,
       "avg30": 1.28,
-      "perf6m": 6.61
+      "perf6m": 6.23
     },
     {
       "id": "germany",
@@ -245,27 +245,27 @@
     },
     {
       "id": "japan",
-      "perf": -0.73,
+      "perf": -1.05,
       "avg30": 2.19,
-      "perf6m": 8.84
+      "perf6m": 8.49
     },
     {
       "id": "china",
-      "perf": -7.23,
+      "perf": -7.53,
       "avg30": 0.32,
-      "perf6m": -12.7
+      "perf6m": -12.98
     },
     {
       "id": "em",
-      "perf": -3.42,
-      "avg30": 3.31,
-      "perf6m": 19.96
+      "perf": -4.1,
+      "avg30": 3.3,
+      "perf6m": 19.11
     },
     {
       "id": "apac",
-      "perf": -1.95,
-      "avg30": 3.29,
-      "perf6m": 20.86
+      "perf": -2.73,
+      "avg30": 3.28,
+      "perf6m": 19.91
     },
     {
       "id": "india",
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": -9.55,
+      "perf": -9.61,
       "avg30": 2.98,
-      "perf6m": 4.57
+      "perf6m": 4.51
     },
     {
       "id": "world",
@@ -1030,5 +1030,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-06-09T16:00:59.556Z"
+  "yahooAt": "2026-06-09T17:00:58.935Z"
 }
