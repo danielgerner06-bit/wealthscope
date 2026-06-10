@@ -114,6 +114,26 @@
       "startPrice": 2874.75,
       "perf": []
     },
+    "402340": {
+      "ticker": "402340",
+      "name": "SK Square Co., Ltd.",
+      "yahoo": "402340.KS",
+      "sector": "ai_semi",
+      "region": "apac",
+      "buyPct": 100,
+      "strongBuyPct": 36,
+      "upside": 16,
+      "pe": null,
+      "perf6mAtAdd": 308.44,
+      "perf1mBefore": 5.99,
+      "sektorPsiAtAdd": null,
+      "analysts": 11,
+      "div": 0.12,
+      "seen": "2026-06-10",
+      "seenMs": 1781049600000,
+      "startPrice": 1193500,
+      "perf": []
+    },
     "CRBU": {
       "ticker": "CRBU",
       "name": "Caribou Biosciences, Inc.",
@@ -6433,6 +6453,26 @@
       "perf": [],
       "outperformPct": null,
       "sektorPsiAtAdd": 0.0078
+    },
+    "034730": {
+      "ticker": "034730",
+      "name": "SK Inc.",
+      "yahoo": "034730.KS",
+      "sector": "industrial",
+      "region": "apac",
+      "buyPct": 100,
+      "strongBuyPct": 50,
+      "upside": 18,
+      "pe": null,
+      "perf6mAtAdd": 124.15,
+      "perf1mBefore": 6,
+      "sektorPsiAtAdd": null,
+      "analysts": 12,
+      "div": 1.35,
+      "seen": "2026-06-10",
+      "seenMs": 1781049600000,
+      "startPrice": 583000,
+      "perf": []
     }
   },
   "findings": {

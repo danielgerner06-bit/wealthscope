@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-10",
-  "updatedAt": "2026-06-10T16:00:24.764Z",
+  "updatedAt": "2026-06-10T16:09:18.893Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 2.53,
+      "perf": 2.34,
       "avg30": -0.8,
-      "perf6m": -14.86
+      "perf6m": -15.01
     },
     {
       "id": "ai_semi",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 7.17,
+      "perf": 7.18,
       "avg30": 0.95,
-      "perf6m": 0.34
+      "perf6m": 0.35
     },
     {
       "id": "finance",
@@ -207,9 +207,9 @@
     },
     {
       "id": "materials",
-      "perf": -2.87,
+      "perf": -2.86,
       "avg30": 1.38,
-      "perf6m": 13.65
+      "perf6m": 13.67
     },
     {
       "id": "utilities",
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": -8.31,
+      "perf": -8.39,
       "avg30": 2.94,
-      "perf6m": 8.21
+      "perf6m": 8.11
     },
     {
       "id": "world",
@@ -318,7 +318,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0053,
+      "sektorPsi": 0.0027,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0076,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0076,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,10 +420,40 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.0102,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
+    },
+    {
+      "ticker": "402340",
+      "name": "SK Square Co., Ltd.",
+      "yahoo": "402340.KS",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 7,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 11,
+      "strongBuyPct": 36,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-06-10",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-10",
+      "perf6m": 308.44,
+      "perf6mAt": "2026-06-10",
+      "perf1mBefore": 5.99,
+      "upside": 16,
+      "pe": null,
+      "div": 0.12,
+      "enrichAt": "2026-06-10",
+      "sektorPsi": 0.0039,
+      "sektorPsiAtAdd": 0.0039
     },
     {
       "ticker": "HYQ.DE",
@@ -456,7 +486,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0053,
+      "sektorPsi": 0.0027,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -488,10 +518,40 @@
       "eps": 5.01,
       "div": 4.77,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0012,
+      "sektorPsi": 0.0014,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-06",
       "miss": 0
+    },
+    {
+      "ticker": "034730",
+      "name": "SK Inc.",
+      "yahoo": "034730.KS",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 6,
+        "outperform": 6,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 12,
+      "strongBuyPct": 50,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-06-10",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-10",
+      "perf6m": 124.15,
+      "perf6mAt": "2026-06-10",
+      "perf1mBefore": 6,
+      "upside": 18,
+      "pe": null,
+      "div": 1.35,
+      "enrichAt": "2026-06-10",
+      "sektorPsi": 0.0102,
+      "sektorPsiAtAdd": 0.0102
     }
   ],
   "psiHistory": [
@@ -499,6 +559,11 @@
       "t": "1INN.DE",
       "d": "2026-06-05",
       "v": 0.0015
+    },
+    {
+      "t": "402340",
+      "d": "2026-06-10",
+      "v": 0.0039
     },
     {
       "t": "A1OS.DE",
@@ -524,6 +589,11 @@
       "t": "KTN.DE",
       "d": "2026-06-05",
       "v": 0.0095
+    },
+    {
+      "t": "034730",
+      "d": "2026-06-10",
+      "v": 0.0102
     }
   ],
   "sectorNotes": {
@@ -630,24 +700,28 @@
   "news": {
     "items": [
       {
-        "text": "EU-Australien: Verhandlungen über Forschungsprogramm erfolgreich abgeschlossen.",
-        "stamp": "09.06.26"
+        "text": "Iran-Krieg eskaliert: Ölpreise steigen, Kurse fallen.",
+        "stamp": "10.06.26"
       },
       {
-        "text": "US-Aktienmärkte unter Druck durch Halbleitertitel-Schwäche.",
-        "stamp": "09.06.26"
+        "text": "SpaceX vor Mega-Börsengang: Investoren reißen Musk die Aktien aus der Hand.",
+        "stamp": "10.06.26"
       },
       {
-        "text": "Stellantis ruft 1,3 Millionen Autos wegen Brandgefahr zurück.",
-        "stamp": "09.06.26"
+        "text": "China plant dreistellige KI-Milliarden: Frontalangriff auf die USA.",
+        "stamp": "10.06.26"
       },
       {
-        "text": "Deutsche Wirtschaft wuchs im Q1 2026 stärker als erwartet.",
-        "stamp": "08.06.26"
+        "text": "US-Inflation springt auf 4,2 Prozent: Core CPI macht Hoffnung.",
+        "stamp": "10.06.26"
       },
       {
-        "text": "Eskalation im Nahen Osten treibt Ölpreise wieder an.",
-        "stamp": "08.06.26"
+        "text": "EZB könnte Zinsen im Juni und Juli anheben: Angst vor Inflationserwartungen.",
+        "stamp": "10.06.26"
+      },
+      {
+        "text": "Deutsche Wirtschaft eher auf Rezessions- als Erholungskurs.",
+        "stamp": "10.06.26"
       }
     ],
     "date": "2026-06-10"
@@ -655,8 +729,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 8301,
-    "candCursor": 152,
+    "lastCursor": 8601,
+    "candCursor": 160,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -988,45 +1062,52 @@
       "Navitas Semiconductor Corporation",
       "TPG RE Finance Trust, Inc.",
       "Franklin BSP Realty Trust, Inc.",
-      "Stewart Information Services Corporation"
+      "Stewart Information Services Corporation",
+      "Munters Group AB",
+      "Thule Group AB",
+      "Interroll Holding AG",
+      "Belimo Holding AG",
+      "Arcadis N.V.",
+      "Redcare Pharmacy N.V.",
+      "Sixt SE"
     ],
     "noteCursor": 1,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 2,
     "notesDay": "2026-06-10",
     "seenBySector": {
-      "cons_cycl": 660,
-      "cons_def": 342,
-      "materials": 455,
-      "health": 1866,
-      "finance": 1317,
-      "energy": 611,
-      "hardware": 426,
-      "software": 1271,
-      "industrial": 551,
-      "utilities": 235,
-      "comm": 281,
-      "ai_semi": 255,
+      "cons_cycl": 668,
+      "cons_def": 345,
+      "materials": 461,
+      "health": 1883,
+      "finance": 1333,
+      "energy": 619,
+      "hardware": 433,
+      "software": 1283,
+      "industrial": 557,
+      "utilities": 238,
+      "comm": 285,
+      "ai_semi": 257,
       "realestate": 120
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 660,
-      "cons_def": 342,
-      "materials": 455,
-      "health": 1866,
-      "finance": 1319,
-      "energy": 611,
-      "hardware": 428,
-      "software": 1272,
-      "industrial": 552,
-      "utilities": 235,
-      "comm": 281,
-      "ai_semi": 255,
+      "cons_cycl": 668,
+      "cons_def": 345,
+      "materials": 461,
+      "health": 1883,
+      "finance": 1335,
+      "energy": 619,
+      "hardware": 435,
+      "software": 1284,
+      "industrial": 559,
+      "utilities": 238,
+      "comm": 285,
+      "ai_semi": 258,
       "realestate": 120
     },
-    "heavyAt": "2026-06-10T08:33:54.214Z",
+    "heavyAt": "2026-06-10T16:02:16.450Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1037,6 +1118,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-10T16:00:24.764Z"
+  }
 }
