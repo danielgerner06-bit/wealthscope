@@ -132,7 +132,8 @@
       "seen": "2026-06-10",
       "seenMs": 1781049600000,
       "startPrice": 1193500,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "CRBU": {
       "ticker": "CRBU",
@@ -6472,7 +6473,8 @@
       "seen": "2026-06-10",
       "seenMs": 1781049600000,
       "startPrice": 583000,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
