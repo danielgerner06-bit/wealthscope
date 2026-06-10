@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-10",
-  "updatedAt": "2026-06-10T19:00:24.755Z",
+  "updatedAt": "2026-06-10T19:59:55.695Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -167,19 +167,19 @@
       "id": "comm",
       "perf": -4.98,
       "avg30": 0.84,
-      "perf6m": -4.43
+      "perf6m": -4.42
     },
     {
       "id": "health",
       "perf": 6.63,
       "avg30": 0.95,
-      "perf6m": -0.16
+      "perf6m": -0.17
     },
     {
       "id": "finance",
-      "perf": 2.28,
+      "perf": 2.03,
       "avg30": 0.07,
-      "perf6m": -2.33
+      "perf6m": -2.57
     },
     {
       "id": "cons_cycl",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": 4.25,
+      "perf": 4.22,
       "avg30": 2.88,
-      "perf6m": 27.03
+      "perf6m": 26.98
     },
     {
       "id": "materials",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -7.08,
+      "perf": -7.27,
       "avg30": 0.3,
-      "perf6m": -12.89
+      "perf6m": -13.07
     },
     {
       "id": "em",
@@ -269,15 +269,15 @@
     },
     {
       "id": "india",
-      "perf": -4.81,
+      "perf": -5.03,
       "avg30": -1.17,
-      "perf6m": -11.78
+      "perf6m": -11.99
     },
     {
       "id": "latam",
-      "perf": -8.49,
+      "perf": -8.63,
       "avg30": 2.94,
-      "perf6m": 8
+      "perf6m": 7.83
     },
     {
       "id": "world",
@@ -318,7 +318,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0027,
+      "sektorPsi": 0.0028,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0076,
+      "sektorPsi": 0.0075,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0076,
+      "sektorPsi": 0.0075,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,10 +420,40 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0102,
+      "sektorPsi": 0.0098,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
+    },
+    {
+      "ticker": "034730",
+      "name": "SK Inc.",
+      "yahoo": "034730.KS",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 6,
+        "outperform": 6,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 12,
+      "strongBuyPct": 50,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-06-10",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-10",
+      "perf6m": 124.15,
+      "perf6mAt": "2026-06-10",
+      "perf1mBefore": 6,
+      "upside": 18,
+      "pe": null,
+      "div": 1.35,
+      "enrichAt": "2026-06-10",
+      "sektorPsi": 0.0098,
+      "sektorPsiAtAdd": 0.0102
     },
     {
       "ticker": "402340",
@@ -486,7 +516,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0027,
+      "sektorPsi": 0.0028,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -522,36 +552,6 @@
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-06",
       "miss": 0
-    },
-    {
-      "ticker": "034730",
-      "name": "SK Inc.",
-      "yahoo": "034730.KS",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 6,
-        "outperform": 6,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 12,
-      "strongBuyPct": 50,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-06-10",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-10",
-      "perf6m": 124.15,
-      "perf6mAt": "2026-06-10",
-      "perf1mBefore": 6,
-      "upside": 18,
-      "pe": null,
-      "div": 1.35,
-      "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0102,
-      "sektorPsiAtAdd": 0.0102
     }
   ],
   "psiHistory": [
@@ -1118,6 +1118,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-10T19:00:24.755Z"
+  }
 }
