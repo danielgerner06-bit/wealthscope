@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-11",
-  "updatedAt": "2026-06-11T16:01:01.350Z",
+  "updatedAt": "2026-06-11T16:12:16.413Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 1.98,
+      "perf": 1.79,
       "avg30": 3.82,
-      "perf6m": 21.24
+      "perf6m": 21.02
     },
     {
       "id": "comm",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 7.21,
+      "perf": 7.25,
       "avg30": 0.98,
-      "perf6m": 1.59
+      "perf6m": 1.63
     },
     {
       "id": "finance",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -4.43,
+      "perf": -4.52,
       "avg30": 0.89,
-      "perf6m": -3.31
+      "perf6m": -3.4
     },
     {
       "id": "cons_def",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": -1.13,
+      "perf": -1.22,
       "avg30": 1.63,
-      "perf6m": 11.65
+      "perf6m": 11.55
     },
     {
       "id": "energy",
@@ -207,9 +207,9 @@
     },
     {
       "id": "materials",
-      "perf": -3.53,
+      "perf": -3.6,
       "avg30": 1.35,
-      "perf6m": 15.69
+      "perf6m": 15.6
     },
     {
       "id": "utilities",
@@ -227,27 +227,27 @@
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -1.3,
+      "perf": -1.38,
       "avg30": 1.89,
-      "perf6m": 6.58
+      "perf6m": 6.49
     },
     {
       "id": "europe",
-      "perf": -0.16,
+      "perf": -0.26,
       "avg30": 1.27,
-      "perf6m": 7.15
+      "perf6m": 7.04
     },
     {
       "id": "germany",
-      "perf": -2.6,
+      "perf": -2.68,
       "avg30": 0.29,
-      "perf6m": 0.04
+      "perf6m": -0.05
     },
     {
       "id": "japan",
-      "perf": -2.18,
+      "perf": -2.26,
       "avg30": 2.19,
-      "perf6m": 8.28
+      "perf6m": 8.2
     },
     {
       "id": "china",
@@ -257,15 +257,15 @@
     },
     {
       "id": "em",
-      "perf": -3.14,
+      "perf": -3.24,
       "avg30": 3.27,
-      "perf6m": 20.4
+      "perf6m": 20.27
     },
     {
       "id": "apac",
-      "perf": -2.47,
+      "perf": -2.5,
       "avg30": 3.26,
-      "perf6m": 21.22
+      "perf6m": 21.18
     },
     {
       "id": "india",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": -1,
+      "perf": -1.08,
       "avg30": 1.79,
-      "perf6m": 6.84
+      "perf6m": 6.76
     }
   ],
   "topStocks": [
@@ -318,7 +318,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0029,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0064,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0064,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0131,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -452,7 +452,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0131,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -484,7 +484,7 @@
       "pe": null,
       "div": 0.12,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -520,7 +520,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0029,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -552,7 +552,7 @@
       "eps": 5.01,
       "div": 4.77,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0012,
+      "sektorPsi": 0.0017,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -702,27 +702,27 @@
   "news": {
     "items": [
       {
-        "text": "Goldpreis stürzt ab: Citi warnt vor weiteren 20% Rückgang.",
+        "text": "EZB hebt Leitzins wegen Inflation erneut an.",
         "stamp": "11.06.26"
       },
       {
-        "text": "Globale Märkte unter Druck: Geopolitik und Geldpolitik treffen aufeinander.",
+        "text": "Geopolitik und Zinsen belasten globale Märkte.",
         "stamp": "11.06.26"
       },
       {
-        "text": "Oracle-Aktie bricht 10% ein – KI-Rechenzentren fressen Milliarden.",
+        "text": "Trump droht Iran mit weiteren Angriffen.",
         "stamp": "11.06.26"
       },
       {
-        "text": "HUGO BOSS: Frasers Group plant Milliardenübernahme des Modekonzerns.",
+        "text": "Deutsche Wirtschaft vor technischer Rezession.",
         "stamp": "11.06.26"
       },
       {
-        "text": "Systemair übertrifft Erwartungen, aber Ergebnis verfehlt.",
+        "text": "Fed-Chef Warsh vor erster Zinsentscheidung.",
         "stamp": "11.06.26"
       },
       {
-        "text": "US-Arbeitsmarktdaten lassen Zinserhöhungen wahrscheinlicher werden.",
+        "text": "Hugo Boss: Milliardenübernahme durch Großaktionär.",
         "stamp": "11.06.26"
       }
     ],
@@ -731,8 +731,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 368,
-    "candCursor": 176,
+    "lastCursor": 668,
+    "candCursor": 184,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1083,42 +1083,54 @@
       "SCREEN Holdings Co., Ltd."
     ],
     "noteCursor": 2,
-    "focusCursor": 4,
+    "focusCursor": 5,
     "recheckCursor": 16,
     "regionNoteCursor": 3,
     "notesDay": "2026-06-11",
     "seenBySector": {
-      "cons_cycl": 681,
-      "cons_def": 348,
-      "materials": 467,
-      "health": 1935,
-      "finance": 1352,
-      "energy": 624,
-      "hardware": 440,
-      "software": 1320,
-      "industrial": 574,
-      "utilities": 245,
-      "comm": 290,
-      "ai_semi": 265,
+      "cons_cycl": 690,
+      "cons_def": 350,
+      "materials": 475,
+      "health": 1962,
+      "finance": 1361,
+      "energy": 630,
+      "hardware": 445,
+      "software": 1333,
+      "industrial": 578,
+      "utilities": 246,
+      "comm": 291,
+      "ai_semi": 271,
       "realestate": 122
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "ASMB",
+      "ASND",
+      "ASNS",
+      "ASO",
+      "ASPI",
+      "ASPN",
+      "ASPS",
+      "ASPU",
+      "ASRT",
+      "ASST",
+      "ASTC"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 681,
-      "cons_def": 348,
-      "materials": 467,
-      "health": 1935,
-      "finance": 1354,
-      "energy": 624,
-      "hardware": 442,
-      "software": 1321,
-      "industrial": 576,
-      "utilities": 245,
-      "comm": 290,
-      "ai_semi": 266,
+      "cons_cycl": 690,
+      "cons_def": 350,
+      "materials": 475,
+      "health": 1962,
+      "finance": 1363,
+      "energy": 630,
+      "hardware": 447,
+      "software": 1334,
+      "industrial": 580,
+      "utilities": 246,
+      "comm": 291,
+      "ai_semi": 272,
       "realestate": 122
     },
-    "heavyAt": "2026-06-11T08:52:01.410Z",
+    "heavyAt": "2026-06-11T16:05:16.095Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1129,6 +1141,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-11T16:01:01.350Z"
+  }
 }
