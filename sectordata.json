@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-10",
-  "updatedAt": "2026-06-11T02:00:24.749Z",
+  "updated": "2026-06-11",
+  "updatedAt": "2026-06-11T02:10:01.586Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0075,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0075,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0098,
+      "sektorPsi": 0.0096,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -442,7 +442,7 @@
       "strongBuyPct": 50,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-10",
+      "verifiedAt": "2026-06-11",
       "verifiedSource": "yahoo",
       "seen": "2026-06-10",
       "perf6m": 124.15,
@@ -452,8 +452,10 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0098,
-      "sektorPsiAtAdd": 0.0102
+      "sektorPsi": 0.0096,
+      "sektorPsiAtAdd": 0.0102,
+      "recheckAt": "2026-06-11",
+      "miss": 0
     },
     {
       "ticker": "402340",
@@ -472,7 +474,7 @@
       "strongBuyPct": 36,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-10",
+      "verifiedAt": "2026-06-11",
       "verifiedSource": "yahoo",
       "seen": "2026-06-10",
       "perf6m": 308.44,
@@ -483,7 +485,9 @@
       "div": 0.12,
       "enrichAt": "2026-06-10",
       "sektorPsi": 0.0039,
-      "sektorPsiAtAdd": 0.0039
+      "sektorPsiAtAdd": 0.0039,
+      "recheckAt": "2026-06-11",
+      "miss": 0
     },
     {
       "ticker": "HYQ.DE",
@@ -614,9 +618,8 @@
       "date": "2026-06-02"
     },
     "ai_semi": {
-      "text": "KI & Halbleiter im Zentrum des Investitionszyklus: enorme Nachfrage nach Rechenleistung treibt die Kurse, zugleich hohe Schwankungen.",
-      "date": null,
-      "seed": true
+      "text": "KI-Boom treibt Halbleiter an, was zu starken Kursgewinnen führt. Die Nachfrage nach KI-Chips übertrifft Erwartungen.",
+      "date": "2026-06-11"
     },
     "hardware": {
       "text": "Hardware & Geräte hängt am Konsum- und Investitionszyklus; KI-Infrastruktur stützt, schwache Endkundennachfrage bremst.",
@@ -676,9 +679,8 @@
       "date": "2026-06-10"
     },
     "germany": {
-      "text": "Deutschland exportabhängig und industriegeprägt; schwache Konjunktur, aber günstige Bewertungen und solide Mittelständler.",
-      "date": null,
-      "seed": true
+      "text": "Die deutsche Konjunktur schwächelt (-1,15% in 30 Tagen), da die Zinsen trotz leichter Normalisierung (+0,31%) weiterhin belasten. Langfristig zeigt sich mit +1,69% über 6 Monate eine leichte Erholungstendenz.",
+      "date": "2026-06-11"
     },
     "china": {
       "text": "Chinas Konjunktur schwächelt, die 30-Tage-Entwicklung liegt deutlich unter dem Normalniveau. Dies deutet auf anhaltende wirtschaftliche Herausforderungen hin.",
@@ -700,37 +702,37 @@
   "news": {
     "items": [
       {
-        "text": "Iran-Krieg eskaliert: Ölpreise steigen, Kurse fallen.",
+        "text": "US-Inflation steigt über vier Prozent – Trump droht Iran erneut",
         "stamp": "10.06.26"
       },
       {
-        "text": "SpaceX vor Mega-Börsengang: Investoren reißen Musk die Aktien aus der Hand.",
+        "text": "Börse: US-Inflation über vier Prozent – Trump droht Iran",
         "stamp": "10.06.26"
       },
       {
-        "text": "China plant dreistellige KI-Milliarden: Frontalangriff auf die USA.",
+        "text": "Börse: US-Inflation heizt an – Märkte reagieren verhalten",
         "stamp": "10.06.26"
       },
       {
-        "text": "US-Inflation springt auf 4,2 Prozent: Core CPI macht Hoffnung.",
+        "text": "Prospect Markets schließt Finanzierung über 2 Mio. C$",
         "stamp": "10.06.26"
       },
       {
-        "text": "EZB könnte Zinsen im Juni und Juli anheben: Angst vor Inflationserwartungen.",
+        "text": "Nordex Group sichert 100-MW-Windpark-Auftrag in Osteuropa",
         "stamp": "10.06.26"
       },
       {
-        "text": "Deutsche Wirtschaft eher auf Rezessions- als Erholungskurs.",
+        "text": "US-Börsen schwächer nach neuen Trump-Drohungen gegen Iran",
         "stamp": "10.06.26"
       }
     ],
-    "date": "2026-06-10"
+    "date": "2026-06-11"
   },
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 8601,
-    "candCursor": 160,
+    "lastCursor": 68,
+    "candCursor": 168,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1071,43 +1073,43 @@
       "Redcare Pharmacy N.V.",
       "Sixt SE"
     ],
-    "noteCursor": 1,
-    "focusCursor": 2,
+    "noteCursor": 2,
+    "focusCursor": 3,
     "recheckCursor": 16,
-    "regionNoteCursor": 2,
-    "notesDay": "2026-06-10",
+    "regionNoteCursor": 3,
+    "notesDay": "2026-06-11",
     "seenBySector": {
-      "cons_cycl": 668,
-      "cons_def": 345,
-      "materials": 461,
-      "health": 1883,
-      "finance": 1333,
-      "energy": 619,
-      "hardware": 433,
-      "software": 1283,
-      "industrial": 557,
-      "utilities": 238,
-      "comm": 285,
+      "cons_cycl": 677,
+      "cons_def": 347,
+      "materials": 463,
+      "health": 1908,
+      "finance": 1338,
+      "energy": 622,
+      "hardware": 437,
+      "software": 1301,
+      "industrial": 566,
+      "utilities": 241,
+      "comm": 287,
       "ai_semi": 257,
       "realestate": 120
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 668,
-      "cons_def": 345,
-      "materials": 461,
-      "health": 1883,
-      "finance": 1335,
-      "energy": 619,
-      "hardware": 435,
-      "software": 1284,
-      "industrial": 559,
-      "utilities": 238,
-      "comm": 285,
+      "cons_cycl": 677,
+      "cons_def": 347,
+      "materials": 463,
+      "health": 1908,
+      "finance": 1340,
+      "energy": 622,
+      "hardware": 439,
+      "software": 1302,
+      "industrial": 568,
+      "utilities": 241,
+      "comm": 287,
       "ai_semi": 258,
       "realestate": 120
     },
-    "heavyAt": "2026-06-10T16:02:16.450Z",
+    "heavyAt": "2026-06-11T02:03:21.925Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1118,6 +1120,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-11T02:00:24.749Z"
+  }
 }
