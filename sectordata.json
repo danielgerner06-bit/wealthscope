@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-11",
-  "updatedAt": "2026-06-11T08:01:05.839Z",
+  "updatedAt": "2026-06-11T08:59:05.362Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0028,
+      "sektorPsi": 0.0036,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0074,
+      "sektorPsi": 0.0064,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0074,
+      "sektorPsi": 0.0064,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0096,
+      "sektorPsi": 0.0108,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -452,7 +452,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0096,
+      "sektorPsi": 0.0108,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -484,7 +484,7 @@
       "pe": null,
       "div": 0.12,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -520,7 +520,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0028,
+      "sektorPsi": 0.0036,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -552,7 +552,7 @@
       "eps": 5.01,
       "div": 4.77,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0014,
+      "sektorPsi": 0.0012,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -702,28 +702,28 @@
   "news": {
     "items": [
       {
-        "text": "US-Inflation steigt über vier Prozent – Trump droht Iran erneut",
-        "stamp": "10.06.26"
+        "text": "Goldpreis stürzt ab: Citi warnt vor weiteren 20% Rückgang.",
+        "stamp": "11.06.26"
       },
       {
-        "text": "Börse: US-Inflation über vier Prozent – Trump droht Iran",
-        "stamp": "10.06.26"
+        "text": "Globale Märkte unter Druck: Geopolitik und Geldpolitik treffen aufeinander.",
+        "stamp": "11.06.26"
       },
       {
-        "text": "Börse: US-Inflation heizt an – Märkte reagieren verhalten",
-        "stamp": "10.06.26"
+        "text": "Oracle-Aktie bricht 10% ein – KI-Rechenzentren fressen Milliarden.",
+        "stamp": "11.06.26"
       },
       {
-        "text": "Prospect Markets schließt Finanzierung über 2 Mio. C$",
-        "stamp": "10.06.26"
+        "text": "HUGO BOSS: Frasers Group plant Milliardenübernahme des Modekonzerns.",
+        "stamp": "11.06.26"
       },
       {
-        "text": "Nordex Group sichert 100-MW-Windpark-Auftrag in Osteuropa",
-        "stamp": "10.06.26"
+        "text": "Systemair übertrifft Erwartungen, aber Ergebnis verfehlt.",
+        "stamp": "11.06.26"
       },
       {
-        "text": "US-Börsen schwächer nach neuen Trump-Drohungen gegen Iran",
-        "stamp": "10.06.26"
+        "text": "US-Arbeitsmarktdaten lassen Zinserhöhungen wahrscheinlicher werden.",
+        "stamp": "11.06.26"
       }
     ],
     "date": "2026-06-11"
@@ -731,8 +731,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 68,
-    "candCursor": 168,
+    "lastCursor": 368,
+    "candCursor": 176,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1071,45 +1071,54 @@
       "Belimo Holding AG",
       "Arcadis N.V.",
       "Redcare Pharmacy N.V.",
-      "Sixt SE"
+      "Sixt SE",
+      "Shibaura Machine Co., Ltd.",
+      "Kansai Kogyo Co., Ltd.",
+      "DAIKIN INDUSTRIES, LTD.",
+      "MinebeaMitsumi Inc.",
+      "NEC Corporation",
+      "KEYENCE CORPORATION",
+      "FANUC CORPORATION",
+      "Toyota Motor Corporation",
+      "SCREEN Holdings Co., Ltd."
     ],
     "noteCursor": 2,
-    "focusCursor": 3,
+    "focusCursor": 4,
     "recheckCursor": 16,
     "regionNoteCursor": 3,
     "notesDay": "2026-06-11",
     "seenBySector": {
-      "cons_cycl": 677,
-      "cons_def": 347,
-      "materials": 463,
-      "health": 1908,
-      "finance": 1338,
-      "energy": 622,
-      "hardware": 437,
-      "software": 1301,
-      "industrial": 566,
-      "utilities": 241,
-      "comm": 287,
-      "ai_semi": 257,
-      "realestate": 120
+      "cons_cycl": 681,
+      "cons_def": 348,
+      "materials": 467,
+      "health": 1935,
+      "finance": 1352,
+      "energy": 624,
+      "hardware": 440,
+      "software": 1320,
+      "industrial": 574,
+      "utilities": 245,
+      "comm": 290,
+      "ai_semi": 265,
+      "realestate": 122
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 677,
-      "cons_def": 347,
-      "materials": 463,
-      "health": 1908,
-      "finance": 1340,
-      "energy": 622,
-      "hardware": 439,
-      "software": 1302,
-      "industrial": 568,
-      "utilities": 241,
-      "comm": 287,
-      "ai_semi": 258,
-      "realestate": 120
+      "cons_cycl": 681,
+      "cons_def": 348,
+      "materials": 467,
+      "health": 1935,
+      "finance": 1354,
+      "energy": 624,
+      "hardware": 442,
+      "software": 1321,
+      "industrial": 576,
+      "utilities": 245,
+      "comm": 290,
+      "ai_semi": 266,
+      "realestate": 122
     },
-    "heavyAt": "2026-06-11T02:03:21.925Z",
+    "heavyAt": "2026-06-11T08:52:01.410Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1120,6 +1129,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-11T08:01:05.839Z"
+  }
 }
