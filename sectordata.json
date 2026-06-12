@@ -484,7 +484,7 @@
       "pe": null,
       "div": 0.12,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0037,
+      "sektorPsi": 0.0036,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -552,7 +552,7 @@
       "eps": 5.01,
       "div": 4.77,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -622,9 +622,8 @@
       "date": "2026-06-11"
     },
     "hardware": {
-      "text": "Hardware & Geräte hängt am Konsum- und Investitionszyklus; KI-Infrastruktur stützt, schwache Endkundennachfrage bremst.",
-      "date": null,
-      "seed": true
+      "text": "Der Sektor \"Hardware & Geräte\" zeigt eine moderate 30-Tage-Performance, aber eine starke 6-Monats-Entwicklung, angetrieben durch KI-Nachfrage. Auffällige Werte wie A1OS.DE und IXX.DE profitieren davon.",
+      "date": "2026-06-12"
     },
     "comm": {
       "text": "Kommunikation & Medien gemischt: Werbe- und Streaming-Erlöse erholen sich, Plattformregulierung bleibt ein Risiko.",
@@ -667,8 +666,8 @@
       "date": "2026-06-04"
     },
     "japan": {
-      "text": "Japans Börse boomt, getrieben von steigenden Unternehmensgewinnen und dem schwachen Yen, der Exporte beflügelt. Auch der Abzug internationaler Gelder aus China stärkt Japan.",
-      "date": "2026-06-02"
+      "text": "Japan: Zinsen steigen leicht, was die Konjunktur dämpft. Langfristig positive Entwicklung trotz kurzfristiger Schwankungen.",
+      "date": "2026-06-12"
     },
     "usa": {
       "text": "Leichte Abkühlung der US-Konjunktur bei weiterhin robustem 6-Monats-Wachstum. Zinsen und KI treiben die Märkte, während Geopolitik und Energiepreise für Unsicherheit sorgen.",
@@ -731,8 +730,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 668,
-    "candCursor": 184,
+    "lastCursor": 968,
+    "candCursor": 192,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1082,43 +1081,52 @@
       "Toyota Motor Corporation",
       "SCREEN Holdings Co., Ltd."
     ],
-    "noteCursor": 2,
-    "focusCursor": 5,
+    "noteCursor": 3,
+    "focusCursor": 6,
     "recheckCursor": 16,
-    "regionNoteCursor": 3,
-    "notesDay": "2026-06-11",
+    "regionNoteCursor": 4,
+    "notesDay": "2026-06-12",
     "seenBySector": {
-      "cons_cycl": 691,
-      "cons_def": 350,
-      "materials": 476,
-      "health": 1964,
-      "finance": 1361,
-      "energy": 630,
-      "hardware": 445,
-      "software": 1333,
-      "industrial": 578,
-      "utilities": 246,
-      "comm": 292,
-      "ai_semi": 271,
-      "realestate": 123
-    },
-    "pendingReject": [],
-    "evaluatedBySector": {
-      "cons_cycl": 691,
-      "cons_def": 350,
-      "materials": 476,
-      "health": 1964,
-      "finance": 1363,
-      "energy": 630,
+      "cons_cycl": 698,
+      "cons_def": 351,
+      "materials": 482,
+      "health": 1990,
+      "finance": 1376,
+      "energy": 632,
       "hardware": 447,
-      "software": 1334,
-      "industrial": 580,
-      "utilities": 246,
-      "comm": 292,
-      "ai_semi": 272,
-      "realestate": 123
+      "software": 1343,
+      "industrial": 585,
+      "utilities": 249,
+      "comm": 299,
+      "ai_semi": 275,
+      "realestate": 124
     },
-    "heavyAt": "2026-06-11T16:05:16.095Z",
+    "pendingReject": [
+      "BEEM",
+      "BEEP",
+      "BEN",
+      "BEPC",
+      "BETA",
+      "BETR",
+      "BFAM",
+      "BFC"
+    ],
+    "evaluatedBySector": {
+      "cons_cycl": 698,
+      "cons_def": 351,
+      "materials": 482,
+      "health": 1990,
+      "finance": 1378,
+      "energy": 632,
+      "hardware": 449,
+      "software": 1344,
+      "industrial": 587,
+      "utilities": 249,
+      "comm": 299,
+      "ai_semi": 276,
+      "realestate": 124
+    },
+    "heavyAt": "2026-06-12T02:00:26.101Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
