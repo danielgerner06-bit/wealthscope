@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-12",
-  "updatedAt": "2026-06-12T19:01:03.889Z",
+  "updatedAt": "2026-06-12T19:56:04.021Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,13 +165,13 @@
     },
     {
       "id": "comm",
-      "perf": -3.51,
+      "perf": -3.64,
       "avg30": 0.79,
-      "perf6m": -3.95
+      "perf6m": -4.08
     },
     {
       "id": "health",
-      "perf": 5.41,
+      "perf": 5.42,
       "avg30": 1.01,
       "perf6m": 1.53
     },
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -2.08,
+      "perf": -2.04,
       "avg30": 0.87,
-      "perf6m": -1.48
+      "perf6m": -1.43
     },
     {
       "id": "cons_def",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": 0.1,
-      "avg30": 2.86,
-      "perf6m": 26.09
+      "perf": -0.18,
+      "avg30": 2.85,
+      "perf6m": 25.74
     },
     {
       "id": "materials",
@@ -318,7 +318,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.0032,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.009,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.009,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.012,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -452,7 +452,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.012,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -520,7 +520,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.0032,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -552,7 +552,7 @@
       "eps": 5.01,
       "div": 4.77,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0021,
+      "sektorPsi": 0.002,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -1100,34 +1100,28 @@
       "cons_cycl": 717,
       "cons_def": 363,
       "materials": 489,
-      "health": 2023,
+      "health": 2025,
       "finance": 1425,
       "energy": 639,
       "hardware": 454,
       "software": 1375,
-      "industrial": 595,
+      "industrial": 596,
       "utilities": 252,
       "comm": 303,
       "ai_semi": 277,
       "realestate": 126
     },
-    "pendingReject": [
-      "CGC",
-      "CGEH",
-      "CGEM",
-      "CGEN",
-      "CGIP"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
       "cons_cycl": 717,
       "cons_def": 363,
       "materials": 489,
-      "health": 2023,
+      "health": 2025,
       "finance": 1427,
       "energy": 639,
       "hardware": 456,
       "software": 1376,
-      "industrial": 597,
+      "industrial": 598,
       "utilities": 252,
       "comm": 303,
       "ai_semi": 278,
@@ -1144,6 +1138,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-12T19:01:03.889Z"
+  }
 }
