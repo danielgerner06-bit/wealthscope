@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-12",
-  "updatedAt": "2026-06-12T15:01:01.668Z",
+  "updatedAt": "2026-06-12T15:55:42.536Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,15 +165,15 @@
     },
     {
       "id": "comm",
-      "perf": -3.23,
-      "avg30": 0.8,
-      "perf6m": -3.67
+      "perf": -3.47,
+      "avg30": 0.79,
+      "perf6m": -3.9
     },
     {
       "id": "health",
-      "perf": 5.65,
+      "perf": 5.54,
       "avg30": 1.01,
-      "perf6m": 1.76
+      "perf6m": 1.65
     },
     {
       "id": "finance",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -2.19,
+      "perf": -2.84,
       "avg30": 0.87,
-      "perf6m": -1.58
+      "perf6m": -2.24
     },
     {
       "id": "cons_def",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": 0.45,
+      "perf": 0.83,
       "avg30": 2.86,
-      "perf6m": 26.54
+      "perf6m": 27.01
     },
     {
       "id": "materials",
@@ -239,9 +239,9 @@
     },
     {
       "id": "germany",
-      "perf": 0.21,
+      "perf": 0.11,
       "avg30": 0.3,
-      "perf6m": 1.73
+      "perf6m": 1.63
     },
     {
       "id": "japan",
@@ -318,7 +318,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0027,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.009,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.009,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0095,
+      "sektorPsi": 0.0124,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -452,7 +452,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0095,
+      "sektorPsi": 0.0124,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -520,7 +520,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0027,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -552,7 +552,7 @@
       "eps": 5.01,
       "div": 4.77,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0018,
+      "sektorPsi": 0.0021,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -701,37 +701,37 @@
   "news": {
     "items": [
       {
-        "text": "Deutsche Telekom Aktie leichter trotz Aktienrückkauf.",
+        "text": "SpaceX-Börsengang: Anleger warten auf erste Kurse",
         "stamp": "12.06.26"
       },
       {
-        "text": "US-Marktupdate: Oracle nach Zahlen im Fokus.",
+        "text": "US-Inflation steigt wieder: Fed unter Druck",
+        "stamp": "12.06.26"
+      },
+      {
+        "text": "OpenAI vor Börsengang: ChatGPT entfacht Börsen-Fantasie",
+        "stamp": "12.06.26"
+      },
+      {
+        "text": "Nvidia startet neue Offensive in China",
+        "stamp": "12.06.26"
+      },
+      {
+        "text": "EZB erhöht Leitzinsen um 0,2 Prozentpunkte auf 2,40 Prozent",
         "stamp": "11.06.26"
       },
       {
-        "text": "SpaceX-IPO: 10, 9, 8, 7, 6, 5, 4, 3, 2...",
-        "stamp": "11.06.26"
-      },
-      {
-        "text": "Trump sagt geplante Angriffe auf Iran ab.",
-        "stamp": "11.06.26"
-      },
-      {
-        "text": "Öl-Notreserve fällt auf 43-Jahres-Tief; Hormus bleibt dicht.",
-        "stamp": "11.06.26"
-      },
-      {
-        "text": "AI-Rally auf der Kippe: Bruchlinien in Tech-Hausse weiten sich.",
+        "text": "Geopolitik belastet Finanzmärkte: Iran-Konflikt verschärft sich",
         "stamp": "11.06.26"
       }
     ],
     "date": "2026-06-12"
   },
   "scan": {
-    "universe": 8833,
-    "scanned": 8833,
-    "lastCursor": 1268,
-    "candCursor": 200,
+    "universe": 8831,
+    "scanned": 8831,
+    "lastCursor": 1568,
+    "candCursor": 208,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1085,49 +1085,55 @@
       "Diversified Energy Company PLC",
       "Rayonier Advanced Materials Inc.",
       "Denison Mines Corp.",
-      "Quad Graphics Inc."
+      "Quad Graphics Inc.",
+      "Palomar Holdings",
+      "Marex Group",
+      "Talen Energy Corp",
+      "Vistra Energy"
     ],
     "noteCursor": 3,
-    "focusCursor": 7,
+    "focusCursor": 0,
     "recheckCursor": 16,
     "regionNoteCursor": 4,
     "notesDay": "2026-06-12",
     "seenBySector": {
-      "cons_cycl": 707,
-      "cons_def": 357,
-      "materials": 484,
-      "health": 2001,
-      "finance": 1398,
-      "energy": 638,
-      "hardware": 451,
-      "software": 1363,
-      "industrial": 587,
-      "utilities": 250,
-      "comm": 301,
-      "ai_semi": 275,
-      "realestate": 124
+      "cons_cycl": 717,
+      "cons_def": 363,
+      "materials": 489,
+      "health": 2023,
+      "finance": 1425,
+      "energy": 639,
+      "hardware": 454,
+      "software": 1375,
+      "industrial": 595,
+      "utilities": 252,
+      "comm": 303,
+      "ai_semi": 277,
+      "realestate": 126
     },
     "pendingReject": [
-      "BTSG",
-      "BTTX",
-      "BTU"
+      "CGC",
+      "CGEH",
+      "CGEM",
+      "CGEN",
+      "CGIP"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 707,
-      "cons_def": 357,
-      "materials": 484,
-      "health": 2001,
-      "finance": 1400,
-      "energy": 638,
-      "hardware": 453,
-      "software": 1364,
-      "industrial": 589,
-      "utilities": 250,
-      "comm": 301,
-      "ai_semi": 276,
-      "realestate": 124
+      "cons_cycl": 717,
+      "cons_def": 363,
+      "materials": 489,
+      "health": 2023,
+      "finance": 1427,
+      "energy": 639,
+      "hardware": 456,
+      "software": 1376,
+      "industrial": 597,
+      "utilities": 252,
+      "comm": 303,
+      "ai_semi": 278,
+      "realestate": 126
     },
-    "heavyAt": "2026-06-12T08:43:28.576Z",
+    "heavyAt": "2026-06-12T15:48:46.175Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1138,6 +1144,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-12T15:01:01.668Z"
+  }
 }
