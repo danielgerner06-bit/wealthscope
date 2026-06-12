@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-11",
-  "updatedAt": "2026-06-12T08:01:01.387Z",
+  "updated": "2026-06-12",
+  "updatedAt": "2026-06-12T08:50:14.085Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0028,
+      "sektorPsi": 0.0027,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0078,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0078,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -520,7 +520,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0028,
+      "sektorPsi": 0.0027,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-06",
       "miss": 0
@@ -701,37 +701,37 @@
   "news": {
     "items": [
       {
-        "text": "EZB hebt Leitzins wegen Inflation erneut an.",
+        "text": "Deutsche Telekom Aktie leichter trotz Aktienrückkauf.",
+        "stamp": "12.06.26"
+      },
+      {
+        "text": "US-Marktupdate: Oracle nach Zahlen im Fokus.",
         "stamp": "11.06.26"
       },
       {
-        "text": "Geopolitik und Zinsen belasten globale Märkte.",
+        "text": "SpaceX-IPO: 10, 9, 8, 7, 6, 5, 4, 3, 2...",
         "stamp": "11.06.26"
       },
       {
-        "text": "Trump droht Iran mit weiteren Angriffen.",
+        "text": "Trump sagt geplante Angriffe auf Iran ab.",
         "stamp": "11.06.26"
       },
       {
-        "text": "Deutsche Wirtschaft vor technischer Rezession.",
+        "text": "Öl-Notreserve fällt auf 43-Jahres-Tief; Hormus bleibt dicht.",
         "stamp": "11.06.26"
       },
       {
-        "text": "Fed-Chef Warsh vor erster Zinsentscheidung.",
-        "stamp": "11.06.26"
-      },
-      {
-        "text": "Hugo Boss: Milliardenübernahme durch Großaktionär.",
+        "text": "AI-Rally auf der Kippe: Bruchlinien in Tech-Hausse weiten sich.",
         "stamp": "11.06.26"
       }
     ],
-    "date": "2026-06-11"
+    "date": "2026-06-12"
   },
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 968,
-    "candCursor": 192,
+    "lastCursor": 1268,
+    "candCursor": 200,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1079,54 +1079,55 @@
       "KEYENCE CORPORATION",
       "FANUC CORPORATION",
       "Toyota Motor Corporation",
-      "SCREEN Holdings Co., Ltd."
+      "SCREEN Holdings Co., Ltd.",
+      "5E Advanced Materials, Inc.",
+      "Hyster-Yale Materials Handling, Inc.",
+      "Diversified Energy Company PLC",
+      "Rayonier Advanced Materials Inc.",
+      "Denison Mines Corp.",
+      "Quad Graphics Inc."
     ],
     "noteCursor": 3,
-    "focusCursor": 6,
+    "focusCursor": 7,
     "recheckCursor": 16,
     "regionNoteCursor": 4,
     "notesDay": "2026-06-12",
     "seenBySector": {
-      "cons_cycl": 698,
-      "cons_def": 351,
-      "materials": 482,
-      "health": 1990,
-      "finance": 1376,
-      "energy": 632,
-      "hardware": 447,
-      "software": 1343,
-      "industrial": 585,
-      "utilities": 249,
-      "comm": 299,
+      "cons_cycl": 707,
+      "cons_def": 357,
+      "materials": 484,
+      "health": 2001,
+      "finance": 1398,
+      "energy": 638,
+      "hardware": 451,
+      "software": 1363,
+      "industrial": 587,
+      "utilities": 250,
+      "comm": 301,
       "ai_semi": 275,
       "realestate": 124
     },
     "pendingReject": [
-      "BEEM",
-      "BEEP",
-      "BEN",
-      "BEPC",
-      "BETA",
-      "BETR",
-      "BFAM",
-      "BFC"
+      "BTSG",
+      "BTTX",
+      "BTU"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 698,
-      "cons_def": 351,
-      "materials": 482,
-      "health": 1990,
-      "finance": 1378,
-      "energy": 632,
-      "hardware": 449,
-      "software": 1344,
-      "industrial": 587,
-      "utilities": 249,
-      "comm": 299,
+      "cons_cycl": 707,
+      "cons_def": 357,
+      "materials": 484,
+      "health": 2001,
+      "finance": 1400,
+      "energy": 638,
+      "hardware": 453,
+      "software": 1364,
+      "industrial": 589,
+      "utilities": 250,
+      "comm": 301,
       "ai_semi": 276,
       "realestate": 124
     },
-    "heavyAt": "2026-06-12T02:00:26.101Z",
+    "heavyAt": "2026-06-12T08:43:28.576Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1137,6 +1138,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-12T08:01:01.387Z"
+  }
 }
