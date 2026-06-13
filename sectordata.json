@@ -309,7 +309,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-06-06",
+      "verifiedAt": "2026-06-13",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -20.88,
       "perf6mAt": "2026-06-10",
@@ -320,7 +320,7 @@
       "enrichAt": "2026-06-10",
       "sektorPsi": 0.0032,
       "sektorPsiAtAdd": 0.0085,
-      "recheckAt": "2026-06-06",
+      "recheckAt": "2026-06-13",
       "miss": 0
     },
     {
@@ -340,7 +340,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-06",
+      "verifiedAt": "2026-06-13",
       "verifiedSource": "yahoo",
       "seen": "2026-06-05",
       "perf6m": -21.26,
@@ -351,9 +351,9 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0089,
+      "sektorPsi": 0.0088,
       "sektorPsiAtAdd": 0.0078,
-      "recheckAt": "2026-06-06",
+      "recheckAt": "2026-06-13",
       "miss": 0
     },
     {
@@ -373,7 +373,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-06",
+      "verifiedAt": "2026-06-13",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
       "perf6m": 13.72,
@@ -384,9 +384,9 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0089,
+      "sektorPsi": 0.0088,
       "sektorPsiAtAdd": 0.0078,
-      "recheckAt": "2026-06-06",
+      "recheckAt": "2026-06-13",
       "miss": 0
     },
     {
@@ -411,7 +411,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-06-06",
+      "verifiedAt": "2026-06-13",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": 5.19,
       "perf6mAt": "2026-06-10",
@@ -420,9 +420,9 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.012,
+      "sektorPsi": 0.0119,
       "sektorPsiAtAdd": 0.0095,
-      "recheckAt": "2026-06-06",
+      "recheckAt": "2026-06-13",
       "miss": 0
     },
     {
@@ -452,7 +452,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.012,
+      "sektorPsi": 0.0119,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -511,7 +511,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-06-06",
+      "verifiedAt": "2026-06-13",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -39.53,
       "perf6mAt": "2026-06-10",
@@ -522,7 +522,7 @@
       "enrichAt": "2026-06-10",
       "sektorPsi": 0.0032,
       "sektorPsiAtAdd": 0.0085,
-      "recheckAt": "2026-06-06",
+      "recheckAt": "2026-06-13",
       "miss": 0
     },
     {
@@ -542,7 +542,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-06",
+      "verifiedAt": "2026-06-13",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
       "perf6m": -11.68,
@@ -554,7 +554,7 @@
       "enrichAt": "2026-06-10",
       "sektorPsi": 0.002,
       "sektorPsiAtAdd": 0.0015,
-      "recheckAt": "2026-06-06",
+      "recheckAt": "2026-06-13",
       "miss": 0
     }
   ],
@@ -626,9 +626,8 @@
       "date": "2026-06-12"
     },
     "comm": {
-      "text": "Kommunikation & Medien gemischt: Werbe- und Streaming-Erlöse erholen sich, Plattformregulierung bleibt ein Risiko.",
-      "date": null,
-      "seed": true
+      "text": "Der Sektor \"Kommunikation & Medien\" leidet unter dem Zinsumfeld und der KI-Entwicklung. Diese Faktoren belasten die Gewinnerwartungen und die Nachfrage.",
+      "date": "2026-06-13"
     },
     "cons_cycl": {
       "text": "Konsum zyklisch abhängig von Kaufkraft und Zinsen; hohe Zinsen dämpfen Anschaffungen, sinkende Inflation könnte stützen.",
@@ -682,8 +681,8 @@
       "date": "2026-06-11"
     },
     "china": {
-      "text": "Chinas Konjunktur schwächelt, die 30-Tage-Entwicklung liegt deutlich unter dem Normalniveau. Dies deutet auf anhaltende wirtschaftliche Herausforderungen hin.",
-      "date": "2026-06-03"
+      "text": "Chinas Wirtschaft schwächelt, gebremst durch globale Konjunktur und geopolitische Spannungen. Die jüngsten Zahlen deuten auf eine anhaltende negative Entwicklung hin.",
+      "date": "2026-06-13"
     },
     "india": {
       "text": "Indien: Aktien fallen wegen Sorgen um Konjunktur und hohe Zinsen. Negative 30-Tage-Entwicklung übertrifft Normalniveau deutlich.",
@@ -701,37 +700,29 @@
   "news": {
     "items": [
       {
-        "text": "SpaceX-Börsengang: Anleger warten auf erste Kurse",
+        "text": "SpaceX-Aktie schießt nach Börsendebüt fast 20 Prozent hoch",
         "stamp": "12.06.26"
       },
       {
-        "text": "US-Inflation steigt wieder: Fed unter Druck",
+        "text": "Ölpreis fällt unter 90 USD nach Friedensgesprächen mit Iran",
         "stamp": "12.06.26"
       },
       {
-        "text": "OpenAI vor Börsengang: ChatGPT entfacht Börsen-Fantasie",
+        "text": "Indonesiens Aktienmarkt stürzt ab, Zentralbank erhöht Zinsen",
         "stamp": "12.06.26"
       },
       {
-        "text": "Nvidia startet neue Offensive in China",
+        "text": "Monero steigt um 27% wegen Verdacht auf Geldwäsche",
         "stamp": "12.06.26"
-      },
-      {
-        "text": "EZB erhöht Leitzinsen um 0,2 Prozentpunkte auf 2,40 Prozent",
-        "stamp": "11.06.26"
-      },
-      {
-        "text": "Geopolitik belastet Finanzmärkte: Iran-Konflikt verschärft sich",
-        "stamp": "11.06.26"
       }
     ],
-    "date": "2026-06-12"
+    "date": "2026-06-13"
   },
   "scan": {
     "universe": 8831,
     "scanned": 8831,
-    "lastCursor": 1568,
-    "candCursor": 208,
+    "lastCursor": 1868,
+    "candCursor": 216,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1089,45 +1080,51 @@
       "Palomar Holdings",
       "Marex Group",
       "Talen Energy Corp",
-      "Vistra Energy"
+      "Vistra Energy",
+      "SFC Energy AG",
+      "Hamborner Reit AG",
+      "Vossloh AG",
+      "Wacker Neuson SE",
+      "KWS Saat SE & Co. KGaA",
+      "Elmos Semiconductor SE"
     ],
-    "noteCursor": 3,
-    "focusCursor": 0,
+    "noteCursor": 4,
+    "focusCursor": 1,
     "recheckCursor": 16,
-    "regionNoteCursor": 4,
-    "notesDay": "2026-06-12",
+    "regionNoteCursor": 5,
+    "notesDay": "2026-06-13",
     "seenBySector": {
-      "cons_cycl": 717,
-      "cons_def": 363,
-      "materials": 489,
-      "health": 2025,
-      "finance": 1425,
-      "energy": 639,
-      "hardware": 454,
-      "software": 1375,
-      "industrial": 596,
-      "utilities": 252,
-      "comm": 303,
-      "ai_semi": 277,
-      "realestate": 126
+      "cons_cycl": 720,
+      "cons_def": 373,
+      "materials": 493,
+      "health": 2047,
+      "finance": 1442,
+      "energy": 647,
+      "hardware": 462,
+      "software": 1386,
+      "industrial": 601,
+      "utilities": 254,
+      "comm": 309,
+      "ai_semi": 278,
+      "realestate": 128
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 717,
-      "cons_def": 363,
-      "materials": 489,
-      "health": 2025,
-      "finance": 1427,
-      "energy": 639,
-      "hardware": 456,
-      "software": 1376,
-      "industrial": 598,
-      "utilities": 252,
-      "comm": 303,
-      "ai_semi": 278,
-      "realestate": 126
+      "cons_cycl": 720,
+      "cons_def": 373,
+      "materials": 493,
+      "health": 2047,
+      "finance": 1444,
+      "energy": 647,
+      "hardware": 464,
+      "software": 1387,
+      "industrial": 603,
+      "utilities": 254,
+      "comm": 309,
+      "ai_semi": 279,
+      "realestate": 128
     },
-    "heavyAt": "2026-06-12T15:48:46.175Z",
+    "heavyAt": "2026-06-13T01:56:11.497Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
