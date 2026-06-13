@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-12",
-  "updatedAt": "2026-06-13T08:00:56.557Z",
+  "updated": "2026-06-13",
+  "updatedAt": "2026-06-13T08:30:47.161Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0032,
+      "sektorPsi": 0.0031,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0088,
+      "sektorPsi": 0.0086,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0088,
+      "sektorPsi": 0.0086,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0119,
+      "sektorPsi": 0.0118,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -452,7 +452,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0119,
+      "sektorPsi": 0.0118,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -520,7 +520,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0032,
+      "sektorPsi": 0.0031,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -700,20 +700,28 @@
   "news": {
     "items": [
       {
-        "text": "SpaceX-Aktie schießt nach Börsendebüt fast 20 Prozent hoch",
+        "text": "US-Regierung genehmigt Warner-Übernahme durch Paramount ohne Auflagen.",
+        "stamp": "13.06.26"
+      },
+      {
+        "text": "SpaceX-Aktie startet stark an Börse, Elon Musk wird Trillionär.",
+        "stamp": "13.06.26"
+      },
+      {
+        "text": "Goldpreise steigen rasant aufgrund von Entspannung im US-Iran-Konflikt.",
+        "stamp": "13.06.26"
+      },
+      {
+        "text": "Bank von Japan hebt Zinsen auf höchsten Stand seit 31 Jahren an.",
         "stamp": "12.06.26"
       },
       {
-        "text": "Ölpreis fällt unter 90 USD nach Friedensgesprächen mit Iran",
+        "text": "APEC-Treffen diskutiert nachhaltiges regionales Wachstum in China.",
         "stamp": "12.06.26"
       },
       {
-        "text": "Indonesiens Aktienmarkt stürzt ab, Zentralbank erhöht Zinsen",
-        "stamp": "12.06.26"
-      },
-      {
-        "text": "Monero steigt um 27% wegen Verdacht auf Geldwäsche",
-        "stamp": "12.06.26"
+        "text": "US-Bundesberufungsgericht erlaubt Wiedereinführung von 10% Weltzoll.",
+        "stamp": "11.06.26"
       }
     ],
     "date": "2026-06-13"
@@ -721,8 +729,8 @@
   "scan": {
     "universe": 8831,
     "scanned": 8831,
-    "lastCursor": 1868,
-    "candCursor": 216,
+    "lastCursor": 2168,
+    "candCursor": 224,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1086,45 +1094,69 @@
       "Vossloh AG",
       "Wacker Neuson SE",
       "KWS Saat SE & Co. KGaA",
-      "Elmos Semiconductor SE"
+      "Elmos Semiconductor SE",
+      "Ambu A/S",
+      "Demant A/S",
+      "Coloplast A/S",
+      "Argenx SE",
+      "Adyen N.V.",
+      "Capgemini SE",
+      "Teleperformance SE",
+      "STMicroelectronics N.V.",
+      "Moncler S.p.A.",
+      "Amplifon S.p.A."
     ],
     "noteCursor": 4,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 5,
     "notesDay": "2026-06-13",
     "seenBySector": {
-      "cons_cycl": 720,
-      "cons_def": 373,
-      "materials": 493,
-      "health": 2047,
-      "finance": 1442,
-      "energy": 647,
-      "hardware": 462,
-      "software": 1386,
-      "industrial": 601,
-      "utilities": 254,
-      "comm": 309,
-      "ai_semi": 278,
-      "realestate": 128
+      "cons_cycl": 731,
+      "cons_def": 374,
+      "materials": 497,
+      "health": 2070,
+      "finance": 1451,
+      "energy": 654,
+      "hardware": 471,
+      "software": 1404,
+      "industrial": 606,
+      "utilities": 258,
+      "comm": 312,
+      "ai_semi": 280,
+      "realestate": 130
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "DCI",
+      "DCO",
+      "DCOM",
+      "DCOY",
+      "DCTH",
+      "DD",
+      "DDC",
+      "DDD",
+      "DDOG",
+      "DDS",
+      "DE",
+      "DEC",
+      "DECK"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 720,
-      "cons_def": 373,
-      "materials": 493,
-      "health": 2047,
-      "finance": 1444,
-      "energy": 647,
-      "hardware": 464,
-      "software": 1387,
-      "industrial": 603,
-      "utilities": 254,
-      "comm": 309,
-      "ai_semi": 279,
-      "realestate": 128
+      "cons_cycl": 731,
+      "cons_def": 374,
+      "materials": 497,
+      "health": 2070,
+      "finance": 1453,
+      "energy": 654,
+      "hardware": 473,
+      "software": 1405,
+      "industrial": 608,
+      "utilities": 258,
+      "comm": 312,
+      "ai_semi": 281,
+      "realestate": 130
     },
-    "heavyAt": "2026-06-13T01:56:11.497Z",
+    "heavyAt": "2026-06-13T08:23:05.076Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1135,6 +1167,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-13T08:00:56.557Z"
+  }
 }
