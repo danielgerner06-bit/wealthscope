@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-13",
-  "updatedAt": "2026-06-14T08:00:55.156Z",
+  "updated": "2026-06-14",
+  "updatedAt": "2026-06-14T08:40:23.421Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -288,6 +288,37 @@
   ],
   "topStocks": [
     {
+      "ticker": "ORS",
+      "name": "Orsero S.p.A.",
+      "yahoo": "ORS.MI",
+      "sector": "cons_def",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-14",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": -12.33,
+      "perf6mAt": "2026-06-14",
+      "perf1mBefore": 0.26,
+      "upside": 68,
+      "pe": 9.5,
+      "eps": 1.64,
+      "div": 3.22,
+      "enrichAt": "2026-06-14",
+      "sektorPsi": 0.0079,
+      "sektorPsiAtAdd": 0.008
+    },
+    {
       "ticker": "SB1",
       "name": "Smartbroker Holding AG",
       "sector": "finance",
@@ -318,10 +349,41 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0047,
+      "sektorPsi": 0.0046,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
+    },
+    {
+      "ticker": "SIT",
+      "name": "SIT S.p.A.",
+      "yahoo": "SIT.MI",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-06-14",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-14",
+      "perf6m": -17.31,
+      "perf6mAt": "2026-06-14",
+      "perf1mBefore": -17.12,
+      "upside": 56,
+      "pe": 54.5,
+      "eps": 0.04,
+      "div": 0,
+      "enrichAt": "2026-06-14",
+      "sektorPsi": 0.0228,
+      "sektorPsiAtAdd": 0.0229
     },
     {
       "ticker": "A1OS.DE",
@@ -351,7 +413,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0085,
+      "sektorPsi": 0.0084,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -384,7 +446,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0085,
+      "sektorPsi": 0.0084,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -420,7 +482,7 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0229,
+      "sektorPsi": 0.0228,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -452,10 +514,41 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0229,
+      "sektorPsi": 0.0228,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
+    },
+    {
+      "ticker": "GF",
+      "name": "Generalfinance S.p.A.",
+      "yahoo": "GF.MI",
+      "sector": "finance",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-14",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": 32.02,
+      "perf6mAt": "2026-06-14",
+      "perf1mBefore": -5.14,
+      "upside": 18,
+      "pe": 11.9,
+      "eps": 2.27,
+      "div": 5.04,
+      "enrichAt": "2026-06-14",
+      "sektorPsi": 0.0046,
+      "sektorPsiAtAdd": 0.0047
     },
     {
       "ticker": "402340",
@@ -490,6 +583,37 @@
       "miss": 0
     },
     {
+      "ticker": "LUVE",
+      "name": "LU-VE S.p.A.",
+      "yahoo": "LUVE.MI",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 2,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 5,
+      "strongBuyPct": 60,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-14",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": 71.43,
+      "perf6mAt": "2026-06-14",
+      "perf1mBefore": -0.96,
+      "upside": 4,
+      "pe": 36,
+      "eps": 1.88,
+      "div": 0.69,
+      "enrichAt": "2026-06-14",
+      "sektorPsi": 0.0228,
+      "sektorPsiAtAdd": 0.0229
+    },
+    {
       "ticker": "HYQ.DE",
       "name": "Hypoport SE",
       "sector": "finance",
@@ -520,7 +644,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0047,
+      "sektorPsi": 0.0046,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -556,130 +680,6 @@
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
-    },
-    {
-      "ticker": "LUVE",
-      "name": "LU-VE S.p.A.",
-      "yahoo": "LUVE.MI",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 2,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 5,
-      "strongBuyPct": 60,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-14",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-14",
-      "perf6m": 71.43,
-      "perf6mAt": "2026-06-14",
-      "perf1mBefore": -0.96,
-      "upside": 4,
-      "pe": 36,
-      "eps": 1.88,
-      "div": 0.69,
-      "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0229,
-      "sektorPsiAtAdd": 0.0229
-    },
-    {
-      "ticker": "ORS",
-      "name": "Orsero S.p.A.",
-      "yahoo": "ORS.MI",
-      "sector": "cons_def",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-14",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-14",
-      "perf6m": -12.33,
-      "perf6mAt": "2026-06-14",
-      "perf1mBefore": 0.26,
-      "upside": 68,
-      "pe": 9.5,
-      "eps": 1.64,
-      "div": 3.22,
-      "enrichAt": "2026-06-14",
-      "sektorPsi": 0.008,
-      "sektorPsiAtAdd": 0.008
-    },
-    {
-      "ticker": "GF",
-      "name": "Generalfinance S.p.A.",
-      "yahoo": "GF.MI",
-      "sector": "finance",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 2,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 2,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-14",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-14",
-      "perf6m": 32.02,
-      "perf6mAt": "2026-06-14",
-      "perf1mBefore": -5.14,
-      "upside": 18,
-      "pe": 11.9,
-      "eps": 2.27,
-      "div": 5.04,
-      "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0047,
-      "sektorPsiAtAdd": 0.0047
-    },
-    {
-      "ticker": "SIT",
-      "name": "SIT S.p.A.",
-      "yahoo": "SIT.MI",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-06-14",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-14",
-      "perf6m": -17.31,
-      "perf6mAt": "2026-06-14",
-      "perf1mBefore": -17.12,
-      "upside": 56,
-      "pe": 54.5,
-      "eps": 0.04,
-      "div": 0,
-      "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0229,
-      "sektorPsiAtAdd": 0.0229
     }
   ],
   "psiHistory": [
@@ -844,20 +844,20 @@
   "news": {
     "items": [
       {
-        "text": "Europa: Märkte zwischen Geopolitik, KI und Strukturwandel.",
+        "text": "Notenbankwoche entscheidet über globale Finanzmärkte",
         "stamp": "13.06.26"
       },
       {
-        "text": "SpaceX-Aktie knallt hoch – Musk wird Trillionär.",
+        "text": "Fed, BoE und SNB im Fokus: Richtungsweisende Woche für Finanzmärkte",
         "stamp": "13.06.26"
       },
       {
-        "text": "Nvidia zündet Gesundheits-Offensive: Ärzte bekommen KI-Hilfe.",
-        "stamp": "13.06.26"
+        "text": "SpaceX-IPO sprengt Rekorde – Musk jetzt Billionär",
+        "stamp": "12.06.26"
       },
       {
-        "text": "Bundesbank warnt trotz Erholung vor anhaltenden Risiken.",
-        "stamp": "13.06.26"
+        "text": "China stoppt Saudi-Öl: Kaufzurückhaltung setzt Aramco unter Druck",
+        "stamp": "12.06.26"
       }
     ],
     "date": "2026-06-14"
@@ -865,8 +865,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 2768,
-    "candCursor": 240,
+    "lastCursor": 3068,
+    "candCursor": 248,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1247,45 +1247,52 @@
       "Powerfleet, Inc.",
       "Turtle Beach Corporation",
       "IMAX Corporation",
-      "Ribbon Communications Inc."
+      "Ribbon Communications Inc.",
+      "Viant Technology Inc.",
+      "Agilysys, Inc.",
+      "The Hackett Group, Inc.",
+      "SiTime Corporation",
+      "Magnachip Semiconductor Corporation",
+      "One Stop Systems, Inc.",
+      "Rubrik, Inc."
     ],
     "noteCursor": 5,
-    "focusCursor": 4,
+    "focusCursor": 5,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-14",
     "seenBySector": {
-      "cons_cycl": 742,
-      "cons_def": 378,
-      "materials": 509,
-      "health": 2117,
-      "finance": 1465,
-      "energy": 674,
-      "hardware": 480,
-      "software": 1434,
-      "industrial": 624,
-      "utilities": 269,
-      "comm": 317,
-      "ai_semi": 282,
-      "realestate": 133
+      "cons_cycl": 752,
+      "cons_def": 381,
+      "materials": 513,
+      "health": 2125,
+      "finance": 1504,
+      "energy": 680,
+      "hardware": 483,
+      "software": 1445,
+      "industrial": 629,
+      "utilities": 271,
+      "comm": 321,
+      "ai_semi": 283,
+      "realestate": 136
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 742,
-      "cons_def": 379,
-      "materials": 509,
-      "health": 2117,
-      "finance": 1468,
-      "energy": 674,
-      "hardware": 482,
-      "software": 1435,
-      "industrial": 628,
-      "utilities": 269,
-      "comm": 317,
-      "ai_semi": 283,
-      "realestate": 133
+      "cons_cycl": 752,
+      "cons_def": 382,
+      "materials": 513,
+      "health": 2125,
+      "finance": 1507,
+      "energy": 680,
+      "hardware": 485,
+      "software": 1446,
+      "industrial": 633,
+      "utilities": 271,
+      "comm": 321,
+      "ai_semi": 284,
+      "realestate": 136
     },
-    "heavyAt": "2026-06-14T02:01:04.278Z",
+    "heavyAt": "2026-06-14T08:33:28.894Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1296,6 +1303,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-14T08:00:55.156Z"
+  }
 }
