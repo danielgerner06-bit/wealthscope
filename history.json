@@ -6572,7 +6572,7 @@
       "pe": 16.3,
       "perf6mAtAdd": 15.78,
       "perf1mBefore": 4.35,
-      "sektorPsiAtAdd": null,
+      "sektorPsiAtAdd": 0.0038,
       "analysts": 6,
       "div": 2.29,
       "seen": "2026-06-14",
