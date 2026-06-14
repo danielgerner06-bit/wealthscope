@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-14",
-  "updatedAt": "2026-06-14T15:00:59.352Z",
+  "updatedAt": "2026-06-14T15:29:59.998Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -349,7 +349,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0046,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -382,7 +382,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0228,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0229
     },
     {
@@ -413,7 +413,7 @@
       "eps": 1.13,
       "div": 3.66,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0084,
+      "sektorPsi": 0.0083,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -446,7 +446,7 @@
       "eps": 1.47,
       "div": 1.57,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0084,
+      "sektorPsi": 0.0083,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -482,7 +482,7 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0228,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -514,7 +514,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0228,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -547,7 +547,7 @@
       "eps": 2.27,
       "div": 5.04,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0046,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0047
     },
     {
@@ -610,7 +610,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0228,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0229
     },
     {
@@ -644,7 +644,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0046,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -676,10 +676,41 @@
       "eps": 5.01,
       "div": 4.77,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
+    },
+    {
+      "ticker": "GFT",
+      "name": "GFT Technologies SE",
+      "yahoo": "GFT.DE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 5,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 6,
+      "strongBuyPct": 83,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-14",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": 15.78,
+      "perf6mAt": "2026-06-14",
+      "perf1mBefore": 4.35,
+      "upside": 36,
+      "pe": 16.3,
+      "eps": 1.34,
+      "div": 2.29,
+      "enrichAt": "2026-06-14",
+      "sektorPsi": 0.0038,
+      "sektorPsiAtAdd": 0.0038
     }
   ],
   "psiHistory": [
@@ -687,6 +718,11 @@
       "t": "1INN.DE",
       "d": "2026-06-05",
       "v": 0.0015
+    },
+    {
+      "t": "GFT",
+      "d": "2026-06-14",
+      "v": 0.0038
     },
     {
       "t": "402340",
@@ -844,19 +880,27 @@
   "news": {
     "items": [
       {
-        "text": "Notenbankwoche entscheidet über globale Finanzmärkte",
-        "stamp": "13.06.26"
-      },
-      {
-        "text": "Fed, BoE und SNB im Fokus: Richtungsweisende Woche für Finanzmärkte",
-        "stamp": "13.06.26"
-      },
-      {
-        "text": "SpaceX-IPO sprengt Rekorde – Musk jetzt Billionär",
+        "text": "SpaceX-IPO: 75 Mrd. USD eingesammelt, Bewertung über 1 Bio. USD",
         "stamp": "12.06.26"
       },
       {
-        "text": "China stoppt Saudi-Öl: Kaufzurückhaltung setzt Aramco unter Druck",
+        "text": "US-Börsen: Starker Handel dank Iran-Einigung und SpaceX-IPO",
+        "stamp": "12.06.26"
+      },
+      {
+        "text": "Europäische Aktienmärkte boomen – Piazza Affari mit Rekord",
+        "stamp": "12.06.26"
+      },
+      {
+        "text": "Software-Aktien vor Comeback – Bewertungen auf Mehrjahrestiefs",
+        "stamp": "12.06.26"
+      },
+      {
+        "text": "E-Scooter-Unfälle nehmen zu – Haftung für Halter soll verschärft werden",
+        "stamp": "12.06.26"
+      },
+      {
+        "text": "G7-Gipfel und Fed-Zinsentscheid prägen Handelswoche",
         "stamp": "12.06.26"
       }
     ],
@@ -865,8 +909,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 3068,
-    "candCursor": 248,
+    "lastCursor": 3368,
+    "candCursor": 256,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1254,45 +1298,52 @@
       "SiTime Corporation",
       "Magnachip Semiconductor Corporation",
       "One Stop Systems, Inc.",
-      "Rubrik, Inc."
+      "Rubrik, Inc.",
+      "Connect Biopharma Holdings Ltd.",
+      "Biomea Fusion Inc.",
+      "MDxHealth SA",
+      "KORU Medical Systems, Inc.",
+      "Vivani Medical, Inc.",
+      "Taysha Gene Therapies, Inc.",
+      "Vir Biotechnology, Inc."
     ],
     "noteCursor": 5,
-    "focusCursor": 5,
+    "focusCursor": 6,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-14",
     "seenBySector": {
-      "cons_cycl": 752,
-      "cons_def": 381,
-      "materials": 513,
-      "health": 2125,
-      "finance": 1504,
-      "energy": 680,
-      "hardware": 483,
-      "software": 1445,
-      "industrial": 629,
-      "utilities": 271,
-      "comm": 321,
-      "ai_semi": 283,
-      "realestate": 136
+      "cons_cycl": 760,
+      "cons_def": 383,
+      "materials": 517,
+      "health": 2137,
+      "finance": 1516,
+      "energy": 685,
+      "hardware": 489,
+      "software": 1458,
+      "industrial": 638,
+      "utilities": 272,
+      "comm": 324,
+      "ai_semi": 285,
+      "realestate": 138
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 752,
-      "cons_def": 382,
-      "materials": 513,
-      "health": 2125,
-      "finance": 1507,
-      "energy": 680,
-      "hardware": 485,
-      "software": 1446,
-      "industrial": 633,
-      "utilities": 271,
-      "comm": 321,
-      "ai_semi": 284,
-      "realestate": 136
+      "cons_cycl": 760,
+      "cons_def": 384,
+      "materials": 517,
+      "health": 2137,
+      "finance": 1519,
+      "energy": 685,
+      "hardware": 491,
+      "software": 1460,
+      "industrial": 642,
+      "utilities": 272,
+      "comm": 324,
+      "ai_semi": 286,
+      "realestate": 138
     },
-    "heavyAt": "2026-06-14T08:33:28.894Z",
+    "heavyAt": "2026-06-14T15:22:44.869Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1303,6 +1354,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-14T15:00:59.352Z"
+  }
 }

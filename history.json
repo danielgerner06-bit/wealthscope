@@ -6559,6 +6559,26 @@
       "startPrice": 2.15500009059906,
       "perf": [],
       "outperformPct": null
+    },
+    "GFT": {
+      "ticker": "GFT",
+      "name": "GFT Technologies SE",
+      "yahoo": "GFT.DE",
+      "sector": "software",
+      "region": "europe",
+      "buyPct": 100,
+      "strongBuyPct": 83,
+      "upside": 36,
+      "pe": 16.3,
+      "perf6mAtAdd": 15.78,
+      "perf1mBefore": 4.35,
+      "sektorPsiAtAdd": null,
+      "analysts": 6,
+      "div": 2.29,
+      "seen": "2026-06-14",
+      "seenMs": 1781395200000,
+      "startPrice": 21.600000381469727,
+      "perf": []
     }
   },
   "findings": {
