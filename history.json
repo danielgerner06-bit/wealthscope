@@ -6494,7 +6494,8 @@
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 67.14999771118164,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "ORS": {
       "ticker": "ORS",
@@ -6514,7 +6515,8 @@
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 15.380000114440918,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "GF": {
       "ticker": "GF",
@@ -6534,7 +6536,8 @@
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 26.75,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "SIT": {
       "ticker": "SIT",
@@ -6554,7 +6557,8 @@
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 2.15500009059906,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
