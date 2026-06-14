@@ -318,7 +318,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0031,
+      "sektorPsi": 0.0047,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 2.09,
       "div": 2.6,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0117,
+      "sektorPsi": 0.0229,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -452,7 +452,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0117,
+      "sektorPsi": 0.0229,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -520,7 +520,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.0031,
+      "sektorPsi": 0.0047,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -552,10 +552,134 @@
       "eps": 5.01,
       "div": 4.77,
       "enrichAt": "2026-06-10",
-      "sektorPsi": 0.002,
+      "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
+    },
+    {
+      "ticker": "LUVE",
+      "name": "LU-VE S.p.A.",
+      "yahoo": "LUVE.MI",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 2,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 5,
+      "strongBuyPct": 60,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-14",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": 71.43,
+      "perf6mAt": "2026-06-14",
+      "perf1mBefore": -0.96,
+      "upside": 4,
+      "pe": 36,
+      "eps": 1.88,
+      "div": 0.69,
+      "enrichAt": "2026-06-14",
+      "sektorPsi": 0.0229,
+      "sektorPsiAtAdd": 0.0229
+    },
+    {
+      "ticker": "ORS",
+      "name": "Orsero S.p.A.",
+      "yahoo": "ORS.MI",
+      "sector": "cons_def",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-14",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": -12.33,
+      "perf6mAt": "2026-06-14",
+      "perf1mBefore": 0.26,
+      "upside": 68,
+      "pe": 9.5,
+      "eps": 1.64,
+      "div": 3.22,
+      "enrichAt": "2026-06-14",
+      "sektorPsi": 0.008,
+      "sektorPsiAtAdd": 0.008
+    },
+    {
+      "ticker": "GF",
+      "name": "Generalfinance S.p.A.",
+      "yahoo": "GF.MI",
+      "sector": "finance",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-14",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": 32.02,
+      "perf6mAt": "2026-06-14",
+      "perf1mBefore": -5.14,
+      "upside": 18,
+      "pe": 11.9,
+      "eps": 2.27,
+      "div": 5.04,
+      "enrichAt": "2026-06-14",
+      "sektorPsi": 0.0047,
+      "sektorPsiAtAdd": 0.0047
+    },
+    {
+      "ticker": "SIT",
+      "name": "SIT S.p.A.",
+      "yahoo": "SIT.MI",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-06-14",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-14",
+      "perf6m": -17.31,
+      "perf6mAt": "2026-06-14",
+      "perf1mBefore": -17.12,
+      "upside": 56,
+      "pe": 54.5,
+      "eps": 0.04,
+      "div": 0,
+      "enrichAt": "2026-06-14",
+      "sektorPsi": 0.0229,
+      "sektorPsiAtAdd": 0.0229
     }
   ],
   "psiHistory": [
@@ -570,6 +694,11 @@
       "v": 0.0039
     },
     {
+      "t": "GF",
+      "d": "2026-06-14",
+      "v": 0.0047
+    },
+    {
       "t": "A1OS.DE",
       "d": "2026-06-05",
       "v": 0.0078
@@ -578,6 +707,11 @@
       "t": "IXX.DE",
       "d": "2026-06-05",
       "v": 0.0078
+    },
+    {
+      "t": "ORS",
+      "d": "2026-06-14",
+      "v": 0.008
     },
     {
       "t": "SB1",
@@ -598,6 +732,16 @@
       "t": "034730",
       "d": "2026-06-10",
       "v": 0.0102
+    },
+    {
+      "t": "LUVE",
+      "d": "2026-06-14",
+      "v": 0.0229
+    },
+    {
+      "t": "SIT",
+      "d": "2026-06-14",
+      "v": 0.0229
     }
   ],
   "sectorNotes": {
@@ -606,8 +750,8 @@
       "date": "2026-06-10"
     },
     "health": {
-      "text": "Der Gesundheits- und Pharmasektor zeigt sich nach einer schwachen Sechsmonatsperformance von -5,65% in den letzten 30 Tagen mit einem Kursplus von +3,91% deutlich erholt, was signifikant über dem historischen 30-Tage-Schnitt von +0,87% liegt. Diese kurzfristige Stärke könnte auf eine Rotation in defensivere Sektoren zurückzuführen sein, da die Unsicherheiten bezüglich des globalen Wirtschaftswachstums und der Zinsentwicklung zunehmen. Trotzdem fehlen derzeit markante Analysten-Favoriten, was auf eine weiterhin selektive Betrachtung und das Ausbleiben eines breiten Investitionszyklus hindeutet.",
-      "date": "2026-06-01"
+      "text": "Der Gesundheits- und Pharmasektor zeigt kurzfristig Stärke (+5.46% in 30 Tagen), deutlich über dem Normalniveau. Langfristig bleibt die Performance verhalten (+1.57% in 6 Monaten).",
+      "date": "2026-06-14"
     },
     "cons_def": {
       "text": "Defensive Konsumgüter leiden unter hohen Zinsen und schwacher Konjunktur. Langfristig zeigt sich jedoch eine leichte Erholung.",
@@ -661,8 +805,8 @@
       "date": "2026-06-05"
     },
     "em": {
-      "text": "Schwellenländer profitieren stark von globaler Konjunkturerholung und KI-Boom. Hohe Renditen locken trotz geopolitischer Risiken Investoren an.",
-      "date": "2026-06-04"
+      "text": "Schwellenländer zeigen sich schwach, da die jüngste Rallye stagniert. Die langfristige Performance ist stark, was auf anhaltendes Interesse trotz kurzfristiger Schwankungen hindeutet.",
+      "date": "2026-06-14"
     },
     "japan": {
       "text": "Japan: Zinsen steigen leicht, was die Konjunktur dämpft. Langfristig positive Entwicklung trotz kurzfristiger Schwankungen.",
@@ -700,37 +844,29 @@
   "news": {
     "items": [
       {
-        "text": "Europas Märkte zwischen Geopolitik, KI und Strukturwandel",
+        "text": "Europa: Märkte zwischen Geopolitik, KI und Strukturwandel.",
         "stamp": "13.06.26"
       },
       {
-        "text": "Wochenrückblick – EZB-Sitzung und Mega IPO",
+        "text": "SpaceX-Aktie knallt hoch – Musk wird Trillionär.",
         "stamp": "13.06.26"
       },
       {
-        "text": "Russische Kriegswirtschaft stößt an ihre Grenzen",
+        "text": "Nvidia zündet Gesundheits-Offensive: Ärzte bekommen KI-Hilfe.",
         "stamp": "13.06.26"
       },
       {
-        "text": "Geopolitik-Schock aus Korea und Iran: Bärenmarkt-Gefahr",
-        "stamp": "11.06.26"
-      },
-      {
-        "text": "SpaceX-IPO: Märkte unter Spannung",
-        "stamp": "11.06.26"
-      },
-      {
-        "text": "Indonesien taumelt in einen unkontrollierbaren Crash",
-        "stamp": "11.06.26"
+        "text": "Bundesbank warnt trotz Erholung vor anhaltenden Risiken.",
+        "stamp": "13.06.26"
       }
     ],
-    "date": "2026-06-13"
+    "date": "2026-06-14"
   },
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 2468,
-    "candCursor": 232,
+    "lastCursor": 2768,
+    "candCursor": 240,
     "candidates": [
       "Ocugen, Inc. (OCGN)",
       "All for One Group SE (A1OS.DE)",
@@ -1113,43 +1249,43 @@
       "IMAX Corporation",
       "Ribbon Communications Inc."
     ],
-    "noteCursor": 4,
-    "focusCursor": 3,
+    "noteCursor": 5,
+    "focusCursor": 4,
     "recheckCursor": 16,
-    "regionNoteCursor": 5,
-    "notesDay": "2026-06-13",
+    "regionNoteCursor": 6,
+    "notesDay": "2026-06-14",
     "seenBySector": {
-      "cons_cycl": 737,
-      "cons_def": 375,
-      "materials": 501,
-      "health": 2091,
-      "finance": 1458,
-      "energy": 664,
-      "hardware": 477,
-      "software": 1426,
-      "industrial": 615,
-      "utilities": 262,
-      "comm": 315,
-      "ai_semi": 281,
-      "realestate": 132
+      "cons_cycl": 742,
+      "cons_def": 378,
+      "materials": 509,
+      "health": 2117,
+      "finance": 1465,
+      "energy": 674,
+      "hardware": 480,
+      "software": 1434,
+      "industrial": 624,
+      "utilities": 269,
+      "comm": 317,
+      "ai_semi": 282,
+      "realestate": 133
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 737,
-      "cons_def": 375,
-      "materials": 501,
-      "health": 2091,
-      "finance": 1460,
-      "energy": 664,
-      "hardware": 479,
-      "software": 1427,
-      "industrial": 617,
-      "utilities": 262,
-      "comm": 315,
-      "ai_semi": 282,
-      "realestate": 132
+      "cons_cycl": 742,
+      "cons_def": 379,
+      "materials": 509,
+      "health": 2117,
+      "finance": 1468,
+      "energy": 674,
+      "hardware": 482,
+      "software": 1435,
+      "industrial": 628,
+      "utilities": 269,
+      "comm": 317,
+      "ai_semi": 283,
+      "realestate": 133
     },
-    "heavyAt": "2026-06-13T15:18:32.541Z",
+    "heavyAt": "2026-06-14T02:01:04.278Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
