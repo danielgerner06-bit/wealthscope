@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-15",
-  "updatedAt": "2026-06-15T15:00:09.298Z",
+  "updatedAt": "2026-06-15T15:30:27.728Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -189,9 +189,9 @@
     },
     {
       "id": "cons_def",
-      "perf": 0.9,
+      "perf": 0.8,
       "avg30": 0.43,
-      "perf6m": 9.28
+      "perf6m": 9.17
     },
     {
       "id": "industrial",
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": 2.17,
+      "perf": 2.15,
       "avg30": 0.63,
-      "perf6m": 11.31
+      "perf6m": 11.29
     }
   ],
   "bars30Region": [
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": -1.67,
+      "perf": -1.79,
       "avg30": 2.94,
-      "perf6m": 12.88
+      "perf6m": 12.73
     },
     {
       "id": "world",
@@ -315,7 +315,7 @@
       "eps": 1.64,
       "div": 3.22,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -351,10 +351,41 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0041,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
+    },
+    {
+      "ticker": "ADMCM.HE",
+      "name": "Admicom Oyj",
+      "yahoo": "ADMCM.HE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-15",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-15",
+      "perf6m": -35.91,
+      "perf6mAt": "2026-06-15",
+      "perf1mBefore": -8.75,
+      "upside": 57,
+      "pe": 25.1,
+      "eps": 1.11,
+      "div": 1.17,
+      "enrichAt": "2026-06-15",
+      "sektorPsi": 0.006,
+      "sektorPsiAtAdd": 0.0057
     },
     {
       "ticker": "SIT",
@@ -384,7 +415,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0219,
+      "sektorPsi": 0.0203,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -417,7 +448,7 @@
       "eps": 1.13,
       "div": 3.9,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0082,
+      "sektorPsi": 0.0079,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -450,7 +481,7 @@
       "eps": 1.34,
       "div": 2.29,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0057,
+      "sektorPsi": 0.006,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -483,7 +514,7 @@
       "eps": 2.23,
       "div": 1.52,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0082,
+      "sektorPsi": 0.0079,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -519,7 +550,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0219,
+      "sektorPsi": 0.0203,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -552,7 +583,7 @@
       "eps": 2.27,
       "div": 5.04,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0041,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -584,7 +615,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0219,
+      "sektorPsi": 0.0203,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -617,7 +648,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0219,
+      "sektorPsi": 0.0203,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -649,7 +680,7 @@
       "pe": null,
       "div": 0.11,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0035,
+      "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -685,7 +716,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0041,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -717,41 +748,10 @@
       "eps": 5.01,
       "div": 5.03,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0057,
+      "sektorPsi": 0.006,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
-    },
-    {
-      "ticker": "ADMCM.HE",
-      "name": "Admicom Oyj",
-      "yahoo": "ADMCM.HE",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-15",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-15",
-      "perf6m": -35.91,
-      "perf6mAt": "2026-06-15",
-      "perf1mBefore": -8.75,
-      "upside": 57,
-      "pe": 25.1,
-      "eps": 1.11,
-      "div": 1.17,
-      "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0057,
-      "sektorPsiAtAdd": 0.0057
     }
   ],
   "psiHistory": [
@@ -926,37 +926,26 @@
   "news": {
     "items": [
       {
-        "text": "Iran-Frieden beflügelt: Bitcoin über 65.000 US-Dollar.",
+        "text": "Wall Street feiert Iran-Deal und SpaceX-Börsengang",
         "stamp": "15.06.26"
       },
       {
-        "text": "DAX-FLASH: Iran-Deal und SpaceX-Erfolg sorgen für gute Laune.",
-        "stamp": "15.06.26"
-      },
-      {
-        "text": "Bundesbankprognose: Irankrieg bremst Wachstum bis 2028.",
-        "stamp": "15.06.26"
-      },
-      {
-        "text": "SpaceX vor Rekord-Börsengang: Was Anleger wissen müssen.",
+        "text": "Fed-Zinsentscheid: Spannung vor neuer Fed-Sitzung",
         "stamp": "14.06.26"
       },
       {
-        "text": "Fed, BoE und SNB: Notenbankwoche entscheidet über Märkte.",
-        "stamp": "13.06.26"
+        "text": "Analyst warnt vor \"perfektem Sturm\" an den Märkten",
+        "stamp": "14.06.26"
       }
     ],
     "date": "2026-06-15"
   },
   "scan": {
-    "universe": 8833,
-    "scanned": 8833,
-    "lastCursor": 3968,
-    "candCursor": 272,
+    "universe": 8831,
+    "scanned": 8831,
+    "lastCursor": 4268,
+    "candCursor": 280,
     "candidates": [
-      "Ocugen, Inc. (OCGN)",
-      "All for One Group SE (A1OS.DE)",
-      "Init Innovation in Traffic Systems SE (IXX.DE)",
       "Kontron AG (KTN.DE)",
       "Hypoport SE (HYQ.DE)",
       "innoscripta SE (1INN.DE)",
@@ -1348,45 +1337,53 @@
       "Vivani Medical, Inc.",
       "Taysha Gene Therapies, Inc.",
       "Vir Biotechnology, Inc.",
-      "Arcosa Inc."
+      "Arcosa Inc.",
+      "Mynaric AG",
+      "Vectron Systems AG",
+      "JDC Group AG",
+      "Basler AG",
+      "Südzucker AG",
+      "Nordex SE",
+      "Drägerwerk AG & Co. KGaA",
+      "Salzgitter AG"
     ],
     "noteCursor": 6,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-15",
     "seenBySector": {
-      "cons_cycl": 776,
-      "cons_def": 393,
-      "materials": 527,
-      "health": 2174,
-      "finance": 1544,
-      "energy": 696,
-      "hardware": 496,
-      "software": 1474,
-      "industrial": 653,
-      "utilities": 279,
-      "comm": 329,
-      "ai_semi": 287,
-      "realestate": 139
+      "cons_cycl": 778,
+      "cons_def": 397,
+      "materials": 530,
+      "health": 2205,
+      "finance": 1550,
+      "energy": 702,
+      "hardware": 502,
+      "software": 1488,
+      "industrial": 658,
+      "utilities": 280,
+      "comm": 332,
+      "ai_semi": 292,
+      "realestate": 141
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 776,
-      "cons_def": 394,
-      "materials": 527,
-      "health": 2174,
-      "finance": 1547,
-      "energy": 696,
-      "hardware": 498,
-      "software": 1477,
-      "industrial": 657,
-      "utilities": 279,
-      "comm": 329,
-      "ai_semi": 288,
-      "realestate": 139
+      "cons_cycl": 778,
+      "cons_def": 398,
+      "materials": 530,
+      "health": 2205,
+      "finance": 1553,
+      "energy": 702,
+      "hardware": 504,
+      "software": 1491,
+      "industrial": 662,
+      "utilities": 280,
+      "comm": 332,
+      "ai_semi": 293,
+      "realestate": 141
     },
-    "heavyAt": "2026-06-15T09:24:13.325Z",
+    "heavyAt": "2026-06-15T15:22:49.687Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1397,6 +1394,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-15T15:00:09.298Z"
+  }
 }
