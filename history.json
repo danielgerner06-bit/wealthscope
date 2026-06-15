@@ -6580,6 +6580,26 @@
       "startPrice": 21.600000381469727,
       "perf": [],
       "outperformPct": null
+    },
+    "ADMCM.HE": {
+      "ticker": "ADMCM.HE",
+      "name": "Admicom Oyj",
+      "yahoo": "ADMCM.HE",
+      "sector": "software",
+      "region": "europe",
+      "buyPct": 100,
+      "strongBuyPct": 100,
+      "upside": 57,
+      "pe": 25.1,
+      "perf6mAtAdd": -35.91,
+      "perf1mBefore": -8.75,
+      "sektorPsiAtAdd": null,
+      "analysts": 4,
+      "div": 1.17,
+      "seen": "2026-06-15",
+      "seenMs": 1781481600000,
+      "startPrice": 27.649999618530273,
+      "perf": []
     }
   },
   "findings": {
