@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-15",
-  "updatedAt": "2026-06-15T21:00:51.868Z",
+  "updatedAt": "2026-06-15T21:44:34.864Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 1.64,
       "div": 3.22,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0089,
+      "sektorPsi": 0.0085,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0041,
+      "sektorPsi": 0.004,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -415,7 +415,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0203,
+      "sektorPsi": 0.0201,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -448,7 +448,7 @@
       "eps": 1.13,
       "div": 3.9,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0079,
+      "sektorPsi": 0.0078,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -514,7 +514,7 @@
       "eps": 2.23,
       "div": 1.52,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0079,
+      "sektorPsi": 0.0078,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -550,7 +550,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0203,
+      "sektorPsi": 0.0201,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -583,7 +583,7 @@
       "eps": 2.27,
       "div": 5.04,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0041,
+      "sektorPsi": 0.004,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -615,7 +615,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0203,
+      "sektorPsi": 0.0201,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0203,
+      "sektorPsi": 0.0201,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -716,7 +716,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0041,
+      "sektorPsi": 0.004,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -926,16 +926,24 @@
   "news": {
     "items": [
       {
-        "text": "Wall Street feiert Iran-Deal und SpaceX-Börsengang",
+        "text": "US-Börsen starten stark: Friedensabkommen katapultiert Aktienkurse nach oben",
         "stamp": "15.06.26"
       },
       {
-        "text": "Fed-Zinsentscheid: Spannung vor neuer Fed-Sitzung",
-        "stamp": "14.06.26"
+        "text": "DAX steigt nach Iran-Einigung – Ölpreis bricht ein",
+        "stamp": "15.06.26"
       },
       {
-        "text": "Analyst warnt vor \"perfektem Sturm\" an den Märkten",
-        "stamp": "14.06.26"
+        "text": "Trump soll gegen Familie von US-Gouverneur ermitteln",
+        "stamp": "15.06.26"
+      },
+      {
+        "text": "EU verhängt neue Sanktionen gegen Russlands Kriegswirtschaft",
+        "stamp": "15.06.26"
+      },
+      {
+        "text": "Fed hält an Nullzinsen fest, Trump kritisiert Powell",
+        "stamp": "15.06.26"
       }
     ],
     "date": "2026-06-15"
@@ -943,8 +951,8 @@
   "scan": {
     "universe": 8831,
     "scanned": 8831,
-    "lastCursor": 4268,
-    "candCursor": 280,
+    "lastCursor": 4568,
+    "candCursor": 288,
     "candidates": [
       "Kontron AG (KTN.DE)",
       "Hypoport SE (HYQ.DE)",
@@ -1348,42 +1356,49 @@
       "Salzgitter AG"
     ],
     "noteCursor": 6,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-15",
     "seenBySector": {
-      "cons_cycl": 778,
-      "cons_def": 397,
-      "materials": 530,
-      "health": 2205,
-      "finance": 1550,
-      "energy": 702,
-      "hardware": 502,
-      "software": 1488,
-      "industrial": 658,
-      "utilities": 280,
-      "comm": 332,
-      "ai_semi": 292,
-      "realestate": 141
+      "cons_cycl": 789,
+      "cons_def": 404,
+      "materials": 537,
+      "health": 2227,
+      "finance": 1564,
+      "energy": 712,
+      "hardware": 510,
+      "software": 1497,
+      "industrial": 663,
+      "utilities": 281,
+      "comm": 335,
+      "ai_semi": 296,
+      "realestate": 144
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "LESL",
+      "LEU",
+      "LEVI",
+      "LEXX",
+      "LFCR",
+      "LFLH"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 778,
-      "cons_def": 398,
-      "materials": 530,
-      "health": 2205,
-      "finance": 1553,
-      "energy": 702,
-      "hardware": 504,
-      "software": 1491,
-      "industrial": 662,
-      "utilities": 280,
-      "comm": 332,
-      "ai_semi": 293,
-      "realestate": 141
+      "cons_cycl": 789,
+      "cons_def": 405,
+      "materials": 537,
+      "health": 2227,
+      "finance": 1567,
+      "energy": 712,
+      "hardware": 512,
+      "software": 1500,
+      "industrial": 667,
+      "utilities": 281,
+      "comm": 335,
+      "ai_semi": 297,
+      "realestate": 144
     },
-    "heavyAt": "2026-06-15T15:22:49.687Z",
+    "heavyAt": "2026-06-15T21:37:33.725Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1394,6 +1409,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-15T21:00:51.868Z"
+  }
 }
