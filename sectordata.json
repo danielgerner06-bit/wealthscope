@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-16",
-  "updatedAt": "2026-06-16T20:00:51.857Z",
+  "updatedAt": "2026-06-16T20:25:23.842Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 0.96,
+      "perf": 0.81,
       "avg30": -0.85,
-      "perf6m": -16.64
+      "perf6m": -16.77
     },
     {
       "id": "ai_semi",
@@ -161,7 +161,7 @@
       "id": "hardware",
       "perf": 5.42,
       "avg30": 3.78,
-      "perf6m": 25.99
+      "perf6m": 26
     },
     {
       "id": "comm",
@@ -183,15 +183,15 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -0.15,
+      "perf": -0.18,
       "avg30": 0.83,
-      "perf6m": -1.41
+      "perf6m": -1.43
     },
     {
       "id": "cons_def",
-      "perf": 1.05,
+      "perf": 1.03,
       "avg30": 0.44,
-      "perf6m": 8.64
+      "perf6m": 8.62
     },
     {
       "id": "industrial",
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": 2.66,
+      "perf": 2.71,
       "avg30": 0.64,
-      "perf6m": 10.63
+      "perf6m": 10.67
     }
   ],
   "bars30Region": [
@@ -263,9 +263,9 @@
     },
     {
       "id": "apac",
-      "perf": 2.76,
+      "perf": 2.78,
       "avg30": 3.27,
-      "perf6m": 26.92
+      "perf6m": 26.95
     },
     {
       "id": "india",
@@ -287,6 +287,37 @@
     }
   ],
   "topStocks": [
+    {
+      "ticker": "EXL.DE",
+      "name": "Exasol AG",
+      "yahoo": "EXL.DE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-16",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": -2.89,
+      "perf6mAt": "2026-06-16",
+      "perf1mBefore": -8.65,
+      "upside": 92,
+      "pe": 21.1,
+      "eps": 0.11,
+      "div": 0,
+      "enrichAt": "2026-06-16",
+      "sektorPsi": 0.0087,
+      "sektorPsiAtAdd": 0.007
+    },
     {
       "ticker": "ORS",
       "name": "Orsero S.p.A.",
@@ -315,7 +346,7 @@
       "eps": 1.64,
       "div": 3.22,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -351,7 +382,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0042,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -384,7 +415,7 @@
       "eps": 1.11,
       "div": 1.17,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0087,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-16",
       "miss": 0
@@ -417,7 +448,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.025,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -450,7 +481,7 @@
       "eps": 1.13,
       "div": 3.9,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.0067,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -483,10 +514,41 @@
       "eps": 1.34,
       "div": 2.29,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0087,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
+    },
+    {
+      "ticker": "JST.DE",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-16",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": 6.27,
+      "perf6mAt": "2026-06-16",
+      "perf1mBefore": 0.54,
+      "upside": 34,
+      "pe": 77.6,
+      "eps": 0.72,
+      "div": 2.68,
+      "enrichAt": "2026-06-16",
+      "sektorPsi": 0.0173,
+      "sektorPsiAtAdd": 0.025
     },
     {
       "ticker": "IXX.DE",
@@ -516,7 +578,7 @@
       "eps": 2.23,
       "div": 1.52,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.0067,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -552,7 +614,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.025,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -585,7 +647,7 @@
       "eps": 2.27,
       "div": 5.04,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0042,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -617,7 +679,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.025,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -650,7 +712,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.025,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -718,7 +780,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0042,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -750,72 +812,10 @@
       "eps": 5.01,
       "div": 5.03,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0087,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
-    },
-    {
-      "ticker": "JST.DE",
-      "name": "Jost Werke AG",
-      "yahoo": "JST.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-16",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": 6.27,
-      "perf6mAt": "2026-06-16",
-      "perf1mBefore": 0.54,
-      "upside": 34,
-      "pe": 77.6,
-      "eps": 0.72,
-      "div": 2.68,
-      "enrichAt": "2026-06-16",
-      "sektorPsi": 0.025,
-      "sektorPsiAtAdd": 0.025
-    },
-    {
-      "ticker": "EXL.DE",
-      "name": "Exasol AG",
-      "yahoo": "EXL.DE",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 2,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 2,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-16",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": -2.89,
-      "perf6mAt": "2026-06-16",
-      "perf1mBefore": -8.65,
-      "upside": 92,
-      "pe": 21.1,
-      "eps": 0.11,
-      "div": 0,
-      "enrichAt": "2026-06-16",
-      "sektorPsi": 0.007,
-      "sektorPsiAtAdd": 0.007
     }
   ],
   "psiHistory": [
@@ -999,34 +999,34 @@
   "news": {
     "items": [
       {
-        "text": "Friedensabkommen im Iran-Krieg löst globale Aktienrally aus.",
+        "text": "Dax schließt auf Vortagesniveau - Autowerte bremsen Euphorie.",
         "stamp": "16.06.26"
       },
       {
-        "text": "SpaceX-Aktie startet stark nach historischem Börsengang.",
+        "text": "EZB könnte bei Inflationssorgen Leitzins erneut anheben.",
         "stamp": "16.06.26"
       },
       {
-        "text": "AT&S investiert Milliarden in Malaysia für KI-Boom.",
+        "text": "Japanische Notenbank hebt Leitzins an, Australien belässt ihn.",
+        "stamp": "16.06.26"
+      },
+      {
+        "text": "SpaceX vor Rekord-Börsengang: Was Anleger wissen müssen.",
+        "stamp": "16.06.26"
+      },
+      {
+        "text": "RWI senkt deutsche Wachstumsprognosen für 2026 und 2027.",
         "stamp": "16.06.26"
       }
     ],
     "date": "2026-06-16"
   },
   "scan": {
-    "universe": 8831,
-    "scanned": 8831,
-    "lastCursor": 5168,
-    "candCursor": 304,
+    "universe": 8829,
+    "scanned": 8829,
+    "lastCursor": 5468,
+    "candCursor": 312,
     "candidates": [
-      "Smartbroker Holding AG",
-      "Nagarro SE",
-      "SMA Solar Technology AG",
-      "Friedrich Vorwerk Group SE",
-      "SECunet Security Networks AG",
-      "Süss MicroTec SE",
-      "Verbio SE",
-      "Mensch und Maschine Software SE",
       "Pferdewetten.de AG",
       "Schott Pharma AG",
       "ADTRAN Holdings",
@@ -1418,45 +1418,55 @@
       "ASICS Corporation",
       "Food & Life Companies Inc.",
       "Pan Pacific International Holdings Corp.",
-      "SKC Co., Ltd."
+      "SKC Co., Ltd.",
+      "CEVA, Inc.",
+      "Rambus Inc.",
+      "Lattice Semiconductor Corporation",
+      "Silicon Motion Technology Corporation",
+      "Allegro MicroSystems, Inc.",
+      "Wolfspeed, Inc.",
+      "Entegris, Inc.",
+      "MKS Instruments, Inc."
     ],
     "noteCursor": 7,
-    "focusCursor": 4,
+    "focusCursor": 5,
     "recheckCursor": 16,
     "regionNoteCursor": 8,
     "notesDay": "2026-06-16",
     "seenBySector": {
-      "cons_cycl": 807,
-      "cons_def": 414,
-      "materials": 551,
-      "health": 2271,
-      "finance": 1585,
-      "energy": 717,
-      "hardware": 518,
-      "software": 1522,
-      "industrial": 676,
-      "utilities": 283,
-      "comm": 342,
-      "ai_semi": 301,
-      "realestate": 146
-    },
-    "pendingReject": [],
-    "evaluatedBySector": {
-      "cons_cycl": 807,
-      "cons_def": 415,
-      "materials": 551,
-      "health": 2271,
-      "finance": 1588,
-      "energy": 717,
-      "hardware": 520,
-      "software": 1526,
+      "cons_cycl": 809,
+      "cons_def": 416,
+      "materials": 562,
+      "health": 2288,
+      "finance": 1602,
+      "energy": 731,
+      "hardware": 522,
+      "software": 1535,
       "industrial": 681,
-      "utilities": 283,
-      "comm": 342,
-      "ai_semi": 302,
-      "realestate": 146
+      "utilities": 287,
+      "comm": 345,
+      "ai_semi": 306,
+      "realestate": 147
     },
-    "heavyAt": "2026-06-16T10:22:34.880Z",
+    "pendingReject": [
+      "NNI"
+    ],
+    "evaluatedBySector": {
+      "cons_cycl": 809,
+      "cons_def": 417,
+      "materials": 562,
+      "health": 2288,
+      "finance": 1605,
+      "energy": 731,
+      "hardware": 524,
+      "software": 1539,
+      "industrial": 686,
+      "utilities": 287,
+      "comm": 345,
+      "ai_semi": 307,
+      "realestate": 147
+    },
+    "heavyAt": "2026-06-16T20:18:30.233Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1467,6 +1477,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-16T20:00:51.857Z"
+  }
 }
