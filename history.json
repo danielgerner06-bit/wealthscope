@@ -6620,7 +6620,8 @@
       "seen": "2026-06-16",
       "seenMs": 1781568000000,
       "startPrice": 55.900001525878906,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "EXL.DE": {
       "ticker": "EXL.DE",
@@ -6640,7 +6641,8 @@
       "seen": "2026-06-16",
       "seenMs": 1781568000000,
       "startPrice": 2.375,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
