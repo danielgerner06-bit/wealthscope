@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-15",
-  "updatedAt": "2026-06-16T04:00:51.858Z",
+  "updated": "2026-06-16",
+  "updatedAt": "2026-06-16T04:11:58.179Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 1.64,
       "div": 3.22,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0085,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0042,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -373,7 +373,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-15",
+      "verifiedAt": "2026-06-16",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-15",
       "perf6m": -35.91,
@@ -384,8 +384,10 @@
       "eps": 1.11,
       "div": 1.17,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.006,
-      "sektorPsiAtAdd": 0.0057
+      "sektorPsi": 0.0053,
+      "sektorPsiAtAdd": 0.0057,
+      "recheckAt": "2026-06-16",
+      "miss": 0
     },
     {
       "ticker": "SIT",
@@ -415,7 +417,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0201,
+      "sektorPsi": 0.0202,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -448,7 +450,7 @@
       "eps": 1.13,
       "div": 3.9,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0078,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -481,7 +483,7 @@
       "eps": 1.34,
       "div": 2.29,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.006,
+      "sektorPsi": 0.0053,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -514,7 +516,7 @@
       "eps": 2.23,
       "div": 1.52,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0078,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -550,7 +552,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0201,
+      "sektorPsi": 0.0202,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -583,7 +585,7 @@
       "eps": 2.27,
       "div": 5.04,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0042,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -615,7 +617,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0201,
+      "sektorPsi": 0.0202,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -648,7 +650,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0201,
+      "sektorPsi": 0.0202,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -680,7 +682,7 @@
       "pe": null,
       "div": 0.11,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -716,7 +718,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0042,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -748,7 +750,7 @@
       "eps": 5.01,
       "div": 5.03,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.006,
+      "sektorPsi": 0.0053,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -856,9 +858,8 @@
       "date": "2026-06-13"
     },
     "cons_cycl": {
-      "text": "Konsum zyklisch abhängig von Kaufkraft und Zinsen; hohe Zinsen dämpfen Anschaffungen, sinkende Inflation könnte stützen.",
-      "date": null,
-      "seed": true
+      "text": "Der Konsum-Zykliker-Sektor schwächelt aktuell, da hohe Zinsen und eine unsichere Konjunktur die Ausgaben der Verbraucher dämpfen.",
+      "date": "2026-06-16"
     },
     "industrial": {
       "text": "Industrie zeigt moderate 30-Tage-Performance, profitiert aber stark von KI-getriebener Nachfrage. Höhere Zinsen belasten kurzfristig, die langfristige Konjunkturerholung treibt den Sektor.",
@@ -911,8 +912,8 @@
       "date": "2026-06-13"
     },
     "india": {
-      "text": "Indien: Aktien fallen wegen Sorgen um Konjunktur und hohe Zinsen. Negative 30-Tage-Entwicklung übertrifft Normalniveau deutlich.",
-      "date": "2026-06-06"
+      "text": "Indiens Aktien erholen sich im letzten Monat leicht (+0.73%) trotz negativer 6-Monats-Performance (-9.43%), was auf robuste Konjunkturaussichten hindeutet.",
+      "date": "2026-06-16"
     },
     "latam": {
       "text": "Lateinamerika: Kurzfristig schwach (-6,44%) wegen Normalisierung nach Zinsanstiegen. Langfristig positiv (+7,94%) durch robuste Konjunkturaussichten.",
@@ -926,35 +927,30 @@
   "news": {
     "items": [
       {
-        "text": "US-Börsen starten stark: Friedensabkommen katapultiert Aktienkurse nach oben",
+        "text": "Bitcoin übersteigt 66.000 Dollar nach US-Iran-Abkommen-Rallye.",
         "stamp": "15.06.26"
       },
       {
-        "text": "DAX steigt nach Iran-Einigung – Ölpreis bricht ein",
+        "text": "SpaceX-Aktie steigt nach starkem Börsendebüt weiter an.",
         "stamp": "15.06.26"
       },
       {
-        "text": "Trump soll gegen Familie von US-Gouverneur ermitteln",
+        "text": "US-Iran-Einigung treibt Märkte: DAX legt zu, Ölpreis bricht ein.",
         "stamp": "15.06.26"
       },
       {
-        "text": "EU verhängt neue Sanktionen gegen Russlands Kriegswirtschaft",
-        "stamp": "15.06.26"
-      },
-      {
-        "text": "Fed hält an Nullzinsen fest, Trump kritisiert Powell",
-        "stamp": "15.06.26"
+        "text": "Fed-Zinsentscheidung und Arbeitsmarktdaten im Fokus der Anleger.",
+        "stamp": "14.06.26"
       }
     ],
-    "date": "2026-06-15"
+    "date": "2026-06-16"
   },
   "scan": {
     "universe": 8831,
     "scanned": 8831,
-    "lastCursor": 4568,
-    "candCursor": 288,
+    "lastCursor": 4868,
+    "candCursor": 296,
     "candidates": [
-      "Kontron AG (KTN.DE)",
       "Hypoport SE (HYQ.DE)",
       "innoscripta SE (1INN.DE)",
       "ATOSS Software SE (AOF.DE)",
@@ -1353,52 +1349,55 @@
       "Südzucker AG",
       "Nordex SE",
       "Drägerwerk AG & Co. KGaA",
-      "Salzgitter AG"
+      "Salzgitter AG",
+      "Onto Innovation Inc."
     ],
-    "noteCursor": 6,
-    "focusCursor": 2,
+    "noteCursor": 7,
+    "focusCursor": 3,
     "recheckCursor": 16,
-    "regionNoteCursor": 7,
-    "notesDay": "2026-06-15",
+    "regionNoteCursor": 8,
+    "notesDay": "2026-06-16",
     "seenBySector": {
-      "cons_cycl": 789,
-      "cons_def": 404,
-      "materials": 537,
-      "health": 2227,
-      "finance": 1564,
-      "energy": 712,
-      "hardware": 510,
-      "software": 1497,
-      "industrial": 663,
-      "utilities": 281,
-      "comm": 335,
-      "ai_semi": 296,
+      "cons_cycl": 802,
+      "cons_def": 410,
+      "materials": 545,
+      "health": 2247,
+      "finance": 1571,
+      "energy": 714,
+      "hardware": 515,
+      "software": 1513,
+      "industrial": 669,
+      "utilities": 282,
+      "comm": 339,
+      "ai_semi": 298,
       "realestate": 144
     },
     "pendingReject": [
-      "LESL",
-      "LEU",
-      "LEVI",
-      "LEXX",
-      "LFCR",
-      "LFLH"
+      "MBOT",
+      "MBRX",
+      "MBUU",
+      "MBWM",
+      "MBX",
+      "MC",
+      "MCB",
+      "MCBS"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 789,
-      "cons_def": 405,
-      "materials": 537,
-      "health": 2227,
-      "finance": 1567,
-      "energy": 712,
-      "hardware": 512,
-      "software": 1500,
-      "industrial": 667,
-      "utilities": 281,
-      "comm": 335,
-      "ai_semi": 297,
+      "cons_cycl": 802,
+      "cons_def": 411,
+      "materials": 545,
+      "health": 2247,
+      "finance": 1574,
+      "energy": 714,
+      "hardware": 517,
+      "software": 1516,
+      "industrial": 673,
+      "utilities": 282,
+      "comm": 339,
+      "ai_semi": 299,
       "realestate": 144
     },
-    "heavyAt": "2026-06-15T21:37:33.725Z",
+    "heavyAt": "2026-06-16T04:05:06.807Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1409,6 +1408,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-16T04:00:51.858Z"
+  }
 }
