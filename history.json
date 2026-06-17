@@ -6643,6 +6643,26 @@
       "startPrice": 2.375,
       "perf": [],
       "outperformPct": null
+    },
+    "6701.T": {
+      "ticker": "6701.T",
+      "name": "NEC Corporation",
+      "yahoo": "6701.T",
+      "sector": "software",
+      "region": "japan",
+      "buyPct": 100,
+      "strongBuyPct": 33,
+      "upside": 56,
+      "pe": 19,
+      "perf6mAtAdd": -29.19,
+      "perf1mBefore": -7.48,
+      "sektorPsiAtAdd": null,
+      "analysts": 12,
+      "div": 1.04,
+      "seen": "2026-06-17",
+      "seenMs": 1781654400000,
+      "startPrice": 3850.5,
+      "perf": []
     }
   },
   "findings": {
