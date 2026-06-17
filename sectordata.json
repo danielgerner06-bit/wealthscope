@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0135,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.64,
       "div": 3.22,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0086,
+      "sektorPsi": 0.0079,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 1.11,
       "div": 1.17,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0135,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-16",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0167,
+      "sektorPsi": 0.0153,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 202.84,
       "div": 1.04,
       "enrichAt": "2026-06-17",
-      "sektorPsi": 0.0135,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.0106
     },
     {
@@ -514,7 +514,7 @@
       "eps": 1.13,
       "div": 3.9,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0075,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -547,7 +547,7 @@
       "eps": 1.34,
       "div": 2.29,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0135,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -580,7 +580,7 @@
       "eps": 0.72,
       "div": 2.68,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0167,
+      "sektorPsi": 0.0153,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -613,7 +613,7 @@
       "eps": 2.23,
       "div": 1.52,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0075,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -649,7 +649,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0167,
+      "sektorPsi": 0.0153,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -682,7 +682,7 @@
       "eps": 2.27,
       "div": 5.04,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -714,7 +714,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0167,
+      "sektorPsi": 0.0153,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -747,7 +747,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0167,
+      "sektorPsi": 0.0153,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -779,7 +779,7 @@
       "pe": null,
       "div": 0.11,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0032,
+      "sektorPsi": 0.0031,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -815,7 +815,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -847,7 +847,7 @@
       "eps": 5.01,
       "div": 5.03,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0135,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -1039,19 +1039,27 @@
   "news": {
     "items": [
       {
-        "text": "Aktuelle Finanznachrichten: DAX schwächer, BMW bricht ein, Märkte nervös vor Fed-Entscheid.",
+        "text": "Zentralbanken horten Gold wegen geopolitischer Spannungen.",
         "stamp": "17.06.26"
       },
       {
-        "text": "EZB hebt Leitzins an: Was das für Sparer und Kredite bedeutet.",
+        "text": "SpaceX überholt Amazon an Börsenwert, plant Robotaxi-Expansion.",
         "stamp": "17.06.26"
       },
       {
-        "text": "SAP-Aktie: Wird es eine ganz enge Kiste für den DAX-Wert?",
+        "text": "EU-Parlament stimmt Handelsabkommen mit den USA zu.",
         "stamp": "17.06.26"
       },
       {
-        "text": "Japanische Notenbank hebt Leitzins an, Australien belässt ihn unverändert.",
+        "text": "US-Börsen erwarten positive Stimmung vor Fed-Entscheid.",
+        "stamp": "17.06.26"
+      },
+      {
+        "text": "Uber treibt Robotaxi-Offensive mit Stellantis und Wayve voran.",
+        "stamp": "17.06.26"
+      },
+      {
+        "text": "BMW-Gewinnwarnung belastet DAX; Fed-Entscheid im Fokus.",
         "stamp": "16.06.26"
       }
     ],
@@ -1060,8 +1068,8 @@
   "scan": {
     "universe": 8829,
     "scanned": 8829,
-    "lastCursor": 6068,
-    "candCursor": 328,
+    "lastCursor": 6368,
+    "candCursor": 336,
     "candidates": [
       "Schott Pharma AG",
       "ADTRAN Holdings",
@@ -1465,42 +1473,42 @@
       "Varex Imaging Corp"
     ],
     "noteCursor": 8,
-    "focusCursor": 7,
+    "focusCursor": 0,
     "recheckCursor": 16,
     "regionNoteCursor": 9,
     "notesDay": "2026-06-17",
     "seenBySector": {
-      "cons_cycl": 818,
-      "cons_def": 425,
-      "materials": 569,
-      "health": 2340,
-      "finance": 1634,
-      "energy": 750,
-      "hardware": 530,
-      "software": 1577,
-      "industrial": 690,
-      "utilities": 297,
-      "comm": 348,
-      "ai_semi": 313,
+      "cons_cycl": 827,
+      "cons_def": 428,
+      "materials": 574,
+      "health": 2365,
+      "finance": 1648,
+      "energy": 755,
+      "hardware": 532,
+      "software": 1594,
+      "industrial": 699,
+      "utilities": 300,
+      "comm": 349,
+      "ai_semi": 319,
       "realestate": 151
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 818,
-      "cons_def": 426,
-      "materials": 569,
-      "health": 2340,
-      "finance": 1637,
-      "energy": 750,
-      "hardware": 532,
-      "software": 1582,
-      "industrial": 695,
-      "utilities": 297,
-      "comm": 348,
-      "ai_semi": 314,
+      "cons_cycl": 827,
+      "cons_def": 429,
+      "materials": 574,
+      "health": 2365,
+      "finance": 1651,
+      "energy": 755,
+      "hardware": 534,
+      "software": 1599,
+      "industrial": 704,
+      "utilities": 300,
+      "comm": 349,
+      "ai_semi": 320,
       "realestate": 151
     },
-    "heavyAt": "2026-06-17T10:16:56.614Z",
+    "heavyAt": "2026-06-17T19:56:07.035Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
