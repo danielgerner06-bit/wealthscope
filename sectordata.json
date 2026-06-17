@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-16",
-  "updatedAt": "2026-06-17T04:00:51.858Z",
+  "updated": "2026-06-17",
+  "updatedAt": "2026-06-17T04:16:39.506Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -304,7 +304,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-16",
+      "verifiedAt": "2026-06-17",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-16",
       "perf6m": -2.89,
@@ -315,8 +315,10 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0087,
-      "sektorPsiAtAdd": 0.007
+      "sektorPsi": 0.0086,
+      "sektorPsiAtAdd": 0.007,
+      "recheckAt": "2026-06-17",
+      "miss": 0
     },
     {
       "ticker": "ORS",
@@ -346,7 +348,7 @@
       "eps": 1.64,
       "div": 3.22,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.0076,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -415,7 +417,7 @@
       "eps": 1.11,
       "div": 1.17,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0087,
+      "sektorPsi": 0.0086,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-16",
       "miss": 0
@@ -448,7 +450,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0173,
+      "sektorPsi": 0.0172,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -514,7 +516,7 @@
       "eps": 1.34,
       "div": 2.29,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0087,
+      "sektorPsi": 0.0086,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -536,7 +538,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-16",
+      "verifiedAt": "2026-06-17",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-16",
       "perf6m": 6.27,
@@ -547,8 +549,10 @@
       "eps": 0.72,
       "div": 2.68,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0173,
-      "sektorPsiAtAdd": 0.025
+      "sektorPsi": 0.0172,
+      "sektorPsiAtAdd": 0.025,
+      "recheckAt": "2026-06-17",
+      "miss": 0
     },
     {
       "ticker": "IXX.DE",
@@ -614,7 +618,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0173,
+      "sektorPsi": 0.0172,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -679,7 +683,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0173,
+      "sektorPsi": 0.0172,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -712,7 +716,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0173,
+      "sektorPsi": 0.0172,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -744,7 +748,7 @@
       "pe": null,
       "div": 0.11,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.0032,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-11",
       "miss": 0
@@ -812,7 +816,7 @@
       "eps": 5.01,
       "div": 5.03,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0087,
+      "sektorPsi": 0.0086,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -910,8 +914,8 @@
       "date": "2026-06-14"
     },
     "cons_def": {
-      "text": "Defensive Konsumgüter leiden unter hohen Zinsen und schwacher Konjunktur. Langfristig zeigt sich jedoch eine leichte Erholung.",
-      "date": "2026-06-04"
+      "text": "Defensive Konsumgüter profitieren leicht vom aktuellen Zinsumfeld, während breitere Sorgen die Nachfrage stützen. ORS sticht positiv hervor.",
+      "date": "2026-06-17"
     },
     "finance": {
       "text": "Der Finanzsektor zeigt eine leichte kurzfristige Erholung, kämpft aber langfristig mit unsicheren Konjunkturaussichten. Auffällige Werte könnten von spezifischen Branchenentwicklungen oder Zinsänderungen beeinflusst sein.",
@@ -988,8 +992,8 @@
       "date": "2026-06-16"
     },
     "latam": {
-      "text": "Lateinamerika: Kurzfristig schwach (-6,44%) wegen Normalisierung nach Zinsanstiegen. Langfristig positiv (+7,94%) durch robuste Konjunkturaussichten.",
-      "date": "2026-06-07"
+      "text": "Lateinamerika: Kurzfristige Konjunkturschwäche trübt die Stimmung, trotz starker Erholung über sechs Monate.",
+      "date": "2026-06-17"
     },
     "world": {
       "text": "Globale Märkte steigen stark wegen günstiger Konjunktur und KI-Boom. Die 30-Tage-Performance übertrifft das Normalniveau deutlich.",
@@ -999,35 +1003,34 @@
   "news": {
     "items": [
       {
-        "text": "Dax schließt auf Vortagesniveau - Autowerte bremsen Euphorie.",
+        "text": "Michael Saylor baut Bitcoin-Bestand weiter aus: Mehr als 4% des Angebots",
+        "stamp": "17.06.26"
+      },
+      {
+        "text": "Japanische Banken planen Yen-Stablecoin zur Dollar-Dominanz-Herausforderung",
+        "stamp": "17.06.26"
+      },
+      {
+        "text": "BMW kappt Jahresausblick wegen China-Krise und Nahost-Konflikt",
+        "stamp": "17.06.26"
+      },
+      {
+        "text": "US-Notenbank im Fokus: Zinsentscheidung und Inflationsausblick am Dienstag",
         "stamp": "16.06.26"
       },
       {
-        "text": "EZB könnte bei Inflationssorgen Leitzins erneut anheben.",
-        "stamp": "16.06.26"
-      },
-      {
-        "text": "Japanische Notenbank hebt Leitzins an, Australien belässt ihn.",
-        "stamp": "16.06.26"
-      },
-      {
-        "text": "SpaceX vor Rekord-Börsengang: Was Anleger wissen müssen.",
-        "stamp": "16.06.26"
-      },
-      {
-        "text": "RWI senkt deutsche Wachstumsprognosen für 2026 und 2027.",
+        "text": "SpaceX zündet nächste Kursrakete nach Friedensabkommen-Hoffnung",
         "stamp": "16.06.26"
       }
     ],
-    "date": "2026-06-16"
+    "date": "2026-06-17"
   },
   "scan": {
     "universe": 8829,
     "scanned": 8829,
-    "lastCursor": 5468,
-    "candCursor": 312,
+    "lastCursor": 5768,
+    "candCursor": 320,
     "candidates": [
-      "Pferdewetten.de AG",
       "Schott Pharma AG",
       "ADTRAN Holdings",
       "Jenoptik AG",
@@ -1426,47 +1429,51 @@
       "Allegro MicroSystems, Inc.",
       "Wolfspeed, Inc.",
       "Entegris, Inc.",
-      "MKS Instruments, Inc."
+      "MKS Instruments, Inc.",
+      "Varex Imaging Corp"
     ],
-    "noteCursor": 7,
-    "focusCursor": 5,
+    "noteCursor": 8,
+    "focusCursor": 6,
     "recheckCursor": 16,
-    "regionNoteCursor": 8,
-    "notesDay": "2026-06-16",
+    "regionNoteCursor": 9,
+    "notesDay": "2026-06-17",
     "seenBySector": {
-      "cons_cycl": 809,
-      "cons_def": 416,
-      "materials": 562,
-      "health": 2288,
-      "finance": 1602,
-      "energy": 731,
-      "hardware": 522,
-      "software": 1535,
-      "industrial": 681,
-      "utilities": 287,
-      "comm": 345,
-      "ai_semi": 306,
-      "realestate": 147
+      "cons_cycl": 812,
+      "cons_def": 421,
+      "materials": 567,
+      "health": 2317,
+      "finance": 1613,
+      "energy": 741,
+      "hardware": 525,
+      "software": 1550,
+      "industrial": 684,
+      "utilities": 293,
+      "comm": 346,
+      "ai_semi": 311,
+      "realestate": 148
     },
     "pendingReject": [
-      "NNI"
+      "OMEX",
+      "OMF",
+      "OMH",
+      "OMID"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 809,
-      "cons_def": 417,
-      "materials": 562,
-      "health": 2288,
-      "finance": 1605,
-      "energy": 731,
-      "hardware": 524,
-      "software": 1539,
-      "industrial": 686,
-      "utilities": 287,
-      "comm": 345,
-      "ai_semi": 307,
-      "realestate": 147
+      "cons_cycl": 812,
+      "cons_def": 422,
+      "materials": 567,
+      "health": 2317,
+      "finance": 1616,
+      "energy": 741,
+      "hardware": 527,
+      "software": 1554,
+      "industrial": 689,
+      "utilities": 293,
+      "comm": 346,
+      "ai_semi": 312,
+      "realestate": 148
     },
-    "heavyAt": "2026-06-16T20:18:30.233Z",
+    "heavyAt": "2026-06-17T04:05:18.111Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1477,6 +1484,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-17T04:00:51.858Z"
+  }
 }
