@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-17",
-  "updatedAt": "2026-06-17T08:00:51.911Z",
+  "updatedAt": "2026-06-17T08:55:33.752Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -1440,7 +1440,7 @@
     "seenBySector": {
       "cons_cycl": 812,
       "cons_def": 421,
-      "materials": 567,
+      "materials": 568,
       "health": 2317,
       "finance": 1613,
       "energy": 741,
@@ -1450,18 +1450,13 @@
       "utilities": 293,
       "comm": 346,
       "ai_semi": 311,
-      "realestate": 148
+      "realestate": 149
     },
-    "pendingReject": [
-      "OMEX",
-      "OMF",
-      "OMH",
-      "OMID"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
       "cons_cycl": 812,
       "cons_def": 422,
-      "materials": 567,
+      "materials": 568,
       "health": 2317,
       "finance": 1616,
       "energy": 741,
@@ -1471,7 +1466,7 @@
       "utilities": 293,
       "comm": 346,
       "ai_semi": 312,
-      "realestate": 148
+      "realestate": 149
     },
     "heavyAt": "2026-06-17T04:05:18.111Z",
     "revalidateTag": "multi-source-v9",
@@ -1484,6 +1479,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-17T08:00:51.911Z"
+  }
 }
