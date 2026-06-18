@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0118,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.64,
       "div": 3.22,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0077,
+      "sektorPsi": 0.0096,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 1.11,
       "div": 1.17,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0118,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-16",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0149,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 202.84,
       "div": 1.04,
       "enrichAt": "2026-06-17",
-      "sektorPsi": 0.0118,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 1.13,
       "div": 3.9,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0072,
+      "sektorPsi": 0.0066,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 1.34,
       "div": 2.29,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0118,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 0.72,
       "div": 2.68,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0149,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 2.23,
       "div": 1.52,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0072,
+      "sektorPsi": 0.0066,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -651,7 +651,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0149,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -684,7 +684,7 @@
       "eps": 2.27,
       "div": 5.04,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -716,7 +716,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0149,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -749,7 +749,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0149,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -781,7 +781,7 @@
       "pe": null,
       "div": 0.11,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0031,
+      "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -817,7 +817,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -849,7 +849,7 @@
       "eps": 5.01,
       "div": 5.03,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0118,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -1041,33 +1041,37 @@
   "news": {
     "items": [
       {
-        "text": "US-Notenbank lässt Leitzins unverändert, Zinsentscheidung im Fokus",
+        "text": "US-Notenbank belässt Zinsen, Ton wird restriktiver.",
         "stamp": "18.06.26"
       },
       {
-        "text": "Iran-Abkommen stützt den Markt: DAX wieder über 25.000-Punkte-Marke",
+        "text": "Ifo-Institut: Gegensätzliche Kräfte bremsen und stützen deutsche Wirtschaft.",
         "stamp": "18.06.26"
       },
       {
-        "text": "SpaceX greift im KI-Wettlauf an: 60-Milliarden-Dollar-Deal für KI-Spezialisten",
+        "text": "EZB: Euroraum-Leistungsbilanzüberschuss steigt im April leicht.",
         "stamp": "18.06.26"
       },
       {
-        "text": "Chinas E-Auto-Wende trifft deutsche Autobauer: BMW und Mercedes unter Druck",
+        "text": "Bank of England belässt Leitzins bei 3,75 Prozent.",
         "stamp": "18.06.26"
       },
       {
-        "text": "Zentralbanken kaufen Gold: Geopolitische Spannungen treiben Nachfrage",
+        "text": "Ölpreis stürzt ab: Kriegsprämie nach Iran-Deal fällt weg.",
         "stamp": "18.06.26"
+      },
+      {
+        "text": "DAX fester nach USA-Iran-Abkommen, 25.000 Punkte im Blick.",
+        "stamp": "17.06.26"
       }
     ],
     "date": "2026-06-18"
   },
   "scan": {
-    "universe": 8829,
-    "scanned": 8829,
-    "lastCursor": 6968,
-    "candCursor": 352,
+    "universe": 8833,
+    "scanned": 8833,
+    "lastCursor": 7268,
+    "candCursor": 360,
     "candidates": [
       "CompuGroup Medical SE",
       "Stratec SE",
@@ -1471,45 +1475,42 @@
       "Daldrup & Söhne AG"
     ],
     "noteCursor": 9,
-    "focusCursor": 2,
+    "focusCursor": 3,
     "recheckCursor": 16,
     "regionNoteCursor": 0,
     "notesDay": "2026-06-18",
     "seenBySector": {
-      "cons_cycl": 840,
-      "cons_def": 434,
-      "materials": 581,
-      "health": 2407,
-      "finance": 1669,
-      "energy": 768,
-      "hardware": 546,
-      "software": 1630,
-      "industrial": 711,
-      "utilities": 302,
-      "comm": 353,
-      "ai_semi": 326,
-      "realestate": 156
+      "cons_cycl": 845,
+      "cons_def": 441,
+      "materials": 588,
+      "health": 2425,
+      "finance": 1682,
+      "energy": 776,
+      "hardware": 550,
+      "software": 1640,
+      "industrial": 715,
+      "utilities": 303,
+      "comm": 357,
+      "ai_semi": 330,
+      "realestate": 158
     },
-    "pendingReject": [
-      "SEM",
-      "SENS"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 840,
-      "cons_def": 435,
-      "materials": 581,
-      "health": 2407,
-      "finance": 1672,
-      "energy": 768,
-      "hardware": 548,
-      "software": 1635,
-      "industrial": 716,
-      "utilities": 302,
-      "comm": 353,
-      "ai_semi": 327,
-      "realestate": 156
+      "cons_cycl": 845,
+      "cons_def": 442,
+      "materials": 588,
+      "health": 2425,
+      "finance": 1685,
+      "energy": 776,
+      "hardware": 552,
+      "software": 1645,
+      "industrial": 720,
+      "utilities": 303,
+      "comm": 357,
+      "ai_semi": 331,
+      "realestate": 158
     },
-    "heavyAt": "2026-06-18T08:52:36.210Z",
+    "heavyAt": "2026-06-18T15:55:27.368Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
