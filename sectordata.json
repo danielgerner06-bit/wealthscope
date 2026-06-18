@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-18",
-  "updatedAt": "2026-06-18T08:00:51.857Z",
+  "updatedAt": "2026-06-18T08:59:45.200Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.012,
+      "sektorPsi": 0.0118,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0037,
+      "sektorPsi": 0.0036,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 1.11,
       "div": 1.17,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.012,
+      "sektorPsi": 0.0118,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-16",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.015,
+      "sektorPsi": 0.0149,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 202.84,
       "div": 1.04,
       "enrichAt": "2026-06-17",
-      "sektorPsi": 0.012,
+      "sektorPsi": 0.0118,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 1.34,
       "div": 2.29,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.012,
+      "sektorPsi": 0.0118,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 0.72,
       "div": 2.68,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.015,
+      "sektorPsi": 0.0149,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -651,7 +651,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.015,
+      "sektorPsi": 0.0149,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -684,7 +684,7 @@
       "eps": 2.27,
       "div": 5.04,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.0037,
+      "sektorPsi": 0.0036,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -716,7 +716,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.015,
+      "sektorPsi": 0.0149,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -749,7 +749,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-14",
-      "sektorPsi": 0.015,
+      "sektorPsi": 0.0149,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -817,7 +817,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0037,
+      "sektorPsi": 0.0036,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -849,7 +849,7 @@
       "eps": 5.01,
       "div": 5.03,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.012,
+      "sektorPsi": 0.0118,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -1041,24 +1041,24 @@
   "news": {
     "items": [
       {
-        "text": "Tether investiert 1,4 Mrd. Dollar in deutsches Robotik-Unternehmen.",
+        "text": "US-Notenbank lässt Leitzins unverändert, Zinsentscheidung im Fokus",
         "stamp": "18.06.26"
       },
       {
-        "text": "US-Notenbank: Zinsprojektionen sorgen für Kurswechsel an Börsen.",
-        "stamp": "17.06.26"
+        "text": "Iran-Abkommen stützt den Markt: DAX wieder über 25.000-Punkte-Marke",
+        "stamp": "18.06.26"
       },
       {
-        "text": "Fed-Zinsentscheid: Neue Zinsprognosen mit falkenhaftem Tenor.",
-        "stamp": "17.06.26"
+        "text": "SpaceX greift im KI-Wettlauf an: 60-Milliarden-Dollar-Deal für KI-Spezialisten",
+        "stamp": "18.06.26"
       },
       {
-        "text": "Zentralbanken horten Gold inmitten geopolitischer Spannungen.",
-        "stamp": "17.06.26"
+        "text": "Chinas E-Auto-Wende trifft deutsche Autobauer: BMW und Mercedes unter Druck",
+        "stamp": "18.06.26"
       },
       {
-        "text": "BMW-Gewinnwarnung bremst DAX; Gold und Öl leicht im Plus.",
-        "stamp": "17.06.26"
+        "text": "Zentralbanken kaufen Gold: Geopolitische Spannungen treiben Nachfrage",
+        "stamp": "18.06.26"
       }
     ],
     "date": "2026-06-18"
@@ -1066,8 +1066,8 @@
   "scan": {
     "universe": 8829,
     "scanned": 8829,
-    "lastCursor": 6668,
-    "candCursor": 344,
+    "lastCursor": 6968,
+    "candCursor": 352,
     "candidates": [
       "CompuGroup Medical SE",
       "Stratec SE",
@@ -1471,42 +1471,45 @@
       "Daldrup & Söhne AG"
     ],
     "noteCursor": 9,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 0,
     "notesDay": "2026-06-18",
     "seenBySector": {
-      "cons_cycl": 836,
-      "cons_def": 432,
-      "materials": 575,
-      "health": 2386,
-      "finance": 1655,
-      "energy": 763,
-      "hardware": 541,
-      "software": 1607,
-      "industrial": 705,
-      "utilities": 300,
-      "comm": 352,
-      "ai_semi": 325,
-      "realestate": 152
-    },
-    "pendingReject": [],
-    "evaluatedBySector": {
-      "cons_cycl": 836,
-      "cons_def": 433,
-      "materials": 575,
-      "health": 2386,
-      "finance": 1658,
-      "energy": 763,
-      "hardware": 543,
-      "software": 1612,
-      "industrial": 710,
-      "utilities": 300,
-      "comm": 352,
+      "cons_cycl": 840,
+      "cons_def": 434,
+      "materials": 581,
+      "health": 2407,
+      "finance": 1669,
+      "energy": 768,
+      "hardware": 546,
+      "software": 1630,
+      "industrial": 711,
+      "utilities": 302,
+      "comm": 353,
       "ai_semi": 326,
-      "realestate": 152
+      "realestate": 156
     },
-    "heavyAt": "2026-06-18T02:03:23.266Z",
+    "pendingReject": [
+      "SEM",
+      "SENS"
+    ],
+    "evaluatedBySector": {
+      "cons_cycl": 840,
+      "cons_def": 435,
+      "materials": 581,
+      "health": 2407,
+      "finance": 1672,
+      "energy": 768,
+      "hardware": 548,
+      "software": 1635,
+      "industrial": 716,
+      "utilities": 302,
+      "comm": 353,
+      "ai_semi": 327,
+      "realestate": 156
+    },
+    "heavyAt": "2026-06-18T08:52:36.210Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1517,6 +1520,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-18T08:00:51.857Z"
+  }
 }
