@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-19",
-  "updatedAt": "2026-06-19T19:00:51.856Z",
+  "updatedAt": "2026-06-19T19:53:13.308Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -5.71,
-      "avg30": 0.65,
-      "perf6m": -6.11
+      "perf": -4.09,
+      "avg30": 0.68,
+      "perf6m": -3.76
     },
     {
       "id": "health",
@@ -183,15 +183,15 @@
     },
     {
       "id": "cons_cycl",
-      "perf": 0.72,
+      "perf": 1.66,
       "avg30": 0.78,
-      "perf6m": -3.75
+      "perf6m": -1.86
     },
     {
       "id": "cons_def",
-      "perf": -2.58,
-      "avg30": 0.42,
-      "perf6m": 5.36
+      "perf": 0.59,
+      "avg30": 0.44,
+      "perf6m": 7.63
     },
     {
       "id": "industrial",
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": 0.5,
+      "perf": 2.83,
       "avg30": 0.65,
-      "perf6m": 7.9
+      "perf6m": 10.27
     }
   ],
   "bars30Region": [
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": 3.26,
-      "avg30": 1.34,
-      "perf6m": 7.44
+      "perf": 3.17,
+      "avg30": 1.33,
+      "perf6m": 7.98
     },
     {
       "id": "germany",
-      "perf": -1.24,
-      "avg30": 0.22,
-      "perf6m": -1.38
+      "perf": -1.14,
+      "avg30": 0.23,
+      "perf6m": -0.97
     },
     {
       "id": "japan",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -6.33,
-      "avg30": 0.06,
-      "perf6m": -12.93
+      "perf": -4.43,
+      "avg30": 0.08,
+      "perf6m": -12.01
     },
     {
       "id": "em",
@@ -263,27 +263,27 @@
     },
     {
       "id": "apac",
-      "perf": 5.81,
-      "avg30": 3.3,
-      "perf6m": 27.81
+      "perf": 5.49,
+      "avg30": 3.29,
+      "perf6m": 26.98
     },
     {
       "id": "india",
-      "perf": 3.28,
-      "avg30": -1.16,
-      "perf6m": -6.95
+      "perf": 2.65,
+      "avg30": -1.18,
+      "perf6m": -7.3
     },
     {
       "id": "latam",
-      "perf": -1.1,
-      "avg30": 2.92,
-      "perf6m": 8.4
+      "perf": -1.52,
+      "avg30": 2.94,
+      "perf6m": 9.13
     },
     {
       "id": "world",
-      "perf": 1.41,
+      "perf": 1.42,
       "avg30": 1.73,
-      "perf6m": 8.94
+      "perf6m": 9.04
     }
   ],
   "topStocks": [
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0115,
+      "sektorPsi": 0.0134,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.64,
       "div": 3.16,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0074,
+      "sektorPsi": 0.0065,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0035,
+      "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0145,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 1.11,
       "div": 1.17,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0115,
+      "sektorPsi": 0.0134,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-16",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 202.84,
       "div": 1.04,
       "enrichAt": "2026-06-17",
-      "sektorPsi": 0.0115,
+      "sektorPsi": 0.0134,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 1.13,
       "div": 3.9,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0069,
+      "sektorPsi": 0.0065,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 1.34,
       "div": 2.17,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0115,
+      "sektorPsi": 0.0134,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 0.72,
       "div": 2.68,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0145,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 2.23,
       "div": 1.52,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0069,
+      "sektorPsi": 0.0065,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -651,7 +651,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0145,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -684,7 +684,7 @@
       "eps": 2.27,
       "div": 4.91,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0035,
+      "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -716,7 +716,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0145,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -749,7 +749,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0145,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -817,7 +817,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0035,
+      "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -849,7 +849,7 @@
       "eps": 5.01,
       "div": 5.03,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0115,
+      "sektorPsi": 0.0134,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -1521,6 +1521,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-19T19:00:51.856Z"
+  }
 }
