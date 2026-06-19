@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0137,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -384,42 +384,9 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0035,
+      "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
-      "miss": 0
-    },
-    {
-      "ticker": "ADMCM.HE",
-      "name": "Admicom Oyj",
-      "yahoo": "ADMCM.HE",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-16",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-15",
-      "perf6m": -35.91,
-      "perf6mAt": "2026-06-15",
-      "perf1mBefore": -8.75,
-      "upside": 57,
-      "pe": 25.1,
-      "eps": 1.11,
-      "div": 1.17,
-      "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0137,
-      "sektorPsiAtAdd": 0.0057,
-      "recheckAt": "2026-06-16",
       "miss": 0
     },
     {
@@ -450,9 +417,42 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0139,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
+      "miss": 0
+    },
+    {
+      "ticker": "ADMCM.HE",
+      "name": "Admicom Oyj",
+      "yahoo": "ADMCM.HE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-16",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-15",
+      "perf6m": -35.91,
+      "perf6mAt": "2026-06-15",
+      "perf1mBefore": -8.75,
+      "upside": 57,
+      "pe": 25.1,
+      "eps": 1.11,
+      "div": 1.17,
+      "enrichAt": "2026-06-15",
+      "sektorPsi": 0.0135,
+      "sektorPsiAtAdd": 0.0057,
+      "recheckAt": "2026-06-16",
       "miss": 0
     },
     {
@@ -483,7 +483,7 @@
       "eps": 202.84,
       "div": 1.04,
       "enrichAt": "2026-06-17",
-      "sektorPsi": 0.0137,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 1.13,
       "div": 3.9,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0066,
+      "sektorPsi": 0.0065,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 1.34,
       "div": 2.17,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0137,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 0.72,
       "div": 2.68,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0139,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 2.23,
       "div": 1.52,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0066,
+      "sektorPsi": 0.0065,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -651,7 +651,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0139,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -684,7 +684,7 @@
       "eps": 2.27,
       "div": 4.91,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0035,
+      "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -716,7 +716,7 @@
       "pe": null,
       "div": 1.35,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0139,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -749,7 +749,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0139,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -817,7 +817,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0035,
+      "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -849,7 +849,7 @@
       "eps": 5.01,
       "div": 5.03,
       "enrichAt": "2026-06-15",
-      "sektorPsi": 0.0137,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-13",
       "miss": 0
@@ -1041,28 +1041,28 @@
   "news": {
     "items": [
       {
-        "text": "USA und Iran unterzeichnen Absichtserklärung zur Beendigung des Krieges.",
-        "stamp": "18.06.26"
+        "text": "Iran-USA unterzeichnen Grundsatzvereinbarung zur Beendigung des Krieges.",
+        "stamp": "19.06.26"
       },
       {
-        "text": "Fed hält Zinsen stabil, signalisiert restriktiveren Kurs zur Inflation.",
-        "stamp": "18.06.26"
+        "text": "US-Notenbankchef Warsh äußert sich falkenhaft, beeinflusst Devisenmarkt.",
+        "stamp": "19.06.26"
       },
       {
-        "text": "Israel verhandelt mit USA über Truppenverbleib im Südlibanon.",
-        "stamp": "18.06.26"
+        "text": "Intel-Aktie springt nach Trump-Meldung über Apple-Deal stark an.",
+        "stamp": "19.06.26"
       },
       {
-        "text": "SpaceX schließt Milliarden-Deal mit Google ab.",
-        "stamp": "18.06.26"
+        "text": "Smith & Wesson steigert Umsatz und Gewinn, Aktie legt deutlich zu.",
+        "stamp": "19.06.26"
       },
       {
-        "text": "Polyamid GmbH meldet Insolvenz an.",
-        "stamp": "18.06.26"
+        "text": "Douglas senkt Jahresprognose, Aktie verliert deutlich.",
+        "stamp": "19.06.26"
       },
       {
-        "text": "Eurokurs leidet im US-Handel unter allgemeiner Dollar-Stärke.",
-        "stamp": "18.06.26"
+        "text": "US-Notenbank belässt Zinsen unverändert, kündigt Reformen an.",
+        "stamp": "17.06.26"
       }
     ],
     "date": "2026-06-19"
@@ -1070,8 +1070,8 @@
   "scan": {
     "universe": 8833,
     "scanned": 8833,
-    "lastCursor": 7568,
-    "candCursor": 368,
+    "lastCursor": 7868,
+    "candCursor": 376,
     "candidates": [
       "Nebius Group",
       "Credo Technology Group",
@@ -1475,42 +1475,42 @@
       "SoftBank Group Corp."
     ],
     "noteCursor": 10,
-    "focusCursor": 4,
+    "focusCursor": 5,
     "recheckCursor": 16,
     "regionNoteCursor": 1,
     "notesDay": "2026-06-19",
     "seenBySector": {
-      "cons_cycl": 852,
-      "cons_def": 445,
-      "materials": 589,
-      "health": 2443,
-      "finance": 1693,
-      "energy": 782,
-      "hardware": 553,
-      "software": 1654,
-      "industrial": 720,
-      "utilities": 305,
-      "comm": 360,
-      "ai_semi": 332,
+      "cons_cycl": 856,
+      "cons_def": 447,
+      "materials": 596,
+      "health": 2466,
+      "finance": 1706,
+      "energy": 791,
+      "hardware": 557,
+      "software": 1669,
+      "industrial": 726,
+      "utilities": 307,
+      "comm": 364,
+      "ai_semi": 333,
       "realestate": 159
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 852,
-      "cons_def": 446,
-      "materials": 589,
-      "health": 2443,
-      "finance": 1696,
-      "energy": 782,
-      "hardware": 555,
-      "software": 1659,
-      "industrial": 725,
-      "utilities": 305,
-      "comm": 360,
-      "ai_semi": 333,
+      "cons_cycl": 856,
+      "cons_def": 448,
+      "materials": 596,
+      "health": 2466,
+      "finance": 1709,
+      "energy": 791,
+      "hardware": 559,
+      "software": 1674,
+      "industrial": 731,
+      "utilities": 307,
+      "comm": 364,
+      "ai_semi": 334,
       "realestate": 159
     },
-    "heavyAt": "2026-06-19T02:10:45.635Z",
+    "heavyAt": "2026-06-19T08:56:15.020Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
