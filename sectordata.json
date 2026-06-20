@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-19",
-  "updatedAt": "2026-06-20T08:00:51.859Z",
+  "updated": "2026-06-20",
+  "updatedAt": "2026-06-20T08:29:42.030Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -5.71,
-      "avg30": 0.65,
-      "perf6m": -6.11
+      "perf": -4.09,
+      "avg30": 0.68,
+      "perf6m": -3.76
     },
     {
       "id": "health",
@@ -183,15 +183,15 @@
     },
     {
       "id": "cons_cycl",
-      "perf": 0.72,
+      "perf": 1.66,
       "avg30": 0.78,
-      "perf6m": -3.75
+      "perf6m": -1.86
     },
     {
       "id": "cons_def",
-      "perf": -2.58,
-      "avg30": 0.42,
-      "perf6m": 5.36
+      "perf": 0.59,
+      "avg30": 0.44,
+      "perf6m": 7.63
     },
     {
       "id": "industrial",
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": 0.5,
+      "perf": 2.83,
       "avg30": 0.65,
-      "perf6m": 7.9
+      "perf6m": 10.27
     }
   ],
   "bars30Region": [
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": 3.26,
-      "avg30": 1.34,
-      "perf6m": 7.44
+      "perf": 3.17,
+      "avg30": 1.33,
+      "perf6m": 7.98
     },
     {
       "id": "germany",
-      "perf": -1.24,
-      "avg30": 0.22,
-      "perf6m": -1.38
+      "perf": -1.14,
+      "avg30": 0.23,
+      "perf6m": -0.97
     },
     {
       "id": "japan",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -6.33,
-      "avg30": 0.06,
-      "perf6m": -12.93
+      "perf": -4.43,
+      "avg30": 0.08,
+      "perf6m": -12.01
     },
     {
       "id": "em",
@@ -263,27 +263,27 @@
     },
     {
       "id": "apac",
-      "perf": 5.81,
-      "avg30": 3.3,
-      "perf6m": 27.81
+      "perf": 5.49,
+      "avg30": 3.29,
+      "perf6m": 26.98
     },
     {
       "id": "india",
-      "perf": 3.28,
-      "avg30": -1.16,
-      "perf6m": -6.95
+      "perf": 2.65,
+      "avg30": -1.18,
+      "perf6m": -7.3
     },
     {
       "id": "latam",
-      "perf": -1.1,
-      "avg30": 2.92,
-      "perf6m": 8.4
+      "perf": -1.52,
+      "avg30": 2.94,
+      "perf6m": 9.13
     },
     {
       "id": "world",
-      "perf": 1.41,
+      "perf": 1.42,
       "avg30": 1.73,
-      "perf6m": 8.94
+      "perf6m": 9.04
     }
   ],
   "topStocks": [
@@ -315,42 +315,9 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0133,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-17",
-      "miss": 0
-    },
-    {
-      "ticker": "ORS",
-      "name": "Orsero S.p.A.",
-      "yahoo": "ORS.MI",
-      "sector": "cons_def",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-15",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-14",
-      "perf6m": -13.25,
-      "perf6mAt": "2026-06-19",
-      "perf1mBefore": 0.26,
-      "upside": 64,
-      "pe": 9.4,
-      "eps": 1.64,
-      "div": 3.16,
-      "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0065,
-      "sektorPsiAtAdd": 0.008,
-      "recheckAt": "2026-06-15",
       "miss": 0
     },
     {
@@ -390,39 +357,6 @@
       "miss": 0
     },
     {
-      "ticker": "SIT",
-      "name": "SIT S.p.A.",
-      "yahoo": "SIT.MI",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-06-15",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-14",
-      "perf6m": -13.73,
-      "perf6mAt": "2026-06-19",
-      "perf1mBefore": -17.12,
-      "upside": 58,
-      "pe": 53.8,
-      "eps": 0.04,
-      "div": 0,
-      "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0137,
-      "sektorPsiAtAdd": 0.0229,
-      "recheckAt": "2026-06-15",
-      "miss": 0
-    },
-    {
       "ticker": "ADMCM.HE",
       "name": "Admicom Oyj",
       "yahoo": "ADMCM.HE",
@@ -450,9 +384,75 @@
       "eps": 1.11,
       "div": 1.2,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0133,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-16",
+      "miss": 0
+    },
+    {
+      "ticker": "ORS",
+      "name": "Orsero S.p.A.",
+      "yahoo": "ORS.MI",
+      "sector": "cons_def",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-15",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": -13.25,
+      "perf6mAt": "2026-06-19",
+      "perf1mBefore": 0.26,
+      "upside": 64,
+      "pe": 9.4,
+      "eps": 1.64,
+      "div": 3.16,
+      "enrichAt": "2026-06-19",
+      "sektorPsi": 0.0065,
+      "sektorPsiAtAdd": 0.008,
+      "recheckAt": "2026-06-15",
+      "miss": 0
+    },
+    {
+      "ticker": "SIT",
+      "name": "SIT S.p.A.",
+      "yahoo": "SIT.MI",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-06-15",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-14",
+      "perf6m": -13.73,
+      "perf6mAt": "2026-06-19",
+      "perf1mBefore": -17.12,
+      "upside": 58,
+      "pe": 53.8,
+      "eps": 0.04,
+      "div": 0,
+      "enrichAt": "2026-06-19",
+      "sektorPsi": 0.0135,
+      "sektorPsiAtAdd": 0.0229,
+      "recheckAt": "2026-06-15",
       "miss": 0
     },
     {
@@ -483,7 +483,7 @@
       "eps": 202.84,
       "div": 1.04,
       "enrichAt": "2026-06-17",
-      "sektorPsi": 0.0133,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 1.13,
       "div": 3.76,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0064,
+      "sektorPsi": 0.0063,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -549,42 +549,9 @@
       "eps": 1.34,
       "div": 2.17,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0133,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
-      "miss": 0
-    },
-    {
-      "ticker": "JST.DE",
-      "name": "Jost Werke AG",
-      "yahoo": "JST.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-17",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": 6.27,
-      "perf6mAt": "2026-06-16",
-      "perf1mBefore": 0.54,
-      "upside": 34,
-      "pe": 77.6,
-      "eps": 0.72,
-      "div": 2.68,
-      "enrichAt": "2026-06-16",
-      "sektorPsi": 0.0137,
-      "sektorPsiAtAdd": 0.025,
-      "recheckAt": "2026-06-17",
       "miss": 0
     },
     {
@@ -615,9 +582,42 @@
       "eps": 2.23,
       "div": 1.61,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0064,
+      "sektorPsi": 0.0063,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-20",
+      "miss": 0
+    },
+    {
+      "ticker": "JST.DE",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-17",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": 6.27,
+      "perf6mAt": "2026-06-16",
+      "perf1mBefore": 0.54,
+      "upside": 34,
+      "pe": 77.6,
+      "eps": 0.72,
+      "div": 2.68,
+      "enrichAt": "2026-06-16",
+      "sektorPsi": 0.0135,
+      "sektorPsiAtAdd": 0.025,
+      "recheckAt": "2026-06-17",
       "miss": 0
     },
     {
@@ -651,7 +651,7 @@
       "eps": 2.09,
       "div": 0,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0137,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -690,38 +690,6 @@
       "miss": 0
     },
     {
-      "ticker": "034730",
-      "name": "SK Inc.",
-      "yahoo": "034730.KS",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 6,
-        "outperform": 6,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 12,
-      "strongBuyPct": 50,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-06-18",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-10",
-      "perf6m": 183.2,
-      "perf6mAt": "2026-06-20",
-      "perf1mBefore": 6,
-      "upside": -5,
-      "pe": null,
-      "div": 1.19,
-      "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0137,
-      "sektorPsiAtAdd": 0.0102,
-      "recheckAt": "2026-06-18",
-      "miss": 0
-    },
-    {
       "ticker": "LUVE",
       "name": "LU-VE S.p.A.",
       "yahoo": "LUVE.MI",
@@ -749,9 +717,41 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0137,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
+      "miss": 0
+    },
+    {
+      "ticker": "034730",
+      "name": "SK Inc.",
+      "yahoo": "034730.KS",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 6,
+        "outperform": 6,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 12,
+      "strongBuyPct": 50,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-06-18",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-10",
+      "perf6m": 183.2,
+      "perf6mAt": "2026-06-20",
+      "perf1mBefore": 6,
+      "upside": -5,
+      "pe": null,
+      "div": 1.19,
+      "enrichAt": "2026-06-20",
+      "sektorPsi": 0.0135,
+      "sektorPsiAtAdd": 0.0102,
+      "recheckAt": "2026-06-18",
       "miss": 0
     },
     {
@@ -849,7 +849,7 @@
       "eps": 5.01,
       "div": 5.08,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0133,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -1041,15 +1041,11 @@
   "news": {
     "items": [
       {
-        "text": "US-Vizepräsident verschiebt Reise wegen Nahost-Spannungen.",
+        "text": "Goldpreis: Goldman senkt Kursziel für Gold, Zinsen bleiben hoch",
         "stamp": "19.06.26"
       },
       {
-        "text": "DAX volatil: Geopolitik, Ölpreis und Inflation treiben Märkte.",
-        "stamp": "19.06.26"
-      },
-      {
-        "text": "SpaceX-Aktie: Prognose von 401 US-Dollar sorgt für Aufsehen.",
+        "text": "SpaceX-Aktie: Kursziel 401 USD, Investoren jubeln doch noch",
         "stamp": "19.06.26"
       }
     ],
@@ -1058,10 +1054,9 @@
   "scan": {
     "universe": 8834,
     "scanned": 8834,
-    "lastCursor": 8468,
-    "candCursor": 392,
+    "lastCursor": 8768,
+    "candCursor": 400,
     "candidates": [
-      "Vertiv Holdings",
       "Celestica",
       "Talen Energy",
       "Comfort Systems USA",
@@ -1460,45 +1455,46 @@
       "SoftBank Group Corp.",
       "Cardio Diagnostics Holdings Inc",
       "Parex Resources Inc.",
-      "Central Puerto S.A."
+      "Central Puerto S.A.",
+      "Upbound Group"
     ],
     "noteCursor": 11,
-    "focusCursor": 7,
+    "focusCursor": 0,
     "recheckCursor": 16,
     "regionNoteCursor": 2,
     "notesDay": "2026-06-20",
     "seenBySector": {
-      "cons_cycl": 872,
-      "cons_def": 453,
-      "materials": 609,
-      "health": 2507,
-      "finance": 1736,
-      "energy": 803,
-      "hardware": 572,
-      "software": 1694,
-      "industrial": 733,
-      "utilities": 311,
-      "comm": 376,
-      "ai_semi": 339,
+      "cons_cycl": 882,
+      "cons_def": 455,
+      "materials": 614,
+      "health": 2520,
+      "finance": 1747,
+      "energy": 811,
+      "hardware": 575,
+      "software": 1707,
+      "industrial": 743,
+      "utilities": 315,
+      "comm": 378,
+      "ai_semi": 340,
       "realestate": 159
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 872,
-      "cons_def": 454,
-      "materials": 609,
-      "health": 2507,
-      "finance": 1739,
-      "energy": 803,
-      "hardware": 574,
-      "software": 1699,
-      "industrial": 738,
-      "utilities": 311,
-      "comm": 376,
-      "ai_semi": 340,
+      "cons_cycl": 882,
+      "cons_def": 456,
+      "materials": 614,
+      "health": 2520,
+      "finance": 1750,
+      "energy": 811,
+      "hardware": 577,
+      "software": 1712,
+      "industrial": 748,
+      "utilities": 315,
+      "comm": 378,
+      "ai_semi": 341,
       "realestate": 159
     },
-    "heavyAt": "2026-06-20T01:56:37.406Z",
+    "heavyAt": "2026-06-20T08:23:01.993Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1509,6 +1505,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-20T08:00:51.859Z"
+  }
 }
