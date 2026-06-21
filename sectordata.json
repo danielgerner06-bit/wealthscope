@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-21",
-  "updatedAt": "2026-06-21T15:00:15.765Z",
+  "updatedAt": "2026-06-21T15:28:00.387Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-21",
-      "sektorPsi": 0.0129,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -415,7 +415,7 @@
       "eps": 1.11,
       "div": 1.2,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0129,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-16",
       "miss": 0
@@ -481,7 +481,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0132,
+      "sektorPsi": 0.0131,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -514,7 +514,7 @@
       "eps": 202.84,
       "div": 1.04,
       "enrichAt": "2026-06-17",
-      "sektorPsi": 0.0129,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -580,7 +580,7 @@
       "eps": 0.72,
       "div": 2.71,
       "enrichAt": "2026-06-21",
-      "sektorPsi": 0.0132,
+      "sektorPsi": 0.0131,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -613,7 +613,7 @@
       "eps": 1.34,
       "div": 2.17,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0129,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -682,7 +682,7 @@
       "eps": 2.09,
       "div": 0,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0132,
+      "sektorPsi": 0.0131,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -748,7 +748,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0132,
+      "sektorPsi": 0.0131,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -780,7 +780,7 @@
       "pe": null,
       "div": 1.19,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0132,
+      "sektorPsi": 0.0131,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -880,7 +880,7 @@
       "eps": 5.01,
       "div": 5.08,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0129,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -1077,24 +1077,28 @@
   "news": {
     "items": [
       {
-        "text": "Goldpreis-Prognose 2026: Fed zieht Zügel an – Droht Gold rasanter Preissturz?",
+        "text": "US-Iran-Gespräche starten in der Schweiz – Trump droht mit Maut.",
         "stamp": "21.06.26"
       },
       {
-        "text": "Micron vor Zahlen: \"KI-Rallye läuft so lange, bis das Gegenteil bewiesen ist.\"",
+        "text": "SpaceX Aktie: Der reichste Mann braucht Geld.",
         "stamp": "21.06.26"
       },
       {
-        "text": "VW-Aktie unter Druck nach Meldungen über Entlassungen.",
+        "text": "Ölpreis: Hormus hält Märkte in Atem.",
         "stamp": "21.06.26"
       },
       {
-        "text": "Rohöl könnte eskalieren: Straße von Hormus: Iran macht die Meerenge wieder dicht.",
-        "stamp": "19.06.26"
+        "text": "KI-Chips: Nvidia Rallye wackelt.",
+        "stamp": "21.06.26"
       },
       {
-        "text": "Krypto-Paukenschlag: Frank Thelen verkauft alle seine Bitcoins: Der Grund!",
-        "stamp": "19.06.26"
+        "text": "Europas Börsen schließen mit leichten Abgaben.",
+        "stamp": "20.06.26"
+      },
+      {
+        "text": "Gold-Crash voraus? 50%-Warnung für Edelmetall-Anleger.",
+        "stamp": "20.06.26"
       }
     ],
     "date": "2026-06-21"
@@ -1102,19 +1106,9 @@
   "scan": {
     "universe": 8834,
     "scanned": 8834,
-    "lastCursor": 834,
-    "candCursor": 22,
+    "lastCursor": 1134,
+    "candCursor": 30,
     "candidates": [
-      "SkyWater Technology",
-      "Modine Manufacturing",
-      "DEFAMA Deutsche Fachmarkt AG",
-      "Framery Group Oyj",
-      "Adeia Inc.",
-      "Sony Group Corporation",
-      "Takeda Pharmaceutical Company Limited",
-      "Mitsui & Co., Ltd.",
-      "Samsung Electronics Co., Ltd.",
-      "SK Hynix Inc.",
       "Taiwan Semiconductor Manufacturing Company Limited",
       "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
       "Kweichow Moutai Co., Ltd.",
@@ -1504,45 +1498,55 @@
       "Dermapharm Holding SE",
       "Heidelberg Pharma AG",
       "Revenio Group Oyj",
-      "ClearPoint Neuro, Inc."
+      "ClearPoint Neuro, Inc.",
+      "Nissei ASB Machine Co., Ltd.",
+      "Fuji Electric Co., Ltd.",
+      "Rohm Co., Ltd.",
+      "Niterra Co., Ltd.",
+      "Yaskawa Electric Corporation",
+      "SUMCO Corporation",
+      "NGK Insulators, Ltd.",
+      "Shizuoka Financial Group, Inc.",
+      "Isetan Mitsukoshi Holdings Ltd.",
+      "Food & Life Companies Ltd."
     ],
     "noteCursor": 12,
-    "focusCursor": 3,
+    "focusCursor": 4,
     "recheckCursor": 16,
     "regionNoteCursor": 3,
     "notesDay": "2026-06-21",
     "seenBySector": {
-      "cons_cycl": 904,
-      "cons_def": 460,
-      "materials": 632,
-      "health": 2605,
-      "finance": 1779,
-      "energy": 820,
-      "hardware": 586,
-      "software": 1755,
-      "industrial": 762,
-      "utilities": 323,
-      "comm": 389,
+      "cons_cycl": 913,
+      "cons_def": 462,
+      "materials": 635,
+      "health": 2621,
+      "finance": 1800,
+      "energy": 825,
+      "hardware": 588,
+      "software": 1769,
+      "industrial": 765,
+      "utilities": 324,
+      "comm": 392,
       "ai_semi": 358,
       "realestate": 163
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 904,
-      "cons_def": 461,
-      "materials": 632,
-      "health": 2606,
-      "finance": 1782,
-      "energy": 820,
-      "hardware": 588,
-      "software": 1760,
-      "industrial": 767,
-      "utilities": 323,
-      "comm": 389,
+      "cons_cycl": 913,
+      "cons_def": 463,
+      "materials": 635,
+      "health": 2622,
+      "finance": 1803,
+      "energy": 825,
+      "hardware": 590,
+      "software": 1774,
+      "industrial": 770,
+      "utilities": 324,
+      "comm": 392,
       "ai_semi": 359,
       "realestate": 163
     },
-    "heavyAt": "2026-06-21T08:42:43.216Z",
+    "heavyAt": "2026-06-21T15:21:12.771Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1553,6 +1557,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-21T15:00:15.765Z"
+  }
 }
