@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-21",
-  "updatedAt": "2026-06-21T13:00:14.930Z",
+  "updatedAt": "2026-06-21T13:54:50.858Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -1512,52 +1512,35 @@
     "regionNoteCursor": 3,
     "notesDay": "2026-06-21",
     "seenBySector": {
-      "cons_cycl": 903,
+      "cons_cycl": 904,
       "cons_def": 460,
-      "materials": 631,
-      "health": 2603,
-      "finance": 1778,
+      "materials": 632,
+      "health": 2605,
+      "finance": 1779,
       "energy": 820,
       "hardware": 586,
-      "software": 1754,
-      "industrial": 761,
-      "utilities": 323,
-      "comm": 389,
-      "ai_semi": 357,
-      "realestate": 162
-    },
-    "pendingReject": [
-      "AXON",
-      "AXP",
-      "AXR",
-      "AXS",
-      "AXSM",
-      "AXTA",
-      "AXTI",
-      "AYA",
-      "AYI",
-      "AYTU",
-      "AZ",
-      "AZN",
-      "AZO",
-      "AZTA",
-      "AZTR",
-      "AZZ"
-    ],
-    "evaluatedBySector": {
-      "cons_cycl": 903,
-      "cons_def": 461,
-      "materials": 631,
-      "health": 2604,
-      "finance": 1781,
-      "energy": 820,
-      "hardware": 588,
-      "software": 1759,
-      "industrial": 766,
+      "software": 1755,
+      "industrial": 762,
       "utilities": 323,
       "comm": 389,
       "ai_semi": 358,
-      "realestate": 162
+      "realestate": 163
+    },
+    "pendingReject": [],
+    "evaluatedBySector": {
+      "cons_cycl": 904,
+      "cons_def": 461,
+      "materials": 632,
+      "health": 2606,
+      "finance": 1782,
+      "energy": 820,
+      "hardware": 588,
+      "software": 1760,
+      "industrial": 767,
+      "utilities": 323,
+      "comm": 389,
+      "ai_semi": 359,
+      "realestate": 163
     },
     "heavyAt": "2026-06-21T08:42:43.216Z",
     "revalidateTag": "multi-source-v9",
@@ -1570,6 +1553,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-21T13:00:14.930Z"
+  }
 }
