@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-23",
-  "updatedAt": "2026-06-23T15:00:14.923Z",
+  "updatedAt": "2026-06-23T15:51:15.130Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": -4.98,
-      "avg30": -0.96,
-      "perf6m": -17.24
+      "perf": -5.34,
+      "avg30": -0.97,
+      "perf6m": -17.56
     },
     {
       "id": "ai_semi",
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -7.7,
+      "perf": -7.78,
       "avg30": 0.57,
-      "perf6m": -7.99
+      "perf6m": -8.07
     },
     {
       "id": "health",
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-21",
-      "sektorPsi": 0.016,
+      "sektorPsi": 0.0205,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 6.47,
       "div": 4.42,
       "enrichAt": "2026-06-21",
-      "sektorPsi": 0.0011,
+      "sektorPsi": 0.001,
       "sektorPsiAtAdd": 0.0009
     },
     {
@@ -382,7 +382,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0043,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -415,7 +415,7 @@
       "eps": 1.11,
       "div": 1.2,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.016,
+      "sektorPsi": 0.0205,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-16",
       "miss": 0
@@ -448,7 +448,7 @@
       "eps": 1.64,
       "div": 3.16,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0105,
+      "sektorPsi": 0.0095,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -481,7 +481,7 @@
       "eps": 202.82,
       "div": 1.06,
       "enrichAt": "2026-06-22",
-      "sektorPsi": 0.016,
+      "sektorPsi": 0.0205,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -514,7 +514,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0147,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -547,7 +547,7 @@
       "eps": 1.13,
       "div": 3.76,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0059,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -580,7 +580,7 @@
       "eps": 0.72,
       "div": 2.71,
       "enrichAt": "2026-06-21",
-      "sektorPsi": 0.0147,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-17",
       "miss": 0
@@ -613,7 +613,7 @@
       "eps": 1.34,
       "div": 2.17,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.016,
+      "sektorPsi": 0.0205,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -646,7 +646,7 @@
       "eps": 2.23,
       "div": 1.61,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0059,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -682,7 +682,7 @@
       "eps": 2.09,
       "div": 0,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0147,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -715,7 +715,7 @@
       "eps": 2.27,
       "div": 4.91,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0043,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -748,7 +748,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-06-19",
-      "sektorPsi": 0.0147,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-15",
       "miss": 0
@@ -780,7 +780,7 @@
       "pe": null,
       "div": 1.19,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0147,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-18",
       "miss": 0
@@ -848,7 +848,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0043,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -880,7 +880,7 @@
       "eps": 5.01,
       "div": 5.08,
       "enrichAt": "2026-06-20",
-      "sektorPsi": 0.016,
+      "sektorPsi": 0.0205,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -1104,10 +1104,10 @@
     "date": "2026-06-21"
   },
   "scan": {
-    "universe": 8838,
-    "scanned": 8838,
-    "lastCursor": 2634,
-    "candCursor": 70,
+    "universe": 8839,
+    "scanned": 8839,
+    "lastCursor": 2934,
+    "candCursor": 78,
     "candidates": [
       "Taiwan Semiconductor Manufacturing Company Limited",
       "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
@@ -1516,37 +1516,37 @@
     "regionNoteCursor": 3,
     "notesDay": "2026-06-21",
     "seenBySector": {
-      "cons_cycl": 948,
-      "cons_def": 487,
-      "materials": 658,
-      "health": 2733,
-      "finance": 1874,
-      "energy": 862,
-      "hardware": 619,
-      "software": 1840,
-      "industrial": 796,
-      "utilities": 339,
-      "comm": 408,
+      "cons_cycl": 958,
+      "cons_def": 488,
+      "materials": 663,
+      "health": 2750,
+      "finance": 1898,
+      "energy": 866,
+      "hardware": 621,
+      "software": 1853,
+      "industrial": 805,
+      "utilities": 344,
+      "comm": 412,
       "ai_semi": 365,
-      "realestate": 171
+      "realestate": 172
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 948,
-      "cons_def": 488,
-      "materials": 658,
-      "health": 2734,
-      "finance": 1877,
-      "energy": 862,
-      "hardware": 621,
-      "software": 1845,
-      "industrial": 801,
-      "utilities": 339,
-      "comm": 408,
+      "cons_cycl": 958,
+      "cons_def": 489,
+      "materials": 663,
+      "health": 2751,
+      "finance": 1901,
+      "energy": 866,
+      "hardware": 623,
+      "software": 1858,
+      "industrial": 810,
+      "utilities": 344,
+      "comm": 412,
       "ai_semi": 366,
-      "realestate": 171
+      "realestate": 172
     },
-    "heavyAt": "2026-06-23T08:25:10.785Z",
+    "heavyAt": "2026-06-23T15:40:24.915Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1557,6 +1557,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-23T15:00:14.923Z"
+  }
 }
