@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-25",
-  "updatedAt": "2026-06-25T20:00:14.940Z",
+  "updatedAt": "2026-06-25T21:00:14.929Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 2.08,
+      "perf": 2.11,
       "avg30": 3.75,
-      "perf6m": 27.34
+      "perf6m": 27.38
     },
     {
       "id": "comm",
@@ -189,9 +189,9 @@
     },
     {
       "id": "cons_def",
-      "perf": -0.86,
+      "perf": -0.85,
       "avg30": 0.38,
-      "perf6m": 6.54
+      "perf6m": 6.55
     },
     {
       "id": "industrial",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": -8.57,
+      "perf": -8.52,
       "avg30": 2.63,
-      "perf6m": 22.5
+      "perf6m": 22.57
     },
     {
       "id": "materials",
@@ -219,17 +219,17 @@
     },
     {
       "id": "realestate",
-      "perf": -0.08,
+      "perf": 0.07,
       "avg30": 0.61,
-      "perf6m": 10.4
+      "perf6m": 10.56
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -1.66,
+      "perf": -1.62,
       "avg30": 1.7,
-      "perf6m": 7.74
+      "perf6m": 7.79
     },
     {
       "id": "europe",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": -1.63,
+      "perf": -1.6,
       "avg30": 1.64,
-      "perf6m": 7.59
+      "perf6m": 7.62
     }
   ],
   "topStocks": [
@@ -1560,5 +1560,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-06-25T20:00:14.940Z"
+  "yahooAt": "2026-06-25T21:00:14.929Z"
 }
