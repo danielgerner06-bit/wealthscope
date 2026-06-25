@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-25",
-  "updatedAt": "2026-06-25T19:00:14.923Z",
+  "updatedAt": "2026-06-25T19:54:28.425Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 2.11,
+      "perf": 2.02,
       "avg30": 3.75,
-      "perf6m": 27.38
+      "perf6m": 27.27
     },
     {
       "id": "comm",
@@ -189,9 +189,9 @@
     },
     {
       "id": "cons_def",
-      "perf": -0.82,
+      "perf": -0.63,
       "avg30": 0.38,
-      "perf6m": 6.59
+      "perf6m": 6.78
     },
     {
       "id": "industrial",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": -8.3,
+      "perf": -8.58,
       "avg30": 2.64,
-      "perf6m": 22.88
+      "perf6m": 22.49
     },
     {
       "id": "materials",
@@ -219,17 +219,17 @@
     },
     {
       "id": "realestate",
-      "perf": -0.09,
+      "perf": 0.08,
       "avg30": 0.62,
-      "perf6m": 10.39
+      "perf6m": 10.58
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -1.62,
+      "perf": -1.66,
       "avg30": 1.72,
-      "perf6m": 7.79
+      "perf6m": 7.74
     },
     {
       "id": "europe",
@@ -269,21 +269,21 @@
     },
     {
       "id": "india",
-      "perf": 2.18,
+      "perf": 2.14,
       "avg30": -1.11,
-      "perf6m": -8.69
+      "perf6m": -8.73
     },
     {
       "id": "latam",
-      "perf": -4.85,
+      "perf": -4.9,
       "avg30": 2.83,
-      "perf6m": 10.99
+      "perf6m": 10.94
     },
     {
       "id": "world",
-      "perf": -1.54,
+      "perf": -1.6,
       "avg30": 1.66,
-      "perf6m": 7.7
+      "perf6m": 7.62
     }
   ],
   "topStocks": [
@@ -384,7 +384,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0025,
+      "sektorPsi": 0.0026,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 1.13,
       "div": 3.85,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0063,
+      "sektorPsi": 0.006,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 2.23,
       "div": 1.61,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0063,
+      "sektorPsi": 0.006,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -717,7 +717,7 @@
       "eps": 2.27,
       "div": 4.86,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0025,
+      "sektorPsi": 0.0026,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -850,7 +850,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0025,
+      "sektorPsi": 0.0026,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -1519,39 +1519,33 @@
     "notesDay": "2026-06-25",
     "seenBySector": {
       "cons_cycl": 1005,
-      "cons_def": 515,
-      "materials": 693,
-      "health": 2865,
-      "finance": 1979,
-      "energy": 904,
-      "hardware": 654,
-      "software": 1918,
-      "industrial": 844,
-      "utilities": 356,
-      "comm": 429,
-      "ai_semi": 380,
-      "realestate": 182
-    },
-    "pendingReject": [
-      "LSCC",
-      "LSF",
-      "LSPD",
-      "LSTA",
-      "LSTR"
-    ],
-    "evaluatedBySector": {
-      "cons_cycl": 1005,
       "cons_def": 516,
       "materials": 693,
       "health": 2866,
-      "finance": 1982,
+      "finance": 1979,
       "energy": 904,
-      "hardware": 656,
-      "software": 1923,
-      "industrial": 849,
+      "hardware": 654,
+      "software": 1919,
+      "industrial": 844,
       "utilities": 356,
       "comm": 429,
       "ai_semi": 381,
+      "realestate": 182
+    },
+    "pendingReject": [],
+    "evaluatedBySector": {
+      "cons_cycl": 1005,
+      "cons_def": 517,
+      "materials": 693,
+      "health": 2867,
+      "finance": 1982,
+      "energy": 904,
+      "hardware": 656,
+      "software": 1924,
+      "industrial": 849,
+      "utilities": 356,
+      "comm": 429,
+      "ai_semi": 382,
       "realestate": 182
     },
     "heavyAt": "2026-06-25T15:36:41.731Z",
@@ -1565,6 +1559,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-25T19:00:14.923Z"
+  }
 }
