@@ -304,7 +304,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-17",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-16",
       "perf6m": -6.51,
@@ -315,9 +315,9 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-21",
-      "sektorPsi": 0.0237,
+      "sektorPsi": 0.0236,
       "sektorPsiAtAdd": 0.007,
-      "recheckAt": "2026-06-17",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -337,7 +337,7 @@
       "strongBuyPct": 17,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-21",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "yahoo",
       "seen": "2026-06-21",
       "perf6m": -27.9,
@@ -349,7 +349,9 @@
       "div": 4.42,
       "enrichAt": "2026-06-21",
       "sektorPsi": 0.0007,
-      "sektorPsiAtAdd": 0.0009
+      "sektorPsiAtAdd": 0.0009,
+      "recheckAt": "2026-06-25",
+      "miss": 0
     },
     {
       "ticker": "SB1",
@@ -358,7 +360,7 @@
       "buyPct": 100,
       "strongBuyPct": 100,
       "analysts": 4,
-      "upside": 69,
+      "upside": 74,
       "yahoo": "SB1.DE",
       "peGemini": null,
       "ratingCounts": {
@@ -379,9 +381,9 @@
       "perf6mAt": "2026-06-25",
       "perf1mBefore": -7.56,
       "pe": null,
-      "eps": -0.28,
+      "eps": -0.27,
       "div": 0,
-      "enrichAt": "2026-06-20",
+      "enrichAt": "2026-06-25",
       "sektorPsi": 0.0028,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-20",
@@ -404,20 +406,20 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-16",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-15",
       "perf6m": -42.86,
       "perf6mAt": "2026-06-25",
       "perf1mBefore": -8.75,
-      "upside": 65,
-      "pe": 23.3,
+      "upside": 77,
+      "pe": 21.7,
       "eps": 1.11,
-      "div": 1.2,
-      "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0237,
+      "div": 1.32,
+      "enrichAt": "2026-06-25",
+      "sektorPsi": 0.0236,
       "sektorPsiAtAdd": 0.0057,
-      "recheckAt": "2026-06-16",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -427,17 +429,17 @@
       "sector": "cons_def",
       "buyPct": 100,
       "ratingCounts": {
-        "buy": 4,
+        "buy": 3,
         "outperform": 0,
         "hold": 0,
         "underperform": 0,
         "sell": 0
       },
-      "analysts": 4,
+      "analysts": 3,
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-15",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": -14.69,
@@ -450,7 +452,7 @@
       "enrichAt": "2026-06-24",
       "sektorPsi": 0.0061,
       "sektorPsiAtAdd": 0.008,
-      "recheckAt": "2026-06-15",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -470,7 +472,7 @@
       "strongBuyPct": 33,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-18",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "yahoo",
       "seen": "2026-06-17",
       "perf6m": -28.67,
@@ -481,9 +483,9 @@
       "eps": 202.82,
       "div": 1.06,
       "enrichAt": "2026-06-22",
-      "sektorPsi": 0.0237,
+      "sektorPsi": 0.0236,
       "sektorPsiAtAdd": 0.0106,
-      "recheckAt": "2026-06-18",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -503,7 +505,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-15",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "yahoo",
       "seen": "2026-06-14",
       "perf6m": -18.49,
@@ -514,9 +516,9 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0099,
+      "sektorPsi": 0.0098,
       "sektorPsiAtAdd": 0.0229,
-      "recheckAt": "2026-06-15",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -542,12 +544,12 @@
       "perf6m": -26.57,
       "perf6mAt": "2026-06-25",
       "perf1mBefore": -11.41,
-      "upside": 44,
-      "pe": 28.2,
+      "upside": 55,
+      "pe": 26.2,
       "eps": 1.13,
-      "div": 3.76,
-      "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0062,
+      "div": 3.85,
+      "enrichAt": "2026-06-25",
+      "sektorPsi": 0.0061,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -569,7 +571,7 @@
       "strongBuyPct": 83,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-15",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": 12.46,
@@ -580,9 +582,9 @@
       "eps": 1.34,
       "div": 2.35,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0237,
+      "sektorPsi": 0.0236,
       "sektorPsiAtAdd": 0.0038,
-      "recheckAt": "2026-06-15",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -602,7 +604,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-17",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-16",
       "perf6m": 2.98,
@@ -613,9 +615,9 @@
       "eps": 0.72,
       "div": 2.71,
       "enrichAt": "2026-06-21",
-      "sektorPsi": 0.0099,
+      "sektorPsi": 0.0098,
       "sektorPsiAtAdd": 0.025,
-      "recheckAt": "2026-06-17",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -641,12 +643,12 @@
       "perf6m": 6.68,
       "perf6mAt": "2026-06-25",
       "perf1mBefore": -2.31,
-      "upside": 35,
-      "pe": 22.2,
+      "upside": 41,
+      "pe": 21.2,
       "eps": 2.23,
       "div": 1.61,
-      "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0062,
+      "enrichAt": "2026-06-25",
+      "sektorPsi": 0.0061,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -658,7 +660,7 @@
       "buyPct": 100,
       "strongBuyPct": 71,
       "analysts": 7,
-      "upside": 25,
+      "upside": 26,
       "yahoo": "KTN.DE",
       "peGemini": null,
       "ratingCounts": {
@@ -678,11 +680,11 @@
       "perf6m": 2.89,
       "perf6mAt": "2026-06-25",
       "perf1mBefore": 3.94,
-      "pe": 11.3,
+      "pe": 11.1,
       "eps": 2.09,
-      "div": 0,
-      "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0099,
+      "div": 2.55,
+      "enrichAt": "2026-06-25",
+      "sektorPsi": 0.0098,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -704,7 +706,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-15",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": 31.75,
@@ -717,7 +719,7 @@
       "enrichAt": "2026-06-24",
       "sektorPsi": 0.0028,
       "sektorPsiAtAdd": 0.0047,
-      "recheckAt": "2026-06-15",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -737,7 +739,7 @@
       "strongBuyPct": 60,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-15",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": 78.92,
@@ -748,9 +750,9 @@
       "eps": 1.88,
       "div": 0.68,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0099,
+      "sektorPsi": 0.0098,
       "sektorPsiAtAdd": 0.0229,
-      "recheckAt": "2026-06-15",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -770,19 +772,19 @@
       "strongBuyPct": 50,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-18",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "yahoo",
       "seen": "2026-06-10",
       "perf6m": 180.87,
       "perf6mAt": "2026-06-25",
       "perf1mBefore": 6,
-      "upside": -5,
+      "upside": -15,
       "pe": null,
-      "div": 1.19,
-      "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0099,
+      "div": 1.12,
+      "enrichAt": "2026-06-25",
+      "sektorPsi": 0.0098,
       "sektorPsiAtAdd": 0.0102,
-      "recheckAt": "2026-06-18",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -802,19 +804,19 @@
       "strongBuyPct": 36,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-18",
+      "verifiedAt": "2026-06-25",
       "verifiedSource": "yahoo",
       "seen": "2026-06-10",
       "perf6m": 429.48,
       "perf6mAt": "2026-06-25",
       "perf1mBefore": 5.99,
-      "upside": -23,
+      "upside": -12,
       "pe": null,
-      "div": null,
-      "enrichAt": "2026-06-20",
+      "div": 0.09,
+      "enrichAt": "2026-06-25",
       "sektorPsi": 0.0027,
       "sektorPsiAtAdd": 0.0039,
-      "recheckAt": "2026-06-18",
+      "recheckAt": "2026-06-25",
       "miss": 0
     },
     {
@@ -844,10 +846,10 @@
       "perf6m": -37.95,
       "perf6mAt": "2026-06-25",
       "perf1mBefore": 2.18,
-      "pe": 19.1,
+      "pe": 19.3,
       "eps": 4.23,
       "div": 0,
-      "enrichAt": "2026-06-20",
+      "enrichAt": "2026-06-25",
       "sektorPsi": 0.0028,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-20",
@@ -876,11 +878,11 @@
       "perf6m": -14.88,
       "perf6mAt": "2026-06-25",
       "perf1mBefore": 28.32,
-      "pe": 15.3,
+      "pe": 15.2,
       "eps": 5.01,
-      "div": 5.08,
-      "enrichAt": "2026-06-20",
-      "sektorPsi": 0.0237,
+      "div": 5.26,
+      "enrichAt": "2026-06-25",
+      "sektorPsi": 0.0236,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -1028,8 +1030,8 @@
       "date": "2026-06-21"
     },
     "realestate": {
-      "text": "Der Immobiliensektor stagniert kurzfristig aufgrund hoher Zinsen. Langfristig zeigt er sich resilienter, was auf strukturelle Nachfrage hindeutet.",
-      "date": "2026-06-09"
+      "text": "Der Immobiliensektor zeigt seit sechs Monaten Stärke, aktuell bremst die kurzfristige Entwicklung aber leicht. Möglicherweise spielen hier Zinserwartungen eine Rolle.",
+      "date": "2026-06-25"
     }
   },
   "regionNotes": {
@@ -1042,8 +1044,8 @@
       "date": "2026-06-14"
     },
     "japan": {
-      "text": "Japan: Zinsen steigen leicht, was die Konjunktur dämpft. Langfristig positive Entwicklung trotz kurzfristiger Schwankungen.",
-      "date": "2026-06-12"
+      "text": "Japanische Aktien steigen moderat (+1.51% 30 Tage), da die Konjunktur anzieht, während die 6-Monats-Performance (+15.98%) von globalen Trends profitiert.",
+      "date": "2026-06-25"
     },
     "usa": {
       "text": "USA: Konjunktur kühlt sich leicht ab (30-Tage +1.1% vs. +1.8% Normal), 6-Monats-Wachstum bleibt stark (+9.7%).",
@@ -1077,41 +1079,34 @@
   "news": {
     "items": [
       {
-        "text": "US-Iran-Gespräche starten in der Schweiz – Trump droht mit Maut.",
-        "stamp": "21.06.26"
+        "text": "Rheinmetall-Crash belastet: DAX schließt in Rot",
+        "stamp": "25.06.26"
       },
       {
-        "text": "SpaceX Aktie: Der reichste Mann braucht Geld.",
-        "stamp": "21.06.26"
+        "text": "US-Regierung will Entwicklung von Quantencomputern beschleunigen",
+        "stamp": "25.06.26"
       },
       {
-        "text": "Ölpreis: Hormus hält Märkte in Atem.",
-        "stamp": "21.06.26"
+        "text": "EU bereitet Gegenmaßnahmen gegen Chinas Exportoffensive vor",
+        "stamp": "25.06.26"
       },
       {
-        "text": "KI-Chips: Nvidia Rallye wackelt.",
-        "stamp": "21.06.26"
+        "text": "VW verkauft Motorentochter für 7,4 Milliarden Euro",
+        "stamp": "24.06.26"
       },
       {
-        "text": "Europas Börsen schließen mit leichten Abgaben.",
-        "stamp": "20.06.26"
-      },
-      {
-        "text": "Gold-Crash voraus? 50%-Warnung für Edelmetall-Anleger.",
-        "stamp": "20.06.26"
+        "text": "Bitcoin gerät weiter unter Druck: Kurs fällt auf 59.000 Dollar",
+        "stamp": "24.06.26"
       }
     ],
-    "date": "2026-06-21"
+    "date": "2026-06-25"
   },
   "scan": {
     "universe": 8832,
     "scanned": 8832,
-    "lastCursor": 3834,
-    "candCursor": 102,
+    "lastCursor": 4134,
+    "candCursor": 110,
     "candidates": [
-      "Taiwan Semiconductor Manufacturing Company Limited",
-      "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
-      "Kweichow Moutai Co., Ltd.",
       "Infosys Limited",
       "Tata Consultancy Services Limited",
       "ASML Holding N.V.",
@@ -1508,45 +1503,48 @@
       "NGK Insulators, Ltd.",
       "Shizuoka Financial Group, Inc.",
       "Isetan Mitsukoshi Holdings Ltd.",
-      "Food & Life Companies Ltd."
+      "Food & Life Companies Ltd.",
+      "Software AG",
+      "Porsche Automobil Holding SE",
+      "Volkswagen AG"
     ],
-    "noteCursor": 12,
-    "focusCursor": 4,
+    "noteCursor": 0,
+    "focusCursor": 5,
     "recheckCursor": 16,
-    "regionNoteCursor": 3,
-    "notesDay": "2026-06-21",
+    "regionNoteCursor": 4,
+    "notesDay": "2026-06-25",
     "seenBySector": {
-      "cons_cycl": 983,
-      "cons_def": 501,
-      "materials": 676,
-      "health": 2790,
-      "finance": 1950,
-      "energy": 886,
-      "hardware": 633,
-      "software": 1884,
-      "industrial": 825,
-      "utilities": 352,
-      "comm": 420,
-      "ai_semi": 369,
-      "realestate": 178
+      "cons_cycl": 987,
+      "cons_def": 504,
+      "materials": 681,
+      "health": 2824,
+      "finance": 1959,
+      "energy": 892,
+      "hardware": 640,
+      "software": 1898,
+      "industrial": 830,
+      "utilities": 354,
+      "comm": 422,
+      "ai_semi": 374,
+      "realestate": 180
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 983,
-      "cons_def": 502,
-      "materials": 676,
-      "health": 2791,
-      "finance": 1953,
-      "energy": 886,
-      "hardware": 635,
-      "software": 1889,
-      "industrial": 830,
-      "utilities": 352,
-      "comm": 420,
-      "ai_semi": 370,
-      "realestate": 178
+      "cons_cycl": 987,
+      "cons_def": 505,
+      "materials": 681,
+      "health": 2825,
+      "finance": 1962,
+      "energy": 892,
+      "hardware": 642,
+      "software": 1903,
+      "industrial": 835,
+      "utilities": 354,
+      "comm": 422,
+      "ai_semi": 375,
+      "realestate": 180
     },
-    "heavyAt": "2026-06-24T15:34:36.724Z",
+    "heavyAt": "2026-06-25T01:55:56.098Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
