@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-25",
-  "updatedAt": "2026-06-25T13:00:14.920Z",
+  "updatedAt": "2026-06-25T13:56:19.830Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,143 +147,143 @@
   "bars30": [
     {
       "id": "software",
-      "perf": -6.44,
-      "avg30": -1.04,
-      "perf6m": -17.77
+      "perf": -8.34,
+      "avg30": -1.07,
+      "perf6m": -20.04
     },
     {
       "id": "ai_semi",
-      "perf": 14.99,
-      "avg30": 8.95,
-      "perf6m": 106.61
+      "perf": 12.26,
+      "avg30": 8.97,
+      "perf6m": 101.2
     },
     {
       "id": "hardware",
-      "perf": 3.13,
-      "avg30": 3.76,
-      "perf6m": 30.13
+      "perf": 1.47,
+      "avg30": 3.75,
+      "perf6m": 26.59
     },
     {
       "id": "comm",
-      "perf": -7.96,
-      "avg30": 0.5,
-      "perf6m": -8.25
+      "perf": -7.8,
+      "avg30": 0.47,
+      "perf6m": -8.57
     },
     {
       "id": "health",
-      "perf": 2.72,
-      "avg30": 1.13,
-      "perf6m": -1.12
+      "perf": 3.26,
+      "avg30": 1.14,
+      "perf6m": -1.03
     },
     {
       "id": "finance",
-      "perf": 3.85,
-      "avg30": 0.07,
-      "perf6m": -1.67
+      "perf": 3.92,
+      "avg30": 0.09,
+      "perf6m": -1.75
     },
     {
       "id": "cons_cycl",
-      "perf": -3.17,
-      "avg30": 0.69,
-      "perf6m": -5.67
+      "perf": -4.04,
+      "avg30": 0.67,
+      "perf6m": -6.51
     },
     {
       "id": "cons_def",
-      "perf": -1.27,
+      "perf": -0.26,
       "avg30": 0.39,
-      "perf6m": 5.72
+      "perf6m": 7.18
     },
     {
       "id": "industrial",
-      "perf": 5.55,
-      "avg30": 1.56,
-      "perf6m": 16.62
+      "perf": 4.91,
+      "avg30": 1.57,
+      "perf6m": 15.62
     },
     {
       "id": "energy",
-      "perf": -9.13,
-      "avg30": 2.68,
-      "perf6m": 22.5
+      "perf": -9.36,
+      "avg30": 2.63,
+      "perf6m": 21.45
     },
     {
       "id": "materials",
-      "perf": 2.28,
+      "perf": 1.73,
       "avg30": 1.29,
-      "perf6m": 13.21
+      "perf6m": 12.76
     },
     {
       "id": "utilities",
-      "perf": 0.16,
-      "avg30": 0.78,
-      "perf6m": 5.4
+      "perf": 0.46,
+      "avg30": 0.77,
+      "perf6m": 6.83
     },
     {
       "id": "realestate",
-      "perf": 0.02,
-      "avg30": 0.63,
-      "perf6m": 9.96
+      "perf": 0.13,
+      "avg30": 0.62,
+      "perf6m": 10.64
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -1.23,
-      "avg30": 1.73,
-      "perf6m": 8.44
+      "perf": -1.66,
+      "avg30": 1.72,
+      "perf6m": 7.74
     },
     {
       "id": "europe",
-      "perf": -1.47,
-      "avg30": 1.29,
-      "perf6m": 5.28
+      "perf": -1.8,
+      "avg30": 1.27,
+      "perf6m": 4.77
     },
     {
       "id": "germany",
-      "perf": -4.5,
-      "avg30": 0.12,
-      "perf6m": -2.29
+      "perf": -5.06,
+      "avg30": 0.1,
+      "perf6m": -2.92
     },
     {
       "id": "japan",
-      "perf": 1.51,
-      "avg30": 2.28,
-      "perf6m": 15.98
+      "perf": 1.24,
+      "avg30": 2.27,
+      "perf6m": 15.27
     },
     {
       "id": "china",
-      "perf": -7.42,
-      "avg30": -0.14,
-      "perf6m": -13.64
+      "perf": -8.1,
+      "avg30": -0.18,
+      "perf6m": -15.17
     },
     {
       "id": "em",
-      "perf": 2.08,
+      "perf": 1.85,
       "avg30": 3.26,
-      "perf6m": 26.41
+      "perf6m": 25.19
     },
     {
       "id": "apac",
-      "perf": 2.19,
-      "avg30": 3.33,
-      "perf6m": 26.52
+      "perf": 1.7,
+      "avg30": 3.32,
+      "perf6m": 27.88
     },
     {
       "id": "india",
-      "perf": 3.33,
-      "avg30": -1.12,
-      "perf6m": -6.85
+      "perf": 2.22,
+      "avg30": -1.11,
+      "perf6m": -8.65
     },
     {
       "id": "latam",
-      "perf": -4.31,
-      "avg30": 2.87,
-      "perf6m": 11.1
+      "perf": -5.86,
+      "avg30": 2.83,
+      "perf6m": 9.82
     },
     {
       "id": "world",
-      "perf": -1.31,
-      "avg30": 1.67,
-      "perf6m": 8.58
+      "perf": -1.75,
+      "avg30": 1.65,
+      "perf6m": 7.46
     }
   ],
   "topStocks": [
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-21",
-      "sektorPsi": 0.0234,
+      "sektorPsi": 0.0523,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.11,
       "div": 1.32,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0234,
+      "sektorPsi": 0.0523,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0028,
+      "sektorPsi": 0.0025,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 6.47,
       "div": 4.42,
       "enrichAt": "2026-06-21",
-      "sektorPsi": 0.0007,
+      "sektorPsi": 0.0006,
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 1.64,
       "div": 3.24,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.006,
+      "sektorPsi": 0.0046,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 202.82,
       "div": 1.06,
       "enrichAt": "2026-06-22",
-      "sektorPsi": 0.0234,
+      "sektorPsi": 0.0523,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0098,
+      "sektorPsi": 0.009,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 1.13,
       "div": 3.85,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0061,
+      "sektorPsi": 0.0062,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 1.34,
       "div": 2.35,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0234,
+      "sektorPsi": 0.0523,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 2.23,
       "div": 1.61,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0061,
+      "sektorPsi": 0.0062,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 0.72,
       "div": 2.71,
       "enrichAt": "2026-06-21",
-      "sektorPsi": 0.0098,
+      "sektorPsi": 0.009,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -684,7 +684,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0098,
+      "sektorPsi": 0.009,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -717,7 +717,7 @@
       "eps": 2.27,
       "div": 4.86,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0028,
+      "sektorPsi": 0.0025,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -750,7 +750,7 @@
       "eps": 1.88,
       "div": 0.68,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0098,
+      "sektorPsi": 0.009,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -814,7 +814,7 @@
       "pe": null,
       "div": 1.12,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0098,
+      "sektorPsi": 0.009,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -850,7 +850,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0028,
+      "sektorPsi": 0.0025,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -882,7 +882,7 @@
       "eps": 5.01,
       "div": 5.26,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0234,
+      "sektorPsi": 0.0523,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -1559,6 +1559,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-25T13:00:14.920Z"
+  }
 }
