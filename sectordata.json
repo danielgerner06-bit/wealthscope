@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-26",
-  "updatedAt": "2026-06-26T19:00:12.954Z",
+  "updatedAt": "2026-06-26T19:52:59.840Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -7.87,
+      "perf": -8.22,
       "avg30": 0.42,
-      "perf6m": -8.74
+      "perf6m": -9.09
     },
     {
       "id": "health",
@@ -177,15 +177,15 @@
     },
     {
       "id": "finance",
-      "perf": 3.26,
+      "perf": 3.29,
       "avg30": 0.09,
-      "perf6m": -3.22
+      "perf6m": -3.19
     },
     {
       "id": "cons_cycl",
-      "perf": -4.3,
+      "perf": -4.1,
       "avg30": 0.62,
-      "perf6m": -6.43
+      "perf6m": -6.24
     },
     {
       "id": "cons_def",
@@ -195,21 +195,21 @@
     },
     {
       "id": "industrial",
-      "perf": 4.13,
+      "perf": 3.83,
       "avg30": 1.56,
-      "perf6m": 15.61
+      "perf6m": 15.27
     },
     {
       "id": "energy",
-      "perf": -7.1,
+      "perf": -6.78,
       "avg30": 2.59,
-      "perf6m": 21.57
+      "perf6m": 21.97
     },
     {
       "id": "materials",
-      "perf": 0.9,
+      "perf": 1.05,
       "avg30": 1.27,
-      "perf6m": 12.66
+      "perf6m": 12.82
     },
     {
       "id": "utilities",
@@ -233,21 +233,21 @@
     },
     {
       "id": "europe",
-      "perf": -2.5,
+      "perf": -2.41,
       "avg30": 1.25,
-      "perf6m": 4.64
+      "perf6m": 4.73
     },
     {
       "id": "germany",
-      "perf": -7.07,
+      "perf": -6.99,
       "avg30": 0.05,
-      "perf6m": -4.11
+      "perf6m": -4.03
     },
     {
       "id": "japan",
-      "perf": 0.45,
+      "perf": 0.56,
       "avg30": 2.26,
-      "perf6m": 15.05
+      "perf6m": 15.18
     },
     {
       "id": "china",
@@ -263,15 +263,15 @@
     },
     {
       "id": "apac",
-      "perf": 0.46,
+      "perf": 0.48,
       "avg30": 3.31,
-      "perf6m": 28.72
+      "perf6m": 28.73
     },
     {
       "id": "india",
-      "perf": 1.94,
+      "perf": 2.11,
       "avg30": -1.09,
-      "perf6m": -8.67
+      "perf6m": -8.52
     },
     {
       "id": "latam",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": -2.41,
+      "perf": -2.37,
       "avg30": 1.63,
-      "perf6m": 6.82
+      "perf6m": 6.87
     }
   ],
   "topStocks": [
@@ -516,7 +516,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0066,
+      "sektorPsi": 0.0071,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 0.72,
       "div": 2.96,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0066,
+      "sektorPsi": 0.0071,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -684,7 +684,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0066,
+      "sektorPsi": 0.0071,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-20",
       "miss": 0
@@ -750,7 +750,7 @@
       "eps": 1.88,
       "div": 0.68,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0066,
+      "sektorPsi": 0.0071,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -814,7 +814,7 @@
       "pe": null,
       "div": 1.12,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0066,
+      "sektorPsi": 0.0071,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -1559,6 +1559,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-26T19:00:12.954Z"
+  }
 }
