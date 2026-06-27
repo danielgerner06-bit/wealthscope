@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-26",
-  "updatedAt": "2026-06-27T08:00:12.959Z",
+  "updated": "2026-06-27",
+  "updatedAt": "2026-06-27T08:16:10.460Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -148,8 +148,8 @@
     {
       "id": "software",
       "perf": -8.34,
-      "avg30": -1.12,
-      "perf6m": -20.04
+      "avg30": -1.15,
+      "perf6m": -20.26
     },
     {
       "id": "ai_semi",
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -7.8,
-      "avg30": 0.46,
-      "perf6m": -8.57
+      "perf": -8.11,
+      "avg30": 0.42,
+      "perf6m": -8.98
     },
     {
       "id": "health",
@@ -177,9 +177,9 @@
     },
     {
       "id": "finance",
-      "perf": 3.61,
-      "avg30": 0.07,
-      "perf6m": -2.04
+      "perf": 3.32,
+      "avg30": 0.08,
+      "perf6m": -3.16
     },
     {
       "id": "cons_cycl",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": -8.52,
-      "avg30": 2.63,
-      "perf6m": 22.57
+      "perf": -6.93,
+      "avg30": 2.59,
+      "perf6m": 21.78
     },
     {
       "id": "materials",
@@ -219,17 +219,17 @@
     },
     {
       "id": "realestate",
-      "perf": 0.07,
+      "perf": -0.09,
       "avg30": 0.59,
-      "perf6m": 10.56
+      "perf6m": 10.95
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -1.62,
-      "avg30": 1.69,
-      "perf6m": 7.79
+      "perf": -2.29,
+      "avg30": 1.68,
+      "perf6m": 7.07
     },
     {
       "id": "europe",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": 2.15,
-      "avg30": -1.09,
-      "perf6m": -8.72
+      "perf": 2.08,
+      "avg30": -1.08,
+      "perf6m": -8.54
     },
     {
       "id": "latam",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": -1.6,
-      "avg30": 1.64,
-      "perf6m": 7.62
+      "perf": -2.41,
+      "avg30": 1.62,
+      "perf6m": 6.82
     }
   ],
   "topStocks": [
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0505,
+      "sektorPsi": 0.0499,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.11,
       "div": 1.32,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0505,
+      "sektorPsi": 0.0499,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -456,39 +456,6 @@
       "miss": 0
     },
     {
-      "ticker": "6701.T",
-      "name": "NEC Corporation",
-      "yahoo": "6701.T",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 8,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 12,
-      "strongBuyPct": 33,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-06-25",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-17",
-      "perf6m": -28.6,
-      "perf6mAt": "2026-06-27",
-      "perf1mBefore": -7.48,
-      "upside": 58,
-      "pe": 18.7,
-      "eps": 203.03,
-      "div": 1.05,
-      "enrichAt": "2026-06-27",
-      "sektorPsi": 0.0505,
-      "sektorPsiAtAdd": 0.0106,
-      "recheckAt": "2026-06-25",
-      "miss": 0
-    },
-    {
       "ticker": "SIT",
       "name": "SIT S.p.A.",
       "yahoo": "SIT.MI",
@@ -516,8 +483,41 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0069,
       "sektorPsiAtAdd": 0.0229,
+      "recheckAt": "2026-06-25",
+      "miss": 0
+    },
+    {
+      "ticker": "6701.T",
+      "name": "NEC Corporation",
+      "yahoo": "6701.T",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 8,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 12,
+      "strongBuyPct": 33,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-06-25",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-17",
+      "perf6m": -28.6,
+      "perf6mAt": "2026-06-27",
+      "perf1mBefore": -7.48,
+      "upside": 58,
+      "pe": 18.7,
+      "eps": 203.03,
+      "div": 1.05,
+      "enrichAt": "2026-06-27",
+      "sektorPsi": 0.0499,
+      "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-25",
       "miss": 0
     },
@@ -582,7 +582,7 @@
       "eps": 0.72,
       "div": 2.96,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0069,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 1.34,
       "div": 2.35,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0505,
+      "sektorPsi": 0.0499,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -684,7 +684,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0069,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -750,7 +750,7 @@
       "eps": 1.88,
       "div": 0.68,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0069,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -814,7 +814,7 @@
       "pe": null,
       "div": 1.12,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0069,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -882,7 +882,7 @@
       "eps": 5.01,
       "div": 5.26,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0505,
+      "sektorPsi": 0.0499,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -1079,16 +1079,12 @@
   "news": {
     "items": [
       {
-        "text": "US-Verbraucherstimmung bessert sich bei nachgebenden Benzinpreisen.",
+        "text": "Tech-Werte unter Druck: Sorge um KI-Börsengänge bremst Märkte",
         "stamp": "26.06.26"
       },
       {
-        "text": "Mexiko erzielt im Mai Handelsüberschuss von 2,26 Milliarden USD.",
+        "text": "Bitcoin-Boden erreicht? Coinbase-CEO optimistic",
         "stamp": "26.06.26"
-      },
-      {
-        "text": "US-Wirtschaft wächst im ersten Quartal stärker als erwartet.",
-        "stamp": "25.06.26"
       }
     ],
     "date": "2026-06-27"
@@ -1096,19 +1092,9 @@
   "scan": {
     "universe": 8836,
     "scanned": 8836,
-    "lastCursor": 5934,
-    "candCursor": 158,
+    "lastCursor": 6234,
+    "candCursor": 166,
     "candidates": [
-      "Vertex Pharmaceuticals Incorporated",
-      "Align Technology, Inc.",
-      "Gilead Sciences, Inc.",
-      "Biogen Inc.",
-      "Illumina, Inc.",
-      "Medtronic plc",
-      "Veolia Environnement S.A.",
-      "Enel S.p.A.",
-      "RWE AG",
-      "Iberdrola S.A.",
       "BNP Paribas SA",
       "Deutsche Börse AG",
       "ING Groep N.V.",
@@ -1498,61 +1484,60 @@
       "Celsius Holdings, Inc.",
       "BioDelivery Sciences International, Inc.",
       "The Gorman-Rupp Company",
-      "Willdan Group, Inc."
+      "Willdan Group, Inc.",
+      "Menard Inc.",
+      "M&A Capital Partners Co., Ltd.",
+      "Vector Inc.",
+      "Seino Holdings Co., Ltd.",
+      "MedPeer, Inc.",
+      "Yahoo Japan Corporation",
+      "Zenrin Co., Ltd.",
+      "Freee K.K.",
+      "KLab Inc.",
+      "ZOZO, Inc."
     ],
     "noteCursor": 2,
-    "focusCursor": 3,
+    "focusCursor": 4,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-27",
     "seenBySector": {
-      "cons_cycl": 1027,
-      "cons_def": 531,
-      "materials": 721,
-      "health": 2958,
-      "finance": 2034,
-      "energy": 935,
-      "hardware": 669,
-      "software": 1974,
-      "industrial": 865,
-      "utilities": 368,
-      "comm": 439,
-      "ai_semi": 396,
+      "cons_cycl": 1034,
+      "cons_def": 536,
+      "materials": 722,
+      "health": 2980,
+      "finance": 2052,
+      "energy": 941,
+      "hardware": 671,
+      "software": 1999,
+      "industrial": 875,
+      "utilities": 374,
+      "comm": 440,
+      "ai_semi": 400,
       "realestate": 189
     },
     "pendingReject": [
-      "PACK",
-      "PACS",
-      "PAG",
-      "PAGS",
-      "PAHC",
-      "PAL",
-      "PALI",
-      "PAMT",
-      "PANL",
-      "PANW",
-      "PAPL",
-      "PAR",
-      "PARK",
-      "PARR",
-      "PASG"
+      "PPC",
+      "PPG",
+      "PPHC",
+      "PPIH"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 1027,
-      "cons_def": 532,
-      "materials": 721,
-      "health": 2959,
-      "finance": 2037,
-      "energy": 935,
-      "hardware": 671,
-      "software": 1979,
-      "industrial": 870,
-      "utilities": 368,
-      "comm": 439,
-      "ai_semi": 397,
+      "cons_cycl": 1034,
+      "cons_def": 537,
+      "materials": 722,
+      "health": 2981,
+      "finance": 2055,
+      "energy": 941,
+      "hardware": 673,
+      "software": 2004,
+      "industrial": 880,
+      "utilities": 374,
+      "comm": 440,
+      "ai_semi": 401,
       "realestate": 189
     },
-    "heavyAt": "2026-06-27T01:55:47.928Z",
+    "heavyAt": "2026-06-27T08:08:55.333Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1563,6 +1548,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-27T08:00:12.959Z"
+  }
 }
