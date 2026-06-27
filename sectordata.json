@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-27",
-  "updatedAt": "2026-06-27T13:00:13.818Z",
+  "updatedAt": "2026-06-27T13:52:31.866Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -189,9 +189,9 @@
     },
     {
       "id": "cons_def",
-      "perf": -0.85,
+      "perf": -0.17,
       "avg30": 0.37,
-      "perf6m": 6.55
+      "perf6m": 8.42
     },
     {
       "id": "industrial",
@@ -207,15 +207,15 @@
     },
     {
       "id": "materials",
-      "perf": 1.73,
-      "avg30": 1.27,
-      "perf6m": 12.76
+      "perf": 1.2,
+      "avg30": 1.26,
+      "perf6m": 12.98
     },
     {
       "id": "utilities",
-      "perf": 0.46,
-      "avg30": 0.74,
-      "perf6m": 6.83
+      "perf": 1.15,
+      "avg30": 0.75,
+      "perf6m": 7.58
     },
     {
       "id": "realestate",
@@ -1503,8 +1503,8 @@
     "notesDay": "2026-06-27",
     "seenBySector": {
       "cons_cycl": 1034,
-      "cons_def": 536,
-      "materials": 722,
+      "cons_def": 537,
+      "materials": 723,
       "health": 2980,
       "finance": 2052,
       "energy": 941,
@@ -1516,16 +1516,11 @@
       "ai_semi": 400,
       "realestate": 189
     },
-    "pendingReject": [
-      "PPC",
-      "PPG",
-      "PPHC",
-      "PPIH"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
       "cons_cycl": 1034,
-      "cons_def": 537,
-      "materials": 722,
+      "cons_def": 538,
+      "materials": 723,
       "health": 2981,
       "finance": 2055,
       "energy": 941,
@@ -1548,6 +1543,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-27T13:00:13.818Z"
+  }
 }
