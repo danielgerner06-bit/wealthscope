@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-26",
-  "updatedAt": "2026-06-27T07:00:12.972Z",
+  "updatedAt": "2026-06-27T08:00:12.959Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -148,8 +148,8 @@
     {
       "id": "software",
       "perf": -8.34,
-      "avg30": -1.15,
-      "perf6m": -20.26
+      "avg30": -1.12,
+      "perf6m": -20.04
     },
     {
       "id": "ai_semi",
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -8.11,
-      "avg30": 0.42,
-      "perf6m": -8.98
+      "perf": -7.8,
+      "avg30": 0.46,
+      "perf6m": -8.57
     },
     {
       "id": "health",
@@ -177,9 +177,9 @@
     },
     {
       "id": "finance",
-      "perf": 3.32,
-      "avg30": 0.08,
-      "perf6m": -3.16
+      "perf": 3.61,
+      "avg30": 0.07,
+      "perf6m": -2.04
     },
     {
       "id": "cons_cycl",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": -6.93,
-      "avg30": 2.59,
-      "perf6m": 21.78
+      "perf": -8.52,
+      "avg30": 2.63,
+      "perf6m": 22.57
     },
     {
       "id": "materials",
@@ -219,17 +219,17 @@
     },
     {
       "id": "realestate",
-      "perf": -0.09,
+      "perf": 0.07,
       "avg30": 0.59,
-      "perf6m": 10.95
+      "perf6m": 10.56
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -2.29,
-      "avg30": 1.68,
-      "perf6m": 7.07
+      "perf": -1.62,
+      "avg30": 1.69,
+      "perf6m": 7.79
     },
     {
       "id": "europe",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": 2.08,
-      "avg30": -1.08,
-      "perf6m": -8.54
+      "perf": 2.15,
+      "avg30": -1.09,
+      "perf6m": -8.72
     },
     {
       "id": "latam",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": -2.41,
-      "avg30": 1.62,
-      "perf6m": 6.82
+      "perf": -1.6,
+      "avg30": 1.64,
+      "perf6m": 7.62
     }
   ],
   "topStocks": [
@@ -1564,5 +1564,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-06-27T07:00:12.972Z"
+  "yahooAt": "2026-06-27T08:00:12.959Z"
 }
