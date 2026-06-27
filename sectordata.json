@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-27",
-  "updatedAt": "2026-06-27T21:00:13.798Z",
+  "updatedAt": "2026-06-27T21:14:12.864Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -148,142 +148,142 @@
     {
       "id": "software",
       "perf": -8.34,
-      "avg30": -1.15,
-      "perf6m": -20.26
+      "avg30": -1.12,
+      "perf6m": -20.04
     },
     {
       "id": "ai_semi",
-      "perf": 6.65,
-      "avg30": 9.01,
-      "perf6m": 97.97
+      "perf": 12.29,
+      "avg30": 9.03,
+      "perf6m": 101.26
     },
     {
       "id": "hardware",
-      "perf": -0.75,
-      "avg30": 3.72,
-      "perf6m": 26.1
+      "perf": 2.11,
+      "avg30": 3.74,
+      "perf6m": 27.38
     },
     {
       "id": "comm",
-      "perf": -8.11,
-      "avg30": 0.42,
-      "perf6m": -8.98
+      "perf": -7.8,
+      "avg30": 0.46,
+      "perf6m": -8.57
     },
     {
       "id": "health",
-      "perf": 4.6,
-      "avg30": 1.15,
-      "perf6m": 0.41
+      "perf": 3.26,
+      "avg30": 1.14,
+      "perf6m": -1.03
     },
     {
       "id": "finance",
-      "perf": 3.32,
-      "avg30": 0.08,
-      "perf6m": -3.16
+      "perf": 3.61,
+      "avg30": 0.07,
+      "perf6m": -2.04
     },
     {
       "id": "cons_cycl",
-      "perf": -4.25,
-      "avg30": 0.6,
-      "perf6m": -6.38
+      "perf": -4.55,
+      "avg30": 0.63,
+      "perf6m": -7.01
     },
     {
       "id": "cons_def",
-      "perf": -0.17,
+      "perf": -0.85,
       "avg30": 0.37,
-      "perf6m": 8.42
+      "perf6m": 6.55
     },
     {
       "id": "industrial",
-      "perf": 3.96,
-      "avg30": 1.54,
-      "perf6m": 15.42
+      "perf": 4.91,
+      "avg30": 1.53,
+      "perf6m": 15.62
     },
     {
       "id": "energy",
-      "perf": -6.93,
-      "avg30": 2.59,
-      "perf6m": 21.78
+      "perf": -8.52,
+      "avg30": 2.63,
+      "perf6m": 22.57
     },
     {
       "id": "materials",
-      "perf": 1.2,
-      "avg30": 1.26,
-      "perf6m": 12.98
+      "perf": 1.73,
+      "avg30": 1.27,
+      "perf6m": 12.76
     },
     {
       "id": "utilities",
-      "perf": 1.15,
-      "avg30": 0.75,
-      "perf6m": 7.58
+      "perf": 0.46,
+      "avg30": 0.74,
+      "perf6m": 6.83
     },
     {
       "id": "realestate",
-      "perf": -0.09,
+      "perf": 0.07,
       "avg30": 0.59,
-      "perf6m": 10.95
+      "perf6m": 10.56
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -2.29,
-      "avg30": 1.68,
-      "perf6m": 7.07
+      "perf": -1.62,
+      "avg30": 1.69,
+      "perf6m": 7.79
     },
     {
       "id": "europe",
-      "perf": -2.45,
-      "avg30": 1.25,
-      "perf6m": 4.69
+      "perf": -1.8,
+      "avg30": 1.26,
+      "perf6m": 4.77
     },
     {
       "id": "germany",
-      "perf": -7,
-      "avg30": 0.06,
-      "perf6m": -4.04
+      "perf": -4.81,
+      "avg30": 0.09,
+      "perf6m": -2.66
     },
     {
       "id": "japan",
-      "perf": 0.55,
-      "avg30": 2.27,
-      "perf6m": 15.17
+      "perf": 1.24,
+      "avg30": 2.28,
+      "perf6m": 15.27
     },
     {
       "id": "china",
-      "perf": -8.57,
-      "avg30": -0.27,
-      "perf6m": -16.3
+      "perf": -8.1,
+      "avg30": -0.23,
+      "perf6m": -15.17
     },
     {
       "id": "em",
-      "perf": -1.67,
-      "avg30": 3.24,
-      "perf6m": 24.51
+      "perf": 1.85,
+      "avg30": 3.26,
+      "perf6m": 25.19
     },
     {
       "id": "apac",
-      "perf": 0.41,
-      "avg30": 3.32,
-      "perf6m": 28.65
+      "perf": 1.7,
+      "avg30": 3.33,
+      "perf6m": 27.88
     },
     {
       "id": "india",
-      "perf": 2.08,
-      "avg30": -1.08,
-      "perf6m": -8.54
+      "perf": 2.15,
+      "avg30": -1.09,
+      "perf6m": -8.72
     },
     {
       "id": "latam",
-      "perf": -4.9,
-      "avg30": 2.83,
-      "perf6m": 10.69
+      "perf": -4.85,
+      "avg30": 2.87,
+      "perf6m": 10.99
     },
     {
       "id": "world",
-      "perf": -2.41,
-      "avg30": 1.62,
-      "perf6m": 6.82
+      "perf": -1.6,
+      "avg30": 1.64,
+      "perf6m": 7.62
     }
   ],
   "topStocks": [
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.049,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.11,
       "div": 1.32,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.049,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0088,
+      "sektorPsi": 0.0087,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 203.03,
       "div": 1.05,
       "enrichAt": "2026-06-27",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.049,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 1.13,
       "div": 3.85,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 0.72,
       "div": 2.96,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0088,
+      "sektorPsi": 0.0087,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -604,7 +604,7 @@
       "strongBuyPct": 83,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-25",
+      "verifiedAt": "2026-06-27",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": 12.46,
@@ -615,7 +615,7 @@
       "eps": 1.34,
       "div": 2.35,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.049,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 2.23,
       "div": 1.61,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -684,7 +684,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0088,
+      "sektorPsi": 0.0087,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -750,7 +750,7 @@
       "eps": 1.88,
       "div": 0.68,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0088,
+      "sektorPsi": 0.0087,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -814,7 +814,7 @@
       "pe": null,
       "div": 1.12,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0088,
+      "sektorPsi": 0.0087,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -882,7 +882,7 @@
       "eps": 5.01,
       "div": 5.26,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.049,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -1079,28 +1079,28 @@
   "news": {
     "items": [
       {
-        "text": "Nachhaltiges Investieren: Geopolitik als Steigbügelhalter für grüne Anlagen",
-        "stamp": "18.06.26"
+        "text": "Supreme Court entscheidet über Fed-Gouverneurin Cook.",
+        "stamp": "27.06.26"
       },
       {
-        "text": "US-Notenbank Fed hält Leitzins stabil bei 3,5-3,75 Prozent",
-        "stamp": "17.06.26"
+        "text": "Volatilität bei KI-Aktien: Ist der Boom nur ein Trend?",
+        "stamp": "27.06.26"
       },
       {
-        "text": "EZB senkt Leitzins auf 2,0 Prozent amid unsicherer Wirtschaftslage",
-        "stamp": "16.06.26"
+        "text": "SpaceX erwägt Übernahme von T-Mobile US?",
+        "stamp": "27.06.26"
       },
       {
-        "text": "Geopolitik belastet Finanzmärkte – Unsicherheit wegen Iran-Gesprächen",
-        "stamp": "18.05.26"
+        "text": "Fed-Chef Kashkari erwartet Zinserhöhung in diesem Jahr.",
+        "stamp": "26.06.26"
       },
       {
-        "text": "SpaceX-Aktie rückt nach Mega-Börsengang in Nasdaq 100 auf",
-        "stamp": "19.03.26"
+        "text": "US-Verbraucherstimmung bessert sich trotz KI-Sorgen.",
+        "stamp": "26.06.26"
       },
       {
-        "text": "Chinas Zentralbank lockert Geldpolitik zur Stützung des Immobiliensektors",
-        "stamp": "24.09.24"
+        "text": "Mexiko verzeichnet Handelsüberschuss im Mai.",
+        "stamp": "26.06.26"
       }
     ],
     "date": "2026-06-27"
@@ -1108,19 +1108,9 @@
   "scan": {
     "universe": 8835,
     "scanned": 8835,
-    "lastCursor": 6534,
-    "candCursor": 174,
+    "lastCursor": 6834,
+    "candCursor": 182,
     "candidates": [
-      "BNP Paribas SA",
-      "Deutsche Börse AG",
-      "ING Groep N.V.",
-      "UBS Group AG",
-      "Heidelberg Materials AG",
-      "CRH plc",
-      "H&R Aktiengesellschaft",
-      "Wacker Chemie AG",
-      "Sartorius AG Vz",
-      "Volkswagen AG Vz",
       "Daimler Truck Holding AG",
       "E.ON SE",
       "Bayer AG",
@@ -1510,45 +1500,59 @@
       "Zenrin Co., Ltd.",
       "Freee K.K.",
       "KLab Inc.",
-      "ZOZO, Inc."
+      "ZOZO, Inc.",
+      "CG Oncology, Inc.",
+      "Xenon Pharmaceuticals Inc.",
+      "Viking Therapeutics, Inc.",
+      "Immunovant, Inc.",
+      "Mineralys Therapeutics, Inc.",
+      "Scholar Rock Holding Corp.",
+      "Tango Therapeutics, Inc.",
+      "Celcuity Inc.",
+      "Precision BioSciences, Inc.",
+      "Oric Pharmaceuticals, Inc."
     ],
     "noteCursor": 2,
-    "focusCursor": 5,
+    "focusCursor": 6,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-06-27",
     "seenBySector": {
-      "cons_cycl": 1040,
-      "cons_def": 539,
-      "materials": 726,
-      "health": 3005,
-      "finance": 2061,
-      "energy": 947,
-      "hardware": 677,
-      "software": 2013,
-      "industrial": 877,
-      "utilities": 375,
-      "comm": 441,
-      "ai_semi": 408,
-      "realestate": 189
-    },
-    "pendingReject": [],
-    "evaluatedBySector": {
-      "cons_cycl": 1040,
-      "cons_def": 540,
-      "materials": 726,
-      "health": 3006,
-      "finance": 2064,
-      "energy": 947,
-      "hardware": 679,
-      "software": 2018,
-      "industrial": 882,
-      "utilities": 375,
-      "comm": 441,
+      "cons_cycl": 1047,
+      "cons_def": 543,
+      "materials": 731,
+      "health": 3028,
+      "finance": 2073,
+      "energy": 955,
+      "hardware": 682,
+      "software": 2034,
+      "industrial": 886,
+      "utilities": 376,
+      "comm": 443,
       "ai_semi": 409,
-      "realestate": 189
+      "realestate": 192
     },
-    "heavyAt": "2026-06-27T15:06:39.318Z",
+    "pendingReject": [
+      "S",
+      "SA",
+      "SABK"
+    ],
+    "evaluatedBySector": {
+      "cons_cycl": 1047,
+      "cons_def": 544,
+      "materials": 731,
+      "health": 3029,
+      "finance": 2076,
+      "energy": 955,
+      "hardware": 684,
+      "software": 2039,
+      "industrial": 891,
+      "utilities": 376,
+      "comm": 443,
+      "ai_semi": 410,
+      "realestate": 192
+    },
+    "heavyAt": "2026-06-27T21:04:40.240Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1559,6 +1563,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-27T21:00:13.798Z"
+  }
 }
