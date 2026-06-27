@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0509,
+      "sektorPsi": 0.0505,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.11,
       "div": 1.32,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0509,
+      "sektorPsi": 0.0505,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -375,7 +375,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-06-20",
+      "verifiedAt": "2026-06-27",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -25.26,
       "perf6mAt": "2026-06-25",
@@ -386,7 +386,7 @@
       "enrichAt": "2026-06-25",
       "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0085,
-      "recheckAt": "2026-06-20",
+      "recheckAt": "2026-06-27",
       "miss": 0
     },
     {
@@ -450,7 +450,7 @@
       "eps": 1.64,
       "div": 3.24,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0035,
+      "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -478,12 +478,12 @@
       "perf6m": -28.6,
       "perf6mAt": "2026-06-27",
       "perf1mBefore": -7.48,
-      "upside": 60,
-      "pe": 18.5,
-      "eps": 202.82,
-      "div": 1.06,
-      "enrichAt": "2026-06-22",
-      "sektorPsi": 0.0509,
+      "upside": 58,
+      "pe": 18.7,
+      "eps": 203.03,
+      "div": 1.05,
+      "enrichAt": "2026-06-27",
+      "sektorPsi": 0.0505,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -538,7 +538,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-20",
+      "verifiedAt": "2026-06-27",
       "verifiedSource": "yahoo",
       "seen": "2026-06-05",
       "perf6m": -26.57,
@@ -551,7 +551,7 @@
       "enrichAt": "2026-06-25",
       "sektorPsi": 0.0059,
       "sektorPsiAtAdd": 0.0078,
-      "recheckAt": "2026-06-20",
+      "recheckAt": "2026-06-27",
       "miss": 0
     },
     {
@@ -582,7 +582,7 @@
       "eps": 0.72,
       "div": 2.96,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 1.34,
       "div": 2.35,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0509,
+      "sektorPsi": 0.0505,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -637,7 +637,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-20",
+      "verifiedAt": "2026-06-27",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
       "perf6m": 6.68,
@@ -650,7 +650,7 @@
       "enrichAt": "2026-06-25",
       "sektorPsi": 0.0059,
       "sektorPsiAtAdd": 0.0078,
-      "recheckAt": "2026-06-20",
+      "recheckAt": "2026-06-27",
       "miss": 0
     },
     {
@@ -675,7 +675,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-06-20",
+      "verifiedAt": "2026-06-27",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": 2.89,
       "perf6mAt": "2026-06-25",
@@ -684,9 +684,9 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0095,
-      "recheckAt": "2026-06-20",
+      "recheckAt": "2026-06-27",
       "miss": 0
     },
     {
@@ -750,7 +750,7 @@
       "eps": 1.88,
       "div": 0.68,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -814,7 +814,7 @@
       "pe": null,
       "div": 1.12,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -841,7 +841,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-06-20",
+      "verifiedAt": "2026-06-27",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -37.95,
       "perf6mAt": "2026-06-25",
@@ -852,7 +852,7 @@
       "enrichAt": "2026-06-25",
       "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0085,
-      "recheckAt": "2026-06-20",
+      "recheckAt": "2026-06-27",
       "miss": 0
     },
     {
@@ -872,7 +872,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-20",
+      "verifiedAt": "2026-06-27",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
       "perf6m": -14.88,
@@ -882,9 +882,9 @@
       "eps": 5.01,
       "div": 5.26,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0509,
+      "sektorPsi": 0.0505,
       "sektorPsiAtAdd": 0.0015,
-      "recheckAt": "2026-06-20",
+      "recheckAt": "2026-06-27",
       "miss": 0
     }
   ],
@@ -998,8 +998,8 @@
       "date": "2026-06-15"
     },
     "ai_semi": {
-      "text": "KI-Boom treibt Halbleiter an, was zu starken Kursgewinnen führt. Die Nachfrage nach KI-Chips übertrifft Erwartungen.",
-      "date": "2026-06-11"
+      "text": "KI-Boom treibt Halbleiter-Sektor zu starken Gewinnen, trotz leicht gedämpfter kurzfristiger Performance. Langfristig übertrifft die Nachfrage nach KI-Chips breite Marktsteigerungen.",
+      "date": "2026-06-27"
     },
     "hardware": {
       "text": "Der Sektor \"Hardware & Geräte\" zeigt eine moderate 30-Tage-Performance, aber eine starke 6-Monats-Entwicklung, angetrieben durch KI-Nachfrage. Auffällige Werte wie A1OS.DE und IXX.DE profitieren davon.",
@@ -1040,8 +1040,8 @@
       "date": "2026-06-15"
     },
     "em": {
-      "text": "Schwellenländer zeigen sich schwach, da die jüngste Rallye stagniert. Die langfristige Performance ist stark, was auf anhaltendes Interesse trotz kurzfristiger Schwankungen hindeutet.",
-      "date": "2026-06-14"
+      "text": "Schwellenländer geben nach, da die Zinserhöhungen die Konjunktur belasten und die globale Nachfrage dämpfen. Langfristig bleibt die positive Entwicklung jedoch bestehen.",
+      "date": "2026-06-27"
     },
     "japan": {
       "text": "Japanische Aktien steigen moderat (+1.51% 30 Tage), da die Konjunktur anzieht, während die 6-Monats-Performance (+15.98%) von globalen Trends profitiert.",
@@ -1079,45 +1079,26 @@
   "news": {
     "items": [
       {
-        "text": "Apple erhöht Preise: US-Börsen uneinheitlich, DAX von Bayer gestützt",
+        "text": "US-Verbraucherstimmung bessert sich bei nachgebenden Benzinpreisen.",
         "stamp": "26.06.26"
       },
       {
-        "text": "Micron-Zahlen beflügeln Chip-Aktien, Infineon führt DAX an",
+        "text": "Mexiko erzielt im Mai Handelsüberschuss von 2,26 Milliarden USD.",
         "stamp": "26.06.26"
       },
       {
-        "text": "Bayer siegt im Glyphosat-Streit vor US-Supreme Court",
+        "text": "US-Wirtschaft wächst im ersten Quartal stärker als erwartet.",
         "stamp": "25.06.26"
-      },
-      {
-        "text": "Rheinmetall-Aktie: Analysten halten Absturz für überzogen",
-        "stamp": "25.06.26"
-      },
-      {
-        "text": "SpaceX: MSCI vergibt niedrigstes ESG-Rating",
-        "stamp": "25.06.26"
-      },
-      {
-        "text": "Cannabis-Aktien zittern vor DEA-Anhörung",
-        "stamp": "24.06.26"
       }
     ],
-    "date": "2026-06-26"
+    "date": "2026-06-27"
   },
   "scan": {
     "universe": 8836,
     "scanned": 8836,
-    "lastCursor": 5634,
-    "candCursor": 150,
+    "lastCursor": 5934,
+    "candCursor": 158,
     "candidates": [
-      "Microchip Technology Incorporated",
-      "NXP Semiconductors N.V.",
-      "ON Semiconductor Corporation",
-      "Lam Research Corporation",
-      "CRISPR Therapeutics AG",
-      "Exact Sciences Corporation",
-      "Regeneron Pharmaceuticals, Inc.",
       "Vertex Pharmaceuticals Incorporated",
       "Align Technology, Inc.",
       "Gilead Sciences, Inc.",
@@ -1510,45 +1491,68 @@
       "Rational AG",
       "Pfeiffer Vacuum Technology AG",
       "Gerresheimer AG",
-      "Jenoptik AG"
+      "Jenoptik AG",
+      "Red Cat Holdings, Inc.",
+      "Krystal Biotech, Inc.",
+      "Limelight Networks, Inc.",
+      "Celsius Holdings, Inc.",
+      "BioDelivery Sciences International, Inc.",
+      "The Gorman-Rupp Company",
+      "Willdan Group, Inc."
     ],
-    "noteCursor": 1,
-    "focusCursor": 2,
+    "noteCursor": 2,
+    "focusCursor": 3,
     "recheckCursor": 16,
-    "regionNoteCursor": 5,
-    "notesDay": "2026-06-26",
+    "regionNoteCursor": 6,
+    "notesDay": "2026-06-27",
     "seenBySector": {
-      "cons_cycl": 1020,
-      "cons_def": 529,
-      "materials": 716,
-      "health": 2931,
-      "finance": 2020,
-      "energy": 926,
-      "hardware": 664,
-      "software": 1959,
-      "industrial": 861,
-      "utilities": 364,
-      "comm": 437,
-      "ai_semi": 393,
-      "realestate": 185
+      "cons_cycl": 1027,
+      "cons_def": 531,
+      "materials": 721,
+      "health": 2958,
+      "finance": 2034,
+      "energy": 935,
+      "hardware": 669,
+      "software": 1974,
+      "industrial": 865,
+      "utilities": 368,
+      "comm": 439,
+      "ai_semi": 396,
+      "realestate": 189
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "PACK",
+      "PACS",
+      "PAG",
+      "PAGS",
+      "PAHC",
+      "PAL",
+      "PALI",
+      "PAMT",
+      "PANL",
+      "PANW",
+      "PAPL",
+      "PAR",
+      "PARK",
+      "PARR",
+      "PASG"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 1020,
-      "cons_def": 530,
-      "materials": 716,
-      "health": 2932,
-      "finance": 2023,
-      "energy": 926,
-      "hardware": 666,
-      "software": 1964,
-      "industrial": 866,
-      "utilities": 364,
-      "comm": 437,
-      "ai_semi": 394,
-      "realestate": 185
+      "cons_cycl": 1027,
+      "cons_def": 532,
+      "materials": 721,
+      "health": 2959,
+      "finance": 2037,
+      "energy": 935,
+      "hardware": 671,
+      "software": 1979,
+      "industrial": 870,
+      "utilities": 368,
+      "comm": 439,
+      "ai_semi": 397,
+      "realestate": 189
     },
-    "heavyAt": "2026-06-26T15:33:16.343Z",
+    "heavyAt": "2026-06-27T01:55:47.928Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
