@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-28",
-  "updatedAt": "2026-06-28T04:00:13.820Z",
+  "updatedAt": "2026-06-28T04:11:18.005Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -148,124 +148,124 @@
     {
       "id": "software",
       "perf": -8.34,
-      "avg30": -1.12,
-      "perf6m": -20.04
+      "avg30": -1.15,
+      "perf6m": -20.26
     },
     {
       "id": "ai_semi",
-      "perf": 12.29,
-      "avg30": 9.03,
-      "perf6m": 101.26
+      "perf": 6.65,
+      "avg30": 9.01,
+      "perf6m": 97.97
     },
     {
       "id": "hardware",
-      "perf": 2.11,
-      "avg30": 3.74,
-      "perf6m": 27.38
+      "perf": -0.75,
+      "avg30": 3.72,
+      "perf6m": 26.1
     },
     {
       "id": "comm",
-      "perf": -7.8,
-      "avg30": 0.46,
-      "perf6m": -8.57
+      "perf": -8.11,
+      "avg30": 0.42,
+      "perf6m": -8.98
     },
     {
       "id": "health",
-      "perf": 3.26,
-      "avg30": 1.14,
-      "perf6m": -1.03
+      "perf": 4.6,
+      "avg30": 1.15,
+      "perf6m": 0.41
     },
     {
       "id": "finance",
-      "perf": 3.61,
-      "avg30": 0.07,
-      "perf6m": -2.04
+      "perf": 3.32,
+      "avg30": 0.08,
+      "perf6m": -3.16
     },
     {
       "id": "cons_cycl",
-      "perf": -4.55,
-      "avg30": 0.63,
-      "perf6m": -7.01
+      "perf": -4.25,
+      "avg30": 0.6,
+      "perf6m": -6.38
     },
     {
       "id": "cons_def",
-      "perf": -0.85,
+      "perf": -0.17,
       "avg30": 0.37,
-      "perf6m": 6.55
+      "perf6m": 8.42
     },
     {
       "id": "industrial",
-      "perf": 4.91,
-      "avg30": 1.53,
-      "perf6m": 15.62
+      "perf": 3.96,
+      "avg30": 1.54,
+      "perf6m": 15.42
     },
     {
       "id": "energy",
-      "perf": -8.52,
-      "avg30": 2.63,
-      "perf6m": 22.57
+      "perf": -6.93,
+      "avg30": 2.59,
+      "perf6m": 21.78
     },
     {
       "id": "materials",
-      "perf": 1.73,
-      "avg30": 1.27,
-      "perf6m": 12.76
+      "perf": 1.2,
+      "avg30": 1.26,
+      "perf6m": 12.98
     },
     {
       "id": "utilities",
-      "perf": 0.46,
-      "avg30": 0.74,
-      "perf6m": 6.83
+      "perf": 1.15,
+      "avg30": 0.75,
+      "perf6m": 7.58
     },
     {
       "id": "realestate",
-      "perf": 0.07,
+      "perf": -0.09,
       "avg30": 0.59,
-      "perf6m": 10.56
+      "perf6m": 10.95
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -1.62,
-      "avg30": 1.69,
-      "perf6m": 7.79
+      "perf": -2.29,
+      "avg30": 1.68,
+      "perf6m": 7.07
     },
     {
       "id": "europe",
-      "perf": -1.8,
-      "avg30": 1.26,
-      "perf6m": 4.77
+      "perf": -2.45,
+      "avg30": 1.25,
+      "perf6m": 4.69
     },
     {
       "id": "germany",
-      "perf": -4.81,
-      "avg30": 0.09,
-      "perf6m": -2.66
+      "perf": -7,
+      "avg30": 0.06,
+      "perf6m": -4.04
     },
     {
       "id": "japan",
-      "perf": 1.24,
-      "avg30": 2.28,
-      "perf6m": 15.27
+      "perf": 0.55,
+      "avg30": 2.27,
+      "perf6m": 15.17
     },
     {
       "id": "china",
-      "perf": -8.1,
-      "avg30": -0.23,
-      "perf6m": -15.17
+      "perf": -8.57,
+      "avg30": -0.27,
+      "perf6m": -16.3
     },
     {
       "id": "em",
-      "perf": 1.85,
-      "avg30": 3.26,
-      "perf6m": 25.19
+      "perf": -1.67,
+      "avg30": 3.24,
+      "perf6m": 24.51
     },
     {
       "id": "apac",
-      "perf": 1.7,
-      "avg30": 3.33,
-      "perf6m": 27.88
+      "perf": 0.41,
+      "avg30": 3.32,
+      "perf6m": 28.65
     },
     {
       "id": "india",
@@ -275,15 +275,15 @@
     },
     {
       "id": "latam",
-      "perf": -4.85,
-      "avg30": 2.87,
-      "perf6m": 10.99
+      "perf": -4.9,
+      "avg30": 2.83,
+      "perf6m": 10.69
     },
     {
       "id": "world",
-      "perf": -1.6,
-      "avg30": 1.64,
-      "perf6m": 7.62
+      "perf": -2.41,
+      "avg30": 1.62,
+      "perf6m": 6.82
     }
   ],
   "topStocks": [
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.049,
+      "sektorPsi": 0.0585,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.11,
       "div": 1.32,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.049,
+      "sektorPsi": 0.0585,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": -0.27,
       "div": 0,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 1.64,
       "div": 3.24,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 203.03,
       "div": 1.05,
       "enrichAt": "2026-06-27",
-      "sektorPsi": 0.049,
+      "sektorPsi": 0.0585,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 1.13,
       "div": 3.85,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 1.34,
       "div": 2.35,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.049,
+      "sektorPsi": 0.0585,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 2.23,
       "div": 1.61,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -717,7 +717,7 @@
       "eps": 2.27,
       "div": 4.86,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -850,7 +850,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -882,10 +882,41 @@
       "eps": 5.01,
       "div": 5.26,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.049,
+      "sektorPsi": 0.0585,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-27",
       "miss": 0
+    },
+    {
+      "ticker": "ADMCM",
+      "name": "Admicom Oyj",
+      "yahoo": "ADMCM.HE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-28",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-28",
+      "perf6m": -42.97,
+      "perf6mAt": "2026-06-28",
+      "perf1mBefore": -18.46,
+      "upside": 68,
+      "pe": 22.8,
+      "eps": 1.11,
+      "div": 1.26,
+      "enrichAt": "2026-06-28",
+      "sektorPsi": 0.0585,
+      "sektorPsiAtAdd": 0.0585
     }
   ],
   "psiHistory": [
@@ -978,6 +1009,11 @@
       "t": "JST.DE",
       "d": "2026-06-16",
       "v": 0.025
+    },
+    {
+      "t": "ADMCM",
+      "d": "2026-06-28",
+      "v": 0.0585
     }
   ],
   "sectorNotes": {
@@ -1002,8 +1038,8 @@
       "date": "2026-06-27"
     },
     "hardware": {
-      "text": "Der Sektor \"Hardware & Geräte\" zeigt eine moderate 30-Tage-Performance, aber eine starke 6-Monats-Entwicklung, angetrieben durch KI-Nachfrage. Auffällige Werte wie A1OS.DE und IXX.DE profitieren davon.",
-      "date": "2026-06-12"
+      "text": "Der Hardware-Sektor stagniert kurzfristig aufgrund des Normalisierungsdrucks nach starken KI-getriebenen Gewinnen. Langfristig überwiegt jedoch die positive KI-Nachfrage.",
+      "date": "2026-06-28"
     },
     "comm": {
       "text": "Der Sektor \"Kommunikation & Medien\" leidet unter dem Zinsumfeld und der KI-Entwicklung. Diese Faktoren belasten die Gewinnerwartungen und die Nachfrage.",
@@ -1036,8 +1072,8 @@
   },
   "regionNotes": {
     "apac": {
-      "text": "Asien-Pazifik: Kurzes Plus von 0.21% zeigt schwache Konjunktur, trotz starker 6-Monats-Rally. Geopolitik und Zinsen bremsen aktuell.",
-      "date": "2026-06-15"
+      "text": "Asia-Pazifik: Starke 6-Monats-Performance, aber kürzlicher Anstieg verlangsamt sich. Konjunkturerholung und Technologie treiben den Markt.",
+      "date": "2026-06-28"
     },
     "em": {
       "text": "Schwellenländer geben nach, da die Zinserhöhungen die Konjunktur belasten und die globale Nachfrage dämpfen. Langfristig bleibt die positive Entwicklung jedoch bestehen.",
@@ -1079,40 +1115,30 @@
   "news": {
     "items": [
       {
-        "text": "Supreme Court entscheidet über Fed-Gouverneurin Cook.",
-        "stamp": "27.06.26"
-      },
-      {
-        "text": "Volatilität bei KI-Aktien: Ist der Boom nur ein Trend?",
-        "stamp": "27.06.26"
-      },
-      {
-        "text": "SpaceX erwägt Übernahme von T-Mobile US?",
-        "stamp": "27.06.26"
-      },
-      {
-        "text": "Fed-Chef Kashkari erwartet Zinserhöhung in diesem Jahr.",
+        "text": "Fed-Präsident Kashkari erwartet Zinserhöhung in diesem Jahr.",
         "stamp": "26.06.26"
       },
       {
-        "text": "US-Verbraucherstimmung bessert sich trotz KI-Sorgen.",
+        "text": "US-Verbraucherstimmung bessert sich im Juni bei fallenden Benzinpreisen.",
         "stamp": "26.06.26"
       },
       {
-        "text": "Mexiko verzeichnet Handelsüberschuss im Mai.",
+        "text": "Kanadischer Großhandelumsatz im Mai voraussichtlich gesunken.",
+        "stamp": "26.06.26"
+      },
+      {
+        "text": "Mexiko verzeichnet im Mai Handelsüberschuss von 2,26 Mrd. USD.",
         "stamp": "26.06.26"
       }
     ],
-    "date": "2026-06-27"
+    "date": "2026-06-28"
   },
   "scan": {
     "universe": 8835,
     "scanned": 8835,
-    "lastCursor": 6834,
-    "candCursor": 182,
+    "lastCursor": 7134,
+    "candCursor": 190,
     "candidates": [
-      "Daimler Truck Holding AG",
-      "E.ON SE",
       "Bayer AG",
       "Infineon Technologies AG",
       "Rheinmetall AG",
@@ -1510,45 +1536,47 @@
       "Tango Therapeutics, Inc.",
       "Celcuity Inc.",
       "Precision BioSciences, Inc.",
-      "Oric Pharmaceuticals, Inc."
+      "Oric Pharmaceuticals, Inc.",
+      "Tigo Energy Inc.",
+      "Electrovaya Inc. - Common Shares"
     ],
-    "noteCursor": 2,
-    "focusCursor": 6,
+    "noteCursor": 3,
+    "focusCursor": 7,
     "recheckCursor": 16,
-    "regionNoteCursor": 6,
-    "notesDay": "2026-06-27",
+    "regionNoteCursor": 7,
+    "notesDay": "2026-06-28",
     "seenBySector": {
-      "cons_cycl": 1047,
-      "cons_def": 543,
-      "materials": 731,
-      "health": 3028,
-      "finance": 2074,
-      "energy": 955,
-      "hardware": 682,
-      "software": 2035,
-      "industrial": 886,
-      "utilities": 376,
-      "comm": 443,
-      "ai_semi": 409,
-      "realestate": 192
+      "cons_cycl": 1055,
+      "cons_def": 548,
+      "materials": 736,
+      "health": 3044,
+      "finance": 2088,
+      "energy": 960,
+      "hardware": 687,
+      "software": 2047,
+      "industrial": 891,
+      "utilities": 377,
+      "comm": 445,
+      "ai_semi": 412,
+      "realestate": 196
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1047,
-      "cons_def": 544,
-      "materials": 731,
-      "health": 3029,
-      "finance": 2077,
-      "energy": 955,
-      "hardware": 684,
-      "software": 2040,
-      "industrial": 891,
-      "utilities": 376,
-      "comm": 443,
-      "ai_semi": 410,
-      "realestate": 192
+      "cons_cycl": 1055,
+      "cons_def": 549,
+      "materials": 736,
+      "health": 3045,
+      "finance": 2091,
+      "energy": 960,
+      "hardware": 689,
+      "software": 2053,
+      "industrial": 896,
+      "utilities": 377,
+      "comm": 445,
+      "ai_semi": 413,
+      "realestate": 196
     },
-    "heavyAt": "2026-06-27T21:04:40.240Z",
+    "heavyAt": "2026-06-28T04:04:20.452Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1559,6 +1587,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-28T04:00:13.820Z"
+  }
 }
