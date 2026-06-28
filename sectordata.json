@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-28",
-  "updatedAt": "2026-06-28T03:00:13.824Z",
+  "updatedAt": "2026-06-28T04:00:13.820Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": 2.15,
-      "avg30": -1.09,
-      "perf6m": -8.72
+      "perf": 2.08,
+      "avg30": -1.08,
+      "perf6m": -8.54
     },
     {
       "id": "latam",
@@ -1560,5 +1560,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-06-28T03:00:13.824Z"
+  "yahooAt": "2026-06-28T04:00:13.820Z"
 }
