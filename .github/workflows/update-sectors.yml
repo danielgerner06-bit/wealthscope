@@ -36,8 +36,11 @@ jobs:
         env:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # bei manuellem "force_heavy" das 6h-Gating überbrücken (HEAVY_GAP_H=0 -> immer voll)
-          HEAVY_GAP_H: ${{ (github.event_name == 'workflow_dispatch' && inputs.force_heavy) && '0' || '' }}
+          # Gemini halbiert: schwere (Gemini-)Läufe nur noch alle 12h statt 6h
+          # -> ~2 statt ~4 Voll-Läufe/Tag, also rund halbe Gemini-Nutzung/-Kosten.
+          # Jeder Voll-Lauf behält sein volles Budget (keine abgewürgten Batches).
+          # Bei manuellem "force_heavy" das Gating überbrücken (0 -> immer voll).
+          HEAVY_GAP_H: ${{ (github.event_name == 'workflow_dispatch' && inputs.force_heavy) && '0' || '12' }}
           GEMINI_DEBUG: ${{ (github.event_name == 'workflow_dispatch' && inputs.debug) && '1' || '' }}
         run: node scripts/update-sectors.mjs
 
