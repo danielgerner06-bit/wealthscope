@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-28",
-  "updatedAt": "2026-06-28T13:00:13.796Z",
+  "updatedAt": "2026-06-28T13:59:56.654Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0585,
+      "sektorPsi": 0.058,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.11,
       "div": 1.32,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0585,
+      "sektorPsi": 0.058,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -421,6 +421,37 @@
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-06-25",
       "miss": 0
+    },
+    {
+      "ticker": "ADMCM",
+      "name": "Admicom Oyj",
+      "yahoo": "ADMCM.HE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-28",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-28",
+      "perf6m": -42.97,
+      "perf6mAt": "2026-06-28",
+      "perf1mBefore": -18.46,
+      "upside": 68,
+      "pe": 22.8,
+      "eps": 1.11,
+      "div": 1.26,
+      "enrichAt": "2026-06-28",
+      "sektorPsi": 0.058,
+      "sektorPsiAtAdd": 0.0585
     },
     {
       "ticker": "ORS",
@@ -516,7 +547,7 @@
       "eps": 203.03,
       "div": 1.05,
       "enrichAt": "2026-06-27",
-      "sektorPsi": 0.0585,
+      "sektorPsi": 0.058,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -615,7 +646,7 @@
       "eps": 1.34,
       "div": 2.35,
       "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0585,
+      "sektorPsi": 0.058,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -882,41 +913,10 @@
       "eps": 5.01,
       "div": 5.26,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0585,
+      "sektorPsi": 0.058,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-27",
       "miss": 0
-    },
-    {
-      "ticker": "ADMCM",
-      "name": "Admicom Oyj",
-      "yahoo": "ADMCM.HE",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-28",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-28",
-      "perf6m": -42.97,
-      "perf6mAt": "2026-06-28",
-      "perf1mBefore": -18.46,
-      "upside": 68,
-      "pe": 22.8,
-      "eps": 1.11,
-      "div": 1.26,
-      "enrichAt": "2026-06-28",
-      "sektorPsi": 0.0585,
-      "sektorPsiAtAdd": 0.0585
     }
   ],
   "psiHistory": [
@@ -1115,19 +1115,23 @@
   "news": {
     "items": [
       {
-        "text": "Fed-Präsident Kashkari erwartet Zinserhöhung in diesem Jahr.",
+        "text": "Bayer Aktie: Gericht beendet Glyphosat-Albtraum, Aktie explodiert",
+        "stamp": "28.06.26"
+      },
+      {
+        "text": "Micron Technology: Nimmt Höhenflug der Aktie abrupt ein Ende?",
+        "stamp": "28.06.26"
+      },
+      {
+        "text": "Fed-Beamter Kashkari warnt vor Zinserhöhung: Wie reagieren Aktien?",
         "stamp": "26.06.26"
       },
       {
-        "text": "US-Verbraucherstimmung bessert sich im Juni bei fallenden Benzinpreisen.",
+        "text": "Hormuz-Krise erschüttert Ölmärkte trotz Waffenstillstand",
         "stamp": "26.06.26"
       },
       {
-        "text": "Kanadischer Großhandelumsatz im Mai voraussichtlich gesunken.",
-        "stamp": "26.06.26"
-      },
-      {
-        "text": "Mexiko verzeichnet im Mai Handelsüberschuss von 2,26 Mrd. USD.",
+        "text": "Ökonomen: Fed hält Zinsen bei 3,50%-3,75% bis Jahresende",
         "stamp": "26.06.26"
       }
     ],
@@ -1136,12 +1140,9 @@
   "scan": {
     "universe": 8835,
     "scanned": 8835,
-    "lastCursor": 7134,
-    "candCursor": 190,
+    "lastCursor": 7434,
+    "candCursor": 198,
     "candidates": [
-      "Bayer AG",
-      "Infineon Technologies AG",
-      "Rheinmetall AG",
       "Zalando SE",
       "Aeva Technologies, Inc.",
       "Invitae Corporation",
@@ -1538,45 +1539,48 @@
       "Precision BioSciences, Inc.",
       "Oric Pharmaceuticals, Inc.",
       "Tigo Energy Inc.",
-      "Electrovaya Inc. - Common Shares"
+      "Electrovaya Inc. - Common Shares",
+      "Palomar Holdings, Inc.",
+      "LPL Financial Holdings Inc.",
+      "Blue Bird Corporation"
     ],
     "noteCursor": 3,
-    "focusCursor": 7,
+    "focusCursor": 0,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-06-28",
     "seenBySector": {
-      "cons_cycl": 1055,
-      "cons_def": 548,
-      "materials": 736,
-      "health": 3044,
-      "finance": 2088,
-      "energy": 960,
-      "hardware": 687,
-      "software": 2047,
-      "industrial": 891,
-      "utilities": 377,
-      "comm": 445,
-      "ai_semi": 412,
-      "realestate": 196
+      "cons_cycl": 1059,
+      "cons_def": 555,
+      "materials": 740,
+      "health": 3062,
+      "finance": 2101,
+      "energy": 967,
+      "hardware": 692,
+      "software": 2064,
+      "industrial": 894,
+      "utilities": 380,
+      "comm": 446,
+      "ai_semi": 413,
+      "realestate": 197
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1055,
-      "cons_def": 549,
-      "materials": 736,
-      "health": 3045,
-      "finance": 2091,
-      "energy": 960,
-      "hardware": 689,
-      "software": 2053,
-      "industrial": 896,
-      "utilities": 377,
-      "comm": 445,
-      "ai_semi": 413,
-      "realestate": 196
+      "cons_cycl": 1059,
+      "cons_def": 556,
+      "materials": 740,
+      "health": 3063,
+      "finance": 2104,
+      "energy": 967,
+      "hardware": 694,
+      "software": 2070,
+      "industrial": 899,
+      "utilities": 380,
+      "comm": 446,
+      "ai_semi": 414,
+      "realestate": 197
     },
-    "heavyAt": "2026-06-28T04:04:20.452Z",
+    "heavyAt": "2026-06-28T13:52:55.989Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1587,6 +1591,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-28T13:00:13.796Z"
+  }
 }
