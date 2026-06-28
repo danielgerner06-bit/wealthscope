@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-28",
-  "updatedAt": "2026-06-28T06:00:13.792Z",
+  "updatedAt": "2026-06-28T07:00:13.794Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": 2.11,
-      "avg30": 3.74,
-      "perf6m": 27.38
+      "perf": -0.75,
+      "avg30": 3.72,
+      "perf6m": 26.1
     },
     {
       "id": "comm",
@@ -171,51 +171,51 @@
     },
     {
       "id": "health",
-      "perf": 3.26,
-      "avg30": 1.14,
-      "perf6m": -1.03
+      "perf": 4.6,
+      "avg30": 1.15,
+      "perf6m": 0.41
     },
     {
       "id": "finance",
-      "perf": 3.61,
-      "avg30": 0.07,
-      "perf6m": -2.04
+      "perf": 3.32,
+      "avg30": 0.08,
+      "perf6m": -3.16
     },
     {
       "id": "cons_cycl",
-      "perf": -4.55,
-      "avg30": 0.63,
-      "perf6m": -7.01
+      "perf": -4.25,
+      "avg30": 0.6,
+      "perf6m": -6.38
     },
     {
       "id": "cons_def",
-      "perf": -0.85,
+      "perf": -0.17,
       "avg30": 0.37,
-      "perf6m": 6.55
+      "perf6m": 8.42
     },
     {
       "id": "industrial",
-      "perf": 4.91,
-      "avg30": 1.53,
-      "perf6m": 15.62
+      "perf": 3.96,
+      "avg30": 1.54,
+      "perf6m": 15.42
     },
     {
       "id": "energy",
-      "perf": -8.52,
-      "avg30": 2.63,
-      "perf6m": 22.57
+      "perf": -6.93,
+      "avg30": 2.59,
+      "perf6m": 21.78
     },
     {
       "id": "materials",
-      "perf": 1.73,
-      "avg30": 1.27,
-      "perf6m": 12.76
+      "perf": 1.2,
+      "avg30": 1.26,
+      "perf6m": 12.98
     },
     {
       "id": "utilities",
-      "perf": 0.46,
-      "avg30": 0.74,
-      "perf6m": 6.83
+      "perf": 1.15,
+      "avg30": 0.75,
+      "perf6m": 7.58
     },
     {
       "id": "realestate",
@@ -227,9 +227,9 @@
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -1.62,
-      "avg30": 1.69,
-      "perf6m": 7.79
+      "perf": -2.29,
+      "avg30": 1.68,
+      "perf6m": 7.07
     },
     {
       "id": "europe",
@@ -1588,5 +1588,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-06-28T06:00:13.792Z"
+  "yahooAt": "2026-06-28T07:00:13.794Z"
 }
