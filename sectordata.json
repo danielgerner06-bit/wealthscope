@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-28",
-  "updatedAt": "2026-06-28T21:04:08.504Z",
+  "updated": "2026-06-29",
+  "updatedAt": "2026-06-29T02:05:10.134Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.058,
+      "sektorPsi": 0.0576,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.11,
       "div": 1.32,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.058,
+      "sektorPsi": 0.0576,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -439,7 +439,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-28",
+      "verifiedAt": "2026-06-29",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-28",
       "perf6m": -42.97,
@@ -450,8 +450,10 @@
       "eps": 1.11,
       "div": 1.26,
       "enrichAt": "2026-06-28",
-      "sektorPsi": 0.058,
-      "sektorPsiAtAdd": 0.0585
+      "sektorPsi": 0.0576,
+      "sektorPsiAtAdd": 0.0585,
+      "recheckAt": "2026-06-29",
+      "miss": 0
     },
     {
       "ticker": "ORS",
@@ -473,14 +475,14 @@
       "verifiedAt": "2026-06-25",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
-      "perf6m": -14.69,
-      "perf6mAt": "2026-06-24",
+      "perf6m": -16.89,
+      "perf6mAt": "2026-06-29",
       "perf1mBefore": 0.26,
       "upside": 65,
       "pe": 9.3,
       "eps": 1.64,
-      "div": 3.24,
-      "enrichAt": "2026-06-24",
+      "div": 3.26,
+      "enrichAt": "2026-06-29",
       "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-25",
@@ -506,15 +508,15 @@
       "verifiedAt": "2026-06-25",
       "verifiedSource": "yahoo",
       "seen": "2026-06-14",
-      "perf6m": -18.49,
-      "perf6mAt": "2026-06-24",
+      "perf6m": -20.38,
+      "perf6mAt": "2026-06-29",
       "perf1mBefore": -17.12,
-      "upside": 60,
-      "pe": 53,
+      "upside": 61,
+      "pe": 52.8,
       "eps": 0.04,
       "div": 0,
-      "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0068,
+      "enrichAt": "2026-06-29",
+      "sektorPsi": 0.0067,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -547,7 +549,7 @@
       "eps": 203.03,
       "div": 1.05,
       "enrichAt": "2026-06-27",
-      "sektorPsi": 0.058,
+      "sektorPsi": 0.0576,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -613,7 +615,7 @@
       "eps": 0.72,
       "div": 2.96,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0068,
+      "sektorPsi": 0.0067,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -638,15 +640,15 @@
       "verifiedAt": "2026-06-27",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
-      "perf6m": 12.46,
-      "perf6mAt": "2026-06-24",
+      "perf6m": 8.76,
+      "perf6mAt": "2026-06-29",
       "perf1mBefore": 4.35,
-      "upside": 43,
-      "pe": 15.5,
+      "upside": 45,
+      "pe": 15.3,
       "eps": 1.34,
-      "div": 2.35,
-      "enrichAt": "2026-06-24",
-      "sektorPsi": 0.058,
+      "div": 2.44,
+      "enrichAt": "2026-06-29",
+      "sektorPsi": 0.0576,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -715,7 +717,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0068,
+      "sektorPsi": 0.0067,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -740,14 +742,14 @@
       "verifiedAt": "2026-06-25",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
-      "perf6m": 31.75,
-      "perf6mAt": "2026-06-24",
+      "perf6m": 33.96,
+      "perf6mAt": "2026-06-29",
       "perf1mBefore": -5.14,
       "upside": 13,
       "pe": 12.4,
       "eps": 2.27,
-      "div": 4.86,
-      "enrichAt": "2026-06-24",
+      "div": 4.82,
+      "enrichAt": "2026-06-29",
       "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-06-25",
@@ -773,15 +775,15 @@
       "verifiedAt": "2026-06-25",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
-      "perf6m": 78.92,
-      "perf6mAt": "2026-06-24",
+      "perf6m": 64.21,
+      "perf6mAt": "2026-06-29",
       "perf1mBefore": -0.96,
-      "upside": 6,
-      "pe": 35.2,
+      "upside": 10,
+      "pe": 34,
       "eps": 1.88,
-      "div": 0.68,
-      "enrichAt": "2026-06-24",
-      "sektorPsi": 0.0068,
+      "div": 0.74,
+      "enrichAt": "2026-06-29",
+      "sektorPsi": 0.0067,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -845,7 +847,7 @@
       "pe": null,
       "div": 1.12,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0068,
+      "sektorPsi": 0.0067,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -913,7 +915,7 @@
       "eps": 5.01,
       "div": 5.26,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.058,
+      "sektorPsi": 0.0576,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -1042,8 +1044,8 @@
       "date": "2026-06-28"
     },
     "comm": {
-      "text": "Der Sektor \"Kommunikation & Medien\" leidet unter dem Zinsumfeld und der KI-Entwicklung. Diese Faktoren belasten die Gewinnerwartungen und die Nachfrage.",
-      "date": "2026-06-13"
+      "text": "Der Sektor \"Kommunikation & Medien\" leidet unter steigenden Zinsen und der unsicheren Konjunktur. KI-Investitionen verschieben Gelder, während geopolitische Spannungen die Werbeausgaben dämpfen.",
+      "date": "2026-06-29"
     },
     "cons_cycl": {
       "text": "Der Konsum-Zykliker-Sektor schwächelt aktuell, da hohe Zinsen und eine unsichere Konjunktur die Ausgaben der Verbraucher dämpfen.",
@@ -1100,8 +1102,8 @@
       "date": "2026-06-26"
     },
     "india": {
-      "text": "Indiens Aktien erholen sich im letzten Monat leicht (+0.73%) trotz negativer 6-Monats-Performance (-9.43%), was auf robuste Konjunkturaussichten hindeutet.",
-      "date": "2026-06-16"
+      "text": "Indien zeigt starke kurzfristige Erholung (+2.08%) trotz sechsmonatiger Schwäche (-8.54%). Dies deutet auf eine verbesserte Konjunktur hin, die die negativen Trends überlagert.",
+      "date": "2026-06-29"
     },
     "latam": {
       "text": "Lateinamerika: Kurzfristige Konjunkturschwäche trübt die Stimmung, trotz starker Erholung über sechs Monate.",
@@ -1115,36 +1117,26 @@
   "news": {
     "items": [
       {
-        "text": "Bayer Aktie: Gericht beendet Glyphosat-Albtraum, Aktie explodiert",
+        "text": "Tech-Aktien erholen sich trotz Inflationsdruck und Zinsrisiken.",
         "stamp": "28.06.26"
       },
       {
-        "text": "Micron Technology: Nimmt Höhenflug der Aktie abrupt ein Ende?",
-        "stamp": "28.06.26"
+        "text": "EZB warnt: Märkte unterschätzen Krieg, Schulden und Zinsrisiken.",
+        "stamp": "27.06.26"
       },
       {
-        "text": "Fed-Beamter Kashkari warnt vor Zinserhöhung: Wie reagieren Aktien?",
-        "stamp": "26.06.26"
-      },
-      {
-        "text": "Hormuz-Krise erschüttert Ölmärkte trotz Waffenstillstand",
-        "stamp": "26.06.26"
-      },
-      {
-        "text": "Ökonomen: Fed hält Zinsen bei 3,50%-3,75% bis Jahresende",
-        "stamp": "26.06.26"
+        "text": "Waton Financial: Pivot zu KI-nativer Finanztechnologie mit MoTA Alpha.",
+        "stamp": "27.06.26"
       }
     ],
-    "date": "2026-06-28"
+    "date": "2026-06-29"
   },
   "scan": {
     "universe": 8835,
     "scanned": 8835,
-    "lastCursor": 7434,
-    "candCursor": 198,
+    "lastCursor": 7734,
+    "candCursor": 206,
     "candidates": [
-      "Zalando SE",
-      "Aeva Technologies, Inc.",
       "Invitae Corporation",
       "PolarityTE, Inc.",
       "Aclaris Therapeutics, Inc.",
@@ -1542,45 +1534,47 @@
       "Electrovaya Inc. - Common Shares",
       "Palomar Holdings, Inc.",
       "LPL Financial Holdings Inc.",
-      "Blue Bird Corporation"
+      "Blue Bird Corporation",
+      "PMV Pharmaceuticals, Inc.",
+      "John Wiley & Sons Inc."
     ],
-    "noteCursor": 3,
-    "focusCursor": 0,
+    "noteCursor": 4,
+    "focusCursor": 1,
     "recheckCursor": 16,
-    "regionNoteCursor": 7,
-    "notesDay": "2026-06-28",
+    "regionNoteCursor": 8,
+    "notesDay": "2026-06-29",
     "seenBySector": {
-      "cons_cycl": 1059,
-      "cons_def": 555,
-      "materials": 740,
-      "health": 3062,
-      "finance": 2101,
-      "energy": 967,
-      "hardware": 692,
-      "software": 2064,
-      "industrial": 894,
-      "utilities": 380,
-      "comm": 446,
-      "ai_semi": 413,
+      "cons_cycl": 1064,
+      "cons_def": 558,
+      "materials": 746,
+      "health": 3084,
+      "finance": 2113,
+      "energy": 976,
+      "hardware": 697,
+      "software": 2079,
+      "industrial": 902,
+      "utilities": 381,
+      "comm": 452,
+      "ai_semi": 416,
       "realestate": 197
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1059,
-      "cons_def": 556,
-      "materials": 740,
-      "health": 3063,
-      "finance": 2104,
-      "energy": 967,
-      "hardware": 694,
-      "software": 2070,
-      "industrial": 899,
-      "utilities": 380,
-      "comm": 446,
-      "ai_semi": 414,
+      "cons_cycl": 1064,
+      "cons_def": 559,
+      "materials": 746,
+      "health": 3085,
+      "finance": 2116,
+      "energy": 976,
+      "hardware": 699,
+      "software": 2085,
+      "industrial": 907,
+      "utilities": 381,
+      "comm": 452,
+      "ai_semi": 417,
       "realestate": 197
     },
-    "heavyAt": "2026-06-28T13:52:55.989Z",
+    "heavyAt": "2026-06-29T01:58:02.312Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
