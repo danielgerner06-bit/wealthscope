@@ -6725,7 +6725,8 @@
       "seen": "2026-06-29",
       "seenMs": 1782691200000,
       "startPrice": 50.89999961853027,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "YOC": {
       "ticker": "YOC",
@@ -6745,7 +6746,8 @@
       "seen": "2026-06-29",
       "seenMs": 1782691200000,
       "startPrice": 6.25,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
