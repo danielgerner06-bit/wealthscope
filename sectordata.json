@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-29",
-  "updatedAt": "2026-06-29T14:00:13.802Z",
+  "updatedAt": "2026-06-29T14:44:57.218Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": -1.86,
+      "perf": -1.91,
       "avg30": 3.69,
-      "perf6m": 24.49
+      "perf6m": 24.43
     },
     {
       "id": "comm",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 7.7,
+      "perf": 7.76,
       "avg30": 1.18,
-      "perf6m": 3.19
+      "perf6m": 3.25
     },
     {
       "id": "finance",
@@ -195,15 +195,15 @@
     },
     {
       "id": "industrial",
-      "perf": 5.03,
+      "perf": 4.76,
       "avg30": 1.54,
-      "perf6m": 16.57
+      "perf6m": 16.26
     },
     {
       "id": "energy",
-      "perf": -5.2,
+      "perf": -5.43,
       "avg30": 2.55,
-      "perf6m": 21.76
+      "perf6m": 21.47
     },
     {
       "id": "materials",
@@ -213,15 +213,15 @@
     },
     {
       "id": "utilities",
-      "perf": 2.19,
+      "perf": 1.65,
       "avg30": 0.74,
-      "perf6m": 8.24
+      "perf6m": 7.66
     },
     {
       "id": "realestate",
-      "perf": 1.01,
+      "perf": 0.4,
       "avg30": 0.58,
-      "perf6m": 12.17
+      "perf6m": 11.5
     }
   ],
   "bars30Region": [
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": -1.97,
+      "perf": -1.93,
       "avg30": 1.24,
-      "perf6m": 4.72
+      "perf6m": 4.77
     },
     {
       "id": "germany",
-      "perf": -6.56,
-      "avg30": 0.04,
-      "perf6m": -3.81
+      "perf": -6.71,
+      "avg30": 0.03,
+      "perf6m": -3.96
     },
     {
       "id": "japan",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -8.49,
+      "perf": -8.44,
       "avg30": -0.33,
-      "perf6m": -16.35
+      "perf6m": -16.3
     },
     {
       "id": "em",
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": -4.36,
+      "perf": -4.38,
       "avg30": 2.83,
-      "perf6m": 9.65
+      "perf6m": 9.63
     },
     {
       "id": "world",
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0576,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 1.11,
       "div": 1.32,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0576,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 6.47,
       "div": 4.48,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0004,
+      "sektorPsi": 0.0003,
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 1.11,
       "div": 1.26,
       "enrichAt": "2026-06-28",
-      "sektorPsi": 0.0576,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-06-29",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0067,
+      "sektorPsi": 0.008,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 203.03,
       "div": 1.05,
       "enrichAt": "2026-06-27",
-      "sektorPsi": 0.0576,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 1.13,
       "div": 3.85,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0057,
+      "sektorPsi": 0.0069,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 1.34,
       "div": 2.44,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0576,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 0.72,
       "div": 2.96,
       "enrichAt": "2026-06-26",
-      "sektorPsi": 0.0067,
+      "sektorPsi": 0.008,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -681,7 +681,7 @@
       "eps": 2.23,
       "div": 1.61,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0057,
+      "sektorPsi": 0.0069,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -717,7 +717,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0067,
+      "sektorPsi": 0.008,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -783,7 +783,7 @@
       "eps": 1.88,
       "div": 0.74,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0067,
+      "sektorPsi": 0.008,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -815,7 +815,7 @@
       "pe": null,
       "div": 0.09,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0024,
+      "sektorPsi": 0.0032,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -847,7 +847,7 @@
       "pe": null,
       "div": 1.12,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0067,
+      "sektorPsi": 0.008,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -915,10 +915,71 @@
       "eps": 5.01,
       "div": 5.26,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0576,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-27",
       "miss": 0
+    },
+    {
+      "ticker": "JST",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-29",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-29",
+      "perf6m": -4.84,
+      "perf6mAt": "2026-06-29",
+      "perf1mBefore": -9.59,
+      "upside": 48,
+      "pe": 70.4,
+      "eps": 0.72,
+      "div": 2.94,
+      "enrichAt": "2026-06-29",
+      "sektorPsi": 0.008,
+      "sektorPsiAtAdd": 0.008
+    },
+    {
+      "ticker": "YOC",
+      "name": "YOC AG",
+      "yahoo": "YOC.DE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-06-29",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-29",
+      "perf6m": -42.83,
+      "perf6mAt": "2026-06-29",
+      "perf1mBefore": -3.85,
+      "pe": null,
+      "eps": -0.12,
+      "div": 0,
+      "enrichAt": "2026-06-29",
+      "sektorPsi": 0.0224,
+      "sektorPsiAtAdd": 0.0224
     }
   ],
   "psiHistory": [
@@ -973,6 +1034,11 @@
       "v": 0.008
     },
     {
+      "t": "JST",
+      "d": "2026-06-29",
+      "v": 0.008
+    },
+    {
       "t": "SB1",
       "d": "2026-06-05",
       "v": 0.0085
@@ -996,6 +1062,11 @@
       "t": "6701.T",
       "d": "2026-06-17",
       "v": 0.0106
+    },
+    {
+      "t": "YOC",
+      "d": "2026-06-29",
+      "v": 0.0224
     },
     {
       "t": "LUVE",
@@ -1134,10 +1205,9 @@
   "scan": {
     "universe": 8835,
     "scanned": 8835,
-    "lastCursor": 7734,
-    "candCursor": 206,
+    "lastCursor": 8034,
+    "candCursor": 214,
     "candidates": [
-      "Invitae Corporation",
       "PolarityTE, Inc.",
       "Aclaris Therapeutics, Inc.",
       "Tilray Brands, Inc.",
@@ -1536,45 +1606,46 @@
       "LPL Financial Holdings Inc.",
       "Blue Bird Corporation",
       "PMV Pharmaceuticals, Inc.",
-      "John Wiley & Sons Inc."
+      "John Wiley & Sons Inc.",
+      "MediWound Ltd."
     ],
     "noteCursor": 4,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 8,
     "notesDay": "2026-06-29",
     "seenBySector": {
-      "cons_cycl": 1064,
+      "cons_cycl": 1074,
       "cons_def": 558,
-      "materials": 746,
-      "health": 3084,
-      "finance": 2113,
-      "energy": 976,
-      "hardware": 697,
-      "software": 2079,
-      "industrial": 902,
-      "utilities": 381,
-      "comm": 452,
-      "ai_semi": 416,
+      "materials": 751,
+      "health": 3102,
+      "finance": 2128,
+      "energy": 984,
+      "hardware": 702,
+      "software": 2090,
+      "industrial": 906,
+      "utilities": 383,
+      "comm": 457,
+      "ai_semi": 419,
       "realestate": 197
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1064,
+      "cons_cycl": 1074,
       "cons_def": 559,
-      "materials": 746,
-      "health": 3085,
-      "finance": 2116,
-      "energy": 976,
-      "hardware": 699,
-      "software": 2085,
-      "industrial": 907,
-      "utilities": 381,
-      "comm": 452,
-      "ai_semi": 417,
+      "materials": 751,
+      "health": 3103,
+      "finance": 2131,
+      "energy": 984,
+      "hardware": 704,
+      "software": 2097,
+      "industrial": 912,
+      "utilities": 383,
+      "comm": 457,
+      "ai_semi": 420,
       "realestate": 197
     },
-    "heavyAt": "2026-06-29T01:58:02.312Z",
+    "heavyAt": "2026-06-29T14:36:20.654Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1585,6 +1656,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-29T14:00:13.802Z"
+  }
 }
