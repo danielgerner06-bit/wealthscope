@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-29",
-  "updatedAt": "2026-06-29T19:54:06.166Z",
+  "updatedAt": "2026-06-29T20:00:13.799Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -153,9 +153,9 @@
     },
     {
       "id": "ai_semi",
-      "perf": 7.1,
-      "avg30": 9.03,
-      "perf6m": 99.99
+      "perf": 7.93,
+      "avg30": 9.04,
+      "perf6m": 101.54
     },
     {
       "id": "hardware",
@@ -189,15 +189,15 @@
     },
     {
       "id": "cons_def",
-      "perf": -0.21,
+      "perf": -0.07,
       "avg30": 0.37,
-      "perf6m": 8.18
+      "perf6m": 8.34
     },
     {
       "id": "industrial",
-      "perf": 4.81,
+      "perf": 4.85,
       "avg30": 1.54,
-      "perf6m": 16.32
+      "perf6m": 16.37
     },
     {
       "id": "energy",
@@ -213,15 +213,15 @@
     },
     {
       "id": "utilities",
-      "perf": 1.96,
+      "perf": 1.93,
       "avg30": 0.74,
-      "perf6m": 7.99
+      "perf6m": 7.95
     },
     {
       "id": "realestate",
-      "perf": 0.46,
+      "perf": 0.64,
       "avg30": 0.58,
-      "perf6m": 11.56
+      "perf6m": 11.76
     }
   ],
   "bars30Region": [
@@ -239,27 +239,27 @@
     },
     {
       "id": "germany",
-      "perf": -6.34,
+      "perf": -6.32,
       "avg30": 0.04,
-      "perf6m": -3.58
+      "perf6m": -3.56
     },
     {
       "id": "japan",
-      "perf": 0.45,
+      "perf": 0.52,
       "avg30": 2.28,
-      "perf6m": 14.96
+      "perf6m": 15.04
     },
     {
       "id": "china",
-      "perf": -8.5,
+      "perf": -8.44,
       "avg30": -0.33,
-      "perf6m": -16.36
+      "perf6m": -16.3
     },
     {
       "id": "em",
-      "perf": -1.57,
+      "perf": -1.45,
       "avg30": 3.23,
-      "perf6m": 23.97
+      "perf6m": 24.12
     },
     {
       "id": "apac",
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": -4.22,
+      "perf": -4.19,
       "avg30": 2.83,
-      "perf6m": 9.81
+      "perf6m": 9.84
     },
     {
       "id": "world",
@@ -1656,5 +1656,6 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  }
+  },
+  "yahooAt": "2026-06-29T20:00:13.799Z"
 }
