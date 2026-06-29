@@ -1,6 +1,6 @@
 {
   "updated": "2026-06-29",
-  "updatedAt": "2026-06-29T19:00:13.797Z",
+  "updatedAt": "2026-06-29T19:54:06.166Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -153,9 +153,9 @@
     },
     {
       "id": "ai_semi",
-      "perf": 7.62,
-      "avg30": 9.04,
-      "perf6m": 100.96
+      "perf": 7.1,
+      "avg30": 9.03,
+      "perf6m": 99.99
     },
     {
       "id": "hardware",
@@ -189,21 +189,21 @@
     },
     {
       "id": "cons_def",
-      "perf": -0.31,
+      "perf": -0.21,
       "avg30": 0.37,
-      "perf6m": 8.08
+      "perf6m": 8.18
     },
     {
       "id": "industrial",
-      "perf": 4.8,
+      "perf": 4.81,
       "avg30": 1.54,
-      "perf6m": 16.31
+      "perf6m": 16.32
     },
     {
       "id": "energy",
-      "perf": -5.48,
+      "perf": -5.53,
       "avg30": 2.55,
-      "perf6m": 21.41
+      "perf6m": 21.34
     },
     {
       "id": "materials",
@@ -213,15 +213,15 @@
     },
     {
       "id": "utilities",
-      "perf": 1.85,
+      "perf": 1.96,
       "avg30": 0.74,
-      "perf6m": 7.87
+      "perf6m": 7.99
     },
     {
       "id": "realestate",
-      "perf": 0.02,
+      "perf": 0.46,
       "avg30": 0.58,
-      "perf6m": 11.07
+      "perf6m": 11.56
     }
   ],
   "bars30Region": [
@@ -239,27 +239,27 @@
     },
     {
       "id": "germany",
-      "perf": -6.31,
+      "perf": -6.34,
       "avg30": 0.04,
-      "perf6m": -3.55
+      "perf6m": -3.58
     },
     {
       "id": "japan",
-      "perf": 0.46,
+      "perf": 0.45,
       "avg30": 2.28,
-      "perf6m": 14.98
+      "perf6m": 14.96
     },
     {
       "id": "china",
-      "perf": -8.55,
+      "perf": -8.5,
       "avg30": -0.33,
-      "perf6m": -16.4
+      "perf6m": -16.36
     },
     {
       "id": "em",
-      "perf": -1.59,
+      "perf": -1.57,
       "avg30": 3.23,
-      "perf6m": 23.95
+      "perf6m": 23.97
     },
     {
       "id": "apac",
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": -4.19,
+      "perf": -4.22,
       "avg30": 2.83,
-      "perf6m": 9.84
+      "perf6m": 9.81
     },
     {
       "id": "world",
@@ -483,7 +483,7 @@
       "eps": 1.64,
       "div": 3.26,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -582,10 +582,41 @@
       "eps": 1.13,
       "div": 3.85,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0069,
+      "sektorPsi": 0.0056,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-27",
       "miss": 0
+    },
+    {
+      "ticker": "JST",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-29",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-29",
+      "perf6m": -4.84,
+      "perf6mAt": "2026-06-29",
+      "perf1mBefore": -9.59,
+      "upside": 48,
+      "pe": 70.4,
+      "eps": 0.72,
+      "div": 2.94,
+      "enrichAt": "2026-06-29",
+      "sektorPsi": 0.008,
+      "sektorPsiAtAdd": 0.008
     },
     {
       "ticker": "GFT",
@@ -681,7 +712,7 @@
       "eps": 2.23,
       "div": 1.61,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0069,
+      "sektorPsi": 0.0056,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -815,7 +846,7 @@
       "pe": null,
       "div": 0.09,
       "enrichAt": "2026-06-25",
-      "sektorPsi": 0.0032,
+      "sektorPsi": 0.0025,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -919,37 +950,6 @@
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-27",
       "miss": 0
-    },
-    {
-      "ticker": "JST",
-      "name": "Jost Werke AG",
-      "yahoo": "JST.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-29",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-29",
-      "perf6m": -4.84,
-      "perf6mAt": "2026-06-29",
-      "perf1mBefore": -9.59,
-      "upside": 48,
-      "pe": 70.4,
-      "eps": 0.72,
-      "div": 2.94,
-      "enrichAt": "2026-06-29",
-      "sektorPsi": 0.008,
-      "sektorPsiAtAdd": 0.008
     },
     {
       "ticker": "YOC",
@@ -1656,6 +1656,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-06-29T19:00:13.797Z"
+  }
 }
