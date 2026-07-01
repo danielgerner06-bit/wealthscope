@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-01",
-  "updatedAt": "2026-07-01T08:00:13.860Z",
+  "updatedAt": "2026-07-01T08:44:16.823Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-01",
-      "sektorPsi": 0.0331,
+      "sektorPsi": 0.0328,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 1.11,
       "div": 1.26,
       "enrichAt": "2026-06-28",
-      "sektorPsi": 0.0331,
+      "sektorPsi": 0.0328,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-06-29",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 1.11,
       "div": 1.26,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0331,
+      "sektorPsi": 0.0328,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 203.03,
       "div": 1.05,
       "enrichAt": "2026-06-27",
-      "sektorPsi": 0.0331,
+      "sektorPsi": 0.0328,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 1.34,
       "div": 2.44,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0331,
+      "sektorPsi": 0.0328,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -848,7 +848,7 @@
       "pe": null,
       "div": 0.09,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0024,
+      "sektorPsi": 0.0023,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-06-25",
       "miss": 0
@@ -948,7 +948,7 @@
       "eps": 5.01,
       "div": 5.08,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0331,
+      "sektorPsi": 0.0328,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -980,7 +980,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0331,
+      "sektorPsi": 0.0328,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-06-30",
       "miss": 0
@@ -1002,7 +1002,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-30",
+      "verifiedAt": "2026-07-01",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-30",
       "perf6m": -13.28,
@@ -1012,8 +1012,10 @@
       "eps": 0.1,
       "div": 0,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0331,
-      "sektorPsiAtAdd": 0.0256
+      "sektorPsi": 0.0328,
+      "sektorPsiAtAdd": 0.0256,
+      "recheckAt": "2026-07-01",
+      "miss": 0
     }
   ],
   "psiHistory": [
@@ -1142,8 +1144,8 @@
       "date": "2026-06-17"
     },
     "finance": {
-      "text": "Der Finanzsektor zeigt eine leichte kurzfristige Erholung, kämpft aber langfristig mit unsicheren Konjunkturaussichten. Auffällige Werte könnten von spezifischen Branchenentwicklungen oder Zinsänderungen beeinflusst sein.",
-      "date": "2026-06-15"
+      "text": "Banken leiden unter Zinsunsicherheit und Konjunktursorgen, trotz kurzfristiger Erholung. KI und Geopolitik spielen aktuell kaum eine Rolle.",
+      "date": "2026-07-01"
     },
     "ai_semi": {
       "text": "KI-Boom treibt Halbleiter-Sektor zu starken Gewinnen, trotz leicht gedämpfter kurzfristiger Performance. Langfristig übertrifft die Nachfrage nach KI-Chips breite Marktsteigerungen.",
@@ -1220,8 +1222,8 @@
       "date": "2026-06-17"
     },
     "world": {
-      "text": "Die Weltbörsen steigen leicht, bleiben aber hinter dem Normalniveau zurück. Langfristig zeigt sich eine positive Entwicklung, die von breiten Konjunktur- und Technologieeffekten getragen wird.",
-      "date": "2026-06-18"
+      "text": "Weltweit sind die 30-Tage-Zahlen wegen Zinsanstiegen und konjunktureller Unsicherheit leicht gefallen. Langfristig zeigen sich die Märkte angesichts von KI-Fortschritten und stabiler Energiepreise optimistischer.",
+      "date": "2026-07-01"
     }
   },
   "news": {
@@ -1240,16 +1242,9 @@
   "scan": {
     "universe": 8837,
     "scanned": 8837,
-    "lastCursor": 8634,
-    "candCursor": 230,
+    "lastCursor": 97,
+    "candCursor": 238,
     "candidates": [
-      "H&R GmbH & Co. KGaA",
-      "Evotec SE",
-      "S&T AG",
-      "Cancom SE",
-      "Stabilus SE",
-      "Deutsche Telekom AG",
-      "Siltronic AG",
       "Alfa Laval AB",
       "Electrolux AB",
       "Orsted A/S",
@@ -1642,45 +1637,52 @@
       "Lupin Ltd.",
       "LTIMindtree Ltd.",
       "Godfrey Phillips India Ltd.",
-      "IDFC First Bank Ltd."
+      "IDFC First Bank Ltd.",
+      "Cirrus Logic, Inc.",
+      "Silicon Laboratories Inc.",
+      "Amkor Technology, Inc.",
+      "Semtech Corporation",
+      "Monolithic Power Systems, Inc.",
+      "Qorvo, Inc.",
+      "Vishay Intertechnology, Inc."
     ],
-    "noteCursor": 5,
-    "focusCursor": 4,
+    "noteCursor": 6,
+    "focusCursor": 5,
     "recheckCursor": 16,
-    "regionNoteCursor": 9,
-    "notesDay": "2026-06-30",
+    "regionNoteCursor": 0,
+    "notesDay": "2026-07-01",
     "seenBySector": {
-      "cons_cycl": 1089,
-      "cons_def": 565,
-      "materials": 765,
-      "health": 3137,
-      "finance": 2156,
-      "energy": 999,
-      "hardware": 714,
-      "software": 2111,
-      "industrial": 914,
-      "utilities": 387,
-      "comm": 466,
-      "ai_semi": 423,
+      "cons_cycl": 1098,
+      "cons_def": 567,
+      "materials": 766,
+      "health": 3164,
+      "finance": 2162,
+      "energy": 1002,
+      "hardware": 718,
+      "software": 2130,
+      "industrial": 922,
+      "utilities": 390,
+      "comm": 468,
+      "ai_semi": 425,
       "realestate": 197
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1089,
-      "cons_def": 566,
-      "materials": 765,
-      "health": 3138,
-      "finance": 2159,
-      "energy": 999,
-      "hardware": 716,
-      "software": 2119,
-      "industrial": 920,
-      "utilities": 387,
-      "comm": 466,
-      "ai_semi": 424,
+      "cons_cycl": 1098,
+      "cons_def": 568,
+      "materials": 766,
+      "health": 3165,
+      "finance": 2165,
+      "energy": 1002,
+      "hardware": 720,
+      "software": 2138,
+      "industrial": 928,
+      "utilities": 390,
+      "comm": 468,
+      "ai_semi": 426,
       "realestate": 197
     },
-    "heavyAt": "2026-06-30T19:53:42.824Z",
+    "heavyAt": "2026-07-01T08:36:50.242Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1691,6 +1693,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-01T08:00:13.860Z"
+  }
 }
