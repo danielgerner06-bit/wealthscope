@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-01",
-  "updatedAt": "2026-07-01T20:00:13.875Z",
+  "updatedAt": "2026-07-01T21:00:14.280Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": -2.86,
+      "perf": -2.83,
       "avg30": 3.64,
-      "perf6m": 26.84
+      "perf6m": 26.88
     },
     {
       "id": "comm",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 6.72,
+      "perf": 6.74,
       "avg30": 1.26,
-      "perf6m": 2.37
+      "perf6m": 2.39
     },
     {
       "id": "finance",
@@ -189,15 +189,15 @@
     },
     {
       "id": "cons_def",
-      "perf": 0.43,
+      "perf": 0.47,
       "avg30": 0.39,
-      "perf6m": 6.44
+      "perf6m": 6.48
     },
     {
       "id": "industrial",
-      "perf": 5.93,
+      "perf": 5.91,
       "avg30": 1.56,
-      "perf6m": 16.65
+      "perf6m": 16.63
     },
     {
       "id": "energy",
@@ -219,17 +219,17 @@
     },
     {
       "id": "realestate",
-      "perf": 0.4,
+      "perf": 0.43,
       "avg30": 0.58,
-      "perf6m": 9
+      "perf6m": 9.03
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -1.43,
+      "perf": -1.42,
       "avg30": 1.62,
-      "perf6m": 8.02
+      "perf6m": 8.03
     },
     {
       "id": "europe",
@@ -239,9 +239,9 @@
     },
     {
       "id": "germany",
-      "perf": -5.24,
+      "perf": -5.22,
       "avg30": 0,
-      "perf6m": -3.22
+      "perf6m": -3.19
     },
     {
       "id": "japan",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": 1.29,
+      "perf": 1.34,
       "avg30": -0.99,
-      "perf6m": -8.65
+      "perf6m": -8.6
     },
     {
       "id": "latam",
@@ -283,7 +283,7 @@
       "id": "world",
       "perf": -1.39,
       "avg30": 1.57,
-      "perf6m": 7.66
+      "perf6m": 7.65
     }
   ],
   "topStocks": [
@@ -1694,5 +1694,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-07-01T20:00:13.875Z"
+  "yahooAt": "2026-07-01T21:00:14.280Z"
 }
