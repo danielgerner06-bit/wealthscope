@@ -1108,7 +1108,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 87.58000183105469,
-      "perf": []
+      "perf": [
+        2.07
+      ],
+      "prov": false
     },
     "TOI": {
       "ticker": "TOI",
@@ -1184,7 +1187,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 14,
-      "perf": []
+      "perf": [
+        46.07
+      ],
+      "prov": false
     },
     "CGON": {
       "ticker": "CGON",
@@ -1203,7 +1209,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 55.529998779296875,
-      "perf": []
+      "perf": [
+        27.8
+      ],
+      "prov": false
     },
     "TWI": {
       "ticker": "TWI",
@@ -1241,7 +1250,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 52.02000045776367,
-      "perf": []
+      "perf": [
+        5.76
+      ],
+      "prov": false
     },
     "KYMR": {
       "ticker": "KYMR",
@@ -1260,7 +1272,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 71.29000091552734,
-      "perf": []
+      "perf": [
+        56.31
+      ],
+      "prov": false
     },
     "ZAL": {
       "ticker": "ZAL",
@@ -1279,7 +1294,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 23.579999923706055,
-      "perf": []
+      "perf": [
+        9.8
+      ],
+      "prov": false
     },
     "MIRM": {
       "ticker": "MIRM",
@@ -1298,7 +1316,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 92.16999816894531,
-      "perf": []
+      "perf": [
+        28.85
+      ],
+      "prov": false
     },
     "TATT": {
       "ticker": "TATT",
@@ -1317,7 +1338,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 40.36000061035156,
-      "perf": []
+      "perf": [
+        13.64
+      ],
+      "prov": false
     },
     "STKE": {
       "ticker": "STKE",
@@ -1336,7 +1360,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 1.3300000429153442,
-      "perf": []
+      "perf": [
+        4.14
+      ],
+      "prov": false
     },
     "THC": {
       "ticker": "THC",
@@ -1355,7 +1382,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 163.60000610351562,
-      "perf": []
+      "perf": [
+        14.74
+      ],
+      "prov": false
     },
     "TRMB": {
       "ticker": "TRMB",
@@ -1393,7 +1423,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 29.940000534057617,
-      "perf": []
+      "perf": [
+        13.58
+      ],
+      "prov": false
     },
     "VIA": {
       "ticker": "VIA",
@@ -1507,7 +1540,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 33.709999084472656,
-      "perf": []
+      "perf": [
+        16.51
+      ],
+      "prov": false
     },
     "VTOL": {
       "ticker": "VTOL",
@@ -1545,7 +1581,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 29.809999465942383,
-      "perf": []
+      "perf": [
+        -4.21
+      ],
+      "prov": false
     },
     "BAYN": {
       "ticker": "BAYN",
@@ -1564,7 +1603,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 34.099998474121094,
-      "perf": []
+      "perf": [
+        44.7
+      ],
+      "prov": false
     },
     "AOF": {
       "ticker": "AOF",
@@ -1583,7 +1625,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 81.19999694824219,
-      "perf": []
+      "perf": [
+        -9.73
+      ],
+      "prov": false
     },
     "SRTA": {
       "ticker": "SRTA",
@@ -1602,7 +1647,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 6.260000228881836,
-      "perf": []
+      "perf": [
+        -15.06
+      ],
+      "prov": false
     },
     "PLTK": {
       "ticker": "PLTK",
@@ -1621,7 +1669,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 3.380000114440918,
-      "perf": []
+      "perf": [
+        11.69
+      ],
+      "prov": false
     },
     "SLDE": {
       "ticker": "SLDE",
@@ -1640,7 +1691,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 17.3799991607666,
-      "perf": []
+      "perf": [
+        13.23
+      ],
+      "prov": false
     },
     "SCZM": {
       "ticker": "SCZM",
@@ -1659,7 +1713,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 8.329999923706055,
-      "perf": []
+      "perf": [
+        -19.66
+      ],
+      "prov": false
     },
     "DEF": {
       "ticker": "DEF",
@@ -1678,7 +1735,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 23.899999618530273,
-      "perf": []
+      "perf": [
+        -0.21
+      ],
+      "prov": false
     },
     "SGHC": {
       "ticker": "SGHC",
@@ -1697,7 +1757,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 12.649999618530273,
-      "perf": []
+      "perf": [
+        8.09
+      ],
+      "prov": false
     },
     "VST": {
       "ticker": "VST",
@@ -1754,7 +1817,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 44.06999969482422,
-      "perf": []
+      "perf": [
+        6.56
+      ],
+      "prov": false
     },
     "SCL": {
       "ticker": "SCL",
@@ -1773,7 +1839,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 52.27000045776367,
-      "perf": []
+      "perf": [
+        6.69
+      ],
+      "prov": false
     },
     "MUM": {
       "ticker": "MUM",
@@ -1792,7 +1861,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 38.099998474121094,
-      "perf": []
+      "perf": [
+        -5.05
+      ],
+      "prov": false
     },
     "KGC": {
       "ticker": "KGC",
@@ -1811,7 +1883,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 28.989999771118164,
-      "perf": []
+      "perf": [
+        -18.78
+      ],
+      "prov": false
     },
     "TYL": {
       "ticker": "TYL",
@@ -1849,7 +1924,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 36.47999954223633,
-      "perf": []
+      "perf": [
+        16.66
+      ],
+      "prov": false
     },
     "IRON": {
       "ticker": "IRON",
@@ -1868,7 +1946,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 68,
-      "perf": []
+      "perf": [
+        5.25
+      ],
+      "prov": false
     },
     "VSEC": {
       "ticker": "VSEC",
@@ -1925,7 +2006,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 14.9399995803833,
-      "perf": []
+      "perf": [
+        9.24
+      ],
+      "prov": false
     },
     "SYRE": {
       "ticker": "SYRE",
@@ -1944,7 +2028,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 69.16000366210938,
-      "perf": []
+      "perf": [
+        25.94
+      ],
+      "prov": false
     },
     "TMUS": {
       "ticker": "TMUS",
@@ -1963,7 +2050,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 188.8300018310547,
-      "perf": []
+      "perf": [
+        -8.75
+      ],
+      "prov": false
     },
     "VTSI": {
       "ticker": "VTSI",
@@ -2134,7 +2224,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 6.700000047683716,
-      "perf": []
+      "perf": [
+        -25.59
+      ],
+      "prov": false
     },
     "VOXR": {
       "ticker": "VOXR",
@@ -2172,7 +2265,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 15.184999942779541,
-      "perf": []
+      "perf": [
+        43.86
+      ],
+      "prov": false
     },
     "SHC": {
       "ticker": "SHC",
@@ -2191,7 +2287,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 15.28000020980835,
-      "perf": []
+      "perf": [
+        16.24
+      ],
+      "prov": false
     },
     "SGC": {
       "ticker": "SGC",
@@ -2210,7 +2309,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 13.09000015258789,
-      "perf": []
+      "perf": [
+        2.34
+      ],
+      "prov": false
     },
     "TTAN": {
       "ticker": "TTAN",
@@ -2267,7 +2369,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 46.03499984741211,
-      "perf": []
+      "perf": [
+        20.68
+      ],
+      "prov": false
     },
     "NVDA": {
       "ticker": "NVDA",
@@ -2286,7 +2391,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 223.59000396728516,
-      "perf": []
+      "perf": [
+        -10.76
+      ],
+      "prov": false
     },
     "CLBT": {
       "ticker": "CLBT",
@@ -2305,7 +2413,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 15.424999713897705,
-      "perf": []
+      "perf": [
+        0.3
+      ],
+      "prov": false
     },
     "CIFR": {
       "ticker": "CIFR",
@@ -2324,7 +2435,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 25.15000057220459,
-      "perf": []
+      "perf": [
+        -9.79
+      ],
+      "prov": false
     },
     "KOPN": {
       "ticker": "KOPN",
@@ -2343,7 +2457,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 5.934999942779541,
-      "perf": []
+      "perf": [
+        -28.69
+      ],
+      "prov": false
     },
     "STNG": {
       "ticker": "STNG",
@@ -2362,7 +2479,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 75.71500015258789,
-      "perf": []
+      "perf": [
+        -8.15
+      ],
+      "prov": false
     },
     "DTE": {
       "ticker": "DTE",
@@ -6889,42 +7009,102 @@
       "startPrice": 2.2300000190734863,
       "perf": [],
       "outperformPct": null
+    },
+    "F3C.DE": {
+      "ticker": "F3C.DE",
+      "name": "SFC Energy AG",
+      "yahoo": "F3C.DE",
+      "sector": "energy",
+      "region": "europe",
+      "buyPct": 100,
+      "strongBuyPct": 80,
+      "upside": 33,
+      "pe": null,
+      "perf6mAtAdd": 53.67,
+      "perf1mBefore": -10.76,
+      "sektorPsiAtAdd": null,
+      "analysts": 5,
+      "div": 0,
+      "seen": "2026-07-02",
+      "seenMs": 1782950400000,
+      "startPrice": 19.945000648498535,
+      "perf": []
     }
   },
   "findings": {
     "factors": [
       {
         "name": "Analysten",
-        "spread": 8.8,
+        "spread": 14.5,
         "best": {
           "k": "15+",
-          "avg": 4.9,
-          "n": 5
+          "avg": 11.6,
+          "n": 15
         },
         "worst": {
           "k": "1-4",
-          "avg": -3.9,
-          "n": 13
+          "avg": -2.9,
+          "n": 23
+        }
+      },
+      {
+        "name": "Dividende",
+        "spread": 10.8,
+        "best": {
+          "k": "keine",
+          "avg": 5.6,
+          "n": 63
+        },
+        "worst": {
+          "k": "2-4%",
+          "avg": -5.2,
+          "n": 6
         }
       },
       {
         "name": "KGV",
-        "spread": 8.3,
+        "spread": 9.3,
         "best": {
           "k": "40+",
-          "avg": 10.1,
-          "n": 3
+          "avg": 7.7,
+          "n": 4
         },
         "worst": {
           "k": "<15",
-          "avg": 1.8,
-          "n": 4
+          "avg": -1.6,
+          "n": 10
+        }
+      },
+      {
+        "name": "Kursziel",
+        "spread": 3.4,
+        "best": {
+          "k": "40%+",
+          "avg": 4.9,
+          "n": 66
+        },
+        "worst": {
+          "k": "25-40%",
+          "avg": 1.5,
+          "n": 12
         }
       }
     ],
-    "combo": null,
-    "sampleSize": 40,
+    "combo": {
+      "f1": "Analysten 15+",
+      "f2": "Dividende keine",
+      "avg": 13.6,
+      "n": 11
+    },
+    "sampleSize": 80,
     "maxMonths": 1,
     "provisional": false
-  }
+  },
+  "kiAnalysis": {
+    "text": "Die Kombination \"Analysten 15+\" und \"Dividende keine\" erzielte mit 13,6% die beste Performance. Kursziele hatten mit 3,4% Spread kaum Einfluss.",
+    "date": "2026-07-02",
+    "stage": "real",
+    "months": 1
+  },
+  "kiDay": "2026-07-02"
 }
