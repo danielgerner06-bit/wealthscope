@@ -152,7 +152,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 2.319999933242798,
-      "perf": []
+      "perf": [
+        -24.14
+      ],
+      "prov": false
     },
     "SLGL": {
       "ticker": "SLGL",
@@ -171,7 +174,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 73.7300033569336,
-      "perf": []
+      "perf": [
+        2.19
+      ],
+      "prov": false
     },
     "STRO": {
       "ticker": "STRO",
@@ -190,7 +196,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 24.43000030517578,
-      "perf": []
+      "perf": [
+        16.7
+      ],
+      "prov": false
     },
     "CGEM": {
       "ticker": "CGEM",
@@ -209,7 +218,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 15.34000015258789,
-      "perf": []
+      "perf": [
+        15.68
+      ],
+      "prov": false
     },
     "CLDX": {
       "ticker": "CLDX",
@@ -228,7 +240,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 28.899999618530273,
-      "perf": []
+      "perf": [
+        24.27
+      ],
+      "prov": false
     },
     "SLDP": {
       "ticker": "SLDP",
@@ -247,7 +262,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 3.630000114440918,
-      "perf": []
+      "perf": [
+        -24.05
+      ],
+      "prov": false
     },
     "INSM": {
       "ticker": "INSM",
@@ -266,7 +284,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 103.7300033569336,
-      "perf": []
+      "perf": [
+        2.84
+      ],
+      "prov": false
     },
     "CGEN": {
       "ticker": "CGEN",
@@ -285,7 +306,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 2.259999990463257,
-      "perf": []
+      "perf": [
+        -5.53
+      ],
+      "prov": false
     },
     "SRZN": {
       "ticker": "SRZN",
@@ -304,7 +328,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 23.145000457763672,
-      "perf": []
+      "perf": [
+        4.74
+      ],
+      "prov": false
     },
     "SKYH": {
       "ticker": "SKYH",
@@ -323,7 +350,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 9.270000457763672,
-      "perf": []
+      "perf": [
+        7.8
+      ],
+      "prov": false
     },
     "INR": {
       "ticker": "INR",
@@ -342,7 +372,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 13.199999809265137,
-      "perf": []
+      "perf": [
+        -5.23
+      ],
+      "prov": false
     },
     "SPAI": {
       "ticker": "SPAI",
@@ -361,7 +394,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 5.960000038146973,
-      "perf": []
+      "perf": [
+        -27.65
+      ],
+      "prov": false
     },
     "TDUP": {
       "ticker": "TDUP",
@@ -380,7 +416,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 4.5,
-      "perf": []
+      "perf": [
+        50.55
+      ],
+      "prov": false
     },
     "TYRA": {
       "ticker": "TYRA",
@@ -437,7 +476,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 4.630000114440918,
-      "perf": []
+      "perf": [
+        20.25
+      ],
+      "prov": false
     },
     "TBN": {
       "ticker": "TBN",
@@ -456,7 +498,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 32.619998931884766,
-      "perf": []
+      "perf": [
+        -3.91
+      ],
+      "prov": false
     },
     "TREE": {
       "ticker": "TREE",
@@ -494,7 +539,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 29.75,
-      "perf": []
+      "perf": [
+        -2.55
+      ],
+      "prov": false
     },
     "IMNM": {
       "ticker": "IMNM",
@@ -513,7 +561,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 19.34000015258789,
-      "perf": []
+      "perf": [
+        7.72
+      ],
+      "prov": false
     },
     "KOD": {
       "ticker": "KOD",
@@ -532,7 +583,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 33.220001220703125,
-      "perf": []
+      "perf": [
+        12.49
+      ],
+      "prov": false
     },
     "GWH": {
       "ticker": "GWH",
@@ -551,7 +605,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 0.9800000190734863,
-      "perf": []
+      "perf": [
+        -5.05
+      ],
+      "prov": false
     },
     "IMTX": {
       "ticker": "IMTX",
@@ -570,7 +627,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 10.039999961853027,
-      "perf": []
+      "perf": [
+        -2.11
+      ],
+      "prov": false
     },
     "TMC": {
       "ticker": "TMC",
@@ -589,7 +649,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 6.489999771118164,
-      "perf": []
+      "perf": [
+        -30.9
+      ],
+      "prov": false
     },
     "SHEN": {
       "ticker": "SHEN",
@@ -608,7 +671,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 16.239999771118164,
-      "perf": []
+      "perf": [
+        -8.34
+      ],
+      "prov": false
     },
     "CLYM": {
       "ticker": "CLYM",
@@ -627,7 +693,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 11.199999809265137,
-      "perf": []
+      "perf": [
+        17.54
+      ],
+      "prov": false
     },
     "SIBN": {
       "ticker": "SIBN",
@@ -646,7 +715,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 14.010000228881836,
-      "perf": []
+      "perf": [
+        18.97
+      ],
+      "prov": false
     },
     "ISSC": {
       "ticker": "ISSC",
@@ -665,7 +737,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 17.190000534057617,
-      "perf": []
+      "perf": [
+        5.26
+      ],
+      "prov": false
     },
     "IRTC": {
       "ticker": "IRTC",
@@ -684,7 +759,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 105.5,
-      "perf": []
+      "perf": [
+        15.39
+      ],
+      "prov": false
     },
     "TARS": {
       "ticker": "TARS",
@@ -703,7 +781,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 57.40999984741211,
-      "perf": []
+      "perf": [
+        5.37
+      ],
+      "prov": false
     },
     "TSQ": {
       "ticker": "TSQ",
@@ -741,7 +822,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 10.989999771118164,
-      "perf": []
+      "perf": [
+        -23.34
+      ],
+      "prov": false
     },
     "JBS": {
       "ticker": "JBS",
@@ -760,7 +844,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 12.199999809265137,
-      "perf": []
+      "perf": [
+        -1.16
+      ],
+      "prov": false
     },
     "TCMD": {
       "ticker": "TCMD",
@@ -779,7 +866,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 24.40999984741211,
-      "perf": []
+      "perf": [
+        23.98
+      ],
+      "prov": false
     },
     "SOPH": {
       "ticker": "SOPH",
@@ -798,7 +888,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 4.940000057220459,
-      "perf": []
+      "perf": [
+        14.98
+      ],
+      "prov": false
     },
     "CNL": {
       "ticker": "CNL",
@@ -817,7 +910,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 16.770000457763672,
-      "perf": []
+      "perf": [
+        -23.06
+      ],
+      "prov": false
     },
     "SMTI": {
       "ticker": "SMTI",
@@ -836,7 +932,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 21.260000228881836,
-      "perf": []
+      "perf": [
+        12.56
+      ],
+      "prov": false
     },
     "IE": {
       "ticker": "IE",
@@ -855,7 +954,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 14.260000228881836,
-      "perf": []
+      "perf": [
+        -30.5
+      ],
+      "prov": false
     },
     "KVYO": {
       "ticker": "KVYO",
@@ -874,7 +976,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 16.950000762939453,
-      "perf": []
+      "perf": [
+        -7.2
+      ],
+      "prov": false
     },
     "SOUN": {
       "ticker": "SOUN",
@@ -893,7 +998,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 8.819999694824219,
-      "perf": []
+      "perf": [
+        -25.45
+      ],
+      "prov": false
     },
     "STOK": {
       "ticker": "STOK",
@@ -912,7 +1020,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 28.68000030517578,
-      "perf": []
+      "perf": [
+        11.05
+      ],
+      "prov": false
     },
     "STEP": {
       "ticker": "STEP",
@@ -931,7 +1042,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 46.06999969482422,
-      "perf": []
+      "perf": [
+        -10.99
+      ],
+      "prov": false
     },
     "JCAP": {
       "ticker": "JCAP",
@@ -950,7 +1064,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 16.40999984741211,
-      "perf": []
+      "perf": [
+        19.07
+      ],
+      "prov": false
     },
     "SRAD": {
       "ticker": "SRAD",
@@ -969,7 +1086,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 13.680000305175781,
-      "perf": []
+      "perf": [
+        9.98
+      ],
+      "prov": false
     },
     "CHDN": {
       "ticker": "CHDN",
@@ -6652,13 +6772,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 33,
-      "upside": 58,
-      "pe": 18.7,
+      "upside": 42,
+      "pe": 20.7,
       "perf6mAtAdd": -28.91,
       "perf1mBefore": -7.48,
       "sektorPsiAtAdd": 0.0106,
       "analysts": 12,
-      "div": 1.05,
+      "div": 1,
       "seen": "2026-06-17",
       "seenMs": 1781654400000,
       "startPrice": 3850.5,
@@ -6772,10 +6892,39 @@
     }
   },
   "findings": {
-    "factors": [],
+    "factors": [
+      {
+        "name": "Analysten",
+        "spread": 8.8,
+        "best": {
+          "k": "15+",
+          "avg": 4.9,
+          "n": 5
+        },
+        "worst": {
+          "k": "1-4",
+          "avg": -3.9,
+          "n": 13
+        }
+      },
+      {
+        "name": "KGV",
+        "spread": 8.3,
+        "best": {
+          "k": "40+",
+          "avg": 10.1,
+          "n": 3
+        },
+        "worst": {
+          "k": "<15",
+          "avg": 1.8,
+          "n": 4
+        }
+      }
+    ],
     "combo": null,
-    "sampleSize": 0,
-    "maxMonths": 0,
+    "sampleSize": 40,
+    "maxMonths": 1,
     "provisional": false
   }
 }
