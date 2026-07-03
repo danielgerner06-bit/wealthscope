@@ -2697,7 +2697,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 37.02499961853027,
-      "perf": []
+      "perf": [
+        42.78
+      ],
+      "prov": false
     },
     "TH": {
       "ticker": "TH",
@@ -2716,7 +2719,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 17.0600004196167,
-      "perf": []
+      "perf": [
+        11.96
+      ],
+      "prov": false
     },
     "ADEA": {
       "ticker": "ADEA",
@@ -2735,7 +2741,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 29.630000114440918,
-      "perf": []
+      "perf": [
+        -0.05
+      ],
+      "prov": false
     },
     "IXX": {
       "ticker": "IXX",
@@ -2754,7 +2763,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 51.14999961853027,
-      "perf": []
+      "perf": [
+        -6.57
+      ],
+      "prov": false
     },
     "ADSK": {
       "ticker": "ADSK",
@@ -2773,7 +2785,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 242.41000366210938,
-      "perf": []
+      "perf": [
+        -13.96
+      ],
+      "prov": false
     },
     "WRN": {
       "ticker": "WRN",
@@ -2792,7 +2807,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 2.9600000381469727,
-      "perf": []
+      "perf": [
+        -22.7
+      ],
+      "prov": false
     },
     "XGN": {
       "ticker": "XGN",
@@ -2811,7 +2829,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 5.085000038146973,
-      "perf": []
+      "perf": [
+        -3.44
+      ],
+      "prov": false
     },
     "WAY": {
       "ticker": "WAY",
@@ -2830,7 +2851,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 21.369999885559082,
-      "perf": []
+      "perf": [
+        11
+      ],
+      "prov": false
     },
     "ALNY": {
       "ticker": "ALNY",
@@ -2849,7 +2873,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 290.875,
-      "perf": []
+      "perf": [
+        5.01
+      ],
+      "prov": false
     },
     "XENE": {
       "ticker": "XENE",
@@ -2868,7 +2895,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 52.85499954223633,
-      "perf": []
+      "perf": [
+        14.42
+      ],
+      "prov": false
     },
     "WK": {
       "ticker": "WK",
@@ -2887,7 +2917,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 52.385000228881836,
-      "perf": []
+      "perf": [
+        3.05
+      ],
+      "prov": false
     },
     "WINA": {
       "ticker": "WINA",
@@ -2906,7 +2939,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 377.4700012207031,
-      "perf": []
+      "perf": [
+        12.37
+      ],
+      "prov": false
     },
     "WGS": {
       "ticker": "WGS",
@@ -2925,7 +2961,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 52.56500053405762,
-      "perf": []
+      "perf": [
+        31.02
+      ],
+      "prov": false
     },
     "WEAV": {
       "ticker": "WEAV",
@@ -2944,7 +2983,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 6.255000114440918,
-      "perf": []
+      "perf": [
+        12.56
+      ],
+      "prov": false
     },
     "XPER": {
       "ticker": "XPER",
@@ -2963,7 +3005,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 7.894999980926514,
-      "perf": []
+      "perf": [
+        8.51
+      ],
+      "prov": false
     },
     "WPM": {
       "ticker": "WPM",
@@ -2982,7 +3027,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 129.56500244140625,
-      "perf": []
+      "perf": [
+        -11.56
+      ],
+      "prov": false
     },
     "WMS": {
       "ticker": "WMS",
@@ -3001,7 +3049,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 135.65499877929688,
-      "perf": []
+      "perf": [
+        14.38
+      ],
+      "prov": false
     },
     "WULF": {
       "ticker": "WULF",
@@ -3020,7 +3071,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 26.074999809265137,
-      "perf": []
+      "perf": [
+        -14.55
+      ],
+      "prov": false
     },
     "WYNN": {
       "ticker": "WYNN",
@@ -3039,7 +3093,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 105.57500076293945,
-      "perf": []
+      "perf": [
+        -8.23
+      ],
+      "prov": false
     },
     "KTN": {
       "ticker": "KTN",
@@ -3058,7 +3115,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 23.31999969482422,
-      "perf": []
+      "perf": [
+        -0.17
+      ],
+      "prov": false
     },
     "GEV": {
       "ticker": "GEV",
@@ -3077,7 +3137,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 960.10498046875,
-      "perf": []
+      "perf": [
+        16.65
+      ],
+      "prov": false
     },
     "SLI": {
       "ticker": "SLI",
@@ -3096,7 +3159,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 4.130000114440918,
-      "perf": []
+      "perf": [
+        -33.45
+      ],
+      "prov": false
     },
     "UAMY": {
       "ticker": "UAMY",
@@ -3115,7 +3181,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 9.724999904632568,
-      "perf": []
+      "perf": [
+        -17.41
+      ],
+      "prov": false
     },
     "SPGI": {
       "ticker": "SPGI",
@@ -3134,7 +3203,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 423.00999450683594,
-      "perf": []
+      "perf": [
+        8.22
+      ],
+      "prov": false
     },
     "SHOP": {
       "ticker": "SHOP",
@@ -3153,7 +3225,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 120.56500244140625,
-      "perf": []
+      "perf": [
+        3.02
+      ],
+      "prov": false
     },
     "HNR1": {
       "ticker": "HNR1",
@@ -3172,7 +3247,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 225.0999984741211,
-      "perf": []
+      "perf": [
+        8.36
+      ],
+      "prov": false
     },
     "USAR": {
       "ticker": "USAR",
@@ -3191,7 +3269,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 30.065000534057617,
-      "perf": []
+      "perf": [
+        -30.08
+      ],
+      "prov": false
     },
     "TMO": {
       "ticker": "TMO",
@@ -3210,7 +3291,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 488.05999755859375,
-      "perf": []
+      "perf": [
+        7.53
+      ],
+      "prov": false
     },
     "TLN": {
       "ticker": "TLN",
@@ -3229,7 +3313,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 381.3550109863281,
-      "perf": []
+      "perf": [
+        -4.44
+      ],
+      "prov": false
     },
     "VNOM": {
       "ticker": "VNOM",
@@ -3248,7 +3335,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 45.81500053405762,
-      "perf": []
+      "perf": [
+        -11.61
+      ],
+      "prov": false
     },
     "KGS": {
       "ticker": "KGS",
@@ -3267,7 +3357,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 66.22999954223633,
-      "perf": []
+      "perf": [
+        4.44
+      ],
+      "prov": false
     },
     "V": {
       "ticker": "V",
@@ -3286,7 +3379,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 320.0449981689453,
-      "perf": []
+      "perf": [
+        12.38
+      ],
+      "prov": false
     },
     "TVTX": {
       "ticker": "TVTX",
@@ -3305,7 +3401,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 44,
-      "perf": []
+      "perf": [
+        25.29
+      ],
+      "prov": false
     },
     "300995.SZ": {
       "ticker": "300995.SZ",
@@ -3324,7 +3423,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 33.45000076293945,
-      "perf": []
+      "perf": [
+        -17.94
+      ],
+      "prov": false
     },
     "EXPE": {
       "ticker": "EXPE",
@@ -3343,7 +3445,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 227.3699951171875,
-      "perf": []
+      "perf": [
+        17.78
+      ],
+      "prov": false
     },
     "ZYME": {
       "ticker": "ZYME",
@@ -3362,7 +3467,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 24.21500015258789,
-      "perf": []
+      "perf": [
+        6.84
+      ],
+      "prov": false
     },
     "ABAT": {
       "ticker": "ABAT",
@@ -3381,7 +3489,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 3.8249499797821045,
-      "perf": []
+      "perf": [
+        -24.93
+      ],
+      "prov": false
     },
     "YUMC": {
       "ticker": "YUMC",
@@ -3400,7 +3511,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 43.404998779296875,
-      "perf": []
+      "perf": [
+        -3.75
+      ],
+      "prov": false
     },
     "ABSI": {
       "ticker": "ABSI",
@@ -3419,7 +3533,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 6.107499837875366,
-      "perf": []
+      "perf": [
+        78.98
+      ],
+      "prov": false
     },
     "FRAMERY": {
       "ticker": "FRAMERY",
@@ -3438,7 +3555,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 7.804999828338623,
-      "perf": []
+      "perf": [
+        -18.38
+      ],
+      "prov": false
     },
     "SONY": {
       "ticker": "SONY",
@@ -7155,64 +7275,69 @@
   "findings": {
     "factors": [
       {
-        "name": "KGV",
-        "spread": 17.6,
+        "name": "Analysten",
+        "spread": 11.9,
         "best": {
-          "k": "40+",
-          "avg": 15.7,
-          "n": 10
+          "k": "5-14",
+          "avg": 8.2,
+          "n": 77
         },
         "worst": {
-          "k": "15-25",
-          "avg": -1.9,
-          "n": 10
+          "k": "1-4",
+          "avg": -3.7,
+          "n": 43
         }
       },
       {
         "name": "Dividende",
-        "spread": 11.5,
+        "spread": 10.6,
         "best": {
-          "k": "4%+",
-          "avg": 6.5,
-          "n": 9
+          "k": "keine",
+          "avg": 5.8,
+          "n": 110
         },
         "worst": {
           "k": "2-4%",
-          "avg": -5,
-          "n": 10
+          "avg": -4.8,
+          "n": 14
         }
       },
       {
-        "name": "Analysten",
-        "spread": 11.5,
+        "name": "KGV",
+        "spread": 7.6,
         "best": {
-          "k": "5-14",
-          "avg": 8.4,
-          "n": 61
+          "k": "40+",
+          "avg": 8.3,
+          "n": 16
         },
         "worst": {
-          "k": "1-4",
-          "avg": -3.1,
-          "n": 35
+          "k": "15-25",
+          "avg": 0.7,
+          "n": 13
         }
       },
       {
         "name": "Kursziel",
-        "spread": 4.1,
+        "spread": 2.9,
         "best": {
           "k": "40%+",
-          "avg": 5.8,
-          "n": 91
+          "avg": 5.4,
+          "n": 105
         },
         "worst": {
           "k": "25-40%",
-          "avg": 1.7,
-          "n": 24
+          "avg": 2.5,
+          "n": 48
         }
       }
     ],
-    "combo": null,
-    "sampleSize": 120,
+    "combo": {
+      "f1": "Analysten 5-14",
+      "f2": "Dividende keine",
+      "avg": 9.4,
+      "n": 60
+    },
+    "sampleSize": 160,
     "maxMonths": 1,
     "provisional": false
   },

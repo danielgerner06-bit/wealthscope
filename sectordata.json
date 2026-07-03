@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-02",
-  "updatedAt": "2026-07-03T20:00:45.891Z",
+  "updated": "2026-07-03",
+  "updatedAt": "2026-07-03T20:39:59.687Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-01",
-      "sektorPsi": 0.0734,
+      "sektorPsi": 0.0727,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -390,39 +390,6 @@
       "miss": 0
     },
     {
-      "ticker": "ADMCM",
-      "name": "Admicom Oyj",
-      "yahoo": "ADMCM.HE",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-29",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-28",
-      "perf6m": -39.53,
-      "perf6mAt": "2026-07-03",
-      "perf1mBefore": -18.46,
-      "upside": 58,
-      "pe": 24.4,
-      "eps": 1.11,
-      "div": 1.18,
-      "enrichAt": "2026-07-03",
-      "sektorPsi": 0.0734,
-      "sektorPsiAtAdd": 0.0585,
-      "recheckAt": "2026-06-29",
-      "miss": 0
-    },
-    {
       "ticker": "ORS",
       "name": "Orsero S.p.A.",
       "yahoo": "ORS.MI",
@@ -483,7 +450,7 @@
       "eps": 1.11,
       "div": 1.26,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0734,
+      "sektorPsi": 0.0727,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -519,6 +486,39 @@
       "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-02",
+      "miss": 0
+    },
+    {
+      "ticker": "ADMCM",
+      "name": "Admicom Oyj",
+      "yahoo": "ADMCM.HE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-06-29",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-28",
+      "perf6m": -39.53,
+      "perf6mAt": "2026-07-03",
+      "perf1mBefore": -18.46,
+      "upside": 58,
+      "pe": 24.4,
+      "eps": 1.11,
+      "div": 1.18,
+      "enrichAt": "2026-07-03",
+      "sektorPsi": 0.0727,
+      "sektorPsiAtAdd": 0.0585,
+      "recheckAt": "2026-06-29",
       "miss": 0
     },
     {
@@ -615,7 +615,7 @@
       "eps": 1.34,
       "div": 2.44,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0734,
+      "sektorPsi": 0.0727,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -714,7 +714,7 @@
       "eps": 203.03,
       "div": 1,
       "enrichAt": "2026-07-02",
-      "sektorPsi": 0.0734,
+      "sektorPsi": 0.0727,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -981,7 +981,7 @@
       "eps": 5.01,
       "div": 5.08,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0734,
+      "sektorPsi": 0.0727,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -1013,7 +1013,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0734,
+      "sektorPsi": 0.0727,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-06-30",
       "miss": 0
@@ -1045,7 +1045,7 @@
       "eps": 0.1,
       "div": 0,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0734,
+      "sektorPsi": 0.0727,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-01",
       "miss": 0
@@ -1267,30 +1267,34 @@
   "news": {
     "items": [
       {
-        "text": "Weltmärkte 2026: Geopolitik, KI und Zinspolitik im Fokus",
-        "stamp": "02.07.26"
+        "text": "MDAX bewegt letztendlich im Plus",
+        "stamp": "03.07.26"
       },
       {
-        "text": "US-Arbeitsmarktbericht gibt Richtung vor – Chip-Werte schwach",
-        "stamp": "02.07.26"
+        "text": "TecDAX legt zum Ende des Freitagshandels zu",
+        "stamp": "03.07.26"
       },
       {
-        "text": "EZB erwägt Verdopplung der Mindestreserve zur Kostensenkung",
-        "stamp": "01.07.26"
+        "text": "Continental AG verkauft ContiTech Group Sector",
+        "stamp": "03.07.26"
+      },
+      {
+        "text": "E.ON-Aktie startet durch: DAX-Spitzenreiter",
+        "stamp": "03.07.26"
+      },
+      {
+        "text": "DAX und Euro-Stoxx-50 auf Allzeithoch zum Start",
+        "stamp": "03.07.26"
       }
     ],
     "date": "2026-07-03"
   },
   "scan": {
-    "universe": 8832,
-    "scanned": 8832,
-    "lastCursor": 997,
-    "candCursor": 262,
+    "universe": 8836,
+    "scanned": 8836,
+    "lastCursor": 1297,
+    "candCursor": 270,
     "candidates": [
-      "Schneider Electric SE",
-      "Stellantis N.V.",
-      "Cerevel Therapeutics Incorporated",
-      "Adecoagro S.A.",
       "Seagen Inc.",
       "Alnylam Pharmaceuticals, Inc.",
       "Expedia Group, Inc.",
@@ -1686,60 +1690,60 @@
       "Vishay Intertechnology, Inc.",
       "U.S. Energy Corp.",
       "Hallador Energy Company",
-      "McEwen Mining Inc."
+      "McEwen Mining Inc.",
+      "Pfisterer Holding AG",
+      "Cantourage Group SE",
+      "Cenit AG",
+      "SINGULUS TECHNOLOGIES AG"
     ],
     "noteCursor": 8,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 2,
     "notesDay": "2026-07-03",
     "seenBySector": {
-      "cons_cycl": 1119,
-      "cons_def": 571,
-      "materials": 785,
-      "health": 3242,
-      "finance": 2199,
-      "energy": 1011,
-      "hardware": 727,
-      "software": 2171,
-      "industrial": 941,
+      "cons_cycl": 1129,
+      "cons_def": 578,
+      "materials": 787,
+      "health": 3255,
+      "finance": 2220,
+      "energy": 1018,
+      "hardware": 731,
+      "software": 2193,
+      "industrial": 942,
       "utilities": 399,
-      "comm": 480,
+      "comm": 482,
       "ai_semi": 441,
       "realestate": 201
     },
     "pendingReject": [
-      "BFRI",
-      "BFST",
-      "BG",
-      "BGC",
-      "BGDE",
-      "BGMS",
-      "BGS",
-      "BGSF",
-      "BGSI",
-      "BH",
-      "BHB",
-      "BHC",
-      "BHE",
-      "BHF"
+      "BVS",
+      "BW",
+      "BWA",
+      "BWB",
+      "BWEN",
+      "BWFG",
+      "BWIN",
+      "BWLP",
+      "BWMN",
+      "BWMX"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 1119,
-      "cons_def": 572,
-      "materials": 785,
-      "health": 3243,
-      "finance": 2202,
-      "energy": 1012,
-      "hardware": 729,
-      "software": 2179,
-      "industrial": 947,
+      "cons_cycl": 1129,
+      "cons_def": 579,
+      "materials": 787,
+      "health": 3256,
+      "finance": 2223,
+      "energy": 1019,
+      "hardware": 733,
+      "software": 2201,
+      "industrial": 948,
       "utilities": 399,
-      "comm": 480,
+      "comm": 482,
       "ai_semi": 442,
       "realestate": 201
     },
-    "heavyAt": "2026-07-03T04:57:13.782Z",
+    "heavyAt": "2026-07-03T20:33:11.563Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1750,6 +1754,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-03T20:00:45.891Z"
+  }
 }
