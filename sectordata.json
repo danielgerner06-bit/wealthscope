@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-01",
-      "sektorPsi": 0.0737,
+      "sektorPsi": 0.0734,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": -0.28,
       "div": 0,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0017,
+      "sektorPsi": 0.0015,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -412,12 +412,12 @@
       "perf6m": -39.53,
       "perf6mAt": "2026-07-03",
       "perf1mBefore": -18.46,
-      "upside": 68,
-      "pe": 22.8,
+      "upside": 58,
+      "pe": 24.4,
       "eps": 1.11,
-      "div": 1.26,
-      "enrichAt": "2026-06-28",
-      "sektorPsi": 0.0737,
+      "div": 1.18,
+      "enrichAt": "2026-07-03",
+      "sektorPsi": 0.0734,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-06-29",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 1.64,
       "div": 3.26,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0029,
+      "sektorPsi": 0.0026,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 1.11,
       "div": 1.26,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0737,
+      "sektorPsi": 0.0734,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 0.72,
       "div": 2.94,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-06-30",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 1.13,
       "div": 3.86,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0064,
+      "sektorPsi": 0.009,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 1.34,
       "div": 2.44,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0737,
+      "sektorPsi": 0.0734,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 0.72,
       "div": 2.96,
       "enrichAt": "2026-07-01",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -681,7 +681,7 @@
       "eps": 2.23,
       "div": 1.77,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0064,
+      "sektorPsi": 0.009,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -714,9 +714,42 @@
       "eps": 203.03,
       "div": 1,
       "enrichAt": "2026-07-02",
-      "sektorPsi": 0.0737,
+      "sektorPsi": 0.0734,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-02",
+      "miss": 0
+    },
+    {
+      "ticker": "F3C.DE",
+      "name": "SFC Energy AG",
+      "yahoo": "F3C.DE",
+      "sector": "energy",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 5,
+      "strongBuyPct": 80,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-03",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-02",
+      "perf6m": 53.67,
+      "perf6mAt": "2026-07-02",
+      "perf1mBefore": -10.76,
+      "upside": 33,
+      "pe": null,
+      "eps": -0.06,
+      "div": 0,
+      "enrichAt": "2026-07-02",
+      "sektorPsi": 0.0052,
+      "sektorPsiAtAdd": 0.0045,
+      "recheckAt": "2026-07-03",
       "miss": 0
     },
     {
@@ -750,7 +783,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -783,7 +816,7 @@
       "eps": 2.27,
       "div": 4.82,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0017,
+      "sektorPsi": 0.0015,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -816,7 +849,7 @@
       "eps": 1.88,
       "div": 0.74,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -848,7 +881,7 @@
       "pe": null,
       "div": 0.09,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0023,
+      "sektorPsi": 0.0027,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -880,7 +913,7 @@
       "pe": null,
       "div": 1.02,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -916,7 +949,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0017,
+      "sektorPsi": 0.0015,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -948,7 +981,7 @@
       "eps": 5.01,
       "div": 5.08,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0737,
+      "sektorPsi": 0.0734,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-06-27",
       "miss": 0
@@ -980,7 +1013,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-06-29",
-      "sektorPsi": 0.0737,
+      "sektorPsi": 0.0734,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-06-30",
       "miss": 0
@@ -1012,41 +1045,10 @@
       "eps": 0.1,
       "div": 0,
       "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0737,
+      "sektorPsi": 0.0734,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-01",
       "miss": 0
-    },
-    {
-      "ticker": "F3C.DE",
-      "name": "SFC Energy AG",
-      "yahoo": "F3C.DE",
-      "sector": "energy",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 5,
-      "strongBuyPct": 80,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-02",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-07-02",
-      "perf6m": 53.67,
-      "perf6mAt": "2026-07-02",
-      "perf1mBefore": -10.76,
-      "upside": 33,
-      "pe": null,
-      "eps": -0.06,
-      "div": 0,
-      "enrichAt": "2026-07-02",
-      "sektorPsi": 0.0045,
-      "sektorPsiAtAdd": 0.0045
     }
   ],
   "psiHistory": [
@@ -1176,8 +1178,8 @@
       "date": "2026-06-14"
     },
     "cons_def": {
-      "text": "Defensive Konsumgüter profitieren leicht vom aktuellen Zinsumfeld, während breitere Sorgen die Nachfrage stützen. ORS sticht positiv hervor.",
-      "date": "2026-06-17"
+      "text": "Defensive Konsumwerte legen leicht zu, da unsichere Konjunkturaussichten defensive Sektoren begünstigen. ORS sticht hervor.",
+      "date": "2026-07-03"
     },
     "finance": {
       "text": "Banken leiden unter Zinsunsicherheit und Konjunktursorgen, trotz kurzfristiger Erholung. KI und Geopolitik spielen aktuell kaum eine Rolle.",
@@ -1238,8 +1240,8 @@
       "date": "2026-07-02"
     },
     "europe": {
-      "text": "Europas Wirtschaft zieht dank starker Konjunktur und sinkender Energiepreise an. Die Zinsen bleiben stabil, was Investitionen weiter fördert.",
-      "date": "2026-06-20"
+      "text": "Europa: Konjunktur schwächelt (-0,47% 30-Tage), trotz positiver 6-Monats-Performance (+5,47%). Geopolitische Unsicherheiten belasten die kurzfristige Entwicklung.",
+      "date": "2026-07-03"
     },
     "germany": {
       "text": "Die deutsche Konjunktur schwächelt: Die 30-Tage-Zinsentwicklung zeigt einen leichten Rückgang unter dem Normalniveau, was auf eine gedämpfte Wirtschaftstätigkeit hindeutet.",
@@ -1265,37 +1267,25 @@
   "news": {
     "items": [
       {
-        "text": "Samsung investiert 90 Mrd. in KI-Chips, greift Nvidia an.",
+        "text": "Weltmärkte 2026: Geopolitik, KI und Zinspolitik im Fokus",
         "stamp": "02.07.26"
       },
       {
-        "text": "KNDS-IPO geplatzt: Grüne kritisieren \"Gier einer Familie\".",
+        "text": "US-Arbeitsmarktbericht gibt Richtung vor – Chip-Werte schwach",
         "stamp": "02.07.26"
       },
       {
-        "text": "Yen-Krise: Bank of Japan pumpt Milliarden in den Markt.",
-        "stamp": "02.07.26"
-      },
-      {
-        "text": "Meta steigt ins Cloud-Geschäft ein: Konkurrenz für AWS.",
-        "stamp": "02.07.26"
-      },
-      {
-        "text": "Bitcoin: Muster macht Hoffnung auf Juli-Comeback.",
-        "stamp": "02.07.26"
-      },
-      {
-        "text": "US-Börsen uneinheitlich: Meta-Rally, Nasdaq-Rückgang.",
+        "text": "EZB erwägt Verdopplung der Mindestreserve zur Kostensenkung",
         "stamp": "01.07.26"
       }
     ],
-    "date": "2026-07-02"
+    "date": "2026-07-03"
   },
   "scan": {
-    "universe": 8834,
-    "scanned": 8834,
-    "lastCursor": 697,
-    "candCursor": 254,
+    "universe": 8832,
+    "scanned": 8832,
+    "lastCursor": 997,
+    "candCursor": 262,
     "candidates": [
       "Schneider Electric SE",
       "Stellantis N.V.",
@@ -1698,54 +1688,58 @@
       "Hallador Energy Company",
       "McEwen Mining Inc."
     ],
-    "noteCursor": 7,
-    "focusCursor": 7,
+    "noteCursor": 8,
+    "focusCursor": 0,
     "recheckCursor": 16,
-    "regionNoteCursor": 1,
-    "notesDay": "2026-07-02",
+    "regionNoteCursor": 2,
+    "notesDay": "2026-07-03",
     "seenBySector": {
-      "cons_cycl": 1112,
-      "cons_def": 570,
-      "materials": 779,
-      "health": 3217,
-      "finance": 2183,
-      "energy": 1009,
-      "hardware": 725,
-      "software": 2162,
-      "industrial": 934,
-      "utilities": 395,
-      "comm": 474,
-      "ai_semi": 438,
-      "realestate": 200
+      "cons_cycl": 1119,
+      "cons_def": 571,
+      "materials": 785,
+      "health": 3242,
+      "finance": 2199,
+      "energy": 1011,
+      "hardware": 727,
+      "software": 2171,
+      "industrial": 941,
+      "utilities": 399,
+      "comm": 480,
+      "ai_semi": 441,
+      "realestate": 201
     },
     "pendingReject": [
-      "ATCX",
-      "ATEC",
-      "ATEN",
-      "ATER",
-      "ATEX",
-      "ATHR",
-      "ATI",
-      "ATKR",
-      "ATLC",
-      "ATLN"
+      "BFRI",
+      "BFST",
+      "BG",
+      "BGC",
+      "BGDE",
+      "BGMS",
+      "BGS",
+      "BGSF",
+      "BGSI",
+      "BH",
+      "BHB",
+      "BHC",
+      "BHE",
+      "BHF"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 1112,
-      "cons_def": 571,
-      "materials": 779,
-      "health": 3218,
-      "finance": 2186,
-      "energy": 1010,
-      "hardware": 727,
-      "software": 2170,
-      "industrial": 940,
-      "utilities": 395,
-      "comm": 474,
-      "ai_semi": 439,
-      "realestate": 200
+      "cons_cycl": 1119,
+      "cons_def": 572,
+      "materials": 785,
+      "health": 3243,
+      "finance": 2202,
+      "energy": 1012,
+      "hardware": 729,
+      "software": 2179,
+      "industrial": 947,
+      "utilities": 399,
+      "comm": 480,
+      "ai_semi": 442,
+      "realestate": 201
     },
-    "heavyAt": "2026-07-02T10:14:39.946Z",
+    "heavyAt": "2026-07-03T04:57:13.782Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },

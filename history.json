@@ -17,7 +17,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 305.25,
-      "perf": []
+      "perf": [
+        -20.56
+      ],
+      "prov": false
     },
     "2603": {
       "ticker": "2603",
@@ -55,7 +58,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 1392,
-      "perf": []
+      "perf": [
+        2.85
+      ],
+      "prov": false
     },
     "4502": {
       "ticker": "4502",
@@ -74,7 +80,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 4865.5,
-      "perf": []
+      "perf": [
+        10.01
+      ],
+      "prov": false
     },
     "6723": {
       "ticker": "6723",
@@ -93,7 +102,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 4639.5,
-      "perf": []
+      "perf": [
+        -0.38
+      ],
+      "prov": false
     },
     "7203": {
       "ticker": "7203",
@@ -112,7 +124,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 2874.75,
-      "perf": []
+      "perf": [
+        -0.98
+      ],
+      "prov": false
     },
     "402340": {
       "ticker": "402340",
@@ -438,7 +453,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 28.65999984741211,
-      "perf": []
+      "perf": [
+        4.73
+      ],
+      "prov": false
     },
     "TRVI": {
       "ticker": "TRVI",
@@ -457,7 +475,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 13.5,
-      "perf": []
+      "perf": [
+        31.63
+      ],
+      "prov": false
     },
     "ACRS": {
       "ticker": "ACRS",
@@ -520,7 +541,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 38.209999084472656,
-      "perf": []
+      "perf": [
+        23.83
+      ],
+      "prov": false
     },
     "SMC": {
       "ticker": "SMC",
@@ -803,7 +827,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 6.650000095367432,
-      "perf": []
+      "perf": [
+        10.02
+      ],
+      "prov": false
     },
     "SLSR": {
       "ticker": "SLSR",
@@ -1130,7 +1157,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 4.590000152587891,
-      "perf": []
+      "perf": [
+        17.54
+      ],
+      "prov": false
     },
     "TRAK": {
       "ticker": "TRAK",
@@ -1149,7 +1179,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 10.460000038146973,
-      "perf": []
+      "perf": [
+        -4.31
+      ],
+      "prov": false
     },
     "UPBD": {
       "ticker": "UPBD",
@@ -1168,7 +1201,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 18.610000610351562,
-      "perf": []
+      "perf": [
+        11.59
+      ],
+      "prov": false
     },
     "SI": {
       "ticker": "SI",
@@ -1231,7 +1267,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 7.710000038146973,
-      "perf": []
+      "perf": [
+        -3.5
+      ],
+      "prov": false
     },
     "CRIS": {
       "ticker": "CRIS",
@@ -1404,7 +1443,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 57.7400016784668,
-      "perf": []
+      "perf": [
+        -5.19
+      ],
+      "prov": false
     },
     "SEPN": {
       "ticker": "SEPN",
@@ -1445,7 +1487,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 15.4399995803833,
-      "perf": []
+      "perf": [
+        25.23
+      ],
+      "prov": false
     },
     "VFF": {
       "ticker": "VFF",
@@ -1464,7 +1509,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 2.5,
-      "perf": []
+      "perf": [
+        -20.24
+      ],
+      "prov": false
     },
     "USAU": {
       "ticker": "USAU",
@@ -1483,7 +1531,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 15.8100004196167,
-      "perf": []
+      "perf": [
+        2.65
+      ],
+      "prov": false
     },
     "VTVT": {
       "ticker": "VTVT",
@@ -1502,7 +1553,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 33,
-      "perf": []
+      "perf": [
+        6.74
+      ],
+      "prov": false
     },
     "USAS": {
       "ticker": "USAS",
@@ -1521,7 +1575,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 6.429999828338623,
-      "perf": []
+      "perf": [
+        -18.11
+      ],
+      "prov": false
     },
     "INDV": {
       "ticker": "INDV",
@@ -1562,7 +1619,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 42.209999084472656,
-      "perf": []
+      "perf": [
+        -2.51
+      ],
+      "prov": false
     },
     "SSRM": {
       "ticker": "SSRM",
@@ -1779,7 +1839,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 157.97000122070312,
-      "perf": []
+      "perf": [
+        -1.1
+      ],
+      "prov": false
     },
     "UCAR": {
       "ticker": "UCAR",
@@ -1798,7 +1861,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 1.399999976158142,
-      "perf": []
+      "perf": [
+        -15.71
+      ],
+      "prov": false
     },
     "SUPN": {
       "ticker": "SUPN",
@@ -1905,7 +1971,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 313.55999755859375,
-      "perf": []
+      "perf": [
+        0.56
+      ],
+      "prov": false
     },
     "SION": {
       "ticker": "SION",
@@ -1968,7 +2037,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 180.19000244140625,
-      "perf": []
+      "perf": [
+        27.94
+      ],
+      "prov": false
     },
     "VINP": {
       "ticker": "VINP",
@@ -1987,7 +2059,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 10.109999656677246,
-      "perf": []
+      "perf": [
+        0.15
+      ],
+      "prov": false
     },
     "SDGR": {
       "ticker": "SDGR",
@@ -2072,7 +2147,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 3.309999942779541,
-      "perf": []
+      "perf": [
+        -4.97
+      ],
+      "prov": false
     },
     "VYX": {
       "ticker": "VYX",
@@ -2091,7 +2169,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 7.379999876022339,
-      "perf": []
+      "perf": [
+        20.28
+      ],
+      "prov": false
     },
     "VCEL": {
       "ticker": "VCEL",
@@ -2110,7 +2191,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 33.635000228881836,
-      "perf": []
+      "perf": [
+        32.6
+      ],
+      "prov": false
     },
     "USPH": {
       "ticker": "USPH",
@@ -2129,7 +2213,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 62.51499938964844,
-      "perf": []
+      "perf": [
+        16.1
+      ],
+      "prov": false
     },
     "VNCE": {
       "ticker": "VNCE",
@@ -2148,7 +2235,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 4.525000095367432,
-      "perf": []
+      "perf": [
+        50
+      ],
+      "prov": false
     },
     "URGN": {
       "ticker": "URGN",
@@ -2167,7 +2257,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 26.785000801086426,
-      "perf": []
+      "perf": [
+        42.78
+      ],
+      "prov": false
     },
     "UUUU": {
       "ticker": "UUUU",
@@ -2186,7 +2279,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 18.58000087738037,
-      "perf": []
+      "perf": [
+        -22.14
+      ],
+      "prov": false
     },
     "CRDF": {
       "ticker": "CRDF",
@@ -2205,7 +2301,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 1.4950000047683716,
-      "perf": []
+      "perf": [
+        -15.23
+      ],
+      "prov": false
     },
     "TGEN": {
       "ticker": "TGEN",
@@ -2246,7 +2345,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 5.674999952316284,
-      "perf": []
+      "perf": [
+        -15.94
+      ],
+      "prov": false
     },
     "ADPT": {
       "ticker": "ADPT",
@@ -2331,7 +2433,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 76.34500122070312,
-      "perf": []
+      "perf": [
+        2.48
+      ],
+      "prov": false
     },
     "USFD": {
       "ticker": "USFD",
@@ -2350,7 +2455,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 80.97500228881836,
-      "perf": []
+      "perf": [
+        25.42
+      ],
+      "prov": false
     },
     "SRRK": {
       "ticker": "SRRK",
@@ -2501,7 +2609,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 28.84999942779541,
-      "perf": []
+      "perf": [
+        -13.4
+      ],
+      "prov": false
     },
     "KNSA": {
       "ticker": "KNSA",
@@ -2520,7 +2631,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 47.67499923706055,
-      "perf": []
+      "perf": [
+        33.14
+      ],
+      "prov": false
     },
     "ICUI": {
       "ticker": "ICUI",
@@ -2539,7 +2653,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 131.05999755859375,
-      "perf": []
+      "perf": [
+        16.24
+      ],
+      "prov": false
     },
     "VLN": {
       "ticker": "VLN",
@@ -2558,7 +2675,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 3.3299999237060547,
-      "perf": []
+      "perf": [
+        -33.44
+      ],
+      "prov": false
     },
     "TGTX": {
       "ticker": "TGTX",
@@ -6934,13 +7054,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 68,
-      "pe": 22.8,
+      "upside": 58,
+      "pe": 24.4,
       "perf6mAtAdd": -39.53,
       "perf1mBefore": -18.46,
       "sektorPsiAtAdd": 0.0585,
       "analysts": 4,
-      "div": 1.26,
+      "div": 1.18,
       "seen": "2026-06-28",
       "seenMs": 1782604800000,
       "startPrice": 24.949999809265137,
@@ -7022,7 +7142,7 @@
       "pe": null,
       "perf6mAtAdd": 53.67,
       "perf1mBefore": -10.76,
-      "sektorPsiAtAdd": null,
+      "sektorPsiAtAdd": 0.0045,
       "analysts": 5,
       "div": 0,
       "seen": "2026-07-02",
@@ -7035,77 +7155,72 @@
   "findings": {
     "factors": [
       {
-        "name": "Analysten",
-        "spread": 14.5,
-        "best": {
-          "k": "15+",
-          "avg": 11.6,
-          "n": 15
-        },
-        "worst": {
-          "k": "1-4",
-          "avg": -2.9,
-          "n": 23
-        }
-      },
-      {
-        "name": "Dividende",
-        "spread": 10.8,
-        "best": {
-          "k": "keine",
-          "avg": 5.6,
-          "n": 63
-        },
-        "worst": {
-          "k": "2-4%",
-          "avg": -5.2,
-          "n": 6
-        }
-      },
-      {
         "name": "KGV",
-        "spread": 9.3,
+        "spread": 17.6,
         "best": {
           "k": "40+",
-          "avg": 7.7,
-          "n": 4
+          "avg": 15.7,
+          "n": 10
         },
         "worst": {
-          "k": "<15",
-          "avg": -1.6,
+          "k": "15-25",
+          "avg": -1.9,
           "n": 10
         }
       },
       {
+        "name": "Dividende",
+        "spread": 11.5,
+        "best": {
+          "k": "4%+",
+          "avg": 6.5,
+          "n": 9
+        },
+        "worst": {
+          "k": "2-4%",
+          "avg": -5,
+          "n": 10
+        }
+      },
+      {
+        "name": "Analysten",
+        "spread": 11.5,
+        "best": {
+          "k": "5-14",
+          "avg": 8.4,
+          "n": 61
+        },
+        "worst": {
+          "k": "1-4",
+          "avg": -3.1,
+          "n": 35
+        }
+      },
+      {
         "name": "Kursziel",
-        "spread": 3.4,
+        "spread": 4.1,
         "best": {
           "k": "40%+",
-          "avg": 4.9,
-          "n": 66
+          "avg": 5.8,
+          "n": 91
         },
         "worst": {
           "k": "25-40%",
-          "avg": 1.5,
-          "n": 12
+          "avg": 1.7,
+          "n": 24
         }
       }
     ],
-    "combo": {
-      "f1": "Analysten 15+",
-      "f2": "Dividende keine",
-      "avg": 13.6,
-      "n": 11
-    },
-    "sampleSize": 80,
+    "combo": null,
+    "sampleSize": 120,
     "maxMonths": 1,
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "Die Kombination \"Analysten 15+\" und \"Dividende keine\" erzielte mit 13,6% die beste Performance. Kursziele hatten mit 3,4% Spread kaum Einfluss.",
-    "date": "2026-07-02",
+    "text": "Analysten-Perlen mit 40%+ Kursziel-Aufschlag performten mit 5,8% am besten. Das KGV zeigte mit 17,6 Punkten die größte Streuung, aber kaum Einfluss.",
+    "date": "2026-07-03",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-02"
+  "kiDay": "2026-07-03"
 }
