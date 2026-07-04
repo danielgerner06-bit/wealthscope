@@ -4438,7 +4438,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 114.77999877929688,
-      "perf": []
+      "perf": [
+        -5.61
+      ],
+      "prov": false
     },
     "SFBS": {
       "ticker": "SFBS",
@@ -4457,7 +4460,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 76.75,
-      "perf": []
+      "perf": [
+        14.32
+      ],
+      "prov": false
     },
     "VIAV": {
       "ticker": "VIAV",
@@ -4476,7 +4482,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 52.920000076293945,
-      "perf": []
+      "perf": [
+        -16.1
+      ],
+      "prov": false
     },
     "SPOT": {
       "ticker": "SPOT",
@@ -4495,7 +4504,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 501.5,
-      "perf": []
+      "perf": [
+        -4.44
+      ],
+      "prov": false
     },
     "SFD": {
       "ticker": "SFD",
@@ -4514,7 +4526,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 26.030000686645508,
-      "perf": []
+      "perf": [
+        -5.14
+      ],
+      "prov": false
     },
     "TNL": {
       "ticker": "TNL",
@@ -4533,7 +4548,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 70.4800033569336,
-      "perf": []
+      "perf": [
+        8.62
+      ],
+      "prov": false
     },
     "CFG": {
       "ticker": "CFG",
@@ -4552,7 +4570,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 61.459999084472656,
-      "perf": []
+      "perf": [
+        16.04
+      ],
+      "prov": false
     },
     "VBK": {
       "ticker": "VBK",
@@ -4571,7 +4592,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 40.099998474121094,
-      "perf": []
+      "perf": [
+        -24.54
+      ],
+      "prov": false
     },
     "ABUS": {
       "ticker": "ABUS",
@@ -4590,7 +4614,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 4.24750018119812,
-      "perf": []
+      "perf": [
+        10.34
+      ],
+      "prov": false
     },
     "REGN": {
       "ticker": "REGN",
@@ -4609,7 +4636,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 611.5601501464844,
-      "perf": []
+      "perf": [
+        3.32
+      ],
+      "prov": false
     },
     "TCS.NS": {
       "ticker": "TCS.NS",
@@ -4628,7 +4658,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 2297.39990234375,
-      "perf": []
+      "perf": [
+        -9.98
+      ],
+      "prov": false
     },
     "SLS": {
       "ticker": "SLS",
@@ -4647,7 +4680,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 8.329999923706055,
-      "perf": []
+      "perf": [
+        69.57
+      ],
+      "prov": false
     },
     "TSSI": {
       "ticker": "TSSI",
@@ -4666,7 +4702,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 14.420000076293945,
-      "perf": []
+      "perf": [
+        -20.67
+      ],
+      "prov": false
     },
     "PVA": {
       "ticker": "PVA",
@@ -4685,7 +4724,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 43.279998779296875,
-      "perf": []
+      "perf": [
+        -1.12
+      ],
+      "prov": false
     },
     "ORSTED": {
       "ticker": "ORSTED",
@@ -4704,7 +4746,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 165.77499389648438,
-      "perf": []
+      "perf": [
+        -5.54
+      ],
+      "prov": false
     },
     "EVO": {
       "ticker": "EVO",
@@ -4723,7 +4768,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 16.8700008392334,
-      "perf": []
+      "perf": [
+        -5.66
+      ],
+      "prov": false
     },
     "MOD": {
       "ticker": "MOD",
@@ -4742,7 +4790,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 305.9600067138672,
-      "perf": []
+      "perf": [
+        -21.29
+      ],
+      "prov": false
     },
     "WKL": {
       "ticker": "WKL",
@@ -4761,7 +4812,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 105.29999923706055,
-      "perf": []
+      "perf": [
+        -11.36
+      ],
+      "prov": false
     },
     "YSN": {
       "ticker": "YSN",
@@ -4780,7 +4834,10 @@
       "seen": "2026-06-02",
       "seenMs": 1780358400000,
       "startPrice": 205.5,
-      "perf": []
+      "perf": [
+        -14.01
+      ],
+      "prov": false
     },
     "ALFA": {
       "ticker": "ALFA",
@@ -4799,7 +4856,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 530.8999938964844,
-      "perf": []
+      "perf": [
+        8.27
+      ],
+      "prov": false
     },
     "ING": {
       "ticker": "ING",
@@ -4818,7 +4878,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 26.515000343322754,
-      "perf": []
+      "perf": [
+        7.31
+      ],
+      "prov": false
     },
     "BNP": {
       "ticker": "BNP",
@@ -4837,7 +4900,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 93.81499862670898,
-      "perf": []
+      "perf": [
+        9.08
+      ],
+      "prov": false
     },
     "ENEL": {
       "ticker": "ENEL",
@@ -4856,7 +4922,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 9.528499603271484,
-      "perf": []
+      "perf": [
+        5.69
+      ],
+      "prov": false
     },
     "UBS": {
       "ticker": "UBS",
@@ -4875,7 +4944,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 37.720001220703125,
-      "perf": []
+      "perf": [
+        9.42
+      ],
+      "prov": false
     },
     "AXA": {
       "ticker": "AXA",
@@ -4894,7 +4966,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 39.404998779296875,
-      "perf": []
+      "perf": [
+        10.98
+      ],
+      "prov": false
     },
     "IBE": {
       "ticker": "IBE",
@@ -4913,7 +4988,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 19.52750015258789,
-      "perf": []
+      "perf": [
+        10.56
+      ],
+      "prov": false
     },
     "VNA": {
       "ticker": "VNA",
@@ -4932,7 +5010,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 82.09749984741211,
-      "perf": []
+      "perf": [
+        13.31
+      ],
+      "prov": false
     },
     "DB1": {
       "ticker": "DB1",
@@ -4951,7 +5032,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 241.5,
-      "perf": []
+      "perf": [
+        0.97
+      ],
+      "prov": false
     },
     "EON": {
       "ticker": "EON",
@@ -4970,7 +5054,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 17.949999809265137,
-      "perf": []
+      "perf": [
+        1.98
+      ],
+      "prov": false
     },
     "RWE": {
       "ticker": "RWE",
@@ -4989,7 +5076,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 56.1299991607666,
-      "perf": []
+      "perf": [
+        1.94
+      ],
+      "prov": false
     },
     "WCH": {
       "ticker": "WCH",
@@ -5008,7 +5098,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 105.29999923706055,
-      "perf": []
+      "perf": [
+        -11.36
+      ],
+      "prov": false
     },
     "VOW3": {
       "ticker": "VOW3",
@@ -5027,7 +5120,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 90.16999816894531,
-      "perf": []
+      "perf": [
+        -19.06
+      ],
+      "prov": false
     },
     "HEI": {
       "ticker": "HEI",
@@ -5046,7 +5142,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 180.1500015258789,
-      "perf": []
+      "perf": [
+        -4.97
+      ],
+      "prov": false
     },
     "EOAN": {
       "ticker": "EOAN",
@@ -5065,7 +5164,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 17.949999809265137,
-      "perf": []
+      "perf": [
+        1.98
+      ],
+      "prov": false
     },
     "DTG": {
       "ticker": "DTG",
@@ -5084,7 +5186,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 42.25,
-      "perf": []
+      "perf": [
+        3.42
+      ],
+      "prov": false
     },
     "DTE.DE": {
       "ticker": "DTE.DE",
@@ -5103,7 +5208,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 28.489999771118164,
-      "perf": []
+      "perf": [
+        -12.05
+      ],
+      "prov": false
     },
     "LIN.DE": {
       "ticker": "LIN.DE",
@@ -5122,7 +5230,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 430.5,
-      "perf": []
+      "perf": [
+        7.06
+      ],
+      "prov": false
     },
     "COK.DE": {
       "ticker": "COK.DE",
@@ -5141,7 +5252,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 28,
-      "perf": []
+      "perf": [
+        -12.75
+      ],
+      "prov": false
     },
     "SU": {
       "ticker": "SU",
@@ -5160,7 +5274,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 285.3000030517578,
-      "perf": []
+      "perf": [
+        -1.92
+      ],
+      "prov": false
     },
     "VIV.PA": {
       "ticker": "VIV.PA",
@@ -5179,7 +5296,10 @@
       "seen": "2026-06-03",
       "seenMs": 1780444800000,
       "startPrice": 2.333000063896179,
-      "perf": []
+      "perf": [
+        -3.34
+      ],
+      "prov": false
     },
     "ALV.DE": {
       "ticker": "ALV.DE",
@@ -7396,68 +7516,68 @@
     "factors": [
       {
         "name": "Analysten",
-        "spread": 12.5,
+        "spread": 10.2,
         "best": {
           "k": "5-14",
-          "avg": 8.7,
-          "n": 100
+          "avg": 7.4,
+          "n": 110
         },
         "worst": {
           "k": "1-4",
-          "avg": -3.8,
-          "n": 55
-        }
-      },
-      {
-        "name": "Dividende",
-        "spread": 10.4,
-        "best": {
-          "k": "keine",
-          "avg": 6.5,
-          "n": 137
-        },
-        "worst": {
-          "k": "2-4%",
-          "avg": -3.9,
-          "n": 18
-        }
-      },
-      {
-        "name": "KGV",
-        "spread": 8.6,
-        "best": {
-          "k": "40+",
-          "avg": 7.8,
-          "n": 18
-        },
-        "worst": {
-          "k": "15-25",
-          "avg": -0.8,
-          "n": 25
+          "avg": -2.8,
+          "n": 63
         }
       },
       {
         "name": "Kursziel",
-        "spread": 4.4,
+        "spread": 8.1,
         "best": {
           "k": "40%+",
           "avg": 6.6,
           "n": 118
         },
         "worst": {
-          "k": "25-40%",
-          "avg": 2.2,
-          "n": 64
+          "k": "<10%",
+          "avg": -1.5,
+          "n": 9
+        }
+      },
+      {
+        "name": "Dividende",
+        "spread": 8,
+        "best": {
+          "k": "keine",
+          "avg": 6.2,
+          "n": 145
+        },
+        "worst": {
+          "k": "2-4%",
+          "avg": -1.8,
+          "n": 30
+        }
+      },
+      {
+        "name": "KGV",
+        "spread": 5,
+        "best": {
+          "k": "<15",
+          "avg": 4.8,
+          "n": 40
+        },
+        "worst": {
+          "k": "15-25",
+          "avg": -0.2,
+          "n": 35
         }
       }
     ],
     "combo": {
       "f1": "Analysten 5-14",
-      "f2": "Dividende keine",
-      "avg": 10.3,
-      "n": 78
+      "f2": "Kursziel 40%+",
+      "avg": 10.8,
+      "n": 62
     },
-    "sampleSize": 200,
+    "sampleSize": 240,
     "maxMonths": 1,
     "provisional": false
   },
