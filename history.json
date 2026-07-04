@@ -6198,7 +6198,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 16.619999885559082,
-      "perf": []
+      "perf": [
+        7.61
+      ],
+      "prov": false
     },
     "RWE.DE": {
       "ticker": "RWE.DE",
@@ -6217,7 +6220,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 56.65999984741211,
-      "perf": []
+      "perf": [
+        2.39
+      ],
+      "prov": false
     },
     "BNP.PA": {
       "ticker": "BNP.PA",
@@ -6236,7 +6242,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 93.51499938964844,
-      "perf": []
+      "perf": [
+        9.45
+      ],
+      "prov": false
     },
     "IBE.MC": {
       "ticker": "IBE.MC",
@@ -6255,7 +6264,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 19.574999809265137,
-      "perf": []
+      "perf": [
+        10.53
+      ],
+      "prov": false
     },
     "UBSG.SW": {
       "ticker": "UBSG.SW",
@@ -6274,7 +6286,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 37.454999923706055,
-      "perf": []
+      "perf": [
+        9.42
+      ],
+      "prov": false
     },
     "INGA.AS": {
       "ticker": "INGA.AS",
@@ -6293,7 +6308,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 26.3125,
-      "perf": []
+      "perf": [
+        7.58
+      ],
+      "prov": false
     },
     "DB1.DE": {
       "ticker": "DB1.DE",
@@ -6312,7 +6330,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 244.04999542236328,
-      "perf": []
+      "perf": [
+        1.24
+      ],
+      "prov": false
     },
     "214450.KS": {
       "ticker": "214450.KS",
@@ -6331,7 +6352,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 294250,
-      "perf": []
+      "perf": [
+        20.74
+      ],
+      "prov": false
     },
     "9065.T": {
       "ticker": "9065.T",
@@ -6350,7 +6374,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 8785.5,
-      "perf": []
+      "perf": [
+        -0.16
+      ],
+      "prov": false
     },
     "2603.TW": {
       "ticker": "2603.TW",
@@ -6369,7 +6396,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 236.5,
-      "perf": []
+      "perf": [
+        -19.39
+      ],
+      "prov": false
     },
     "402340.KS": {
       "ticker": "402340.KS",
@@ -6388,7 +6418,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 1301000,
-      "perf": []
+      "perf": [
+        15.68
+      ],
+      "prov": false
     },
     "034730.KS": {
       "ticker": "034730.KS",
@@ -6407,7 +6440,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 662500,
-      "perf": []
+      "perf": [
+        2.77
+      ],
+      "prov": false
     },
     "001740.KS": {
       "ticker": "001740.KS",
@@ -6426,7 +6462,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 12360,
-      "perf": []
+      "perf": [
+        -25.78
+      ],
+      "prov": false
     },
     "NBIS": {
       "ticker": "NBIS",
@@ -6445,7 +6484,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 255.48500061035156,
-      "perf": []
+      "perf": [
+        -11.63
+      ],
+      "prov": false
     },
     "FRE": {
       "ticker": "FRE",
@@ -6464,7 +6506,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 36.314998626708984,
-      "perf": []
+      "perf": [
+        15.28
+      ],
+      "prov": false
     },
     "MP": {
       "ticker": "MP",
@@ -6483,7 +6528,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 67.36250305175781,
-      "perf": []
+      "perf": [
+        -17.82
+      ],
+      "prov": false
     },
     "SND": {
       "ticker": "SND",
@@ -6502,7 +6550,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 282.65000915527344,
-      "perf": []
+      "perf": [
+        -1.37
+      ],
+      "prov": false
     },
     "SMHN": {
       "ticker": "SMHN",
@@ -6521,7 +6572,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 96.25,
-      "perf": []
+      "perf": [
+        -8.83
+      ],
+      "prov": false
     },
     "CBK": {
       "ticker": "CBK",
@@ -6540,7 +6594,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 36.53999900817871,
-      "perf": []
+      "perf": [
+        3.1
+      ],
+      "prov": false
     },
     "COK": {
       "ticker": "COK",
@@ -6559,7 +6616,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 27.425000190734863,
-      "perf": []
+      "perf": [
+        -10.75
+      ],
+      "prov": false
     },
     "ABP": {
       "ticker": "ABP",
@@ -6578,7 +6638,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 5.199999809265137,
-      "perf": []
+      "perf": [
+        12.02
+      ],
+      "prov": false
     },
     "GLE": {
       "ticker": "GLE",
@@ -6597,7 +6660,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 70.7249984741211,
-      "perf": []
+      "perf": [
+        10.2
+      ],
+      "prov": false
     },
     "RI": {
       "ticker": "RI",
@@ -6616,7 +6682,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 61.01999855041504,
-      "perf": []
+      "perf": [
+        4.6
+      ],
+      "prov": false
     },
     "BEI": {
       "ticker": "BEI",
@@ -6635,7 +6704,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 67.43000030517578,
-      "perf": []
+      "perf": [
+        13.38
+      ],
+      "prov": false
     },
     "RHM": {
       "ticker": "RHM",
@@ -6654,7 +6726,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 1195.2999877929688,
-      "perf": []
+      "perf": [
+        -8.01
+      ],
+      "prov": false
     },
     "SAX": {
       "ticker": "SAX",
@@ -6673,7 +6748,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 35.40999984741211,
-      "perf": []
+      "perf": [
+        -1.47
+      ],
+      "prov": false
     },
     "CDA": {
       "ticker": "CDA",
@@ -6692,7 +6770,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 22.175000190734863,
-      "perf": []
+      "perf": [
+        0.9
+      ],
+      "prov": false
     },
     "SL": {
       "ticker": "SL",
@@ -6711,7 +6792,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 38.60000038146973,
-      "perf": []
+      "perf": [
+        -5.91
+      ],
+      "prov": false
     },
     "AOF.DE": {
       "ticker": "AOF.DE",
@@ -6730,7 +6814,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 78.29999923706055,
-      "perf": []
+      "perf": [
+        -8.16
+      ],
+      "prov": false
     },
     "SMHN.DE": {
       "ticker": "SMHN.DE",
@@ -6749,7 +6836,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 96.25,
-      "perf": []
+      "perf": [
+        -8.83
+      ],
+      "prov": false
     },
     "TPE.DE": {
       "ticker": "TPE.DE",
@@ -6768,7 +6858,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 43.06999969482422,
-      "perf": []
+      "perf": [
+        -4.54
+      ],
+      "prov": false
     },
     "CRH": {
       "ticker": "CRH",
@@ -6787,7 +6880,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 106.2249984741211,
-      "perf": []
+      "perf": [
+        0.44
+      ],
+      "prov": false
     },
     "EOAN.DE": {
       "ticker": "EOAN.DE",
@@ -6806,7 +6902,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 18.082499504089355,
-      "perf": []
+      "perf": [
+        3.69
+      ],
+      "prov": false
     },
     "KTN.DE": {
       "ticker": "KTN.DE",
@@ -6825,9 +6924,12 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 23.369999885559082,
-      "perf": [],
+      "perf": [
+        0
+      ],
       "strongBuyPct": 71,
-      "sektorPsiAtAdd": 0.0095
+      "sektorPsiAtAdd": 0.0095,
+      "prov": false
     },
     "A214450": {
       "ticker": "A214450",
@@ -6846,7 +6948,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 293500,
-      "perf": []
+      "perf": [
+        20.74
+      ],
+      "prov": false
     },
     "A001740": {
       "ticker": "A001740",
@@ -6865,7 +6970,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 12925,
-      "perf": []
+      "perf": [
+        -25.78
+      ],
+      "prov": false
     },
     "AIR.PA": {
       "ticker": "AIR.PA",
@@ -6884,7 +6992,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 173.1500015258789,
-      "perf": []
+      "perf": [
+        15.83
+      ],
+      "prov": false
     },
     "SU.PA": {
       "ticker": "SU.PA",
@@ -6903,7 +7014,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 282.65000915527344,
-      "perf": []
+      "perf": [
+        -1.37
+      ],
+      "prov": false
     },
     "SIE.DE": {
       "ticker": "SIE.DE",
@@ -6922,7 +7036,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 273.5249938964844,
-      "perf": []
+      "perf": [
+        3.11
+      ],
+      "prov": false
     },
     "ABBN.SW": {
       "ticker": "ABBN.SW",
@@ -6941,7 +7058,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 85.11000061035156,
-      "perf": []
+      "perf": [
+        1.76
+      ],
+      "prov": false
     },
     "SAF.PA": {
       "ticker": "SAF.PA",
@@ -7630,74 +7750,94 @@
       "startPrice": 19.945000648498535,
       "perf": [],
       "outperformPct": null
+    },
+    "JDC": {
+      "ticker": "JDC",
+      "name": "JDC Group AG",
+      "yahoo": "JDC.DE",
+      "sector": "finance",
+      "region": "europe",
+      "buyPct": 100,
+      "strongBuyPct": 100,
+      "upside": 46,
+      "pe": 47.7,
+      "perf6mAtAdd": -13.58,
+      "perf1mBefore": 11.41,
+      "sektorPsiAtAdd": null,
+      "analysts": 2,
+      "div": 0,
+      "seen": "2026-07-04",
+      "seenMs": 1783123200000,
+      "startPrice": 22.949999809265137,
+      "perf": []
     }
   },
   "findings": {
     "factors": [
       {
         "name": "Kursziel",
-        "spread": 9.8,
+        "spread": 10.6,
         "best": {
           "k": "40%+",
           "avg": 6.8,
-          "n": 123
+          "n": 131
         },
         "worst": {
           "k": "<10%",
-          "avg": -3,
-          "n": 17
+          "avg": -3.8,
+          "n": 32
         }
       },
       {
         "name": "Analysten",
-        "spread": 9.7,
+        "spread": 7.7,
         "best": {
           "k": "5-14",
-          "avg": 6.9,
-          "n": 120
+          "avg": 5.5,
+          "n": 140
         },
         "worst": {
           "k": "1-4",
-          "avg": -2.8,
-          "n": 68
+          "avg": -2.2,
+          "n": 70
         }
       },
       {
         "name": "Dividende",
-        "spread": 7.2,
+        "spread": 6,
         "best": {
           "k": "keine",
-          "avg": 5.9,
-          "n": 157
+          "avg": 5.6,
+          "n": 159
         },
         "worst": {
           "k": "2-4%",
-          "avg": -1.3,
-          "n": 37
+          "avg": -0.4,
+          "n": 48
         }
       },
       {
         "name": "KGV",
-        "spread": 5.1,
+        "spread": 4.1,
         "best": {
           "k": "<15",
-          "avg": 5.1,
-          "n": 47
+          "avg": 4.8,
+          "n": 59
         },
         "worst": {
-          "k": "15-25",
-          "avg": 0,
-          "n": 42
+          "k": "25-40",
+          "avg": 0.7,
+          "n": 49
         }
       }
     ],
     "combo": {
       "f1": "Kursziel 40%+",
       "f2": "Analysten 5-14",
-      "avg": 10.7,
-      "n": 65
+      "avg": 10.5,
+      "n": 69
     },
-    "sampleSize": 280,
+    "sampleSize": 320,
     "maxMonths": 1,
     "provisional": false
   },
