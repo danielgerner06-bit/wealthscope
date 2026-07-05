@@ -3,6 +3,11 @@
   let HIST = null, SECT = null, REG = null, chart = null;
   let view = 'bars';                 // 'bars' | 'line'
   let xFactor = 'pe';
+  // Alle Perlen VOR diesem Datum wurden fehlerhaft gefunden (falsche frühe Läufe) und
+  // gehören NICHT in die Analyse. Erst ab dem 5.6.2026 sind die Funde korrekt (die 6
+  // ältesten aktuellen Perlen: Smartbroker, All for One, Init, Kontron, Hypoport,
+  // innoscripta). Die Alt-Einträge bleiben in history.json (für PSI/Verteilung).
+  const PEARL_CUTOFF = '2026-06-05';
   let factorMonth = 1;               // gewählter Monat m -> perf[m-1] (Performance seit Aufnahme)
   // Performance-Funktion für Faktor-Kurve & -Wichtigkeit beim gewählten Monat
   const perfForMonth = s => (s.perf || [])[factorMonth - 1] ?? null;
@@ -36,7 +41,9 @@
     // die bleiben für PSI/Verteilung erhalten, gehören aber NICHT in die Faktor-Analyse.
     // Zusätzlich: nur Perlen mit mindestens einem echten Performance-Wert (monthsOf>0);
     // frisch aufgenommene (perf:[] leer) reifen erst ~1 Monat, bis echte Monatswerte da sind.
-    HIST = Object.values(h.entries || {}).filter(x => x.buyPct === 100 && monthsOf(x) > 0);
+    // Und: nur korrekt gefundene Perlen ab PEARL_CUTOFF (frühere Funde waren fehlerhaft).
+    HIST = Object.values(h.entries || {})
+      .filter(x => x.buyPct === 100 && monthsOf(x) > 0 && (x.seen || '') >= PEARL_CUTOFF);
     SECT = d.sectors || []; REG = d.regions || [];
     // Eingefrorenen Sektor-PSI bei Aufnahme (×1000, für die Bündelung) je Ticker anhängen.
     const psiByTicker = {};
@@ -58,17 +65,22 @@
   };
   const flabel = key => (FACTORS.find(f => f.key === key) || {}).label || key;
 
-  /* ---------- Filter ---------- */
+  /* ---------- Filter ----------
+     Alle Wert-Filter sind Doppelregler (von–bis). Je Faktor gibt es filt[key+'Min'] und
+     filt[key+'Max'] (null = jeweilige Seite offen). RANGE_FIELDS ordnet den Filter-Key
+     dem Feld der Aktie zu. */
+  const RANGE_FIELDS = { pe: 'pe', sbuy: 'strongBuyPct', upside: 'upside', div: 'div', analysts: 'analysts' };
   function passes(s) {
     if (filt.sector && s.sector !== filt.sector) return false;
     if (filt.region && s.region !== filt.region) return false;
-    if (filt.peMin != null && !(s.pe != null && s.pe >= filt.peMin)) return false;
-    if (filt.peMax != null && !(s.pe != null && s.pe <= filt.peMax)) return false;
-    if (filt.buy != null && !(s.buyPct != null && s.buyPct >= filt.buy)) return false;
-    if (filt.sbuy != null && !(s.strongBuyPct != null && s.strongBuyPct >= filt.sbuy)) return false;
-    if (filt.upside != null && !(s.upside != null && s.upside >= filt.upside)) return false;
-    if (filt.div != null && !(s.div != null && s.div >= filt.div)) return false;
-    if (filt.analysts != null && !(s.analysts != null && s.analysts >= filt.analysts)) return false;
+    for (const [key, field] of Object.entries(RANGE_FIELDS)) {
+      const lo = filt[key + 'Min'], hi = filt[key + 'Max'];
+      if (lo == null && hi == null) continue;
+      const v = s[field];
+      if (v == null) return false;                 // Wert fehlt, Filter aktiv -> raus
+      if (lo != null && v < lo) return false;
+      if (hi != null && v > hi) return false;
+    }
     return true;
   }
 
@@ -326,61 +338,40 @@
     el.textContent = txt || 'Die KI nennt hier die stärksten Faktor-Kombinationen, sobald der Backtest läuft. Aktuell liegt erst ein vorläufiger 1-Monats-Wert je Perle vor; die Aussage aktualisiert sich monatlich.';
   }
 
-  /* ---------- KGV-Doppelregler (von/bis) ---------- */
-  const PE_LO = 0, PE_HI = 60;       // HI = offenes Ende ("kein Limit")
-  function updatePeRange() {
-    const lo = document.getElementById('afPeMin'), hi = document.getElementById('afPeMax');
-    let a = +lo.value, b = +hi.value;
-    if (a > b) { if (document.activeElement === lo) b = a, hi.value = b; else a = b, lo.value = a; }   // Kreuzen verhindern
-    // Filterwerte: an den Endanschlägen = offen (null)
-    filt.peMin = a > PE_LO ? a : null;
-    filt.peMax = b < PE_HI ? b : null;
-    // Füllbalken + Beschriftung
-    const fill = document.getElementById('afPeFill');
-    const span = PE_HI - PE_LO;
-    fill.style.left = ((a - PE_LO) / span * 100) + '%';
-    fill.style.right = ((PE_HI - b) / span * 100) + '%';
-    const lbl = document.getElementById('afPeVal');
-    lbl.textContent = (a <= PE_LO && b >= PE_HI) ? 'alle'
-      : (a <= PE_LO ? '≤ ' + b : (b >= PE_HI ? '≥ ' + a : a + '–' + b));
-  }
-  function wirePeRange() {
-    const lo = document.getElementById('afPeMin'), hi = document.getElementById('afPeMax');
-    const on = () => { updatePeRange(); render(); };
-    lo.addEventListener('input', on); hi.addEventListener('input', on);
-    updatePeRange();
-  }
-  function resetPeRange() {
-    document.getElementById('afPeMin').value = PE_LO;
-    document.getElementById('afPeMax').value = PE_HI;
-    updatePeRange();
-  }
-
-  /* ---------- Einzelregler (Mindestwert) für alle übrigen Faktoren ----------
-     Jede .ana-range[data-min-range] wird zu einem Schieberegler: am linken Anschlag
-     (= Minimum) ist der Filter „aus" (null), sonst gilt „Faktor ≥ Wert". Füllbalken +
-     Beschriftung werden live aktualisiert. Registriert einen Reset-Callback für „Filter
-     zurücksetzen". */
-  const minSliders = [];   // {reset} je Regler — für den Clear-Button
-  function wireMinRange(box) {
+  /* ---------- Doppelregler (von–bis) für ALLE Faktoren ----------
+     Jede .ana-range[data-range] wird zu einem Schieberegler mit ZWEI Griffen (Minimum
+     und Maximum), genau wie das KGV. An den Endanschlägen ist die jeweilige Seite „offen"
+     (null): Griff ganz links = kein Minimum, Griff ganz rechts = kein Maximum. Der Filter
+     schreibt filt[key+'Min'] / filt[key+'Max']. Füllbalken + Beschriftung live.
+     Registriert einen Reset-Callback für „Filter zurücksetzen". */
+  const rangeSliders = [];   // {reset} je Regler — für den Clear-Button
+  function wireRange(box) {
     const key = box.dataset.key;
     const lo = +box.dataset.min, hi = +box.dataset.max;
-    const unit = box.dataset.unit || '', prefix = box.dataset.prefix || '≥ ', off = box.dataset.off || 'alle';
-    const input = box.querySelector('input[type="range"]');
+    const unit = box.dataset.unit || '', off = box.dataset.off || 'alle';
+    const span = (hi - lo) || 1;
+    const inMin = box.querySelector('input.range-min');
+    const inMax = box.querySelector('input.range-max');
     const fill = box.querySelector('.ana-range-fill');
     const lbl = box.querySelector('.ana-range-label b');
-    const span = (hi - lo) || 1;
     const fmt = v => (Math.round(v * 10) / 10).toString();
-    const update = () => {
-      const v = +input.value;
-      filt[key] = v > lo ? v : null;                 // linker Anschlag = Filter aus
-      fill.style.left = '0%';
-      fill.style.right = ((hi - v) / span * 100) + '%';
-      lbl.textContent = v > lo ? prefix + fmt(v) + unit : off;
+    const update = e => {
+      let a = +inMin.value, b = +inMax.value;
+      // Kreuzen der Griffe verhindern (der gerade bewegte Griff schiebt den anderen mit).
+      if (a > b) { if (e && e.target === inMin) { b = a; inMax.value = b; } else { a = b; inMin.value = a; } }
+      filt[key + 'Min'] = a > lo ? a : null;     // linker Anschlag = kein Minimum
+      filt[key + 'Max'] = b < hi ? b : null;     // rechter Anschlag = kein Maximum
+      fill.style.left = ((a - lo) / span * 100) + '%';
+      fill.style.right = ((hi - b) / span * 100) + '%';
+      lbl.textContent = (a <= lo && b >= hi) ? off
+        : (a <= lo ? '≤ ' + fmt(b) + unit
+        : (b >= hi ? '≥ ' + fmt(a) + unit
+        : fmt(a) + '–' + fmt(b) + unit));
     };
-    input.addEventListener('input', () => { update(); render(); });
+    inMin.addEventListener('input', e => { update(e); render(); });
+    inMax.addEventListener('input', e => { update(e); render(); });
     update();
-    minSliders.push({ reset: () => { input.value = lo; update(); } });
+    rangeSliders.push({ reset: () => { inMin.value = lo; inMax.value = hi; update(); } });
   }
 
   /* ---------- Wiring ---------- */
@@ -392,14 +383,12 @@
   function wire() {
     document.getElementById('afSector').addEventListener('change', e => { filt.sector = e.target.value || null; render(); });
     document.getElementById('afRegion').addEventListener('change', e => { filt.region = e.target.value || null; render(); });
-    wirePeRange();
-    // Alle übrigen Faktoren als Einzelregler (Kauf, Strong Buy, Ziel, Div, Analysten).
-    document.querySelectorAll('#anaFilters .ana-range[data-min-range]').forEach(wireMinRange);
+    // Alle Wert-Faktoren als Doppelregler (KGV, Strong Buy, Ziel, Dividende, Analysten).
+    document.querySelectorAll('#anaFilters .ana-range[data-range]').forEach(wireRange);
     document.getElementById('afClear').addEventListener('click', () => {
       Object.keys(filt).forEach(k => delete filt[k]);
       document.getElementById('afSector').value = ''; document.getElementById('afRegion').value = '';
-      resetPeRange();
-      minSliders.forEach(s => s.reset());
+      rangeSliders.forEach(s => s.reset());
       render();
     });
     // Diagramm-Toggle: Faktor-Kurve blendet die Wert-Filter aus (nur Monat zählt dort),

@@ -709,39 +709,36 @@
         <div class="ana-filters" id="anaFilters">
           <label>Sektor<select id="afSector"><option value="">alle</option></select></label>
           <label>Region<select id="afRegion"><option value="">alle</option></select></label>
-          <!-- KGV: Doppelregler (von–bis, „höchstens"). Alle anderen: Einzelregler (Mindestwert). -->
-          <div class="ana-range" id="afPeRange">
-            <span class="ana-range-label">KGV <b id="afPeVal">alle</b></span>
-            <div class="ana-range-track" id="afPeTrack">
-              <div class="ana-range-fill" id="afPeFill"></div>
-              <input type="range" id="afPeMin" min="0" max="60" step="1" value="0" aria-label="KGV von">
-              <input type="range" id="afPeMax" min="0" max="60" step="1" value="60" aria-label="KGV bis">
-            </div>
-          </div>
-          <div class="ana-range" data-min-range data-key="buy" data-min="0" data-max="100" data-step="1" data-unit="%" data-prefix="≥ " data-off="alle">
-            <span class="ana-range-label">Kauf ≥% <b>alle</b></span>
+          <!-- Alle Wert-Faktoren als Doppelregler (von–bis). Beide Griffe: min + max. -->
+          <div class="ana-range" data-range data-key="pe" data-min="0" data-max="60" data-unit="">
+            <span class="ana-range-label">KGV <b>alle</b></span>
             <div class="ana-range-track"><div class="ana-range-fill"></div>
-              <input type="range" min="0" max="100" step="1" value="0" aria-label="Kauf mindestens %"></div>
+              <input type="range" class="range-min" min="0" max="60" step="1" value="0" aria-label="KGV von">
+              <input type="range" class="range-max" min="0" max="60" step="1" value="60" aria-label="KGV bis"></div>
           </div>
-          <div class="ana-range" data-min-range data-key="sbuy" data-min="0" data-max="100" data-step="5" data-unit="%" data-prefix="≥ " data-off="alle">
-            <span class="ana-range-label">Strong&nbsp;Buy ≥% <b>alle</b></span>
+          <div class="ana-range" data-range data-key="sbuy" data-min="0" data-max="100" data-unit="%">
+            <span class="ana-range-label">Strong&nbsp;Buy <b>alle</b></span>
             <div class="ana-range-track"><div class="ana-range-fill"></div>
-              <input type="range" min="0" max="100" step="5" value="0" aria-label="Strong Buy mindestens %"></div>
+              <input type="range" class="range-min" min="0" max="100" step="5" value="0" aria-label="Strong Buy von %">
+              <input type="range" class="range-max" min="0" max="100" step="5" value="100" aria-label="Strong Buy bis %"></div>
           </div>
-          <div class="ana-range" data-min-range data-key="upside" data-min="0" data-max="100" data-step="5" data-unit="%" data-prefix="≥ " data-off="alle">
-            <span class="ana-range-label">Ziel ≥% <b>alle</b></span>
+          <div class="ana-range" data-range data-key="upside" data-min="0" data-max="100" data-unit="%">
+            <span class="ana-range-label">Ziel <b>alle</b></span>
             <div class="ana-range-track"><div class="ana-range-fill"></div>
-              <input type="range" min="0" max="100" step="5" value="0" aria-label="Kursziel-Potenzial mindestens %"></div>
+              <input type="range" class="range-min" min="0" max="100" step="5" value="0" aria-label="Kursziel-Potenzial von %">
+              <input type="range" class="range-max" min="0" max="100" step="5" value="100" aria-label="Kursziel-Potenzial bis %"></div>
           </div>
-          <div class="ana-range" data-min-range data-key="div" data-min="0" data-max="12" data-step="0.5" data-unit="%" data-prefix="≥ " data-off="alle">
-            <span class="ana-range-label">Div ≥% <b>alle</b></span>
+          <div class="ana-range" data-range data-key="div" data-min="0" data-max="12" data-unit="%">
+            <span class="ana-range-label">Div <b>alle</b></span>
             <div class="ana-range-track"><div class="ana-range-fill"></div>
-              <input type="range" min="0" max="12" step="0.5" value="0" aria-label="Dividende mindestens %"></div>
+              <input type="range" class="range-min" min="0" max="12" step="0.5" value="0" aria-label="Dividende von %">
+              <input type="range" class="range-max" min="0" max="12" step="0.5" value="12" aria-label="Dividende bis %"></div>
           </div>
-          <div class="ana-range" data-min-range data-key="analysts" data-min="0" data-max="45" data-step="1" data-unit="" data-prefix="≥ " data-off="alle">
-            <span class="ana-range-label">Analyst ≥ <b>alle</b></span>
+          <div class="ana-range" data-range data-key="analysts" data-min="0" data-max="45" data-unit="">
+            <span class="ana-range-label">Analysten <b>alle</b></span>
             <div class="ana-range-track"><div class="ana-range-fill"></div>
-              <input type="range" min="0" max="45" step="1" value="0" aria-label="Analysten mindestens"></div>
+              <input type="range" class="range-min" min="0" max="45" step="1" value="0" aria-label="Analysten von">
+              <input type="range" class="range-max" min="0" max="45" step="1" value="45" aria-label="Analysten bis"></div>
           </div>
           <button class="sek-filter-clear" id="afClear" type="button" title="Filter zurücksetzen" aria-label="Filter zurücksetzen">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v5M14 11v5"/></svg>
