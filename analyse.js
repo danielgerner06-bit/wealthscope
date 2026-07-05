@@ -31,10 +31,12 @@
       fetch('history.json?v=' + Date.now()).then(r => r.ok ? r.json() : { entries: {} }).catch(() => ({ entries: {} })),
       fetch('sectordata.json?v=' + Date.now()).then(r => r.json()).catch(() => ({})),
     ]);
-    // Nur Perlen mit mindestens einem echten Performance-Wert zählen für die Analyse.
-    // Frisch aufgenommene Perlen (perf:[] leer) haben noch keine auswertbaren Daten ->
-    // Analyse bleibt "0/0", bis nach ~1 Monat die ersten echten Monatswerte reifen.
-    HIST = Object.values(h.entries || {}).filter(x => monthsOf(x) > 0);
+    // NUR echte Perlen analysieren: eine Perle ist eine Aktie mit 100% Kaufempfehlung.
+    // history.json speichert AUCH schon geprüfte Aktien, die (noch) keine 100% haben —
+    // die bleiben für PSI/Verteilung erhalten, gehören aber NICHT in die Faktor-Analyse.
+    // Zusätzlich: nur Perlen mit mindestens einem echten Performance-Wert (monthsOf>0);
+    // frisch aufgenommene (perf:[] leer) reifen erst ~1 Monat, bis echte Monatswerte da sind.
+    HIST = Object.values(h.entries || {}).filter(x => x.buyPct === 100 && monthsOf(x) > 0);
     SECT = d.sectors || []; REG = d.regions || [];
     // Eingefrorenen Sektor-PSI bei Aufnahme (×1000, für die Bündelung) je Ticker anhängen.
     const psiByTicker = {};
@@ -354,6 +356,33 @@
     updatePeRange();
   }
 
+  /* ---------- Einzelregler (Mindestwert) für alle übrigen Faktoren ----------
+     Jede .ana-range[data-min-range] wird zu einem Schieberegler: am linken Anschlag
+     (= Minimum) ist der Filter „aus" (null), sonst gilt „Faktor ≥ Wert". Füllbalken +
+     Beschriftung werden live aktualisiert. Registriert einen Reset-Callback für „Filter
+     zurücksetzen". */
+  const minSliders = [];   // {reset} je Regler — für den Clear-Button
+  function wireMinRange(box) {
+    const key = box.dataset.key;
+    const lo = +box.dataset.min, hi = +box.dataset.max;
+    const unit = box.dataset.unit || '', prefix = box.dataset.prefix || '≥ ', off = box.dataset.off || 'alle';
+    const input = box.querySelector('input[type="range"]');
+    const fill = box.querySelector('.ana-range-fill');
+    const lbl = box.querySelector('.ana-range-label b');
+    const span = (hi - lo) || 1;
+    const fmt = v => (Math.round(v * 10) / 10).toString();
+    const update = () => {
+      const v = +input.value;
+      filt[key] = v > lo ? v : null;                 // linker Anschlag = Filter aus
+      fill.style.left = '0%';
+      fill.style.right = ((hi - v) / span * 100) + '%';
+      lbl.textContent = v > lo ? prefix + fmt(v) + unit : off;
+    };
+    input.addEventListener('input', () => { update(); render(); });
+    update();
+    minSliders.push({ reset: () => { input.value = lo; update(); } });
+  }
+
   /* ---------- Wiring ---------- */
   function fillSelect(id, items, nameFn) {
     const sel = document.getElementById(id);
@@ -361,20 +390,16 @@
   }
   let wired = false;
   function wire() {
-    const num = (id, key) => { const el = document.getElementById(id); el.setAttribute('autocomplete', 'off'); el.addEventListener('input', e => {
-      const raw = e.target.value.trim().replace(',', '.'); const n = parseFloat(raw);
-      filt[key] = (raw === '' || isNaN(n)) ? null : n; render();
-    }); };
     document.getElementById('afSector').addEventListener('change', e => { filt.sector = e.target.value || null; render(); });
     document.getElementById('afRegion').addEventListener('change', e => { filt.region = e.target.value || null; render(); });
     wirePeRange();
-    num('afBuy', 'buy'); num('afOutp', 'outp');
-    num('afUpside', 'upside'); num('afDiv', 'div'); num('afAnalysts', 'analysts');
+    // Alle übrigen Faktoren als Einzelregler (Kauf, Strong Buy, Ziel, Div, Analysten).
+    document.querySelectorAll('#anaFilters .ana-range[data-min-range]').forEach(wireMinRange);
     document.getElementById('afClear').addEventListener('click', () => {
       Object.keys(filt).forEach(k => delete filt[k]);
-      document.querySelectorAll('#anaFilters input[type="text"]').forEach(i => i.value = '');
       document.getElementById('afSector').value = ''; document.getElementById('afRegion').value = '';
       resetPeRange();
+      minSliders.forEach(s => s.reset());
       render();
     });
     // Diagramm-Toggle: Faktor-Kurve blendet die Wert-Filter aus (nur Monat zählt dort),

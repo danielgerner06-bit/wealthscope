@@ -1,0 +1,49 @@
+name: Pages deployen
+
+# Warum dieser Workflow?
+# Die Seite wurde bisher über GitHubs automatischen ("legacy") Pages-Build von main
+# veröffentlicht. Der Cloudflare-Worker pusht aber STÜNDLICH zwei Commits fast
+# gleichzeitig (Yahoo-Kurse + Backtest-Historie). Jeder Push löste einen eigenen
+# Pages-Build aus; die überlappenden Builds kollidierten → "Deployment failed, try
+# again later." → GitHub schickte eine Fehler-Email.
+#
+# Dieser Workflow ersetzt den Auto-Build durch einen eigenen mit einer concurrency-
+# Gruppe: neue Deployments WARTEN, bis das laufende fertig ist (cancel-in-progress:
+# false), statt zu kollidieren. Damit sind die Fehler-Emails weg.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Deployments serialisieren: höchstens EIN Pages-Deploy gleichzeitig, weitere reihen
+# sich ein (kein Abbruch des laufenden). Genau das verhindert die "Deployment failed"-
+# Kollisionen bei den schnell aufeinanderfolgenden Worker-Commits.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      # Die komplette statische Seite liegt im Repo-Root (index.html, *.js, *.css,
+      # sectordata.json, history.json …) → das gesamte Verzeichnis hochladen.
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
