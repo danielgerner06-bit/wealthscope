@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-04",
-  "updatedAt": "2026-07-05T09:00:26.162Z",
+  "updated": "2026-07-05",
+  "updatedAt": "2026-07-05T09:56:00.820Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-01",
-      "sektorPsi": 0.072,
+      "sektorPsi": 0.0714,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -360,7 +360,7 @@
       "buyPct": 100,
       "strongBuyPct": 100,
       "analysts": 4,
-      "upside": 69,
+      "upside": 85,
       "yahoo": "SB1.DE",
       "peGemini": null,
       "ratingCounts": {
@@ -381,9 +381,9 @@
       "perf6mAt": "2026-07-05",
       "perf1mBefore": -7.56,
       "pe": null,
-      "eps": -0.28,
+      "eps": -0.63,
       "div": 0,
-      "enrichAt": "2026-06-30",
+      "enrichAt": "2026-07-05",
       "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-04",
@@ -412,12 +412,12 @@
       "perf6m": -37.44,
       "perf6mAt": "2026-07-05",
       "perf1mBefore": -8.75,
-      "upside": 64,
-      "pe": 23.4,
+      "upside": 59,
+      "pe": 24.2,
       "eps": 1.11,
-      "div": 1.26,
-      "enrichAt": "2026-06-30",
-      "sektorPsi": 0.072,
+      "div": 1.19,
+      "enrichAt": "2026-07-05",
+      "sektorPsi": 0.0714,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 1.11,
       "div": 1.18,
       "enrichAt": "2026-07-03",
-      "sektorPsi": 0.072,
+      "sektorPsi": 0.0714,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-06-29",
       "miss": 0
@@ -544,14 +544,47 @@
       "perf6m": -23.96,
       "perf6mAt": "2026-07-05",
       "perf1mBefore": -11.41,
-      "upside": 47,
-      "pe": 27.6,
+      "upside": 48,
+      "pe": 27.5,
       "eps": 1.13,
       "div": 3.86,
-      "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0088,
+      "enrichAt": "2026-07-05",
+      "sektorPsi": 0.0087,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-04",
+      "miss": 0
+    },
+    {
+      "ticker": "JDC",
+      "name": "JDC Group AG",
+      "yahoo": "JDC.DE",
+      "sector": "finance",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-05",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-04",
+      "perf6m": -13.58,
+      "perf6mAt": "2026-07-04",
+      "perf1mBefore": 11.41,
+      "upside": 46,
+      "pe": 47.7,
+      "eps": 0.48,
+      "div": 0,
+      "enrichAt": "2026-07-04",
+      "sektorPsi": 0.0019,
+      "sektorPsiAtAdd": 0.0019,
+      "recheckAt": "2026-07-05",
       "miss": 0
     },
     {
@@ -610,12 +643,12 @@
       "perf6m": 0.31,
       "perf6mAt": "2026-07-05",
       "perf1mBefore": -2.31,
-      "upside": 44,
-      "pe": 20.4,
+      "upside": 35,
+      "pe": 21.6,
       "eps": 2.23,
-      "div": 1.77,
-      "enrichAt": "2026-06-30",
-      "sektorPsi": 0.0088,
+      "div": 1.66,
+      "enrichAt": "2026-07-05",
+      "sektorPsi": 0.0087,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -648,7 +681,7 @@
       "eps": 203.03,
       "div": 1,
       "enrichAt": "2026-07-02",
-      "sektorPsi": 0.072,
+      "sektorPsi": 0.0714,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -681,7 +714,7 @@
       "eps": 1.34,
       "div": 2.36,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.072,
+      "sektorPsi": 0.0714,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -759,7 +792,7 @@
       "buyPct": 100,
       "strongBuyPct": 71,
       "analysts": 7,
-      "upside": 27,
+      "upside": 26,
       "yahoo": "KTN.DE",
       "peGemini": null,
       "ratingCounts": {
@@ -779,10 +812,10 @@
       "perf6m": -3.94,
       "perf6mAt": "2026-07-05",
       "perf1mBefore": 3.94,
-      "pe": 11,
+      "pe": 11.1,
       "eps": 2.09,
       "div": 2.55,
-      "enrichAt": "2026-06-30",
+      "enrichAt": "2026-07-05",
       "sektorPsi": 0.0068,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-04",
@@ -877,10 +910,10 @@
       "perf6m": 269.97,
       "perf6mAt": "2026-07-05",
       "perf1mBefore": 5.99,
-      "upside": 2,
+      "upside": 19,
       "pe": null,
-      "div": 0.09,
-      "enrichAt": "2026-06-30",
+      "div": 0.1,
+      "enrichAt": "2026-07-05",
       "sektorPsi": 0.0027,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-07-02",
@@ -909,10 +942,10 @@
       "perf6m": 144.68,
       "perf6mAt": "2026-07-05",
       "perf1mBefore": 6,
-      "upside": -4,
+      "upside": 22,
       "pe": null,
-      "div": 1.02,
-      "enrichAt": "2026-06-30",
+      "div": 1.16,
+      "enrichAt": "2026-07-05",
       "sektorPsi": 0.0068,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-02",
@@ -945,10 +978,10 @@
       "perf6m": -31.88,
       "perf6mAt": "2026-07-05",
       "perf1mBefore": 2.18,
-      "pe": 19.6,
+      "pe": 21.7,
       "eps": 4.23,
       "div": 0,
-      "enrichAt": "2026-06-30",
+      "enrichAt": "2026-07-05",
       "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-04",
@@ -977,11 +1010,11 @@
       "perf6m": -13.56,
       "perf6mAt": "2026-07-05",
       "perf1mBefore": 28.32,
-      "pe": 15.8,
-      "eps": 5.01,
-      "div": 5.08,
-      "enrichAt": "2026-06-30",
-      "sektorPsi": 0.072,
+      "pe": 15.6,
+      "eps": 5,
+      "div": 5.14,
+      "enrichAt": "2026-07-05",
+      "sektorPsi": 0.0714,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -1013,7 +1046,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.072,
+      "sektorPsi": 0.0714,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-06-30",
       "miss": 0
@@ -1041,45 +1074,14 @@
       "perf6m": -25,
       "perf6mAt": "2026-07-05",
       "perf1mBefore": -10.44,
-      "pe": 20.6,
-      "eps": 0.1,
+      "pe": 19.3,
+      "eps": 0.11,
       "div": 0,
-      "enrichAt": "2026-06-30",
-      "sektorPsi": 0.072,
+      "enrichAt": "2026-07-05",
+      "sektorPsi": 0.0714,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-01",
       "miss": 0
-    },
-    {
-      "ticker": "JDC",
-      "name": "JDC Group AG",
-      "yahoo": "JDC.DE",
-      "sector": "finance",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 2,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 2,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-04",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-07-04",
-      "perf6m": -13.58,
-      "perf6mAt": "2026-07-04",
-      "perf1mBefore": 11.41,
-      "upside": 46,
-      "pe": 47.7,
-      "eps": 0.48,
-      "div": 0,
-      "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0019,
-      "sektorPsiAtAdd": 0.0019
     }
   ],
   "psiHistory": [
@@ -1242,8 +1244,8 @@
       "date": "2026-07-04"
     },
     "energy": {
-      "text": "Der Energiesektor zeigt sich schwach, belastet durch Zinsängste und eine nachlassende Konjunktur. Langfristig bleibt die Nachfrage jedoch robust.",
-      "date": "2026-06-19"
+      "text": "Der Energiesektor schwächelt kurzfristig (-7,31%) wegen Zinsdruck und Konjunktursorgen, bleibt aber langfristig stark (+19,03%). F3C.DE sticht heraus.",
+      "date": "2026-07-05"
     },
     "materials": {
       "text": "Rohstoffe zeigen starke Performance, angetrieben von globaler Konjunkturerholung und geopolitischen Spannungen, die Nachfrage und Preise hochhalten.",
@@ -1268,8 +1270,8 @@
       "date": "2026-06-27"
     },
     "japan": {
-      "text": "Japanische Aktien steigen moderat (+1.51% 30 Tage), da die Konjunktur anzieht, während die 6-Monats-Performance (+15.98%) von globalen Trends profitiert.",
-      "date": "2026-06-25"
+      "text": "Japanische Aktien zeigen leichte kurzfristige Schwäche, profitieren aber langfristig von starkem Wirtschaftswachstum.",
+      "date": "2026-07-05"
     },
     "usa": {
       "text": "US-Aktien fallen kurzfristig wegen Zinsanstiegs, erholen sich aber langfristig durch KI-Boom und robuste Konjunktur.",
@@ -1303,37 +1305,25 @@
   "news": {
     "items": [
       {
-        "text": "Goldmarkt bebt: Goldpreis-Prognose deutet auf Wende hin.",
-        "stamp": "04.07.26"
+        "text": "DAX erreicht Rekordhoch, Ölpreis fällt, Reformen für Minijobs.",
+        "stamp": "05.07.26"
       },
       {
-        "text": "EU erleichtert Unternehmen Nachhaltigkeitsberichterstattung mit neuen Standards.",
-        "stamp": "03.07.26"
+        "text": "VW will Stellen abbauen, Galeria erhält Kredit, Tesla stellt mehr ein.",
+        "stamp": "05.07.26"
       },
       {
-        "text": "Deutsche Pkw-Produktion legt im Juni wieder zu, VDA meldet Zuwachs.",
-        "stamp": "03.07.26"
-      },
-      {
-        "text": "DAX erreicht neue Bestmarken im Wochenverlauf.",
-        "stamp": "03.07.26"
-      },
-      {
-        "text": "US-Arbeitsmarkt: Stellenwachstum schwächer als erwartet, Arbeitslosenquote sinkt.",
-        "stamp": "02.07.26"
-      },
-      {
-        "text": "Kanadas verarbeitendes Gewerbe setzt Wachstum im Juni fort.",
-        "stamp": "02.07.26"
+        "text": "Trump meldet Milliarden aus Meme-Coins, Konflikte in Politik.",
+        "stamp": "05.07.26"
       }
     ],
-    "date": "2026-07-04"
+    "date": "2026-07-05"
   },
   "scan": {
     "universe": 8836,
     "scanned": 8836,
-    "lastCursor": 1897,
-    "candCursor": 286,
+    "lastCursor": 2197,
+    "candCursor": 294,
     "candidates": [
       "Alnylam Pharmaceuticals, Inc.",
       "Expedia Group, Inc.",
@@ -1736,45 +1726,53 @@
       "SINGULUS TECHNOLOGIES AG",
       "Odfjell Drilling Ltd."
     ],
-    "noteCursor": 9,
-    "focusCursor": 3,
+    "noteCursor": 10,
+    "focusCursor": 4,
     "recheckCursor": 16,
-    "regionNoteCursor": 3,
-    "notesDay": "2026-07-04",
+    "regionNoteCursor": 4,
+    "notesDay": "2026-07-05",
     "seenBySector": {
-      "cons_cycl": 1142,
-      "cons_def": 593,
-      "materials": 796,
-      "health": 3302,
-      "finance": 2263,
-      "energy": 1028,
-      "hardware": 744,
-      "software": 2215,
-      "industrial": 957,
-      "utilities": 403,
-      "comm": 490,
-      "ai_semi": 444,
-      "realestate": 205
+      "cons_cycl": 1152,
+      "cons_def": 595,
+      "materials": 801,
+      "health": 3323,
+      "finance": 2273,
+      "energy": 1035,
+      "hardware": 753,
+      "software": 2232,
+      "industrial": 964,
+      "utilities": 407,
+      "comm": 493,
+      "ai_semi": 446,
+      "realestate": 207
     },
     "pendingReject": [
-      "CRDF"
+      "DETX",
+      "DFDV",
+      "DFH",
+      "DFIN",
+      "DFLI",
+      "DFSC",
+      "DFTX",
+      "DG",
+      "DGII"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 1142,
-      "cons_def": 594,
-      "materials": 796,
-      "health": 3303,
-      "finance": 2267,
-      "energy": 1029,
-      "hardware": 746,
-      "software": 2223,
-      "industrial": 963,
-      "utilities": 403,
-      "comm": 490,
-      "ai_semi": 445,
-      "realestate": 205
+      "cons_cycl": 1152,
+      "cons_def": 596,
+      "materials": 801,
+      "health": 3324,
+      "finance": 2277,
+      "energy": 1036,
+      "hardware": 755,
+      "software": 2240,
+      "industrial": 970,
+      "utilities": 407,
+      "comm": 493,
+      "ai_semi": 447,
+      "realestate": 207
     },
-    "heavyAt": "2026-07-04T21:36:05.479Z",
+    "heavyAt": "2026-07-05T09:46:26.783Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1785,6 +1783,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-05T09:00:26.162Z"
+  }
 }

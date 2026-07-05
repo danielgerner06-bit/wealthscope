@@ -140,13 +140,13 @@
       "region": "apac",
       "buyPct": 100,
       "strongBuyPct": 36,
-      "upside": 2,
+      "upside": 19,
       "pe": null,
       "perf6mAtAdd": 269.97,
       "perf1mBefore": 5.99,
       "sektorPsiAtAdd": 0.0039,
       "analysts": 11,
-      "div": 0.09,
+      "div": 0.1,
       "seen": "2026-06-10",
       "seenMs": 1781049600000,
       "startPrice": 1193500,
@@ -6915,8 +6915,8 @@
       "region": "europe",
       "buyPct": 100,
       "outperformPct": null,
-      "upside": 27,
-      "pe": 11,
+      "upside": 26,
+      "pe": 11.1,
       "perf6mAtAdd": -3.94,
       "perf1mBefore": 3.94,
       "analysts": 7,
@@ -7080,7 +7080,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 297.04998779296875,
-      "perf": []
+      "perf": [
+        18.93
+      ],
+      "prov": false
     },
     "GE": {
       "ticker": "GE",
@@ -7099,7 +7102,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 321.14500427246094,
-      "perf": []
+      "perf": [
+        14.83
+      ],
+      "prov": false
     },
     "KCR.HE": {
       "ticker": "KCR.HE",
@@ -7118,7 +7124,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 27.649999618530273,
-      "perf": []
+      "perf": [
+        -1.81
+      ],
+      "prov": false
     },
     "WCH.DE": {
       "ticker": "WCH.DE",
@@ -7137,7 +7146,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 104.79999923706055,
-      "perf": []
+      "perf": [
+        -10.6
+      ],
+      "prov": false
     },
     "LIN": {
       "ticker": "LIN",
@@ -7156,7 +7168,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 507.510009765625,
-      "perf": []
+      "perf": [
+        6.41
+      ],
+      "prov": false
     },
     "BAS.DE": {
       "ticker": "BAS.DE",
@@ -7175,7 +7190,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 50.71500015258789,
-      "perf": []
+      "perf": [
+        -6.05
+      ],
+      "prov": false
     },
     "SL.MI": {
       "ticker": "SL.MI",
@@ -7194,7 +7212,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 38.60000038146973,
-      "perf": []
+      "perf": [
+        -5.65
+      ],
+      "prov": false
     },
     "CDA.PA": {
       "ticker": "CDA.PA",
@@ -7213,7 +7234,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 22.175000190734863,
-      "perf": []
+      "perf": [
+        0.9
+      ],
+      "prov": false
     },
     "SB1.DE": {
       "ticker": "SB1.DE",
@@ -7232,7 +7256,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 12.099999904632568,
-      "perf": []
+      "perf": [
+        -18.16
+      ],
+      "prov": false
     },
     "1INN.DE": {
       "ticker": "1INN.DE",
@@ -7243,17 +7270,20 @@
       "buyPct": 100,
       "outperformPct": null,
       "upside": null,
-      "pe": 15.8,
+      "pe": 15.6,
       "perf6mAtAdd": -13.56,
       "perf1mBefore": 28.32,
       "analysts": 2,
-      "div": 5.08,
+      "div": 5.14,
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 86.79999923706055,
-      "perf": [],
+      "perf": [
+        -9.62
+      ],
       "strongBuyPct": 100,
-      "sektorPsiAtAdd": 0.0015
+      "sektorPsiAtAdd": 0.0015,
+      "prov": false
     },
     "TPE": {
       "ticker": "TPE",
@@ -7272,7 +7302,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 43.279998779296875,
-      "perf": []
+      "perf": [
+        -4.54
+      ],
+      "prov": false
     },
     "A1OS": {
       "ticker": "A1OS",
@@ -7291,7 +7324,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 32.89999961853027,
-      "perf": []
+      "perf": [
+        -4.77
+      ],
+      "prov": false
     },
     "OCGN": {
       "ticker": "OCGN",
@@ -7310,7 +7346,10 @@
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 1.3349999785423279,
-      "perf": []
+      "perf": [
+        15
+      ],
+      "prov": false
     },
     "1INN": {
       "ticker": "1INN",
@@ -7329,7 +7368,10 @@
       "seen": "2026-06-05",
       "seenMs": 1780617600000,
       "startPrice": 86.5999984741211,
-      "perf": []
+      "perf": [
+        -8.76
+      ],
+      "prov": false
     },
     "HYQ.DE": {
       "ticker": "HYQ.DE",
@@ -7340,7 +7382,7 @@
       "buyPct": 100,
       "strongBuyPct": 75,
       "upside": null,
-      "pe": 19.6,
+      "pe": 21.7,
       "perf6mAtAdd": -31.88,
       "perf1mBefore": 2.18,
       "analysts": 4,
@@ -7348,9 +7390,12 @@
       "seen": "2026-06-05",
       "seenMs": 1780617600000,
       "startPrice": 80.36249923706055,
-      "perf": [],
+      "perf": [
+        14.84
+      ],
       "outperformPct": null,
-      "sektorPsiAtAdd": 0.0085
+      "sektorPsiAtAdd": 0.0085,
+      "prov": false
     },
     "SB1": {
       "ticker": "SB1",
@@ -7360,7 +7405,7 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 69,
+      "upside": 85,
       "pe": null,
       "perf6mAtAdd": -32.08,
       "perf1mBefore": -7.56,
@@ -7369,9 +7414,12 @@
       "seen": "2026-06-05",
       "seenMs": 1780617600000,
       "startPrice": 11.924999713897705,
-      "perf": [],
+      "perf": [
+        -16.77
+      ],
       "outperformPct": null,
-      "sektorPsiAtAdd": 0.0085
+      "sektorPsiAtAdd": 0.0085,
+      "prov": false
     },
     "A1OS.DE": {
       "ticker": "A1OS.DE",
@@ -7381,8 +7429,8 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 47,
-      "pe": 27.6,
+      "upside": 48,
+      "pe": 27.5,
       "perf6mAtAdd": -23.96,
       "perf1mBefore": -11.41,
       "analysts": 1,
@@ -7390,9 +7438,12 @@
       "seen": "2026-06-05",
       "seenMs": 1780617600000,
       "startPrice": 32.599998474121094,
-      "perf": [],
+      "perf": [
+        -5.06
+      ],
       "outperformPct": null,
-      "sektorPsiAtAdd": 0.0078
+      "sektorPsiAtAdd": 0.0078,
+      "prov": false
     },
     "IXX.DE": {
       "ticker": "IXX.DE",
@@ -7402,18 +7453,21 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 44,
-      "pe": 20.4,
+      "upside": 35,
+      "pe": 21.6,
       "perf6mAtAdd": 0.31,
       "perf1mBefore": -2.31,
       "analysts": 3,
-      "div": 1.77,
+      "div": 1.66,
       "seen": "2026-06-05",
       "seenMs": 1780617600000,
       "startPrice": 52.75,
-      "perf": [],
+      "perf": [
+        -6.37
+      ],
       "outperformPct": null,
-      "sektorPsiAtAdd": 0.0078
+      "sektorPsiAtAdd": 0.0078,
+      "prov": false
     },
     "034730": {
       "ticker": "034730",
@@ -7423,13 +7477,13 @@
       "region": "apac",
       "buyPct": 100,
       "strongBuyPct": 50,
-      "upside": -4,
+      "upside": 22,
       "pe": null,
       "perf6mAtAdd": 144.68,
       "perf1mBefore": 6,
       "sektorPsiAtAdd": 0.0102,
       "analysts": 12,
-      "div": 1.02,
+      "div": 1.16,
       "seen": "2026-06-10",
       "seenMs": 1781049600000,
       "startPrice": 583000,
@@ -7549,13 +7603,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 64,
-      "pe": 23.4,
+      "upside": 59,
+      "pe": 24.2,
       "perf6mAtAdd": -37.44,
       "perf1mBefore": -8.75,
       "sektorPsiAtAdd": 0.0057,
       "analysts": 4,
-      "div": 1.26,
+      "div": 1.19,
       "seen": "2026-06-15",
       "seenMs": 1781481600000,
       "startPrice": 27.649999618530273,
@@ -7718,7 +7772,7 @@
       "buyPct": 100,
       "strongBuyPct": 100,
       "upside": null,
-      "pe": 20.6,
+      "pe": 19.3,
       "perf6mAtAdd": -25,
       "perf1mBefore": -10.44,
       "sektorPsiAtAdd": 0.0256,
@@ -7763,7 +7817,7 @@
       "pe": 47.7,
       "perf6mAtAdd": -13.58,
       "perf1mBefore": 11.41,
-      "sektorPsiAtAdd": null,
+      "sektorPsiAtAdd": 0.0019,
       "analysts": 2,
       "div": 0,
       "seen": "2026-07-04",
@@ -7777,58 +7831,58 @@
     "factors": [
       {
         "name": "Kursziel",
-        "spread": 10.6,
+        "spread": 9.5,
         "best": {
           "k": "40%+",
-          "avg": 6.8,
-          "n": 131
+          "avg": 6.2,
+          "n": 135
         },
         "worst": {
           "k": "<10%",
-          "avg": -3.8,
-          "n": 32
+          "avg": -3.3,
+          "n": 37
         }
       },
       {
         "name": "Analysten",
-        "spread": 7.7,
+        "spread": 8.2,
         "best": {
           "k": "5-14",
           "avg": 5.5,
-          "n": 140
+          "n": 143
         },
         "worst": {
           "k": "1-4",
-          "avg": -2.2,
-          "n": 70
+          "avg": -2.7,
+          "n": 80
         }
       },
       {
         "name": "Dividende",
-        "spread": 6,
+        "spread": 6.3,
         "best": {
           "k": "keine",
-          "avg": 5.6,
-          "n": 159
+          "avg": 5.4,
+          "n": 164
         },
         "worst": {
           "k": "2-4%",
-          "avg": -0.4,
-          "n": 48
+          "avg": -0.9,
+          "n": 52
         }
       },
       {
         "name": "KGV",
-        "spread": 4.1,
+        "spread": 4,
         "best": {
           "k": "<15",
-          "avg": 4.8,
-          "n": 59
+          "avg": 4.5,
+          "n": 61
         },
         "worst": {
           "k": "25-40",
-          "avg": 0.7,
-          "n": 49
+          "avg": 0.5,
+          "n": 53
         }
       }
     ],
@@ -7838,15 +7892,15 @@
       "avg": 10.5,
       "n": 69
     },
-    "sampleSize": 320,
+    "sampleSize": 338,
     "maxMonths": 1,
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "Die Kombination aus Kursziel \"40%+\" und 5-14 Analystenempfehlungen erzielte mit 10,7% die beste Performance. Das KGV hatte mit einer Spanne von 5,1 kaum Einfluss.",
-    "date": "2026-07-04",
+    "text": "Die Kombination aus \"Kursziel 40%+\" und \"Analysten 5-14\" erzielte mit 10,5% die beste Performance. Das KGV hatte mit einem Spread von 4 kaum Einfluss.",
+    "date": "2026-07-05",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-04"
+  "kiDay": "2026-07-05"
 }
