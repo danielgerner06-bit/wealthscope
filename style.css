@@ -1806,3 +1806,50 @@ html.preselect #hubScreen { display: none !important; }
   .sek-analyse-btn span { display: none; }
   .ana-main { padding: 14px; gap: 14px; }
 }
+
+/* === RECHTLICHES: Disclaimer + Impressum/Datenschutz-Links === */
+.hub-footer {
+  margin-top: 36px;
+  text-align: center;
+}
+.hub-disclaimer {
+  max-width: 580px;
+  margin: 0 auto 10px;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.hub-legal,
+.legal-fab {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+.hub-legal a,
+.legal-fab a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.hub-legal a:hover,
+.legal-fab a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+/* Schwebender Mini-Link, damit die Pflichtangaben von jedem SPA-Screen aus
+   erreichbar sind; auf dem Hub reicht der Footer im Inhalt. */
+.legal-fab {
+  position: fixed;
+  left: 12px;
+  bottom: 10px;
+  z-index: 500;
+  padding: 4px 12px;
+  font-size: 0.72rem;
+  background: rgba(10, 14, 26, 0.55);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+body:has(#hubScreen.active) .legal-fab { display: none; }

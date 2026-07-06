@@ -7,7 +7,8 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="mask-icon" href="favicon.svg" color="#6366f1" />
   <meta name="theme-color" content="#6366f1" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Lokal gehostet (DSGVO): keine Requests an Dritt-CDNs -->
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -76,6 +77,16 @@
             </span>
           </button>
         </div>
+
+        <footer class="hub-footer">
+          <p class="hub-disclaimer">
+            Alle Markt- und Analystendaten dienen ausschließlich der allgemeinen Information
+            und Meinungsbildung — keine Anlageberatung, keine Kauf- oder Verkaufsempfehlung.
+          </p>
+          <nav class="hub-legal" aria-label="Rechtliches">
+            <a href="impressum.html">Impressum</a><span>·</span><a href="datenschutz.html">Datenschutz</a>
+          </nav>
+        </footer>
       </div>
     </div>
   </div>
@@ -170,11 +181,11 @@
         <div class="feature-inner reverse">
           <div class="feature-visual">
             <div class="flag-stack">
-              <div class="flag-card" style="--rot:-18deg; --x:-90px; --y:30px; --d:0s"><img src="https://flagcdn.com/w320/jp.png" alt=""></div>
-              <div class="flag-card" style="--rot:-8deg; --x:-30px; --y:-30px; --d:0.1s"><img src="https://flagcdn.com/w320/de.png" alt=""></div>
-              <div class="flag-card" style="--rot:4deg; --x:30px; --y:10px; --d:0.2s"><img src="https://flagcdn.com/w320/br.png" alt=""></div>
-              <div class="flag-card" style="--rot:14deg; --x:90px; --y:-20px; --d:0.3s"><img src="https://flagcdn.com/w320/au.png" alt=""></div>
-              <div class="flag-card" style="--rot:22deg; --x:130px; --y:40px; --d:0.4s"><img src="https://flagcdn.com/w320/fr.png" alt=""></div>
+              <div class="flag-card" style="--rot:-18deg; --x:-90px; --y:30px; --d:0s"><img src="flags/w320/jp.png" alt=""></div>
+              <div class="flag-card" style="--rot:-8deg; --x:-30px; --y:-30px; --d:0.1s"><img src="flags/w320/de.png" alt=""></div>
+              <div class="flag-card" style="--rot:4deg; --x:30px; --y:10px; --d:0.2s"><img src="flags/w320/br.png" alt=""></div>
+              <div class="flag-card" style="--rot:14deg; --x:90px; --y:-20px; --d:0.3s"><img src="flags/w320/au.png" alt=""></div>
+              <div class="flag-card" style="--rot:22deg; --x:130px; --y:40px; --d:0.4s"><img src="flags/w320/fr.png" alt=""></div>
             </div>
           </div>
           <div class="feature-info">
@@ -772,8 +783,14 @@
     <div class="sek-loading" id="anaLoading"><div class="spinner"></div><p>Analyse wird geladen…</p></div>
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Impressum/Datenschutz von jedem Screen der SPA erreichbar (Pflichtangaben) -->
+  <nav class="legal-fab" aria-label="Rechtliches">
+    <a href="impressum.html">Impressum</a><span>·</span><a href="datenschutz.html">Datenschutz</a>
+  </nav>
+
+  <!-- Lokal gehostet (DSGVO): keine Requests an Dritt-CDNs -->
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/chart.umd.min.js"></script>
   <script src="data.js"></script>
   <script src="script.js"></script>
   <script src="sektor.js"></script>

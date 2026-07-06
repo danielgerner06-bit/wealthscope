@@ -3,7 +3,8 @@
 // ===========================================================================
 
 // === LÄNDER-DATENQUELLE ===
-const COUNTRY_GEOJSON_URL = 'https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@v5.1.2/geojson/ne_50m_admin_0_countries.geojson';
+// Lokal gehostet (DSGVO): Natural-Earth v5.1.2, vorher via cdn.jsdelivr.net
+const COUNTRY_GEOJSON_URL = 'vendor/ne_50m_admin_0_countries.geojson';
 
 // === Deutsche Namen-Overrides (für Fälle, wo NAME_DE veraltet / fehlt) ===
 const DE_NAME_OVERRIDES = {

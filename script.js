@@ -761,7 +761,7 @@ function nextQuestion() {
   document.getElementById('qNum').textContent = quizState.idx + 1;
 
   if (quizState.type === 'flaggen') {
-    const url = `https://flagcdn.com/w160/${q.iso2}.png`;
+    const url = `flags/w160/${q.iso2}.png`;
     document.getElementById('promptFlag').src = url;
     document.getElementById('cursorTipFlag').src = url;
   } else {
