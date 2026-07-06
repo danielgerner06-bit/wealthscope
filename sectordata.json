@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-06",
-  "updatedAt": "2026-07-06T05:43:45.540Z",
+  "updatedAt": "2026-07-06T06:54:02.327Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -588,39 +588,6 @@
       "miss": 0
     },
     {
-      "ticker": "JST.DE",
-      "name": "Jost Werke AG",
-      "yahoo": "JST.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-02",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": -3.42,
-      "perf6mAt": "2026-07-06",
-      "perf1mBefore": 0.54,
-      "upside": 35,
-      "pe": 77.2,
-      "eps": 0.72,
-      "div": 2.7,
-      "enrichAt": "2026-07-06",
-      "sektorPsi": 0.0068,
-      "sektorPsiAtAdd": 0.025,
-      "recheckAt": "2026-07-02",
-      "miss": 0
-    },
-    {
       "ticker": "6701.T",
       "name": "NEC Corporation",
       "yahoo": "6701.T",
@@ -683,6 +650,39 @@
       "enrichAt": "2026-07-04",
       "sektorPsi": 0.0708,
       "sektorPsiAtAdd": 0.0038,
+      "recheckAt": "2026-07-02",
+      "miss": 0
+    },
+    {
+      "ticker": "JST.DE",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-02",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": -3.42,
+      "perf6mAt": "2026-07-06",
+      "perf1mBefore": 0.54,
+      "upside": 35,
+      "pe": 77.2,
+      "eps": 0.72,
+      "div": 2.7,
+      "enrichAt": "2026-07-06",
+      "sektorPsi": 0.0068,
+      "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-02",
       "miss": 0
     },
