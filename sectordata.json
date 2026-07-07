@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-06",
-  "updatedAt": "2026-07-07T10:00:36.713Z",
+  "updated": "2026-07-07",
+  "updatedAt": "2026-07-07T10:39:39.727Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-06",
-      "sektorPsi": 0.0705,
+      "sektorPsi": 0.0701,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 1.11,
       "div": 1.19,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0705,
+      "sektorPsi": 0.0701,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 1.11,
       "div": 1.18,
       "enrichAt": "2026-07-03",
-      "sektorPsi": 0.0705,
+      "sektorPsi": 0.0701,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-07-06",
       "miss": 0
@@ -610,12 +610,12 @@
       "perf6m": -25.16,
       "perf6mAt": "2026-07-07",
       "perf1mBefore": -7.48,
-      "upside": 42,
-      "pe": 20.7,
-      "eps": 203.03,
-      "div": 1,
-      "enrichAt": "2026-07-02",
-      "sektorPsi": 0.0705,
+      "upside": 38,
+      "pe": 21.4,
+      "eps": 203,
+      "div": 0.92,
+      "enrichAt": "2026-07-07",
+      "sektorPsi": 0.0701,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 1.34,
       "div": 2.36,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0705,
+      "sektorPsi": 0.0701,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -736,7 +736,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-06-30",
+      "verifiedAt": "2026-07-07",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-29",
       "perf6m": -6.31,
@@ -749,7 +749,7 @@
       "enrichAt": "2026-07-04",
       "sektorPsi": 0.0076,
       "sektorPsiAtAdd": 0.008,
-      "recheckAt": "2026-06-30",
+      "recheckAt": "2026-07-07",
       "miss": 0
     },
     {
@@ -775,11 +775,11 @@
       "perf6m": 47.09,
       "perf6mAt": "2026-07-07",
       "perf1mBefore": -10.76,
-      "upside": 33,
+      "upside": 28,
       "pe": null,
       "eps": -0.06,
       "div": 0,
-      "enrichAt": "2026-07-02",
+      "enrichAt": "2026-07-07",
       "sektorPsi": 0.0083,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-07-03",
@@ -1014,7 +1014,7 @@
       "eps": 5,
       "div": 5.14,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0705,
+      "sektorPsi": 0.0701,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -1036,7 +1036,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-06-30",
+      "verifiedAt": "2026-07-07",
       "verifiedSource": "yahoo",
       "seen": "2026-06-29",
       "perf6m": -42.16,
@@ -1046,9 +1046,9 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0705,
+      "sektorPsi": 0.0701,
       "sektorPsiAtAdd": 0.0224,
-      "recheckAt": "2026-06-30",
+      "recheckAt": "2026-07-07",
       "miss": 0
     },
     {
@@ -1078,7 +1078,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0705,
+      "sektorPsi": 0.0701,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-01",
       "miss": 0
@@ -1252,8 +1252,8 @@
       "date": "2026-07-06"
     },
     "utilities": {
-      "text": "Versorger legen trotz normaler Zinsentwicklung leicht zu, da defensive Werte in unsicherer Konjunktur gefragt sind. Energiepreise stabilisieren sich und stützen die Branche.",
-      "date": "2026-06-21"
+      "text": "Versorger profitieren von gestiegenen Zinsen und Energiepreisen. Die 30-Tage-Performance übertrifft deutlich das Normalniveau.",
+      "date": "2026-07-07"
     },
     "realestate": {
       "text": "Der Immobiliensektor zeigt seit sechs Monaten Stärke, aktuell bremst die kurzfristige Entwicklung aber leicht. Möglicherweise spielen hier Zinserwartungen eine Rolle.",
@@ -1266,8 +1266,8 @@
       "date": "2026-06-28"
     },
     "em": {
-      "text": "Schwellenländer geben nach, da die Zinserhöhungen die Konjunktur belasten und die globale Nachfrage dämpfen. Langfristig bleibt die positive Entwicklung jedoch bestehen.",
-      "date": "2026-06-27"
+      "text": "Schwellenländer leiden unter Zinserhöhungen und schwacher Konjunktur (-5,14%). Langfristig zeigt sich aber Erholungspotenzial (+21,51%).",
+      "date": "2026-07-07"
     },
     "japan": {
       "text": "Japanische Aktien zeigen leichte kurzfristige Schwäche, profitieren aber langfristig von starkem Wirtschaftswachstum.",
@@ -1334,12 +1334,9 @@
   "scan": {
     "universe": 8837,
     "scanned": 8837,
-    "lastCursor": 2797,
-    "candCursor": 310,
+    "lastCursor": 3097,
+    "candCursor": 318,
     "candidates": [
-      "Alnylam Pharmaceuticals, Inc.",
-      "Expedia Group, Inc.",
-      "Amgen Inc.",
       "CyberAgent Inc",
       "Samsung Electronics Co Ltd",
       "Taiwan Semiconductor Manufacturing Co Ltd",
@@ -1736,45 +1733,48 @@
       "Cantourage Group SE",
       "Cenit AG",
       "SINGULUS TECHNOLOGIES AG",
-      "Odfjell Drilling Ltd."
+      "Odfjell Drilling Ltd.",
+      "MasTec, Inc.",
+      "Mirion Technologies, Inc.",
+      "Deutsche Rohstoff AG"
     ],
-    "noteCursor": 11,
-    "focusCursor": 6,
+    "noteCursor": 12,
+    "focusCursor": 7,
     "recheckCursor": 16,
-    "regionNoteCursor": 5,
-    "notesDay": "2026-07-06",
+    "regionNoteCursor": 6,
+    "notesDay": "2026-07-07",
     "seenBySector": {
-      "cons_cycl": 1165,
-      "cons_def": 598,
-      "materials": 812,
-      "health": 3370,
-      "finance": 2288,
-      "energy": 1056,
-      "hardware": 760,
-      "software": 2263,
-      "industrial": 980,
-      "utilities": 418,
-      "comm": 498,
-      "ai_semi": 448,
-      "realestate": 210
+      "cons_cycl": 1173,
+      "cons_def": 601,
+      "materials": 817,
+      "health": 3377,
+      "finance": 2327,
+      "energy": 1061,
+      "hardware": 763,
+      "software": 2274,
+      "industrial": 986,
+      "utilities": 421,
+      "comm": 503,
+      "ai_semi": 449,
+      "realestate": 214
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1165,
-      "cons_def": 599,
-      "materials": 812,
-      "health": 3371,
-      "finance": 2292,
-      "energy": 1057,
-      "hardware": 762,
-      "software": 2271,
-      "industrial": 986,
-      "utilities": 418,
-      "comm": 498,
-      "ai_semi": 449,
-      "realestate": 210
+      "cons_cycl": 1173,
+      "cons_def": 602,
+      "materials": 817,
+      "health": 3378,
+      "finance": 2331,
+      "energy": 1062,
+      "hardware": 765,
+      "software": 2282,
+      "industrial": 992,
+      "utilities": 421,
+      "comm": 503,
+      "ai_semi": 450,
+      "realestate": 214
     },
-    "heavyAt": "2026-07-06T21:01:19.796Z",
+    "heavyAt": "2026-07-07T10:32:14.144Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1785,6 +1785,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-07T10:00:36.713Z"
+  }
 }

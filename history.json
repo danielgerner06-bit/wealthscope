@@ -7666,13 +7666,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 33,
-      "upside": 42,
-      "pe": 20.7,
+      "upside": 38,
+      "pe": 21.4,
       "perf6mAtAdd": -25.16,
       "perf1mBefore": -7.48,
       "sektorPsiAtAdd": 0.0106,
       "analysts": 12,
-      "div": 1,
+      "div": 0.92,
       "seen": "2026-06-17",
       "seenMs": 1781654400000,
       "startPrice": 3850.5,
@@ -7792,7 +7792,7 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 80,
-      "upside": 33,
+      "upside": 28,
       "pe": null,
       "perf6mAtAdd": 47.09,
       "perf1mBefore": -10.76,
@@ -7897,10 +7897,10 @@
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "Die Kombination aus Kursziel \"40%+\" und Analystenempfehlungen \"5-14\" erzielte mit 10,5% die beste Performance. Das KGV hatte mit 4% den geringsten Einfluss.",
-    "date": "2026-07-06",
+    "text": "Die Kombination aus Kursziel 40%+ und 5-14 Analysten erzielte mit 10,5% die beste Performance. Das KGV hatte mit einem Spread von 4 kaum Einfluss.",
+    "date": "2026-07-07",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-06"
+  "kiDay": "2026-07-07"
 }
