@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-07",
-  "updatedAt": "2026-07-08T04:00:36.666Z",
+  "updated": "2026-07-08",
+  "updatedAt": "2026-07-08T04:39:03.438Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-06",
-      "sektorPsi": 0.0217,
+      "sektorPsi": 0.0215,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 1.11,
       "div": 1.19,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0217,
+      "sektorPsi": 0.0215,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -445,12 +445,12 @@
       "perf6m": -37.51,
       "perf6mAt": "2026-07-08",
       "perf1mBefore": -18.46,
-      "upside": 58,
-      "pe": 24.4,
+      "upside": 60,
+      "pe": 24,
       "eps": 1.11,
-      "div": 1.18,
-      "enrichAt": "2026-07-03",
-      "sektorPsi": 0.0217,
+      "div": 1.22,
+      "enrichAt": "2026-07-08",
+      "sektorPsi": 0.0215,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-07-06",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 1.13,
       "div": 3.86,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0385,
+      "sektorPsi": 0.0382,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 1.34,
       "div": 2.36,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0217,
+      "sektorPsi": 0.0215,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 203,
       "div": 0.92,
       "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0217,
+      "sektorPsi": 0.0215,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -714,7 +714,7 @@
       "eps": 2.23,
       "div": 1.66,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0385,
+      "sektorPsi": 0.0382,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -780,7 +780,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0188,
+      "sektorPsi": 0.0187,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-07-03",
       "miss": 0
@@ -880,7 +880,7 @@
       "pe": null,
       "div": 0.1,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0153,
+      "sektorPsi": 0.0152,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -1014,7 +1014,7 @@
       "eps": 5,
       "div": 5.14,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0217,
+      "sektorPsi": 0.0215,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -1046,7 +1046,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0217,
+      "sektorPsi": 0.0215,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-07",
       "miss": 0
@@ -1068,7 +1068,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-01",
+      "verifiedAt": "2026-07-08",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-30",
       "perf6m": -25,
@@ -1078,9 +1078,9 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0217,
+      "sektorPsi": 0.0215,
       "sektorPsiAtAdd": 0.0256,
-      "recheckAt": "2026-07-01",
+      "recheckAt": "2026-07-08",
       "miss": 0
     }
   ],
@@ -1256,14 +1256,14 @@
       "date": "2026-07-07"
     },
     "realestate": {
-      "text": "Der Immobiliensektor zeigt seit sechs Monaten Stärke, aktuell bremst die kurzfristige Entwicklung aber leicht. Möglicherweise spielen hier Zinserwartungen eine Rolle.",
-      "date": "2026-06-25"
+      "text": "Der Immobiliensektor zeigt sich stark, übertrifft das Normalniveau deutlich. Dies ist primär auf Zinserwartungen und eine sich stabilisierende Konjunktur zurückzuführen.",
+      "date": "2026-07-08"
     }
   },
   "regionNotes": {
     "apac": {
-      "text": "Asia-Pazifik: Starke 6-Monats-Performance, aber kürzlicher Anstieg verlangsamt sich. Konjunkturerholung und Technologie treiben den Markt.",
-      "date": "2026-06-28"
+      "text": "Asien-Pazifik kämpft mit Zinsanstieg und schwacher Konjunktur, was zu einem Rückgang führt. Langfristig zeigen sich jedoch Erholungstendenzen.",
+      "date": "2026-07-08"
     },
     "em": {
       "text": "Schwellenländer leiden unter Zinserhöhungen und schwacher Konjunktur (-5,14%). Langfristig zeigt sich aber Erholungspotenzial (+21,51%).",
@@ -1305,37 +1305,33 @@
   "news": {
     "items": [
       {
-        "text": "Weltmärkte schwanken zwischen Rekorden und geopolitischen Krisen.",
-        "stamp": "06.07.26"
+        "text": "Microsoft baut wegen KI weitere 4800 Stellen ab.",
+        "stamp": "08.07.26"
       },
       {
-        "text": "DAX erreicht Rekordhoch trotz geopolitischer Unsicherheiten.",
-        "stamp": "06.07.26"
+        "text": "Tesla: RBC sieht Robotaxi-Geschäft als größten Trumpf.",
+        "stamp": "08.07.26"
       },
       {
-        "text": "US-Notenbankchef signalisiert strikte Haltung gegen Inflation.",
-        "stamp": "06.07.26"
+        "text": "KI-Aktien unter Druck: DAX schließt im Minus, US-Börsen tiefer.",
+        "stamp": "08.07.26"
       },
       {
-        "text": "Wall Street erwartet starke Berichtssaison mit Gewinnwachstum.",
-        "stamp": "06.07.26"
+        "text": "Deutsche Post erhöht Ergebnisprognose für 2026.",
+        "stamp": "08.07.26"
       },
       {
-        "text": "Geopolitik in der Arktis: US-Interesse an Grönland wächst.",
-        "stamp": "06.07.26"
-      },
-      {
-        "text": "Iran- und Ukrainekrieg belasten Märkte, DAX stagniert.",
+        "text": "Trumps Nahost-Krieg treibt globale Zinsen langfristig nach oben.",
         "stamp": "06.07.26"
       }
     ],
-    "date": "2026-07-06"
+    "date": "2026-07-08"
   },
   "scan": {
-    "universe": 8837,
-    "scanned": 8837,
-    "lastCursor": 3097,
-    "candCursor": 318,
+    "universe": 8844,
+    "scanned": 8844,
+    "lastCursor": 3397,
+    "candCursor": 326,
     "candidates": [
       "CyberAgent Inc",
       "Samsung Electronics Co Ltd",
@@ -1738,43 +1734,43 @@
       "Mirion Technologies, Inc.",
       "Deutsche Rohstoff AG"
     ],
-    "noteCursor": 12,
-    "focusCursor": 7,
+    "noteCursor": 0,
+    "focusCursor": 0,
     "recheckCursor": 16,
-    "regionNoteCursor": 6,
-    "notesDay": "2026-07-07",
+    "regionNoteCursor": 7,
+    "notesDay": "2026-07-08",
     "seenBySector": {
-      "cons_cycl": 1173,
-      "cons_def": 601,
-      "materials": 817,
-      "health": 3377,
-      "finance": 2327,
-      "energy": 1061,
-      "hardware": 763,
-      "software": 2274,
-      "industrial": 986,
-      "utilities": 421,
-      "comm": 503,
-      "ai_semi": 449,
-      "realestate": 214
+      "cons_cycl": 1181,
+      "cons_def": 603,
+      "materials": 820,
+      "health": 3392,
+      "finance": 2337,
+      "energy": 1066,
+      "hardware": 769,
+      "software": 2286,
+      "industrial": 994,
+      "utilities": 423,
+      "comm": 506,
+      "ai_semi": 451,
+      "realestate": 215
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1173,
-      "cons_def": 602,
-      "materials": 817,
-      "health": 3378,
-      "finance": 2331,
-      "energy": 1062,
-      "hardware": 765,
-      "software": 2282,
-      "industrial": 992,
-      "utilities": 421,
-      "comm": 503,
-      "ai_semi": 450,
-      "realestate": 214
+      "cons_cycl": 1181,
+      "cons_def": 604,
+      "materials": 820,
+      "health": 3393,
+      "finance": 2341,
+      "energy": 1067,
+      "hardware": 771,
+      "software": 2294,
+      "industrial": 1000,
+      "utilities": 423,
+      "comm": 506,
+      "ai_semi": 452,
+      "realestate": 215
     },
-    "heavyAt": "2026-07-07T10:32:14.144Z",
+    "heavyAt": "2026-07-08T04:32:19.073Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1785,6 +1781,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-08T04:00:36.666Z"
+  }
 }

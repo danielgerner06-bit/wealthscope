@@ -7708,13 +7708,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 58,
-      "pe": 24.4,
+      "upside": 60,
+      "pe": 24,
       "perf6mAtAdd": -37.51,
       "perf1mBefore": -18.46,
       "sektorPsiAtAdd": 0.0585,
       "analysts": 4,
-      "div": 1.18,
+      "div": 1.22,
       "seen": "2026-06-28",
       "seenMs": 1782604800000,
       "startPrice": 24.949999809265137,
@@ -7897,10 +7897,10 @@
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "Die Kombination aus Kursziel 40%+ und 5-14 Analysten erzielte mit 10,5% die beste Performance. Das KGV hatte mit einem Spread von 4 kaum Einfluss.",
-    "date": "2026-07-07",
+    "text": "Die Kombination aus Kursziel \"40%+\" und \"5-14\" Analysten lieferte mit 10,5% die beste Performance. Das KGV zeigte mit 4 einen geringen Einfluss.",
+    "date": "2026-07-08",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-07"
+  "kiDay": "2026-07-08"
 }
