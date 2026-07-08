@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-08",
-  "updatedAt": "2026-07-08T20:00:50.308Z",
+  "updatedAt": "2026-07-08T20:44:52.627Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": -6.1,
+      "perf": -6.09,
       "avg30": 3.49,
-      "perf6m": 25.7
+      "perf6m": 25.71
     },
     {
       "id": "comm",
@@ -189,9 +189,9 @@
     },
     {
       "id": "cons_def",
-      "perf": 2.74,
+      "perf": 2.71,
       "avg30": 0.46,
-      "perf6m": 8.67
+      "perf6m": 8.64
     },
     {
       "id": "industrial",
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-06",
-      "sektorPsi": 0.0215,
+      "sektorPsi": 0.0498,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": -0.63,
       "div": 0,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0017,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -390,39 +390,6 @@
       "miss": 0
     },
     {
-      "ticker": "ADMCM.HE",
-      "name": "Admicom Oyj",
-      "yahoo": "ADMCM.HE",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-02",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-15",
-      "perf6m": -37.44,
-      "perf6mAt": "2026-07-05",
-      "perf1mBefore": -8.75,
-      "upside": 59,
-      "pe": 24.2,
-      "eps": 1.11,
-      "div": 1.19,
-      "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0215,
-      "sektorPsiAtAdd": 0.0057,
-      "recheckAt": "2026-07-02",
-      "miss": 0
-    },
-    {
       "ticker": "ADMCM",
       "name": "Admicom Oyj",
       "yahoo": "ADMCM.HE",
@@ -450,9 +417,42 @@
       "eps": 1.11,
       "div": 1.22,
       "enrichAt": "2026-07-08",
-      "sektorPsi": 0.0215,
+      "sektorPsi": 0.0498,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-07-06",
+      "miss": 0
+    },
+    {
+      "ticker": "ADMCM.HE",
+      "name": "Admicom Oyj",
+      "yahoo": "ADMCM.HE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-02",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-15",
+      "perf6m": -37.44,
+      "perf6mAt": "2026-07-05",
+      "perf1mBefore": -8.75,
+      "upside": 59,
+      "pe": 24.2,
+      "eps": 1.11,
+      "div": 1.19,
+      "enrichAt": "2026-07-05",
+      "sektorPsi": 0.0498,
+      "sektorPsiAtAdd": 0.0057,
+      "recheckAt": "2026-07-02",
       "miss": 0
     },
     {
@@ -483,7 +483,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0082,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 1.62,
       "div": 3.05,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0026,
+      "sektorPsi": 0.0024,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -549,7 +549,7 @@
       "eps": 1.13,
       "div": 3.86,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0382,
+      "sektorPsi": 0.0441,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 0.48,
       "div": 0,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0017,
       "sektorPsiAtAdd": 0.0019,
       "recheckAt": "2026-07-05",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 1.34,
       "div": 2.36,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0215,
+      "sektorPsi": 0.0498,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 203,
       "div": 0.92,
       "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0215,
+      "sektorPsi": 0.0498,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -681,7 +681,7 @@
       "eps": 0.72,
       "div": 2.7,
       "enrichAt": "2026-07-06",
-      "sektorPsi": 0.0082,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -714,7 +714,7 @@
       "eps": 2.23,
       "div": 1.66,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0382,
+      "sektorPsi": 0.0441,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -747,7 +747,7 @@
       "eps": 0.72,
       "div": 2.8,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0082,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-07",
       "miss": 0
@@ -780,7 +780,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0187,
+      "sektorPsi": 0.0186,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-07-03",
       "miss": 0
@@ -816,7 +816,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0082,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -848,7 +848,7 @@
       "pe": null,
       "div": 1.16,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0082,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -880,7 +880,7 @@
       "pe": null,
       "div": 0.1,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0152,
+      "sektorPsi": 0.0442,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -913,7 +913,7 @@
       "eps": 2.27,
       "div": 4.66,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0017,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -946,7 +946,7 @@
       "eps": 1.88,
       "div": 0.69,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0082,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-02",
       "miss": 0
@@ -982,7 +982,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0017,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -1014,7 +1014,7 @@
       "eps": 5,
       "div": 5.14,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0215,
+      "sektorPsi": 0.0498,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -1046,7 +1046,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-04",
-      "sektorPsi": 0.0215,
+      "sektorPsi": 0.0498,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-07",
       "miss": 0
@@ -1078,7 +1078,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0215,
+      "sektorPsi": 0.0498,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-08",
       "miss": 0
@@ -1305,35 +1305,34 @@
   "news": {
     "items": [
       {
-        "text": "Microsoft baut wegen KI weitere 4800 Stellen ab.",
+        "text": "BHP droht Streik: Gewerkschaften gefährden Eisenerzexporte in Australien.",
         "stamp": "08.07.26"
       },
       {
-        "text": "Tesla: RBC sieht Robotaxi-Geschäft als größten Trumpf.",
+        "text": "US-Notenbank Fed erwägt Zinsänderungen angesichts globaler Risiken.",
         "stamp": "08.07.26"
       },
       {
-        "text": "KI-Aktien unter Druck: DAX schließt im Minus, US-Börsen tiefer.",
+        "text": "Speicherchips vor Crash: Überangebot im Jahr 2027 befürchtet.",
         "stamp": "08.07.26"
       },
       {
-        "text": "Deutsche Post erhöht Ergebnisprognose für 2026.",
-        "stamp": "08.07.26"
+        "text": "Chinesisches KI-Startup entwickelt eigenen Chip – Nvidia Aktie gibt nach.",
+        "stamp": "07.07.26"
       },
       {
-        "text": "Trumps Nahost-Krieg treibt globale Zinsen langfristig nach oben.",
-        "stamp": "06.07.26"
+        "text": "SpaceX bewegt Bitcoin – Europäische Zentralbank plant digitalen Euro.",
+        "stamp": "07.07.26"
       }
     ],
     "date": "2026-07-08"
   },
   "scan": {
-    "universe": 8844,
-    "scanned": 8844,
-    "lastCursor": 3397,
-    "candCursor": 326,
+    "universe": 8843,
+    "scanned": 8843,
+    "lastCursor": 3697,
+    "candCursor": 334,
     "candidates": [
-      "CyberAgent Inc",
       "Samsung Electronics Co Ltd",
       "Taiwan Semiconductor Manufacturing Co Ltd",
       "Reliance Industries Ltd",
@@ -1732,45 +1731,46 @@
       "Odfjell Drilling Ltd.",
       "MasTec, Inc.",
       "Mirion Technologies, Inc.",
-      "Deutsche Rohstoff AG"
+      "Deutsche Rohstoff AG",
+      "ADVA Optical Networking SE"
     ],
     "noteCursor": 0,
-    "focusCursor": 0,
+    "focusCursor": 1,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-07-08",
     "seenBySector": {
-      "cons_cycl": 1181,
-      "cons_def": 603,
-      "materials": 820,
-      "health": 3392,
-      "finance": 2337,
-      "energy": 1066,
-      "hardware": 769,
-      "software": 2286,
-      "industrial": 994,
-      "utilities": 423,
-      "comm": 506,
-      "ai_semi": 451,
-      "realestate": 215
+      "cons_cycl": 1193,
+      "cons_def": 608,
+      "materials": 826,
+      "health": 3407,
+      "finance": 2351,
+      "energy": 1072,
+      "hardware": 771,
+      "software": 2295,
+      "industrial": 1001,
+      "utilities": 425,
+      "comm": 508,
+      "ai_semi": 452,
+      "realestate": 216
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1181,
-      "cons_def": 604,
-      "materials": 820,
-      "health": 3393,
-      "finance": 2341,
-      "energy": 1067,
-      "hardware": 771,
-      "software": 2294,
-      "industrial": 1000,
-      "utilities": 423,
-      "comm": 506,
-      "ai_semi": 452,
-      "realestate": 215
+      "cons_cycl": 1193,
+      "cons_def": 609,
+      "materials": 826,
+      "health": 3408,
+      "finance": 2355,
+      "energy": 1073,
+      "hardware": 773,
+      "software": 2303,
+      "industrial": 1007,
+      "utilities": 425,
+      "comm": 508,
+      "ai_semi": 453,
+      "realestate": 216
     },
-    "heavyAt": "2026-07-08T04:32:19.073Z",
+    "heavyAt": "2026-07-08T20:37:10.453Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1781,6 +1781,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-08T20:00:50.308Z"
+  }
 }
