@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-09",
-  "updatedAt": "2026-07-09T20:00:50.308Z",
+  "updatedAt": "2026-07-09T20:56:14.998Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": -1.91,
+      "perf": -2.06,
       "avg30": -1.45,
-      "perf6m": -9.28
+      "perf6m": -9.41
     },
     {
       "id": "ai_semi",
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -1.01,
+      "perf": -1.04,
       "avg30": 0.27,
-      "perf6m": -5.78
+      "perf6m": -5.81
     },
     {
       "id": "health",
@@ -177,15 +177,15 @@
     },
     {
       "id": "finance",
-      "perf": 6.4,
+      "perf": 6.42,
       "avg30": 0.32,
-      "perf6m": -1.07
+      "perf6m": -1.05
     },
     {
       "id": "cons_cycl",
-      "perf": 1.28,
+      "perf": 1.27,
       "avg30": 0.51,
-      "perf6m": -2.85
+      "perf6m": -2.87
     },
     {
       "id": "cons_def",
@@ -201,15 +201,15 @@
     },
     {
       "id": "energy",
-      "perf": -6.03,
+      "perf": -6.02,
       "avg30": 2.37,
-      "perf6m": 20.07
+      "perf6m": 20.09
     },
     {
       "id": "materials",
-      "perf": -0.69,
+      "perf": -0.73,
       "avg30": 1.34,
-      "perf6m": 7.94
+      "perf6m": 7.9
     },
     {
       "id": "utilities",
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": -0.41,
+      "perf": -0.38,
       "avg30": 0.61,
-      "perf6m": 9.37
+      "perf6m": 9.4
     }
   ],
   "bars30Region": [
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": 1.03,
+      "perf": 1.02,
       "avg30": 1.31,
-      "perf6m": 3.74
+      "perf6m": 3.73
     },
     {
       "id": "germany",
-      "perf": -1.46,
+      "perf": -1.42,
       "avg30": -0.01,
-      "perf6m": -3.54
+      "perf6m": -3.51
     },
     {
       "id": "japan",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": 3.59,
-      "avg30": -0.78,
-      "perf6m": -9.67
+      "perf": 3.55,
+      "avg30": -0.79,
+      "perf6m": -9.71
     },
     {
       "id": "latam",
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-06",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 1.11,
       "div": 1.22,
       "enrichAt": "2026-07-08",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-07-06",
       "miss": 0
@@ -450,8 +450,41 @@
       "eps": 1.11,
       "div": 1.19,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0057,
+      "recheckAt": "2026-07-09",
+      "miss": 0
+    },
+    {
+      "ticker": "GFT",
+      "name": "GFT Technologies SE",
+      "yahoo": "GFT.DE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 5,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 6,
+      "strongBuyPct": 83,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-09",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": 2.43,
+      "perf6mAt": "2026-07-09",
+      "perf1mBefore": 4.35,
+      "upside": 53,
+      "pe": 14.5,
+      "eps": 1.34,
+      "div": 2.54,
+      "enrichAt": "2026-07-09",
+      "sektorPsi": 0.0109,
+      "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-09",
       "miss": 0
     },
@@ -483,75 +516,9 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-09",
-      "miss": 0
-    },
-    {
-      "ticker": "ORS",
-      "name": "Orsero S.p.A.",
-      "yahoo": "ORS.MI",
-      "sector": "cons_def",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 3,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-09",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-14",
-      "perf6m": -10.47,
-      "perf6mAt": "2026-07-09",
-      "perf1mBefore": 0.26,
-      "upside": 48,
-      "pe": 10.4,
-      "eps": 1.64,
-      "div": 2.99,
-      "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0024,
-      "sektorPsiAtAdd": 0.008,
-      "recheckAt": "2026-07-09",
-      "miss": 0
-    },
-    {
-      "ticker": "A1OS.DE",
-      "name": "All for One Group SE",
-      "yahoo": "A1OS.DE",
-      "sector": "hardware",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-04",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-05",
-      "perf6m": -23.96,
-      "perf6mAt": "2026-07-05",
-      "perf1mBefore": -11.41,
-      "upside": 48,
-      "pe": 27.5,
-      "eps": 1.13,
-      "div": 3.86,
-      "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0439,
-      "sektorPsiAtAdd": 0.0078,
-      "recheckAt": "2026-07-04",
       "miss": 0
     },
     {
@@ -588,109 +555,10 @@
       "miss": 0
     },
     {
-      "ticker": "GFT",
-      "name": "GFT Technologies SE",
-      "yahoo": "GFT.DE",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 5,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 6,
-      "strongBuyPct": 83,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-09",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-14",
-      "perf6m": 2.43,
-      "perf6mAt": "2026-07-09",
-      "perf1mBefore": 4.35,
-      "upside": 53,
-      "pe": 14.5,
-      "eps": 1.34,
-      "div": 2.54,
-      "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0496,
-      "sektorPsiAtAdd": 0.0038,
-      "recheckAt": "2026-07-09",
-      "miss": 0
-    },
-    {
-      "ticker": "6701.T",
-      "name": "NEC Corporation",
-      "yahoo": "6701.T",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 8,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 12,
-      "strongBuyPct": 33,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-09",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-17",
-      "perf6m": -25.16,
-      "perf6mAt": "2026-07-07",
-      "perf1mBefore": -7.48,
-      "upside": 38,
-      "pe": 21.4,
-      "eps": 203,
-      "div": 0.92,
-      "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0496,
-      "sektorPsiAtAdd": 0.0106,
-      "recheckAt": "2026-07-09",
-      "miss": 0
-    },
-    {
-      "ticker": "JST.DE",
-      "name": "Jost Werke AG",
-      "yahoo": "JST.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-09",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": -3.42,
-      "perf6mAt": "2026-07-06",
-      "perf1mBefore": 0.54,
-      "upside": 35,
-      "pe": 77.2,
-      "eps": 0.72,
-      "div": 2.7,
-      "enrichAt": "2026-07-06",
-      "sektorPsi": 0.0073,
-      "sektorPsiAtAdd": 0.025,
-      "recheckAt": "2026-07-09",
-      "miss": 0
-    },
-    {
-      "ticker": "IXX.DE",
-      "name": "Init Innovation in Traffic Systems SE",
-      "yahoo": "IXX.DE",
-      "sector": "hardware",
+      "ticker": "ORS",
+      "name": "Orsero S.p.A.",
+      "yahoo": "ORS.MI",
+      "sector": "cons_def",
       "buyPct": 100,
       "ratingCounts": {
         "buy": 3,
@@ -703,18 +571,51 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-04",
+      "verifiedAt": "2026-07-09",
       "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": -10.47,
+      "perf6mAt": "2026-07-09",
+      "perf1mBefore": 0.26,
+      "upside": 48,
+      "pe": 10.4,
+      "eps": 1.64,
+      "div": 2.99,
+      "enrichAt": "2026-07-09",
+      "sektorPsi": 0.0027,
+      "sektorPsiAtAdd": 0.008,
+      "recheckAt": "2026-07-09",
+      "miss": 0
+    },
+    {
+      "ticker": "A1OS.DE",
+      "name": "All for One Group SE",
+      "yahoo": "A1OS.DE",
+      "sector": "hardware",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-04",
+      "verifiedSource": "yahoo",
       "seen": "2026-06-05",
-      "perf6m": 0.31,
+      "perf6m": -23.96,
       "perf6mAt": "2026-07-05",
-      "perf1mBefore": -2.31,
-      "upside": 35,
-      "pe": 21.6,
-      "eps": 2.23,
-      "div": 1.66,
+      "perf1mBefore": -11.41,
+      "upside": 48,
+      "pe": 27.5,
+      "eps": 1.13,
+      "div": 3.86,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0439,
+      "sektorPsi": 0.0071,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -747,9 +648,108 @@
       "eps": 0.72,
       "div": 2.77,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-07",
+      "miss": 0
+    },
+    {
+      "ticker": "6701.T",
+      "name": "NEC Corporation",
+      "yahoo": "6701.T",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 8,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 12,
+      "strongBuyPct": 33,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-09",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-17",
+      "perf6m": -25.16,
+      "perf6mAt": "2026-07-07",
+      "perf1mBefore": -7.48,
+      "upside": 38,
+      "pe": 21.4,
+      "eps": 203,
+      "div": 0.92,
+      "enrichAt": "2026-07-07",
+      "sektorPsi": 0.0109,
+      "sektorPsiAtAdd": 0.0106,
+      "recheckAt": "2026-07-09",
+      "miss": 0
+    },
+    {
+      "ticker": "JST.DE",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-09",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": -3.42,
+      "perf6mAt": "2026-07-06",
+      "perf1mBefore": 0.54,
+      "upside": 35,
+      "pe": 77.2,
+      "eps": 0.72,
+      "div": 2.7,
+      "enrichAt": "2026-07-06",
+      "sektorPsi": 0.0074,
+      "sektorPsiAtAdd": 0.025,
+      "recheckAt": "2026-07-09",
+      "miss": 0
+    },
+    {
+      "ticker": "IXX.DE",
+      "name": "Init Innovation in Traffic Systems SE",
+      "yahoo": "IXX.DE",
+      "sector": "hardware",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-04",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-05",
+      "perf6m": 0.31,
+      "perf6mAt": "2026-07-05",
+      "perf1mBefore": -2.31,
+      "upside": 35,
+      "pe": 21.6,
+      "eps": 2.23,
+      "div": 1.66,
+      "enrichAt": "2026-07-05",
+      "sektorPsi": 0.0071,
+      "sektorPsiAtAdd": 0.0078,
+      "recheckAt": "2026-07-04",
       "miss": 0
     },
     {
@@ -816,7 +816,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -848,7 +848,7 @@
       "pe": null,
       "div": 1.16,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -880,7 +880,7 @@
       "pe": null,
       "div": 0.1,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0441,
+      "sektorPsi": 0.0063,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -946,7 +946,7 @@
       "eps": 1.88,
       "div": 0.76,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -1014,7 +1014,7 @@
       "eps": 5,
       "div": 5.14,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -1046,7 +1046,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-07",
       "miss": 0
@@ -1078,7 +1078,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-05",
-      "sektorPsi": 0.0496,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-08",
       "miss": 0
@@ -1785,6 +1785,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-09T20:00:50.308Z"
+  }
 }
