@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-10",
-  "updatedAt": "2026-07-10T17:00:56.341Z",
+  "updatedAt": "2026-07-10T18:00:57.740Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,15 +147,15 @@
   "bars30": [
     {
       "id": "software",
-      "perf": -3.04,
+      "perf": -3.31,
       "avg30": -1.45,
-      "perf6m": -11.61
+      "perf6m": -11.86
     },
     {
       "id": "ai_semi",
-      "perf": 3.4,
+      "perf": 3.48,
       "avg30": 9.04,
-      "perf6m": 78.91
+      "perf6m": 79.05
     },
     {
       "id": "hardware",
@@ -189,9 +189,9 @@
     },
     {
       "id": "cons_def",
-      "perf": 0.67,
+      "perf": 0.73,
       "avg30": 0.46,
-      "perf6m": 8.59
+      "perf6m": 8.66
     },
     {
       "id": "industrial",
@@ -213,15 +213,15 @@
     },
     {
       "id": "utilities",
-      "perf": 3.04,
+      "perf": 2.97,
       "avg30": 0.69,
-      "perf6m": 6.12
+      "perf6m": 6.05
     },
     {
       "id": "realestate",
-      "perf": -1.16,
+      "perf": -1.06,
       "avg30": 0.6,
-      "perf6m": 9.28
+      "perf6m": 9.39
     }
   ],
   "bars30Region": [
@@ -239,9 +239,9 @@
     },
     {
       "id": "germany",
-      "perf": -1.35,
+      "perf": -1.38,
       "avg30": -0.01,
-      "perf6m": -3.69
+      "perf6m": -3.71
     },
     {
       "id": "japan",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -2.04,
+      "perf": -2.29,
       "avg30": -0.71,
-      "perf6m": -15.13
+      "perf6m": -15.34
     },
     {
       "id": "em",
@@ -1778,5 +1778,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-07-10T17:00:56.341Z"
+  "yahooAt": "2026-07-10T18:00:57.740Z"
 }
