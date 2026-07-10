@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-10",
-  "updatedAt": "2026-07-10T20:00:55.348Z",
+  "updatedAt": "2026-07-10T20:49:48.038Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -189,9 +189,9 @@
     },
     {
       "id": "cons_def",
-      "perf": 0.82,
+      "perf": 0.81,
       "avg30": 0.45,
-      "perf6m": 8.76
+      "perf6m": 8.75
     },
     {
       "id": "industrial",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": -4.5,
+      "perf": -4.49,
       "avg30": 2.37,
-      "perf6m": 20.67
+      "perf6m": 20.68
     },
     {
       "id": "materials",
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": 1.02,
-      "avg30": 1.32,
-      "perf6m": 3.73
+      "perf": 0,
+      "avg30": 0,
+      "perf6m": 0
     },
     {
       "id": "germany",
-      "perf": -1.46,
+      "perf": -1.47,
       "avg30": -0.01,
-      "perf6m": -3.79
+      "perf6m": -3.8
     },
     {
       "id": "japan",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": -2.15,
-      "avg30": -0.74,
-      "perf6m": -15.22
+      "perf": 0,
+      "avg30": 0,
+      "perf6m": 0
     },
     {
       "id": "em",
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-06",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0311,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -390,39 +390,6 @@
       "miss": 0
     },
     {
-      "ticker": "ADMCM",
-      "name": "Admicom Oyj",
-      "yahoo": "ADMCM.HE",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-06",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-28",
-      "perf6m": -37.51,
-      "perf6mAt": "2026-07-08",
-      "perf1mBefore": -18.46,
-      "upside": 60,
-      "pe": 24,
-      "eps": 1.11,
-      "div": 1.22,
-      "enrichAt": "2026-07-08",
-      "sektorPsi": 0.0108,
-      "sektorPsiAtAdd": 0.0585,
-      "recheckAt": "2026-07-06",
-      "miss": 0
-    },
-    {
       "ticker": "ADMCM.HE",
       "name": "Admicom Oyj",
       "yahoo": "ADMCM.HE",
@@ -450,9 +417,42 @@
       "eps": 0.89,
       "div": 1.28,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0311,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-07-09",
+      "miss": 0
+    },
+    {
+      "ticker": "ADMCM",
+      "name": "Admicom Oyj",
+      "yahoo": "ADMCM.HE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-06",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-28",
+      "perf6m": -37.51,
+      "perf6mAt": "2026-07-08",
+      "perf1mBefore": -18.46,
+      "upside": 60,
+      "pe": 24,
+      "eps": 1.11,
+      "div": 1.22,
+      "enrichAt": "2026-07-08",
+      "sektorPsi": 0.0311,
+      "sektorPsiAtAdd": 0.0585,
+      "recheckAt": "2026-07-06",
       "miss": 0
     },
     {
@@ -483,7 +483,7 @@
       "eps": 1.34,
       "div": 2.54,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0311,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -582,7 +582,7 @@
       "eps": 1.64,
       "div": 2.99,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0026,
+      "sektorPsi": 0.0032,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -615,7 +615,7 @@
       "eps": 1.13,
       "div": 3.55,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -648,7 +648,7 @@
       "eps": 0.72,
       "div": 2.77,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-07",
       "miss": 0
@@ -681,41 +681,8 @@
       "eps": 203,
       "div": 0.92,
       "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0311,
       "sektorPsiAtAdd": 0.0106,
-      "recheckAt": "2026-07-09",
-      "miss": 0
-    },
-    {
-      "ticker": "JST.DE",
-      "name": "Jost Werke AG",
-      "yahoo": "JST.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-09",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": -3.42,
-      "perf6mAt": "2026-07-06",
-      "perf1mBefore": 0.54,
-      "upside": 35,
-      "pe": 77.2,
-      "eps": 0.72,
-      "div": 2.7,
-      "enrichAt": "2026-07-06",
-      "sektorPsi": 0.0073,
-      "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-09",
       "miss": 0
     },
@@ -747,9 +714,106 @@
       "eps": 2.23,
       "div": 1.74,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-04",
+      "miss": 0
+    },
+    {
+      "ticker": "JST.DE",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-09",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": -3.42,
+      "perf6mAt": "2026-07-06",
+      "perf1mBefore": 0.54,
+      "upside": 35,
+      "pe": 77.2,
+      "eps": 0.72,
+      "div": 2.7,
+      "enrichAt": "2026-07-06",
+      "sektorPsi": 0.0074,
+      "sektorPsiAtAdd": 0.025,
+      "recheckAt": "2026-07-09",
+      "miss": 0
+    },
+    {
+      "ticker": "402340",
+      "name": "SK Square Co., Ltd.",
+      "yahoo": "402340.KS",
+      "sector": "ai_semi",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 6,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 10,
+      "strongBuyPct": 36,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-09",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-10",
+      "perf6m": 210.41,
+      "perf6mAt": "2026-07-10",
+      "perf1mBefore": 5.99,
+      "upside": 32,
+      "pe": null,
+      "div": 0.12,
+      "enrichAt": "2026-07-10",
+      "sektorPsi": 0.0029,
+      "sektorPsiAtAdd": 0.0039,
+      "recheckAt": "2026-07-09",
+      "miss": 0
+    },
+    {
+      "ticker": "034730",
+      "name": "SK Inc.",
+      "yahoo": "034730.KS",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 6,
+        "outperform": 5,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 11,
+      "strongBuyPct": 50,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-09",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-10",
+      "perf6m": 117.08,
+      "perf6mAt": "2026-07-10",
+      "perf1mBefore": 6,
+      "upside": 30,
+      "pe": null,
+      "div": 1.31,
+      "enrichAt": "2026-07-10",
+      "sektorPsi": 0.0074,
+      "sektorPsiAtAdd": 0.0102,
+      "recheckAt": "2026-07-09",
       "miss": 0
     },
     {
@@ -780,7 +844,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0185,
+      "sektorPsi": 0.0183,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-07-10",
       "miss": 0
@@ -816,73 +880,9 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-04",
-      "miss": 0
-    },
-    {
-      "ticker": "034730",
-      "name": "SK Inc.",
-      "yahoo": "034730.KS",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 6,
-        "outperform": 5,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 11,
-      "strongBuyPct": 50,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-09",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-10",
-      "perf6m": 117.08,
-      "perf6mAt": "2026-07-10",
-      "perf1mBefore": 6,
-      "upside": 30,
-      "pe": null,
-      "div": 1.31,
-      "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0073,
-      "sektorPsiAtAdd": 0.0102,
-      "recheckAt": "2026-07-09",
-      "miss": 0
-    },
-    {
-      "ticker": "402340",
-      "name": "SK Square Co., Ltd.",
-      "yahoo": "402340.KS",
-      "sector": "ai_semi",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 6,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 10,
-      "strongBuyPct": 36,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-09",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-10",
-      "perf6m": 210.41,
-      "perf6mAt": "2026-07-10",
-      "perf1mBefore": 5.99,
-      "upside": 32,
-      "pe": null,
-      "div": 0.12,
-      "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0062,
-      "sektorPsiAtAdd": 0.0039,
-      "recheckAt": "2026-07-09",
       "miss": 0
     },
     {
@@ -946,7 +946,7 @@
       "eps": 1.88,
       "div": 0.76,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0073,
+      "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -1014,7 +1014,7 @@
       "eps": 5,
       "div": 5.59,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0311,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-04",
       "miss": 0
@@ -1046,7 +1046,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0311,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-07",
       "miss": 0
@@ -1078,10 +1078,41 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0311,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-08",
       "miss": 0
+    },
+    {
+      "ticker": "KALN.NS",
+      "name": "Kalyan Jewellers India Ltd.",
+      "yahoo": "KALYANKJIL.NS",
+      "sector": "cons_cycl",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 9,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 9,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-10",
+      "verifiedSource": "yahoo",
+      "seen": "2026-07-10",
+      "perf6m": -24.48,
+      "perf6mAt": "2026-07-10",
+      "perf1mBefore": 20.63,
+      "upside": 38,
+      "pe": 36.4,
+      "eps": 13.07,
+      "div": 0.34,
+      "enrichAt": "2026-07-10",
+      "sektorPsi": 0.0015,
+      "sektorPsiAtAdd": 0.0015
     }
   ],
   "psiHistory": [
@@ -1093,6 +1124,11 @@
     {
       "t": "1INN.DE",
       "d": "2026-06-05",
+      "v": 0.0015
+    },
+    {
+      "t": "KALN.NS",
+      "d": "2026-07-10",
       "v": 0.0015
     },
     {
@@ -1305,29 +1341,37 @@
   "news": {
     "items": [
       {
-        "text": "Fed warnt vor neuer Inflationswelle – Zinserhöhung rückt näher.",
-        "stamp": "09.07.26"
+        "text": "Inflation im Euroraum sinkt; Japanische Rentenreformen stärken Yen.",
+        "stamp": "10.07.26"
       },
       {
-        "text": "VW berät über Sparpläne – Modellpalette schrumpft.",
-        "stamp": "09.07.26"
+        "text": "Ölpreise ziehen wieder an wegen Iran-Konflikt; DAX unter Druck.",
+        "stamp": "10.07.26"
       },
       {
-        "text": "Iran-Konflikt: Spritpreise steigen wieder deutlich.",
-        "stamp": "09.07.26"
+        "text": "Easyjet-Aktie hebt zweistellig nach Übernahmeangebot von Apollo ab.",
+        "stamp": "10.07.26"
       },
       {
-        "text": "Südafrika: Handlungsdruck, aber keine Panik bei Ressourcen.",
+        "text": "Europas Börsen kaum verändert; Finanzinvestoren sorgen für Bewegung.",
+        "stamp": "10.07.26"
+      },
+      {
+        "text": "Apple scheitert mit Klage gegen strengere EU-Regeln.",
+        "stamp": "10.07.26"
+      },
+      {
+        "text": "Volkswagen-Chef Blume scheitert mit Sparprogramm; Zukunft unsicher.",
         "stamp": "09.07.26"
       }
     ],
     "date": "2026-07-10"
   },
   "scan": {
-    "universe": 8842,
-    "scanned": 8842,
-    "lastCursor": 4297,
-    "candCursor": 350,
+    "universe": 8838,
+    "scanned": 8838,
+    "lastCursor": 4597,
+    "candCursor": 358,
     "candidates": [
       "WCH Service AG",
       "Vivendi SE",
@@ -1731,42 +1775,53 @@
       "Pagaya Technologies Ltd."
     ],
     "noteCursor": 2,
-    "focusCursor": 3,
+    "focusCursor": 4,
     "recheckCursor": 16,
     "regionNoteCursor": 9,
     "notesDay": "2026-07-10",
     "seenBySector": {
-      "cons_cycl": 1200,
-      "cons_def": 618,
-      "materials": 834,
-      "health": 3459,
-      "finance": 2370,
-      "energy": 1083,
-      "hardware": 783,
-      "software": 2316,
-      "industrial": 1013,
-      "utilities": 430,
-      "comm": 514,
-      "ai_semi": 458,
-      "realestate": 219
+      "cons_cycl": 1212,
+      "cons_def": 624,
+      "materials": 840,
+      "health": 3483,
+      "finance": 2383,
+      "energy": 1093,
+      "hardware": 790,
+      "software": 2325,
+      "industrial": 1018,
+      "utilities": 431,
+      "comm": 517,
+      "ai_semi": 462,
+      "realestate": 220
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "LFST",
+      "LFUS",
+      "LFVN",
+      "LFWD",
+      "LGCY",
+      "LGIH",
+      "LGIQ",
+      "LGL",
+      "LGMK",
+      "LGN"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 1200,
-      "cons_def": 619,
-      "materials": 834,
-      "health": 3460,
-      "finance": 2374,
-      "energy": 1084,
-      "hardware": 785,
-      "software": 2324,
-      "industrial": 1019,
-      "utilities": 430,
-      "comm": 514,
-      "ai_semi": 459,
-      "realestate": 219
+      "cons_cycl": 1213,
+      "cons_def": 625,
+      "materials": 840,
+      "health": 3484,
+      "finance": 2387,
+      "energy": 1094,
+      "hardware": 792,
+      "software": 2333,
+      "industrial": 1024,
+      "utilities": 431,
+      "comm": 517,
+      "ai_semi": 463,
+      "realestate": 220
     },
-    "heavyAt": "2026-07-10T05:08:01.103Z",
+    "heavyAt": "2026-07-10T20:42:58.466Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1777,6 +1832,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-10T20:00:55.348Z"
+  }
 }
