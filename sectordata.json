@@ -311,11 +311,11 @@
       "perf6mAt": "2026-07-11",
       "perf1mBefore": -8.65,
       "upside": 89,
-      "pe": 19.3,
+      "pe": 19.6,
       "eps": 0.11,
       "div": 0,
-      "enrichAt": "2026-07-06",
-      "sektorPsi": 0.0311,
+      "enrichAt": "2026-07-11",
+      "sektorPsi": 0.0309,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -342,7 +342,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-07-04",
+      "verifiedAt": "2026-07-11",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -37.89,
       "perf6mAt": "2026-07-10",
@@ -353,7 +353,7 @@
       "enrichAt": "2026-07-10",
       "sektorPsi": 0.0017,
       "sektorPsiAtAdd": 0.0085,
-      "recheckAt": "2026-07-04",
+      "recheckAt": "2026-07-11",
       "miss": 0
     },
     {
@@ -379,11 +379,11 @@
       "perf6m": -32.94,
       "perf6mAt": "2026-07-11",
       "perf1mBefore": -7.78,
-      "upside": 70,
-      "pe": 21.7,
+      "upside": 68,
+      "pe": 21.9,
       "eps": 6.47,
-      "div": 4.42,
-      "enrichAt": "2026-07-06",
+      "div": 4.37,
+      "enrichAt": "2026-07-11",
       "sektorPsi": 0.0003,
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-07-09",
@@ -417,7 +417,7 @@
       "eps": 0.89,
       "div": 1.28,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0311,
+      "sektorPsi": 0.0309,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 1.11,
       "div": 1.22,
       "enrichAt": "2026-07-08",
-      "sektorPsi": 0.0311,
+      "sektorPsi": 0.0309,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-07-06",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 1.34,
       "div": 2.54,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0311,
+      "sektorPsi": 0.0309,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -604,7 +604,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-07-04",
+      "verifiedAt": "2026-07-11",
       "verifiedSource": "yahoo",
       "seen": "2026-06-05",
       "perf6m": -27.46,
@@ -617,7 +617,7 @@
       "enrichAt": "2026-07-10",
       "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0078,
-      "recheckAt": "2026-07-04",
+      "recheckAt": "2026-07-11",
       "miss": 0
     },
     {
@@ -681,9 +681,42 @@
       "eps": 203,
       "div": 0.92,
       "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0311,
+      "sektorPsi": 0.0309,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-09",
+      "miss": 0
+    },
+    {
+      "ticker": "KALN.NS",
+      "name": "Kalyan Jewellers India Ltd.",
+      "yahoo": "KALYANKJIL.NS",
+      "sector": "cons_cycl",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 9,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 9,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-11",
+      "verifiedSource": "yahoo",
+      "seen": "2026-07-10",
+      "perf6m": -24.48,
+      "perf6mAt": "2026-07-10",
+      "perf1mBefore": 20.63,
+      "upside": 38,
+      "pe": 36.4,
+      "eps": 13.07,
+      "div": 0.34,
+      "enrichAt": "2026-07-10",
+      "sektorPsi": 0.0015,
+      "sektorPsiAtAdd": 0.0015,
+      "recheckAt": "2026-07-11",
       "miss": 0
     },
     {
@@ -703,7 +736,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-04",
+      "verifiedAt": "2026-07-11",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
       "perf6m": 0.21,
@@ -716,7 +749,7 @@
       "enrichAt": "2026-07-10",
       "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0078,
-      "recheckAt": "2026-07-04",
+      "recheckAt": "2026-07-11",
       "miss": 0
     },
     {
@@ -742,11 +775,11 @@
       "perf6m": -9.14,
       "perf6mAt": "2026-07-11",
       "perf1mBefore": 0.54,
-      "upside": 35,
-      "pe": 77.2,
+      "upside": 39,
+      "pe": 74.7,
       "eps": 0.72,
-      "div": 2.7,
-      "enrichAt": "2026-07-06",
+      "div": 2.79,
+      "enrichAt": "2026-07-11",
       "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-09",
@@ -844,7 +877,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0183,
+      "sektorPsi": 0.0182,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-07-10",
       "miss": 0
@@ -871,7 +904,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-07-04",
+      "verifiedAt": "2026-07-11",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -7.76,
       "perf6mAt": "2026-07-10",
@@ -882,7 +915,7 @@
       "enrichAt": "2026-07-10",
       "sektorPsi": 0.0074,
       "sektorPsiAtAdd": 0.0095,
-      "recheckAt": "2026-07-04",
+      "recheckAt": "2026-07-11",
       "miss": 0
     },
     {
@@ -973,7 +1006,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-07-04",
+      "verifiedAt": "2026-07-11",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -33.68,
       "perf6mAt": "2026-07-10",
@@ -984,7 +1017,7 @@
       "enrichAt": "2026-07-10",
       "sektorPsi": 0.0017,
       "sektorPsiAtAdd": 0.0085,
-      "recheckAt": "2026-07-04",
+      "recheckAt": "2026-07-11",
       "miss": 0
     },
     {
@@ -1004,7 +1037,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-04",
+      "verifiedAt": "2026-07-11",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
       "perf6m": -18.59,
@@ -1014,9 +1047,9 @@
       "eps": 5,
       "div": 5.59,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0311,
+      "sektorPsi": 0.0309,
       "sektorPsiAtAdd": 0.0015,
-      "recheckAt": "2026-07-04",
+      "recheckAt": "2026-07-11",
       "miss": 0
     },
     {
@@ -1046,7 +1079,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0311,
+      "sektorPsi": 0.0309,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-07",
       "miss": 0
@@ -1078,41 +1111,10 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0311,
+      "sektorPsi": 0.0309,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-08",
       "miss": 0
-    },
-    {
-      "ticker": "KALN.NS",
-      "name": "Kalyan Jewellers India Ltd.",
-      "yahoo": "KALYANKJIL.NS",
-      "sector": "cons_cycl",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 9,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 9,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-10",
-      "verifiedSource": "yahoo",
-      "seen": "2026-07-10",
-      "perf6m": -24.48,
-      "perf6mAt": "2026-07-10",
-      "perf1mBefore": 20.63,
-      "upside": 38,
-      "pe": 36.4,
-      "eps": 13.07,
-      "div": 0.34,
-      "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0015,
-      "sektorPsiAtAdd": 0.0015
     }
   ],
   "psiHistory": [
@@ -1264,8 +1266,8 @@
       "date": "2026-07-10"
     },
     "hardware": {
-      "text": "Der Hardware-Sektor stagniert kurzfristig aufgrund des Normalisierungsdrucks nach starken KI-getriebenen Gewinnen. Langfristig überwiegt jedoch die positive KI-Nachfrage.",
-      "date": "2026-06-28"
+      "text": "Der Sektor \"Hardware & Geräte\" zeigt sich mit +2.53% im letzten Monat stabil, profitiert aber stark von KI-Trends mit +26.49% über 6 Monate. A1OS.DE und IXX.DE sind hierbei auffällige Profiteure.",
+      "date": "2026-07-11"
     },
     "comm": {
       "text": "Der Sektor \"Kommunikation & Medien\" leidet unter steigenden Zinsen und der unsicheren Konjunktur. KI-Investitionen verschieben Gelder, während geopolitische Spannungen die Werbeausgaben dämpfen.",
@@ -1334,47 +1336,41 @@
       "date": "2026-07-10"
     },
     "world": {
-      "text": "Weltweit sind die 30-Tage-Zahlen wegen Zinsanstiegen und konjunktureller Unsicherheit leicht gefallen. Langfristig zeigen sich die Märkte angesichts von KI-Fortschritten und stabiler Energiepreise optimistischer.",
-      "date": "2026-07-01"
+      "text": "Weltweit steigen die Märkte leicht überdurchschnittlich, getragen von positiver Konjunktur. Die 6-Monats-Rendite deutet auf anhaltenden Optimismus hin.",
+      "date": "2026-07-11"
     }
   },
   "news": {
     "items": [
       {
-        "text": "Inflation im Euroraum sinkt; Japanische Rentenreformen stärken Yen.",
+        "text": "Meta-Aktie mit +25% – Rallye nimmt wieder Fahrt auf!",
         "stamp": "10.07.26"
       },
       {
-        "text": "Ölpreise ziehen wieder an wegen Iran-Konflikt; DAX unter Druck.",
+        "text": "Iran-Krieg: Spritpreise steigen wieder deutlich.",
         "stamp": "10.07.26"
       },
       {
-        "text": "Easyjet-Aktie hebt zweistellig nach Übernahmeangebot von Apollo ab.",
+        "text": "SK Hynix: Nasdaq-Start & Telekom: Kurszielerhöhung.",
         "stamp": "10.07.26"
       },
       {
-        "text": "Europas Börsen kaum verändert; Finanzinvestoren sorgen für Bewegung.",
+        "text": "VW will wohl deutlich mehr Stellen abbauen.",
         "stamp": "10.07.26"
       },
       {
-        "text": "Apple scheitert mit Klage gegen strengere EU-Regeln.",
-        "stamp": "10.07.26"
-      },
-      {
-        "text": "Volkswagen-Chef Blume scheitert mit Sparprogramm; Zukunft unsicher.",
+        "text": "Geopolitik, Volatilität, Hightech unter Druck – Märkte im Stresstest.",
         "stamp": "09.07.26"
       }
     ],
-    "date": "2026-07-10"
+    "date": "2026-07-11"
   },
   "scan": {
     "universe": 8838,
     "scanned": 8838,
-    "lastCursor": 4597,
-    "candCursor": 358,
+    "lastCursor": 4897,
+    "candCursor": 366,
     "candidates": [
-      "WCH Service AG",
-      "Vivendi SE",
       "Allianz SE",
       "Münchener Rückversicherungs-Gesellschaft AG in München",
       "Commerzbank AG",
@@ -1772,56 +1768,56 @@
       "Magnite, Inc.",
       "Amplitude, Inc.",
       "Sweetgreen, Inc.",
-      "Pagaya Technologies Ltd."
+      "Pagaya Technologies Ltd.",
+      "Alfa Financial Software Holdings PLC",
+      "Gorilla Technology Group Inc."
     ],
-    "noteCursor": 2,
-    "focusCursor": 4,
+    "noteCursor": 3,
+    "focusCursor": 5,
     "recheckCursor": 16,
-    "regionNoteCursor": 9,
-    "notesDay": "2026-07-10",
+    "regionNoteCursor": 0,
+    "notesDay": "2026-07-11",
     "seenBySector": {
-      "cons_cycl": 1212,
-      "cons_def": 624,
-      "materials": 840,
-      "health": 3483,
-      "finance": 2383,
-      "energy": 1093,
-      "hardware": 790,
-      "software": 2325,
-      "industrial": 1018,
-      "utilities": 431,
-      "comm": 517,
-      "ai_semi": 462,
+      "cons_cycl": 1223,
+      "cons_def": 630,
+      "materials": 848,
+      "health": 3503,
+      "finance": 2392,
+      "energy": 1095,
+      "hardware": 795,
+      "software": 2341,
+      "industrial": 1024,
+      "utilities": 432,
+      "comm": 521,
+      "ai_semi": 464,
       "realestate": 220
     },
     "pendingReject": [
-      "LFST",
-      "LFUS",
-      "LFVN",
-      "LFWD",
-      "LGCY",
-      "LGIH",
-      "LGIQ",
-      "LGL",
-      "LGMK",
-      "LGN"
+      "MCBS",
+      "MCD",
+      "MCFT",
+      "MCHB",
+      "MCHP",
+      "MCHX",
+      "MCK",
+      "MCO"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 1213,
-      "cons_def": 625,
-      "materials": 840,
-      "health": 3484,
-      "finance": 2387,
-      "energy": 1094,
-      "hardware": 792,
-      "software": 2333,
-      "industrial": 1024,
-      "utilities": 431,
-      "comm": 517,
-      "ai_semi": 463,
+      "cons_cycl": 1224,
+      "cons_def": 631,
+      "materials": 848,
+      "health": 3504,
+      "finance": 2396,
+      "energy": 1096,
+      "hardware": 797,
+      "software": 2349,
+      "industrial": 1030,
+      "utilities": 432,
+      "comm": 521,
+      "ai_semi": 465,
       "realestate": 220
     },
-    "heavyAt": "2026-07-10T20:42:58.466Z",
+    "heavyAt": "2026-07-11T08:59:16.296Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
