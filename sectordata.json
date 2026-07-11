@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-10",
-  "updatedAt": "2026-07-11T21:00:53.231Z",
+  "updated": "2026-07-11",
+  "updatedAt": "2026-07-11T21:39:10.727Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-11",
-      "sektorPsi": 0.0309,
+      "sektorPsi": 0.0307,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 0.89,
       "div": 1.28,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0309,
+      "sektorPsi": 0.0307,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 1.11,
       "div": 1.22,
       "enrichAt": "2026-07-08",
-      "sektorPsi": 0.0309,
+      "sektorPsi": 0.0307,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-07-06",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 1.34,
       "div": 2.54,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0309,
+      "sektorPsi": 0.0307,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -516,7 +516,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0074,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -648,9 +648,42 @@
       "eps": 0.72,
       "div": 2.77,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0074,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-07",
+      "miss": 0
+    },
+    {
+      "ticker": "JST.DE",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-09",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": -9.14,
+      "perf6mAt": "2026-07-11",
+      "perf1mBefore": 0.54,
+      "upside": 39,
+      "pe": 74.7,
+      "eps": 0.72,
+      "div": 2.79,
+      "enrichAt": "2026-07-11",
+      "sektorPsi": 0.0073,
+      "sektorPsiAtAdd": 0.025,
+      "recheckAt": "2026-07-09",
       "miss": 0
     },
     {
@@ -681,7 +714,7 @@
       "eps": 203,
       "div": 0.92,
       "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0309,
+      "sektorPsi": 0.0307,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -753,39 +786,6 @@
       "miss": 0
     },
     {
-      "ticker": "JST.DE",
-      "name": "Jost Werke AG",
-      "yahoo": "JST.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-09",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": -9.14,
-      "perf6mAt": "2026-07-11",
-      "perf1mBefore": 0.54,
-      "upside": 39,
-      "pe": 74.7,
-      "eps": 0.72,
-      "div": 2.79,
-      "enrichAt": "2026-07-11",
-      "sektorPsi": 0.0074,
-      "sektorPsiAtAdd": 0.025,
-      "recheckAt": "2026-07-09",
-      "miss": 0
-    },
-    {
       "ticker": "402340",
       "name": "SK Square Co., Ltd.",
       "yahoo": "402340.KS",
@@ -844,7 +844,7 @@
       "pe": null,
       "div": 1.31,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0074,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -913,7 +913,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0074,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -979,7 +979,7 @@
       "eps": 1.88,
       "div": 0.76,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0074,
+      "sektorPsi": 0.0073,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -1047,7 +1047,7 @@
       "eps": 5,
       "div": 5.59,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0309,
+      "sektorPsi": 0.0307,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -1079,7 +1079,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0309,
+      "sektorPsi": 0.0307,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-07",
       "miss": 0
@@ -1111,7 +1111,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0309,
+      "sektorPsi": 0.0307,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-08",
       "miss": 0
@@ -1343,33 +1343,37 @@
   "news": {
     "items": [
       {
-        "text": "Meta-Aktie mit +25% – Rallye nimmt wieder Fahrt auf!",
+        "text": "US-Notenbank bekräftigt Ziel der Preisstabilität und entschlossenem Handeln.",
         "stamp": "10.07.26"
       },
       {
-        "text": "Iran-Krieg: Spritpreise steigen wieder deutlich.",
+        "text": "China: Starker Export und KI treiben Wirtschaftswachstum an.",
         "stamp": "10.07.26"
       },
       {
-        "text": "SK Hynix: Nasdaq-Start & Telekom: Kurszielerhöhung.",
+        "text": "Geopolitik und Geldpolitik bleiben entscheidende Einflussfaktoren für Märkte.",
         "stamp": "10.07.26"
       },
       {
-        "text": "VW will wohl deutlich mehr Stellen abbauen.",
+        "text": "US-Wirtschaft robust; Zinspolitik der Fed im Fokus.",
         "stamp": "10.07.26"
       },
       {
-        "text": "Geopolitik, Volatilität, Hightech unter Druck – Märkte im Stresstest.",
-        "stamp": "09.07.26"
+        "text": "Europäische Verteidigungszulieferer profitieren von Sektorrotation.",
+        "stamp": "10.07.26"
+      },
+      {
+        "text": "KI-Sektor bleibt Kurstreiber; SK Hynix-Debüt an Nasdaq.",
+        "stamp": "10.07.26"
       }
     ],
     "date": "2026-07-11"
   },
   "scan": {
-    "universe": 8838,
-    "scanned": 8838,
-    "lastCursor": 4897,
-    "candCursor": 366,
+    "universe": 8839,
+    "scanned": 8839,
+    "lastCursor": 5197,
+    "candCursor": 374,
     "candidates": [
       "Allianz SE",
       "Münchener Rückversicherungs-Gesellschaft AG in München",
@@ -1773,51 +1777,42 @@
       "Gorilla Technology Group Inc."
     ],
     "noteCursor": 3,
-    "focusCursor": 5,
+    "focusCursor": 6,
     "recheckCursor": 16,
     "regionNoteCursor": 0,
     "notesDay": "2026-07-11",
     "seenBySector": {
-      "cons_cycl": 1223,
-      "cons_def": 630,
-      "materials": 848,
-      "health": 3503,
-      "finance": 2392,
-      "energy": 1095,
-      "hardware": 795,
-      "software": 2341,
-      "industrial": 1024,
-      "utilities": 432,
-      "comm": 521,
-      "ai_semi": 464,
-      "realestate": 220
+      "cons_cycl": 1228,
+      "cons_def": 634,
+      "materials": 854,
+      "health": 3526,
+      "finance": 2407,
+      "energy": 1098,
+      "hardware": 799,
+      "software": 2351,
+      "industrial": 1031,
+      "utilities": 433,
+      "comm": 523,
+      "ai_semi": 468,
+      "realestate": 222
     },
-    "pendingReject": [
-      "MCBS",
-      "MCD",
-      "MCFT",
-      "MCHB",
-      "MCHP",
-      "MCHX",
-      "MCK",
-      "MCO"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1224,
-      "cons_def": 631,
-      "materials": 848,
-      "health": 3504,
-      "finance": 2396,
-      "energy": 1096,
-      "hardware": 797,
-      "software": 2349,
-      "industrial": 1030,
-      "utilities": 432,
-      "comm": 521,
-      "ai_semi": 465,
-      "realestate": 220
+      "cons_cycl": 1229,
+      "cons_def": 635,
+      "materials": 854,
+      "health": 3527,
+      "finance": 2411,
+      "energy": 1099,
+      "hardware": 801,
+      "software": 2359,
+      "industrial": 1037,
+      "utilities": 433,
+      "comm": 523,
+      "ai_semi": 469,
+      "realestate": 222
     },
-    "heavyAt": "2026-07-11T08:59:16.296Z",
+    "heavyAt": "2026-07-11T21:30:25.386Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1828,6 +1823,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-11T21:00:53.231Z"
+  }
 }
