@@ -7871,7 +7871,8 @@
       "seen": "2026-07-12",
       "seenMs": 1783814400000,
       "startPrice": 7.480000019073486,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
