@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-11",
-  "updatedAt": "2026-07-12T10:00:54.371Z",
+  "updated": "2026-07-12",
+  "updatedAt": "2026-07-12T10:18:33.583Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-11",
-      "sektorPsi": 0.0307,
+      "sektorPsi": 0.0344,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": -0.63,
       "div": 0,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0017,
+      "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 0.89,
       "div": 1.28,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0307,
+      "sektorPsi": 0.0344,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 1.11,
       "div": 1.22,
       "enrichAt": "2026-07-08",
-      "sektorPsi": 0.0307,
+      "sektorPsi": 0.0344,
       "sektorPsiAtAdd": 0.0585,
       "recheckAt": "2026-07-06",
       "miss": 0
@@ -483,7 +483,7 @@
       "eps": 1.34,
       "div": 2.54,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0307,
+      "sektorPsi": 0.0344,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -538,7 +538,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-05",
+      "verifiedAt": "2026-07-12",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-04",
       "perf6m": -16.97,
@@ -549,9 +549,9 @@
       "eps": 0.48,
       "div": 0,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0017,
+      "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0019,
-      "recheckAt": "2026-07-05",
+      "recheckAt": "2026-07-12",
       "miss": 0
     },
     {
@@ -711,10 +711,10 @@
       "perf1mBefore": -7.48,
       "upside": 38,
       "pe": 21.4,
-      "eps": 203,
+      "eps": 202.78,
       "div": 0.92,
-      "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0307,
+      "enrichAt": "2026-07-12",
+      "sektorPsi": 0.0344,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -872,12 +872,12 @@
       "perf6m": 42.69,
       "perf6mAt": "2026-07-12",
       "perf1mBefore": -10.76,
-      "upside": 28,
+      "upside": 33,
       "pe": null,
       "eps": -0.06,
       "div": 0,
-      "enrichAt": "2026-07-07",
-      "sektorPsi": 0.0182,
+      "enrichAt": "2026-07-12",
+      "sektorPsi": 0.0179,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-07-10",
       "miss": 0
@@ -946,7 +946,7 @@
       "eps": 2.27,
       "div": 4.61,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0017,
+      "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -1015,7 +1015,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0017,
+      "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -1047,7 +1047,7 @@
       "eps": 5,
       "div": 5.59,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0307,
+      "sektorPsi": 0.0344,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -1079,7 +1079,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0307,
+      "sektorPsi": 0.0344,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-07",
       "miss": 0
@@ -1111,10 +1111,41 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0307,
+      "sektorPsi": 0.0344,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-08",
       "miss": 0
+    },
+    {
+      "ticker": "CSH.DE",
+      "name": "Cenit AG",
+      "yahoo": "CSH.DE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-12",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-12",
+      "perf6m": 2.14,
+      "perf6mAt": "2026-07-12",
+      "perf1mBefore": -9.44,
+      "upside": 98,
+      "pe": 9.8,
+      "eps": 0.75,
+      "div": 0,
+      "enrichAt": "2026-07-12",
+      "sektorPsi": 0.0344,
+      "sektorPsiAtAdd": 0.0344
     }
   ],
   "psiHistory": [
@@ -1239,6 +1270,11 @@
       "v": 0.0256
     },
     {
+      "t": "CSH.DE",
+      "d": "2026-07-12",
+      "v": 0.0344
+    },
+    {
       "t": "ADMCM",
       "d": "2026-06-28",
       "v": 0.0585
@@ -1270,8 +1306,8 @@
       "date": "2026-07-11"
     },
     "comm": {
-      "text": "Der Sektor \"Kommunikation & Medien\" leidet unter steigenden Zinsen und der unsicheren Konjunktur. KI-Investitionen verschieben Gelder, während geopolitische Spannungen die Werbeausgaben dämpfen.",
-      "date": "2026-06-29"
+      "text": "Hohe Zinsen und Konjunktursorgen belasten den Sektor Kommunikation & Medien. KI-Investitionen bieten zwar Potenzial, können kurzfristige Verluste aber nicht kompensieren.",
+      "date": "2026-07-12"
     },
     "cons_cycl": {
       "text": "Hohe Zinsen belasten den Konsum zyklisch Sektor, was zu deutlichen Kursverlusten führt. Die Konjunktursorgen verstärken diese negative Entwicklung.",
@@ -1312,8 +1348,8 @@
       "date": "2026-07-05"
     },
     "usa": {
-      "text": "US-Aktien fallen kurzfristig wegen Zinsanstiegs, erholen sich aber langfristig durch KI-Boom und robuste Konjunktur.",
-      "date": "2026-07-02"
+      "text": "USA: Starke 30-Tage-Performance (+1.92%) übertrifft Normalniveau (+1.57%). Starker Konjunkturaufschwung und anhaltende KI-Euphorie treiben die Märkte an.",
+      "date": "2026-07-12"
     },
     "europe": {
       "text": "Europa: Konjunktur schwächelt (-0,47% 30-Tage), trotz positiver 6-Monats-Performance (+5,47%). Geopolitische Unsicherheiten belasten die kurzfristige Entwicklung.",
@@ -1343,39 +1379,38 @@
   "news": {
     "items": [
       {
-        "text": "US-Notenbank bekräftigt Ziel der Preisstabilität und entschlossenem Handeln.",
+        "text": "Apple verklagt OpenAI wegen Diebstahls von Geschäftsgeheimnissen.",
         "stamp": "10.07.26"
       },
       {
-        "text": "China: Starker Export und KI treiben Wirtschaftswachstum an.",
+        "text": "Kanadische Arbeitsmarktdaten übertreffen Erwartungen, aber Handelsbelastungen.",
         "stamp": "10.07.26"
       },
       {
-        "text": "Geopolitik und Geldpolitik bleiben entscheidende Einflussfaktoren für Märkte.",
+        "text": "SK Hynix glänzt bei US-Debüt; Tech-Aktien kehren in Gunst zurück.",
         "stamp": "10.07.26"
       },
       {
-        "text": "US-Wirtschaft robust; Zinspolitik der Fed im Fokus.",
+        "text": "US-Iran-Konflikt: Straße von Hormus gesperrt, neue US-Angriffe.",
         "stamp": "10.07.26"
       },
       {
-        "text": "Europäische Verteidigungszulieferer profitieren von Sektorrotation.",
+        "text": "Fed hält Leitzins stabil; Sorge über Inflation wächst.",
         "stamp": "10.07.26"
       },
       {
-        "text": "KI-Sektor bleibt Kurstreiber; SK Hynix-Debüt an Nasdaq.",
+        "text": "EU-Sanktionspaket gegen Russland aufgeweicht; Handelsverbot für Siedlungen möglich.",
         "stamp": "10.07.26"
       }
     ],
-    "date": "2026-07-11"
+    "date": "2026-07-12"
   },
   "scan": {
     "universe": 8839,
     "scanned": 8839,
-    "lastCursor": 5197,
-    "candCursor": 374,
+    "lastCursor": 5497,
+    "candCursor": 382,
     "candidates": [
-      "Allianz SE",
       "Münchener Rückversicherungs-Gesellschaft AG in München",
       "Commerzbank AG",
       "Sonova Holding AG",
@@ -1774,45 +1809,46 @@
       "Sweetgreen, Inc.",
       "Pagaya Technologies Ltd.",
       "Alfa Financial Software Holdings PLC",
-      "Gorilla Technology Group Inc."
+      "Gorilla Technology Group Inc.",
+      "EcoGraf Limited"
     ],
-    "noteCursor": 3,
-    "focusCursor": 6,
+    "noteCursor": 4,
+    "focusCursor": 7,
     "recheckCursor": 16,
-    "regionNoteCursor": 0,
-    "notesDay": "2026-07-11",
+    "regionNoteCursor": 1,
+    "notesDay": "2026-07-12",
     "seenBySector": {
-      "cons_cycl": 1228,
-      "cons_def": 634,
-      "materials": 854,
-      "health": 3526,
-      "finance": 2407,
-      "energy": 1098,
-      "hardware": 799,
-      "software": 2351,
-      "industrial": 1031,
-      "utilities": 433,
-      "comm": 523,
-      "ai_semi": 468,
-      "realestate": 222
+      "cons_cycl": 1230,
+      "cons_def": 637,
+      "materials": 865,
+      "health": 3543,
+      "finance": 2422,
+      "energy": 1114,
+      "hardware": 802,
+      "software": 2363,
+      "industrial": 1037,
+      "utilities": 437,
+      "comm": 526,
+      "ai_semi": 472,
+      "realestate": 223
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1229,
-      "cons_def": 635,
-      "materials": 854,
-      "health": 3527,
-      "finance": 2411,
-      "energy": 1099,
-      "hardware": 801,
-      "software": 2359,
-      "industrial": 1037,
-      "utilities": 433,
-      "comm": 523,
-      "ai_semi": 469,
-      "realestate": 222
+      "cons_cycl": 1231,
+      "cons_def": 638,
+      "materials": 865,
+      "health": 3544,
+      "finance": 2426,
+      "energy": 1115,
+      "hardware": 804,
+      "software": 2372,
+      "industrial": 1043,
+      "utilities": 437,
+      "comm": 526,
+      "ai_semi": 473,
+      "realestate": 223
     },
-    "heavyAt": "2026-07-11T21:30:25.386Z",
+    "heavyAt": "2026-07-12T10:11:42.628Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1823,6 +1859,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-12T10:00:54.371Z"
+  }
 }

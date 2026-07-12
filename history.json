@@ -7798,7 +7798,7 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 80,
-      "upside": 28,
+      "upside": 33,
       "pe": null,
       "perf6mAtAdd": 42.69,
       "perf1mBefore": -10.76,
@@ -7852,6 +7852,26 @@
       "startPrice": 408.5749969482422,
       "perf": [],
       "outperformPct": null
+    },
+    "CSH.DE": {
+      "ticker": "CSH.DE",
+      "name": "Cenit AG",
+      "yahoo": "CSH.DE",
+      "sector": "software",
+      "region": "europe",
+      "buyPct": 100,
+      "strongBuyPct": 100,
+      "upside": 98,
+      "pe": 9.8,
+      "perf6mAtAdd": 2.14,
+      "perf1mBefore": -9.44,
+      "sektorPsiAtAdd": null,
+      "analysts": 3,
+      "div": 0,
+      "seen": "2026-07-12",
+      "seenMs": 1783814400000,
+      "startPrice": 7.480000019073486,
+      "perf": []
     }
   },
   "findings": {
@@ -7933,10 +7953,10 @@
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "\"Strong Buy\" mit 5,5% im besten Fall war am besten. KGV-Ausprägungen hatten kaum Einfluss.",
-    "date": "2026-07-11",
+    "text": "\"Strong Buy\" mit bis zu 16,4% Spread und \"Kursziel 40%+\" (6,2% avg) liefen am besten. KGV-Ausprägung hatte mit 3,8% Spread kaum Einfluss.",
+    "date": "2026-07-12",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-11"
+  "kiDay": "2026-07-12"
 }
