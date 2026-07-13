@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-13",
-  "updatedAt": "2026-07-13T20:00:54.330Z",
+  "updatedAt": "2026-07-13T21:00:27.791Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": -0.22,
+      "perf": -0.27,
       "avg30": -1.47,
-      "perf6m": -11.6
+      "perf6m": -11.65
     },
     {
       "id": "ai_semi",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 5.58,
+      "perf": 5.6,
       "avg30": 1.6,
-      "perf6m": 2.06
+      "perf6m": 2.08
     },
     {
       "id": "finance",
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": 3.04,
+      "perf": 3.05,
       "avg30": 2.91,
-      "perf6m": 7.69
+      "perf6m": 7.7
     },
     {
       "id": "world",
@@ -1867,5 +1867,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-07-13T20:00:54.330Z"
+  "yahooAt": "2026-07-13T21:00:27.791Z"
 }
