@@ -7873,6 +7873,26 @@
       "startPrice": 7.480000019073486,
       "perf": [],
       "outperformPct": null
+    },
+    "NEAG": {
+      "ticker": "NEAG",
+      "name": "naturenergie holding AG",
+      "yahoo": "NEAG.SW",
+      "sector": "utilities",
+      "region": "europe",
+      "buyPct": 100,
+      "strongBuyPct": 0,
+      "upside": 97,
+      "pe": 5.9,
+      "perf6mAtAdd": -7.46,
+      "perf1mBefore": -4.8,
+      "sektorPsiAtAdd": null,
+      "analysts": 1,
+      "div": 2.9,
+      "seen": "2026-07-13",
+      "seenMs": 1783900800000,
+      "startPrice": 30.75,
+      "perf": []
     }
   },
   "findings": {
