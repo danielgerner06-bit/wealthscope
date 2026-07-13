@@ -7865,7 +7865,7 @@
       "pe": 9.8,
       "perf6mAtAdd": 2.14,
       "perf1mBefore": -9.44,
-      "sektorPsiAtAdd": null,
+      "sektorPsiAtAdd": 0.0344,
       "analysts": 3,
       "div": 0,
       "seen": "2026-07-12",
@@ -7954,10 +7954,10 @@
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "\"Strong Buy\" mit bis zu 16,4% Spread und \"Kursziel 40%+\" (6,2% avg) liefen am besten. KGV-Ausprägung hatte mit 3,8% Spread kaum Einfluss.",
-    "date": "2026-07-12",
+    "text": "\"Strong Buy\"-Perlen mit <70% Kursziel-Aufschlag (5,5% avg) performten am besten. KGV-Ausprägungen hatten kaum Einfluss.",
+    "date": "2026-07-13",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-12"
+  "kiDay": "2026-07-13"
 }
