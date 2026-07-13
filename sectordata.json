@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-13",
-  "updatedAt": "2026-07-13T05:00:54.328Z",
+  "updatedAt": "2026-07-13T05:54:12.084Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -1779,43 +1779,34 @@
     "regionNoteCursor": 2,
     "notesDay": "2026-07-13",
     "seenBySector": {
-      "cons_cycl": 1232,
+      "cons_cycl": 1233,
       "cons_def": 641,
       "materials": 871,
-      "health": 3572,
-      "finance": 2433,
-      "energy": 1122,
+      "health": 3574,
+      "finance": 2434,
+      "energy": 1123,
       "hardware": 805,
-      "software": 2380,
+      "software": 2381,
       "industrial": 1039,
       "utilities": 443,
-      "comm": 527,
-      "ai_semi": 477,
+      "comm": 528,
+      "ai_semi": 478,
       "realestate": 225
     },
-    "pendingReject": [
-      "OMQS",
-      "OMSE",
-      "ON",
-      "ONB",
-      "ONCO",
-      "ONCY",
-      "ONDS",
-      "ONEW"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1233,
+      "cons_cycl": 1234,
       "cons_def": 642,
       "materials": 871,
-      "health": 3573,
-      "finance": 2437,
-      "energy": 1123,
+      "health": 3575,
+      "finance": 2438,
+      "energy": 1124,
       "hardware": 807,
-      "software": 2388,
+      "software": 2389,
       "industrial": 1045,
       "utilities": 443,
-      "comm": 527,
-      "ai_semi": 478,
+      "comm": 528,
+      "ai_semi": 479,
       "realestate": 225
     },
     "heavyAt": "2026-07-13T04:46:31.092Z",
@@ -1829,6 +1820,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-13T05:00:54.328Z"
+  }
 }
