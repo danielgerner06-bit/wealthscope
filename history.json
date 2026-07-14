@@ -7504,8 +7504,8 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 60,
-      "upside": 9,
-      "pe": 34.3,
+      "upside": 13,
+      "pe": 33.1,
       "perf6mAtAdd": 50.73,
       "perf1mBefore": -0.96,
       "sektorPsiAtAdd": 0.0229,
@@ -7514,8 +7514,11 @@
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 67.14999771118164,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        -8.83
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "ORS": {
       "ticker": "ORS",
@@ -7525,18 +7528,21 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 48,
-      "pe": 10.4,
+      "upside": 46,
+      "pe": 10.6,
       "perf6mAtAdd": -12.26,
       "perf1mBefore": 0.26,
       "sektorPsiAtAdd": 0.008,
       "analysts": 3,
-      "div": 2.99,
+      "div": 2.95,
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 15.380000114440918,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        7.22
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "GF": {
       "ticker": "GF",
@@ -7546,18 +7552,21 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 9,
-      "pe": 12.7,
+      "upside": 13,
+      "pe": 12.2,
       "perf6mAtAdd": 19.83,
       "perf1mBefore": -5.14,
       "sektorPsiAtAdd": 0.0047,
       "analysts": 3,
-      "div": 4.61,
+      "div": 4.79,
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 26.75,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        2.87
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "SIT": {
       "ticker": "SIT",
@@ -7567,8 +7576,8 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 49,
-      "pe": 57,
+      "upside": 50,
+      "pe": 56.5,
       "perf6mAtAdd": -21.11,
       "perf1mBefore": -17.12,
       "sektorPsiAtAdd": 0.0229,
@@ -7577,8 +7586,11 @@
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 2.15500009059906,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        3.86
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "GFT": {
       "ticker": "GFT",
@@ -7588,18 +7600,21 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 83,
-      "upside": 53,
-      "pe": 14.5,
+      "upside": 41,
+      "pe": 15.7,
       "perf6mAtAdd": -6.16,
       "perf1mBefore": 4.35,
       "sektorPsiAtAdd": 0.0038,
       "analysts": 6,
-      "div": 2.54,
+      "div": 2.52,
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 21.600000381469727,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        -12.53
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "ADMCM.HE": {
       "ticker": "ADMCM.HE",
@@ -7735,13 +7750,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 40,
-      "pe": 74.3,
+      "upside": 38,
+      "pe": 75.3,
       "perf6mAtAdd": -9.14,
       "perf1mBefore": -9.59,
       "sektorPsiAtAdd": 0.008,
       "analysts": 4,
-      "div": 2.77,
+      "div": 2.79,
       "seen": "2026-06-29",
       "seenMs": 1782691200000,
       "startPrice": 50.89999961853027,
@@ -7819,8 +7834,8 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 49,
-      "pe": 46.7,
+      "upside": 47,
+      "pe": 47.5,
       "perf6mAtAdd": -18.61,
       "perf1mBefore": 11.41,
       "sektorPsiAtAdd": 0.0019,
@@ -7886,7 +7901,7 @@
       "pe": 5.9,
       "perf6mAtAdd": -7.46,
       "perf1mBefore": -4.8,
-      "sektorPsiAtAdd": null,
+      "sektorPsiAtAdd": 0.0031,
       "analysts": 1,
       "div": 2.9,
       "seen": "2026-07-13",
@@ -7899,26 +7914,12 @@
   "findings": {
     "factors": [
       {
-        "name": "Strong Buy",
-        "spread": 16.4,
-        "best": {
-          "k": "<70%",
-          "avg": 5.5,
-          "n": 3
-        },
-        "worst": {
-          "k": "95%+",
-          "avg": -10.9,
-          "n": 3
-        }
-      },
-      {
         "name": "Kursziel",
-        "spread": 9.5,
+        "spread": 9.4,
         "best": {
           "k": "40%+",
-          "avg": 6.2,
-          "n": 135
+          "avg": 6.1,
+          "n": 138
         },
         "worst": {
           "k": "<10%",
@@ -7928,16 +7929,30 @@
       },
       {
         "name": "Analysten",
-        "spread": 8.3,
+        "spread": 7.7,
         "best": {
           "k": "5-14",
-          "avg": 5.6,
-          "n": 145
+          "avg": 5.3,
+          "n": 147
         },
         "worst": {
           "k": "1-4",
-          "avg": -2.7,
-          "n": 80
+          "avg": -2.4,
+          "n": 83
+        }
+      },
+      {
+        "name": "Strong Buy",
+        "spread": 6.8,
+        "best": {
+          "k": "<70%",
+          "avg": 2.3,
+          "n": 5
+        },
+        "worst": {
+          "k": "95%+",
+          "avg": -4.5,
+          "n": 5
         }
       },
       {
@@ -7946,39 +7961,44 @@
         "best": {
           "k": "keine",
           "avg": 5.4,
-          "n": 164
+          "n": 165
         },
         "worst": {
           "k": "2-4%",
           "avg": -0.9,
-          "n": 52
+          "n": 54
         }
       },
       {
         "name": "KGV",
-        "spread": 3.8,
+        "spread": 4,
         "best": {
           "k": "<15",
           "avg": 4.3,
-          "n": 62
+          "n": 64
         },
         "worst": {
           "k": "25-40",
-          "avg": 0.5,
-          "n": 53
+          "avg": 0.3,
+          "n": 54
         }
       }
     ],
-    "combo": null,
-    "sampleSize": 340,
+    "combo": {
+      "f1": "Kursziel 40%+",
+      "f2": "Analysten 5-14",
+      "avg": 10.2,
+      "n": 70
+    },
+    "sampleSize": 345,
     "maxMonths": 1,
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "\"Strong Buy\"-Perlen mit <70% Kursziel-Aufschlag (5,5% avg) performten am besten. KGV-Ausprägungen hatten kaum Einfluss.",
-    "date": "2026-07-13",
+    "text": "Die Kombination \"Kursziel 40%+\" und \"Analysten 5-14\" lieferte mit 10,2% die beste Performance. Das KGV hatte mit 4 Punkten den geringsten Einfluss.",
+    "date": "2026-07-14",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-13"
+  "kiDay": "2026-07-14"
 }

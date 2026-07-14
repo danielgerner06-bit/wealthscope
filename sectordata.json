@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-13",
-  "updatedAt": "2026-07-14T05:00:27.619Z",
+  "updated": "2026-07-14",
+  "updatedAt": "2026-07-14T05:22:49.858Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,9 +315,42 @@
       "eps": 0.75,
       "div": 0,
       "enrichAt": "2026-07-12",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-07-13",
+      "miss": 0
+    },
+    {
+      "ticker": "NEAG",
+      "name": "naturenergie holding AG",
+      "yahoo": "NEAG.SW",
+      "sector": "utilities",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-14",
+      "verifiedSource": "yahoo",
+      "seen": "2026-07-13",
+      "perf6m": -7.46,
+      "perf6mAt": "2026-07-13",
+      "perf1mBefore": -4.8,
+      "upside": 97,
+      "pe": 5.9,
+      "eps": 5.21,
+      "div": 2.9,
+      "enrichAt": "2026-07-13",
+      "sektorPsi": 0.0031,
+      "sektorPsiAtAdd": 0.0031,
+      "recheckAt": "2026-07-14",
       "miss": 0
     },
     {
@@ -348,7 +381,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-11",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -450,7 +483,7 @@
       "eps": 0.89,
       "div": 1.28,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0057,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -478,12 +511,12 @@
       "perf6m": -6.16,
       "perf6mAt": "2026-07-14",
       "perf1mBefore": 4.35,
-      "upside": 53,
-      "pe": 14.5,
+      "upside": 41,
+      "pe": 15.7,
       "eps": 1.34,
-      "div": 2.54,
-      "enrichAt": "2026-07-09",
-      "sektorPsi": 0.007,
+      "div": 2.52,
+      "enrichAt": "2026-07-14",
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -511,12 +544,12 @@
       "perf6m": -21.11,
       "perf6mAt": "2026-07-14",
       "perf1mBefore": -17.12,
-      "upside": 49,
-      "pe": 57,
+      "upside": 50,
+      "pe": 56.5,
       "eps": 0.04,
       "div": 0,
-      "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0071,
+      "enrichAt": "2026-07-14",
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -544,11 +577,11 @@
       "perf6m": -18.61,
       "perf6mAt": "2026-07-14",
       "perf1mBefore": 11.41,
-      "upside": 49,
-      "pe": 46.7,
+      "upside": 47,
+      "pe": 47.5,
       "eps": 0.48,
       "div": 0,
-      "enrichAt": "2026-07-09",
+      "enrichAt": "2026-07-14",
       "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0019,
       "recheckAt": "2026-07-12",
@@ -577,11 +610,11 @@
       "perf6m": -12.26,
       "perf6mAt": "2026-07-14",
       "perf1mBefore": 0.26,
-      "upside": 48,
-      "pe": 10.4,
+      "upside": 46,
+      "pe": 10.6,
       "eps": 1.64,
-      "div": 2.99,
-      "enrichAt": "2026-07-09",
+      "div": 2.95,
+      "enrichAt": "2026-07-14",
       "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-09",
@@ -637,20 +670,20 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-07",
+      "verifiedAt": "2026-07-14",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-29",
       "perf6m": -9.14,
       "perf6mAt": "2026-07-14",
       "perf1mBefore": -9.59,
-      "upside": 40,
-      "pe": 74.3,
+      "upside": 38,
+      "pe": 75.3,
       "eps": 0.72,
-      "div": 2.77,
-      "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0071,
+      "div": 2.79,
+      "enrichAt": "2026-07-14",
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.008,
-      "recheckAt": "2026-07-07",
+      "recheckAt": "2026-07-14",
       "miss": 0
     },
     {
@@ -681,7 +714,7 @@
       "eps": 0.72,
       "div": 2.79,
       "enrichAt": "2026-07-11",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -714,7 +747,7 @@
       "eps": 202.78,
       "div": 0.92,
       "enrichAt": "2026-07-12",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -747,7 +780,7 @@
       "eps": 13.07,
       "div": 0.34,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0015,
+      "sektorPsi": 0.0014,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -813,7 +846,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-07-12",
-      "sektorPsi": 0.0177,
+      "sektorPsi": 0.0176,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-07-10",
       "miss": 0
@@ -877,7 +910,7 @@
       "pe": null,
       "div": 1.31,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -913,7 +946,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.0071,
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -941,11 +974,11 @@
       "perf6m": 19.83,
       "perf6mAt": "2026-07-14",
       "perf1mBefore": -5.14,
-      "upside": 9,
-      "pe": 12.7,
+      "upside": 13,
+      "pe": 12.2,
       "eps": 2.27,
-      "div": 4.61,
-      "enrichAt": "2026-07-09",
+      "div": 4.79,
+      "enrichAt": "2026-07-14",
       "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-07-09",
@@ -974,12 +1007,12 @@
       "perf6m": 50.73,
       "perf6mAt": "2026-07-14",
       "perf1mBefore": -0.96,
-      "upside": 9,
-      "pe": 34.3,
+      "upside": 13,
+      "pe": 33.1,
       "eps": 1.88,
       "div": 0.76,
-      "enrichAt": "2026-07-09",
-      "sektorPsi": 0.0071,
+      "enrichAt": "2026-07-14",
+      "sektorPsi": 0.007,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-09",
       "miss": 0
@@ -1047,7 +1080,7 @@
       "eps": 5,
       "div": 5.59,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -1069,7 +1102,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-07-07",
+      "verifiedAt": "2026-07-14",
       "verifiedSource": "yahoo",
       "seen": "2026-06-29",
       "perf6m": -42.57,
@@ -1078,10 +1111,10 @@
       "pe": null,
       "eps": -0.12,
       "div": 0,
-      "enrichAt": "2026-07-09",
-      "sektorPsi": 0.007,
+      "enrichAt": "2026-07-14",
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0224,
-      "recheckAt": "2026-07-07",
+      "recheckAt": "2026-07-14",
       "miss": 0
     },
     {
@@ -1111,41 +1144,10 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-10",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0077,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-08",
       "miss": 0
-    },
-    {
-      "ticker": "NEAG",
-      "name": "naturenergie holding AG",
-      "yahoo": "NEAG.SW",
-      "sector": "utilities",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-07-13",
-      "perf6m": -7.46,
-      "perf6mAt": "2026-07-13",
-      "perf1mBefore": -4.8,
-      "upside": 97,
-      "pe": 5.9,
-      "eps": 5.21,
-      "div": 2.9,
-      "enrichAt": "2026-07-13",
-      "sektorPsi": 0.0031,
-      "sektorPsiAtAdd": 0.0031
     }
   ],
   "psiHistory": [
@@ -1299,8 +1301,8 @@
       "date": "2026-07-03"
     },
     "finance": {
-      "text": "Banken leiden unter Zinsunsicherheit und Konjunktursorgen, trotz kurzfristiger Erholung. KI und Geopolitik spielen aktuell kaum eine Rolle.",
-      "date": "2026-07-01"
+      "text": "Finanzen & Banken legen kurzfristig stark zu, getrieben von Zinsfantasien und KI-Hype. Langfristig bremsen Konjunktursorgen und Geopolitik.",
+      "date": "2026-07-14"
     },
     "ai_semi": {
       "text": "Starke KI-Nachfrage treibt Halbleiter trotz Zinsanstieg. Der Sektor zeigt langfristig beeindruckendes Wachstum.",
@@ -1361,8 +1363,8 @@
       "date": "2026-07-13"
     },
     "germany": {
-      "text": "Deutschland erlebt eine deutliche Konjunkturabschwächung mit negativen Wachstumsraten, belastet durch hohe Energiepreise und unsichere globale Geopolitik. Diese Faktoren dämpfen die wirtschaftliche Entwicklung erheblich.",
-      "date": "2026-07-04"
+      "text": "Die deutsche Konjunktur schwächelt mit einem deutlichen Rückgang. Hohe Energiepreise und globale Unsicherheiten belasten die Wirtschaft.",
+      "date": "2026-07-14"
     },
     "china": {
       "text": "Chinas Wirtschaft schwächelt stark (-7,89% im letzten Monat), was auf eine anhaltende Konjunkturflaute und geopolitische Unsicherheiten zurückzuführen ist.",
@@ -1384,40 +1386,26 @@
   "news": {
     "items": [
       {
-        "text": "US-Handelsstopp gegen Spanien erschüttert europäische Märkte.",
+        "text": "US-Notenbank hebt Zinsen an, trotz Inflationssorgen.",
+        "stamp": "14.07.26"
+      },
+      {
+        "text": "Iran-Krieg treibt Ölpreise, beeinflusst Märkte weltweit.",
         "stamp": "13.07.26"
       },
       {
-        "text": "EZB wird Zinsen im September erneut erhöhen.",
-        "stamp": "13.07.26"
-      },
-      {
-        "text": "Bank of England könnte Zinserhöhung signalisieren.",
-        "stamp": "13.07.26"
-      },
-      {
-        "text": "Meta baut größtes Rechenzentrum auf fünf Gigawatt aus.",
-        "stamp": "13.07.26"
-      },
-      {
-        "text": "BASF-Aktie legt zu wegen Abspaltung der Agrarsparte.",
-        "stamp": "13.07.26"
-      },
-      {
-        "text": "Korea-Crash: Börse zieht Notbremse.",
-        "stamp": "13.07.26"
+        "text": "VW-Chef kündigt Neuausrichtung an, Stellenabbau droht.",
+        "stamp": "12.07.26"
       }
     ],
-    "date": "2026-07-13"
+    "date": "2026-07-14"
   },
   "scan": {
     "universe": 8839,
     "scanned": 8839,
-    "lastCursor": 6097,
-    "candCursor": 398,
+    "lastCursor": 6397,
+    "candCursor": 4,
     "candidates": [
-      "Winnebago Industries, Inc.",
-      "Arch Capital Group Ltd.",
       "Marvell Technology, Inc.",
       "Super Micro Computer, Inc.",
       "Ambarella, Inc.",
@@ -1815,47 +1803,47 @@
       "Cox Energy Solar, S.A.",
       "Public Power Corporation S.A.",
       "EGL AG",
-      "Banco Pichincha España S.A."
+      "Banco Pichincha España S.A.",
+      "Intred S.p.A.",
+      "Xenia S.p.A."
     ],
-    "noteCursor": 5,
-    "focusCursor": 1,
+    "noteCursor": 6,
+    "focusCursor": 2,
     "recheckCursor": 16,
-    "regionNoteCursor": 2,
-    "notesDay": "2026-07-13",
+    "regionNoteCursor": 3,
+    "notesDay": "2026-07-14",
     "seenBySector": {
-      "cons_cycl": 1238,
-      "cons_def": 645,
-      "materials": 871,
-      "health": 3597,
-      "finance": 2454,
-      "energy": 1131,
-      "hardware": 810,
-      "software": 2407,
-      "industrial": 1046,
-      "utilities": 448,
-      "comm": 529,
-      "ai_semi": 479,
-      "realestate": 227
-    },
-    "pendingReject": [
-      "PHGE"
-    ],
-    "evaluatedBySector": {
-      "cons_cycl": 1239,
-      "cons_def": 646,
-      "materials": 871,
-      "health": 3598,
-      "finance": 2458,
-      "energy": 1132,
+      "cons_cycl": 1248,
+      "cons_def": 649,
+      "materials": 876,
+      "health": 3621,
+      "finance": 2466,
+      "energy": 1137,
       "hardware": 812,
-      "software": 2415,
-      "industrial": 1052,
-      "utilities": 449,
-      "comm": 529,
-      "ai_semi": 480,
+      "software": 2423,
+      "industrial": 1054,
+      "utilities": 451,
+      "comm": 530,
+      "ai_semi": 485,
       "realestate": 227
     },
-    "heavyAt": "2026-07-13T16:58:49.708Z",
+    "pendingReject": [],
+    "evaluatedBySector": {
+      "cons_cycl": 1249,
+      "cons_def": 650,
+      "materials": 876,
+      "health": 3622,
+      "finance": 2470,
+      "energy": 1138,
+      "hardware": 814,
+      "software": 2431,
+      "industrial": 1060,
+      "utilities": 452,
+      "comm": 530,
+      "ai_semi": 486,
+      "realestate": 227
+    },
+    "heavyAt": "2026-07-14T05:15:47.106Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1866,6 +1854,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-14T05:00:27.619Z"
+  }
 }
