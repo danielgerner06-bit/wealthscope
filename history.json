@@ -6800,7 +6800,7 @@
       ],
       "prov": false,
       "strongBuyPct": 86,
-      "sektorPsiAtAdd": null
+      "sektorPsiAtAdd": 0.0029
     },
     "AOF.DE": {
       "ticker": "AOF.DE",
