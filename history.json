@@ -6785,7 +6785,7 @@
       "sector": "cons_cycl",
       "region": "europe",
       "buyPct": 100,
-      "outperformPct": 0,
+      "outperformPct": null,
       "upside": 20,
       "pe": 12.6,
       "perf6mAtAdd": 18.52,
