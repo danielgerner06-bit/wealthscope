@@ -7650,18 +7650,21 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 39,
-      "pe": 74.7,
+      "upside": 37,
+      "pe": 76,
       "perf6mAtAdd": -10.86,
       "perf1mBefore": 0.54,
       "sektorPsiAtAdd": 0.025,
       "analysts": 4,
-      "div": 2.79,
+      "div": 2.75,
       "seen": "2026-06-16",
       "seenMs": 1781568000000,
       "startPrice": 55.900001525878906,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        -2.33
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "EXL.DE": {
       "ticker": "EXL.DE",
@@ -7672,7 +7675,7 @@
       "buyPct": 100,
       "strongBuyPct": 100,
       "upside": 89,
-      "pe": 19.6,
+      "pe": 19.5,
       "perf6mAtAdd": -13.67,
       "perf1mBefore": -8.65,
       "sektorPsiAtAdd": 0.007,
@@ -7681,8 +7684,11 @@
       "seen": "2026-06-16",
       "seenMs": 1781568000000,
       "startPrice": 2.375,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        -10.29
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "6701.T": {
       "ticker": "6701.T",
@@ -7713,13 +7719,13 @@
       "region": "china",
       "buyPct": 100,
       "strongBuyPct": 17,
-      "upside": 68,
-      "pe": 21.9,
+      "upside": 58,
+      "pe": 23.2,
       "perf6mAtAdd": -30.43,
       "perf1mBefore": -7.78,
       "sektorPsiAtAdd": 0.0009,
       "analysts": 23,
-      "div": 4.37,
+      "div": 4.24,
       "seen": "2026-06-21",
       "seenMs": 1782000000000,
       "startPrice": 141.68000030517578,
@@ -7941,11 +7947,11 @@
     "factors": [
       {
         "name": "Kursziel",
-        "spread": 9.5,
+        "spread": 9.4,
         "best": {
           "k": "40%+",
-          "avg": 6.2,
-          "n": 140
+          "avg": 6.1,
+          "n": 141
         },
         "worst": {
           "k": "<10%",
@@ -7955,7 +7961,7 @@
       },
       {
         "name": "Analysten",
-        "spread": 7.7,
+        "spread": 7.8,
         "best": {
           "k": "5-14",
           "avg": 5.3,
@@ -7963,13 +7969,13 @@
         },
         "worst": {
           "k": "1-4",
-          "avg": -2.4,
-          "n": 84
+          "avg": -2.5,
+          "n": 86
         }
       },
       {
         "name": "Strong Buy",
-        "spread": 6.4,
+        "spread": 7,
         "best": {
           "k": "<70%",
           "avg": 2.3,
@@ -7977,8 +7983,8 @@
         },
         "worst": {
           "k": "95%+",
-          "avg": -4.1,
-          "n": 6
+          "avg": -4.7,
+          "n": 8
         }
       },
       {
@@ -7986,13 +7992,13 @@
         "spread": 6.3,
         "best": {
           "k": "keine",
-          "avg": 5.4,
-          "n": 165
+          "avg": 5.3,
+          "n": 166
         },
         "worst": {
           "k": "2-4%",
-          "avg": -0.9,
-          "n": 54
+          "avg": -1,
+          "n": 55
         }
       },
       {
@@ -8016,15 +8022,15 @@
       "avg": 10.1,
       "n": 71
     },
-    "sampleSize": 346,
+    "sampleSize": 348,
     "maxMonths": 1,
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "Die Kombination aus Kursziel 40%+ und 5-14 Analysten erzielte 10,1% Rendite. Die Dividende hatte mit 6,3% Spread kaum Einfluss.",
-    "date": "2026-07-15",
+    "text": "Die Kombination \"Kursziel 40%+\" und \"Analysten 5-14\" lieferte mit 10,1% die beste Performance. \"KGV\" zeigte mit 4,1 kaum Einfluss.",
+    "date": "2026-07-16",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-15"
+  "kiDay": "2026-07-16"
 }
