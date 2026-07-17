@@ -7699,17 +7699,20 @@
       "buyPct": 100,
       "strongBuyPct": 33,
       "upside": 38,
-      "pe": 21.4,
+      "pe": 21.6,
       "perf6mAtAdd": -24.66,
       "perf1mBefore": -7.48,
       "sektorPsiAtAdd": 0.0106,
       "analysts": 12,
-      "div": 0.92,
+      "div": 0.9,
       "seen": "2026-06-17",
       "seenMs": 1781654400000,
       "startPrice": 3850.5,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        14.59
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "300760.SZ": {
       "ticker": "300760.SZ",
@@ -7824,7 +7827,7 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 80,
-      "upside": 33,
+      "upside": 37,
       "pe": null,
       "perf6mAtAdd": 51.07,
       "perf1mBefore": -10.76,
@@ -7888,7 +7891,7 @@
       "buyPct": 100,
       "strongBuyPct": 100,
       "upside": 98,
-      "pe": 9.8,
+      "pe": 9.6,
       "perf6mAtAdd": -0.27,
       "perf1mBefore": -9.44,
       "sektorPsiAtAdd": 0.0344,
@@ -7960,31 +7963,31 @@
         }
       },
       {
-        "name": "Analysten",
-        "spread": 7.8,
-        "best": {
-          "k": "5-14",
-          "avg": 5.3,
-          "n": 147
-        },
-        "worst": {
-          "k": "1-4",
-          "avg": -2.5,
-          "n": 86
-        }
-      },
-      {
         "name": "Strong Buy",
-        "spread": 7,
+        "spread": 9.1,
         "best": {
           "k": "<70%",
-          "avg": 2.3,
-          "n": 5
+          "avg": 4.4,
+          "n": 6
         },
         "worst": {
           "k": "95%+",
           "avg": -4.7,
           "n": 8
+        }
+      },
+      {
+        "name": "Analysten",
+        "spread": 7.9,
+        "best": {
+          "k": "5-14",
+          "avg": 5.4,
+          "n": 148
+        },
+        "worst": {
+          "k": "1-4",
+          "avg": -2.5,
+          "n": 86
         }
       },
       {
@@ -8016,21 +8019,16 @@
         }
       }
     ],
-    "combo": {
-      "f1": "Kursziel 40%+",
-      "f2": "Analysten 5-14",
-      "avg": 10.1,
-      "n": 71
-    },
-    "sampleSize": 348,
+    "combo": null,
+    "sampleSize": 349,
     "maxMonths": 1,
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "Die Kombination \"Kursziel 40%+\" und \"Analysten 5-14\" lieferte mit 10,1% die beste Performance. \"KGV\" zeigte mit 4,1 kaum Einfluss.",
-    "date": "2026-07-16",
+    "text": "Die besten Ergebnisse erzielte die Ausprägung \"40%+\" beim Kursziel (6,1% im Schnitt). Der Faktor Dividende zeigte kaum Einfluss.",
+    "date": "2026-07-17",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-16"
+  "kiDay": "2026-07-17"
 }
