@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-17",
-  "updatedAt": "2026-07-17T14:53:03.635Z",
+  "updatedAt": "2026-07-17T15:00:47.495Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -177,9 +177,9 @@
     },
     {
       "id": "finance",
-      "perf": 5.79,
+      "perf": 5.74,
       "avg30": 0.48,
-      "perf6m": 4.48
+      "perf6m": 4.43
     },
     {
       "id": "cons_cycl",
@@ -1908,5 +1908,6 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  }
+  },
+  "yahooAt": "2026-07-17T15:00:47.495Z"
 }
