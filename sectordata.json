@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-17",
-  "updatedAt": "2026-07-17T14:00:47.701Z",
+  "updatedAt": "2026-07-17T14:53:03.635Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -177,9 +177,9 @@
     },
     {
       "id": "finance",
-      "perf": 5.96,
-      "avg30": 0.49,
-      "perf6m": 4.65
+      "perf": 5.79,
+      "avg30": 0.48,
+      "perf6m": 4.48
     },
     {
       "id": "cons_cycl",
@@ -315,7 +315,7 @@
       "eps": 0.75,
       "div": 0,
       "enrichAt": "2026-07-17",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-07-13",
       "miss": 0
@@ -348,7 +348,7 @@
       "eps": 5.21,
       "div": 2.9,
       "enrichAt": "2026-07-13",
-      "sektorPsi": 0.0031,
+      "sektorPsi": 0.0029,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-07-14",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-16",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -486,7 +486,7 @@
       "eps": 6.47,
       "div": 4.24,
       "enrichAt": "2026-07-16",
-      "sektorPsi": 0.0004,
+      "sektorPsi": 0.0003,
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -585,7 +585,7 @@
       "eps": 1.64,
       "div": 2.95,
       "enrichAt": "2026-07-14",
-      "sektorPsi": 0.0043,
+      "sektorPsi": 0.0022,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -618,7 +618,7 @@
       "eps": 1.34,
       "div": 2.52,
       "enrichAt": "2026-07-14",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -716,7 +716,7 @@
       "eps": 202.83,
       "div": 0.9,
       "enrichAt": "2026-07-17",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -755,6 +755,39 @@
       "miss": 0
     },
     {
+      "ticker": "F3C.DE",
+      "name": "SFC Energy AG",
+      "yahoo": "F3C.DE",
+      "sector": "energy",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 5,
+      "strongBuyPct": 80,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-17",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-02",
+      "perf6m": 51.07,
+      "perf6mAt": "2026-07-17",
+      "perf1mBefore": -10.76,
+      "upside": 37,
+      "pe": null,
+      "eps": -0.06,
+      "div": 0,
+      "enrichAt": "2026-07-17",
+      "sektorPsi": 0.001,
+      "sektorPsiAtAdd": 0.0045,
+      "recheckAt": "2026-07-17",
+      "miss": 0
+    },
+    {
       "ticker": "402340",
       "name": "SK Square Co., Ltd.",
       "yahoo": "402340.KS",
@@ -781,7 +814,7 @@
       "pe": null,
       "div": 0.13,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0032,
+      "sektorPsi": 0.0027,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -814,7 +847,7 @@
       "eps": 2.23,
       "div": 1.67,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.006,
+      "sektorPsi": 0.0064,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -847,42 +880,9 @@
       "eps": 1.13,
       "div": 3.41,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.006,
+      "sektorPsi": 0.0064,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-11",
-      "miss": 0
-    },
-    {
-      "ticker": "F3C.DE",
-      "name": "SFC Energy AG",
-      "yahoo": "F3C.DE",
-      "sector": "energy",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 5,
-      "strongBuyPct": 80,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-17",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-07-02",
-      "perf6m": 51.07,
-      "perf6mAt": "2026-07-17",
-      "perf1mBefore": -10.76,
-      "upside": 37,
-      "pe": null,
-      "eps": -0.06,
-      "div": 0,
-      "enrichAt": "2026-07-17",
-      "sektorPsi": 0.0017,
-      "sektorPsiAtAdd": 0.0045,
-      "recheckAt": "2026-07-17",
       "miss": 0
     },
     {
@@ -949,7 +949,7 @@
       "eps": 13.56,
       "div": 0.29,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0028,
+      "sektorPsi": 0.0027,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -982,7 +982,7 @@
       "eps": 3.05,
       "div": 2.72,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0028,
+      "sektorPsi": 0.0027,
       "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -1112,7 +1112,7 @@
       "eps": 5.01,
       "div": 5.46,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-11",
       "miss": 0
@@ -1144,7 +1144,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-14",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-14",
       "miss": 0
@@ -1176,7 +1176,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0036,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-15",
       "miss": 0
@@ -1908,6 +1908,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-17T14:00:47.701Z"
+  }
 }
