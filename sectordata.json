@@ -343,11 +343,11 @@
       "perf6m": -8.08,
       "perf6mAt": "2026-07-18",
       "perf1mBefore": -4.8,
-      "upside": 97,
+      "upside": 94,
       "pe": 5.9,
       "eps": 5.21,
-      "div": 2.9,
-      "enrichAt": "2026-07-13",
+      "div": 2.95,
+      "enrichAt": "2026-07-18",
       "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-07-14",
@@ -375,7 +375,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-07-11",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -32.63,
       "perf6mAt": "2026-07-15",
@@ -386,7 +386,7 @@
       "enrichAt": "2026-07-15",
       "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0085,
-      "recheckAt": "2026-07-11",
+      "recheckAt": "2026-07-18",
       "miss": 0
     },
     {
@@ -444,7 +444,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-07-11",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -36.31,
       "perf6mAt": "2026-07-15",
@@ -455,7 +455,7 @@
       "enrichAt": "2026-07-15",
       "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0085,
-      "recheckAt": "2026-07-11",
+      "recheckAt": "2026-07-18",
       "miss": 0
     },
     {
@@ -574,7 +574,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-16",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": -12.26,
@@ -836,7 +836,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-11",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
       "perf6m": -0.1,
@@ -847,9 +847,9 @@
       "eps": 2.23,
       "div": 1.67,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0063,
+      "sektorPsi": 0.0062,
       "sektorPsiAtAdd": 0.0078,
-      "recheckAt": "2026-07-11",
+      "recheckAt": "2026-07-18",
       "miss": 0
     },
     {
@@ -869,7 +869,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-07-11",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "yahoo",
       "seen": "2026-06-05",
       "perf6m": -21.38,
@@ -880,9 +880,9 @@
       "eps": 1.13,
       "div": 3.41,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0063,
+      "sektorPsi": 0.0062,
       "sektorPsiAtAdd": 0.0078,
-      "recheckAt": "2026-07-11",
+      "recheckAt": "2026-07-18",
       "miss": 0
     },
     {
@@ -907,7 +907,7 @@
       "via": "gemini",
       "source": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "verifiedAt": "2026-07-11",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "stockanalysis+yahoo",
       "perf6m": -7.33,
       "perf6mAt": "2026-07-15",
@@ -918,7 +918,7 @@
       "enrichAt": "2026-07-15",
       "sektorPsi": 0.009,
       "sektorPsiAtAdd": 0.0095,
-      "recheckAt": "2026-07-11",
+      "recheckAt": "2026-07-18",
       "miss": 0
     },
     {
@@ -938,7 +938,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-07-11",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "yahoo",
       "seen": "2026-07-10",
       "perf6m": 6.3,
@@ -951,7 +951,7 @@
       "enrichAt": "2026-07-15",
       "sektorPsi": 0.0026,
       "sektorPsiAtAdd": 0.0015,
-      "recheckAt": "2026-07-11",
+      "recheckAt": "2026-07-18",
       "miss": 0
     },
     {
@@ -1004,7 +1004,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-16",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": 19.83,
@@ -1037,7 +1037,7 @@
       "strongBuyPct": 60,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-16",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": 50.73,
@@ -1102,7 +1102,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-11",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
       "perf6m": -15.75,
@@ -1114,7 +1114,7 @@
       "enrichAt": "2026-07-15",
       "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.0015,
-      "recheckAt": "2026-07-11",
+      "recheckAt": "2026-07-18",
       "miss": 0
     },
     {
@@ -1367,8 +1367,8 @@
       "date": "2026-07-17"
     },
     "energy": {
-      "text": "Der Energiesektor schwächelt kurzfristig (-7,31%) wegen Zinsdruck und Konjunktursorgen, bleibt aber langfristig stark (+19,03%). F3C.DE sticht heraus.",
-      "date": "2026-07-05"
+      "text": "Der Energiesektor legt zu, getragen von der robusten Nachfrage und geopolitischen Spannungen. F3C.DE sticht hervor, was auf spezifische positive Entwicklungen hindeutet.",
+      "date": "2026-07-18"
     },
     "materials": {
       "text": "Rohstoffe stagnieren kurzfristig wegen Zinsdruck, profitieren aber langfristig von globaler Konjunkturerholung und Energiebedarf.",
@@ -1385,8 +1385,8 @@
   },
   "regionNotes": {
     "apac": {
-      "text": "Asien-Pazifik kämpft mit Zinsanstieg und schwacher Konjunktur, was zu einem Rückgang führt. Langfristig zeigen sich jedoch Erholungstendenzen.",
-      "date": "2026-07-08"
+      "text": "Asien-Pazifik: Kurzfristig schwach (-6,82%) wegen hoher Zinsen. Langfristig stark (+14,49%) dank Konjunkturerholung.",
+      "date": "2026-07-18"
     },
     "em": {
       "text": "Schwellenländer: Kurzer Rückgang durch Zinsunsicherheit, aber langfristig stark durch KI-Boom und solide Konjunktur.",
@@ -1428,45 +1428,38 @@
   "news": {
     "items": [
       {
-        "text": "Apple überholt Nvidia kurz als wertvollstes Unternehmen",
+        "text": "Aktienmärkte: Zu viel Euphorie trifft auf wachsendes Risiko",
+        "stamp": "18.07.26"
+      },
+      {
+        "text": "MÄRKTE USA/Erneutes Minus erwartet - Tech-Werte unter Druck",
         "stamp": "17.07.26"
       },
       {
-        "text": "BP und ConocoPhillips planen Milliardeninvestitionen im Irak",
-        "stamp": "17.07.26"
+        "text": "MÄRKTE EUROPA/Etwas leichter - Technologie-Werte rutschen ab",
+        "stamp": "16.07.26"
       },
       {
-        "text": "Commerzbank: S&P senkt Ausblick auf stabil",
-        "stamp": "17.07.26"
+        "text": "Warnsignale: Kippt der US-Aktienboom?",
+        "stamp": "16.07.26"
       },
       {
-        "text": "Neue Pipelines lösen Ölkrise nicht, sagt Analyst",
-        "stamp": "17.07.26"
+        "text": "Börsen-News heute – 16. Juli 2026: DAX schwankt um 25.000 Punkte",
+        "stamp": "16.07.26"
       },
       {
-        "text": "US-Technologiewerte belasten Wall Street zum Wochenausklang",
-        "stamp": "17.07.26"
-      },
-      {
-        "text": "Deutsche Bank stuft SMA Solar auf 'Buy' hoch",
-        "stamp": "17.07.26"
+        "text": "News Aktie News: News tendiert am Abend fester",
+        "stamp": "16.07.26"
       }
     ],
-    "date": "2026-07-17"
+    "date": "2026-07-18"
   },
   "scan": {
     "universe": 8840,
     "scanned": 8840,
-    "lastCursor": 8197,
-    "candCursor": 52,
+    "lastCursor": 8497,
+    "candCursor": 60,
     "candidates": [
-      "Avi-Tech Holdings Limited",
-      "MegaChips Corporation",
-      "Text S.A.",
-      "AIRBUS SE",
-      "SCHNEIDER ELECTRIC SE",
-      "SIEMENS AG",
-      "ABB LTD",
       "SAFRAN SA",
       "GENERAL ELECTRIC COMPANY",
       "KONECRANES OYJ",
@@ -1859,45 +1852,52 @@
       "Schlumberger Limited",
       "Gulfport Energy Corporation",
       "Endeavour Silver Corp.",
-      "Hudbay Minerals Inc."
+      "Hudbay Minerals Inc.",
+      "PVA TePla AG",
+      "SMA Solar Technology AG",
+      "Adesso SE",
+      "Freenet AG",
+      "United Internet AG",
+      "Deutz AG",
+      "SGL Carbon SE"
     ],
-    "noteCursor": 9,
-    "focusCursor": 0,
+    "noteCursor": 10,
+    "focusCursor": 1,
     "recheckCursor": 16,
-    "regionNoteCursor": 6,
-    "notesDay": "2026-07-17",
+    "regionNoteCursor": 7,
+    "notesDay": "2026-07-18",
     "seenBySector": {
-      "cons_cycl": 1285,
-      "cons_def": 673,
-      "materials": 907,
-      "health": 3734,
-      "finance": 2546,
-      "energy": 1177,
-      "hardware": 843,
-      "software": 2510,
-      "industrial": 1084,
-      "utilities": 460,
-      "comm": 549,
-      "ai_semi": 502,
+      "cons_cycl": 1292,
+      "cons_def": 675,
+      "materials": 913,
+      "health": 3759,
+      "finance": 2556,
+      "energy": 1186,
+      "hardware": 851,
+      "software": 2523,
+      "industrial": 1088,
+      "utilities": 462,
+      "comm": 555,
+      "ai_semi": 505,
       "realestate": 235
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1287,
-      "cons_def": 674,
-      "materials": 907,
-      "health": 3735,
-      "finance": 2550,
-      "energy": 1178,
-      "hardware": 845,
-      "software": 2517,
-      "industrial": 1091,
-      "utilities": 461,
-      "comm": 550,
-      "ai_semi": 502,
+      "cons_cycl": 1294,
+      "cons_def": 676,
+      "materials": 913,
+      "health": 3760,
+      "finance": 2560,
+      "energy": 1187,
+      "hardware": 853,
+      "software": 2530,
+      "industrial": 1095,
+      "utilities": 463,
+      "comm": 556,
+      "ai_semi": 505,
       "realestate": 235
     },
-    "heavyAt": "2026-07-17T20:14:24.002Z",
+    "heavyAt": "2026-07-18T08:58:35.169Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },

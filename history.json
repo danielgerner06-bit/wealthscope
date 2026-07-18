@@ -7911,13 +7911,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 97,
+      "upside": 94,
       "pe": 5.9,
       "perf6mAtAdd": -8.08,
       "perf1mBefore": -4.8,
       "sektorPsiAtAdd": 0.0031,
       "analysts": 1,
-      "div": 2.9,
+      "div": 2.95,
       "seen": "2026-07-13",
       "seenMs": 1783900800000,
       "startPrice": 30.75,
@@ -8025,10 +8025,10 @@
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "Die besten Ergebnisse erzielte die Ausprägung \"40%+\" beim Kursziel (6,1% im Schnitt). Der Faktor Dividende zeigte kaum Einfluss.",
-    "date": "2026-07-17",
+    "text": "\"40%+ Kursziel\" lieferte mit 6,1% die beste Performance. Das KGV hatte mit 4,1 kaum Einfluss.",
+    "date": "2026-07-18",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-17"
+  "kiDay": "2026-07-18"
 }
