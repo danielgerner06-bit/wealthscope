@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-17",
-  "updatedAt": "2026-07-18T21:00:11.280Z",
+  "updated": "2026-07-18",
+  "updatedAt": "2026-07-18T21:38:06.532Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -321,39 +321,6 @@
       "miss": 0
     },
     {
-      "ticker": "NEAG",
-      "name": "naturenergie holding AG",
-      "yahoo": "NEAG.SW",
-      "sector": "utilities",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-14",
-      "verifiedSource": "yahoo",
-      "seen": "2026-07-13",
-      "perf6m": -8.08,
-      "perf6mAt": "2026-07-18",
-      "perf1mBefore": -4.8,
-      "upside": 94,
-      "pe": 5.9,
-      "eps": 5.21,
-      "div": 2.95,
-      "enrichAt": "2026-07-18",
-      "sektorPsi": 0.003,
-      "sektorPsiAtAdd": 0.0031,
-      "recheckAt": "2026-07-14",
-      "miss": 0
-    },
-    {
       "ticker": "HYQ.DE",
       "name": "Hypoport SE",
       "sector": "finance",
@@ -387,6 +354,39 @@
       "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-18",
+      "miss": 0
+    },
+    {
+      "ticker": "NEAG",
+      "name": "naturenergie holding AG",
+      "yahoo": "NEAG.SW",
+      "sector": "utilities",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-14",
+      "verifiedSource": "yahoo",
+      "seen": "2026-07-13",
+      "perf6m": -8.08,
+      "perf6mAt": "2026-07-18",
+      "perf1mBefore": -4.8,
+      "upside": 94,
+      "pe": 5.9,
+      "eps": 5.21,
+      "div": 2.95,
+      "enrichAt": "2026-07-18",
+      "sektorPsi": 0.0029,
+      "sektorPsiAtAdd": 0.0031,
+      "recheckAt": "2026-07-14",
       "miss": 0
     },
     {
@@ -519,7 +519,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-14",
-      "sektorPsi": 0.009,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -607,7 +607,7 @@
       "strongBuyPct": 83,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-16",
+      "verifiedAt": "2026-07-18",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": -6.16,
@@ -650,7 +650,7 @@
       "pe": null,
       "div": 1.37,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.009,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -683,7 +683,7 @@
       "eps": 0.72,
       "div": 2.79,
       "enrichAt": "2026-07-14",
-      "sektorPsi": 0.009,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-14",
       "miss": 0
@@ -749,7 +749,7 @@
       "eps": 0.72,
       "div": 2.75,
       "enrichAt": "2026-07-16",
-      "sektorPsi": 0.009,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -916,7 +916,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.009,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -1048,7 +1048,7 @@
       "eps": 1.88,
       "div": 0.76,
       "enrichAt": "2026-07-14",
-      "sektorPsi": 0.009,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -1080,7 +1080,7 @@
       "pe": null,
       "div": 3.07,
       "enrichAt": "2026-07-14",
-      "sektorPsi": 0.009,
+      "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-07-15",
       "miss": 0
@@ -1428,46 +1428,34 @@
   "news": {
     "items": [
       {
-        "text": "Aktienmärkte: Zu viel Euphorie trifft auf wachsendes Risiko",
-        "stamp": "18.07.26"
-      },
-      {
-        "text": "MÄRKTE USA/Erneutes Minus erwartet - Tech-Werte unter Druck",
+        "text": "US-Angriffe gegen Iran: Ölmärkte bleiben gelassen trotz Eskalation.",
         "stamp": "17.07.26"
       },
       {
-        "text": "MÄRKTE EUROPA/Etwas leichter - Technologie-Werte rutschen ab",
+        "text": "Trump schürt Zweifel an Wahlen; Iran-Krieg im Fokus der Anleger.",
+        "stamp": "17.07.26"
+      },
+      {
+        "text": "SpaceX in Gesprächen zur Lieferung von Rechenleistung an das Pentagon.",
+        "stamp": "17.07.26"
+      },
+      {
+        "text": "Geopolitik und US-Inflation treiben Dollar: Euro ringt um 1,14.",
         "stamp": "16.07.26"
       },
       {
-        "text": "Warnsignale: Kippt der US-Aktienboom?",
-        "stamp": "16.07.26"
-      },
-      {
-        "text": "Börsen-News heute – 16. Juli 2026: DAX schwankt um 25.000 Punkte",
-        "stamp": "16.07.26"
-      },
-      {
-        "text": "News Aktie News: News tendiert am Abend fester",
+        "text": "Netflix: Zahlen lösen Blutbad aus – wie dramatisch wird es?",
         "stamp": "16.07.26"
       }
     ],
     "date": "2026-07-18"
   },
   "scan": {
-    "universe": 8840,
-    "scanned": 8840,
-    "lastCursor": 8497,
-    "candCursor": 60,
+    "universe": 8842,
+    "scanned": 8842,
+    "lastCursor": 8797,
+    "candCursor": 68,
     "candidates": [
-      "SAFRAN SA",
-      "GENERAL ELECTRIC COMPANY",
-      "KONECRANES OYJ",
-      "WACKER CHEMIE AG",
-      "LINDE PLC",
-      "BASF SE",
-      "SECUNET SECURITY NETWORKS AG",
-      "Iberdrola, S.A.",
       "Cohu, Inc.",
       "Amtech Systems, Inc.",
       "RF Industries, Ltd.",
@@ -1859,45 +1847,53 @@
       "Freenet AG",
       "United Internet AG",
       "Deutz AG",
-      "SGL Carbon SE"
+      "SGL Carbon SE",
+      "Medistim ASA",
+      "AQ Group AB",
+      "AFRY AB (publ)",
+      "Vow ASA",
+      "Omda AS",
+      "Esprinet S.p.A.",
+      "PharmaNutra S.p.A.",
+      "Equasens Société anonyme"
     ],
     "noteCursor": 10,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 7,
     "notesDay": "2026-07-18",
     "seenBySector": {
-      "cons_cycl": 1292,
-      "cons_def": 675,
-      "materials": 913,
-      "health": 3759,
-      "finance": 2556,
-      "energy": 1186,
-      "hardware": 851,
-      "software": 2523,
-      "industrial": 1088,
-      "utilities": 462,
-      "comm": 555,
-      "ai_semi": 505,
+      "cons_cycl": 1303,
+      "cons_def": 677,
+      "materials": 918,
+      "health": 3772,
+      "finance": 2567,
+      "energy": 1192,
+      "hardware": 854,
+      "software": 2540,
+      "industrial": 1099,
+      "utilities": 466,
+      "comm": 557,
+      "ai_semi": 506,
       "realestate": 235
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1294,
-      "cons_def": 676,
-      "materials": 913,
-      "health": 3760,
-      "finance": 2560,
-      "energy": 1187,
-      "hardware": 853,
-      "software": 2530,
-      "industrial": 1095,
-      "utilities": 463,
-      "comm": 556,
-      "ai_semi": 505,
+      "cons_cycl": 1305,
+      "cons_def": 678,
+      "materials": 918,
+      "health": 3773,
+      "finance": 2571,
+      "energy": 1193,
+      "hardware": 856,
+      "software": 2547,
+      "industrial": 1106,
+      "utilities": 467,
+      "comm": 558,
+      "ai_semi": 506,
       "realestate": 235
     },
-    "heavyAt": "2026-07-18T08:58:35.169Z",
+    "heavyAt": "2026-07-18T21:31:17.423Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1908,6 +1904,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-18T21:00:11.280Z"
+  }
 }
