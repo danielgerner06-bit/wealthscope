@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-18",
-  "updatedAt": "2026-07-19T10:00:11.293Z",
+  "updated": "2026-07-19",
+  "updatedAt": "2026-07-19T10:19:07.400Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 0.75,
       "div": 0,
       "enrichAt": "2026-07-17",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-07-13",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0016,
+      "sektorPsi": 0.0015,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-16",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -453,7 +453,7 @@
       "eps": -0.63,
       "div": 0,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0016,
+      "sektorPsi": 0.0015,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -514,11 +514,11 @@
       "perf6m": -17.65,
       "perf6mAt": "2026-07-19",
       "perf1mBefore": -17.12,
-      "upside": 50,
-      "pe": 56.5,
+      "upside": 57,
+      "pe": 54,
       "eps": 0.04,
       "div": 0,
-      "enrichAt": "2026-07-14",
+      "enrichAt": "2026-07-19",
       "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-16",
@@ -541,20 +541,20 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-12",
+      "verifiedAt": "2026-07-19",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-04",
       "perf6m": -14.56,
       "perf6mAt": "2026-07-19",
       "perf1mBefore": 11.41,
-      "upside": 47,
-      "pe": 47.5,
+      "upside": 50,
+      "pe": 46.5,
       "eps": 0.48,
       "div": 0,
-      "enrichAt": "2026-07-14",
-      "sektorPsi": 0.0016,
+      "enrichAt": "2026-07-19",
+      "sektorPsi": 0.0015,
       "sektorPsiAtAdd": 0.0019,
-      "recheckAt": "2026-07-12",
+      "recheckAt": "2026-07-19",
       "miss": 0
     },
     {
@@ -580,11 +580,11 @@
       "perf6m": -10.17,
       "perf6mAt": "2026-07-19",
       "perf1mBefore": 0.26,
-      "upside": 46,
-      "pe": 10.6,
+      "upside": 52,
+      "pe": 10.1,
       "eps": 1.64,
-      "div": 2.95,
-      "enrichAt": "2026-07-14",
+      "div": 3.01,
+      "enrichAt": "2026-07-19",
       "sektorPsi": 0.0023,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-16",
@@ -613,12 +613,12 @@
       "perf6m": 4.69,
       "perf6mAt": "2026-07-19",
       "perf1mBefore": 4.35,
-      "upside": 41,
-      "pe": 15.7,
+      "upside": 42,
+      "pe": 15.6,
       "eps": 1.34,
-      "div": 2.52,
-      "enrichAt": "2026-07-14",
-      "sektorPsi": 0.0034,
+      "div": 2.4,
+      "enrichAt": "2026-07-19",
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -678,11 +678,11 @@
       "perf6m": -6.55,
       "perf6mAt": "2026-07-19",
       "perf1mBefore": -9.59,
-      "upside": 38,
-      "pe": 75.3,
+      "upside": 35,
+      "pe": 77.2,
       "eps": 0.72,
-      "div": 2.79,
-      "enrichAt": "2026-07-14",
+      "div": 2.7,
+      "enrichAt": "2026-07-19",
       "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-14",
@@ -716,7 +716,7 @@
       "eps": 202.83,
       "div": 0.9,
       "enrichAt": "2026-07-17",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -1010,12 +1010,12 @@
       "perf6m": 14.05,
       "perf6mAt": "2026-07-19",
       "perf1mBefore": -5.14,
-      "upside": 13,
-      "pe": 12.2,
+      "upside": 16,
+      "pe": 12,
       "eps": 2.27,
-      "div": 4.79,
-      "enrichAt": "2026-07-14",
-      "sektorPsi": 0.0016,
+      "div": 5,
+      "enrichAt": "2026-07-19",
+      "sektorPsi": 0.0015,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-07-16",
       "miss": 0
@@ -1043,11 +1043,11 @@
       "perf6m": 41.42,
       "perf6mAt": "2026-07-19",
       "perf1mBefore": -0.96,
-      "upside": 13,
-      "pe": 33.1,
+      "upside": 20,
+      "pe": 31.1,
       "eps": 1.88,
-      "div": 0.76,
-      "enrichAt": "2026-07-14",
+      "div": 0.8,
+      "enrichAt": "2026-07-19",
       "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-16",
@@ -1078,8 +1078,8 @@
       "perf1mBefore": -34.9,
       "upside": 8,
       "pe": null,
-      "div": 3.07,
-      "enrichAt": "2026-07-14",
+      "div": 3.13,
+      "enrichAt": "2026-07-19",
       "sektorPsi": 0.0089,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-07-15",
@@ -1112,7 +1112,7 @@
       "eps": 5.01,
       "div": 5.46,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -1143,8 +1143,8 @@
       "pe": null,
       "eps": -0.12,
       "div": 0,
-      "enrichAt": "2026-07-14",
-      "sektorPsi": 0.0034,
+      "enrichAt": "2026-07-19",
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-14",
       "miss": 0
@@ -1176,7 +1176,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-15",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-15",
       "miss": 0
@@ -1371,8 +1371,8 @@
       "date": "2026-07-18"
     },
     "materials": {
-      "text": "Rohstoffe stagnieren kurzfristig wegen Zinsdruck, profitieren aber langfristig von globaler Konjunkturerholung und Energiebedarf.",
-      "date": "2026-07-06"
+      "text": "Der Rohstoffsektor leidet aktuell unter Konjunktursorgen und Zinserhöhungen. Langfristig zeigen sich aber Erholungstendenzen.",
+      "date": "2026-07-19"
     },
     "utilities": {
       "text": "Versorger profitieren von gestiegenen Zinsen und Energiepreisen. Die 30-Tage-Performance übertrifft deutlich das Normalniveau.",
@@ -1413,8 +1413,8 @@
       "date": "2026-07-16"
     },
     "india": {
-      "text": "Indien zeigt starke Erholung: 30-Tage-Plus von 4,16% übertrifft Normalniveau (-0,83%). Langfristig bleibt die Entwicklung mit -9,14% über 6 Monate herausfordernd.",
-      "date": "2026-07-09"
+      "text": "Indien leidet unter strafferer Geldpolitik (-1.1% 30-Tage, -8.51% 6 Monate), was die Konjunktur bremst. Höhere Zinsen dämpfen die Nachfrage und Investitionen.",
+      "date": "2026-07-19"
     },
     "latam": {
       "text": "Lateinamerika: Konjunktur erholt sich moderat (+1.75% in 30 Tagen), aber unter dem Normalniveau (+2.9%). Langfristig zeigt sich mit +7.15% in 6 Monaten eine positive Entwicklung.",
@@ -1428,33 +1428,33 @@
   "news": {
     "items": [
       {
-        "text": "US-Angriffe gegen Iran: Ölmärkte bleiben gelassen trotz Eskalation.",
+        "text": "Geopolitik, KI, Industrie prägen globale Märkte Mitte Juli 2026.",
+        "stamp": "19.07.26"
+      },
+      {
+        "text": "US-Angriffe auf Iran treiben Ölpreise, belasten globale Märkte.",
+        "stamp": "19.07.26"
+      },
+      {
+        "text": "Commerzbank-Übernahme: Berlin signalisiert Umdenken bei Fusion.",
+        "stamp": "19.07.26"
+      },
+      {
+        "text": "Fed-Zinsentscheid Juli: Pause erwartet, Fokus auf Inflationsdaten.",
+        "stamp": "18.07.26"
+      },
+      {
+        "text": "Finanzministerium: Maßnahmen für zweistelliges Wirtschaftswachstum.",
         "stamp": "17.07.26"
-      },
-      {
-        "text": "Trump schürt Zweifel an Wahlen; Iran-Krieg im Fokus der Anleger.",
-        "stamp": "17.07.26"
-      },
-      {
-        "text": "SpaceX in Gesprächen zur Lieferung von Rechenleistung an das Pentagon.",
-        "stamp": "17.07.26"
-      },
-      {
-        "text": "Geopolitik und US-Inflation treiben Dollar: Euro ringt um 1,14.",
-        "stamp": "16.07.26"
-      },
-      {
-        "text": "Netflix: Zahlen lösen Blutbad aus – wie dramatisch wird es?",
-        "stamp": "16.07.26"
       }
     ],
-    "date": "2026-07-18"
+    "date": "2026-07-19"
   },
   "scan": {
     "universe": 8842,
     "scanned": 8842,
-    "lastCursor": 8797,
-    "candCursor": 68,
+    "lastCursor": 255,
+    "candCursor": 76,
     "candidates": [
       "Cohu, Inc.",
       "Amtech Systems, Inc.",
@@ -1857,43 +1857,43 @@
       "PharmaNutra S.p.A.",
       "Equasens Société anonyme"
     ],
-    "noteCursor": 10,
-    "focusCursor": 2,
+    "noteCursor": 11,
+    "focusCursor": 3,
     "recheckCursor": 16,
-    "regionNoteCursor": 7,
-    "notesDay": "2026-07-18",
+    "regionNoteCursor": 8,
+    "notesDay": "2026-07-19",
     "seenBySector": {
-      "cons_cycl": 1303,
-      "cons_def": 677,
-      "materials": 918,
-      "health": 3772,
-      "finance": 2567,
-      "energy": 1192,
-      "hardware": 854,
-      "software": 2540,
-      "industrial": 1099,
-      "utilities": 466,
-      "comm": 557,
-      "ai_semi": 506,
-      "realestate": 235
+      "cons_cycl": 1310,
+      "cons_def": 679,
+      "materials": 919,
+      "health": 3801,
+      "finance": 2577,
+      "energy": 1194,
+      "hardware": 857,
+      "software": 2553,
+      "industrial": 1102,
+      "utilities": 470,
+      "comm": 560,
+      "ai_semi": 510,
+      "realestate": 236
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1305,
-      "cons_def": 678,
-      "materials": 918,
-      "health": 3773,
-      "finance": 2571,
-      "energy": 1193,
-      "hardware": 856,
-      "software": 2547,
-      "industrial": 1106,
-      "utilities": 467,
-      "comm": 558,
-      "ai_semi": 506,
-      "realestate": 235
+      "cons_cycl": 1312,
+      "cons_def": 680,
+      "materials": 919,
+      "health": 3802,
+      "finance": 2581,
+      "energy": 1195,
+      "hardware": 859,
+      "software": 2560,
+      "industrial": 1109,
+      "utilities": 471,
+      "comm": 561,
+      "ai_semi": 510,
+      "realestate": 236
     },
-    "heavyAt": "2026-07-18T21:31:17.423Z",
+    "heavyAt": "2026-07-19T10:11:34.750Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -1904,6 +1904,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-19T10:00:11.293Z"
+  }
 }
