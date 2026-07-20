@@ -150,7 +150,8 @@
       "seen": "2026-07-20",
       "seenMs": 1784505600000,
       "startPrice": 358.75,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "9958": {
       "ticker": "9958",
@@ -170,7 +171,8 @@
       "seen": "2026-07-20",
       "seenMs": 1784505600000,
       "startPrice": 114.75,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "402340": {
       "ticker": "402340",
