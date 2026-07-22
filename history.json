@@ -7740,13 +7740,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 33,
-      "upside": 38,
-      "pe": 21.6,
+      "upside": 40,
+      "pe": 21.4,
       "perf6mAtAdd": -22.68,
       "perf1mBefore": -7.48,
       "sektorPsiAtAdd": 0.0106,
       "analysts": 12,
-      "div": 0.9,
+      "div": 0.91,
       "seen": "2026-06-17",
       "seenMs": 1781654400000,
       "startPrice": 3850.5,
@@ -7935,8 +7935,8 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 98,
-      "pe": 9.6,
+      "upside": 95,
+      "pe": 9.9,
       "perf6mAtAdd": 0.84,
       "perf1mBefore": -9.44,
       "sektorPsiAtAdd": 0.0344,
@@ -8002,7 +8002,7 @@
       "pe": null,
       "perf6mAtAdd": -39.8,
       "perf1mBefore": -11.04,
-      "sektorPsiAtAdd": null,
+      "sektorPsiAtAdd": 0.0035,
       "analysts": 1,
       "div": 0,
       "seen": "2026-07-21",
@@ -8034,7 +8034,7 @@
         "best": {
           "k": "40%+",
           "avg": 6.2,
-          "n": 143
+          "n": 144
         },
         "worst": {
           "k": "<10%",
@@ -8088,18 +8088,18 @@
     "combo": {
       "f1": "Strong Buy <70%",
       "f2": "Kursziel 40%+",
-      "avg": 8.8,
-      "n": 4
+      "avg": 9.9,
+      "n": 5
     },
     "sampleSize": 350,
     "maxMonths": 1,
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "Die Kombination \"Strong Buy <70%\" und \"Kursziel 40%+\" brachte mit 8,8% die beste Performance. Das KGV hatte mit 4,0 geringen Einfluss.",
-    "date": "2026-07-21",
+    "text": "\"Strong Buy <70%\" und \"Kursziel 40%+\" kombiniert lieferten mit 9,9% die beste Performance. Das KGV hatte mit 0,3% kaum Einfluss.",
+    "date": "2026-07-22",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-21"
+  "kiDay": "2026-07-22"
 }
