@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-22",
-  "updatedAt": "2026-07-22T17:00:41.001Z",
+  "updatedAt": "2026-07-22T18:00:40.987Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -159,9 +159,9 @@
     },
     {
       "id": "hardware",
-      "perf": -5.57,
+      "perf": -5.66,
       "avg30": 3.28,
-      "perf6m": 24.28
+      "perf6m": 24.16
     },
     {
       "id": "comm",
@@ -177,9 +177,9 @@
     },
     {
       "id": "finance",
-      "perf": 4.49,
+      "perf": 4.38,
       "avg30": 0.54,
-      "perf6m": 3.2
+      "perf6m": 3.09
     },
     {
       "id": "cons_cycl",
@@ -189,9 +189,9 @@
     },
     {
       "id": "cons_def",
-      "perf": 1.37,
+      "perf": 1.4,
       "avg30": 0.37,
-      "perf6m": 2.53
+      "perf6m": 2.56
     },
     {
       "id": "industrial",
@@ -245,9 +245,9 @@
     },
     {
       "id": "japan",
-      "perf": -3.89,
+      "perf": -3.96,
       "avg30": 1.87,
-      "perf6m": 8.31
+      "perf6m": 8.23
     },
     {
       "id": "china",
@@ -257,15 +257,15 @@
     },
     {
       "id": "em",
-      "perf": -7.92,
+      "perf": -8.14,
       "avg30": 2.87,
-      "perf6m": 12.63
+      "perf6m": 12.37
     },
     {
       "id": "apac",
-      "perf": -7.86,
+      "perf": -8.06,
       "avg30": 2.81,
-      "perf6m": 15.62
+      "perf6m": 15.36
     },
     {
       "id": "india",
@@ -2022,5 +2022,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-07-22T17:00:41.001Z"
+  "yahooAt": "2026-07-22T18:00:40.987Z"
 }
