@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-22",
-  "updatedAt": "2026-07-22T23:00:40.996Z",
+  "updatedAt": "2026-07-23T00:00:40.985Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -409,8 +409,8 @@
       "verifiedAt": "2026-07-21",
       "verifiedSource": "yahoo",
       "seen": "2026-07-13",
-      "perf6m": -8.08,
-      "perf6mAt": "2026-07-18",
+      "perf6m": -4.18,
+      "perf6mAt": "2026-07-23",
       "perf1mBefore": -4.8,
       "upside": 94,
       "pe": 5.9,
@@ -2022,5 +2022,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-07-22T23:00:40.996Z"
+  "yahooAt": "2026-07-23T00:00:40.985Z"
 }
