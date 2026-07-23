@@ -88,6 +88,26 @@
       ],
       "prov": false
     },
+    "6701": {
+      "ticker": "6701",
+      "name": "NEC Corporation",
+      "yahoo": "6701.T",
+      "sector": "hardware",
+      "region": "japan",
+      "buyPct": 100,
+      "strongBuyPct": 33,
+      "upside": 43,
+      "pe": 20.9,
+      "perf6mAtAdd": -23.44,
+      "perf1mBefore": 16.72,
+      "sektorPsiAtAdd": null,
+      "analysts": 12,
+      "div": 0.92,
+      "seen": "2026-07-23",
+      "seenMs": 1784764800000,
+      "startPrice": 4379.5,
+      "perf": []
+    },
     "6723": {
       "ticker": "6723",
       "name": "Renesas Electronics Corp",

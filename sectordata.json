@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-23",
-  "updatedAt": "2026-07-23T20:00:40.986Z",
+  "updatedAt": "2026-07-23T20:27:10.049Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -207,9 +207,9 @@
     },
     {
       "id": "materials",
-      "perf": -2.52,
+      "perf": -2.58,
       "avg30": 1.31,
-      "perf6m": 3.37
+      "perf6m": 3.31
     },
     {
       "id": "utilities",
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": 2.74,
+      "perf": 2.77,
       "avg30": 2.85,
-      "perf6m": 5.87
+      "perf6m": 5.9
     },
     {
       "id": "world",
@@ -318,7 +318,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0018,
+      "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 6.47,
       "div": 4.05,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -384,42 +384,9 @@
       "eps": 0.75,
       "div": 0,
       "enrichAt": "2026-07-22",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-07-20",
-      "miss": 0
-    },
-    {
-      "ticker": "NEAG",
-      "name": "naturenergie holding AG",
-      "yahoo": "NEAG.SW",
-      "sector": "utilities",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-21",
-      "verifiedSource": "yahoo",
-      "seen": "2026-07-13",
-      "perf6m": -4.18,
-      "perf6mAt": "2026-07-23",
-      "perf1mBefore": -4.8,
-      "upside": 88,
-      "pe": 6.1,
-      "eps": 5.21,
-      "div": 2.8,
-      "enrichAt": "2026-07-23",
-      "sektorPsi": 0.0032,
-      "sektorPsiAtAdd": 0.0031,
-      "recheckAt": "2026-07-21",
       "miss": 0
     },
     {
@@ -450,9 +417,42 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-21",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-23",
+      "miss": 0
+    },
+    {
+      "ticker": "NEAG",
+      "name": "naturenergie holding AG",
+      "yahoo": "NEAG.SW",
+      "sector": "utilities",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-21",
+      "verifiedSource": "yahoo",
+      "seen": "2026-07-13",
+      "perf6m": -4.18,
+      "perf6mAt": "2026-07-23",
+      "perf1mBefore": -4.8,
+      "upside": 88,
+      "pe": 6.1,
+      "eps": 5.21,
+      "div": 2.8,
+      "enrichAt": "2026-07-23",
+      "sektorPsi": 0.0029,
+      "sektorPsiAtAdd": 0.0031,
+      "recheckAt": "2026-07-21",
       "miss": 0
     },
     {
@@ -486,7 +486,7 @@
       "eps": -0.63,
       "div": 0,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0018,
+      "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -551,7 +551,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -617,7 +617,7 @@
       "eps": 1.64,
       "div": 3.01,
       "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0021,
+      "sektorPsi": 0.0023,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -650,7 +650,7 @@
       "eps": 0.48,
       "div": 0,
       "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0018,
+      "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0019,
       "recheckAt": "2026-07-19",
       "miss": 0
@@ -682,7 +682,7 @@
       "pe": null,
       "div": 1.38,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -715,7 +715,7 @@
       "eps": 1.34,
       "div": 2.4,
       "enrichAt": "2026-07-19",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -748,7 +748,7 @@
       "eps": 203.16,
       "div": 0.91,
       "enrichAt": "2026-07-22",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -781,7 +781,7 @@
       "eps": 2.23,
       "div": 1.69,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0063,
+      "sektorPsi": 0.01,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -814,7 +814,7 @@
       "eps": 0.72,
       "div": 2.7,
       "enrichAt": "2026-07-21",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -880,7 +880,7 @@
       "eps": 0.72,
       "div": 2.7,
       "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -913,7 +913,7 @@
       "eps": 22.47,
       "div": 4.46,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.004,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -949,7 +949,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -982,7 +982,7 @@
       "eps": 3.04,
       "div": 2.74,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.004,
       "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -1015,7 +1015,7 @@
       "eps": 1.88,
       "div": 0.8,
       "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -1048,7 +1048,7 @@
       "eps": 13.04,
       "div": 0.26,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.004,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -1081,7 +1081,7 @@
       "eps": 2.27,
       "div": 5,
       "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0018,
+      "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -1113,7 +1113,7 @@
       "pe": null,
       "div": 3.13,
       "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1146,10 +1146,41 @@
       "eps": 1.13,
       "div": 1.78,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0063,
+      "sektorPsi": 0.01,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-18",
       "miss": 0
+    },
+    {
+      "ticker": "6701",
+      "name": "NEC Corporation",
+      "yahoo": "6701.T",
+      "sector": "hardware",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 8,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 12,
+      "strongBuyPct": 33,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-23",
+      "verifiedSource": "yahoo",
+      "seen": "2026-07-23",
+      "perf6m": -23.44,
+      "perf6mAt": "2026-07-23",
+      "perf1mBefore": 16.72,
+      "upside": 43,
+      "pe": 20.9,
+      "eps": 202.8,
+      "div": 0.92,
+      "enrichAt": "2026-07-23",
+      "sektorPsi": 0.01,
+      "sektorPsiAtAdd": 0.01
     },
     {
       "ticker": "1INN.DE",
@@ -1178,7 +1209,7 @@
       "eps": 5.01,
       "div": 5.49,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -1210,7 +1241,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-19",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -1242,7 +1273,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1274,7 +1305,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-21",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1385,6 +1416,11 @@
       "t": "KTN.DE",
       "d": "2026-06-05",
       "v": 0.0095
+    },
+    {
+      "t": "6701",
+      "d": "2026-07-23",
+      "v": 0.01
     },
     {
       "t": "034730",
@@ -1541,12 +1577,24 @@
   "news": {
     "items": [
       {
-        "text": "SAP veröffentlicht Quartalszahlen: Erwartungen und Ausblick.",
+        "text": "US-Tech-Aktien brechen ein – Alphabet unter Druck",
         "stamp": "23.07.26"
       },
       {
-        "text": "Alphabet und Tesla im Fokus – Wall Street stabilisiert sich.",
-        "stamp": "22.07.26"
+        "text": "Goldpreis fällt trotz Geopolitik: Iran-Konflikt schürt Zinsängste",
+        "stamp": "23.07.26"
+      },
+      {
+        "text": "EZB hält Leitzinsen stabil – Zinspause trotz Iran-Krieg",
+        "stamp": "23.07.26"
+      },
+      {
+        "text": "Alphabet fällt: Leitet das den Crash für Hyperscaler ein?",
+        "stamp": "23.07.26"
+      },
+      {
+        "text": "Deutsche Telekom: US-Tochter enttäuscht – Zahlen bedeuten Ärger",
+        "stamp": "23.07.26"
       }
     ],
     "date": "2026-07-23"
@@ -1554,10 +1602,9 @@
   "scan": {
     "universe": 8834,
     "scanned": 8834,
-    "lastCursor": 2055,
-    "candCursor": 124,
+    "lastCursor": 2355,
+    "candCursor": 132,
     "candidates": [
-      "Mama's Creations",
       "Viant Technology",
       "RealReal",
       "MP Materials",
@@ -1956,61 +2003,57 @@
       "AIXTRON SE",
       "Tele Columbus AG",
       "Evotec SE",
-      "Hannover Rück SE"
+      "Hannover Rück SE",
+      "Groupe OKwind SA"
     ],
     "noteCursor": 2,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 2,
     "notesDay": "2026-07-23",
     "seenBySector": {
-      "cons_cycl": 1355,
-      "cons_def": 704,
-      "materials": 952,
-      "health": 3939,
-      "finance": 2673,
-      "energy": 1222,
-      "hardware": 888,
-      "software": 2638,
-      "industrial": 1136,
-      "utilities": 480,
-      "comm": 582,
-      "ai_semi": 530,
-      "realestate": 244
+      "cons_cycl": 1365,
+      "cons_def": 706,
+      "materials": 954,
+      "health": 3960,
+      "finance": 2681,
+      "energy": 1229,
+      "hardware": 894,
+      "software": 2660,
+      "industrial": 1147,
+      "utilities": 485,
+      "comm": 584,
+      "ai_semi": 531,
+      "realestate": 246
     },
     "pendingReject": [
-      "CVBF",
-      "CVCO",
-      "CVE",
-      "CVEO",
-      "CVGI",
-      "CVI",
-      "CVKD",
-      "CVLG",
-      "CVLT",
-      "CVM",
-      "CVNA",
-      "CVRX",
-      "CVS",
-      "CVSA",
-      "CVSI"
+      "DSS",
+      "DSX",
+      "DT",
+      "DTE",
+      "DTGI",
+      "DTI",
+      "DTIL",
+      "DTM",
+      "DTSS",
+      "DTST"
     ],
     "evaluatedBySector": {
-      "cons_cycl": 1358,
-      "cons_def": 705,
-      "materials": 952,
-      "health": 3940,
-      "finance": 2677,
-      "energy": 1223,
-      "hardware": 890,
-      "software": 2646,
-      "industrial": 1144,
-      "utilities": 481,
-      "comm": 583,
-      "ai_semi": 530,
-      "realestate": 244
+      "cons_cycl": 1368,
+      "cons_def": 707,
+      "materials": 954,
+      "health": 3961,
+      "finance": 2685,
+      "energy": 1230,
+      "hardware": 897,
+      "software": 2668,
+      "industrial": 1155,
+      "utilities": 486,
+      "comm": 585,
+      "ai_semi": 531,
+      "realestate": 246
     },
-    "heavyAt": "2026-07-23T04:33:36.084Z",
+    "heavyAt": "2026-07-23T20:19:51.327Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2021,6 +2064,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-23T20:00:40.986Z"
+  }
 }
