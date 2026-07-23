@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-23",
-  "updatedAt": "2026-07-23T13:00:41.007Z",
+  "updatedAt": "2026-07-23T14:00:41.004Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,143 +147,143 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 3.06,
-      "avg30": -1.34,
-      "perf6m": -6.6
+      "perf": 1.95,
+      "avg30": -1.32,
+      "perf6m": -7.2
     },
     {
       "id": "ai_semi",
-      "perf": -13.57,
-      "avg30": 8.8,
-      "perf6m": 63.83
+      "perf": -13.35,
+      "avg30": 8.7,
+      "perf6m": 61.79
     },
     {
       "id": "hardware",
       "perf": -5.83,
-      "avg30": 3.29,
-      "perf6m": 23.93
+      "avg30": 3.25,
+      "perf6m": 25.35
     },
     {
       "id": "comm",
-      "perf": 0.76,
-      "avg30": 0.15,
-      "perf6m": -4.46
+      "perf": 1.8,
+      "avg30": 0.16,
+      "perf6m": -4.74
     },
     {
       "id": "health",
-      "perf": 6.24,
-      "avg30": 1.7,
-      "perf6m": 2.37
+      "perf": 6.66,
+      "avg30": 1.72,
+      "perf6m": 2.77
     },
     {
       "id": "finance",
       "perf": 4.38,
-      "avg30": 0.54,
-      "perf6m": 3.09
+      "avg30": 0.56,
+      "perf6m": 4.84
     },
     {
       "id": "cons_cycl",
-      "perf": -0.76,
-      "avg30": 0.39,
-      "perf6m": -6.29
+      "perf": -0.8,
+      "avg30": 0.38,
+      "perf6m": -6.08
     },
     {
       "id": "cons_def",
-      "perf": 1.3,
+      "perf": 0.91,
       "avg30": 0.37,
-      "perf6m": 2.45
+      "perf6m": 2.06
     },
     {
       "id": "industrial",
-      "perf": -1.24,
-      "avg30": 1.7,
-      "perf6m": 7.77
+      "perf": -1.14,
+      "avg30": 1.69,
+      "perf6m": 7.51
     },
     {
       "id": "energy",
-      "perf": 8.21,
-      "avg30": 2.48,
-      "perf6m": 22.87
+      "perf": 9.51,
+      "avg30": 2.51,
+      "perf6m": 24.14
     },
     {
       "id": "materials",
-      "perf": -3.3,
-      "avg30": 1.31,
-      "perf6m": 2.92
+      "perf": -2.21,
+      "avg30": 1.29,
+      "perf6m": 3.7
     },
     {
       "id": "utilities",
-      "perf": 0.49,
-      "avg30": 0.61,
-      "perf6m": 3.57
+      "perf": 2.52,
+      "avg30": 0.62,
+      "perf6m": 6.67
     },
     {
       "id": "realestate",
-      "perf": 2.8,
-      "avg30": 0.67,
-      "perf6m": 8.39
+      "perf": 2.53,
+      "avg30": 0.68,
+      "perf6m": 8.63
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
       "perf": 0.41,
-      "avg30": 1.51,
-      "perf6m": 8.06
+      "avg30": 1.5,
+      "perf6m": 9.05
     },
     {
       "id": "europe",
-      "perf": 0.56,
+      "perf": 0.58,
       "avg30": 1.25,
-      "perf6m": 3.32
+      "perf6m": 3.44
     },
     {
       "id": "germany",
       "perf": -0.51,
       "avg30": -0.07,
-      "perf6m": -4.46
+      "perf6m": -3.53
     },
     {
       "id": "japan",
       "perf": -4.23,
-      "avg30": 1.85,
-      "perf6m": 7.93
+      "avg30": 1.82,
+      "perf6m": 8.74
     },
     {
       "id": "china",
-      "perf": 2.16,
-      "avg30": -0.92,
-      "perf6m": -13.63
+      "perf": 1.52,
+      "avg30": -0.91,
+      "perf6m": -14.27
     },
     {
       "id": "em",
       "perf": -8.19,
-      "avg30": 2.88,
+      "avg30": 2.83,
       "perf6m": 12.3
     },
     {
       "id": "apac",
       "perf": -8.19,
-      "avg30": 2.81,
-      "perf6m": 15.2
+      "avg30": 2.76,
+      "perf6m": 14.75
     },
     {
       "id": "india",
-      "perf": -2.08,
-      "avg30": -0.61,
-      "perf6m": -8.14
+      "perf": -2.74,
+      "avg30": -0.62,
+      "perf6m": -6.79
     },
     {
       "id": "latam",
-      "perf": 2.06,
-      "avg30": 2.84,
-      "perf6m": 6.74
+      "perf": 3.54,
+      "avg30": 2.85,
+      "perf6m": 6.69
     },
     {
       "id": "world",
       "perf": 0.36,
-      "avg30": 1.47,
-      "perf6m": 7.34
+      "avg30": 1.46,
+      "perf6m": 8.23
     }
   ],
   "topStocks": [
@@ -2022,5 +2022,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-07-23T13:00:41.007Z"
+  "yahooAt": "2026-07-23T14:00:41.004Z"
 }
