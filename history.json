@@ -106,7 +106,8 @@
       "seen": "2026-07-23",
       "seenMs": 1784764800000,
       "startPrice": 4379.5,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "6723": {
       "ticker": "6723",
