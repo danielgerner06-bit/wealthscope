@@ -8050,7 +8050,8 @@
       "seen": "2026-07-24",
       "seenMs": 1784851200000,
       "startPrice": 19.850000381469727,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "HABA": {
       "ticker": "HABA",
@@ -8070,7 +8071,8 @@
       "seen": "2026-07-24",
       "seenMs": 1784851200000,
       "startPrice": 4.417500019073486,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
