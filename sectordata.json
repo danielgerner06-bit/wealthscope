@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-23",
-  "updatedAt": "2026-07-24T09:00:40.989Z",
+  "updated": "2026-07-24",
+  "updatedAt": "2026-07-24T09:41:29.791Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -351,7 +351,7 @@
       "eps": 6.47,
       "div": 4.05,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0129,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 0.75,
       "div": 0,
       "enrichAt": "2026-07-22",
-      "sektorPsi": 0.0045,
+      "sektorPsi": 0.0044,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-07-20",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-21",
-      "sektorPsi": 0.0045,
+      "sektorPsi": 0.0044,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -518,7 +518,7 @@
       "pe": null,
       "div": 0.13,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0026,
+      "sektorPsi": 0.0025,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -546,12 +546,12 @@
       "perf6m": -18.28,
       "perf6mAt": "2026-07-24",
       "perf1mBefore": -17.12,
-      "upside": 57,
-      "pe": 54,
+      "upside": 55,
+      "pe": 54.8,
       "eps": 0.04,
       "div": 0,
-      "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0129,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -612,12 +612,12 @@
       "perf6m": -12.89,
       "perf6mAt": "2026-07-24",
       "perf1mBefore": 0.26,
-      "upside": 52,
-      "pe": 10.1,
+      "upside": 57,
+      "pe": 9.8,
       "eps": 1.64,
       "div": 3.01,
-      "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0023,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0022,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -645,11 +645,11 @@
       "perf6m": -16.22,
       "perf6mAt": "2026-07-24",
       "perf1mBefore": 11.41,
-      "upside": 50,
-      "pe": 46.5,
+      "upside": 54,
+      "pe": 45.2,
       "eps": 0.48,
       "div": 0,
-      "enrichAt": "2026-07-19",
+      "enrichAt": "2026-07-24",
       "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0019,
       "recheckAt": "2026-07-19",
@@ -682,9 +682,42 @@
       "pe": null,
       "div": 1.38,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0129,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-23",
+      "miss": 0
+    },
+    {
+      "ticker": "6701",
+      "name": "NEC Corporation",
+      "yahoo": "6701.T",
+      "sector": "hardware",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 8,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 12,
+      "strongBuyPct": 33,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-24",
+      "verifiedSource": "yahoo",
+      "seen": "2026-07-23",
+      "perf6m": -23.44,
+      "perf6mAt": "2026-07-23",
+      "perf1mBefore": 16.72,
+      "upside": 43,
+      "pe": 20.9,
+      "eps": 202.8,
+      "div": 0.92,
+      "enrichAt": "2026-07-23",
+      "sektorPsi": 0.0099,
+      "sektorPsiAtAdd": 0.01,
+      "recheckAt": "2026-07-24",
       "miss": 0
     },
     {
@@ -713,9 +746,9 @@
       "upside": 42,
       "pe": 15.6,
       "eps": 1.34,
-      "div": 2.4,
-      "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0045,
+      "div": 2.43,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0044,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -748,7 +781,7 @@
       "eps": 203.16,
       "div": 0.91,
       "enrichAt": "2026-07-22",
-      "sektorPsi": 0.0045,
+      "sektorPsi": 0.0044,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -781,7 +814,7 @@
       "eps": 2.23,
       "div": 1.69,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.01,
+      "sektorPsi": 0.0099,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -814,7 +847,7 @@
       "eps": 0.72,
       "div": 2.7,
       "enrichAt": "2026-07-21",
-      "sektorPsi": 0.0129,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -836,7 +869,7 @@
       "strongBuyPct": 80,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-17",
+      "verifiedAt": "2026-07-24",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-02",
       "perf6m": 39.18,
@@ -849,7 +882,7 @@
       "enrichAt": "2026-07-22",
       "sektorPsi": 0.0008,
       "sektorPsiAtAdd": 0.0045,
-      "recheckAt": "2026-07-17",
+      "recheckAt": "2026-07-24",
       "miss": 0
     },
     {
@@ -876,11 +909,11 @@
       "perf6mAt": "2026-07-24",
       "perf1mBefore": -9.59,
       "upside": 35,
-      "pe": 77.2,
+      "pe": 77.4,
       "eps": 0.72,
-      "div": 2.7,
-      "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0129,
+      "div": 2.73,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -949,7 +982,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0129,
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -1011,11 +1044,11 @@
       "perf6mAt": "2026-07-24",
       "perf1mBefore": -0.96,
       "upside": 20,
-      "pe": 31.1,
+      "pe": 31.2,
       "eps": 1.88,
-      "div": 0.8,
-      "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0129,
+      "div": 0.79,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -1076,11 +1109,11 @@
       "perf6m": 10.25,
       "perf6mAt": "2026-07-24",
       "perf1mBefore": -5.14,
-      "upside": 16,
-      "pe": 12,
+      "upside": 17,
+      "pe": 11.9,
       "eps": 2.27,
-      "div": 5,
-      "enrichAt": "2026-07-19",
+      "div": 5.04,
+      "enrichAt": "2026-07-24",
       "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-07-23",
@@ -1109,11 +1142,11 @@
       "perf6m": 68.79,
       "perf6mAt": "2026-07-24",
       "perf1mBefore": -34.9,
-      "upside": 8,
+      "upside": 12,
       "pe": null,
-      "div": 3.13,
-      "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0129,
+      "div": 3.07,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0128,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1146,41 +1179,10 @@
       "eps": 1.13,
       "div": 1.78,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.01,
+      "sektorPsi": 0.0099,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-18",
       "miss": 0
-    },
-    {
-      "ticker": "6701",
-      "name": "NEC Corporation",
-      "yahoo": "6701.T",
-      "sector": "hardware",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 8,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 12,
-      "strongBuyPct": 33,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-23",
-      "verifiedSource": "yahoo",
-      "seen": "2026-07-23",
-      "perf6m": -23.44,
-      "perf6mAt": "2026-07-23",
-      "perf1mBefore": 16.72,
-      "upside": 43,
-      "pe": 20.9,
-      "eps": 202.8,
-      "div": 0.92,
-      "enrichAt": "2026-07-23",
-      "sektorPsi": 0.01,
-      "sektorPsiAtAdd": 0.01
     },
     {
       "ticker": "1INN.DE",
@@ -1209,7 +1211,7 @@
       "eps": 5.01,
       "div": 5.49,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0045,
+      "sektorPsi": 0.0044,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -1240,8 +1242,8 @@
       "pe": null,
       "eps": -0.12,
       "div": 0,
-      "enrichAt": "2026-07-19",
-      "sektorPsi": 0.0045,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0044,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -1273,7 +1275,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0045,
+      "sektorPsi": 0.0044,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1305,7 +1307,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-21",
-      "sektorPsi": 0.0045,
+      "sektorPsi": 0.0044,
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1500,8 +1502,8 @@
       "date": "2026-07-23"
     },
     "hardware": {
-      "text": "Der Sektor \"Hardware & Geräte\" zeigt sich mit +2.53% im letzten Monat stabil, profitiert aber stark von KI-Trends mit +26.49% über 6 Monate. A1OS.DE und IXX.DE sind hierbei auffällige Profiteure.",
-      "date": "2026-07-11"
+      "text": "Der Hardware-Sektor verzeichnete kurzfristig einen Rückgang, getragen von Zinsanstiegen und konjunkturellen Sorgen. Langfristig treibt KI-Nachfrage die Gewinne, trotz geopolitischer Unsicherheiten.",
+      "date": "2026-07-24"
     },
     "comm": {
       "text": "Hohe Zinsen und Konjunktursorgen belasten den Sektor Kommunikation & Medien. KI-Investitionen bieten zwar Potenzial, können kurzfristige Verluste aber nicht kompensieren.",
@@ -1554,8 +1556,8 @@
       "date": "2026-07-23"
     },
     "germany": {
-      "text": "Die deutsche Konjunktur schwächelt mit einem deutlichen Rückgang. Hohe Energiepreise und globale Unsicherheiten belasten die Wirtschaft.",
-      "date": "2026-07-14"
+      "text": "Deutsche Konjunktur schwächelt, mit negativen Zinsentwicklungen und anhaltenden Energiepreisrisiken. Geopolitische Unsicherheiten belasten zusätzlich die wirtschaftliche Lage.",
+      "date": "2026-07-24"
     },
     "china": {
       "text": "Chinas Konjunktur schwächelt deutlich, die 30-Tage-Entwicklung liegt weit unter dem Normalniveau. Dies deutet auf anhaltende wirtschaftliche Probleme hin.",
@@ -1577,37 +1579,38 @@
   "news": {
     "items": [
       {
-        "text": "US-Tech-Aktien brechen ein – Alphabet unter Druck",
+        "text": "SAP meldet starke Zahlen, Cloud-Umsatz übertrifft Erwartungen.",
+        "stamp": "24.07.26"
+      },
+      {
+        "text": "VW-Halbjahresbilanz zeigt Schwäche – Gewinn bricht ein.",
+        "stamp": "24.07.26"
+      },
+      {
+        "text": "EZB hält Leitzinsen stabil – Energiepreise und Nahost-Konflikt im Fokus.",
         "stamp": "23.07.26"
       },
       {
-        "text": "Goldpreis fällt trotz Geopolitik: Iran-Konflikt schürt Zinsängste",
+        "text": "Trump kündigt neue Zölle an – auch Deutschland betroffen.",
         "stamp": "23.07.26"
       },
       {
-        "text": "EZB hält Leitzinsen stabil – Zinspause trotz Iran-Krieg",
+        "text": "US-Notenbank (Fed) erhöht Leitzinsen leicht.",
         "stamp": "23.07.26"
       },
       {
-        "text": "Alphabet fällt: Leitet das den Crash für Hyperscaler ein?",
-        "stamp": "23.07.26"
-      },
-      {
-        "text": "Deutsche Telekom: US-Tochter enttäuscht – Zahlen bedeuten Ärger",
+        "text": "Oracle erhält 7-Milliarden-Dollar-Auftrag vom US-Verteidigungsministerium.",
         "stamp": "23.07.26"
       }
     ],
-    "date": "2026-07-23"
+    "date": "2026-07-24"
   },
   "scan": {
     "universe": 8834,
     "scanned": 8834,
-    "lastCursor": 2355,
-    "candCursor": 132,
+    "lastCursor": 2655,
+    "candCursor": 140,
     "candidates": [
-      "Viant Technology",
-      "RealReal",
-      "MP Materials",
       "Napco Security Technologies",
       "Septerna, Inc.",
       "Kornit Digital",
@@ -2004,56 +2007,48 @@
       "Tele Columbus AG",
       "Evotec SE",
       "Hannover Rück SE",
-      "Groupe OKwind SA"
+      "Groupe OKwind SA",
+      "Evolv Technologies Holdings Inc.",
+      "Unusual Machines Inc.",
+      "Vince Holding Corp."
     ],
-    "noteCursor": 2,
-    "focusCursor": 2,
+    "noteCursor": 3,
+    "focusCursor": 3,
     "recheckCursor": 16,
-    "regionNoteCursor": 2,
-    "notesDay": "2026-07-23",
+    "regionNoteCursor": 3,
+    "notesDay": "2026-07-24",
     "seenBySector": {
-      "cons_cycl": 1365,
-      "cons_def": 706,
-      "materials": 954,
-      "health": 3960,
-      "finance": 2681,
-      "energy": 1229,
-      "hardware": 894,
-      "software": 2660,
-      "industrial": 1147,
-      "utilities": 485,
-      "comm": 584,
-      "ai_semi": 531,
-      "realestate": 246
+      "cons_cycl": 1369,
+      "cons_def": 709,
+      "materials": 962,
+      "health": 3984,
+      "finance": 2691,
+      "energy": 1244,
+      "hardware": 899,
+      "software": 2669,
+      "industrial": 1151,
+      "utilities": 492,
+      "comm": 588,
+      "ai_semi": 532,
+      "realestate": 247
     },
-    "pendingReject": [
-      "DSS",
-      "DSX",
-      "DT",
-      "DTE",
-      "DTGI",
-      "DTI",
-      "DTIL",
-      "DTM",
-      "DTSS",
-      "DTST"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1368,
-      "cons_def": 707,
-      "materials": 954,
-      "health": 3961,
-      "finance": 2685,
-      "energy": 1230,
-      "hardware": 897,
-      "software": 2668,
-      "industrial": 1155,
-      "utilities": 486,
-      "comm": 585,
-      "ai_semi": 531,
-      "realestate": 246
+      "cons_cycl": 1372,
+      "cons_def": 710,
+      "materials": 962,
+      "health": 3985,
+      "finance": 2695,
+      "energy": 1245,
+      "hardware": 902,
+      "software": 2677,
+      "industrial": 1159,
+      "utilities": 493,
+      "comm": 589,
+      "ai_semi": 532,
+      "realestate": 247
     },
-    "heavyAt": "2026-07-23T20:19:51.327Z",
+    "heavyAt": "2026-07-24T09:34:03.966Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2064,6 +2059,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-24T09:00:40.989Z"
+  }
 }
