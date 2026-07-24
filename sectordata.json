@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-24",
-  "updatedAt": "2026-07-24T21:00:40.986Z",
+  "updatedAt": "2026-07-24T21:49:00.765Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0021,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 6.47,
       "div": 4.05,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 0.75,
       "div": 0,
       "enrichAt": "2026-07-22",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-07-20",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-21",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -450,7 +450,7 @@
       "eps": 5.21,
       "div": 2.8,
       "enrichAt": "2026-07-23",
-      "sektorPsi": 0.0029,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -486,7 +486,7 @@
       "eps": -0.63,
       "div": 0,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0021,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -518,8 +518,41 @@
       "pe": null,
       "div": 0.13,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0025,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0039,
+      "recheckAt": "2026-07-23",
+      "miss": 0
+    },
+    {
+      "ticker": "ORS",
+      "name": "Orsero S.p.A.",
+      "yahoo": "ORS.MI",
+      "sector": "cons_def",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-23",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": -12.89,
+      "perf6mAt": "2026-07-24",
+      "perf1mBefore": 0.26,
+      "upside": 57,
+      "pe": 9.8,
+      "eps": 1.64,
+      "div": 3.01,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0028,
+      "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-23",
       "miss": 0
     },
@@ -551,7 +584,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -590,39 +623,6 @@
       "miss": 0
     },
     {
-      "ticker": "ORS",
-      "name": "Orsero S.p.A.",
-      "yahoo": "ORS.MI",
-      "sector": "cons_def",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 3,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-23",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-14",
-      "perf6m": -12.89,
-      "perf6mAt": "2026-07-24",
-      "perf1mBefore": 0.26,
-      "upside": 57,
-      "pe": 9.8,
-      "eps": 1.64,
-      "div": 3.01,
-      "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0022,
-      "sektorPsiAtAdd": 0.008,
-      "recheckAt": "2026-07-23",
-      "miss": 0
-    },
-    {
       "ticker": "JDC",
       "name": "JDC Group AG",
       "yahoo": "JDC.DE",
@@ -650,7 +650,7 @@
       "eps": 0.48,
       "div": 0,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0021,
       "sektorPsiAtAdd": 0.0019,
       "recheckAt": "2026-07-19",
       "miss": 0
@@ -682,7 +682,7 @@
       "pe": null,
       "div": 1.38,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -715,7 +715,7 @@
       "eps": 202.8,
       "div": 0.92,
       "enrichAt": "2026-07-23",
-      "sektorPsi": 0.0099,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.01,
       "recheckAt": "2026-07-24",
       "miss": 0
@@ -748,7 +748,7 @@
       "eps": 1.34,
       "div": 2.43,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -781,7 +781,7 @@
       "eps": 203.16,
       "div": 0.91,
       "enrichAt": "2026-07-22",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -814,7 +814,7 @@
       "eps": 2.23,
       "div": 1.69,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0099,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -847,7 +847,7 @@
       "eps": 0.72,
       "div": 2.7,
       "enrichAt": "2026-07-21",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -880,7 +880,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-07-22",
-      "sektorPsi": 0.0008,
+      "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-07-24",
       "miss": 0
@@ -913,7 +913,7 @@
       "eps": 0.72,
       "div": 2.73,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -946,7 +946,7 @@
       "eps": 22.47,
       "div": 4.46,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0105,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -982,7 +982,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -1015,7 +1015,7 @@
       "eps": 3.04,
       "div": 2.74,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0105,
       "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -1048,8 +1048,41 @@
       "eps": 1.88,
       "div": 0.79,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.0229,
+      "recheckAt": "2026-07-23",
+      "miss": 0
+    },
+    {
+      "ticker": "GF",
+      "name": "Generalfinance S.p.A.",
+      "yahoo": "GF.MI",
+      "sector": "finance",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-23",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": 10.25,
+      "perf6mAt": "2026-07-24",
+      "perf1mBefore": -5.14,
+      "upside": 17,
+      "pe": 11.9,
+      "eps": 2.27,
+      "div": 5.04,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0021,
+      "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-07-23",
       "miss": 0
     },
@@ -1081,42 +1114,9 @@
       "eps": 13.04,
       "div": 0.26,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0105,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-18",
-      "miss": 0
-    },
-    {
-      "ticker": "GF",
-      "name": "Generalfinance S.p.A.",
-      "yahoo": "GF.MI",
-      "sector": "finance",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 3,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-23",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-14",
-      "perf6m": 10.25,
-      "perf6mAt": "2026-07-24",
-      "perf1mBefore": -5.14,
-      "upside": 17,
-      "pe": 11.9,
-      "eps": 2.27,
-      "div": 5.04,
-      "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0019,
-      "sektorPsiAtAdd": 0.0047,
-      "recheckAt": "2026-07-23",
       "miss": 0
     },
     {
@@ -1146,7 +1146,7 @@
       "pe": null,
       "div": 3.07,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.0132,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1179,7 +1179,7 @@
       "eps": 1.13,
       "div": 1.78,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0099,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -1211,7 +1211,7 @@
       "eps": 5.01,
       "div": 5.49,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-18",
       "miss": 0
@@ -1243,7 +1243,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -1275,7 +1275,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-20",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1307,10 +1307,72 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-21",
-      "sektorPsi": 0.0044,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-07-22",
       "miss": 0
+    },
+    {
+      "ticker": "F3C",
+      "name": "SFC Energy AG",
+      "yahoo": "F3C.DE",
+      "sector": "energy",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 5,
+      "strongBuyPct": 80,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-24",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-24",
+      "perf6m": 37,
+      "perf6mAt": "2026-07-24",
+      "perf1mBefore": -5.25,
+      "upside": 33,
+      "pe": null,
+      "eps": -0.06,
+      "div": 0,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0016,
+      "sektorPsiAtAdd": 0.0016
+    },
+    {
+      "ticker": "HABA",
+      "name": "Hamborner Reit AG",
+      "yahoo": "HABA.DE",
+      "sector": "realestate",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 5,
+      "strongBuyPct": 80,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-24",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-24",
+      "perf6m": -4.73,
+      "perf6mAt": "2026-07-24",
+      "perf1mBefore": -1.51,
+      "upside": 82,
+      "pe": 29.5,
+      "eps": 0.15,
+      "div": 8.85,
+      "enrichAt": "2026-07-24",
+      "sektorPsi": 0.0076,
+      "sektorPsiAtAdd": 0.0076
     }
   ],
   "psiHistory": [
@@ -1328,6 +1390,11 @@
       "t": "KALN.NS",
       "d": "2026-07-10",
       "v": 0.0015
+    },
+    {
+      "t": "F3C",
+      "d": "2026-07-24",
+      "v": 0.0016
     },
     {
       "t": "JDC",
@@ -1383,6 +1450,11 @@
       "t": "EXL.DE",
       "d": "2026-06-16",
       "v": 0.007
+    },
+    {
+      "t": "HABA",
+      "d": "2026-07-24",
+      "v": 0.0076
     },
     {
       "t": "A1OS.DE",
@@ -1579,47 +1651,38 @@
   "news": {
     "items": [
       {
-        "text": "SAP meldet starke Zahlen, Cloud-Umsatz übertrifft Erwartungen.",
+        "text": "EZB belässt Leitzinsen unverändert – Inflation im Fokus",
         "stamp": "24.07.26"
       },
       {
-        "text": "VW-Halbjahresbilanz zeigt Schwäche – Gewinn bricht ein.",
+        "text": "Neue Euro-Scheine: Bürger können über Designentwürfe abstimmen",
         "stamp": "24.07.26"
       },
       {
-        "text": "EZB hält Leitzinsen stabil – Energiepreise und Nahost-Konflikt im Fokus.",
-        "stamp": "23.07.26"
+        "text": "Verizon: Umsatz steigt dank Mobilfunk und Breitband",
+        "stamp": "24.07.26"
       },
       {
-        "text": "Trump kündigt neue Zölle an – auch Deutschland betroffen.",
-        "stamp": "23.07.26"
+        "text": "Intel profitiert von KI-Nachfrage – starkes Umsatzwachstum",
+        "stamp": "24.07.26"
       },
       {
-        "text": "US-Notenbank (Fed) erhöht Leitzinsen leicht.",
-        "stamp": "23.07.26"
+        "text": "US-Zölle: EU kann laut Experte nicht auf Vergeltung hoffen",
+        "stamp": "24.07.26"
       },
       {
-        "text": "Oracle erhält 7-Milliarden-Dollar-Auftrag vom US-Verteidigungsministerium.",
-        "stamp": "23.07.26"
+        "text": "Ukraine-Krieg: Trump empfängt Selenskyj – US-Kriegsetat steigt",
+        "stamp": "24.07.26"
       }
     ],
     "date": "2026-07-24"
   },
   "scan": {
-    "universe": 8834,
-    "scanned": 8834,
-    "lastCursor": 2655,
-    "candCursor": 140,
+    "universe": 8837,
+    "scanned": 8837,
+    "lastCursor": 2955,
+    "candCursor": 148,
     "candidates": [
-      "Napco Security Technologies",
-      "Septerna, Inc.",
-      "Kornit Digital",
-      "AngioDynamics",
-      "Evaxion Biotech A/S",
-      "Electrovaya Inc.",
-      "Bowman Consulting Group Ltd.",
-      "Napco Security Technologies, Inc.",
-      "Talos Energy Inc.",
       "Northern Oil and Gas, Inc.",
       "Patterson-UTI Energy, Inc.",
       "Southwest Gas Holdings Inc.",
@@ -2010,45 +2073,54 @@
       "Groupe OKwind SA",
       "Evolv Technologies Holdings Inc.",
       "Unusual Machines Inc.",
-      "Vince Holding Corp."
+      "Vince Holding Corp.",
+      "Chiyoda Corporation",
+      "Aurora World Corp.",
+      "Makus Inc.",
+      "Pulmuone Co., Ltd.",
+      "Bossdom Digiinnovation Co., Ltd.",
+      "Visgeneer, Inc.",
+      "Taiwan Green Environment Technology Inc.",
+      "AP Memory Technology Corp.",
+      "L & K Engineering Co., Ltd."
     ],
     "noteCursor": 3,
-    "focusCursor": 3,
+    "focusCursor": 4,
     "recheckCursor": 16,
     "regionNoteCursor": 3,
     "notesDay": "2026-07-24",
     "seenBySector": {
-      "cons_cycl": 1369,
-      "cons_def": 709,
-      "materials": 962,
-      "health": 3984,
-      "finance": 2691,
-      "energy": 1244,
-      "hardware": 899,
-      "software": 2669,
-      "industrial": 1151,
-      "utilities": 492,
-      "comm": 588,
+      "cons_cycl": 1377,
+      "cons_def": 711,
+      "materials": 966,
+      "health": 4001,
+      "finance": 2716,
+      "energy": 1250,
+      "hardware": 902,
+      "software": 2683,
+      "industrial": 1160,
+      "utilities": 497,
+      "comm": 593,
       "ai_semi": 532,
-      "realestate": 247
+      "realestate": 248
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1372,
-      "cons_def": 710,
-      "materials": 962,
-      "health": 3985,
-      "finance": 2695,
-      "energy": 1245,
-      "hardware": 902,
-      "software": 2677,
-      "industrial": 1159,
-      "utilities": 493,
-      "comm": 589,
+      "cons_cycl": 1380,
+      "cons_def": 712,
+      "materials": 966,
+      "health": 4002,
+      "finance": 2720,
+      "energy": 1252,
+      "hardware": 905,
+      "software": 2691,
+      "industrial": 1168,
+      "utilities": 498,
+      "comm": 594,
       "ai_semi": 532,
-      "realestate": 247
+      "realestate": 249
     },
-    "heavyAt": "2026-07-24T09:34:03.966Z",
+    "heavyAt": "2026-07-24T21:41:41.382Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2059,6 +2131,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-24T21:00:40.986Z"
+  }
 }
