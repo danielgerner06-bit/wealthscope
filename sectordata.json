@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-26",
-  "updatedAt": "2026-07-26T20:00:00.589Z",
+  "updatedAt": "2026-07-26T20:24:01.487Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -351,7 +351,7 @@
       "eps": 6.48,
       "div": 4.07,
       "enrichAt": "2026-07-25",
-      "sektorPsi": 0.0126,
+      "sektorPsi": 0.0125,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -557,6 +557,39 @@
       "miss": 0
     },
     {
+      "ticker": "300760.SZ",
+      "name": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
+      "yahoo": null,
+      "sector": "health",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 19,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 23,
+      "strongBuyPct": 17,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-23",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-21",
+      "perf6m": -21.52,
+      "perf6mAt": "2026-07-26",
+      "perf1mBefore": -7.78,
+      "upside": 60,
+      "pe": 22.6,
+      "eps": 6.47,
+      "div": 4.23,
+      "enrichAt": "2026-07-26",
+      "sektorPsi": 0.0003,
+      "sektorPsiAtAdd": 0.0009,
+      "recheckAt": "2026-07-23",
+      "miss": 0
+    },
+    {
       "ticker": "ORS",
       "name": "Orsero S.p.A.",
       "yahoo": "ORS.MI",
@@ -617,41 +650,8 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0126,
+      "sektorPsi": 0.0125,
       "sektorPsiAtAdd": 0.0229,
-      "recheckAt": "2026-07-23",
-      "miss": 0
-    },
-    {
-      "ticker": "300760.SZ",
-      "name": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
-      "yahoo": null,
-      "sector": "health",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 19,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 23,
-      "strongBuyPct": 17,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-23",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-21",
-      "perf6m": -21.52,
-      "perf6mAt": "2026-07-26",
-      "perf1mBefore": -7.78,
-      "upside": 60,
-      "pe": 22.6,
-      "eps": 6.47,
-      "div": 4.23,
-      "enrichAt": "2026-07-26",
-      "sektorPsi": 0.0003,
-      "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-07-23",
       "miss": 0
     },
@@ -814,41 +814,8 @@
       "pe": null,
       "div": 1.27,
       "enrichAt": "2026-07-25",
-      "sektorPsi": 0.0126,
+      "sektorPsi": 0.0125,
       "sektorPsiAtAdd": 0.0102,
-      "recheckAt": "2026-07-23",
-      "miss": 0
-    },
-    {
-      "ticker": "JST.DE",
-      "name": "Jost Werke AG",
-      "yahoo": "JST.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-23",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": -12.28,
-      "perf6mAt": "2026-07-26",
-      "perf1mBefore": 0.54,
-      "upside": 33,
-      "pe": 78.3,
-      "eps": 0.72,
-      "div": 2.66,
-      "enrichAt": "2026-07-26",
-      "sektorPsi": 0.0126,
-      "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-23",
       "miss": 0
     },
@@ -946,9 +913,42 @@
       "eps": 0.72,
       "div": 2.73,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0126,
+      "sektorPsi": 0.0125,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-21",
+      "miss": 0
+    },
+    {
+      "ticker": "JST.DE",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-23",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": -12.28,
+      "perf6mAt": "2026-07-26",
+      "perf1mBefore": 0.54,
+      "upside": 33,
+      "pe": 78.3,
+      "eps": 0.72,
+      "div": 2.66,
+      "enrichAt": "2026-07-26",
+      "sektorPsi": 0.0125,
+      "sektorPsiAtAdd": 0.025,
+      "recheckAt": "2026-07-23",
       "miss": 0
     },
     {
@@ -1048,7 +1048,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-25",
-      "sektorPsi": 0.0126,
+      "sektorPsi": 0.0125,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -1081,7 +1081,7 @@
       "eps": 1.88,
       "div": 0.79,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0126,
+      "sektorPsi": 0.0125,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -1212,7 +1212,7 @@
       "pe": null,
       "div": 3.07,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0126,
+      "sektorPsi": 0.0125,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1622,20 +1622,28 @@
   "news": {
     "items": [
       {
-        "text": "KI-Boom: Big Techs finanzieren mit Schulden, Aktien, Leasing.",
-        "stamp": "27.07.26"
-      },
-      {
-        "text": "VW-Gewinn bricht um ein Drittel wegen China-Verkäufen ein.",
+        "text": "Kapsch TrafficCom einigt sich mit Finanzgläubigern auf Restrukturierung.",
         "stamp": "26.07.26"
       },
       {
-        "text": "Fed-Zinsentscheid wirft Schatten auf Goldrallye.",
-        "stamp": "25.07.26"
+        "text": "VW-Gewinn bricht um ein Drittel ein, vor allem wegen China-Geschäft.",
+        "stamp": "26.07.26"
       },
       {
-        "text": "Trump kündigt neue Zölle an – Deutschland betroffen.",
-        "stamp": "25.07.26"
+        "text": "Ölpreise steigen wegen Iran-Konflikt, Inflation und Zinsen unter Druck.",
+        "stamp": "26.07.26"
+      },
+      {
+        "text": "Tesla Aktie im Crashmodus, Cathie Wood greift dennoch zu.",
+        "stamp": "26.07.26"
+      },
+      {
+        "text": "Bauzinsen über 4 Prozent: Staat größter Gegner für Hauskäufer.",
+        "stamp": "26.07.26"
+      },
+      {
+        "text": "EU verhängt 890 Mio. Euro Bußgeld gegen Google wegen Wettbewerbsverstoß.",
+        "stamp": "24.07.26"
       }
     ],
     "date": "2026-07-26"
@@ -1643,11 +1651,9 @@
   "scan": {
     "universe": 8838,
     "scanned": 8838,
-    "lastCursor": 3555,
-    "candCursor": 164,
+    "lastCursor": 3855,
+    "candCursor": 172,
     "candidates": [
-      "Patterson-UTI Energy, Inc.",
-      "Southwest Gas Holdings Inc.",
       "Rithm Capital Corp.",
       "Firstsun Capital Bancorp",
       "AirBoss of America Corp.",
@@ -2045,45 +2051,47 @@
       "Taiwan Green Environment Technology Inc.",
       "AP Memory Technology Corp.",
       "L & K Engineering Co., Ltd.",
-      "Bytes Technology Group plc"
+      "Bytes Technology Group plc",
+      "Babcock & Wilcox Enterprises, Inc.",
+      "Viper Energy Partners LP"
     ],
     "noteCursor": 5,
-    "focusCursor": 6,
+    "focusCursor": 7,
     "recheckCursor": 16,
     "regionNoteCursor": 5,
     "notesDay": "2026-07-26",
     "seenBySector": {
-      "cons_cycl": 1397,
-      "cons_def": 715,
-      "materials": 977,
-      "health": 4022,
-      "finance": 2748,
-      "energy": 1261,
-      "hardware": 910,
-      "software": 2710,
-      "industrial": 1174,
-      "utilities": 500,
-      "comm": 599,
-      "ai_semi": 536,
-      "realestate": 253
-    },
-    "pendingReject": [],
-    "evaluatedBySector": {
-      "cons_cycl": 1400,
-      "cons_def": 716,
-      "materials": 977,
-      "health": 4023,
-      "finance": 2752,
-      "energy": 1263,
-      "hardware": 912,
-      "software": 2718,
-      "industrial": 1182,
-      "utilities": 501,
-      "comm": 600,
+      "cons_cycl": 1402,
+      "cons_def": 723,
+      "materials": 980,
+      "health": 4042,
+      "finance": 2767,
+      "energy": 1268,
+      "hardware": 913,
+      "software": 2714,
+      "industrial": 1180,
+      "utilities": 505,
+      "comm": 601,
       "ai_semi": 536,
       "realestate": 254
     },
-    "heavyAt": "2026-07-26T04:42:35.540Z",
+    "pendingReject": [],
+    "evaluatedBySector": {
+      "cons_cycl": 1405,
+      "cons_def": 724,
+      "materials": 980,
+      "health": 4043,
+      "finance": 2771,
+      "energy": 1270,
+      "hardware": 915,
+      "software": 2722,
+      "industrial": 1188,
+      "utilities": 506,
+      "comm": 602,
+      "ai_semi": 536,
+      "realestate": 255
+    },
+    "heavyAt": "2026-07-26T20:17:09.150Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2094,6 +2102,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-26T20:00:00.589Z"
+  }
 }
