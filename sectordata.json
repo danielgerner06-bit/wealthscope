@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-27",
-  "updatedAt": "2026-07-27T10:00:14.133Z",
+  "updatedAt": "2026-07-27T10:56:43.749Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -318,7 +318,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-07-25",
-      "sektorPsi": 0.0021,
+      "sektorPsi": 0.002,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 6.48,
       "div": 4.07,
       "enrichAt": "2026-07-25",
-      "sektorPsi": 0.013,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -387,7 +387,7 @@
       "eps": -0.63,
       "div": 0,
       "enrichAt": "2026-07-25",
-      "sektorPsi": 0.0021,
+      "sektorPsi": 0.002,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -409,7 +409,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-20",
+      "verifiedAt": "2026-07-27",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-12",
       "perf6m": 1.12,
@@ -420,9 +420,9 @@
       "eps": 0.75,
       "div": 0,
       "enrichAt": "2026-07-27",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0344,
-      "recheckAt": "2026-07-20",
+      "recheckAt": "2026-07-27",
       "miss": 0
     },
     {
@@ -453,7 +453,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-26",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -650,7 +650,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.013,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -683,7 +683,7 @@
       "eps": 0.48,
       "div": 0,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0021,
+      "sektorPsi": 0.002,
       "sektorPsiAtAdd": 0.0019,
       "recheckAt": "2026-07-26",
       "miss": 0
@@ -749,7 +749,7 @@
       "eps": 1.34,
       "div": 2.43,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -782,7 +782,7 @@
       "eps": 203.1,
       "div": 0.94,
       "enrichAt": "2026-07-27",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -814,42 +814,9 @@
       "pe": null,
       "div": 1.27,
       "enrichAt": "2026-07-25",
-      "sektorPsi": 0.013,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-23",
-      "miss": 0
-    },
-    {
-      "ticker": "F3C.DE",
-      "name": "SFC Energy AG",
-      "yahoo": "F3C.DE",
-      "sector": "energy",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 5,
-      "strongBuyPct": 80,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-24",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-07-02",
-      "perf6m": 37,
-      "perf6mAt": "2026-07-27",
-      "perf1mBefore": -10.76,
-      "upside": 33,
-      "pe": null,
-      "eps": -0.06,
-      "div": 0,
-      "enrichAt": "2026-07-27",
-      "sektorPsi": 0.0016,
-      "sektorPsiAtAdd": 0.0045,
-      "recheckAt": "2026-07-24",
       "miss": 0
     },
     {
@@ -913,9 +880,42 @@
       "eps": 0.72,
       "div": 2.73,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.013,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-21",
+      "miss": 0
+    },
+    {
+      "ticker": "F3C.DE",
+      "name": "SFC Energy AG",
+      "yahoo": "F3C.DE",
+      "sector": "energy",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 5,
+      "strongBuyPct": 80,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-24",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-02",
+      "perf6m": 37,
+      "perf6mAt": "2026-07-27",
+      "perf1mBefore": -10.76,
+      "upside": 33,
+      "pe": null,
+      "eps": -0.06,
+      "div": 0,
+      "enrichAt": "2026-07-27",
+      "sektorPsi": 0.0016,
+      "sektorPsiAtAdd": 0.0045,
+      "recheckAt": "2026-07-24",
       "miss": 0
     },
     {
@@ -946,7 +946,7 @@
       "eps": 0.72,
       "div": 2.66,
       "enrichAt": "2026-07-26",
-      "sektorPsi": 0.013,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -1048,7 +1048,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-25",
-      "sektorPsi": 0.013,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -1081,7 +1081,7 @@
       "eps": 1.88,
       "div": 0.79,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.013,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -1147,7 +1147,7 @@
       "eps": 2.27,
       "div": 5.04,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0021,
+      "sektorPsi": 0.002,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-07-23",
       "miss": 0
@@ -1212,7 +1212,7 @@
       "pe": null,
       "div": 3.07,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.013,
+      "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1244,7 +1244,7 @@
       "eps": 5.01,
       "div": 5.52,
       "enrichAt": "2026-07-25",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -1276,7 +1276,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-24",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-21",
       "miss": 0
@@ -1308,7 +1308,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-25",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1340,7 +1340,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-26",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-07-22",
       "miss": 0
@@ -1537,8 +1537,8 @@
       "date": "2026-07-16"
     },
     "finance": {
-      "text": "Finanzen & Banken legen kurzfristig stark zu, getrieben von Zinsfantasien und KI-Hype. Langfristig bremsen Konjunktursorgen und Geopolitik.",
-      "date": "2026-07-14"
+      "text": "Der Finanzsektor legt dank steigender Zinsen und KI-Fantasie zu, wobei HYQ.DE und SB1 besonders profitieren. JDC zeigt ebenfalls Stärke, was auf eine breitere positive Marktstimmung hindeutet.",
+      "date": "2026-07-27"
     },
     "ai_semi": {
       "text": "Starke KI-Nachfrage treibt Halbleiter, aber Zinssorgen bremsen kurzfristig den Sektor. Langfristig bleibt das Wachstumspotenzial enorm.",
@@ -1583,8 +1583,8 @@
       "date": "2026-07-18"
     },
     "em": {
-      "text": "Schwellenländer: Kurzer Rückgang durch Zinsunsicherheit, aber langfristig stark durch KI-Boom und solide Konjunktur.",
-      "date": "2026-07-17"
+      "text": "Schwellenländer leiden unter Zinsanstieg und schwacher Konjunktur, was die jüngsten Verluste erklärt. Langfristig zeigen sie sich jedoch widerstandsfähiger.",
+      "date": "2026-07-27"
     },
     "japan": {
       "text": "Japanische Aktien fallen kurzfristig wegen Zinsanstiegsrisiken, erholen sich aber langfristig durch KI-Hoffnungen.",
@@ -1622,37 +1622,37 @@
   "news": {
     "items": [
       {
-        "text": "Kapsch TrafficCom einigt sich mit Finanzgläubigern auf Restrukturierung.",
+        "text": "Europas Börsen legen zu: Ölpreisrückgang nach US-Iran-Deeskalation.",
+        "stamp": "27.07.26"
+      },
+      {
+        "text": "DAX mit starkem Start in spannende Woche - Hochtief, Volkswagen, SAP.",
+        "stamp": "27.07.26"
+      },
+      {
+        "text": "Chinesischer KI-Chipriese CXMT steigt nach IPO über 535 Prozent.",
         "stamp": "26.07.26"
       },
       {
-        "text": "VW-Gewinn bricht um ein Drittel ein, vor allem wegen China-Geschäft.",
-        "stamp": "26.07.26"
+        "text": "VW senkt Prognose, prüft Stellenstreichungen und Werksschließungen.",
+        "stamp": "25.07.26"
       },
       {
-        "text": "Ölpreise steigen wegen Iran-Konflikt, Inflation und Zinsen unter Druck.",
-        "stamp": "26.07.26"
+        "text": "US-Zwischenwahlen: Droht Gegenwind für Aktien?",
+        "stamp": "25.07.26"
       },
       {
-        "text": "Tesla Aktie im Crashmodus, Cathie Wood greift dennoch zu.",
-        "stamp": "26.07.26"
-      },
-      {
-        "text": "Bauzinsen über 4 Prozent: Staat größter Gegner für Hauskäufer.",
-        "stamp": "26.07.26"
-      },
-      {
-        "text": "EU verhängt 890 Mio. Euro Bußgeld gegen Google wegen Wettbewerbsverstoß.",
-        "stamp": "24.07.26"
+        "text": "Tesla: Gewinneinbußen und höhere Kosten, Erwartungen verfehlt.",
+        "stamp": "25.07.26"
       }
     ],
-    "date": "2026-07-26"
+    "date": "2026-07-27"
   },
   "scan": {
     "universe": 8838,
     "scanned": 8838,
-    "lastCursor": 3855,
-    "candCursor": 172,
+    "lastCursor": 4155,
+    "candCursor": 180,
     "candidates": [
       "Rithm Capital Corp.",
       "Firstsun Capital Bancorp",
@@ -2055,43 +2055,43 @@
       "Babcock & Wilcox Enterprises, Inc.",
       "Viper Energy Partners LP"
     ],
-    "noteCursor": 5,
-    "focusCursor": 7,
+    "noteCursor": 6,
+    "focusCursor": 0,
     "recheckCursor": 16,
-    "regionNoteCursor": 5,
-    "notesDay": "2026-07-26",
+    "regionNoteCursor": 6,
+    "notesDay": "2026-07-27",
     "seenBySector": {
-      "cons_cycl": 1402,
-      "cons_def": 723,
-      "materials": 980,
-      "health": 4042,
-      "finance": 2767,
-      "energy": 1268,
-      "hardware": 913,
-      "software": 2714,
-      "industrial": 1180,
-      "utilities": 505,
-      "comm": 601,
-      "ai_semi": 536,
-      "realestate": 254
+      "cons_cycl": 1406,
+      "cons_def": 726,
+      "materials": 984,
+      "health": 4074,
+      "finance": 2776,
+      "energy": 1274,
+      "hardware": 920,
+      "software": 2730,
+      "industrial": 1185,
+      "utilities": 507,
+      "comm": 604,
+      "ai_semi": 542,
+      "realestate": 256
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1405,
-      "cons_def": 724,
-      "materials": 980,
-      "health": 4043,
-      "finance": 2771,
-      "energy": 1270,
-      "hardware": 915,
-      "software": 2722,
-      "industrial": 1188,
-      "utilities": 506,
-      "comm": 602,
-      "ai_semi": 536,
-      "realestate": 255
+      "cons_cycl": 1409,
+      "cons_def": 727,
+      "materials": 984,
+      "health": 4075,
+      "finance": 2780,
+      "energy": 1276,
+      "hardware": 922,
+      "software": 2738,
+      "industrial": 1193,
+      "utilities": 508,
+      "comm": 605,
+      "ai_semi": 542,
+      "realestate": 257
     },
-    "heavyAt": "2026-07-26T20:17:09.150Z",
+    "heavyAt": "2026-07-27T10:50:35.162Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2102,6 +2102,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-27T10:00:14.133Z"
+  }
 }
