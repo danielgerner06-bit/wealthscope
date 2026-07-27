@@ -7761,13 +7761,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 33,
-      "upside": 40,
-      "pe": 21.4,
+      "upside": 38,
+      "pe": 21.7,
       "perf6mAtAdd": -25.21,
       "perf1mBefore": -7.48,
       "sektorPsiAtAdd": 0.0106,
       "analysts": 12,
-      "div": 0.91,
+      "div": 0.94,
       "seen": "2026-06-17",
       "seenMs": 1781654400000,
       "startPrice": 3850.5,
@@ -7893,7 +7893,7 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 80,
-      "upside": 37,
+      "upside": 33,
       "pe": null,
       "perf6mAtAdd": 37,
       "perf1mBefore": -10.76,
@@ -7957,7 +7957,7 @@
       "buyPct": 100,
       "strongBuyPct": 100,
       "upside": 95,
-      "pe": 9.9,
+      "pe": 9.6,
       "perf6mAtAdd": 1.12,
       "perf1mBefore": -9.44,
       "sektorPsiAtAdd": 0.0344,
@@ -8093,11 +8093,11 @@
       },
       {
         "name": "Kursziel",
-        "spread": 9.6,
+        "spread": 9.5,
         "best": {
           "k": "40%+",
-          "avg": 6.2,
-          "n": 143
+          "avg": 6.1,
+          "n": 142
         },
         "worst": {
           "k": "<10%",
@@ -8151,8 +8151,8 @@
     "combo": {
       "f1": "Strong Buy <70%",
       "f2": "Kursziel 40%+",
-      "avg": 10,
-      "n": 4
+      "avg": 8.4,
+      "n": 3
     },
     "sampleSize": 350,
     "maxMonths": 1,
