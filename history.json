@@ -96,13 +96,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 33,
-      "upside": 43,
-      "pe": 20.9,
+      "upside": 36,
+      "pe": 22,
       "perf6mAtAdd": -23.26,
       "perf1mBefore": 16.72,
       "sektorPsiAtAdd": 0.01,
       "analysts": 12,
-      "div": 0.92,
+      "div": 0.9,
       "seen": "2026-07-23",
       "seenMs": 1784764800000,
       "startPrice": 4379.5,
@@ -7819,8 +7819,11 @@
       "seen": "2026-06-28",
       "seenMs": 1782604800000,
       "startPrice": 24.949999809265137,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        -4.46
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "JST": {
       "ticker": "JST",
@@ -7983,7 +7986,7 @@
       "perf1mBefore": -4.8,
       "sektorPsiAtAdd": 0.0031,
       "analysts": 1,
-      "div": 2.8,
+      "div": 2.84,
       "seen": "2026-07-13",
       "seenMs": 1783900800000,
       "startPrice": 30.75,
@@ -8079,7 +8082,7 @@
     "factors": [
       {
         "name": "Strong Buy",
-        "spread": 9.8,
+        "spread": 9.7,
         "best": {
           "k": "<70%",
           "avg": 5.1,
@@ -8087,8 +8090,8 @@
         },
         "worst": {
           "k": "95%+",
-          "avg": -4.7,
-          "n": 8
+          "avg": -4.6,
+          "n": 9
         }
       },
       {
@@ -8097,7 +8100,7 @@
         "best": {
           "k": "40%+",
           "avg": 6.1,
-          "n": 142
+          "n": 143
         },
         "worst": {
           "k": "<10%",
@@ -8107,7 +8110,7 @@
       },
       {
         "name": "Analysten",
-        "spread": 7.9,
+        "spread": 8,
         "best": {
           "k": "5-14",
           "avg": 5.4,
@@ -8115,8 +8118,8 @@
         },
         "worst": {
           "k": "1-4",
-          "avg": -2.5,
-          "n": 86
+          "avg": -2.6,
+          "n": 87
         }
       },
       {
@@ -8154,15 +8157,15 @@
       "avg": 8.4,
       "n": 3
     },
-    "sampleSize": 350,
+    "sampleSize": 351,
     "maxMonths": 1,
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "\"Strong Buy <70%\" und \"Kursziel 40%+\" brachten 8,4% (3 Perlen). KGV hatte mit 4 Spread kaum Einfluss.",
-    "date": "2026-07-27",
+    "text": "\"Strong Buy <70%\" und \"Kursziel 40%+\" lieferten mit 8,4% die beste Performance. Das KGV hatte mit maximal 4,3% kaum Einfluss.",
+    "date": "2026-07-28",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-27"
+  "kiDay": "2026-07-28"
 }
