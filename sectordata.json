@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-28",
-  "updatedAt": "2026-07-28T18:00:14.132Z",
+  "updatedAt": "2026-07-28T19:00:14.132Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -213,9 +213,9 @@
     },
     {
       "id": "utilities",
-      "perf": -0.21,
+      "perf": -0.25,
       "avg30": 0.62,
-      "perf6m": 7.13
+      "perf6m": 7.08
     },
     {
       "id": "realestate",
@@ -2099,5 +2099,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-07-28T18:00:14.132Z"
+  "yahooAt": "2026-07-28T19:00:14.132Z"
 }
