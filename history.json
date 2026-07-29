@@ -7569,13 +7569,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 60,
-      "upside": 20,
-      "pe": 31.2,
+      "upside": 24,
+      "pe": 30.3,
       "perf6mAtAdd": 43.28,
       "perf1mBefore": -0.96,
       "sektorPsiAtAdd": 0.0229,
       "analysts": 5,
-      "div": 0.79,
+      "div": 0.83,
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 67.14999771118164,
@@ -7593,13 +7593,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 57,
-      "pe": 9.8,
+      "upside": 54,
+      "pe": 10,
       "perf6mAtAdd": -15.8,
       "perf1mBefore": 0.26,
       "sektorPsiAtAdd": 0.008,
       "analysts": 3,
-      "div": 3.01,
+      "div": 3.08,
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 15.380000114440918,
@@ -7617,13 +7617,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 17,
-      "pe": 11.9,
+      "upside": 31,
+      "pe": 10.6,
       "perf6mAtAdd": 8.54,
       "perf1mBefore": -5.14,
       "sektorPsiAtAdd": 0.0047,
       "analysts": 3,
-      "div": 5.04,
+      "div": 5.09,
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 26.75,
@@ -7641,8 +7641,8 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 55,
-      "pe": 54.8,
+      "upside": 50,
+      "pe": 56.8,
       "perf6mAtAdd": -17.42,
       "perf1mBefore": -17.12,
       "sektorPsiAtAdd": 0.0229,
@@ -7665,13 +7665,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 83,
-      "upside": 42,
-      "pe": 15.6,
+      "upside": 27,
+      "pe": 17.4,
       "perf6mAtAdd": -0.72,
       "perf1mBefore": 4.35,
       "sektorPsiAtAdd": 0.0038,
       "analysts": 6,
-      "div": 2.43,
+      "div": 2.21,
       "seen": "2026-06-14",
       "seenMs": 1781395200000,
       "startPrice": 21.600000381469727,
@@ -7833,18 +7833,21 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 35,
-      "pe": 77.4,
+      "upside": 33,
+      "pe": 78.3,
       "perf6mAtAdd": -11.41,
       "perf1mBefore": -9.59,
       "sektorPsiAtAdd": 0.008,
       "analysts": 4,
-      "div": 2.73,
+      "div": 2.68,
       "seen": "2026-06-29",
       "seenMs": 1782691200000,
       "startPrice": 50.89999961853027,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        10.76
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "YOC": {
       "ticker": "YOC",
@@ -7864,8 +7867,11 @@
       "seen": "2026-06-29",
       "seenMs": 1782691200000,
       "startPrice": 6.25,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        -10.61
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "EXL": {
       "ticker": "EXL",
@@ -7917,8 +7923,8 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 54,
-      "pe": 45.2,
+      "upside": 45,
+      "pe": 47.9,
       "perf6mAtAdd": -12.4,
       "perf1mBefore": 11.41,
       "sektorPsiAtAdd": 0.0019,
@@ -8001,13 +8007,13 @@
       "region": "apac",
       "buyPct": 100,
       "strongBuyPct": 50,
-      "upside": 12,
+      "upside": 31,
       "pe": null,
       "perf6mAtAdd": 38.02,
       "perf1mBefore": -34.9,
       "sektorPsiAtAdd": 0.0123,
       "analysts": 4,
-      "div": 3.07,
+      "div": 3.59,
       "seen": "2026-07-14",
       "seenMs": 1783987200000,
       "startPrice": 8365,
@@ -8043,7 +8049,7 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 80,
-      "upside": 33,
+      "upside": 39,
       "pe": null,
       "perf6mAtAdd": 38.15,
       "perf1mBefore": -5.25,
@@ -8065,7 +8071,7 @@
       "buyPct": 100,
       "strongBuyPct": 80,
       "upside": 82,
-      "pe": 29.5,
+      "pe": 29.6,
       "perf6mAtAdd": -5.98,
       "perf1mBefore": -1.51,
       "sektorPsiAtAdd": 0.0076,
@@ -8081,26 +8087,12 @@
   "findings": {
     "factors": [
       {
-        "name": "Strong Buy",
-        "spread": 9.7,
-        "best": {
-          "k": "<70%",
-          "avg": 5.1,
-          "n": 7
-        },
-        "worst": {
-          "k": "95%+",
-          "avg": -4.6,
-          "n": 9
-        }
-      },
-      {
         "name": "Kursziel",
-        "spread": 9.5,
+        "spread": 9.6,
         "best": {
           "k": "40%+",
-          "avg": 6.1,
-          "n": 143
+          "avg": 6.2,
+          "n": 142
         },
         "worst": {
           "k": "<10%",
@@ -8110,7 +8102,7 @@
       },
       {
         "name": "Analysten",
-        "spread": 8,
+        "spread": 7.9,
         "best": {
           "k": "5-14",
           "avg": 5.4,
@@ -8118,22 +8110,36 @@
         },
         "worst": {
           "k": "1-4",
-          "avg": -2.6,
-          "n": 87
+          "avg": -2.5,
+          "n": 89
+        }
+      },
+      {
+        "name": "Strong Buy",
+        "spread": 6.2,
+        "best": {
+          "k": "<70%",
+          "avg": 3.1,
+          "n": 8
+        },
+        "worst": {
+          "k": "95%+",
+          "avg": -3.1,
+          "n": 10
         }
       },
       {
         "name": "Dividende",
-        "spread": 6.2,
+        "spread": 5.9,
         "best": {
           "k": "keine",
-          "avg": 5.3,
-          "n": 166
+          "avg": 5.2,
+          "n": 167
         },
         "worst": {
           "k": "2-4%",
-          "avg": -0.9,
-          "n": 54
+          "avg": -0.7,
+          "n": 55
         }
       },
       {
@@ -8152,20 +8158,20 @@
       }
     ],
     "combo": {
-      "f1": "Strong Buy <70%",
-      "f2": "Kursziel 40%+",
-      "avg": 8.4,
-      "n": 3
+      "f1": "Kursziel 40%+",
+      "f2": "Analysten 5-14",
+      "avg": 10.5,
+      "n": 70
     },
-    "sampleSize": 351,
+    "sampleSize": 353,
     "maxMonths": 1,
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "\"Strong Buy <70%\" und \"Kursziel 40%+\" lieferten mit 8,4% die beste Performance. Das KGV hatte mit maximal 4,3% kaum Einfluss.",
-    "date": "2026-07-28",
+    "text": "\"Kursziel 40%+\" und \"Analysten 5-14\" brachten im Schnitt 10,5% (n=70). Das KGV zeigte kaum Einfluss (Spread 4).",
+    "date": "2026-07-29",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-28"
+  "kiDay": "2026-07-29"
 }
