@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-30",
-  "updatedAt": "2026-07-30T15:00:47.960Z",
+  "updatedAt": "2026-07-30T16:00:51.138Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 2.38,
-      "avg30": -1.15,
-      "perf6m": -5.87
+      "perf": 2.76,
+      "avg30": -1.14,
+      "perf6m": -5.51
     },
     {
       "id": "ai_semi",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -4.7,
+      "perf": -4.29,
       "avg30": 0.23,
-      "perf6m": -8.76
+      "perf6m": -8.36
     },
     {
       "id": "cons_def",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": 8.89,
+      "perf": 8.87,
       "avg30": 2.7,
-      "perf6m": 17.47
+      "perf6m": 17.45
     },
     {
       "id": "materials",
@@ -227,9 +227,9 @@
   "bars30Region": [
     {
       "id": "usa",
-      "perf": -0.76,
+      "perf": -0.53,
       "avg30": 1.48,
-      "perf6m": 5.74
+      "perf6m": 5.99
     },
     {
       "id": "europe",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 0.01,
+      "perf": 0.25,
       "avg30": 1.45,
-      "perf6m": 5.49
+      "perf6m": 5.74
     }
   ],
   "topStocks": [
@@ -2106,5 +2106,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-07-30T15:00:47.960Z"
+  "yahooAt": "2026-07-30T16:00:51.138Z"
 }
