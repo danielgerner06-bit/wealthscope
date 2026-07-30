@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-30",
-  "updatedAt": "2026-07-30T20:00:48.746Z",
+  "updatedAt": "2026-07-30T20:41:36.582Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -177,15 +177,15 @@
     },
     {
       "id": "finance",
-      "perf": 6.34,
+      "perf": 6.32,
       "avg30": 0.66,
-      "perf6m": 7.57
+      "perf6m": 7.55
     },
     {
       "id": "cons_cycl",
-      "perf": -4.01,
+      "perf": -4.04,
       "avg30": 0.22,
-      "perf6m": -8.09
+      "perf6m": -8.12
     },
     {
       "id": "cons_def",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": -2.42,
+      "perf": -2.39,
       "avg30": 1.72,
-      "perf6m": 8.49
+      "perf6m": 8.52
     },
     {
       "id": "energy",
@@ -318,7 +318,7 @@
       "eps": 4.23,
       "div": 0,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0015,
+      "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": 7.66,
       "div": 4.33,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0094,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-28",
       "miss": 0
@@ -387,7 +387,7 @@
       "eps": -0.63,
       "div": 0,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0015,
+      "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 0.75,
       "div": 0,
       "enrichAt": "2026-07-27",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-07-27",
       "miss": 0
@@ -453,7 +453,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-26",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -486,9 +486,41 @@
       "eps": 5.25,
       "div": 2.84,
       "enrichAt": "2026-07-28",
-      "sektorPsi": 0.0029,
+      "sektorPsi": 0.0032,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-07-28",
+      "miss": 0
+    },
+    {
+      "ticker": "034730",
+      "name": "SK Inc.",
+      "yahoo": "034730.KS",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 6,
+        "outperform": 5,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 11,
+      "strongBuyPct": 50,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-30",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-10",
+      "perf6m": 50.93,
+      "perf6mAt": "2026-07-30",
+      "perf1mBefore": 6,
+      "upside": 84,
+      "pe": null,
+      "div": 1.64,
+      "enrichAt": "2026-07-30",
+      "sektorPsi": 0.0109,
+      "sektorPsiAtAdd": 0.0102,
+      "recheckAt": "2026-07-30",
       "miss": 0
     },
     {
@@ -519,7 +551,7 @@
       "eps": 0.15,
       "div": 8.85,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0049,
+      "sektorPsi": 0.005,
       "sektorPsiAtAdd": 0.0076,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -551,7 +583,7 @@
       "pe": null,
       "div": 0.18,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.002,
+      "sektorPsi": 0.0021,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -617,7 +649,7 @@
       "eps": 1.64,
       "div": 3.08,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0016,
+      "sektorPsi": 0.0017,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -650,7 +682,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0094,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -683,7 +715,7 @@
       "eps": 0.48,
       "div": 0,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0015,
+      "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0019,
       "recheckAt": "2026-07-26",
       "miss": 0
@@ -749,40 +781,8 @@
       "eps": 203.1,
       "div": 0.94,
       "enrichAt": "2026-07-27",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0106,
-      "recheckAt": "2026-07-30",
-      "miss": 0
-    },
-    {
-      "ticker": "034730",
-      "name": "SK Inc.",
-      "yahoo": "034730.KS",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 6,
-        "outperform": 5,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 11,
-      "strongBuyPct": 50,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-30",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-10",
-      "perf6m": 50.93,
-      "perf6mAt": "2026-07-30",
-      "perf1mBefore": 6,
-      "upside": 84,
-      "pe": null,
-      "div": 1.64,
-      "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0094,
-      "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-30",
       "miss": 0
     },
@@ -814,7 +814,7 @@
       "eps": 203.14,
       "div": 0.9,
       "enrichAt": "2026-07-28",
-      "sektorPsi": 0.0047,
+      "sektorPsi": 0.0051,
       "sektorPsiAtAdd": 0.01,
       "recheckAt": "2026-07-24",
       "miss": 0
@@ -847,7 +847,7 @@
       "eps": 2.23,
       "div": 1.63,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0047,
+      "sektorPsi": 0.0051,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -880,7 +880,7 @@
       "eps": 0.72,
       "div": 2.68,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0094,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-28",
       "miss": 0
@@ -946,42 +946,9 @@
       "eps": 0.72,
       "div": 2.66,
       "enrichAt": "2026-07-26",
-      "sektorPsi": 0.0094,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-30",
-      "miss": 0
-    },
-    {
-      "ticker": "8464",
-      "name": "Nien Made Enterprise Co., Ltd.",
-      "yahoo": "8464.TW",
-      "sector": "cons_cycl",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 6,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 10,
-      "strongBuyPct": 40,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-28",
-      "verifiedSource": "yahoo",
-      "seen": "2026-07-20",
-      "perf6m": -9.45,
-      "perf6mAt": "2026-07-30",
-      "perf1mBefore": 3.68,
-      "upside": 26,
-      "pe": 17.4,
-      "eps": 22.05,
-      "div": 4.23,
-      "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0034,
-      "sektorPsiAtAdd": 0.004,
-      "recheckAt": "2026-07-28",
       "miss": 0
     },
     {
@@ -1012,7 +979,7 @@
       "eps": 2.27,
       "div": 5.09,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0015,
+      "sektorPsi": 0.0016,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -1044,9 +1011,75 @@
       "pe": null,
       "div": 3.59,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0094,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-07-29",
+      "miss": 0
+    },
+    {
+      "ticker": "GFT",
+      "name": "GFT Technologies SE",
+      "yahoo": "GFT.DE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 5,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 6,
+      "strongBuyPct": 83,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-30",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": -0.72,
+      "perf6mAt": "2026-07-29",
+      "perf1mBefore": 4.35,
+      "upside": 27,
+      "pe": 17.4,
+      "eps": 1.34,
+      "div": 2.21,
+      "enrichAt": "2026-07-29",
+      "sektorPsi": 0.0037,
+      "sektorPsiAtAdd": 0.0038,
+      "recheckAt": "2026-07-30",
+      "miss": 0
+    },
+    {
+      "ticker": "8464",
+      "name": "Nien Made Enterprise Co., Ltd.",
+      "yahoo": "8464.TW",
+      "sector": "cons_cycl",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 6,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 10,
+      "strongBuyPct": 40,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-28",
+      "verifiedSource": "yahoo",
+      "seen": "2026-07-20",
+      "perf6m": -9.45,
+      "perf6mAt": "2026-07-30",
+      "perf1mBefore": 3.68,
+      "upside": 26,
+      "pe": 17.4,
+      "eps": 22.05,
+      "div": 4.23,
+      "enrichAt": "2026-07-30",
+      "sektorPsi": 0.0038,
+      "sektorPsiAtAdd": 0.004,
+      "recheckAt": "2026-07-28",
       "miss": 0
     },
     {
@@ -1080,42 +1113,9 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0094,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-07-25",
-      "miss": 0
-    },
-    {
-      "ticker": "GFT",
-      "name": "GFT Technologies SE",
-      "yahoo": "GFT.DE",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 5,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 6,
-      "strongBuyPct": 83,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-30",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-14",
-      "perf6m": -0.72,
-      "perf6mAt": "2026-07-29",
-      "perf1mBefore": 4.35,
-      "upside": 27,
-      "pe": 17.4,
-      "eps": 1.34,
-      "div": 2.21,
-      "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0034,
-      "sektorPsiAtAdd": 0.0038,
-      "recheckAt": "2026-07-30",
       "miss": 0
     },
     {
@@ -1146,7 +1146,7 @@
       "eps": 1.88,
       "div": 0.83,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0094,
+      "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -1179,7 +1179,7 @@
       "eps": 3.04,
       "div": 2.74,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -1212,7 +1212,7 @@
       "eps": 13.51,
       "div": 0.25,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -1244,7 +1244,7 @@
       "eps": 5.01,
       "div": 5.33,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -1276,7 +1276,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-28",
       "miss": 0
@@ -1308,7 +1308,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-29",
       "miss": 0
@@ -1340,7 +1340,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-26",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-07-29",
       "miss": 0
@@ -1622,43 +1622,38 @@
   "news": {
     "items": [
       {
-        "text": "US-Notenbank lässt Zinssatz erneut unverändert – Entscheidung nicht einstimmig.",
+        "text": "Adidas-Aktie bricht zweistellig ein nach Zahlen und Prognoseanhebung.",
         "stamp": "30.07.26"
       },
       {
-        "text": "Kampfjets, Batterien und Stahl: Investoren entdecken Niob wegen Geopolitik.",
+        "text": "Geopolitik und Ölpreise treiben deutsche Rentenmärkte auf Achterbahnfahrt.",
         "stamp": "30.07.26"
       },
       {
-        "text": "Rheinmetall liefert starke Zahlen – Umsatz und Gewinn steigen massiv.",
+        "text": "US-Wirtschaftswachstum verlangsamt sich unerwartet im zweiten Quartal.",
         "stamp": "30.07.26"
       },
       {
-        "text": "US-Notenbank belässt Leitzinsen zum fünften Mal unverändert.",
-        "stamp": "29.07.26"
+        "text": "Fed lässt Zinsen unverändert; Warsh überrascht Märkte.",
+        "stamp": "30.07.26"
       },
       {
-        "text": "Fed-Zinspause hält an: Anleger blicken auf September-Entscheidung.",
-        "stamp": "29.07.26"
+        "text": "Microsoft überzeugt mit Cloud-Zahlen, Meta unter Druck wegen KI-Investitionen.",
+        "stamp": "30.07.26"
       },
       {
-        "text": "Deutsche Bank überrascht mit Milliardengewinn im zweiten Quartal.",
-        "stamp": "29.07.26"
+        "text": "Nahost-Konflikt belastet Börse; USA greifen iranische Ziele an.",
+        "stamp": "30.07.26"
       }
     ],
     "date": "2026-07-30"
   },
   "scan": {
-    "universe": 8839,
-    "scanned": 8839,
-    "lastCursor": 5355,
-    "candCursor": 212,
+    "universe": 8841,
+    "scanned": 8841,
+    "lastCursor": 5655,
+    "candCursor": 220,
     "candidates": [
-      "The Chef's Warehouse",
-      "VSE Corp",
-      "Nuvation Bio Inc.",
-      "Perspective Therapeutics, Inc.",
-      "Connect Biopharma Holdings Limited",
       "89bio, Inc.",
       "Tactile Systems Technology, Inc.",
       "Lantern Pharma Inc.",
@@ -2053,48 +2048,54 @@
       "Unusual Machines",
       "Viant Technology",
       "Adeia",
-      "Adtran"
+      "Adtran",
+      "Camtek Ltd.",
+      "Via Transportation, Inc. Class A",
+      "Allot Ltd.",
+      "Aehr Test Systems",
+      "Ichor Holdings, Ltd."
     ],
     "noteCursor": 9,
-    "focusCursor": 4,
+    "focusCursor": 5,
     "recheckCursor": 16,
     "regionNoteCursor": 9,
     "notesDay": "2026-07-30",
     "seenBySector": {
-      "cons_cycl": 1438,
-      "cons_def": 747,
-      "materials": 1012,
-      "health": 4156,
-      "finance": 2824,
-      "energy": 1293,
-      "hardware": 940,
-      "software": 2775,
-      "industrial": 1211,
-      "utilities": 512,
-      "comm": 617,
-      "ai_semi": 556,
-      "realestate": 260
-    },
-    "pendingReject": [
-      "NCMI",
-      "NCNO"
-    ],
-    "evaluatedBySector": {
-      "cons_cycl": 1441,
-      "cons_def": 748,
-      "materials": 1012,
-      "health": 4157,
-      "finance": 2828,
-      "energy": 1295,
-      "hardware": 942,
-      "software": 2783,
-      "industrial": 1219,
-      "utilities": 513,
+      "cons_cycl": 1440,
+      "cons_def": 750,
+      "materials": 1019,
+      "health": 4179,
+      "finance": 2837,
+      "energy": 1308,
+      "hardware": 944,
+      "software": 2789,
+      "industrial": 1216,
+      "utilities": 517,
       "comm": 618,
-      "ai_semi": 556,
+      "ai_semi": 560,
       "realestate": 261
     },
-    "heavyAt": "2026-07-30T04:20:23.512Z",
+    "pendingReject": [
+      "NX",
+      "NXDR",
+      "NXE"
+    ],
+    "evaluatedBySector": {
+      "cons_cycl": 1443,
+      "cons_def": 751,
+      "materials": 1019,
+      "health": 4180,
+      "finance": 2841,
+      "energy": 1310,
+      "hardware": 946,
+      "software": 2797,
+      "industrial": 1224,
+      "utilities": 518,
+      "comm": 619,
+      "ai_semi": 560,
+      "realestate": 262
+    },
+    "heavyAt": "2026-07-30T20:34:20.810Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2105,6 +2106,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-07-30T20:00:48.746Z"
+  }
 }
