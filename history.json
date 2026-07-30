@@ -161,13 +161,13 @@
       "region": "apac",
       "buyPct": 100,
       "strongBuyPct": 40,
-      "upside": 31,
-      "pe": 16.8,
+      "upside": 26,
+      "pe": 17.4,
       "perf6mAtAdd": -9.45,
       "perf1mBefore": 3.68,
       "sektorPsiAtAdd": 0.004,
       "analysts": 10,
-      "div": 4.32,
+      "div": 4.23,
       "seen": "2026-07-20",
       "seenMs": 1784505600000,
       "startPrice": 358.75,
@@ -183,12 +183,12 @@
       "buyPct": 100,
       "strongBuyPct": 50,
       "upside": 99,
-      "pe": 17.1,
+      "pe": 13.4,
       "perf6mAtAdd": -22.79,
       "perf1mBefore": -1.08,
       "sektorPsiAtAdd": 0.0102,
       "analysts": 2,
-      "div": 4.07,
+      "div": 4.33,
       "seen": "2026-07-20",
       "seenMs": 1784505600000,
       "startPrice": 114.75,
@@ -209,7 +209,7 @@
       "perf1mBefore": 5.99,
       "sektorPsiAtAdd": 0.0039,
       "analysts": 10,
-      "div": 0.14,
+      "div": 0.18,
       "seen": "2026-06-10",
       "seenMs": 1781049600000,
       "startPrice": 1193500,
@@ -6849,12 +6849,12 @@
       "region": "europe",
       "buyPct": 100,
       "outperformPct": null,
-      "upside": 19,
-      "pe": 12.7,
+      "upside": 21,
+      "pe": 12.4,
       "perf6mAtAdd": 19.32,
       "perf1mBefore": 1.19,
       "analysts": 7,
-      "div": 2.76,
+      "div": 2.74,
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 38.60000038146973,
@@ -6983,8 +6983,8 @@
       "region": "europe",
       "buyPct": 100,
       "outperformPct": null,
-      "upside": 29,
-      "pe": 10.9,
+      "upside": 25,
+      "pe": 11.3,
       "perf6mAtAdd": 1.11,
       "perf1mBefore": 3.94,
       "analysts": 7,
@@ -7338,11 +7338,11 @@
       "buyPct": 100,
       "outperformPct": null,
       "upside": null,
-      "pe": 14.7,
+      "pe": 15.3,
       "perf6mAtAdd": -16.61,
       "perf1mBefore": 28.32,
       "analysts": 2,
-      "div": 5.52,
+      "div": 5.33,
       "seen": "2026-06-04",
       "seenMs": 1780531200000,
       "startPrice": 86.79999923706055,
@@ -7450,7 +7450,7 @@
       "buyPct": 100,
       "strongBuyPct": 75,
       "upside": 100,
-      "pe": 19.7,
+      "pe": 19.3,
       "perf6mAtAdd": -15.45,
       "perf1mBefore": 2.18,
       "analysts": 4,
@@ -7526,7 +7526,7 @@
       "perf6mAtAdd": 1.98,
       "perf1mBefore": -2.31,
       "analysts": 3,
-      "div": 1.65,
+      "div": 1.63,
       "seen": "2026-06-05",
       "seenMs": 1780617600000,
       "startPrice": 52.75,
@@ -7545,13 +7545,13 @@
       "region": "apac",
       "buyPct": 100,
       "strongBuyPct": 50,
-      "upside": 37,
+      "upside": 84,
       "pe": null,
       "perf6mAtAdd": 50.93,
       "perf1mBefore": 6,
       "sektorPsiAtAdd": 0.0102,
       "analysts": 11,
-      "div": 1.27,
+      "div": 1.64,
       "seen": "2026-06-10",
       "seenMs": 1781049600000,
       "startPrice": 583000,
@@ -7882,7 +7882,7 @@
       "buyPct": 100,
       "strongBuyPct": 100,
       "upside": null,
-      "pe": 18.3,
+      "pe": 18.2,
       "perf6mAtAdd": -26.91,
       "perf1mBefore": -10.44,
       "sektorPsiAtAdd": 0.0256,
@@ -7891,8 +7891,11 @@
       "seen": "2026-06-30",
       "seenMs": 1782777600000,
       "startPrice": 2.2300000190734863,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        -4.52
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "F3C.DE": {
       "ticker": "F3C.DE",
@@ -7944,13 +7947,13 @@
       "region": "india",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 16,
-      "pe": 44.8,
+      "upside": 5,
+      "pe": 47,
       "perf6mAtAdd": 66.44,
       "perf1mBefore": 20.63,
       "sektorPsiAtAdd": 0.0015,
       "analysts": 9,
-      "div": 0.26,
+      "div": 0.25,
       "seen": "2026-07-10",
       "seenMs": 1783641600000,
       "startPrice": 408.5749969482422,
@@ -8092,7 +8095,7 @@
         "best": {
           "k": "40%+",
           "avg": 6.2,
-          "n": 142
+          "n": 143
         },
         "worst": {
           "k": "<10%",
@@ -8111,12 +8114,12 @@
         "worst": {
           "k": "1-4",
           "avg": -2.5,
-          "n": 89
+          "n": 90
         }
       },
       {
         "name": "Strong Buy",
-        "spread": 6.2,
+        "spread": 6.3,
         "best": {
           "k": "<70%",
           "avg": 3.1,
@@ -8124,17 +8127,17 @@
         },
         "worst": {
           "k": "95%+",
-          "avg": -3.1,
-          "n": 10
+          "avg": -3.2,
+          "n": 11
         }
       },
       {
         "name": "Dividende",
-        "spread": 5.9,
+        "spread": 5.8,
         "best": {
           "k": "keine",
-          "avg": 5.2,
-          "n": 167
+          "avg": 5.1,
+          "n": 168
         },
         "worst": {
           "k": "2-4%",
@@ -8144,11 +8147,11 @@
       },
       {
         "name": "KGV",
-        "spread": 4,
+        "spread": 4.2,
         "best": {
           "k": "<15",
-          "avg": 4.3,
-          "n": 64
+          "avg": 4.5,
+          "n": 63
         },
         "worst": {
           "k": "25-40",
@@ -8161,17 +8164,17 @@
       "f1": "Kursziel 40%+",
       "f2": "Analysten 5-14",
       "avg": 10.5,
-      "n": 70
+      "n": 71
     },
-    "sampleSize": 353,
+    "sampleSize": 354,
     "maxMonths": 1,
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "\"Kursziel 40%+\" und \"Analysten 5-14\" brachten im Schnitt 10,5% (n=70). Das KGV zeigte kaum Einfluss (Spread 4).",
-    "date": "2026-07-29",
+    "text": "Die Kombination aus Kursziel 40%+ und 5-14 Analysten erzielte 10,5% Performance. Dividende hatte mit 5,8% Spread kaum Einfluss.",
+    "date": "2026-07-30",
     "stage": "real",
     "months": 1
   },
-  "kiDay": "2026-07-29"
+  "kiDay": "2026-07-30"
 }
