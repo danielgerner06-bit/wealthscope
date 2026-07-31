@@ -7713,13 +7713,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 33,
-      "pe": 78.3,
+      "upside": 29,
+      "pe": 80.6,
       "perf6mAtAdd": -11.11,
       "perf1mBefore": 0.54,
       "sektorPsiAtAdd": 0.025,
       "analysts": 4,
-      "div": 2.66,
+      "div": 2.62,
       "seen": "2026-06-16",
       "seenMs": 1781568000000,
       "startPrice": 55.900001525878906,
@@ -7738,7 +7738,7 @@
       "buyPct": 100,
       "strongBuyPct": 100,
       "upside": 89,
-      "pe": 18.3,
+      "pe": 18.5,
       "perf6mAtAdd": -27.27,
       "perf1mBefore": -8.65,
       "sektorPsiAtAdd": 0.007,
@@ -7785,13 +7785,13 @@
       "region": "china",
       "buyPct": 100,
       "strongBuyPct": 17,
-      "upside": 60,
-      "pe": 22.6,
+      "upside": 47,
+      "pe": 24.6,
       "perf6mAtAdd": -17.68,
       "perf1mBefore": -7.78,
       "sektorPsiAtAdd": 0.0009,
       "analysts": 23,
-      "div": 4.23,
+      "div": 3.83,
       "seen": "2026-06-21",
       "seenMs": 1782000000000,
       "startPrice": 141.68000030517578,
@@ -8133,7 +8133,7 @@
       },
       {
         "name": "Dividende",
-        "spread": 5.8,
+        "spread": 5.6,
         "best": {
           "k": "keine",
           "avg": 5.1,
@@ -8141,8 +8141,8 @@
         },
         "worst": {
           "k": "2-4%",
-          "avg": -0.7,
-          "n": 55
+          "avg": -0.5,
+          "n": 56
         }
       },
       {
