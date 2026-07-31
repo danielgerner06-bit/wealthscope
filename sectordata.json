@@ -589,39 +589,6 @@
       "miss": 0
     },
     {
-      "ticker": "300760.SZ",
-      "name": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
-      "yahoo": null,
-      "sector": "health",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 19,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 23,
-      "strongBuyPct": 17,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-30",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-21",
-      "perf6m": -17.68,
-      "perf6mAt": "2026-07-31",
-      "perf1mBefore": -7.78,
-      "upside": 47,
-      "pe": 24.6,
-      "eps": 6.46,
-      "div": 3.83,
-      "enrichAt": "2026-07-31",
-      "sektorPsi": 0.0003,
-      "sektorPsiAtAdd": 0.0009,
-      "recheckAt": "2026-07-30",
-      "miss": 0
-    },
-    {
       "ticker": "ORS",
       "name": "Orsero S.p.A.",
       "yahoo": "ORS.MI",
@@ -684,6 +651,39 @@
       "enrichAt": "2026-07-29",
       "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0229,
+      "recheckAt": "2026-07-30",
+      "miss": 0
+    },
+    {
+      "ticker": "300760.SZ",
+      "name": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
+      "yahoo": null,
+      "sector": "health",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 19,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 23,
+      "strongBuyPct": 17,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-30",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-21",
+      "perf6m": -17.68,
+      "perf6mAt": "2026-07-31",
+      "perf1mBefore": -7.78,
+      "upside": 47,
+      "pe": 24.6,
+      "eps": 6.46,
+      "div": 3.83,
+      "enrichAt": "2026-07-31",
+      "sektorPsi": 0.0003,
+      "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-07-30",
       "miss": 0
     },
@@ -803,7 +803,7 @@
       "strongBuyPct": 33,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-07-24",
+      "verifiedAt": "2026-07-31",
       "verifiedSource": "yahoo",
       "seen": "2026-07-23",
       "perf6m": -23.26,
@@ -814,9 +814,9 @@
       "eps": 203.14,
       "div": 0.9,
       "enrichAt": "2026-07-28",
-      "sektorPsi": 0.0051,
+      "sektorPsi": 0.005,
       "sektorPsiAtAdd": 0.01,
-      "recheckAt": "2026-07-24",
+      "recheckAt": "2026-07-31",
       "miss": 0
     },
     {
@@ -847,7 +847,7 @@
       "eps": 2.23,
       "div": 1.63,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0051,
+      "sektorPsi": 0.005,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-07-25",
       "miss": 0
@@ -902,7 +902,7 @@
       "strongBuyPct": 80,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-24",
+      "verifiedAt": "2026-07-31",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-02",
       "perf6m": 37,
@@ -915,40 +915,7 @@
       "enrichAt": "2026-07-27",
       "sektorPsi": 0.0015,
       "sektorPsiAtAdd": 0.0045,
-      "recheckAt": "2026-07-24",
-      "miss": 0
-    },
-    {
-      "ticker": "JST.DE",
-      "name": "Jost Werke AG",
-      "yahoo": "JST.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-30",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": -11.11,
-      "perf6mAt": "2026-07-31",
-      "perf1mBefore": 0.54,
-      "upside": 29,
-      "pe": 80.6,
-      "eps": 0.72,
-      "div": 2.62,
-      "enrichAt": "2026-07-31",
-      "sektorPsi": 0.0109,
-      "sektorPsiAtAdd": 0.025,
-      "recheckAt": "2026-07-30",
+      "recheckAt": "2026-07-31",
       "miss": 0
     },
     {
@@ -1014,6 +981,39 @@
       "sektorPsi": 0.0109,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-07-29",
+      "miss": 0
+    },
+    {
+      "ticker": "JST.DE",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-30",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": -11.11,
+      "perf6mAt": "2026-07-31",
+      "perf1mBefore": 0.54,
+      "upside": 29,
+      "pe": 80.6,
+      "eps": 0.72,
+      "div": 2.62,
+      "enrichAt": "2026-07-31",
+      "sektorPsi": 0.0109,
+      "sektorPsiAtAdd": 0.025,
+      "recheckAt": "2026-07-30",
       "miss": 0
     },
     {
@@ -1561,8 +1561,8 @@
       "date": "2026-07-30"
     },
     "energy": {
-      "text": "Der Energiesektor legt zu, getragen von der robusten Nachfrage und geopolitischen Spannungen. F3C.DE sticht hervor, was auf spezifische positive Entwicklungen hindeutet.",
-      "date": "2026-07-18"
+      "text": "Der Energiesektor steigt stark an, übertrifft das Normalniveau deutlich. Geopolitik und anhaltend hohe Nachfrage treiben die Kurse.",
+      "date": "2026-07-31"
     },
     "materials": {
       "text": "Der Rohstoffsektor leidet aktuell unter Konjunktursorgen und Zinserhöhungen. Langfristig zeigen sich aber Erholungstendenzen.",
@@ -1615,44 +1615,44 @@
       "date": "2026-07-30"
     },
     "world": {
-      "text": "Die Weltwirtschaft verzeichnete im letzten Monat einen leichten Rückgang (-0.59%), was auf eine Verlangsamung der Konjunktur hindeutet. Langfristig zeigt sich jedoch mit +6.68% über sechs Monate weiterhin eine positive Entwicklung.",
-      "date": "2026-07-21"
+      "text": "Weltweit stagnieren die Märkte bei +0.28% in 30 Tagen, weit unter dem Normalniveau von +1.45%. Dies deutet auf eine breite Konjunkturschwäche hin, die die Erwartungen dämpft.",
+      "date": "2026-07-31"
     }
   },
   "news": {
     "items": [
       {
-        "text": "Adidas-Aktie bricht zweistellig ein nach Zahlen und Prognoseanhebung.",
+        "text": "Apple-Aktie bricht ein – Lieferengpässe überschatten Rekord bei iPhone-Verkäufen.",
+        "stamp": "31.07.26"
+      },
+      {
+        "text": "Deutsche Bank überrascht mit Milliardengewinn im zweiten Quartal.",
+        "stamp": "31.07.26"
+      },
+      {
+        "text": "BMW-Gewinn bricht wegen China-Krise um mehr als ein Drittel ein.",
+        "stamp": "31.07.26"
+      },
+      {
+        "text": "Deutsche Wirtschaft wächst trotz Irankrieg minimal.",
         "stamp": "30.07.26"
       },
       {
-        "text": "Geopolitik und Ölpreise treiben deutsche Rentenmärkte auf Achterbahnfahrt.",
+        "text": "US-Zinsentscheid: Fed lässt Leitzins unverändert.",
         "stamp": "30.07.26"
       },
       {
-        "text": "US-Wirtschaftswachstum verlangsamt sich unerwartet im zweiten Quartal.",
-        "stamp": "30.07.26"
-      },
-      {
-        "text": "Fed lässt Zinsen unverändert; Warsh überrascht Märkte.",
-        "stamp": "30.07.26"
-      },
-      {
-        "text": "Microsoft überzeugt mit Cloud-Zahlen, Meta unter Druck wegen KI-Investitionen.",
-        "stamp": "30.07.26"
-      },
-      {
-        "text": "Nahost-Konflikt belastet Börse; USA greifen iranische Ziele an.",
+        "text": "Europäische Aktienmärkte schließen mit Aufschlägen, Technologie-Werte legen zu.",
         "stamp": "30.07.26"
       }
     ],
-    "date": "2026-07-30"
+    "date": "2026-07-31"
   },
   "scan": {
     "universe": 8841,
     "scanned": 8841,
-    "lastCursor": 5655,
-    "candCursor": 220,
+    "lastCursor": 5955,
+    "candCursor": 228,
     "candidates": [
       "89bio, Inc.",
       "Tactile Systems Technology, Inc.",
@@ -2055,43 +2055,60 @@
       "Aehr Test Systems",
       "Ichor Holdings, Ltd."
     ],
-    "noteCursor": 9,
-    "focusCursor": 5,
+    "noteCursor": 10,
+    "focusCursor": 6,
     "recheckCursor": 16,
-    "regionNoteCursor": 9,
-    "notesDay": "2026-07-30",
+    "regionNoteCursor": 0,
+    "notesDay": "2026-07-31",
     "seenBySector": {
-      "cons_cycl": 1440,
-      "cons_def": 750,
-      "materials": 1019,
-      "health": 4179,
-      "finance": 2837,
-      "energy": 1308,
-      "hardware": 944,
-      "software": 2790,
-      "industrial": 1216,
-      "utilities": 517,
-      "comm": 618,
-      "ai_semi": 560,
-      "realestate": 261
+      "cons_cycl": 1446,
+      "cons_def": 752,
+      "materials": 1023,
+      "health": 4208,
+      "finance": 2851,
+      "energy": 1317,
+      "hardware": 949,
+      "software": 2807,
+      "industrial": 1220,
+      "utilities": 521,
+      "comm": 620,
+      "ai_semi": 563,
+      "realestate": 265
     },
-    "pendingReject": [],
+    "pendingReject": [
+      "PAMT",
+      "PANL",
+      "PANW",
+      "PAPL",
+      "PAR",
+      "PARK",
+      "PARR",
+      "PASG",
+      "PATH",
+      "PATK",
+      "PAVM",
+      "PAVS",
+      "PAX",
+      "PAY",
+      "PAYC",
+      "PAYO"
+    ],
     "evaluatedBySector": {
-      "cons_cycl": 1443,
-      "cons_def": 751,
-      "materials": 1019,
-      "health": 4180,
-      "finance": 2841,
-      "energy": 1310,
-      "hardware": 946,
-      "software": 2798,
-      "industrial": 1224,
-      "utilities": 518,
-      "comm": 619,
-      "ai_semi": 560,
-      "realestate": 262
+      "cons_cycl": 1449,
+      "cons_def": 753,
+      "materials": 1023,
+      "health": 4209,
+      "finance": 2855,
+      "energy": 1319,
+      "hardware": 951,
+      "software": 2815,
+      "industrial": 1228,
+      "utilities": 522,
+      "comm": 621,
+      "ai_semi": 563,
+      "realestate": 266
     },
-    "heavyAt": "2026-07-30T20:34:20.810Z",
+    "heavyAt": "2026-07-31T09:59:03.450Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
