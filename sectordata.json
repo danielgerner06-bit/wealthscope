@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-01",
-  "updatedAt": "2026-08-01T20:00:48.643Z",
+  "updatedAt": "2026-08-01T20:21:44.688Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -583,7 +583,7 @@
       "pe": null,
       "div": 0.18,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0026,
+      "sektorPsi": 0.0025,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -751,39 +751,6 @@
       "sektorPsi": 0.0015,
       "sektorPsiAtAdd": 0.0016,
       "recheckAt": "2026-08-01",
-      "miss": 0
-    },
-    {
-      "ticker": "6701.T",
-      "name": "NEC Corporation",
-      "yahoo": "6701.T",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 8,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 12,
-      "strongBuyPct": 33,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-30",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-17",
-      "perf6m": -9.23,
-      "perf6mAt": "2026-08-01",
-      "perf1mBefore": -7.48,
-      "upside": 26,
-      "pe": 23.4,
-      "eps": 202.87,
-      "div": 0.84,
-      "enrichAt": "2026-08-01",
-      "sektorPsi": 0.0039,
-      "sektorPsiAtAdd": 0.0106,
-      "recheckAt": "2026-07-30",
       "miss": 0
     },
     {
@@ -1077,9 +1044,42 @@
       "eps": 22.05,
       "div": 4.23,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0043,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-07-28",
+      "miss": 0
+    },
+    {
+      "ticker": "6701.T",
+      "name": "NEC Corporation",
+      "yahoo": "6701.T",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 8,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 12,
+      "strongBuyPct": 33,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-30",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-17",
+      "perf6m": -9.23,
+      "perf6mAt": "2026-08-01",
+      "perf1mBefore": -7.48,
+      "upside": 26,
+      "pe": 23.4,
+      "eps": 202.87,
+      "div": 0.84,
+      "enrichAt": "2026-08-01",
+      "sektorPsi": 0.0039,
+      "sektorPsiAtAdd": 0.0106,
+      "recheckAt": "2026-07-30",
       "miss": 0
     },
     {
@@ -1179,7 +1179,7 @@
       "eps": 3.04,
       "div": 2.74,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0043,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -1212,7 +1212,7 @@
       "eps": 13.51,
       "div": 0.25,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0043,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-08-01",
       "miss": 0
@@ -1344,6 +1344,37 @@
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-07-29",
       "miss": 0
+    },
+    {
+      "ticker": "KALYANKJIL",
+      "name": "Kalyan Jewellers India Ltd.",
+      "yahoo": "KALYANKJIL.NS",
+      "sector": "cons_cycl",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 9,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 9,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-01",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-01",
+      "perf6m": 63.72,
+      "perf6mAt": "2026-08-01",
+      "perf1mBefore": 63.22,
+      "upside": 9,
+      "pe": 46.9,
+      "eps": 13.05,
+      "div": 0.24,
+      "enrichAt": "2026-08-01",
+      "sektorPsi": 0.0058,
+      "sektorPsiAtAdd": 0.0058
     }
   ],
   "psiHistory": [
@@ -1416,6 +1447,11 @@
       "t": "ADMCM.HE",
       "d": "2026-06-15",
       "v": 0.0057
+    },
+    {
+      "t": "KALYANKJIL",
+      "d": "2026-08-01",
+      "v": 0.0058
     },
     {
       "t": "EXL.DE",
@@ -1622,39 +1658,18 @@
   "news": {
     "items": [
       {
-        "text": "US-Medien: Trump erwägt Angriffe auf iranische Ziele.",
-        "stamp": "01.08.26"
-      },
-      {
-        "text": "Deutschland: Mehr als drei Millionen Menschen arbeitslos im Juli.",
-        "stamp": "31.07.26"
-      },
-      {
-        "text": "Amazon meldet starke Quartalszahlen dank KI-Nachfrage.",
-        "stamp": "31.07.26"
-      },
-      {
-        "text": "Apple verkündet Rekordzahlen, Aktienkurs bricht ein.",
-        "stamp": "31.07.26"
-      },
-      {
-        "text": "Deutsche Bahn schreibt erstmals seit 2019 schwarze Zahlen.",
-        "stamp": "31.07.26"
-      },
-      {
-        "text": "BMW-Gewinn bricht um mehr als ein Drittel ein.",
-        "stamp": "31.07.26"
+        "text": "Geopolitik vs. Öl: Bund-Renditen auf der Achterbahn.",
+        "stamp": "30.07.26"
       }
     ],
     "date": "2026-08-01"
   },
   "scan": {
-    "universe": 8845,
-    "scanned": 8845,
-    "lastCursor": 6255,
-    "candCursor": 236,
+    "universe": 8846,
+    "scanned": 8846,
+    "lastCursor": 6555,
+    "candCursor": 244,
     "candidates": [
-      "NextNav Inc.",
       "Powell Industries, Inc.",
       "Kalray SA",
       "Riber SA",
@@ -2053,45 +2068,46 @@
       "Myers Industries, Inc.",
       "Tronox Holdings plc",
       "Atkore Inc.",
-      "Titan International, Inc."
+      "Titan International, Inc.",
+      "RWE AG"
     ],
     "noteCursor": 11,
-    "focusCursor": 7,
+    "focusCursor": 0,
     "recheckCursor": 16,
     "regionNoteCursor": 1,
     "notesDay": "2026-08-01",
     "seenBySector": {
-      "cons_cycl": 1452,
-      "cons_def": 758,
-      "materials": 1025,
-      "health": 4229,
-      "finance": 2869,
-      "energy": 1323,
-      "hardware": 951,
-      "software": 2832,
-      "industrial": 1230,
+      "cons_cycl": 1458,
+      "cons_def": 760,
+      "materials": 1028,
+      "health": 4254,
+      "finance": 2878,
+      "energy": 1329,
+      "hardware": 957,
+      "software": 2846,
+      "industrial": 1233,
       "utilities": 528,
-      "comm": 621,
-      "ai_semi": 567,
+      "comm": 622,
+      "ai_semi": 575,
       "realestate": 265
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1455,
-      "cons_def": 759,
-      "materials": 1025,
-      "health": 4230,
-      "finance": 2873,
-      "energy": 1325,
-      "hardware": 953,
-      "software": 2840,
-      "industrial": 1238,
+      "cons_cycl": 1462,
+      "cons_def": 761,
+      "materials": 1028,
+      "health": 4255,
+      "finance": 2882,
+      "energy": 1331,
+      "hardware": 959,
+      "software": 2854,
+      "industrial": 1241,
       "utilities": 529,
-      "comm": 622,
-      "ai_semi": 567,
+      "comm": 623,
+      "ai_semi": 575,
       "realestate": 266
     },
-    "heavyAt": "2026-08-01T04:34:58.816Z",
+    "heavyAt": "2026-08-01T20:14:51.625Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2102,6 +2118,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-01T20:00:48.643Z"
+  }
 }
