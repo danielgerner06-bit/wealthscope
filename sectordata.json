@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-01",
-  "updatedAt": "2026-08-02T09:00:48.643Z",
+  "updated": "2026-08-02",
+  "updatedAt": "2026-08-02T09:28:45.206Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -351,7 +351,7 @@
       "eps": 7.66,
       "div": 4.33,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0123,
+      "sektorPsi": 0.0122,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-28",
       "miss": 0
@@ -481,11 +481,11 @@
       "perf6m": -4.91,
       "perf6mAt": "2026-08-02",
       "perf1mBefore": -4.8,
-      "upside": 88,
-      "pe": 6.1,
-      "eps": 5.25,
-      "div": 2.84,
-      "enrichAt": "2026-07-28",
+      "upside": 92,
+      "pe": 6.8,
+      "eps": 4.58,
+      "div": 2.88,
+      "enrichAt": "2026-08-02",
       "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-07-28",
@@ -518,7 +518,7 @@
       "pe": null,
       "div": 1.64,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0123,
+      "sektorPsi": 0.0122,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -616,7 +616,7 @@
       "eps": 1.64,
       "div": 3.08,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -649,7 +649,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0123,
+      "sektorPsi": 0.0122,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -704,7 +704,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-26",
+      "verifiedAt": "2026-08-02",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-04",
       "perf6m": -12.4,
@@ -717,7 +717,7 @@
       "enrichAt": "2026-07-29",
       "sektorPsi": 0.0017,
       "sektorPsiAtAdd": 0.0019,
-      "recheckAt": "2026-07-26",
+      "recheckAt": "2026-08-02",
       "miss": 0
     },
     {
@@ -776,11 +776,11 @@
       "perf6m": -9.23,
       "perf6mAt": "2026-08-02",
       "perf1mBefore": 16.72,
-      "upside": 36,
-      "pe": 22,
-      "eps": 203.14,
-      "div": 0.9,
-      "enrichAt": "2026-07-28",
+      "upside": 26,
+      "pe": 23.4,
+      "eps": 202.87,
+      "div": 0.84,
+      "enrichAt": "2026-08-02",
       "sektorPsi": 0.0049,
       "sektorPsiAtAdd": 0.01,
       "recheckAt": "2026-07-31",
@@ -847,7 +847,7 @@
       "eps": 0.72,
       "div": 2.68,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0123,
+      "sektorPsi": 0.0122,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-28",
       "miss": 0
@@ -945,7 +945,7 @@
       "pe": null,
       "div": 3.59,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0123,
+      "sektorPsi": 0.0122,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-07-29",
       "miss": 0
@@ -978,7 +978,7 @@
       "eps": 0.72,
       "div": 2.62,
       "enrichAt": "2026-07-31",
-      "sektorPsi": 0.0123,
+      "sektorPsi": 0.0122,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -1044,7 +1044,7 @@
       "eps": 22.05,
       "div": 4.23,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-07-28",
       "miss": 0
@@ -1113,7 +1113,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0123,
+      "sektorPsi": 0.0122,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-08-01",
       "miss": 0
@@ -1146,7 +1146,7 @@
       "eps": 1.88,
       "div": 0.83,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0123,
+      "sektorPsi": 0.0122,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -1179,9 +1179,42 @@
       "eps": 3.04,
       "div": 2.74,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-07-30",
+      "miss": 0
+    },
+    {
+      "ticker": "KALYANKJIL",
+      "name": "Kalyan Jewellers India Ltd.",
+      "yahoo": "KALYANKJIL.NS",
+      "sector": "cons_cycl",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 9,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 9,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-02",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-01",
+      "perf6m": 63.72,
+      "perf6mAt": "2026-08-01",
+      "perf1mBefore": 63.22,
+      "upside": 9,
+      "pe": 46.9,
+      "eps": 13.05,
+      "div": 0.24,
+      "enrichAt": "2026-08-01",
+      "sektorPsi": 0.0057,
+      "sektorPsiAtAdd": 0.0058,
+      "recheckAt": "2026-08-02",
       "miss": 0
     },
     {
@@ -1212,7 +1245,7 @@
       "eps": 13.51,
       "div": 0.25,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-08-01",
       "miss": 0
@@ -1344,37 +1377,6 @@
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-07-29",
       "miss": 0
-    },
-    {
-      "ticker": "KALYANKJIL",
-      "name": "Kalyan Jewellers India Ltd.",
-      "yahoo": "KALYANKJIL.NS",
-      "sector": "cons_cycl",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 9,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 9,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-01",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-01",
-      "perf6m": 63.72,
-      "perf6mAt": "2026-08-01",
-      "perf1mBefore": 63.22,
-      "upside": 9,
-      "pe": 46.9,
-      "eps": 13.05,
-      "div": 0.24,
-      "enrichAt": "2026-08-01",
-      "sektorPsi": 0.0058,
-      "sektorPsiAtAdd": 0.0058
     }
   ],
   "psiHistory": [
@@ -1605,8 +1607,8 @@
       "date": "2026-08-01"
     },
     "utilities": {
-      "text": "Versorger zeigen leicht überdurchschnittliche 30-Tage-Performance, getrieben von stabilen Erträgen inmitten Zinsunsicherheit. NEAG sticht hervor, möglicherweise durch spezifische operative Entwicklungen.",
-      "date": "2026-07-20"
+      "text": "Versorger leiden unter Zinsanstieg, der höhere Finanzierungskosten und Konkurrenz durch Anleihen bedeutet. NEAG zeigt schwache Performance.",
+      "date": "2026-08-02"
     },
     "realestate": {
       "text": "Immobiliensektor zeigt leichte Erholung, getragen von moderaten Zinsänderungen. Langfristiger Aufwärtstrend deutet auf stabile Nachfrage hin.",
@@ -1631,8 +1633,8 @@
       "date": "2026-08-01"
     },
     "europe": {
-      "text": "Europas Konjunktur kühlt sich ab. Die Zinsen belasten die Wirtschaft weiter.",
-      "date": "2026-07-23"
+      "text": "Europas Inflation bleibt hoch, getrieben von Energiepreisen und starker Konjunktur. Dies rechtfertigt die Zinssteigerungen der EZB.",
+      "date": "2026-08-02"
     },
     "germany": {
       "text": "Deutsche Konjunktur schwächelt, mit negativen Zinsentwicklungen und anhaltenden Energiepreisrisiken. Geopolitische Unsicherheiten belasten zusätzlich die wirtschaftliche Lage.",
@@ -1658,17 +1660,37 @@
   "news": {
     "items": [
       {
-        "text": "Geopolitik vs. Öl: Bund-Renditen auf der Achterbahn.",
-        "stamp": "30.07.26"
+        "text": "US-Importbeschränkungen: China kritisiert und droht mit Vergeltung.",
+        "stamp": "02.08.26"
+      },
+      {
+        "text": "Bahn schreibt schwarze Zahlen, doch Güterverkehr bleibt Sorgenkind.",
+        "stamp": "01.08.26"
+      },
+      {
+        "text": "Deutsche Bank überrascht mit Milliardengewinn im Quartal.",
+        "stamp": "01.08.26"
+      },
+      {
+        "text": "SNB erzielt im Halbjahr Gewinn von 25,2 Mrd. Franken.",
+        "stamp": "31.07.26"
+      },
+      {
+        "text": "Eurozone-Inflation steigt im Juli auf 2,9 Prozent.",
+        "stamp": "31.07.26"
+      },
+      {
+        "text": "US-Arbeitskosten steigen im zweiten Quartal.",
+        "stamp": "31.07.26"
       }
     ],
-    "date": "2026-08-01"
+    "date": "2026-08-02"
   },
   "scan": {
     "universe": 8846,
     "scanned": 8846,
-    "lastCursor": 6555,
-    "candCursor": 244,
+    "lastCursor": 6855,
+    "candCursor": 252,
     "candidates": [
       "Powell Industries, Inc.",
       "Kalray SA",
@@ -2071,43 +2093,48 @@
       "Titan International, Inc.",
       "RWE AG"
     ],
-    "noteCursor": 11,
-    "focusCursor": 0,
+    "noteCursor": 12,
+    "focusCursor": 1,
     "recheckCursor": 16,
-    "regionNoteCursor": 1,
-    "notesDay": "2026-08-01",
+    "regionNoteCursor": 2,
+    "notesDay": "2026-08-02",
     "seenBySector": {
-      "cons_cycl": 1458,
-      "cons_def": 760,
-      "materials": 1028,
-      "health": 4254,
-      "finance": 2878,
-      "energy": 1329,
-      "hardware": 957,
-      "software": 2846,
-      "industrial": 1233,
-      "utilities": 528,
-      "comm": 622,
-      "ai_semi": 575,
-      "realestate": 265
-    },
-    "pendingReject": [],
-    "evaluatedBySector": {
-      "cons_cycl": 1462,
-      "cons_def": 761,
-      "materials": 1028,
-      "health": 4255,
-      "finance": 2882,
-      "energy": 1331,
-      "hardware": 959,
-      "software": 2854,
+      "cons_cycl": 1464,
+      "cons_def": 764,
+      "materials": 1034,
+      "health": 4277,
+      "finance": 2890,
+      "energy": 1337,
+      "hardware": 962,
+      "software": 2868,
       "industrial": 1241,
       "utilities": 529,
-      "comm": 623,
-      "ai_semi": 575,
-      "realestate": 266
+      "comm": 624,
+      "ai_semi": 576,
+      "realestate": 268
     },
-    "heavyAt": "2026-08-01T20:14:51.625Z",
+    "pendingReject": [
+      "SA",
+      "SABK",
+      "SABR",
+      "SABS"
+    ],
+    "evaluatedBySector": {
+      "cons_cycl": 1468,
+      "cons_def": 765,
+      "materials": 1034,
+      "health": 4278,
+      "finance": 2894,
+      "energy": 1339,
+      "hardware": 964,
+      "software": 2876,
+      "industrial": 1249,
+      "utilities": 530,
+      "comm": 625,
+      "ai_semi": 576,
+      "realestate": 269
+    },
+    "heavyAt": "2026-08-02T09:20:57.940Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2118,6 +2145,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-02T09:00:48.643Z"
+  }
 }

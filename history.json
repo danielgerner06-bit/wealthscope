@@ -18,7 +18,8 @@
       "seenMs": 1780444800000,
       "startPrice": 305.25,
       "perf": [
-        -20.56
+        -20.56,
+        -20.4
       ],
       "prov": false
     },
@@ -62,7 +63,8 @@
       "seenMs": 1780444800000,
       "startPrice": 1392,
       "perf": [
-        2.85
+        2.85,
+        6.46
       ],
       "prov": false
     },
@@ -84,7 +86,8 @@
       "seenMs": 1780444800000,
       "startPrice": 4865.5,
       "perf": [
-        10.01
+        10.01,
+        15.78
       ],
       "prov": false
     },
@@ -96,13 +99,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 33,
-      "upside": 36,
-      "pe": 22,
+      "upside": 26,
+      "pe": 23.4,
       "perf6mAtAdd": -9.23,
       "perf1mBefore": 16.72,
       "sektorPsiAtAdd": 0.01,
       "analysts": 12,
-      "div": 0.9,
+      "div": 0.84,
       "seen": "2026-07-23",
       "seenMs": 1784764800000,
       "startPrice": 4379.5,
@@ -127,7 +130,8 @@
       "seenMs": 1780444800000,
       "startPrice": 4639.5,
       "perf": [
-        -0.38
+        -0.38,
+        -31.2
       ],
       "prov": false
     },
@@ -149,7 +153,8 @@
       "seenMs": 1780444800000,
       "startPrice": 2874.75,
       "perf": [
-        -0.98
+        -0.98,
+        8.88
       ],
       "prov": false
     },
@@ -536,7 +541,8 @@
       "seenMs": 1780444800000,
       "startPrice": 28.65999984741211,
       "perf": [
-        4.73
+        4.73,
+        13.29
       ],
       "prov": false
     },
@@ -558,7 +564,8 @@
       "seenMs": 1780444800000,
       "startPrice": 13.5,
       "perf": [
-        31.63
+        31.63,
+        35.74
       ],
       "prov": false
     },
@@ -626,7 +633,8 @@
       "seenMs": 1780444800000,
       "startPrice": 38.209999084472656,
       "perf": [
-        23.83
+        23.83,
+        -12.33
       ],
       "prov": false
     },
@@ -924,7 +932,8 @@
       "seenMs": 1780444800000,
       "startPrice": 6.650000095367432,
       "perf": [
-        10.02
+        10.02,
+        -11.16
       ],
       "prov": false
     },
@@ -1268,7 +1277,8 @@
       "seenMs": 1780444800000,
       "startPrice": 4.590000152587891,
       "perf": [
-        17.54
+        17.54,
+        8.17
       ],
       "prov": false
     },
@@ -1290,7 +1300,8 @@
       "seenMs": 1780444800000,
       "startPrice": 10.460000038146973,
       "perf": [
-        -4.31
+        -4.31,
+        -15.45
       ],
       "prov": false
     },
@@ -1312,7 +1323,8 @@
       "seenMs": 1780444800000,
       "startPrice": 18.610000610351562,
       "perf": [
-        11.59
+        11.59,
+        8.54
       ],
       "prov": false
     },
@@ -1380,7 +1392,8 @@
       "seenMs": 1780444800000,
       "startPrice": 7.710000038146973,
       "perf": [
-        -3.5
+        -3.5,
+        -5.45
       ],
       "prov": false
     },
@@ -1563,7 +1576,8 @@
       "seenMs": 1780444800000,
       "startPrice": 57.7400016784668,
       "perf": [
-        -5.19
+        -5.19,
+        2.01
       ],
       "prov": false
     },
@@ -1608,7 +1622,8 @@
       "seenMs": 1780444800000,
       "startPrice": 15.4399995803833,
       "perf": [
-        25.23
+        25.23,
+        32.3
       ],
       "prov": false
     },
@@ -1630,7 +1645,8 @@
       "seenMs": 1780444800000,
       "startPrice": 2.5,
       "perf": [
-        -20.24
+        -20.24,
+        -20.85
       ],
       "prov": false
     },
@@ -1652,7 +1668,8 @@
       "seenMs": 1780444800000,
       "startPrice": 15.8100004196167,
       "perf": [
-        2.65
+        2.65,
+        -15.44
       ],
       "prov": false
     },
@@ -1674,7 +1691,8 @@
       "seenMs": 1780444800000,
       "startPrice": 33,
       "perf": [
-        6.74
+        6.74,
+        -1.47
       ],
       "prov": false
     },
@@ -1696,7 +1714,8 @@
       "seenMs": 1780444800000,
       "startPrice": 6.429999828338623,
       "perf": [
-        -18.11
+        -18.11,
+        -34.01
       ],
       "prov": false
     },
@@ -1741,7 +1760,8 @@
       "seenMs": 1780444800000,
       "startPrice": 42.209999084472656,
       "perf": [
-        -2.51
+        -2.51,
+        6.96
       ],
       "prov": false
     },
@@ -1970,7 +1990,8 @@
       "seenMs": 1780444800000,
       "startPrice": 157.97000122070312,
       "perf": [
-        -1.1
+        -1.1,
+        -3.51
       ],
       "prov": false
     },
@@ -1992,7 +2013,8 @@
       "seenMs": 1780444800000,
       "startPrice": 1.399999976158142,
       "perf": [
-        -15.71
+        -15.71,
+        -27.86
       ],
       "prov": false
     },
@@ -2106,7 +2128,8 @@
       "seenMs": 1780444800000,
       "startPrice": 313.55999755859375,
       "perf": [
-        0.56
+        0.56,
+        2.7
       ],
       "prov": false
     },
@@ -2174,7 +2197,8 @@
       "seenMs": 1780444800000,
       "startPrice": 180.19000244140625,
       "perf": [
-        27.94
+        27.94,
+        7.09
       ],
       "prov": false
     },
@@ -2196,7 +2220,8 @@
       "seenMs": 1780444800000,
       "startPrice": 10.109999656677246,
       "perf": [
-        0.15
+        0.15,
+        0.2
       ],
       "prov": false
     },
@@ -2287,7 +2312,8 @@
       "seenMs": 1780444800000,
       "startPrice": 3.309999942779541,
       "perf": [
-        -4.97
+        -4.97,
+        -5.87
       ],
       "prov": false
     },
@@ -2309,7 +2335,8 @@
       "seenMs": 1780444800000,
       "startPrice": 7.379999876022339,
       "perf": [
-        20.28
+        20.28,
+        14.9
       ],
       "prov": false
     },
@@ -2331,7 +2358,8 @@
       "seenMs": 1780444800000,
       "startPrice": 33.635000228881836,
       "perf": [
-        32.6
+        32.6,
+        34.67
       ],
       "prov": false
     },
@@ -2353,7 +2381,8 @@
       "seenMs": 1780444800000,
       "startPrice": 62.51499938964844,
       "perf": [
-        16.1
+        16.1,
+        28.65
       ],
       "prov": false
     },
@@ -2375,7 +2404,8 @@
       "seenMs": 1780444800000,
       "startPrice": 4.525000095367432,
       "perf": [
-        50
+        50,
+        40.42
       ],
       "prov": false
     },
@@ -2397,7 +2427,8 @@
       "seenMs": 1780444800000,
       "startPrice": 26.785000801086426,
       "perf": [
-        42.78
+        42.78,
+        49.12
       ],
       "prov": false
     },
@@ -2419,7 +2450,8 @@
       "seenMs": 1780444800000,
       "startPrice": 18.58000087738037,
       "perf": [
-        -22.14
+        -22.14,
+        -35.69
       ],
       "prov": false
     },
@@ -2441,7 +2473,8 @@
       "seenMs": 1780444800000,
       "startPrice": 1.4950000047683716,
       "perf": [
-        -15.23
+        -15.23,
+        -43.38
       ],
       "prov": false
     },
@@ -2486,7 +2519,8 @@
       "seenMs": 1780444800000,
       "startPrice": 5.674999952316284,
       "perf": [
-        -15.94
+        -15.94,
+        -23.38
       ],
       "prov": false
     },
@@ -2577,7 +2611,8 @@
       "seenMs": 1780444800000,
       "startPrice": 76.34500122070312,
       "perf": [
-        2.48
+        2.48,
+        9.6
       ],
       "prov": false
     },
@@ -2599,7 +2634,8 @@
       "seenMs": 1780444800000,
       "startPrice": 80.97500228881836,
       "perf": [
-        25.42
+        25.42,
+        22.35
       ],
       "prov": false
     },
@@ -2759,7 +2795,8 @@
       "seenMs": 1780444800000,
       "startPrice": 28.84999942779541,
       "perf": [
-        -13.4
+        -13.4,
+        -2.85
       ],
       "prov": false
     },
@@ -2781,7 +2818,8 @@
       "seenMs": 1780358400000,
       "startPrice": 47.67499923706055,
       "perf": [
-        33.14
+        33.14,
+        59.39
       ],
       "prov": false
     },
@@ -2803,7 +2841,8 @@
       "seenMs": 1780358400000,
       "startPrice": 131.05999755859375,
       "perf": [
-        16.24
+        16.24,
+        29.06
       ],
       "prov": false
     },
@@ -2825,7 +2864,8 @@
       "seenMs": 1780444800000,
       "startPrice": 3.3299999237060547,
       "perf": [
-        -33.44
+        -33.44,
+        -51.55
       ],
       "prov": false
     },
@@ -8069,13 +8109,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 88,
-      "pe": 6.1,
+      "upside": 92,
+      "pe": 6.8,
       "perf6mAtAdd": -4.91,
       "perf1mBefore": -4.8,
       "sektorPsiAtAdd": 0.0031,
       "analysts": 1,
-      "div": 2.84,
+      "div": 2.88,
       "seen": "2026-07-13",
       "seenMs": 1783900800000,
       "startPrice": 30.75,
@@ -8178,7 +8218,7 @@
       "pe": 46.9,
       "perf6mAtAdd": 63.72,
       "perf1mBefore": 63.22,
-      "sektorPsiAtAdd": null,
+      "sektorPsiAtAdd": 0.0058,
       "analysts": 9,
       "div": 0.24,
       "seen": "2026-08-01",
@@ -8192,10 +8232,10 @@
     "factors": [
       {
         "name": "Kursziel",
-        "spread": 9.4,
+        "spread": 8.5,
         "best": {
           "k": "40%+",
-          "avg": 6,
+          "avg": 5.1,
           "n": 143
         },
         "worst": {
@@ -8206,15 +8246,15 @@
       },
       {
         "name": "Analysten",
-        "spread": 7.7,
+        "spread": 8.3,
         "best": {
           "k": "5-14",
-          "avg": 4.8,
+          "avg": 4.3,
           "n": 148
         },
         "worst": {
           "k": "1-4",
-          "avg": -2.9,
+          "avg": -4,
           "n": 90
         }
       },
@@ -8234,29 +8274,29 @@
       },
       {
         "name": "KGV",
-        "spread": 5.5,
+        "spread": 5,
         "best": {
           "k": "<15",
-          "avg": 5.8,
+          "avg": 5.2,
           "n": 63
         },
         "worst": {
-          "k": "15-25",
-          "avg": 0.3,
-          "n": 62
+          "k": "25-40",
+          "avg": 0.2,
+          "n": 54
         }
       },
       {
         "name": "Dividende",
-        "spread": 4.5,
+        "spread": 4.6,
         "best": {
           "k": "keine",
-          "avg": 4.5,
+          "avg": 3.9,
           "n": 168
         },
         "worst": {
           "k": "<2%",
-          "avg": 0,
+          "avg": -0.7,
           "n": 84
         }
       }
@@ -8264,7 +8304,7 @@
     "combo": {
       "f1": "Kursziel 40%+",
       "f2": "Analysten 5-14",
-      "avg": 9.4,
+      "avg": 8.7,
       "n": 71
     },
     "sampleSize": 354,
@@ -8272,10 +8312,10 @@
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "Die Kombination \"Kursziel 40%+\" und \"Analysten 5-14\" erzielte mit 9,8% die beste Performance. Die Dividende hatte mit einer Spanne von 5,1% kaum Einfluss.",
-    "date": "2026-08-01",
+    "text": "\"Kursziel 40%+\" und \"Analysten 5-14\" kombiniert lieferten mit 8,7% die beste Performance. \"Dividende\" hatte mit 4,6% den geringsten Einfluss.",
+    "date": "2026-08-02",
     "stage": "real",
     "months": 2
   },
-  "kiDay": "2026-08-01"
+  "kiDay": "2026-08-02"
 }
