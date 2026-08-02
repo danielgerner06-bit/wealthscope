@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-02",
-  "updatedAt": "2026-08-02T21:00:48.645Z",
+  "updatedAt": "2026-08-02T21:38:40.565Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -409,7 +409,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-27",
+      "verifiedAt": "2026-08-02",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-12",
       "perf6m": 5.08,
@@ -420,42 +420,9 @@
       "eps": 0.75,
       "div": 0,
       "enrichAt": "2026-08-01",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-07-27",
-      "miss": 0
-    },
-    {
-      "ticker": "EXL.DE",
-      "name": "Exasol AG",
-      "yahoo": "EXL.DE",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 2,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 2,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-07-30",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": -27.27,
-      "perf6mAt": "2026-07-31",
-      "perf1mBefore": -8.65,
-      "upside": 89,
-      "pe": 18.5,
-      "eps": 0.11,
-      "div": 0,
-      "enrichAt": "2026-07-31",
-      "sektorPsi": 0.0039,
-      "sektorPsiAtAdd": 0.007,
-      "recheckAt": "2026-07-30",
       "miss": 0
     },
     {
@@ -489,6 +456,39 @@
       "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-07-28",
+      "miss": 0
+    },
+    {
+      "ticker": "EXL.DE",
+      "name": "Exasol AG",
+      "yahoo": "EXL.DE",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-07-30",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": -27.27,
+      "perf6mAt": "2026-07-31",
+      "perf1mBefore": -8.65,
+      "upside": 89,
+      "pe": 18.5,
+      "eps": 0.11,
+      "div": 0,
+      "enrichAt": "2026-07-31",
+      "sektorPsi": 0.0038,
+      "sektorPsiAtAdd": 0.007,
+      "recheckAt": "2026-07-30",
       "miss": 0
     },
     {
@@ -551,7 +551,7 @@
       "eps": 0.15,
       "div": 8.85,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0053,
+      "sektorPsi": 0.0052,
       "sektorPsiAtAdd": 0.0076,
       "recheckAt": "2026-08-01",
       "miss": 0
@@ -616,7 +616,7 @@
       "eps": 1.64,
       "div": 3.08,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0018,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -754,39 +754,6 @@
       "miss": 0
     },
     {
-      "ticker": "6701",
-      "name": "NEC Corporation",
-      "yahoo": "6701.T",
-      "sector": "hardware",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 8,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 12,
-      "strongBuyPct": 33,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-07-31",
-      "verifiedSource": "yahoo",
-      "seen": "2026-07-23",
-      "perf6m": -9.23,
-      "perf6mAt": "2026-08-02",
-      "perf1mBefore": 16.72,
-      "upside": 26,
-      "pe": 23.4,
-      "eps": 202.87,
-      "div": 0.84,
-      "enrichAt": "2026-08-02",
-      "sektorPsi": 0.0049,
-      "sektorPsiAtAdd": 0.01,
-      "recheckAt": "2026-07-31",
-      "miss": 0
-    },
-    {
       "ticker": "IXX.DE",
       "name": "Init Innovation in Traffic Systems SE",
       "yahoo": "IXX.DE",
@@ -814,7 +781,7 @@
       "eps": 2.23,
       "div": 1.63,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0049,
+      "sektorPsi": 0.0048,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-08-01",
       "miss": 0
@@ -1011,9 +978,42 @@
       "eps": 1.34,
       "div": 2.21,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-07-30",
+      "miss": 0
+    },
+    {
+      "ticker": "6701",
+      "name": "NEC Corporation",
+      "yahoo": "6701.T",
+      "sector": "hardware",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 8,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 12,
+      "strongBuyPct": 33,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-07-31",
+      "verifiedSource": "yahoo",
+      "seen": "2026-07-23",
+      "perf6m": -9.23,
+      "perf6mAt": "2026-08-02",
+      "perf1mBefore": 16.72,
+      "upside": 26,
+      "pe": 23.4,
+      "eps": 202.87,
+      "div": 0.84,
+      "enrichAt": "2026-08-02",
+      "sektorPsi": 0.0048,
+      "sektorPsiAtAdd": 0.01,
+      "recheckAt": "2026-07-31",
       "miss": 0
     },
     {
@@ -1077,7 +1077,7 @@
       "eps": 202.87,
       "div": 0.84,
       "enrichAt": "2026-08-01",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-07-30",
       "miss": 0
@@ -1277,7 +1277,7 @@
       "eps": 5.01,
       "div": 5.33,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-08-01",
       "miss": 0
@@ -1309,7 +1309,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-29",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-07-28",
       "miss": 0
@@ -1341,7 +1341,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-07-30",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-07-29",
       "miss": 0
@@ -1373,10 +1373,41 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-07-31",
-      "sektorPsi": 0.0039,
+      "sektorPsi": 0.0038,
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-07-29",
       "miss": 0
+    },
+    {
+      "ticker": "HIGH.DE",
+      "name": "Cantourage Group SE",
+      "yahoo": "HIGH.DE",
+      "sector": "cons_def",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 67,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-02",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-08-02",
+      "perf6m": 49.08,
+      "perf6mAt": "2026-08-02",
+      "perf1mBefore": -8.39,
+      "upside": 75,
+      "pe": null,
+      "eps": -0.33,
+      "div": 0,
+      "enrichAt": "2026-08-02",
+      "sektorPsi": 0.0037,
+      "sektorPsiAtAdd": 0.0037
     }
   ],
   "psiHistory": [
@@ -1419,6 +1450,11 @@
       "t": "YOC.DE",
       "d": "2026-07-21",
       "v": 0.0035
+    },
+    {
+      "t": "HIGH.DE",
+      "d": "2026-08-02",
+      "v": 0.0037
     },
     {
       "t": "GFT",
@@ -1660,28 +1696,28 @@
   "news": {
     "items": [
       {
-        "text": "US-Importbeschränkungen: China kritisiert und droht mit Vergeltung.",
+        "text": "China fordert USA mit KI-Investitionen und neuen Allianzen heraus.",
         "stamp": "02.08.26"
       },
       {
-        "text": "Bahn schreibt schwarze Zahlen, doch Güterverkehr bleibt Sorgenkind.",
-        "stamp": "01.08.26"
+        "text": "BMW-Gewinn bricht ein – Tausende Jobs sollen abgebaut werden.",
+        "stamp": "02.08.26"
       },
       {
-        "text": "Deutsche Bank überrascht mit Milliardengewinn im Quartal.",
-        "stamp": "01.08.26"
+        "text": "US-Notenbank hält Zinsen stabil – Ungewöhnlicher Widerstand sorgt für Unsicherheit.",
+        "stamp": "02.08.26"
       },
       {
-        "text": "SNB erzielt im Halbjahr Gewinn von 25,2 Mrd. Franken.",
-        "stamp": "31.07.26"
+        "text": "Silberpreis-Prognose: Edelmetall bereitet Rallye vor – bald bei 80 USD?",
+        "stamp": "02.08.26"
       },
       {
-        "text": "Eurozone-Inflation steigt im Juli auf 2,9 Prozent.",
-        "stamp": "31.07.26"
+        "text": "Deutsche Bank-Experte warnt trotz Rekordgewinnen vor KI-Zweifeln.",
+        "stamp": "02.08.26"
       },
       {
-        "text": "US-Arbeitskosten steigen im zweiten Quartal.",
-        "stamp": "31.07.26"
+        "text": "Europa probt den Abschied von US-Firma Palantir.",
+        "stamp": "02.08.26"
       }
     ],
     "date": "2026-08-02"
@@ -1689,10 +1725,9 @@
   "scan": {
     "universe": 8846,
     "scanned": 8846,
-    "lastCursor": 6855,
-    "candCursor": 252,
+    "lastCursor": 7155,
+    "candCursor": 260,
     "candidates": [
-      "Powell Industries, Inc.",
       "Kalray SA",
       "Riber SA",
       "DO & CO AG",
@@ -2091,50 +2126,46 @@
       "Tronox Holdings plc",
       "Atkore Inc.",
       "Titan International, Inc.",
-      "RWE AG"
+      "RWE AG",
+      "Netgem SA"
     ],
     "noteCursor": 12,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 2,
     "notesDay": "2026-08-02",
     "seenBySector": {
-      "cons_cycl": 1464,
-      "cons_def": 764,
-      "materials": 1034,
-      "health": 4277,
-      "finance": 2890,
-      "energy": 1337,
-      "hardware": 962,
-      "software": 2868,
-      "industrial": 1241,
-      "utilities": 529,
-      "comm": 624,
-      "ai_semi": 576,
-      "realestate": 268
-    },
-    "pendingReject": [
-      "SA",
-      "SABK",
-      "SABR",
-      "SABS"
-    ],
-    "evaluatedBySector": {
-      "cons_cycl": 1468,
-      "cons_def": 765,
-      "materials": 1034,
-      "health": 4278,
-      "finance": 2894,
-      "energy": 1339,
-      "hardware": 964,
-      "software": 2876,
-      "industrial": 1249,
+      "cons_cycl": 1472,
+      "cons_def": 769,
+      "materials": 1040,
+      "health": 4293,
+      "finance": 2905,
+      "energy": 1342,
+      "hardware": 967,
+      "software": 2881,
+      "industrial": 1245,
       "utilities": 530,
-      "comm": 625,
-      "ai_semi": 576,
-      "realestate": 269
+      "comm": 626,
+      "ai_semi": 579,
+      "realestate": 272
     },
-    "heavyAt": "2026-08-02T09:20:57.940Z",
+    "pendingReject": [],
+    "evaluatedBySector": {
+      "cons_cycl": 1476,
+      "cons_def": 771,
+      "materials": 1040,
+      "health": 4294,
+      "finance": 2909,
+      "energy": 1344,
+      "hardware": 969,
+      "software": 2889,
+      "industrial": 1253,
+      "utilities": 531,
+      "comm": 627,
+      "ai_semi": 579,
+      "realestate": 273
+    },
+    "heavyAt": "2026-08-02T21:31:59.242Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2145,6 +2176,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-02T21:00:48.645Z"
+  }
 }
