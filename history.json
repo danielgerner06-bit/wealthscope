@@ -7535,7 +7535,8 @@
       "seenMs": 1780531200000,
       "startPrice": 104.79999923706055,
       "perf": [
-        -10.6
+        -10.6,
+        -14.01
       ],
       "prov": false
     },
@@ -7557,7 +7558,8 @@
       "seenMs": 1780531200000,
       "startPrice": 507.510009765625,
       "perf": [
-        6.41
+        6.41,
+        -5.85
       ],
       "prov": false
     },
@@ -7579,7 +7581,8 @@
       "seenMs": 1780531200000,
       "startPrice": 50.71500015258789,
       "perf": [
-        -6.05
+        -6.05,
+        -0.1
       ],
       "prov": false
     },
@@ -7601,7 +7604,8 @@
       "seenMs": 1780531200000,
       "startPrice": 38.60000038146973,
       "perf": [
-        -5.65
+        -5.65,
+        -1.25
       ],
       "prov": false
     },
@@ -7623,7 +7627,8 @@
       "seenMs": 1780531200000,
       "startPrice": 22.175000190734863,
       "perf": [
-        0.9
+        0.9,
+        -7.24
       ],
       "prov": false
     },
@@ -7645,7 +7650,8 @@
       "seenMs": 1780531200000,
       "startPrice": 12.099999904632568,
       "perf": [
-        -18.16
+        -18.16,
+        -27.78
       ],
       "prov": false
     },
@@ -7667,7 +7673,8 @@
       "seenMs": 1780531200000,
       "startPrice": 86.79999923706055,
       "perf": [
-        -9.62
+        -9.62,
+        -12.69
       ],
       "strongBuyPct": 100,
       "sektorPsiAtAdd": 0.0015,
@@ -7691,7 +7698,8 @@
       "seenMs": 1780531200000,
       "startPrice": 43.279998779296875,
       "perf": [
-        -4.54
+        -4.54,
+        -21.08
       ],
       "prov": false
     },
@@ -7713,7 +7721,8 @@
       "seenMs": 1780531200000,
       "startPrice": 32.89999961853027,
       "perf": [
-        -4.77
+        -4.77,
+        108.31
       ],
       "prov": false
     },
@@ -7735,7 +7744,8 @@
       "seenMs": 1780531200000,
       "startPrice": 1.3349999785423279,
       "perf": [
-        15
+        15,
+        -4.62
       ],
       "prov": false
     },
@@ -8235,8 +8245,11 @@
       "seen": "2026-07-02",
       "seenMs": 1782950400000,
       "startPrice": 19.945000648498535,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        1.88
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "JDC": {
       "ticker": "JDC",
@@ -8256,8 +8269,11 @@
       "seen": "2026-07-04",
       "seenMs": 1783123200000,
       "startPrice": 22.949999809265137,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        2.44
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "KALN.NS": {
       "ticker": "KALN.NS",
@@ -8494,64 +8510,64 @@
   "findings": {
     "factors": [
       {
-        "name": "KGV",
-        "spread": 10.5,
-        "best": {
-          "k": "<15",
-          "avg": 7.2,
-          "n": 63
-        },
-        "worst": {
-          "k": "40+",
-          "avg": -3.3,
-          "n": 45
-        }
-      },
-      {
         "name": "Kursziel",
-        "spread": 10.5,
+        "spread": 11.8,
         "best": {
           "k": "40%+",
-          "avg": 3.5,
-          "n": 143
+          "avg": 4.2,
+          "n": 144
         },
         "worst": {
           "k": "<10%",
-          "avg": -7,
+          "avg": -7.6,
           "n": 38
         }
       },
       {
         "name": "Dividende",
-        "spread": 10.5,
+        "spread": 10.7,
         "best": {
-          "k": "4%+",
+          "k": "2-4%",
           "avg": 5,
-          "n": 41
+          "n": 56
         },
         "worst": {
           "k": "<2%",
-          "avg": -5.5,
+          "avg": -5.7,
           "n": 84
         }
       },
       {
+        "name": "KGV",
+        "spread": 10.6,
+        "best": {
+          "k": "<15",
+          "avg": 7.1,
+          "n": 63
+        },
+        "worst": {
+          "k": "40+",
+          "avg": -3.5,
+          "n": 46
+        }
+      },
+      {
         "name": "Analysten",
-        "spread": 9.8,
+        "spread": 8.7,
         "best": {
           "k": "15+",
-          "avg": 2.4,
+          "avg": 2.3,
           "n": 116
         },
         "worst": {
           "k": "1-4",
-          "avg": -7.4,
-          "n": 90
+          "avg": -6.4,
+          "n": 91
         }
       },
       {
         "name": "Strong Buy",
-        "spread": 6.3,
+        "spread": 6.1,
         "best": {
           "k": "<70%",
           "avg": 3.1,
@@ -8559,18 +8575,18 @@
         },
         "worst": {
           "k": "95%+",
-          "avg": -3.2,
-          "n": 11
+          "avg": -3,
+          "n": 12
         }
       }
     ],
     "combo": {
-      "f1": "KGV <15",
-      "f2": "Kursziel 40%+",
-      "avg": 8.1,
-      "n": 22
+      "f1": "Kursziel 40%+",
+      "f2": "Dividende 2-4%",
+      "avg": 19.4,
+      "n": 13
     },
-    "sampleSize": 354,
+    "sampleSize": 356,
     "maxMonths": 2,
     "provisional": false
   },
