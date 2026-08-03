@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-02",
-  "updatedAt": "2026-08-03T00:00:48.647Z",
+  "updatedAt": "2026-08-03T01:00:48.645Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -740,8 +740,8 @@
       "verifiedAt": "2026-08-01",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-24",
-      "perf6m": 38.15,
-      "perf6mAt": "2026-07-29",
+      "perf6m": 39.97,
+      "perf6mAt": "2026-08-03",
       "perf1mBefore": -5.25,
       "upside": 39,
       "pe": null,
@@ -806,8 +806,8 @@
       "verifiedAt": "2026-07-28",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-29",
-      "perf6m": -11.41,
-      "perf6mAt": "2026-07-29",
+      "perf6m": -11.04,
+      "perf6mAt": "2026-08-03",
       "perf1mBefore": -9.59,
       "upside": 33,
       "pe": 78.3,
@@ -872,8 +872,8 @@
       "verifiedAt": "2026-07-30",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
-      "perf6m": 8.54,
-      "perf6mAt": "2026-07-29",
+      "perf6m": -0.83,
+      "perf6mAt": "2026-08-03",
       "perf1mBefore": -5.14,
       "upside": 31,
       "pe": 10.6,
@@ -905,8 +905,8 @@
       "verifiedAt": "2026-07-29",
       "verifiedSource": "yahoo",
       "seen": "2026-07-14",
-      "perf6m": 38.02,
-      "perf6mAt": "2026-07-29",
+      "perf6m": 34.41,
+      "perf6mAt": "2026-08-03",
       "perf1mBefore": -34.9,
       "upside": 31,
       "pe": null,
@@ -2177,5 +2177,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-03T00:00:48.647Z"
+  "yahooAt": "2026-08-03T01:00:48.645Z"
 }
