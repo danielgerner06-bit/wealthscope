@@ -8426,7 +8426,8 @@
       "seen": "2026-08-03",
       "seenMs": 1785715200000,
       "startPrice": 7.599999904632568,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "ATEA": {
       "ticker": "ATEA",
@@ -8446,7 +8447,8 @@
       "seen": "2026-08-03",
       "seenMs": 1785715200000,
       "startPrice": 171.79999542236328,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
