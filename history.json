@@ -8523,7 +8523,7 @@
       "pe": 29.7,
       "perf6mAtAdd": -7.56,
       "perf1mBefore": -3.95,
-      "sektorPsiAtAdd": null,
+      "sektorPsiAtAdd": 0.0082,
       "analysts": 2,
       "div": 2.81,
       "seen": "2026-08-04",
