@@ -87,7 +87,8 @@
       "seen": "2026-08-05",
       "seenMs": 1785888000000,
       "startPrice": 2211,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "4502": {
       "ticker": "4502",
@@ -130,7 +131,8 @@
       "seen": "2026-08-05",
       "seenMs": 1785888000000,
       "startPrice": 2699,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "6701": {
       "ticker": "6701",
