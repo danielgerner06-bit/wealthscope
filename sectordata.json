@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-05",
-  "updatedAt": "2026-08-05T20:46:23.481Z",
+  "updatedAt": "2026-08-05T21:00:38.291Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -2424,5 +2424,6 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  }
+  },
+  "yahooAt": "2026-08-05T21:00:38.291Z"
 }
