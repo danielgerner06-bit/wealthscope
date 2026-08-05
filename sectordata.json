@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-05",
-  "updatedAt": "2026-08-05T21:00:38.291Z",
+  "updatedAt": "2026-08-05T21:52:04.123Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -719,6 +719,36 @@
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-07-30",
       "miss": 0
+    },
+    {
+      "ticker": "089970",
+      "name": "VM Inc.",
+      "yahoo": "089970.KQ",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 3,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-05",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-05",
+      "perf6m": 140.37,
+      "perf6mAt": "2026-08-05",
+      "perf1mBefore": -32.73,
+      "upside": 49,
+      "pe": null,
+      "div": null,
+      "enrichAt": "2026-08-05",
+      "sektorPsi": 0.015,
+      "sektorPsiAtAdd": 0.015
     },
     {
       "ticker": "4776",
@@ -1599,36 +1629,6 @@
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-05",
       "miss": 0
-    },
-    {
-      "ticker": "089970",
-      "name": "VM Inc.",
-      "yahoo": "089970.KQ",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 3,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 3,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-05",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-05",
-      "perf6m": 140.37,
-      "perf6mAt": "2026-08-05",
-      "perf1mBefore": -32.73,
-      "upside": 49,
-      "pe": null,
-      "div": null,
-      "enrichAt": "2026-08-05",
-      "sektorPsi": 0.015,
-      "sektorPsiAtAdd": 0.015
     }
   ],
   "psiHistory": [
@@ -2424,6 +2424,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-05T21:00:38.291Z"
+  }
 }
