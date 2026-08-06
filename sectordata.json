@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-05",
-  "updatedAt": "2026-08-06T20:00:38.291Z",
+  "updatedAt": "2026-08-06T21:00:38.292Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": 0.9,
+      "perf": 0.88,
       "avg30": 0,
-      "perf6m": -5.55
+      "perf6m": -5.57
     },
     {
       "id": "health",
@@ -201,15 +201,15 @@
     },
     {
       "id": "energy",
-      "perf": 6.49,
+      "perf": 6.44,
       "avg30": 2.83,
-      "perf6m": 12.61
+      "perf6m": 12.56
     },
     {
       "id": "materials",
-      "perf": 1.27,
+      "perf": 1.28,
       "avg30": 1.19,
-      "perf6m": 2.89
+      "perf6m": 2.9
     },
     {
       "id": "utilities",
@@ -233,9 +233,9 @@
     },
     {
       "id": "europe",
-      "perf": 3.16,
+      "perf": 3.14,
       "avg30": 1.25,
-      "perf6m": 4.39
+      "perf6m": 4.38
     },
     {
       "id": "germany",
@@ -245,9 +245,9 @@
     },
     {
       "id": "japan",
-      "perf": 2.25,
+      "perf": 2.23,
       "avg30": 1.54,
-      "perf6m": 9.78
+      "perf6m": 9.77
     },
     {
       "id": "china",
@@ -2439,5 +2439,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-06T20:00:38.291Z"
+  "yahooAt": "2026-08-06T21:00:38.292Z"
 }
