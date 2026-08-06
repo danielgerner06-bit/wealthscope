@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-05",
-  "updatedAt": "2026-08-06T18:00:38.294Z",
+  "updatedAt": "2026-08-06T19:00:38.292Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -155,7 +155,7 @@
       "id": "ai_semi",
       "perf": -4.52,
       "avg30": 8.03,
-      "perf6m": 55.26
+      "perf6m": 55.25
     },
     {
       "id": "hardware",
@@ -165,15 +165,15 @@
     },
     {
       "id": "comm",
-      "perf": 0.86,
+      "perf": 0.68,
       "avg30": 0.02,
-      "perf6m": -5.59
+      "perf6m": -5.76
     },
     {
       "id": "health",
-      "perf": 0.77,
+      "perf": 1.14,
       "avg30": 1.74,
-      "perf6m": 5.05
+      "perf6m": 5.43
     },
     {
       "id": "finance",
@@ -201,15 +201,15 @@
     },
     {
       "id": "energy",
-      "perf": 6.03,
+      "perf": 6.41,
       "avg30": 2.83,
-      "perf6m": 12.13
+      "perf6m": 12.53
     },
     {
       "id": "materials",
-      "perf": 1.64,
+      "perf": 1.42,
       "avg30": 1.21,
-      "perf6m": 3.26
+      "perf6m": 3.04
     },
     {
       "id": "utilities",
@@ -2439,5 +2439,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-06T18:00:38.294Z"
+  "yahooAt": "2026-08-06T19:00:38.292Z"
 }
