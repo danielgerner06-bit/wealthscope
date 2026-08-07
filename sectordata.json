@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-07",
-  "updatedAt": "2026-08-07T20:00:49.357Z",
+  "updatedAt": "2026-08-07T21:00:49.358Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -195,15 +195,15 @@
     },
     {
       "id": "industrial",
-      "perf": 2.23,
+      "perf": 2.25,
       "avg30": 1.72,
-      "perf6m": 9.6
+      "perf6m": 9.61
     },
     {
       "id": "energy",
-      "perf": 4.85,
+      "perf": 4.89,
       "avg30": 2.83,
-      "perf6m": 10.09
+      "perf6m": 10.13
     },
     {
       "id": "materials",
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": 1.72,
+      "perf": 1.7,
       "avg30": 0.8,
-      "perf6m": 9.12
+      "perf6m": 9.1
     }
   ],
   "bars30Region": [
@@ -2547,5 +2547,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-07T20:00:49.357Z"
+  "yahooAt": "2026-08-07T21:00:49.358Z"
 }
