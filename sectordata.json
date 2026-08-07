@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-07",
-  "updatedAt": "2026-08-07T19:00:49.358Z",
+  "updatedAt": "2026-08-07T19:59:05.674Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -189,21 +189,21 @@
     },
     {
       "id": "cons_def",
-      "perf": 0.85,
+      "perf": 0.88,
       "avg30": 0.43,
-      "perf6m": -2.08
+      "perf6m": -2.05
     },
     {
       "id": "industrial",
-      "perf": 2.3,
+      "perf": 2.29,
       "avg30": 1.71,
-      "perf6m": 9.67
+      "perf6m": 9.66
     },
     {
       "id": "energy",
-      "perf": 4.97,
+      "perf": 4.85,
       "avg30": 2.83,
-      "perf6m": 10.22
+      "perf6m": 10.09
     },
     {
       "id": "materials",
@@ -213,15 +213,15 @@
     },
     {
       "id": "utilities",
-      "perf": -3.75,
+      "perf": -3.78,
       "avg30": 0.58,
-      "perf6m": 1.3
+      "perf6m": 1.26
     },
     {
       "id": "realestate",
-      "perf": 1.58,
-      "avg30": 0.79,
-      "perf6m": 8.97
+      "perf": 1.74,
+      "avg30": 0.8,
+      "perf6m": 9.14
     }
   ],
   "bars30Region": [
@@ -257,9 +257,9 @@
     },
     {
       "id": "em",
-      "perf": -1.22,
+      "perf": -0.89,
       "avg30": 2.54,
-      "perf6m": 11.26
+      "perf6m": 11.63
     },
     {
       "id": "apac",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": 2.61,
+      "perf": 2.63,
       "avg30": -0.58,
-      "perf6m": -5.36
+      "perf6m": -5.34
     },
     {
       "id": "latam",
@@ -351,7 +351,7 @@
       "eps": 7.66,
       "div": 4.31,
       "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0121,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-04",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 0.04,
       "div": 2.81,
       "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0509,
+      "sektorPsi": 0.0326,
       "sektorPsiAtAdd": 0.0082,
       "recheckAt": "2026-08-05",
       "miss": 0
@@ -453,7 +453,7 @@
       "eps": 4.58,
       "div": 2.87,
       "enrichAt": "2026-08-07",
-      "sektorPsi": 0.0509,
+      "sektorPsi": 0.0326,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-08-04",
       "miss": 0
@@ -551,7 +551,7 @@
       "pe": null,
       "div": 0.15,
       "enrichAt": "2026-08-04",
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0068,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -584,7 +584,7 @@
       "eps": 0.15,
       "div": 8.89,
       "enrichAt": "2026-08-03",
-      "sektorPsi": 0.0065,
+      "sektorPsi": 0.0068,
       "sektorPsiAtAdd": 0.0076,
       "recheckAt": "2026-08-01",
       "miss": 0
@@ -649,10 +649,41 @@
       "pe": null,
       "div": 1.44,
       "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0121,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-06",
       "miss": 0
+    },
+    {
+      "ticker": "EQS",
+      "name": "Equasens Société anonyme",
+      "yahoo": "EQS.PA",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 75,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-07",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-08-07",
+      "perf6m": -11.24,
+      "perf6mAt": "2026-08-07",
+      "perf1mBefore": 3.35,
+      "upside": 61,
+      "pe": 13.1,
+      "eps": 2.59,
+      "div": 4.12,
+      "enrichAt": "2026-08-07",
+      "sektorPsi": 0.004,
+      "sektorPsiAtAdd": 0.004
     },
     {
       "ticker": "ORS",
@@ -747,7 +778,7 @@
       "pe": null,
       "div": null,
       "enrichAt": "2026-08-05",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0121,
       "sektorPsiAtAdd": 0.015,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -882,7 +913,7 @@
       "eps": 2.09,
       "div": 2.55,
       "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0121,
       "sektorPsiAtAdd": 0.0095,
       "recheckAt": "2026-08-01",
       "miss": 0
@@ -921,6 +952,37 @@
       "miss": 0
     },
     {
+      "ticker": "MEDI",
+      "name": "Medistim ASA",
+      "yahoo": "MEDI.OL",
+      "sector": "health",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 2,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-07",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-07",
+      "perf6m": 5.07,
+      "perf6mAt": "2026-08-07",
+      "perf1mBefore": -0.66,
+      "upside": 38,
+      "pe": 26.7,
+      "eps": 8.55,
+      "div": 3.56,
+      "enrichAt": "2026-08-07",
+      "sektorPsi": 0.0013,
+      "sektorPsiAtAdd": 0.0013
+    },
+    {
       "ticker": "SIT",
       "name": "SIT S.p.A.",
       "yahoo": "SIT.MI",
@@ -948,7 +1010,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-08-03",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0121,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1080,7 +1142,7 @@
       "eps": 0.72,
       "div": 2.59,
       "enrichAt": "2026-08-03",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0121,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-04",
       "miss": 0
@@ -1146,7 +1208,7 @@
       "eps": 0.72,
       "div": 2.58,
       "enrichAt": "2026-08-05",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0121,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1278,7 +1340,7 @@
       "eps": 1.88,
       "div": 0.83,
       "enrichAt": "2026-08-03",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0121,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1310,7 +1372,7 @@
       "pe": null,
       "div": 3.42,
       "enrichAt": "2026-08-03",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0121,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-08-05",
       "miss": 0
@@ -1481,6 +1543,37 @@
       "miss": 0
     },
     {
+      "ticker": "PHN",
+      "name": "PharmaNutra S.p.A.",
+      "yahoo": "PHN.MI",
+      "sector": "health",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-07",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-08-07",
+      "perf6m": 32.7,
+      "perf6mAt": "2026-08-07",
+      "perf1mBefore": -6.28,
+      "upside": -4,
+      "pe": 38.4,
+      "eps": 2.2,
+      "div": 1.43,
+      "enrichAt": "2026-08-07",
+      "sektorPsi": 0.0013,
+      "sektorPsiAtAdd": 0.0013
+    },
+    {
       "ticker": "1INN.DE",
       "name": "innoscripta SE",
       "yahoo": "1INN.DE",
@@ -1631,103 +1724,10 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-04",
       "div": null,
-      "sektorPsi": 0.007,
+      "sektorPsi": 0.0068,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-05",
       "miss": 0
-    },
-    {
-      "ticker": "MEDI",
-      "name": "Medistim ASA",
-      "yahoo": "MEDI.OL",
-      "sector": "health",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 2,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 2,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-07",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-07",
-      "perf6m": 5.07,
-      "perf6mAt": "2026-08-07",
-      "perf1mBefore": -0.66,
-      "upside": 38,
-      "pe": 26.7,
-      "eps": 8.55,
-      "div": 3.56,
-      "enrichAt": "2026-08-07",
-      "sektorPsi": 0.0013,
-      "sektorPsiAtAdd": 0.0013
-    },
-    {
-      "ticker": "PHN",
-      "name": "PharmaNutra S.p.A.",
-      "yahoo": "PHN.MI",
-      "sector": "health",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 3,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-07",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-08-07",
-      "perf6m": 32.7,
-      "perf6mAt": "2026-08-07",
-      "perf1mBefore": -6.28,
-      "upside": -4,
-      "pe": 38.4,
-      "eps": 2.2,
-      "div": 1.43,
-      "enrichAt": "2026-08-07",
-      "sektorPsi": 0.0013,
-      "sektorPsiAtAdd": 0.0013
-    },
-    {
-      "ticker": "EQS",
-      "name": "Equasens Société anonyme",
-      "yahoo": "EQS.PA",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 75,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-07",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-08-07",
-      "perf6m": -11.24,
-      "perf6mAt": "2026-08-07",
-      "perf1mBefore": 3.35,
-      "upside": 61,
-      "pe": 13.1,
-      "eps": 2.59,
-      "div": 4.12,
-      "enrichAt": "2026-08-07",
-      "sektorPsi": 0.004,
-      "sektorPsiAtAdd": 0.004
     }
   ],
   "psiHistory": [
@@ -2505,45 +2505,33 @@
     "regionNoteCursor": 7,
     "notesDay": "2026-08-07",
     "seenBySector": {
-      "cons_cycl": 1527,
+      "cons_cycl": 1528,
       "cons_def": 793,
-      "materials": 1084,
-      "health": 4464,
-      "finance": 2999,
+      "materials": 1086,
+      "health": 4465,
+      "finance": 3000,
       "energy": 1392,
       "hardware": 1006,
-      "software": 2997,
+      "software": 2998,
       "industrial": 1290,
       "utilities": 548,
-      "comm": 655,
+      "comm": 657,
       "ai_semi": 605,
       "realestate": 276
     },
-    "pendingReject": [
-      "ATER",
-      "ATEX",
-      "ATHR",
-      "ATI",
-      "ATKR",
-      "ATLC",
-      "ATLO",
-      "ATLX",
-      "ATMU",
-      "ATNI",
-      "ATNM"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1532,
+      "cons_cycl": 1533,
       "cons_def": 795,
-      "materials": 1084,
-      "health": 4467,
-      "finance": 3003,
+      "materials": 1086,
+      "health": 4468,
+      "finance": 3004,
       "energy": 1394,
       "hardware": 1008,
-      "software": 3009,
+      "software": 3010,
       "industrial": 1299,
       "utilities": 550,
-      "comm": 657,
+      "comm": 659,
       "ai_semi": 605,
       "realestate": 277
     },
@@ -2558,6 +2546,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-07T19:00:49.358Z"
+  }
 }
