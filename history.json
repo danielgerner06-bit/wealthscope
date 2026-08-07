@@ -8613,7 +8613,8 @@
       "seen": "2026-08-07",
       "seenMs": 1786060800000,
       "startPrice": 226.5,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "PHN": {
       "ticker": "PHN",
@@ -8633,7 +8634,8 @@
       "seen": "2026-08-07",
       "seenMs": 1786060800000,
       "startPrice": 84.25,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     },
     "EQS": {
       "ticker": "EQS",
@@ -8653,7 +8655,8 @@
       "seen": "2026-08-07",
       "seenMs": 1786060800000,
       "startPrice": 33.95000076293945,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
