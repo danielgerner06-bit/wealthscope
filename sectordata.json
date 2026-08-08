@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-08",
-  "updatedAt": "2026-08-08T15:00:49.365Z",
+  "updatedAt": "2026-08-08T15:09:01.016Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -351,7 +351,7 @@
       "eps": 7.66,
       "div": 4.31,
       "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-04",
       "miss": 0
@@ -486,7 +486,7 @@
       "eps": 0.75,
       "div": 0,
       "enrichAt": "2026-08-06",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-08-03",
       "miss": 0
@@ -519,7 +519,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-08-05",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -649,7 +649,7 @@
       "pe": null,
       "div": 1.44,
       "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -682,7 +682,7 @@
       "eps": 2.59,
       "div": 4.12,
       "enrichAt": "2026-08-07",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -780,7 +780,7 @@
       "pe": null,
       "div": null,
       "enrichAt": "2026-08-05",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.015,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -813,7 +813,7 @@
       "eps": 150.69,
       "div": 1.88,
       "enrichAt": "2026-08-05",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -978,7 +978,7 @@
       "eps": 157.31,
       "div": 2.97,
       "enrichAt": "2026-08-05",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1011,7 +1011,7 @@
       "eps": 0.04,
       "div": 0,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1044,7 +1044,7 @@
       "eps": 0.72,
       "div": 2.66,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-04",
       "miss": 0
@@ -1077,7 +1077,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-08-06",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-08-07",
       "miss": 0
@@ -1110,7 +1110,7 @@
       "eps": 0.72,
       "div": 2.58,
       "enrichAt": "2026-08-05",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1176,7 +1176,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0016,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -1209,7 +1209,7 @@
       "eps": 202.84,
       "div": 0.86,
       "enrichAt": "2026-08-06",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1275,7 +1275,7 @@
       "eps": 1.34,
       "div": 2,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1341,7 +1341,7 @@
       "eps": 1.88,
       "div": 0.8,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1406,7 +1406,7 @@
       "pe": null,
       "div": 3.2,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.0108,
+      "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-08-05",
       "miss": 0
@@ -1472,7 +1472,7 @@
       "eps": 10.27,
       "div": 4.36,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0043,
       "recheckAt": "2026-08-04",
       "miss": 0
@@ -1537,7 +1537,7 @@
       "eps": 5,
       "div": 5.52,
       "enrichAt": "2026-08-04",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -1569,7 +1569,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-04",
       "miss": 0
@@ -1601,7 +1601,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-08-04",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-08-05",
       "miss": 0
@@ -1633,7 +1633,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-05",
-      "sektorPsi": 0.004,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-08-05",
       "miss": 0
@@ -2003,40 +2003,38 @@
   "news": {
     "items": [
       {
-        "text": "US-Börsen legen zu nach enttäuschenden Arbeitsmarktdaten.",
+        "text": "DAX erreicht Rekordhoch; S&P 500 schließt auf Höchststand.",
         "stamp": "08.08.26"
       },
       {
-        "text": "Meta Platforms muss 567 Mio. Dollar Strafe zahlen.",
+        "text": "US-Senat bestätigt Todd Blanche als Justizminister; Sanktionen gegen Russland.",
         "stamp": "08.08.26"
       },
       {
-        "text": "China kauft Gold wie verrückt – Rohstoffmarkt sendet Signal.",
+        "text": "US-Arbeitsmarktdaten im Fokus; Brent-Ölpreis steigt.",
         "stamp": "07.08.26"
       },
       {
-        "text": "Allianz meldet Rekordgewinn, Aktie reagiert verhalten.",
+        "text": "SpaceX-Aktie hebt ab; KI-Anleihen von Goldman und JPMorgan.",
         "stamp": "07.08.26"
       },
       {
-        "text": "Daimler Truck meldet Gewinneinbruch, plant neues US-Werk.",
+        "text": "Alphabet (Google) drohen Milliardenklagen wegen EU-Kartellstrafe.",
         "stamp": "07.08.26"
       },
       {
-        "text": "Rheinmetall, SAP, Apple: Top-Aktien im Blick.",
-        "stamp": "07.08.26"
+        "text": "Zentralbanken kaufen im Q2 massiv Gold auf; Polen und China führen an.",
+        "stamp": "06.08.26"
       }
     ],
     "date": "2026-08-08"
   },
   "scan": {
-    "universe": 8850,
-    "scanned": 8850,
-    "lastCursor": 1009,
-    "candCursor": 332,
+    "universe": 8852,
+    "scanned": 8852,
+    "lastCursor": 1309,
+    "candCursor": 340,
     "candidates": [
-      "Boot Barn Holdings Inc.",
-      "NioCorp Developments Ltd.",
       "WinWay Technology Co., Ltd.",
       "Wan Hai Lines Ltd.",
       "EZconn Corporation",
@@ -2434,45 +2432,47 @@
       "Officina Stellare S.p.A.",
       "ABC arbitrage SA",
       "Ipsos SA",
-      "NAGA Group AG"
+      "NAGA Group AG",
+      "Nippon Avionics Co Ltd",
+      "Global Security Experts Inc."
     ],
     "noteCursor": 5,
-    "focusCursor": 3,
+    "focusCursor": 4,
     "recheckCursor": 16,
     "regionNoteCursor": 8,
     "notesDay": "2026-08-08",
     "seenBySector": {
-      "cons_cycl": 1535,
-      "cons_def": 796,
-      "materials": 1090,
-      "health": 4491,
-      "finance": 3020,
-      "energy": 1394,
-      "hardware": 1009,
-      "software": 3006,
-      "industrial": 1297,
+      "cons_cycl": 1545,
+      "cons_def": 801,
+      "materials": 1092,
+      "health": 4502,
+      "finance": 3040,
+      "energy": 1402,
+      "hardware": 1013,
+      "software": 3029,
+      "industrial": 1300,
       "utilities": 553,
-      "comm": 661,
+      "comm": 663,
       "ai_semi": 608,
       "realestate": 277
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1539,
-      "cons_def": 798,
-      "materials": 1090,
-      "health": 4494,
-      "finance": 3024,
-      "energy": 1396,
-      "hardware": 1011,
-      "software": 3018,
-      "industrial": 1305,
+      "cons_cycl": 1549,
+      "cons_def": 803,
+      "materials": 1092,
+      "health": 4505,
+      "finance": 3044,
+      "energy": 1404,
+      "hardware": 1015,
+      "software": 3041,
+      "industrial": 1308,
       "utilities": 555,
-      "comm": 663,
+      "comm": 665,
       "ai_semi": 608,
       "realestate": 278
     },
-    "heavyAt": "2026-08-08T03:00:40.694Z",
+    "heavyAt": "2026-08-08T15:01:39.332Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2483,6 +2483,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-08T15:00:49.365Z"
+  }
 }
