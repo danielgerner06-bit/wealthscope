@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-08",
-  "updatedAt": "2026-08-09T03:00:49.357Z",
+  "updated": "2026-08-09",
+  "updatedAt": "2026-08-09T03:15:21.187Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -294,7 +294,7 @@
       "buyPct": 100,
       "strongBuyPct": 75,
       "analysts": 4,
-      "upside": 100,
+      "upside": 96,
       "yahoo": "HYQ.DE",
       "peGemini": 20.4,
       "ratingCounts": {
@@ -314,11 +314,11 @@
       "perf6m": -8.91,
       "perf6mAt": "2026-08-09",
       "perf1mBefore": 2.18,
-      "pe": 19.9,
+      "pe": 20.8,
       "eps": 4.23,
       "div": 0,
-      "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0019,
+      "enrichAt": "2026-08-09",
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -346,11 +346,11 @@
       "perf6m": -12.3,
       "perf6mAt": "2026-08-09",
       "perf1mBefore": -1.08,
-      "upside": 99,
-      "pe": 13.7,
+      "upside": 94,
+      "pe": 14.8,
       "eps": 7.66,
-      "div": 4.31,
-      "enrichAt": "2026-08-04",
+      "div": 3.96,
+      "enrichAt": "2026-08-09",
       "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-04",
@@ -379,12 +379,12 @@
       "perf6m": -7.73,
       "perf6mAt": "2026-08-09",
       "perf1mBefore": -3.95,
-      "upside": 98,
-      "pe": 29.7,
+      "upside": 97,
+      "pe": 29.9,
       "eps": 0.04,
-      "div": 2.81,
-      "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0341,
+      "div": 2.82,
+      "enrichAt": "2026-08-09",
+      "sektorPsi": 0.034,
       "sektorPsiAtAdd": 0.0082,
       "recheckAt": "2026-08-05",
       "miss": 0
@@ -419,8 +419,8 @@
       "pe": null,
       "eps": -0.63,
       "div": 0,
-      "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0019,
+      "enrichAt": "2026-08-09",
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -453,7 +453,7 @@
       "eps": 4.58,
       "div": 2.87,
       "enrichAt": "2026-08-07",
-      "sektorPsi": 0.0341,
+      "sektorPsi": 0.034,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-08-04",
       "miss": 0
@@ -549,9 +549,9 @@
       "perf1mBefore": 5.99,
       "upside": 88,
       "pe": null,
-      "div": 0.15,
-      "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0068,
+      "div": 0.17,
+      "enrichAt": "2026-08-09",
+      "sektorPsi": 0.0067,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -617,7 +617,7 @@
       "eps": -0.33,
       "div": 0,
       "enrichAt": "2026-08-07",
-      "sektorPsi": 0.0054,
+      "sektorPsi": 0.0053,
       "sektorPsiAtAdd": 0.0037,
       "recheckAt": "2026-08-03",
       "miss": 0
@@ -645,10 +645,10 @@
       "perf6m": 54.01,
       "perf6mAt": "2026-08-09",
       "perf1mBefore": 6,
-      "upside": 71,
+      "upside": 65,
       "pe": null,
-      "div": 1.44,
-      "enrichAt": "2026-08-04",
+      "div": 1.57,
+      "enrichAt": "2026-08-09",
       "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-06",
@@ -715,7 +715,7 @@
       "eps": 1.64,
       "div": 3.08,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.0054,
+      "sektorPsi": 0.0053,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -835,7 +835,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-02",
+      "verifiedAt": "2026-08-09",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-04",
       "perf6m": -7.51,
@@ -846,9 +846,9 @@
       "eps": 0.48,
       "div": 0,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0019,
-      "recheckAt": "2026-08-02",
+      "recheckAt": "2026-08-09",
       "miss": 0
     },
     {
@@ -874,12 +874,12 @@
       "perf6m": 2.19,
       "perf6mAt": "2026-08-09",
       "perf1mBefore": -2.31,
-      "upside": 38,
-      "pe": 21.2,
+      "upside": 39,
+      "pe": 21.1,
       "eps": 2.23,
       "div": 1.7,
-      "enrichAt": "2026-08-04",
-      "sektorPsi": 0.0034,
+      "enrichAt": "2026-08-09",
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -945,7 +945,7 @@
       "eps": 2.07,
       "div": 6.33,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1138,12 +1138,12 @@
       "perf6m": -8.3,
       "perf6mAt": "2026-08-09",
       "perf1mBefore": 3.68,
-      "upside": 29,
-      "pe": 17,
+      "upside": 27,
+      "pe": 17.3,
       "eps": 22.02,
       "div": 4.2,
-      "enrichAt": "2026-08-04",
-      "sektorPsi": 0.005,
+      "enrichAt": "2026-08-09",
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-04",
       "miss": 0
@@ -1242,7 +1242,7 @@
       "eps": 203.08,
       "div": 0.85,
       "enrichAt": "2026-08-07",
-      "sektorPsi": 0.0034,
+      "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.01,
       "recheckAt": "2026-08-07",
       "miss": 0
@@ -1303,12 +1303,12 @@
       "perf6m": 19.26,
       "perf6mAt": "2026-08-09",
       "perf1mBefore": 1.19,
-      "upside": 21,
-      "pe": 12.5,
-      "eps": 3.04,
-      "div": 2.78,
-      "enrichAt": "2026-08-04",
-      "sektorPsi": 0.005,
+      "upside": 18,
+      "pe": 12.8,
+      "eps": 3.05,
+      "div": 2.7,
+      "enrichAt": "2026-08-09",
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-08-06",
       "miss": 0
@@ -1344,39 +1344,6 @@
       "sektorPsi": 0.0107,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-06",
-      "miss": 0
-    },
-    {
-      "ticker": "KALYANKJIL",
-      "name": "Kalyan Jewellers India Ltd.",
-      "yahoo": "KALYANKJIL.NS",
-      "sector": "cons_cycl",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 9,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 9,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-02",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-01",
-      "perf6m": 55.53,
-      "perf6mAt": "2026-08-06",
-      "perf1mBefore": 63.22,
-      "upside": 11,
-      "pe": 43.2,
-      "eps": 13.84,
-      "div": 0.25,
-      "enrichAt": "2026-08-06",
-      "sektorPsi": 0.005,
-      "sektorPsiAtAdd": 0.0058,
-      "recheckAt": "2026-08-02",
       "miss": 0
     },
     {
@@ -1439,7 +1406,7 @@
       "eps": 0.51,
       "div": 4.83,
       "enrichAt": "2026-08-08",
-      "sektorPsi": 0.005,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0071,
       "recheckAt": "2026-08-04",
       "miss": 0
@@ -1533,10 +1500,10 @@
       "perf6m": 11.11,
       "perf6mAt": "2026-08-09",
       "perf1mBefore": 28.32,
-      "pe": 15.1,
-      "eps": 5,
-      "div": 5.52,
-      "enrichAt": "2026-08-04",
+      "pe": 15.9,
+      "eps": 5.01,
+      "div": 5.01,
+      "enrichAt": "2026-08-09",
       "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-08-08",
@@ -1597,10 +1564,10 @@
       "perf6m": -17.7,
       "perf6mAt": "2026-08-09",
       "perf1mBefore": -10.44,
-      "pe": 18,
+      "pe": 18.2,
       "eps": 0.11,
       "div": 0,
-      "enrichAt": "2026-08-04",
+      "enrichAt": "2026-08-09",
       "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-08-05",
@@ -1659,9 +1626,9 @@
       "verifiedSource": "gemini",
       "seen": "2026-08-04",
       "perf1mBefore": null,
-      "enrichAt": "2026-08-04",
+      "enrichAt": "2026-08-09",
       "div": null,
-      "sektorPsi": 0.0068,
+      "sektorPsi": 0.0067,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-05",
       "miss": 0
@@ -1918,8 +1885,8 @@
       "date": "2026-07-29"
     },
     "finance": {
-      "text": "Der Finanzsektor legt dank steigender Zinsen und KI-Fantasie zu, wobei HYQ.DE und SB1 besonders profitieren. JDC zeigt ebenfalls Stärke, was auf eine breitere positive Marktstimmung hindeutet.",
-      "date": "2026-07-27"
+      "text": "Der Finanzsektor profitiert aktuell von gestiegenen Zinsen und einer positiven Konjunkturerwartung. HYQ.DE und SB1 zeigen diesbezüglich Stärke, während JDC andere Faktoren beeinflussen.",
+      "date": "2026-08-09"
     },
     "ai_semi": {
       "text": "Der KI & Halbleiter-Sektor korrigierte zuletzt stark (-12.7%), was auf Zinserhöhungen und Gewinnmitnahmen nach starken Gewinnen (6 Monate +43.95%) zurückzuführen ist.",
@@ -1992,8 +1959,8 @@
       "date": "2026-08-08"
     },
     "latam": {
-      "text": "Lateinamerika erholt sich dank guter Konjunktur leicht. Langfristig belasten aber globale Unsicherheiten.",
-      "date": "2026-07-30"
+      "text": "Lateinamerika: Kurzer Boom durch stabile Konjunktur, aber langfristig belasten globale Unsicherheiten.",
+      "date": "2026-08-09"
     },
     "world": {
       "text": "Weltweit stagnieren die Märkte bei +0.28% in 30 Tagen, weit unter dem Normalniveau von +1.45%. Dies deutet auf eine breite Konjunkturschwäche hin, die die Erwartungen dämpft.",
@@ -2003,41 +1970,22 @@
   "news": {
     "items": [
       {
-        "text": "DAX erreicht Rekordhoch; S&P 500 schließt auf Höchststand.",
+        "text": "US-Arbeitsmarkt kühlt ab: Stellenabbau im Juli überraschend.",
         "stamp": "08.08.26"
       },
       {
-        "text": "US-Senat bestätigt Todd Blanche als Justizminister; Sanktionen gegen Russland.",
+        "text": "Liechtenstein erleidet Hackerangriff auf Finanzplatz-Datenbanken.",
         "stamp": "08.08.26"
-      },
-      {
-        "text": "US-Arbeitsmarktdaten im Fokus; Brent-Ölpreis steigt.",
-        "stamp": "07.08.26"
-      },
-      {
-        "text": "SpaceX-Aktie hebt ab; KI-Anleihen von Goldman und JPMorgan.",
-        "stamp": "07.08.26"
-      },
-      {
-        "text": "Alphabet (Google) drohen Milliardenklagen wegen EU-Kartellstrafe.",
-        "stamp": "07.08.26"
-      },
-      {
-        "text": "Zentralbanken kaufen im Q2 massiv Gold auf; Polen und China führen an.",
-        "stamp": "06.08.26"
       }
     ],
-    "date": "2026-08-08"
+    "date": "2026-08-09"
   },
   "scan": {
     "universe": 8852,
     "scanned": 8852,
-    "lastCursor": 1309,
-    "candCursor": 340,
+    "lastCursor": 1609,
+    "candCursor": 348,
     "candidates": [
-      "WinWay Technology Co., Ltd.",
-      "Wan Hai Lines Ltd.",
-      "EZconn Corporation",
       "Nien Made Enterprise Co., Ltd.",
       "AblePrint Technology Co., Ltd.",
       "Voltronic Power Technology Corp.",
@@ -2434,45 +2382,48 @@
       "Ipsos SA",
       "NAGA Group AG",
       "Nippon Avionics Co Ltd",
-      "Global Security Experts Inc."
+      "Global Security Experts Inc.",
+      "Innodata Inc.",
+      "SEALSQ Corp.",
+      "D-Wave Quantum Inc."
     ],
-    "noteCursor": 5,
-    "focusCursor": 4,
+    "noteCursor": 6,
+    "focusCursor": 5,
     "recheckCursor": 16,
-    "regionNoteCursor": 8,
-    "notesDay": "2026-08-08",
+    "regionNoteCursor": 9,
+    "notesDay": "2026-08-09",
     "seenBySector": {
-      "cons_cycl": 1545,
-      "cons_def": 801,
-      "materials": 1092,
-      "health": 4502,
-      "finance": 3040,
+      "cons_cycl": 1552,
+      "cons_def": 808,
+      "materials": 1097,
+      "health": 4526,
+      "finance": 3064,
       "energy": 1402,
-      "hardware": 1013,
-      "software": 3029,
-      "industrial": 1300,
-      "utilities": 553,
-      "comm": 663,
-      "ai_semi": 608,
-      "realestate": 277
+      "hardware": 1016,
+      "software": 3041,
+      "industrial": 1307,
+      "utilities": 555,
+      "comm": 665,
+      "ai_semi": 611,
+      "realestate": 279
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1549,
-      "cons_def": 803,
-      "materials": 1092,
-      "health": 4505,
-      "finance": 3044,
+      "cons_cycl": 1555,
+      "cons_def": 810,
+      "materials": 1097,
+      "health": 4529,
+      "finance": 3068,
       "energy": 1404,
-      "hardware": 1015,
-      "software": 3041,
-      "industrial": 1308,
-      "utilities": 555,
-      "comm": 665,
-      "ai_semi": 608,
-      "realestate": 278
+      "hardware": 1018,
+      "software": 3053,
+      "industrial": 1315,
+      "utilities": 557,
+      "comm": 667,
+      "ai_semi": 611,
+      "realestate": 280
     },
-    "heavyAt": "2026-08-08T15:01:39.332Z",
+    "heavyAt": "2026-08-09T03:07:46.249Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2483,6 +2434,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-09T03:00:49.357Z"
+  }
 }
