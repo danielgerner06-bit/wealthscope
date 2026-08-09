@@ -8662,6 +8662,26 @@
       "startPrice": 33.95000076293945,
       "perf": [],
       "outperformPct": null
+    },
+    "LBIRD": {
+      "ticker": "LBIRD",
+      "name": "Lumibird SA",
+      "yahoo": "LBIRD.PA",
+      "sector": "hardware",
+      "region": "europe",
+      "buyPct": 100,
+      "strongBuyPct": 100,
+      "upside": 19,
+      "pe": 42.2,
+      "perf6mAtAdd": 15.87,
+      "perf1mBefore": -1.83,
+      "sektorPsiAtAdd": null,
+      "analysts": 3,
+      "div": 1.37,
+      "seen": "2026-08-09",
+      "seenMs": 1786233600000,
+      "startPrice": 26.800000190734863,
+      "perf": []
     }
   },
   "findings": {
