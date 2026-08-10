@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-10",
-  "updatedAt": "2026-08-10T20:00:08.708Z",
+  "updatedAt": "2026-08-10T21:00:08.698Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": 2.43,
+      "perf": 2.41,
       "avg30": 0.04,
-      "perf6m": 1.44
+      "perf6m": 1.42
     },
     {
       "id": "cons_def",
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": 4.37,
+      "perf": 4.35,
       "avg30": 1.27,
-      "perf6m": 4.86
+      "perf6m": 4.85
     },
     {
       "id": "germany",
-      "perf": 5.75,
+      "perf": 5.74,
       "avg30": 0.12,
-      "perf6m": 1.45
+      "perf6m": 1.43
     },
     {
       "id": "japan",
@@ -257,9 +257,9 @@
     },
     {
       "id": "em",
-      "perf": -2.39,
+      "perf": -2.41,
       "avg30": 2.51,
-      "perf6m": 10.86
+      "perf6m": 10.83
     },
     {
       "id": "apac",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": 2.27,
+      "perf": 2.28,
       "avg30": -0.58,
-      "perf6m": -5.9
+      "perf6m": -5.89
     },
     {
       "id": "latam",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 3.17,
+      "perf": 3.13,
       "avg30": 1.43,
-      "perf6m": 11.22
+      "perf6m": 11.18
     }
   ],
   "topStocks": [
@@ -2477,5 +2477,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-10T20:00:08.708Z"
+  "yahooAt": "2026-08-10T21:00:08.698Z"
 }
