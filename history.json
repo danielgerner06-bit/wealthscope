@@ -8140,13 +8140,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 33,
-      "upside": 27,
-      "pe": 23.1,
+      "upside": 22,
+      "pe": 24.1,
       "perf6mAtAdd": 7.97,
       "perf1mBefore": -7.48,
       "sektorPsiAtAdd": 0.0106,
       "analysts": 12,
-      "div": 0.86,
+      "div": 0.82,
       "seen": "2026-06-17",
       "seenMs": 1781654400000,
       "startPrice": 3850.5,
@@ -8284,7 +8284,7 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 80,
-      "upside": 32,
+      "upside": 29,
       "pe": null,
       "perf6mAtAdd": 50,
       "perf1mBefore": -10.76,
@@ -8356,7 +8356,7 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 93,
+      "upside": 100,
       "pe": 9.3,
       "perf6mAtAdd": -0.87,
       "perf1mBefore": -9.44,
@@ -8366,8 +8366,11 @@
       "seen": "2026-07-12",
       "seenMs": 1783814400000,
       "startPrice": 7.480000019073486,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        -8.63
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "NEAG": {
       "ticker": "NEAG",
@@ -8689,7 +8692,7 @@
     "factors": [
       {
         "name": "Strong Buy",
-        "spread": 15.8,
+        "spread": 16.2,
         "best": {
           "k": "<70%",
           "avg": 12.1,
@@ -8697,8 +8700,8 @@
         },
         "worst": {
           "k": "95%+",
-          "avg": -3.7,
-          "n": 12
+          "avg": -4.1,
+          "n": 13
         }
       },
       {
@@ -8717,11 +8720,11 @@
       },
       {
         "name": "Kursziel",
-        "spread": 8.4,
+        "spread": 8.3,
         "best": {
           "k": "40%+",
-          "avg": 3.7,
-          "n": 142
+          "avg": 3.6,
+          "n": 143
         },
         "worst": {
           "k": "<10%",
@@ -8731,7 +8734,7 @@
       },
       {
         "name": "Analysten",
-        "spread": 7.6,
+        "spread": 7.7,
         "best": {
           "k": "15+",
           "avg": 2.3,
@@ -8739,17 +8742,17 @@
         },
         "worst": {
           "k": "1-4",
-          "avg": -5.3,
-          "n": 91
+          "avg": -5.4,
+          "n": 92
         }
       },
       {
         "name": "KGV",
-        "spread": 7.5,
+        "spread": 7.3,
         "best": {
           "k": "<15",
-          "avg": 7.1,
-          "n": 63
+          "avg": 6.9,
+          "n": 64
         },
         "worst": {
           "k": "40+",
@@ -8759,15 +8762,15 @@
       }
     ],
     "combo": null,
-    "sampleSize": 357,
+    "sampleSize": 358,
     "maxMonths": 2,
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "Die \"Strong Buy\"-Ausprägung mit 12,1% durchschnittlicher Performance lief am besten. \"KGV\" hatte mit 7,5% kaum Einfluss.",
-    "date": "2026-08-10",
+    "text": "\"Strong Buy\" mit <70% K-Wert lief mit 12,1% am besten. \"KGV\" zeigte kaum Einfluss, mit einer Spanne von 7,3%.",
+    "date": "2026-08-11",
     "stage": "real",
     "months": 2
   },
-  "kiDay": "2026-08-10"
+  "kiDay": "2026-08-11"
 }
