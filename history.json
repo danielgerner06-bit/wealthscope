@@ -190,7 +190,7 @@
       "pe": 23.1,
       "perf6mAtAdd": -18.44,
       "perf1mBefore": 18.56,
-      "sektorPsiAtAdd": null,
+      "sektorPsiAtAdd": 0.0133,
       "analysts": 1,
       "div": 0.26,
       "seen": "2026-08-12",
