@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-13",
-  "updatedAt": "2026-08-13T18:00:25.603Z",
+  "updatedAt": "2026-08-13T19:00:23.617Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 10.98,
+      "perf": 10.99,
       "avg30": -0.75,
-      "perf6m": 22.16
+      "perf6m": 22.17
     },
     {
       "id": "ai_semi",
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 6.29,
+      "perf": 6.14,
       "avg30": 1.69,
-      "perf6m": 7.68
+      "perf6m": 7.53
     },
     {
       "id": "finance",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": 1.8,
+      "perf": 2.18,
       "avg30": 0.03,
-      "perf6m": 0.31
+      "perf6m": 0.69
     },
     {
       "id": "cons_def",
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": 7.44,
+      "perf": 7.38,
       "avg30": 2.89,
-      "perf6m": 13.65
+      "perf6m": 13.59
     },
     {
       "id": "materials",
@@ -239,9 +239,9 @@
     },
     {
       "id": "germany",
-      "perf": 5.99,
+      "perf": 6.05,
       "avg30": 0.21,
-      "perf6m": -0.79
+      "perf6m": -0.73
     },
     {
       "id": "japan",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": 2.5,
+      "perf": 2.57,
       "avg30": -0.56,
-      "perf6m": -6.69
+      "perf6m": -6.63
     },
     {
       "id": "latam",
@@ -2603,5 +2603,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-13T18:00:25.603Z"
+  "yahooAt": "2026-08-13T19:00:23.617Z"
 }
