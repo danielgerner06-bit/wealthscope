@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-13",
-  "updatedAt": "2026-08-14T03:00:37.099Z",
+  "updated": "2026-08-14",
+  "updatedAt": "2026-08-14T03:37:43.585Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -166,8 +166,8 @@
     {
       "id": "comm",
       "perf": -0.29,
-      "avg30": -0.14,
-      "perf6m": -4.8
+      "avg30": -0.12,
+      "perf6m": -4.25
     },
     {
       "id": "health",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": 2.08,
-      "avg30": 0.01,
-      "perf6m": 0.59
+      "perf": 1.37,
+      "avg30": 0.02,
+      "perf6m": 0.77
     },
     {
       "id": "cons_def",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 3,
-      "avg30": 1.76,
-      "perf6m": 6.83
+      "perf": 2.58,
+      "avg30": 1.8,
+      "perf6m": 9.68
     },
     {
       "id": "energy",
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": -0.16,
-      "avg30": 0.76,
-      "perf6m": 3.95
+      "perf": 0.09,
+      "avg30": 0.75,
+      "perf6m": 5.95
     }
   ],
   "bars30Region": [
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": 4.53,
-      "avg30": 1.31,
-      "perf6m": 3.19
+      "perf": 4.4,
+      "avg30": 1.3,
+      "perf6m": 4.9
     },
     {
       "id": "germany",
-      "perf": 6.21,
-      "avg30": 0.23,
-      "perf6m": -0.59
+      "perf": 5.95,
+      "avg30": 0.21,
+      "perf6m": 1.64
     },
     {
       "id": "japan",
@@ -251,39 +251,39 @@
     },
     {
       "id": "china",
-      "perf": 3.48,
-      "avg30": -0.89,
-      "perf6m": -11.12
+      "perf": 3.67,
+      "avg30": -0.93,
+      "perf6m": -8.67
     },
     {
       "id": "em",
-      "perf": 1.36,
-      "avg30": 2.45,
-      "perf6m": 9.67
+      "perf": 1.2,
+      "avg30": 2.46,
+      "perf6m": 9.83
     },
     {
       "id": "apac",
-      "perf": 3.63,
-      "avg30": 2.37,
-      "perf6m": 10.62
+      "perf": 2.27,
+      "avg30": 2.43,
+      "perf6m": 15.44
     },
     {
       "id": "india",
-      "perf": 2.57,
-      "avg30": -0.57,
-      "perf6m": -6.63
+      "perf": 1.96,
+      "avg30": -0.58,
+      "perf6m": -6.19
     },
     {
       "id": "latam",
-      "perf": -3.2,
-      "avg30": 2.57,
-      "perf6m": -8.66
+      "perf": -0.8,
+      "avg30": 2.58,
+      "perf6m": -5.63
     },
     {
       "id": "world",
-      "perf": 3.14,
-      "avg30": 1.44,
-      "perf6m": 9.67
+      "perf": 3.26,
+      "avg30": 1.46,
+      "perf6m": 11.32
     }
   ],
   "topStocks": [
@@ -315,7 +315,7 @@
       "eps": 0.73,
       "div": 0,
       "enrichAt": "2026-08-11",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-08-10",
       "miss": 0
@@ -343,12 +343,12 @@
       "perf6m": -7.73,
       "perf6mAt": "2026-08-09",
       "perf1mBefore": -3.95,
-      "upside": 97,
-      "pe": 29.9,
+      "upside": 95,
+      "pe": 30.2,
       "eps": 0.04,
-      "div": 2.82,
-      "enrichAt": "2026-08-09",
-      "sektorPsi": 0.0684,
+      "div": 2.78,
+      "enrichAt": "2026-08-14",
+      "sektorPsi": 0.0683,
       "sektorPsiAtAdd": 0.0082,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -383,7 +383,7 @@
       "pe": null,
       "eps": -0.63,
       "div": 0,
-      "enrichAt": "2026-08-09",
+      "enrichAt": "2026-08-14",
       "sektorPsi": 0.0026,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-08-08",
@@ -396,7 +396,7 @@
       "buyPct": 100,
       "strongBuyPct": 75,
       "analysts": 4,
-      "upside": 96,
+      "upside": 85,
       "yahoo": "HYQ.DE",
       "peGemini": 20.4,
       "ratingCounts": {
@@ -416,10 +416,10 @@
       "perf6m": 0.53,
       "perf6mAt": "2026-08-14",
       "perf1mBefore": 2.18,
-      "pe": 20.8,
-      "eps": 4.23,
+      "pe": 19.8,
+      "eps": 4.29,
       "div": 0,
-      "enrichAt": "2026-08-09",
+      "enrichAt": "2026-08-14",
       "sektorPsi": 0.0026,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-08-08",
@@ -453,7 +453,7 @@
       "eps": 4.59,
       "div": 2.98,
       "enrichAt": "2026-08-12",
-      "sektorPsi": 0.0684,
+      "sektorPsi": 0.0683,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -482,10 +482,10 @@
       "perf6mAt": "2026-08-14",
       "perf1mBefore": -1.08,
       "upside": 94,
-      "pe": 14.8,
+      "pe": 13.5,
       "eps": 7.66,
-      "div": 3.96,
-      "enrichAt": "2026-08-09",
+      "div": 4.31,
+      "enrichAt": "2026-08-14",
       "sektorPsi": 0.0131,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-11",
@@ -519,7 +519,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-08-10",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.007,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -547,11 +547,11 @@
       "perf6m": 92.59,
       "perf6mAt": "2026-08-14",
       "perf1mBefore": 5.99,
-      "upside": 88,
+      "upside": 63,
       "pe": null,
-      "div": 0.17,
-      "enrichAt": "2026-08-09",
-      "sektorPsi": 0.0115,
+      "div": 0.15,
+      "enrichAt": "2026-08-14",
+      "sektorPsi": 0.0172,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -584,7 +584,7 @@
       "eps": -0.1,
       "div": 8.88,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.0076,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -645,10 +645,10 @@
       "perf6m": 45.91,
       "perf6mAt": "2026-08-14",
       "perf1mBefore": 6,
-      "upside": 65,
+      "upside": 46,
       "pe": null,
-      "div": 1.57,
-      "enrichAt": "2026-08-09",
+      "div": 1.45,
+      "enrichAt": "2026-08-14",
       "sektorPsi": 0.0131,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-13",
@@ -682,7 +682,7 @@
       "eps": 2.59,
       "div": 4.12,
       "enrichAt": "2026-08-12",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -846,7 +846,7 @@
       "eps": 153.23,
       "div": 1.82,
       "enrichAt": "2026-08-10",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -907,11 +907,11 @@
       "perf6m": 4.02,
       "perf6mAt": "2026-08-14",
       "perf1mBefore": -2.31,
-      "upside": 39,
-      "pe": 21.1,
+      "upside": 42,
+      "pe": 20.6,
       "eps": 2.23,
-      "div": 1.7,
-      "enrichAt": "2026-08-09",
+      "div": 1.74,
+      "enrichAt": "2026-08-14",
       "sektorPsi": 0.0105,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-08-08",
@@ -1077,7 +1077,7 @@
       "eps": 1.43,
       "div": 2.27,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0038,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1110,7 +1110,7 @@
       "eps": 157.31,
       "div": 2.97,
       "enrichAt": "2026-08-10",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1165,7 +1165,7 @@
       "strongBuyPct": 80,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-07",
+      "verifiedAt": "2026-08-14",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-02",
       "perf6m": 50,
@@ -1178,7 +1178,7 @@
       "enrichAt": "2026-08-11",
       "sektorPsi": 0.0018,
       "sektorPsiAtAdd": 0.0045,
-      "recheckAt": "2026-08-07",
+      "recheckAt": "2026-08-14",
       "miss": 0
     },
     {
@@ -1204,12 +1204,12 @@
       "perf6m": -8.62,
       "perf6mAt": "2026-08-14",
       "perf1mBefore": 3.68,
-      "upside": 27,
-      "pe": 17.3,
-      "eps": 22.02,
-      "div": 4.2,
-      "enrichAt": "2026-08-09",
-      "sektorPsi": 0.0046,
+      "upside": 28,
+      "pe": 17.1,
+      "eps": 22.04,
+      "div": 4.09,
+      "enrichAt": "2026-08-14",
+      "sektorPsi": 0.0052,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1275,7 +1275,7 @@
       "eps": 202.85,
       "div": 0.82,
       "enrichAt": "2026-08-11",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1297,7 +1297,7 @@
       "strongBuyPct": 33,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-08-07",
+      "verifiedAt": "2026-08-14",
       "verifiedSource": "yahoo",
       "seen": "2026-07-23",
       "perf6m": 16.38,
@@ -1310,7 +1310,7 @@
       "enrichAt": "2026-08-12",
       "sektorPsi": 0.0105,
       "sektorPsiAtAdd": 0.01,
-      "recheckAt": "2026-08-07",
+      "recheckAt": "2026-08-14",
       "miss": 0
     },
     {
@@ -1402,11 +1402,11 @@
       "perf6m": 23.67,
       "perf6mAt": "2026-08-14",
       "perf1mBefore": -1.83,
-      "upside": 19,
-      "pe": 42.2,
+      "upside": 13,
+      "pe": 44.5,
       "eps": 0.64,
-      "div": 1.37,
-      "enrichAt": "2026-08-09",
+      "div": 1.3,
+      "enrichAt": "2026-08-14",
       "sektorPsi": 0.0105,
       "sektorPsiAtAdd": 0.005,
       "recheckAt": "2026-08-10",
@@ -1435,12 +1435,12 @@
       "perf6m": 14.61,
       "perf6mAt": "2026-08-14",
       "perf1mBefore": 1.19,
-      "upside": 18,
-      "pe": 12.8,
-      "eps": 3.05,
-      "div": 2.7,
-      "enrichAt": "2026-08-09",
-      "sektorPsi": 0.0046,
+      "upside": 17,
+      "pe": 12.9,
+      "eps": 3.04,
+      "div": 2.66,
+      "enrichAt": "2026-08-14",
+      "sektorPsi": 0.0052,
       "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1473,7 +1473,7 @@
       "eps": 0.5,
       "div": 4.93,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0046,
+      "sektorPsi": 0.0052,
       "sektorPsiAtAdd": 0.0071,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1571,7 +1571,7 @@
       "eps": 10.28,
       "div": 4.36,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0043,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1634,9 +1634,9 @@
       "perf1mBefore": 28.32,
       "pe": 15.9,
       "eps": 5.01,
-      "div": 5.01,
-      "enrichAt": "2026-08-09",
-      "sektorPsi": 0.0038,
+      "div": 5.03,
+      "enrichAt": "2026-08-14",
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -1645,7 +1645,7 @@
       "ticker": "YOC",
       "name": "YOC AG",
       "yahoo": "YOC.DE",
-      "sector": "software",
+      "sector": "comm",
       "buyPct": 100,
       "ratingCounts": {
         "buy": 0,
@@ -1658,7 +1658,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-08-11",
+      "verifiedAt": "2026-08-14",
       "verifiedSource": "yahoo",
       "seen": "2026-06-29",
       "perf6m": -19.2,
@@ -1668,7 +1668,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0172,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1690,17 +1690,17 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-12",
+      "verifiedAt": "2026-08-14",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-30",
       "perf6m": -17.22,
       "perf6mAt": "2026-08-14",
       "perf1mBefore": -10.44,
-      "pe": 18.2,
+      "pe": 18.3,
       "eps": 0.11,
       "div": 0,
-      "enrichAt": "2026-08-09",
-      "sektorPsi": 0.0038,
+      "enrichAt": "2026-08-14",
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -1732,7 +1732,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-10",
-      "sektorPsi": 0.0038,
+      "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -1758,9 +1758,9 @@
       "verifiedSource": "gemini",
       "seen": "2026-08-04",
       "perf1mBefore": null,
-      "enrichAt": "2026-08-09",
+      "enrichAt": "2026-08-14",
       "div": null,
-      "sektorPsi": 0.0115,
+      "sektorPsi": 0.0172,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -2065,8 +2065,8 @@
       "date": "2026-08-13"
     },
     "materials": {
-      "text": "Rohstoffsektor zeigt leicht überdurchschnittliche Performance. Globale Konjunkturerholung stützt Nachfrage, während geopolitische Risiken Preise stabilisieren.",
-      "date": "2026-08-01"
+      "text": "Rohstoffsektor stark, übertrifft Normalniveau durch Energie- und Geopolitik-Unsicherheiten. Langfristig bleibt Wachstum gedämpft.",
+      "date": "2026-08-14"
     },
     "utilities": {
       "text": "Versorger leiden unter Zinsanstieg, der höhere Finanzierungskosten und Konkurrenz durch Anleihen bedeutet. NEAG zeigt schwache Performance.",
@@ -2087,8 +2087,8 @@
       "date": "2026-08-06"
     },
     "japan": {
-      "text": "Japanische Aktien fallen kurzfristig wegen normaler Zinsentwicklung. Langfristig überwiegt die positive Konjunkturerwartung.",
-      "date": "2026-08-04"
+      "text": "Japanische Aktien steigen stark, übertreffen Normalniveau. Starke Konjunktur und positive KI-Erwartungen treiben die Kurse.",
+      "date": "2026-08-14"
     },
     "usa": {
       "text": "USA: Starke Konjunktur und KI-Boom treiben Märkte. Die 30-Tage-Performance übertrifft das Normalniveau deutlich.",
@@ -2122,39 +2122,38 @@
   "news": {
     "items": [
       {
-        "text": "US-Inflation sinkt im Juli auf 3,4 Prozent, Kernrate bei 2,5 Prozent.",
-        "stamp": "12.08.26"
+        "text": "Michael Burry erhöht Short-Wetten – Ende des KI-Booms?",
+        "stamp": "14.08.26"
       },
       {
-        "text": "OPEC senkt Nachfrageprognose für Öl erneut, erwartet aber höheres Wachstum 2027.",
-        "stamp": "12.08.26"
+        "text": "Chinas Immobilienkrise bekommt neuen Zündstoff",
+        "stamp": "14.08.26"
       },
       {
-        "text": "US-Ölbestände steigen unerwartet wegen höherer Importe.",
-        "stamp": "12.08.26"
+        "text": "Apple plant Millionen-Deals für Siri-Nachrichten",
+        "stamp": "14.08.26"
       },
       {
-        "text": "Aktien New York: Tech-Sektor von guten Unternehmensausblicken getragen.",
-        "stamp": "12.08.26"
+        "text": "Iran will an Öl-Barrel mitverdienen – 20 Mrd. für freie Fahrt",
+        "stamp": "14.08.26"
       },
       {
-        "text": "Temasek nimmt Chip-Giganten ins Visier, Samsung und SK hynix schießen hoch.",
-        "stamp": "12.08.26"
+        "text": "Kupferrallye abverkauft: Steht Kupferpreis vor Beben?",
+        "stamp": "14.08.26"
       },
       {
-        "text": "Super Micro Computer-Aktie springt hoch: Gewinn zieht an, Ausblick überzeugt.",
-        "stamp": "12.08.26"
+        "text": "EU gibt grünes Licht für Milliarden-Deal von VW",
+        "stamp": "14.08.26"
       }
     ],
-    "date": "2026-08-13"
+    "date": "2026-08-14"
   },
   "scan": {
-    "universe": 8855,
-    "scanned": 8855,
-    "lastCursor": 4009,
-    "candCursor": 12,
+    "universe": 8856,
+    "scanned": 8856,
+    "lastCursor": 4309,
+    "candCursor": 20,
     "candidates": [
-      "Century Iron and Steel Industrial Co., Ltd.",
       "GlobalWafers Co., Ltd.",
       "monday.com Ltd.",
       "Ouster, Inc.",
@@ -2553,45 +2552,46 @@
       "AirBoss of America Corp.",
       "NioCorp Developments Ltd.",
       "Connect Biopharma Holdings Limited",
-      "EVOTECH SE"
+      "EVOTECH SE",
+      "Alphatec Holdings, Inc."
     ],
-    "noteCursor": 10,
-    "focusCursor": 5,
+    "noteCursor": 11,
+    "focusCursor": 6,
     "recheckCursor": 16,
-    "regionNoteCursor": 3,
-    "notesDay": "2026-08-13",
+    "regionNoteCursor": 4,
+    "notesDay": "2026-08-14",
     "seenBySector": {
-      "cons_cycl": 1609,
-      "cons_def": 836,
-      "materials": 1134,
-      "health": 4674,
-      "finance": 3183,
-      "energy": 1461,
-      "hardware": 1059,
-      "software": 3138,
-      "industrial": 1369,
-      "utilities": 583,
-      "comm": 692,
-      "ai_semi": 622,
-      "realestate": 293
+      "cons_cycl": 1612,
+      "cons_def": 841,
+      "materials": 1138,
+      "health": 4705,
+      "finance": 3188,
+      "energy": 1467,
+      "hardware": 1065,
+      "software": 3151,
+      "industrial": 1375,
+      "utilities": 584,
+      "comm": 695,
+      "ai_semi": 627,
+      "realestate": 295
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1612,
-      "cons_def": 838,
-      "materials": 1134,
-      "health": 4677,
-      "finance": 3187,
-      "energy": 1463,
-      "hardware": 1065,
-      "software": 3150,
-      "industrial": 1377,
-      "utilities": 585,
-      "comm": 694,
-      "ai_semi": 622,
-      "realestate": 294
+      "cons_cycl": 1615,
+      "cons_def": 843,
+      "materials": 1138,
+      "health": 4708,
+      "finance": 3192,
+      "energy": 1469,
+      "hardware": 1071,
+      "software": 3162,
+      "industrial": 1383,
+      "utilities": 586,
+      "comm": 698,
+      "ai_semi": 627,
+      "realestate": 296
     },
-    "heavyAt": "2026-08-13T09:44:33.433Z",
+    "heavyAt": "2026-08-14T03:29:43.968Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2602,6 +2602,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-14T03:00:37.099Z"
+  }
 }
