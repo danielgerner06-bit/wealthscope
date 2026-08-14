@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-14",
-  "updatedAt": "2026-08-14T04:00:37.288Z",
+  "updatedAt": "2026-08-14T05:00:36.315Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -166,8 +166,8 @@
     {
       "id": "comm",
       "perf": -0.29,
-      "avg30": -0.12,
-      "perf6m": -4.25
+      "avg30": -0.14,
+      "perf6m": -4.8
     },
     {
       "id": "health",
@@ -2603,5 +2603,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-14T04:00:37.288Z"
+  "yahooAt": "2026-08-14T05:00:36.315Z"
 }
