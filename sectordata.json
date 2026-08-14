@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-14",
-  "updatedAt": "2026-08-14T15:00:36.316Z",
+  "updatedAt": "2026-08-14T15:34:19.407Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,27 +147,27 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 11.57,
+      "perf": 11.69,
       "avg30": -0.71,
-      "perf6m": 25.61
+      "perf6m": 25.74
     },
     {
       "id": "ai_semi",
-      "perf": -1.16,
+      "perf": -1.56,
       "avg30": 7.83,
-      "perf6m": 56.14
+      "perf6m": 55.51
     },
     {
       "id": "hardware",
-      "perf": 4.79,
-      "avg30": 3.14,
-      "perf6m": 33.48
+      "perf": 4.29,
+      "avg30": 3.13,
+      "perf6m": 32.84
     },
     {
       "id": "comm",
-      "perf": -0.09,
-      "avg30": -0.14,
-      "perf6m": -3.59
+      "perf": 0.86,
+      "avg30": -0.13,
+      "perf6m": -3.7
     },
     {
       "id": "health",
@@ -177,27 +177,27 @@
     },
     {
       "id": "finance",
-      "perf": 2.83,
+      "perf": 2.91,
       "avg30": 0.71,
-      "perf6m": 10.28
+      "perf6m": 10.36
     },
     {
       "id": "cons_cycl",
-      "perf": 1.21,
+      "perf": 1,
       "avg30": 0.02,
-      "perf6m": 0.55
+      "perf6m": 0.34
     },
     {
       "id": "cons_def",
-      "perf": 3,
+      "perf": 3.03,
       "avg30": 0.52,
-      "perf6m": -2.75
+      "perf6m": -2.71
     },
     {
       "id": "industrial",
-      "perf": 2.63,
-      "avg30": 1.8,
-      "perf6m": 7.33
+      "perf": 3.18,
+      "avg30": 1.77,
+      "perf6m": 6.88
     },
     {
       "id": "energy",
@@ -219,23 +219,23 @@
     },
     {
       "id": "realestate",
-      "perf": 1.44,
+      "perf": 1.26,
       "avg30": 0.76,
-      "perf6m": 6.79
+      "perf6m": 5.42
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": 3.34,
+      "perf": 3.21,
       "avg30": 1.48,
-      "perf6m": 12.28
+      "perf6m": 12.14
     },
     {
       "id": "europe",
-      "perf": 4.04,
+      "perf": 4.01,
       "avg30": 1.32,
-      "perf6m": 3.54
+      "perf6m": 3.51
     },
     {
       "id": "germany",
@@ -245,45 +245,45 @@
     },
     {
       "id": "japan",
-      "perf": 5.21,
+      "perf": 5.01,
       "avg30": 1.56,
-      "perf6m": 5.36
+      "perf6m": 5.15
     },
     {
       "id": "china",
-      "perf": 0.91,
+      "perf": 0.85,
       "avg30": -0.88,
-      "perf6m": -11.79
+      "perf6m": -11.84
     },
     {
       "id": "em",
-      "perf": 1.69,
+      "perf": 1.46,
       "avg30": 2.44,
-      "perf6m": 9.56
+      "perf6m": 9.32
     },
     {
       "id": "apac",
-      "perf": 4.38,
+      "perf": 4.28,
       "avg30": 2.38,
-      "perf6m": 9.96
+      "perf6m": 9.86
     },
     {
       "id": "india",
-      "perf": 2.52,
-      "avg30": -0.56,
+      "perf": 2.5,
+      "avg30": -0.57,
       "perf6m": -6.69
     },
     {
       "id": "latam",
-      "perf": -3.2,
+      "perf": -3.22,
       "avg30": 2.55,
-      "perf6m": -8.01
+      "perf6m": -8.02
     },
     {
       "id": "world",
-      "perf": 3.6,
+      "perf": 3.5,
       "avg30": 1.45,
-      "perf6m": 10.29
+      "perf6m": 10.18
     }
   ],
   "topStocks": [
@@ -321,39 +321,6 @@
       "miss": 0
     },
     {
-      "ticker": "ADXR",
-      "name": "Audax Renovables, S.A.",
-      "yahoo": "ADX.MC",
-      "sector": "utilities",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 2,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 2,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-12",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-08-04",
-      "perf6m": 1.51,
-      "perf6mAt": "2026-08-14",
-      "perf1mBefore": -3.95,
-      "upside": 95,
-      "pe": 30.2,
-      "eps": 0.04,
-      "div": 2.78,
-      "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0683,
-      "sektorPsiAtAdd": 0.0082,
-      "recheckAt": "2026-08-12",
-      "miss": 0
-    },
-    {
       "ticker": "SB1",
       "name": "Smartbroker Holding AG",
       "sector": "finance",
@@ -384,43 +351,7 @@
       "eps": -0.63,
       "div": 0,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0026,
-      "sektorPsiAtAdd": 0.0085,
-      "recheckAt": "2026-08-08",
-      "miss": 0
-    },
-    {
-      "ticker": "HYQ.DE",
-      "name": "Hypoport SE",
-      "sector": "finance",
-      "buyPct": 100,
-      "strongBuyPct": 75,
-      "analysts": 4,
-      "upside": 85,
-      "yahoo": "HYQ.DE",
-      "peGemini": 20.4,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "ratingSource": "analysten-konsens",
-      "ratingUrl": null,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "seen": "2026-06-05",
-      "verifiedAt": "2026-08-08",
-      "verifiedSource": "stockanalysis+yahoo",
-      "perf6m": 0.53,
-      "perf6mAt": "2026-08-14",
-      "perf1mBefore": 2.18,
-      "pe": 19.8,
-      "eps": 4.29,
-      "div": 0,
-      "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0026,
+      "sektorPsi": 0.0031,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -453,9 +384,42 @@
       "eps": 4.59,
       "div": 2.98,
       "enrichAt": "2026-08-12",
-      "sektorPsi": 0.0683,
+      "sektorPsi": 0.0681,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-08-11",
+      "miss": 0
+    },
+    {
+      "ticker": "ADXR",
+      "name": "Audax Renovables, S.A.",
+      "yahoo": "ADX.MC",
+      "sector": "utilities",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-12",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-08-04",
+      "perf6m": 1.51,
+      "perf6mAt": "2026-08-14",
+      "perf1mBefore": -3.95,
+      "upside": 95,
+      "pe": 30.2,
+      "eps": 0.04,
+      "div": 2.78,
+      "enrichAt": "2026-08-14",
+      "sektorPsi": 0.0681,
+      "sektorPsiAtAdd": 0.0082,
+      "recheckAt": "2026-08-12",
       "miss": 0
     },
     {
@@ -486,7 +450,7 @@
       "eps": 7.66,
       "div": 4.31,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0131,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -525,35 +489,39 @@
       "miss": 0
     },
     {
-      "ticker": "402340",
-      "name": "SK Square Co., Ltd.",
-      "yahoo": "402340.KS",
-      "sector": "comm",
+      "ticker": "HYQ.DE",
+      "name": "Hypoport SE",
+      "sector": "finance",
       "buyPct": 100,
+      "strongBuyPct": 75,
+      "analysts": 4,
+      "upside": 85,
+      "yahoo": "HYQ.DE",
+      "peGemini": 20.4,
       "ratingCounts": {
-        "buy": 4,
-        "outperform": 6,
+        "buy": 3,
+        "outperform": 1,
         "hold": 0,
         "underperform": 0,
         "sell": 0
       },
-      "analysts": 10,
-      "strongBuyPct": 40,
+      "ratingSource": "analysten-konsens",
+      "ratingUrl": null,
       "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-10",
-      "perf6m": 92.59,
+      "source": "stockanalysis+yahoo",
+      "seen": "2026-06-05",
+      "verifiedAt": "2026-08-08",
+      "verifiedSource": "stockanalysis+yahoo",
+      "perf6m": 0.53,
       "perf6mAt": "2026-08-14",
-      "perf1mBefore": 5.99,
-      "upside": 63,
-      "pe": null,
-      "div": 0.15,
+      "perf1mBefore": 2.18,
+      "pe": 19.8,
+      "eps": 4.29,
+      "div": 0,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0172,
-      "sektorPsiAtAdd": 0.0039,
-      "recheckAt": "2026-08-13",
+      "sektorPsi": 0.0031,
+      "sektorPsiAtAdd": 0.0085,
+      "recheckAt": "2026-08-08",
       "miss": 0
     },
     {
@@ -584,7 +552,7 @@
       "eps": -0.1,
       "div": 8.88,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0123,
+      "sektorPsi": 0.0113,
       "sektorPsiAtAdd": 0.0076,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -617,40 +585,40 @@
       "eps": -0.33,
       "div": 0,
       "enrichAt": "2026-08-12",
-      "sektorPsi": 0.006,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0037,
       "recheckAt": "2026-08-10",
       "miss": 0
     },
     {
-      "ticker": "034730",
-      "name": "SK Inc.",
-      "yahoo": "034730.KS",
-      "sector": "industrial",
+      "ticker": "402340",
+      "name": "SK Square Co., Ltd.",
+      "yahoo": "402340.KS",
+      "sector": "comm",
       "buyPct": 100,
       "ratingCounts": {
-        "buy": 6,
-        "outperform": 5,
+        "buy": 4,
+        "outperform": 6,
         "hold": 0,
         "underperform": 0,
         "sell": 0
       },
-      "analysts": 11,
-      "strongBuyPct": 50,
+      "analysts": 10,
+      "strongBuyPct": 40,
       "via": "gemini",
       "source": "yahoo",
       "verifiedAt": "2026-08-13",
       "verifiedSource": "yahoo",
       "seen": "2026-06-10",
-      "perf6m": 45.91,
+      "perf6m": 92.59,
       "perf6mAt": "2026-08-14",
-      "perf1mBefore": 6,
-      "upside": 46,
+      "perf1mBefore": 5.99,
+      "upside": 63,
       "pe": null,
-      "div": 1.45,
+      "div": 0.15,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0131,
-      "sektorPsiAtAdd": 0.0102,
+      "sektorPsi": 0.0159,
+      "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -715,7 +683,7 @@
       "eps": 8.03,
       "div": 0.7,
       "enrichAt": "2026-08-11",
-      "sektorPsi": 0.0105,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.0112,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -748,7 +716,7 @@
       "eps": 1.64,
       "div": 3.01,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.006,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -781,7 +749,7 @@
       "eps": 6.47,
       "div": 4.09,
       "enrichAt": "2026-08-10",
-      "sektorPsi": 0.0009,
+      "sektorPsi": 0.001,
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -813,8 +781,40 @@
       "pe": null,
       "div": null,
       "enrichAt": "2026-08-10",
-      "sektorPsi": 0.0131,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.015,
+      "recheckAt": "2026-08-13",
+      "miss": 0
+    },
+    {
+      "ticker": "034730",
+      "name": "SK Inc.",
+      "yahoo": "034730.KS",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 6,
+        "outperform": 5,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 11,
+      "strongBuyPct": 50,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-10",
+      "perf6m": 45.91,
+      "perf6mAt": "2026-08-14",
+      "perf1mBefore": 6,
+      "upside": 46,
+      "pe": null,
+      "div": 1.45,
+      "enrichAt": "2026-08-14",
+      "sektorPsi": 0.0135,
+      "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -852,39 +852,6 @@
       "miss": 0
     },
     {
-      "ticker": "JDC",
-      "name": "JDC Group AG",
-      "yahoo": "JDC.DE",
-      "sector": "finance",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 2,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 2,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-09",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-07-04",
-      "perf6m": 0.42,
-      "perf6mAt": "2026-08-13",
-      "perf1mBefore": 11.41,
-      "upside": 41,
-      "pe": 49.4,
-      "eps": 0.48,
-      "div": 0,
-      "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0026,
-      "sektorPsiAtAdd": 0.0019,
-      "recheckAt": "2026-08-09",
-      "miss": 0
-    },
-    {
       "ticker": "IXX.DE",
       "name": "Init Innovation in Traffic Systems SE",
       "yahoo": "IXX.DE",
@@ -912,9 +879,42 @@
       "eps": 2.23,
       "div": 1.74,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0105,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-08-08",
+      "miss": 0
+    },
+    {
+      "ticker": "JDC",
+      "name": "JDC Group AG",
+      "yahoo": "JDC.DE",
+      "sector": "finance",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-09",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-04",
+      "perf6m": 0.42,
+      "perf6mAt": "2026-08-13",
+      "perf1mBefore": 11.41,
+      "upside": 41,
+      "pe": 49.4,
+      "eps": 0.48,
+      "div": 0,
+      "enrichAt": "2026-08-13",
+      "sektorPsi": 0.0031,
+      "sektorPsiAtAdd": 0.0019,
+      "recheckAt": "2026-08-09",
       "miss": 0
     },
     {
@@ -945,7 +945,7 @@
       "eps": 8.54,
       "div": 3.54,
       "enrichAt": "2026-08-12",
-      "sektorPsi": 0.0009,
+      "sektorPsi": 0.001,
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -978,7 +978,7 @@
       "eps": 2.07,
       "div": 6.3,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0026,
+      "sektorPsi": 0.0031,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1011,7 +1011,7 @@
       "eps": 0.1,
       "div": 0,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0131,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1044,7 +1044,7 @@
       "eps": 0.72,
       "div": 2.65,
       "enrichAt": "2026-08-10",
-      "sektorPsi": 0.0131,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1143,7 +1143,7 @@
       "eps": 0.72,
       "div": 2.64,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0131,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1176,7 +1176,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-08-11",
-      "sektorPsi": 0.0018,
+      "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-08-14",
       "miss": 0
@@ -1209,7 +1209,7 @@
       "eps": 22.04,
       "div": 4.09,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0052,
+      "sektorPsi": 0.0066,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1242,7 +1242,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0018,
+      "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0016,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -1308,7 +1308,7 @@
       "eps": 202.85,
       "div": 0.82,
       "enrichAt": "2026-08-12",
-      "sektorPsi": 0.0105,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.01,
       "recheckAt": "2026-08-14",
       "miss": 0
@@ -1341,7 +1341,7 @@
       "eps": 1.88,
       "div": 0.82,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0131,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1374,8 +1374,41 @@
       "eps": 253.3,
       "div": 0.26,
       "enrichAt": "2026-08-12",
-      "sektorPsi": 0.0105,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.0133,
+      "recheckAt": "2026-08-13",
+      "miss": 0
+    },
+    {
+      "ticker": "SL",
+      "name": "Sanlorenzo S.p.A.",
+      "yahoo": "SL.MI",
+      "sector": "cons_cycl",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 5,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 6,
+      "strongBuyPct": 86,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-15",
+      "perf6m": 14.61,
+      "perf6mAt": "2026-08-14",
+      "perf1mBefore": 1.19,
+      "upside": 17,
+      "pe": 12.9,
+      "eps": 3.04,
+      "div": 2.66,
+      "enrichAt": "2026-08-14",
+      "sektorPsi": 0.0066,
+      "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -1407,42 +1440,9 @@
       "eps": 0.64,
       "div": 1.3,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0105,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.005,
       "recheckAt": "2026-08-10",
-      "miss": 0
-    },
-    {
-      "ticker": "SL",
-      "name": "Sanlorenzo S.p.A.",
-      "yahoo": "SL.MI",
-      "sector": "cons_cycl",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 5,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 6,
-      "strongBuyPct": 86,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-07-15",
-      "perf6m": 14.61,
-      "perf6mAt": "2026-08-14",
-      "perf1mBefore": 1.19,
-      "upside": 17,
-      "pe": 12.9,
-      "eps": 3.04,
-      "div": 2.66,
-      "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0052,
-      "sektorPsiAtAdd": 0.0029,
-      "recheckAt": "2026-08-13",
       "miss": 0
     },
     {
@@ -1473,7 +1473,7 @@
       "eps": 0.5,
       "div": 4.93,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0052,
+      "sektorPsi": 0.0066,
       "sektorPsiAtAdd": 0.0071,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1505,7 +1505,7 @@
       "pe": null,
       "div": 3.08,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0131,
+      "sektorPsi": 0.0135,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -1538,7 +1538,7 @@
       "eps": 0.65,
       "div": 2.19,
       "enrichAt": "2026-08-11",
-      "sektorPsi": 0.0105,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.0112,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -1604,7 +1604,7 @@
       "eps": 2.2,
       "div": 1.42,
       "enrichAt": "2026-08-12",
-      "sektorPsi": 0.0009,
+      "sektorPsi": 0.001,
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-08",
       "miss": 0
@@ -1668,7 +1668,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0172,
+      "sektorPsi": 0.0159,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1760,7 +1760,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-14",
       "div": null,
-      "sektorPsi": 0.0172,
+      "sektorPsi": 0.0159,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -2122,40 +2122,38 @@
   "news": {
     "items": [
       {
-        "text": "Michael Burry erhöht Short-Wetten – Ende des KI-Booms?",
+        "text": "DAX fester, Rheinmetall erhält Großauftrag aus Dänemark.",
         "stamp": "14.08.26"
       },
       {
-        "text": "Chinas Immobilienkrise bekommt neuen Zündstoff",
+        "text": "SAP-Aktie im Plus durch Übernahmefantasie um Workday.",
         "stamp": "14.08.26"
       },
       {
-        "text": "Apple plant Millionen-Deals für Siri-Nachrichten",
+        "text": "Hertz-Aktie bricht ein nach vollständigem Ausstieg von Bill Ackman.",
         "stamp": "14.08.26"
       },
       {
-        "text": "Iran will an Öl-Barrel mitverdienen – 20 Mrd. für freie Fahrt",
+        "text": "Micron-Aktie legt zu trotz Konkurrenz auf dem NAND-Markt.",
         "stamp": "14.08.26"
       },
       {
-        "text": "Kupferrallye abverkauft: Steht Kupferpreis vor Beben?",
+        "text": "Ölpreise steigen vor Ablauf einer wichtigen Frist.",
         "stamp": "14.08.26"
       },
       {
-        "text": "EU gibt grünes Licht für Milliarden-Deal von VW",
-        "stamp": "14.08.26"
+        "text": "Geopolitische Krisen setzen Unternehmen unter Druck, neue Strategien nötig.",
+        "stamp": "12.08.26"
       }
     ],
     "date": "2026-08-14"
   },
   "scan": {
-    "universe": 8856,
-    "scanned": 8856,
-    "lastCursor": 4309,
-    "candCursor": 20,
+    "universe": 8857,
+    "scanned": 8857,
+    "lastCursor": 4609,
+    "candCursor": 28,
     "candidates": [
-      "GlobalWafers Co., Ltd.",
-      "monday.com Ltd.",
       "Ouster, Inc.",
       "Ocular Therapeutix, Inc.",
       "Ascendis Pharma A/S",
@@ -2553,45 +2551,59 @@
       "NioCorp Developments Ltd.",
       "Connect Biopharma Holdings Limited",
       "EVOTECH SE",
-      "Alphatec Holdings, Inc."
+      "Alphatec Holdings, Inc.",
+      "Matador Resources Company",
+      "Crescent Energy Co"
     ],
     "noteCursor": 11,
-    "focusCursor": 6,
+    "focusCursor": 7,
     "recheckCursor": 16,
     "regionNoteCursor": 4,
     "notesDay": "2026-08-14",
     "seenBySector": {
-      "cons_cycl": 1612,
-      "cons_def": 841,
-      "materials": 1138,
-      "health": 4705,
-      "finance": 3188,
-      "energy": 1467,
-      "hardware": 1065,
-      "software": 3151,
-      "industrial": 1375,
-      "utilities": 584,
-      "comm": 695,
-      "ai_semi": 627,
-      "realestate": 295
-    },
-    "pendingReject": [],
-    "evaluatedBySector": {
-      "cons_cycl": 1615,
-      "cons_def": 843,
-      "materials": 1138,
-      "health": 4708,
-      "finance": 3192,
-      "energy": 1469,
-      "hardware": 1071,
-      "software": 3162,
-      "industrial": 1383,
-      "utilities": 586,
-      "comm": 698,
-      "ai_semi": 627,
+      "cons_cycl": 1624,
+      "cons_def": 847,
+      "materials": 1144,
+      "health": 4729,
+      "finance": 3202,
+      "energy": 1477,
+      "hardware": 1072,
+      "software": 3160,
+      "industrial": 1380,
+      "utilities": 585,
+      "comm": 697,
+      "ai_semi": 631,
       "realestate": 296
     },
-    "heavyAt": "2026-08-14T03:29:43.968Z",
+    "pendingReject": [
+      "LFLH",
+      "LFMD",
+      "LFST",
+      "LFUS",
+      "LFVN",
+      "LFWD",
+      "LGCY",
+      "LGIH",
+      "LGIQ",
+      "LGL",
+      "LGMK"
+    ],
+    "evaluatedBySector": {
+      "cons_cycl": 1627,
+      "cons_def": 849,
+      "materials": 1144,
+      "health": 4732,
+      "finance": 3206,
+      "energy": 1479,
+      "hardware": 1078,
+      "software": 3171,
+      "industrial": 1388,
+      "utilities": 587,
+      "comm": 700,
+      "ai_semi": 631,
+      "realestate": 297
+    },
+    "heavyAt": "2026-08-14T15:26:46.510Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2602,6 +2614,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-14T15:00:36.316Z"
+  }
 }
