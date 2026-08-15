@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-15",
-  "updatedAt": "2026-08-15T22:00:36.314Z",
+  "updatedAt": "2026-08-15T23:00:36.311Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -233,9 +233,9 @@
     },
     {
       "id": "europe",
-      "perf": 4.03,
+      "perf": 4.48,
       "avg30": 1.32,
-      "perf6m": 3.53
+      "perf6m": 4.38
     },
     {
       "id": "germany",
@@ -258,8 +258,8 @@
     {
       "id": "em",
       "perf": 1.59,
-      "avg30": 2.43,
-      "perf6m": 9.45
+      "avg30": 2.44,
+      "perf6m": 9.92
     },
     {
       "id": "apac",
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": -3.2,
-      "avg30": 2.51,
-      "perf6m": -8.01
+      "perf": -1.64,
+      "avg30": 2.53,
+      "perf6m": -6.91
     },
     {
       "id": "world",
@@ -2603,5 +2603,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-15T22:00:36.314Z"
+  "yahooAt": "2026-08-15T23:00:36.311Z"
 }
