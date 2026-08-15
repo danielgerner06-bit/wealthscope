@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-15",
-  "updatedAt": "2026-08-15T08:00:36.315Z",
+  "updatedAt": "2026-08-15T08:59:37.389Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -263,9 +263,9 @@
     },
     {
       "id": "apac",
-      "perf": 4.29,
-      "avg30": 2.37,
-      "perf6m": 9.87
+      "perf": 2.93,
+      "avg30": 2.42,
+      "perf6m": 14.41
     },
     {
       "id": "india",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 3.67,
-      "avg30": 1.47,
-      "perf6m": 11.02
+      "perf": 3.54,
+      "avg30": 1.44,
+      "perf6m": 10.23
     }
   ],
   "topStocks": [
@@ -617,7 +617,7 @@
       "pe": null,
       "div": 0.15,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0151,
+      "sektorPsi": 0.0199,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -689,39 +689,6 @@
       "miss": 0
     },
     {
-      "ticker": "ORS",
-      "name": "Orsero S.p.A.",
-      "yahoo": "ORS.MI",
-      "sector": "cons_def",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 3,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-14",
-      "perf6m": -9.07,
-      "perf6mAt": "2026-08-13",
-      "perf1mBefore": 0.26,
-      "upside": 52,
-      "pe": 10.2,
-      "eps": 1.64,
-      "div": 3.01,
-      "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0054,
-      "sektorPsiAtAdd": 0.008,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
       "ticker": "300760.SZ",
       "name": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
       "yahoo": null,
@@ -751,6 +718,39 @@
       "enrichAt": "2026-08-15",
       "sektorPsi": 0.0009,
       "sektorPsiAtAdd": 0.0009,
+      "recheckAt": "2026-08-13",
+      "miss": 0
+    },
+    {
+      "ticker": "ORS",
+      "name": "Orsero S.p.A.",
+      "yahoo": "ORS.MI",
+      "sector": "cons_def",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-14",
+      "perf6m": -9.07,
+      "perf6mAt": "2026-08-13",
+      "perf1mBefore": 0.26,
+      "upside": 52,
+      "pe": 10.2,
+      "eps": 1.64,
+      "div": 3.01,
+      "enrichAt": "2026-08-13",
+      "sektorPsi": 0.0054,
+      "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -815,39 +815,6 @@
       "enrichAt": "2026-08-14",
       "sektorPsi": 0.0129,
       "sektorPsiAtAdd": 0.0102,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
-      "ticker": "4776",
-      "name": "Cybozu Inc.",
-      "yahoo": "4776.T",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-05",
-      "perf6m": 25.91,
-      "perf6mAt": "2026-08-15",
-      "perf1mBefore": 4.61,
-      "upside": 36,
-      "pe": 19.2,
-      "eps": 153.18,
-      "div": 1.8,
-      "enrichAt": "2026-08-15",
-      "sektorPsi": 0.0035,
-      "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -918,6 +885,39 @@
       "miss": 0
     },
     {
+      "ticker": "4776",
+      "name": "Cybozu Inc.",
+      "yahoo": "4776.T",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-05",
+      "perf6m": 25.91,
+      "perf6mAt": "2026-08-15",
+      "perf1mBefore": 4.61,
+      "upside": 36,
+      "pe": 19.2,
+      "eps": 153.18,
+      "div": 1.8,
+      "enrichAt": "2026-08-15",
+      "sektorPsi": 0.0035,
+      "sektorPsiAtAdd": 0.0052,
+      "recheckAt": "2026-08-13",
+      "miss": 0
+    },
+    {
       "ticker": "MEDI",
       "name": "Medistim ASA",
       "yahoo": "MEDI.OL",
@@ -984,39 +984,6 @@
       "miss": 0
     },
     {
-      "ticker": "SIT",
-      "name": "SIT S.p.A.",
-      "yahoo": "SIT.MI",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-14",
-      "perf6m": 4.02,
-      "perf6mAt": "2026-08-13",
-      "perf1mBefore": -17.12,
-      "upside": 33,
-      "pe": 25.5,
-      "eps": 0.1,
-      "div": 0,
-      "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0129,
-      "sektorPsiAtAdd": 0.0229,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
       "ticker": "JST.DE",
       "name": "Jost Werke AG",
       "yahoo": "JST.DE",
@@ -1050,6 +1017,39 @@
       "miss": 0
     },
     {
+      "ticker": "SIT",
+      "name": "SIT S.p.A.",
+      "yahoo": "SIT.MI",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-14",
+      "perf6m": 4.02,
+      "perf6mAt": "2026-08-13",
+      "perf1mBefore": -17.12,
+      "upside": 33,
+      "pe": 25.5,
+      "eps": 0.1,
+      "div": 0,
+      "enrichAt": "2026-08-13",
+      "sektorPsi": 0.0129,
+      "sektorPsiAtAdd": 0.0229,
+      "recheckAt": "2026-08-13",
+      "miss": 0
+    },
+    {
       "ticker": "GFT",
       "name": "GFT Technologies SE",
       "yahoo": "GFT.DE",
@@ -1079,39 +1079,6 @@
       "enrichAt": "2026-08-13",
       "sektorPsi": 0.0035,
       "sektorPsiAtAdd": 0.0038,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
-      "ticker": "3854",
-      "name": "I'LL Inc.",
-      "yahoo": "3854.T",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-05",
-      "perf6m": -0.13,
-      "perf6mAt": "2026-08-15",
-      "perf1mBefore": -5.51,
-      "upside": 23,
-      "pe": 15.5,
-      "eps": 157.19,
-      "div": 2.85,
-      "enrichAt": "2026-08-15",
-      "sektorPsi": 0.0035,
-      "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -1245,6 +1212,39 @@
       "sektorPsi": 0.0019,
       "sektorPsiAtAdd": 0.0016,
       "recheckAt": "2026-08-15",
+      "miss": 0
+    },
+    {
+      "ticker": "3854",
+      "name": "I'LL Inc.",
+      "yahoo": "3854.T",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-05",
+      "perf6m": -0.13,
+      "perf6mAt": "2026-08-15",
+      "perf1mBefore": -5.51,
+      "upside": 23,
+      "pe": 15.5,
+      "eps": 157.19,
+      "div": 2.85,
+      "enrichAt": "2026-08-15",
+      "sektorPsi": 0.0035,
+      "sektorPsiAtAdd": 0.0052,
+      "recheckAt": "2026-08-13",
       "miss": 0
     },
     {
@@ -1668,7 +1668,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0151,
+      "sektorPsi": 0.0199,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1760,7 +1760,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-14",
       "div": null,
-      "sektorPsi": 0.0151,
+      "sektorPsi": 0.0199,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -2598,6 +2598,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-15T08:00:36.315Z"
+  }
 }
