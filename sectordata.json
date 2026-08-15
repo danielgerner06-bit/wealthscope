@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-14",
-  "updatedAt": "2026-08-14T23:00:36.315Z",
+  "updatedAt": "2026-08-15T00:00:36.405Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": 0.86,
-      "avg30": -0.14,
-      "perf6m": -3.7
+      "perf": -0.09,
+      "avg30": -0.17,
+      "perf6m": -3.59
     },
     {
       "id": "health",
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": -3.2,
-      "avg30": 2.51,
-      "perf6m": -8.01
+      "perf": -1.64,
+      "avg30": 2.53,
+      "perf6m": -6.91
     },
     {
       "id": "world",
@@ -475,8 +475,8 @@
       "verifiedAt": "2026-08-13",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-16",
-      "perf6m": -17.7,
-      "perf6mAt": "2026-08-10",
+      "perf6m": -15.19,
+      "perf6mAt": "2026-08-15",
       "perf1mBefore": -8.65,
       "upside": 89,
       "pe": 18.2,
@@ -741,8 +741,8 @@
       "verifiedAt": "2026-08-13",
       "verifiedSource": "yahoo",
       "seen": "2026-06-21",
-      "perf6m": -19.98,
-      "perf6mAt": "2026-08-10",
+      "perf6m": -17.96,
+      "perf6mAt": "2026-08-15",
       "perf1mBefore": -7.78,
       "upside": 49,
       "pe": 24.1,
@@ -774,8 +774,8 @@
       "verifiedAt": "2026-08-13",
       "verifiedSource": "yahoo",
       "seen": "2026-08-05",
-      "perf6m": 88.82,
-      "perf6mAt": "2026-08-10",
+      "perf6m": 97.11,
+      "perf6mAt": "2026-08-15",
       "perf1mBefore": -32.73,
       "upside": 49,
       "pe": null,
@@ -838,8 +838,8 @@
       "verifiedAt": "2026-08-13",
       "verifiedSource": "yahoo",
       "seen": "2026-08-05",
-      "perf6m": 23.43,
-      "perf6mAt": "2026-08-10",
+      "perf6m": 25.91,
+      "perf6mAt": "2026-08-15",
       "perf1mBefore": 4.61,
       "upside": 44,
       "pe": 18.2,
@@ -2603,5 +2603,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-14T23:00:36.315Z"
+  "yahooAt": "2026-08-15T00:00:36.405Z"
 }
