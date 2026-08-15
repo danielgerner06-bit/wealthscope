@@ -77,13 +77,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 31,
-      "pe": 14.6,
+      "upside": 23,
+      "pe": 15.5,
       "perf6mAtAdd": -0.13,
       "perf1mBefore": -5.51,
       "sektorPsiAtAdd": 0.0052,
       "analysts": 1,
-      "div": 2.97,
+      "div": 2.85,
       "seen": "2026-08-05",
       "seenMs": 1785888000000,
       "startPrice": 2211,
@@ -121,13 +121,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 44,
-      "pe": 18.2,
+      "upside": 36,
+      "pe": 19.2,
       "perf6mAtAdd": 25.91,
       "perf1mBefore": 4.61,
       "sektorPsiAtAdd": 0.0052,
       "analysts": 1,
-      "div": 1.82,
+      "div": 1.8,
       "seen": "2026-08-05",
       "seenMs": 1785888000000,
       "startPrice": 2699,
@@ -8119,18 +8119,19 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 33,
-      "pe": 78.6,
+      "upside": 35,
+      "pe": 45,
       "perf6mAtAdd": -13.69,
       "perf1mBefore": 0.54,
       "sektorPsiAtAdd": 0.025,
       "analysts": 4,
-      "div": 2.65,
+      "div": 2.67,
       "seen": "2026-06-16",
       "seenMs": 1781568000000,
       "startPrice": 55.900001525878906,
       "perf": [
-        -2.33
+        -2.33,
+        -0.18
       ],
       "outperformPct": null,
       "prov": false
@@ -8144,7 +8145,7 @@
       "buyPct": 100,
       "strongBuyPct": 100,
       "upside": 89,
-      "pe": 18.2,
+      "pe": 18.5,
       "perf6mAtAdd": -15.19,
       "perf1mBefore": -8.65,
       "sektorPsiAtAdd": 0.007,
@@ -8154,7 +8155,8 @@
       "seenMs": 1781568000000,
       "startPrice": 2.375,
       "perf": [
-        -10.29
+        -10.29,
+        -15.23
       ],
       "outperformPct": null,
       "prov": false
@@ -8191,13 +8193,13 @@
       "region": "china",
       "buyPct": 100,
       "strongBuyPct": 17,
-      "upside": 49,
-      "pe": 24.1,
+      "upside": 55,
+      "pe": 23.3,
       "perf6mAtAdd": -17.96,
       "perf1mBefore": -7.78,
       "sektorPsiAtAdd": 0.0009,
       "analysts": 22,
-      "div": 4.09,
+      "div": 4.04,
       "seen": "2026-06-21",
       "seenMs": 1782000000000,
       "startPrice": 141.68000030517578,
@@ -8767,7 +8769,7 @@
     "factors": [
       {
         "name": "Strong Buy",
-        "spread": 16.2,
+        "spread": 16.4,
         "best": {
           "k": "<70%",
           "avg": 10.2,
@@ -8775,7 +8777,7 @@
         },
         "worst": {
           "k": "95%+",
-          "avg": -6,
+          "avg": -6.2,
           "n": 13
         }
       },
@@ -8842,10 +8844,10 @@
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "\"Strong Buy\" mit bis zu 70% des Kursziels brachte 10,2% Rendite. \"KGV\" hatte kaum Einfluss.",
-    "date": "2026-08-14",
+    "text": "\"Strong Buy\"-Perlen mit K < 70% (10,2% Avg) liefen am besten. \"Analysten\"-Bewertungen hatten kaum Einfluss.",
+    "date": "2026-08-15",
     "stage": "real",
     "months": 2
   },
-  "kiDay": "2026-08-14"
+  "kiDay": "2026-08-15"
 }
