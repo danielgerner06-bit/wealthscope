@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-16",
-  "updatedAt": "2026-08-16T09:07:21.276Z",
+  "updatedAt": "2026-08-16T13:44:45.493Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -0.09,
-      "avg30": -0.17,
-      "perf6m": -3.59
+      "perf": 0.86,
+      "avg30": -0.14,
+      "perf6m": -3.7
     },
     {
       "id": "health",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": 1.03,
-      "avg30": 0,
-      "perf6m": 0.37
+      "perf": 1.86,
+      "avg30": 0.01,
+      "perf6m": 0.18
     },
     {
       "id": "cons_def",
@@ -617,7 +617,7 @@
       "pe": null,
       "div": 0.15,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0197,
+      "sektorPsi": 0.015,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1176,7 +1176,7 @@
       "eps": 22.04,
       "div": 4.09,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0052,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1244,39 +1244,6 @@
       "enrichAt": "2026-08-15",
       "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.0052,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
-      "ticker": "6701.T",
-      "name": "NEC Corporation",
-      "yahoo": "6701.T",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 8,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 12,
-      "strongBuyPct": 33,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-17",
-      "perf6m": 21.68,
-      "perf6mAt": "2026-08-16",
-      "perf1mBefore": -7.48,
-      "upside": 15,
-      "pe": 25.4,
-      "eps": 203.1,
-      "div": 0.77,
-      "enrichAt": "2026-08-16",
-      "sektorPsi": 0.0034,
-      "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -1407,8 +1374,41 @@
       "eps": 3.04,
       "div": 2.66,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0052,
       "sektorPsiAtAdd": 0.0029,
+      "recheckAt": "2026-08-13",
+      "miss": 0
+    },
+    {
+      "ticker": "6701.T",
+      "name": "NEC Corporation",
+      "yahoo": "6701.T",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 8,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 12,
+      "strongBuyPct": 33,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-17",
+      "perf6m": 21.68,
+      "perf6mAt": "2026-08-16",
+      "perf1mBefore": -7.48,
+      "upside": 15,
+      "pe": 25.4,
+      "eps": 203.1,
+      "div": 0.77,
+      "enrichAt": "2026-08-16",
+      "sektorPsi": 0.0034,
+      "sektorPsiAtAdd": 0.0106,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -1473,7 +1473,7 @@
       "eps": 0.5,
       "div": 4.93,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0052,
       "sektorPsiAtAdd": 0.0071,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1511,39 +1511,6 @@
       "miss": 0
     },
     {
-      "ticker": "SCANFL",
-      "name": "Scanfil Oyj",
-      "yahoo": "SCANFL.HE",
-      "sector": "hardware",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 1,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-12",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-11",
-      "perf6m": 5,
-      "perf6mAt": "2026-08-16",
-      "perf1mBefore": -0.52,
-      "upside": 1,
-      "pe": 18.4,
-      "eps": 0.65,
-      "div": 2.13,
-      "enrichAt": "2026-08-16",
-      "sektorPsi": 0.0101,
-      "sektorPsiAtAdd": 0.0112,
-      "recheckAt": "2026-08-12",
-      "miss": 0
-    },
-    {
       "ticker": "ATEA",
       "name": "Atea ASA",
       "yahoo": "ATEA.OL",
@@ -1574,6 +1541,39 @@
       "sektorPsi": 0.0034,
       "sektorPsiAtAdd": 0.0043,
       "recheckAt": "2026-08-11",
+      "miss": 0
+    },
+    {
+      "ticker": "SCANFL",
+      "name": "Scanfil Oyj",
+      "yahoo": "SCANFL.HE",
+      "sector": "hardware",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 1,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-12",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-11",
+      "perf6m": 5,
+      "perf6mAt": "2026-08-16",
+      "perf1mBefore": -0.52,
+      "upside": 1,
+      "pe": 18.4,
+      "eps": 0.65,
+      "div": 2.13,
+      "enrichAt": "2026-08-16",
+      "sektorPsi": 0.0101,
+      "sektorPsiAtAdd": 0.0112,
+      "recheckAt": "2026-08-12",
       "miss": 0
     },
     {
@@ -1668,7 +1668,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0197,
+      "sektorPsi": 0.015,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1760,7 +1760,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-14",
       "div": null,
-      "sektorPsi": 0.0197,
+      "sektorPsi": 0.015,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-12",
       "miss": 0
