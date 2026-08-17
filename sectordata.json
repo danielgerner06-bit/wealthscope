@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-17",
-  "updatedAt": "2026-08-17T02:40:38.597Z",
+  "updatedAt": "2026-08-17T08:00:16.731Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": 0.86,
-      "avg30": -0.14,
-      "perf6m": -3.7
+      "perf": -0.09,
+      "avg30": -0.17,
+      "perf6m": -3.59
     },
     {
       "id": "health",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 3.18,
-      "avg30": 1.77,
-      "perf6m": 6.88
+      "perf": 2.63,
+      "avg30": 1.81,
+      "perf6m": 7.33
     },
     {
       "id": "energy",
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": 1.26,
+      "perf": 1.44,
       "avg30": 0.75,
-      "perf6m": 5.32
+      "perf6m": 6.79
     }
   ],
   "bars30Region": [
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": 4.03,
+      "perf": 4.48,
       "avg30": 1.32,
-      "perf6m": 3.53
+      "perf6m": 4.38
     },
     {
       "id": "germany",
-      "perf": 6.21,
-      "avg30": 0.27,
-      "perf6m": -0.2
+      "perf": 5.95,
+      "avg30": 0.25,
+      "perf6m": 0.99
     },
     {
       "id": "japan",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": 0.91,
-      "avg30": -0.92,
-      "perf6m": -11.79
+      "perf": 2.82,
+      "avg30": -0.96,
+      "perf6m": -11.42
     },
     {
       "id": "em",
@@ -269,21 +269,21 @@
     },
     {
       "id": "india",
-      "perf": 2.52,
-      "avg30": -0.57,
-      "perf6m": -6.69
+      "perf": 2.38,
+      "avg30": -0.58,
+      "perf6m": -6.53
     },
     {
       "id": "latam",
-      "perf": -3.2,
-      "avg30": 2.51,
-      "perf6m": -8.01
+      "perf": -1.64,
+      "avg30": 2.53,
+      "perf6m": -6.91
     },
     {
       "id": "world",
-      "perf": 3.67,
-      "avg30": 1.47,
-      "perf6m": 11.02
+      "perf": 3.54,
+      "avg30": 1.44,
+      "perf6m": 10.23
     }
   ],
   "topStocks": [
@@ -450,7 +450,7 @@
       "eps": 7.66,
       "div": 4.31,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -552,7 +552,7 @@
       "eps": -0.1,
       "div": 8.88,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0214,
+      "sektorPsi": 0.0205,
       "sektorPsiAtAdd": 0.0076,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -617,7 +617,7 @@
       "pe": null,
       "div": 0.15,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.015,
+      "sektorPsi": 0.0197,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -781,7 +781,7 @@
       "pe": null,
       "div": null,
       "enrichAt": "2026-08-15",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.015,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -813,7 +813,7 @@
       "pe": null,
       "div": 1.45,
       "enrichAt": "2026-08-14",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -918,39 +918,6 @@
       "miss": 0
     },
     {
-      "ticker": "MEDI",
-      "name": "Medistim ASA",
-      "yahoo": "MEDI.OL",
-      "sector": "health",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 2,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 2,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-15",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-07",
-      "perf6m": 18.75,
-      "perf6mAt": "2026-08-17",
-      "perf1mBefore": -0.66,
-      "upside": 32,
-      "pe": 28,
-      "eps": 8.53,
-      "div": 3.35,
-      "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0009,
-      "sektorPsiAtAdd": 0.0013,
-      "recheckAt": "2026-08-15",
-      "miss": 0
-    },
-    {
       "ticker": "GF",
       "name": "Generalfinance S.p.A.",
       "yahoo": "GF.MI",
@@ -1011,7 +978,7 @@
       "eps": 1.23,
       "div": 2.67,
       "enrichAt": "2026-08-15",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1044,7 +1011,7 @@
       "eps": 0.1,
       "div": 0,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1083,6 +1050,39 @@
       "miss": 0
     },
     {
+      "ticker": "MEDI",
+      "name": "Medistim ASA",
+      "yahoo": "MEDI.OL",
+      "sector": "health",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 2,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-15",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-07",
+      "perf6m": 18.75,
+      "perf6mAt": "2026-08-17",
+      "perf1mBefore": -0.66,
+      "upside": 32,
+      "pe": 28,
+      "eps": 8.53,
+      "div": 3.35,
+      "enrichAt": "2026-08-17",
+      "sektorPsi": 0.0009,
+      "sektorPsiAtAdd": 0.0013,
+      "recheckAt": "2026-08-15",
+      "miss": 0
+    },
+    {
       "ticker": "JST",
       "name": "Jost Werke AG",
       "yahoo": "JST.DE",
@@ -1110,7 +1110,7 @@
       "eps": 0.72,
       "div": 2.64,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1215,39 +1215,6 @@
       "miss": 0
     },
     {
-      "ticker": "3854",
-      "name": "I'LL Inc.",
-      "yahoo": "3854.T",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-05",
-      "perf6m": -0.13,
-      "perf6mAt": "2026-08-15",
-      "perf1mBefore": -5.51,
-      "upside": 23,
-      "pe": 15.5,
-      "eps": 157.19,
-      "div": 2.85,
-      "enrichAt": "2026-08-15",
-      "sektorPsi": 0.0034,
-      "sektorPsiAtAdd": 0.0052,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
       "ticker": "6701",
       "name": "NEC Corporation",
       "yahoo": "6701.T",
@@ -1281,6 +1248,39 @@
       "miss": 0
     },
     {
+      "ticker": "3854",
+      "name": "I'LL Inc.",
+      "yahoo": "3854.T",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-05",
+      "perf6m": -0.13,
+      "perf6mAt": "2026-08-15",
+      "perf1mBefore": -5.51,
+      "upside": 23,
+      "pe": 15.5,
+      "eps": 157.19,
+      "div": 2.85,
+      "enrichAt": "2026-08-15",
+      "sektorPsi": 0.0034,
+      "sektorPsiAtAdd": 0.0052,
+      "recheckAt": "2026-08-13",
+      "miss": 0
+    },
+    {
       "ticker": "LUVE",
       "name": "LU-VE S.p.A.",
       "yahoo": "LUVE.MI",
@@ -1308,7 +1308,7 @@
       "eps": 1.88,
       "div": 0.82,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1505,7 +1505,7 @@
       "pe": null,
       "div": 3.08,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.0128,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -1668,7 +1668,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-13",
-      "sektorPsi": 0.015,
+      "sektorPsi": 0.0197,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-11",
       "miss": 0
@@ -1760,7 +1760,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-14",
       "div": null,
-      "sektorPsi": 0.015,
+      "sektorPsi": 0.0197,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-12",
       "miss": 0
@@ -1788,7 +1788,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-17",
       "div": null,
-      "sektorPsi": 0.0214,
+      "sektorPsi": 0.0205,
       "sektorPsiAtAdd": 0.0214
     }
   ],
@@ -2591,41 +2591,32 @@
       "cons_cycl": 1646,
       "cons_def": 864,
       "materials": 1175,
-      "health": 4819,
-      "finance": 3251,
-      "energy": 1506,
+      "health": 4821,
+      "finance": 3252,
+      "energy": 1507,
       "hardware": 1087,
-      "software": 3216,
+      "software": 3217,
       "industrial": 1402,
       "utilities": 597,
       "comm": 708,
-      "ai_semi": 646,
-      "realestate": 300
+      "ai_semi": 647,
+      "realestate": 301
     },
-    "pendingReject": [
-      "OMH",
-      "OMID",
-      "OMQS",
-      "OMSE",
-      "ON",
-      "ONB",
-      "ONCO",
-      "ONCY"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
       "cons_cycl": 1649,
       "cons_def": 866,
       "materials": 1175,
-      "health": 4822,
-      "finance": 3255,
-      "energy": 1508,
+      "health": 4824,
+      "finance": 3256,
+      "energy": 1509,
       "hardware": 1093,
-      "software": 3227,
+      "software": 3228,
       "industrial": 1410,
       "utilities": 599,
       "comm": 711,
-      "ai_semi": 646,
-      "realestate": 302
+      "ai_semi": 647,
+      "realestate": 303
     },
     "heavyAt": "2026-08-17T02:33:47.627Z",
     "revalidateTag": "multi-source-v9",
