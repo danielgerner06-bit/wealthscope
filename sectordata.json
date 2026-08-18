@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-18",
-  "updatedAt": "2026-08-18T04:00:36.315Z",
+  "updatedAt": "2026-08-18T05:00:36.315Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": 1.26,
+      "perf": 1.44,
       "avg30": 0.74,
-      "perf6m": 5.32
+      "perf6m": 6.79
     }
   ],
   "bars30Region": [
@@ -251,15 +251,15 @@
     },
     {
       "id": "china",
-      "perf": 2.82,
-      "avg30": -1,
-      "perf6m": -11.42
+      "perf": 0.91,
+      "avg30": -0.96,
+      "perf6m": -11.79
     },
     {
       "id": "em",
       "perf": 1.59,
-      "avg30": 2.42,
-      "perf6m": 9.92
+      "avg30": 2.41,
+      "perf6m": 9.45
     },
     {
       "id": "apac",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 3.54,
-      "avg30": 1.44,
-      "perf6m": 10.23
+      "perf": 3.67,
+      "avg30": 1.46,
+      "perf6m": 11.02
     }
   ],
   "topStocks": [
@@ -2603,5 +2603,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-18T04:00:36.315Z"
+  "yahooAt": "2026-08-18T05:00:36.315Z"
 }
