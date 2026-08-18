@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-18",
-  "updatedAt": "2026-08-18T18:00:36.328Z",
+  "updatedAt": "2026-08-18T19:00:36.315Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,9 +147,9 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 10.39,
-      "avg30": -0.65,
-      "perf6m": 26.78
+      "perf": 10.43,
+      "avg30": -0.64,
+      "perf6m": 26.83
     },
     {
       "id": "ai_semi",
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": 0.21,
+      "perf": 0.07,
       "avg30": -0.2,
-      "perf6m": -3.1
+      "perf6m": -3.23
     },
     {
       "id": "health",
@@ -177,27 +177,27 @@
     },
     {
       "id": "finance",
-      "perf": 2.83,
+      "perf": 2.92,
       "avg30": 0.71,
-      "perf6m": 11.92
+      "perf6m": 12.02
     },
     {
       "id": "cons_cycl",
-      "perf": -0.1,
-      "avg30": -0.01,
-      "perf6m": -0.74
+      "perf": 1.24,
+      "avg30": -0.02,
+      "perf6m": 0.64
     },
     {
       "id": "cons_def",
-      "perf": 0.82,
+      "perf": 0.77,
       "avg30": 0.55,
-      "perf6m": -3.72
+      "perf6m": -3.77
     },
     {
       "id": "industrial",
-      "perf": 3.85,
-      "avg30": 1.8,
-      "perf6m": 6.98
+      "perf": 3.3,
+      "avg30": 1.83,
+      "perf6m": 7.14
     },
     {
       "id": "energy",
@@ -207,21 +207,21 @@
     },
     {
       "id": "materials",
-      "perf": 3.38,
-      "avg30": 1.26,
-      "perf6m": -1.12
+      "perf": 3.16,
+      "avg30": 1.28,
+      "perf6m": -1.27
     },
     {
       "id": "utilities",
-      "perf": -2.07,
+      "perf": -2.19,
       "avg30": 0.53,
-      "perf6m": -4.62
+      "perf6m": -4.74
     },
     {
       "id": "realestate",
-      "perf": 0.73,
+      "perf": 0.63,
       "avg30": 0.74,
-      "perf6m": 4.77
+      "perf6m": 4.67
     }
   ],
   "bars30Region": [
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": 3.14,
-      "avg30": -0.97,
-      "perf6m": -11.41
+      "perf": 1.57,
+      "avg30": -0.94,
+      "perf6m": -9.33
     },
     {
       "id": "em",
@@ -269,21 +269,21 @@
     },
     {
       "id": "india",
-      "perf": 1.83,
-      "avg30": -0.56,
-      "perf6m": -6.65
+      "perf": 1.77,
+      "avg30": -0.57,
+      "perf6m": -7.38
     },
     {
       "id": "latam",
-      "perf": -1.5,
+      "perf": -3.06,
       "avg30": 2.45,
-      "perf6m": -7.34
+      "perf6m": -8.52
     },
     {
       "id": "world",
-      "perf": 4.22,
-      "avg30": 1.46,
-      "perf6m": 11.1
+      "perf": 3.16,
+      "avg30": 1.48,
+      "perf6m": 9.7
     }
   ],
   "topStocks": [
@@ -2603,5 +2603,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-18T18:00:36.328Z"
+  "yahooAt": "2026-08-18T19:00:36.315Z"
 }
