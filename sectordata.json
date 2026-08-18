@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-18",
-  "updatedAt": "2026-08-18T08:00:36.311Z",
+  "updatedAt": "2026-08-18T09:00:36.312Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": 0.86,
-      "avg30": -0.17,
-      "perf6m": -3.7
+      "perf": -0.09,
+      "avg30": -0.2,
+      "perf6m": -3.59
     },
     {
       "id": "health",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": 1.03,
-      "avg30": -0.03,
-      "perf6m": 0.37
+      "perf": 1.86,
+      "avg30": -0.02,
+      "perf6m": 0.18
     },
     {
       "id": "cons_def",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 2.63,
-      "avg30": 1.81,
-      "perf6m": 7.33
+      "perf": 3.18,
+      "avg30": 1.78,
+      "perf6m": 6.88
     },
     {
       "id": "energy",
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": 4.03,
+      "perf": 4.48,
       "avg30": 1.32,
-      "perf6m": 3.53
+      "perf6m": 4.38
     },
     {
       "id": "germany",
-      "perf": 5.95,
-      "avg30": 0.27,
-      "perf6m": 0.99
+      "perf": 6.21,
+      "avg30": 0.28,
+      "perf6m": -0.2
     },
     {
       "id": "japan",
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": 0.91,
-      "avg30": -0.96,
-      "perf6m": -11.79
+      "perf": 2.82,
+      "avg30": -1,
+      "perf6m": -11.42
     },
     {
       "id": "em",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": 2.52,
-      "avg30": -0.58,
-      "perf6m": -6.69
+      "perf": 2.38,
+      "avg30": -0.59,
+      "perf6m": -6.53
     },
     {
       "id": "latam",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 3.67,
-      "avg30": 1.46,
-      "perf6m": 11.02
+      "perf": 3.54,
+      "avg30": 1.44,
+      "perf6m": 10.23
     }
   ],
   "topStocks": [
@@ -2603,5 +2603,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-18T08:00:36.311Z"
+  "yahooAt": "2026-08-18T09:00:36.312Z"
 }
