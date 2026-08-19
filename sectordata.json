@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-18",
-  "updatedAt": "2026-08-19T13:00:36.312Z",
+  "updated": "2026-08-19",
+  "updatedAt": "2026-08-19T13:56:55.035Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,143 +147,143 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 9.69,
-      "avg30": -0.67,
-      "perf6m": 25.98
+      "perf": 9.89,
+      "avg30": -0.63,
+      "perf6m": 24.37
     },
     {
       "id": "ai_semi",
-      "perf": 5.01,
-      "avg30": 7.86,
-      "perf6m": 55.44
+      "perf": 1.38,
+      "avg30": 7.83,
+      "perf6m": 49.83
     },
     {
       "id": "hardware",
-      "perf": 8.14,
-      "avg30": 3.19,
-      "perf6m": 36.23
+      "perf": 5.64,
+      "avg30": 3.2,
+      "perf6m": 33
     },
     {
       "id": "comm",
-      "perf": -1.62,
-      "avg30": -0.21,
-      "perf6m": -5.07
+      "perf": 0.15,
+      "avg30": -0.23,
+      "perf6m": -3.28
     },
     {
       "id": "health",
-      "perf": 3.9,
-      "avg30": 1.73,
-      "perf6m": 6.35
+      "perf": 5.92,
+      "avg30": 1.75,
+      "perf6m": 7.65
     },
     {
       "id": "finance",
-      "perf": 2.81,
-      "avg30": 0.7,
-      "perf6m": 11.9
+      "perf": 3.08,
+      "avg30": 0.71,
+      "perf6m": 10.8
     },
     {
       "id": "cons_cycl",
-      "perf": 1.13,
-      "avg30": -0.04,
-      "perf6m": 0.53
+      "perf": -0.21,
+      "avg30": -0.03,
+      "perf6m": 0.49
     },
     {
       "id": "cons_def",
-      "perf": 0.46,
+      "perf": 0.85,
       "avg30": 0.56,
-      "perf6m": -4.07
+      "perf6m": -2.97
     },
     {
       "id": "industrial",
-      "perf": 3.3,
-      "avg30": 1.83,
-      "perf6m": 7.14
+      "perf": 2.75,
+      "avg30": 1.81,
+      "perf6m": 4.87
     },
     {
       "id": "energy",
-      "perf": 8.5,
-      "avg30": 2.93,
-      "perf6m": 15.93
+      "perf": 9.91,
+      "avg30": 2.96,
+      "perf6m": 17.17
     },
     {
       "id": "materials",
-      "perf": 3.38,
-      "avg30": 1.26,
-      "perf6m": -1.12
+      "perf": 4.27,
+      "avg30": 1.28,
+      "perf6m": -1.47
     },
     {
       "id": "utilities",
-      "perf": -2.19,
-      "avg30": 0.54,
+      "perf": -1.69,
+      "avg30": 0.53,
       "perf6m": -4.74
     },
     {
       "id": "realestate",
-      "perf": 0.61,
-      "avg30": 0.74,
-      "perf6m": 4.65
+      "perf": -0.88,
+      "avg30": 0.72,
+      "perf6m": 3.06
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": 3.95,
-      "avg30": 1.49,
-      "perf6m": 13.34
+      "perf": 3.62,
+      "avg30": 1.5,
+      "perf6m": 12.79
     },
     {
       "id": "europe",
-      "perf": 4.3,
+      "perf": 3.96,
       "avg30": 1.35,
-      "perf6m": 2.96
+      "perf6m": 3.22
     },
     {
       "id": "germany",
-      "perf": 6.21,
-      "avg30": 0.33,
-      "perf6m": -0.59
+      "perf": 6.8,
+      "avg30": 0.38,
+      "perf6m": -0.18
     },
     {
       "id": "japan",
-      "perf": 8.49,
-      "avg30": 1.61,
-      "perf6m": 5.14
+      "perf": 5.39,
+      "avg30": 1.62,
+      "perf6m": 3.81
     },
     {
       "id": "china",
-      "perf": 1.52,
-      "avg30": -0.98,
-      "perf6m": -9.38
+      "perf": 1.96,
+      "avg30": -0.97,
+      "perf6m": -9.16
     },
     {
       "id": "em",
-      "perf": 4.8,
-      "avg30": 2.41,
-      "perf6m": 9.43
+      "perf": 4.1,
+      "avg30": 2.42,
+      "perf6m": 8.25
     },
     {
       "id": "apac",
-      "perf": 4.29,
+      "perf": 2.24,
       "avg30": 2.43,
-      "perf6m": 11.33
+      "perf6m": 7.7
     },
     {
       "id": "india",
-      "perf": 1.77,
-      "avg30": -0.58,
-      "perf6m": -7.38
+      "perf": 1.71,
+      "avg30": -0.57,
+      "perf6m": -6.69
     },
     {
       "id": "latam",
-      "perf": -3.06,
-      "avg30": 2.42,
-      "perf6m": -8.52
+      "perf": -2.94,
+      "avg30": 2.4,
+      "perf6m": -7.76
     },
     {
       "id": "world",
-      "perf": 4.22,
-      "avg30": 1.46,
-      "perf6m": 11.1
+      "perf": 3.84,
+      "avg30": 1.47,
+      "perf6m": 10.66
     }
   ],
   "topStocks": [
@@ -423,6 +423,42 @@
       "miss": 0
     },
     {
+      "ticker": "HYQ.DE",
+      "name": "Hypoport SE",
+      "sector": "finance",
+      "buyPct": 100,
+      "strongBuyPct": 75,
+      "analysts": 4,
+      "upside": 93,
+      "yahoo": "HYQ.DE",
+      "peGemini": 20.4,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "ratingSource": "analysten-konsens",
+      "ratingUrl": null,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "seen": "2026-06-05",
+      "verifiedAt": "2026-08-15",
+      "verifiedSource": "stockanalysis+yahoo",
+      "perf6m": 3.42,
+      "perf6mAt": "2026-08-19",
+      "perf1mBefore": 2.18,
+      "pe": 19,
+      "eps": 4.29,
+      "div": 0,
+      "enrichAt": "2026-08-19",
+      "sektorPsi": 0.0029,
+      "sektorPsiAtAdd": 0.0085,
+      "recheckAt": "2026-08-15",
+      "miss": 0
+    },
+    {
       "ticker": "EXL.DE",
       "name": "Exasol AG",
       "yahoo": "EXL.DE",
@@ -483,45 +519,41 @@
       "eps": -0.1,
       "div": 8.98,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0861,
+      "sektorPsi": 0.0924,
       "sektorPsiAtAdd": 0.0076,
       "recheckAt": "2026-08-15",
       "miss": 0
     },
     {
-      "ticker": "HYQ.DE",
-      "name": "Hypoport SE",
-      "sector": "finance",
+      "ticker": "402340",
+      "name": "SK Square Co., Ltd.",
+      "yahoo": "402340.KS",
+      "sector": "comm",
       "buyPct": 100,
-      "strongBuyPct": 75,
-      "analysts": 4,
-      "upside": 93,
-      "yahoo": "HYQ.DE",
-      "peGemini": 20.4,
       "ratingCounts": {
-        "buy": 3,
-        "outperform": 1,
+        "buy": 4,
+        "outperform": 6,
         "hold": 0,
         "underperform": 0,
         "sell": 0
       },
-      "ratingSource": "analysten-konsens",
-      "ratingUrl": null,
+      "analysts": 10,
+      "strongBuyPct": 40,
       "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "seen": "2026-06-05",
-      "verifiedAt": "2026-08-15",
-      "verifiedSource": "stockanalysis+yahoo",
-      "perf6m": 3.42,
+      "source": "yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "yahoo",
+      "seen": "2026-06-10",
+      "perf6m": 95.69,
       "perf6mAt": "2026-08-19",
-      "perf1mBefore": 2.18,
-      "pe": 19,
-      "eps": 4.29,
-      "div": 0,
+      "perf1mBefore": 5.99,
+      "upside": 82,
+      "pe": null,
+      "div": 0.14,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0029,
-      "sektorPsiAtAdd": 0.0085,
-      "recheckAt": "2026-08-15",
+      "sektorPsi": 0.0264,
+      "sektorPsiAtAdd": 0.0039,
+      "recheckAt": "2026-08-13",
       "miss": 0
     },
     {
@@ -552,41 +584,9 @@
       "eps": -0.33,
       "div": 0,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0102,
+      "sektorPsi": 0.0104,
       "sektorPsiAtAdd": 0.0037,
       "recheckAt": "2026-08-17",
-      "miss": 0
-    },
-    {
-      "ticker": "402340",
-      "name": "SK Square Co., Ltd.",
-      "yahoo": "402340.KS",
-      "sector": "comm",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 6,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 10,
-      "strongBuyPct": 40,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-10",
-      "perf6m": 95.69,
-      "perf6mAt": "2026-08-19",
-      "perf1mBefore": 5.99,
-      "upside": 82,
-      "pe": null,
-      "div": 0.14,
-      "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0837,
-      "sektorPsiAtAdd": 0.0039,
-      "recheckAt": "2026-08-13",
       "miss": 0
     },
     {
@@ -650,7 +650,7 @@
       "eps": 8.02,
       "div": 0.69,
       "enrichAt": "2026-08-16",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0085,
       "sektorPsiAtAdd": 0.0112,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -683,7 +683,7 @@
       "eps": 6.47,
       "div": 4.04,
       "enrichAt": "2026-08-15",
-      "sektorPsi": 0.0012,
+      "sektorPsi": 0.0009,
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -716,40 +716,8 @@
       "eps": 1.64,
       "div": 3.02,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0102,
+      "sektorPsi": 0.0104,
       "sektorPsiAtAdd": 0.008,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
-      "ticker": "089970",
-      "name": "VM Inc.",
-      "yahoo": "089970.KQ",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 3,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 3,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-05",
-      "perf6m": 97.11,
-      "perf6mAt": "2026-08-15",
-      "perf1mBefore": -32.73,
-      "upside": 49,
-      "pe": null,
-      "div": null,
-      "enrichAt": "2026-08-15",
-      "sektorPsi": 0.0109,
-      "sektorPsiAtAdd": 0.015,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -780,8 +748,40 @@
       "pe": null,
       "div": 1.36,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0109,
+      "sektorPsi": 0.0145,
       "sektorPsiAtAdd": 0.0102,
+      "recheckAt": "2026-08-13",
+      "miss": 0
+    },
+    {
+      "ticker": "089970",
+      "name": "VM Inc.",
+      "yahoo": "089970.KQ",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 3,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-05",
+      "perf6m": 97.11,
+      "perf6mAt": "2026-08-15",
+      "perf1mBefore": -32.73,
+      "upside": 49,
+      "pe": null,
+      "div": null,
+      "enrichAt": "2026-08-15",
+      "sektorPsi": 0.0145,
+      "sektorPsiAtAdd": 0.015,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -846,7 +846,7 @@
       "eps": 2.17,
       "div": 1.73,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0085,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -912,7 +912,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0109,
+      "sektorPsi": 0.0145,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -978,7 +978,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0014,
+      "sektorPsi": 0.0013,
       "sektorPsiAtAdd": 0.0016,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -1011,7 +1011,7 @@
       "eps": 1.23,
       "div": 2.67,
       "enrichAt": "2026-08-15",
-      "sektorPsi": 0.0109,
+      "sektorPsi": 0.0145,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1044,7 +1044,7 @@
       "eps": 1.23,
       "div": 2.71,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0109,
+      "sektorPsi": 0.0145,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1110,42 +1110,9 @@
       "eps": 8.53,
       "div": 3.35,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0012,
+      "sektorPsi": 0.0009,
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-15",
-      "miss": 0
-    },
-    {
-      "ticker": "F3C.DE",
-      "name": "SFC Energy AG",
-      "yahoo": "F3C.DE",
-      "sector": "energy",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 5,
-      "strongBuyPct": 80,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-14",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-07-02",
-      "perf6m": 53.53,
-      "perf6mAt": "2026-08-16",
-      "perf1mBefore": -10.76,
-      "upside": 30,
-      "pe": null,
-      "eps": -0.06,
-      "div": 0,
-      "enrichAt": "2026-08-16",
-      "sektorPsi": 0.0014,
-      "sektorPsiAtAdd": 0.0045,
-      "recheckAt": "2026-08-14",
       "miss": 0
     },
     {
@@ -1176,10 +1143,74 @@
       "eps": 22.82,
       "div": 4.31,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0064,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-18",
       "miss": 0
+    },
+    {
+      "ticker": "F3C.DE",
+      "name": "SFC Energy AG",
+      "yahoo": "F3C.DE",
+      "sector": "energy",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 5,
+      "strongBuyPct": 80,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-14",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-02",
+      "perf6m": 53.53,
+      "perf6mAt": "2026-08-16",
+      "perf1mBefore": -10.76,
+      "upside": 30,
+      "pe": null,
+      "eps": -0.06,
+      "div": 0,
+      "enrichAt": "2026-08-16",
+      "sektorPsi": 0.0013,
+      "sektorPsiAtAdd": 0.0045,
+      "recheckAt": "2026-08-14",
+      "miss": 0
+    },
+    {
+      "ticker": "BSL",
+      "name": "Basler AG",
+      "yahoo": "BSL.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-19",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-08-19",
+      "perf6m": 55.88,
+      "perf6mAt": "2026-08-19",
+      "perf1mBefore": -14.29,
+      "upside": 25,
+      "pe": 24.7,
+      "eps": 0.94,
+      "div": 0.47,
+      "enrichAt": "2026-08-19",
+      "sektorPsi": 0.0145,
+      "sektorPsiAtAdd": 0.0109
     },
     {
       "ticker": "6701",
@@ -1209,7 +1240,7 @@
       "eps": 203.1,
       "div": 0.77,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0085,
       "sektorPsiAtAdd": 0.01,
       "recheckAt": "2026-08-14",
       "miss": 0
@@ -1242,7 +1273,7 @@
       "eps": 1.88,
       "div": 0.83,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0109,
+      "sektorPsi": 0.0145,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-13",
       "miss": 0
@@ -1281,39 +1312,6 @@
       "miss": 0
     },
     {
-      "ticker": "6946",
-      "name": "Nippon Avionics Co Ltd",
-      "yahoo": "6946.T",
-      "sector": "hardware",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 1,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-12",
-      "perf6m": -17.69,
-      "perf6mAt": "2026-08-17",
-      "perf1mBefore": 18.56,
-      "upside": 18,
-      "pe": 23.3,
-      "eps": 253.43,
-      "div": 0.26,
-      "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0062,
-      "sektorPsiAtAdd": 0.0133,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
       "ticker": "SL",
       "name": "Sanlorenzo S.p.A.",
       "yahoo": "SL.MI",
@@ -1341,8 +1339,74 @@
       "eps": 3.04,
       "div": 2.67,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0064,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0029,
+      "recheckAt": "2026-08-13",
+      "miss": 0
+    },
+    {
+      "ticker": "LBIRD",
+      "name": "Lumibird SA",
+      "yahoo": "LBIRD.PA",
+      "sector": "hardware",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 3,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-17",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-08-09",
+      "perf6m": 25.44,
+      "perf6mAt": "2026-08-19",
+      "perf1mBefore": -1.83,
+      "upside": 19,
+      "pe": 42.2,
+      "eps": 0.64,
+      "div": 1.33,
+      "enrichAt": "2026-08-19",
+      "sektorPsi": 0.0085,
+      "sektorPsiAtAdd": 0.005,
+      "recheckAt": "2026-08-17",
+      "miss": 0
+    },
+    {
+      "ticker": "6946",
+      "name": "Nippon Avionics Co Ltd",
+      "yahoo": "6946.T",
+      "sector": "hardware",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 1,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-13",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-12",
+      "perf6m": -17.69,
+      "perf6mAt": "2026-08-17",
+      "perf1mBefore": 18.56,
+      "upside": 18,
+      "pe": 23.3,
+      "eps": 253.43,
+      "div": 0.26,
+      "enrichAt": "2026-08-17",
+      "sektorPsi": 0.0085,
+      "sektorPsiAtAdd": 0.0133,
       "recheckAt": "2026-08-13",
       "miss": 0
     },
@@ -1406,42 +1470,9 @@
       "pe": null,
       "div": 3.09,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0109,
+      "sektorPsi": 0.0145,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-08-19",
-      "miss": 0
-    },
-    {
-      "ticker": "LBIRD",
-      "name": "Lumibird SA",
-      "yahoo": "LBIRD.PA",
-      "sector": "hardware",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 3,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-17",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-08-09",
-      "perf6m": 25.44,
-      "perf6mAt": "2026-08-19",
-      "perf1mBefore": -1.83,
-      "upside": 19,
-      "pe": 42.2,
-      "eps": 0.64,
-      "div": 1.33,
-      "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0062,
-      "sektorPsiAtAdd": 0.005,
-      "recheckAt": "2026-08-17",
       "miss": 0
     },
     {
@@ -1472,7 +1503,7 @@
       "eps": 0.5,
       "div": 4.88,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0064,
+      "sektorPsi": 0.014,
       "sektorPsiAtAdd": 0.0071,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1538,7 +1569,7 @@
       "eps": 0.65,
       "div": 2.13,
       "enrichAt": "2026-08-16",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0085,
       "sektorPsiAtAdd": 0.0112,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1571,7 +1602,7 @@
       "eps": 2.2,
       "div": 1.45,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0012,
+      "sektorPsi": 0.0009,
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -1635,7 +1666,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0837,
+      "sektorPsi": 0.0264,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1727,7 +1758,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-19",
       "div": null,
-      "sektorPsi": 0.0837,
+      "sektorPsi": 0.0264,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1755,41 +1786,10 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-17",
       "div": null,
-      "sektorPsi": 0.0861,
+      "sektorPsi": 0.0924,
       "sektorPsiAtAdd": 0.0214,
       "recheckAt": "2026-08-18",
       "miss": 0
-    },
-    {
-      "ticker": "BSL",
-      "name": "Basler AG",
-      "yahoo": "BSL.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 3,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 3,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-19",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-08-19",
-      "perf6m": 55.88,
-      "perf6mAt": "2026-08-19",
-      "perf1mBefore": -14.29,
-      "upside": 25,
-      "pe": 24.7,
-      "eps": 0.94,
-      "div": 0.47,
-      "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0109,
-      "sektorPsiAtAdd": 0.0109
     }
   ],
   "psiHistory": [
@@ -2597,10 +2597,10 @@
     "regionNoteCursor": 9,
     "notesDay": "2026-08-19",
     "seenBySector": {
-      "cons_cycl": 1673,
+      "cons_cycl": 1674,
       "cons_def": 878,
       "materials": 1189,
-      "health": 4911,
+      "health": 4912,
       "finance": 3306,
       "energy": 1533,
       "hardware": 1108,
@@ -2611,18 +2611,12 @@
       "ai_semi": 661,
       "realestate": 308
     },
-    "pendingReject": [
-      "SER",
-      "SERA",
-      "SERV",
-      "SES",
-      "SEV"
-    ],
+    "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1676,
+      "cons_cycl": 1677,
       "cons_def": 880,
       "materials": 1189,
-      "health": 4914,
+      "health": 4915,
       "finance": 3310,
       "energy": 1535,
       "hardware": 1114,
@@ -2644,6 +2638,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-19T13:00:36.312Z"
+  }
 }
