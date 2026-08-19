@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-18",
-  "updatedAt": "2026-08-19T08:00:36.323Z",
+  "updatedAt": "2026-08-19T09:00:36.315Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 3.3,
-      "avg30": 1.83,
-      "perf6m": 7.14
+      "perf": 3.85,
+      "avg30": 1.8,
+      "perf6m": 6.98
     },
     {
       "id": "energy",
@@ -207,9 +207,9 @@
     },
     {
       "id": "materials",
-      "perf": 3.38,
-      "avg30": 1.26,
-      "perf6m": -1.12
+      "perf": 3.16,
+      "avg30": 1.28,
+      "perf6m": -1.27
     },
     {
       "id": "utilities",
@@ -220,8 +220,8 @@
     {
       "id": "realestate",
       "perf": -1.3,
-      "avg30": 0.74,
-      "perf6m": 4.57
+      "avg30": 0.72,
+      "perf6m": 3.06
     }
   ],
   "bars30Region": [
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": 4.3,
-      "avg30": 1.35,
-      "perf6m": 2.96
+      "perf": 3.96,
+      "avg30": 1.34,
+      "perf6m": 3.77
     },
     {
       "id": "germany",
-      "perf": 6.21,
-      "avg30": 0.33,
-      "perf6m": -0.59
+      "perf": 6.8,
+      "avg30": 0.35,
+      "perf6m": -0.02
     },
     {
       "id": "japan",
@@ -257,21 +257,21 @@
     },
     {
       "id": "em",
-      "perf": 3.77,
+      "perf": 4.8,
       "avg30": 2.41,
-      "perf6m": 8.98
+      "perf6m": 9.43
     },
     {
       "id": "apac",
-      "perf": 4.29,
-      "avg30": 2.43,
-      "perf6m": 11.33
+      "perf": 7.76,
+      "avg30": 2.41,
+      "perf6m": 9.87
     },
     {
       "id": "india",
-      "perf": 1.77,
-      "avg30": -0.58,
-      "perf6m": -7.38
+      "perf": 1.83,
+      "avg30": -0.56,
+      "perf6m": -6.65
     },
     {
       "id": "latam",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 3.16,
-      "avg30": 1.47,
-      "perf6m": 9.7
+      "perf": 4.22,
+      "avg30": 1.46,
+      "perf6m": 11.1
     }
   ],
   "topStocks": [
@@ -2645,5 +2645,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-19T08:00:36.323Z"
+  "yahooAt": "2026-08-19T09:00:36.315Z"
 }
