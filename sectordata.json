@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-18",
-  "updatedAt": "2026-08-19T00:00:36.313Z",
+  "updatedAt": "2026-08-19T01:00:36.316Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": 0.02,
-      "avg30": -0.23,
-      "perf6m": -3.28
+      "perf": -1.62,
+      "avg30": -0.21,
+      "perf6m": -5.07
     },
     {
       "id": "health",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 3.3,
-      "avg30": 1.83,
-      "perf6m": 7.14
+      "perf": 3.85,
+      "avg30": 1.8,
+      "perf6m": 6.98
     },
     {
       "id": "energy",
@@ -239,9 +239,9 @@
     },
     {
       "id": "germany",
-      "perf": 6.8,
-      "avg30": 0.35,
-      "perf6m": -0.02
+      "perf": 6.21,
+      "avg30": 0.33,
+      "perf6m": -0.59
     },
     {
       "id": "japan",
@@ -257,9 +257,9 @@
     },
     {
       "id": "em",
-      "perf": 3.77,
+      "perf": 4.8,
       "avg30": 2.41,
-      "perf6m": 8.98
+      "perf6m": 9.43
     },
     {
       "id": "apac",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": 1.83,
-      "avg30": -0.56,
-      "perf6m": -6.65
+      "perf": 1.77,
+      "avg30": -0.58,
+      "perf6m": -7.38
     },
     {
       "id": "latam",
@@ -773,8 +773,8 @@
       "verifiedAt": "2026-08-13",
       "verifiedSource": "yahoo",
       "seen": "2026-06-10",
-      "perf6m": 45.91,
-      "perf6mAt": "2026-08-14",
+      "perf6m": 54.35,
+      "perf6mAt": "2026-08-19",
       "perf1mBefore": 6,
       "upside": 46,
       "pe": null,
@@ -838,8 +838,8 @@
       "verifiedAt": "2026-08-15",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-05",
-      "perf6m": 4.02,
-      "perf6mAt": "2026-08-14",
+      "perf6m": 1.55,
+      "perf6mAt": "2026-08-19",
       "perf1mBefore": -2.31,
       "upside": 42,
       "pe": 20.6,
@@ -1168,8 +1168,8 @@
       "verifiedAt": "2026-08-18",
       "verifiedSource": "yahoo",
       "seen": "2026-07-20",
-      "perf6m": -8.62,
-      "perf6mAt": "2026-08-14",
+      "perf6m": -9.83,
+      "perf6mAt": "2026-08-19",
       "perf1mBefore": 3.68,
       "upside": 28,
       "pe": 17.1,
@@ -1333,8 +1333,8 @@
       "verifiedAt": "2026-08-13",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-15",
-      "perf6m": 14.61,
-      "perf6mAt": "2026-08-14",
+      "perf6m": 13.92,
+      "perf6mAt": "2026-08-19",
       "perf1mBefore": 1.19,
       "upside": 17,
       "pe": 12.9,
@@ -2599,5 +2599,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-19T00:00:36.313Z"
+  "yahooAt": "2026-08-19T01:00:36.316Z"
 }
