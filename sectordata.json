@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-18",
-  "updatedAt": "2026-08-19T05:00:36.318Z",
+  "updatedAt": "2026-08-19T06:00:36.323Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -153,15 +153,15 @@
     },
     {
       "id": "ai_semi",
-      "perf": 3.82,
-      "avg30": 7.87,
-      "perf6m": 55.29
+      "perf": 5.01,
+      "avg30": 7.86,
+      "perf6m": 55.44
     },
     {
       "id": "hardware",
-      "perf": 7.21,
-      "avg30": 3.17,
-      "perf6m": 36.37
+      "perf": 8.14,
+      "avg30": 3.19,
+      "perf6m": 36.23
     },
     {
       "id": "comm",
@@ -172,8 +172,8 @@
     {
       "id": "health",
       "perf": 3.9,
-      "avg30": 1.73,
-      "perf6m": 6.35
+      "avg30": 1.72,
+      "perf6m": 7.12
     },
     {
       "id": "finance",
@@ -189,9 +189,9 @@
     },
     {
       "id": "cons_def",
-      "perf": 0.46,
+      "perf": 0.95,
       "avg30": 0.56,
-      "perf6m": -4.07
+      "perf6m": -3.6
     },
     {
       "id": "industrial",
@@ -207,9 +207,9 @@
     },
     {
       "id": "materials",
-      "perf": 3.42,
-      "avg30": 1.28,
-      "perf6m": -1.13
+      "perf": 3.38,
+      "avg30": 1.26,
+      "perf6m": -1.12
     },
     {
       "id": "utilities",
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": -1.3,
-      "avg30": 0.72,
-      "perf6m": 3.06
+      "perf": 1.26,
+      "avg30": 0.74,
+      "perf6m": 5.42
     }
   ],
   "bars30Region": [
@@ -257,21 +257,21 @@
     },
     {
       "id": "em",
-      "perf": 4.8,
+      "perf": 1.69,
       "avg30": 2.41,
-      "perf6m": 9.43
+      "perf6m": 9.56
     },
     {
       "id": "apac",
-      "perf": 7.76,
-      "avg30": 2.41,
-      "perf6m": 9.87
+      "perf": 3.54,
+      "avg30": 2.42,
+      "perf6m": 12.37
     },
     {
       "id": "india",
-      "perf": 1.83,
-      "avg30": -0.56,
-      "perf6m": -6.65
+      "perf": 2.15,
+      "avg30": -0.59,
+      "perf6m": -7.01
     },
     {
       "id": "latam",
@@ -2599,5 +2599,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-19T05:00:36.318Z"
+  "yahooAt": "2026-08-19T06:00:36.323Z"
 }
