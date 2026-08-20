@@ -77,13 +77,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 23,
-      "pe": 15.5,
+      "upside": 20,
+      "pe": 15.9,
       "perf6mAtAdd": 3.91,
       "perf1mBefore": -5.51,
       "sektorPsiAtAdd": 0.0052,
       "analysts": 1,
-      "div": 2.85,
+      "div": 2.75,
       "seen": "2026-08-05",
       "seenMs": 1785888000000,
       "startPrice": 2211,
@@ -121,13 +121,13 @@
       "region": "japan",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 36,
-      "pe": 19.2,
+      "upside": 30,
+      "pe": 18.5,
       "perf6mAtAdd": 38.79,
       "perf1mBefore": 4.61,
       "sektorPsiAtAdd": 0.0052,
       "analysts": 1,
-      "div": 1.8,
+      "div": 1.71,
       "seen": "2026-08-05",
       "seenMs": 1785888000000,
       "startPrice": 2699,
@@ -8125,13 +8125,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 35,
-      "pe": 45,
+      "upside": 31,
+      "pe": 47.7,
       "perf6mAtAdd": -15.33,
       "perf1mBefore": 0.54,
       "sektorPsiAtAdd": 0.025,
       "analysts": 4,
-      "div": 2.67,
+      "div": 2.61,
       "seen": "2026-06-16",
       "seenMs": 1781568000000,
       "startPrice": 55.900001525878906,
@@ -8151,7 +8151,7 @@
       "buyPct": 100,
       "strongBuyPct": 100,
       "upside": 89,
-      "pe": 18.5,
+      "pe": 17.7,
       "perf6mAtAdd": -7.11,
       "perf1mBefore": -8.65,
       "sektorPsiAtAdd": 0.007,
@@ -8200,18 +8200,19 @@
       "region": "china",
       "buyPct": 100,
       "strongBuyPct": 17,
-      "upside": 55,
-      "pe": 23.3,
+      "upside": 47,
+      "pe": 24.5,
       "perf6mAtAdd": -19.47,
       "perf1mBefore": -7.78,
       "sektorPsiAtAdd": 0.0009,
       "analysts": 22,
-      "div": 4.04,
+      "div": 4.11,
       "seen": "2026-06-21",
       "seenMs": 1782000000000,
       "startPrice": 141.68000030517578,
       "perf": [
-        9.55
+        9.55,
+        10.24
       ],
       "outperformPct": null,
       "prov": false
@@ -8474,8 +8475,11 @@
       "seen": "2026-07-21",
       "seenMs": 1784592000000,
       "startPrice": 5.960000038146973,
-      "perf": [],
-      "outperformPct": null
+      "perf": [
+        -4.87
+      ],
+      "outperformPct": null,
+      "prov": false
     },
     "F3C": {
       "ticker": "F3C",
@@ -8632,7 +8636,7 @@
       "region": "world",
       "buyPct": 100,
       "strongBuyPct": 0,
-      "upside": 49,
+      "upside": 62,
       "pe": null,
       "perf6mAtAdd": 88.95,
       "perf1mBefore": -32.73,
@@ -8797,11 +8801,11 @@
     "factors": [
       {
         "name": "Strong Buy",
-        "spread": 15.5,
+        "spread": 14.5,
         "best": {
           "k": "<70%",
-          "avg": 9.3,
-          "n": 13
+          "avg": 8.3,
+          "n": 14
         },
         "worst": {
           "k": "95%+",
@@ -8848,7 +8852,7 @@
         "worst": {
           "k": "1-4",
           "avg": -5.5,
-          "n": 95
+          "n": 96
         }
       },
       {
@@ -8867,7 +8871,7 @@
       }
     ],
     "combo": null,
-    "sampleSize": 362,
+    "sampleSize": 363,
     "maxMonths": 2,
     "provisional": false
   },
