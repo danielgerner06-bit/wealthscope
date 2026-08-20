@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-20",
-  "updatedAt": "2026-08-20T09:00:36.314Z",
+  "updatedAt": "2026-08-20T09:27:43.292Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": -1.62,
-      "avg30": -0.25,
-      "perf6m": -3.33
+      "perf": 0.02,
+      "avg30": -0.27,
+      "perf6m": -3.28
     },
     {
       "id": "health",
@@ -183,7 +183,7 @@
     },
     {
       "id": "cons_cycl",
-      "perf": -0.21,
+      "perf": 1.64,
       "avg30": -0.05,
       "perf6m": 0.49
     },
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 1.9,
-      "avg30": 1.84,
-      "perf6m": 5.55
+      "perf": 2.75,
+      "avg30": 1.81,
+      "perf6m": 4.87
     },
     {
       "id": "energy",
@@ -207,9 +207,9 @@
     },
     {
       "id": "materials",
-      "perf": 3.38,
-      "avg30": 1.29,
-      "perf6m": -2.01
+      "perf": 4.27,
+      "avg30": 1.28,
+      "perf6m": -1.47
     },
     {
       "id": "utilities",
@@ -221,7 +221,7 @@
       "id": "realestate",
       "perf": -1.3,
       "avg30": 0.73,
-      "perf6m": 4.57
+      "perf6m": 3.06
     }
   ],
   "bars30Region": [
@@ -251,9 +251,9 @@
     },
     {
       "id": "china",
-      "perf": 1.7,
-      "avg30": -1.04,
-      "perf6m": -11.09
+      "perf": 1.96,
+      "avg30": -1.01,
+      "perf6m": -9.16
     },
     {
       "id": "em",
@@ -263,13 +263,13 @@
     },
     {
       "id": "apac",
-      "perf": 1.91,
-      "avg30": 2.43,
-      "perf6m": 7.35
+      "perf": 5.3,
+      "avg30": 2.42,
+      "perf6m": 8.36
     },
     {
       "id": "india",
-      "perf": 1.68,
+      "perf": 1.75,
       "avg30": -0.57,
       "perf6m": -6.72
     },
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 2.57,
-      "avg30": 1.47,
-      "perf6m": 9.2
+      "perf": 3.63,
+      "avg30": 1.46,
+      "perf6m": 10.43
     }
   ],
   "topStocks": [
@@ -315,7 +315,7 @@
       "eps": 0.67,
       "div": 0,
       "enrichAt": "2026-08-16",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-08-17",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 4.6,
       "div": 2.93,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0656,
+      "sektorPsi": 0.0653,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 0.04,
       "div": 2.81,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0656,
+      "sektorPsi": 0.0653,
       "sektorPsiAtAdd": 0.0082,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -475,7 +475,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-16",
       "perf6m": -7.11,
@@ -486,9 +486,9 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.007,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -519,7 +519,7 @@
       "eps": -0.1,
       "div": 8.98,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.1021,
+      "sektorPsi": 0.1018,
       "sektorPsiAtAdd": 0.0076,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -541,7 +541,7 @@
       "strongBuyPct": 40,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "yahoo",
       "seen": "2026-06-10",
       "perf6m": 95.69,
@@ -551,9 +551,9 @@
       "pe": null,
       "div": 0.14,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0833,
+      "sektorPsi": 0.0239,
       "sektorPsiAtAdd": 0.0039,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -584,9 +584,41 @@
       "eps": -0.33,
       "div": 0,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0093,
+      "sektorPsi": 0.0092,
       "sektorPsiAtAdd": 0.0037,
       "recheckAt": "2026-08-17",
+      "miss": 0
+    },
+    {
+      "ticker": "089970",
+      "name": "VM Inc.",
+      "yahoo": "089970.KQ",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 3,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-20",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-05",
+      "perf6m": 88.95,
+      "perf6mAt": "2026-08-20",
+      "perf1mBefore": -32.73,
+      "upside": 62,
+      "pe": null,
+      "div": null,
+      "enrichAt": "2026-08-20",
+      "sektorPsi": 0.0138,
+      "sektorPsiAtAdd": 0.015,
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -617,7 +649,7 @@
       "eps": 2.59,
       "div": 4.09,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -656,39 +688,6 @@
       "miss": 0
     },
     {
-      "ticker": "300760.SZ",
-      "name": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
-      "yahoo": null,
-      "sector": "health",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 18,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 22,
-      "strongBuyPct": 17,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-21",
-      "perf6m": -19.47,
-      "perf6mAt": "2026-08-20",
-      "perf1mBefore": -7.78,
-      "upside": 47,
-      "pe": 24.5,
-      "eps": 6.46,
-      "div": 4.11,
-      "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0009,
-      "sektorPsiAtAdd": 0.0009,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
       "ticker": "ORS",
       "name": "Orsero S.p.A.",
       "yahoo": "ORS.MI",
@@ -705,7 +704,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": -11.16,
@@ -716,9 +715,9 @@
       "eps": 1.64,
       "div": 3.02,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0093,
+      "sektorPsi": 0.0092,
       "sektorPsiAtAdd": 0.008,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -738,7 +737,7 @@
       "strongBuyPct": 50,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "yahoo",
       "seen": "2026-06-10",
       "perf6m": 54.35,
@@ -748,41 +747,42 @@
       "pe": null,
       "div": 1.36,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0168,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0102,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
-      "ticker": "089970",
-      "name": "VM Inc.",
-      "yahoo": "089970.KQ",
-      "sector": "industrial",
+      "ticker": "300760.SZ",
+      "name": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
+      "yahoo": null,
+      "sector": "health",
       "buyPct": 100,
       "ratingCounts": {
-        "buy": 0,
-        "outperform": 3,
+        "buy": 4,
+        "outperform": 18,
         "hold": 0,
         "underperform": 0,
         "sell": 0
       },
-      "analysts": 3,
-      "strongBuyPct": 0,
+      "analysts": 22,
+      "strongBuyPct": 17,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "yahoo",
-      "seen": "2026-08-05",
-      "perf6m": 88.95,
+      "seen": "2026-06-21",
+      "perf6m": -19.47,
       "perf6mAt": "2026-08-20",
-      "perf1mBefore": -32.73,
-      "upside": 62,
-      "pe": null,
-      "div": null,
+      "perf1mBefore": -7.78,
+      "upside": 47,
+      "pe": 24.5,
+      "eps": 6.46,
+      "div": 4.11,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0168,
-      "sektorPsiAtAdd": 0.015,
-      "recheckAt": "2026-08-13",
+      "sektorPsi": 0.0009,
+      "sektorPsiAtAdd": 0.0009,
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -868,7 +868,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": -14.68,
@@ -881,7 +881,7 @@
       "enrichAt": "2026-08-18",
       "sektorPsi": 0.0031,
       "sektorPsiAtAdd": 0.0047,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -901,7 +901,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "yahoo",
       "seen": "2026-06-14",
       "perf6m": 2.41,
@@ -912,42 +912,9 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0168,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0229,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
-      "ticker": "4776",
-      "name": "Cybozu Inc.",
-      "yahoo": "4776.T",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 0,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 1,
-      "strongBuyPct": 0,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-05",
-      "perf6m": 38.79,
-      "perf6mAt": "2026-08-20",
-      "perf1mBefore": 4.61,
-      "upside": 30,
-      "pe": 18.5,
-      "eps": 166.32,
-      "div": 1.71,
-      "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0033,
-      "sektorPsiAtAdd": 0.0052,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -984,39 +951,6 @@
       "miss": 0
     },
     {
-      "ticker": "JST.DE",
-      "name": "Jost Werke AG",
-      "yahoo": "JST.DE",
-      "sector": "industrial",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 4,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-06-16",
-      "perf6m": -15.33,
-      "perf6mAt": "2026-08-20",
-      "perf1mBefore": 0.54,
-      "upside": 31,
-      "pe": 47.7,
-      "eps": 1.23,
-      "div": 2.61,
-      "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0168,
-      "sektorPsiAtAdd": 0.025,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
       "ticker": "JST",
       "name": "Jost Werke AG",
       "yahoo": "JST.DE",
@@ -1044,7 +978,7 @@
       "eps": 1.23,
       "div": 2.71,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0168,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1066,7 +1000,7 @@
       "strongBuyPct": 83,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": 52.89,
@@ -1077,9 +1011,9 @@
       "eps": 1.43,
       "div": 2.2,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.0038,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -1143,9 +1077,75 @@
       "eps": 22.82,
       "div": 4.31,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0116,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-18",
+      "miss": 0
+    },
+    {
+      "ticker": "JST.DE",
+      "name": "Jost Werke AG",
+      "yahoo": "JST.DE",
+      "sector": "industrial",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 4,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-20",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-06-16",
+      "perf6m": -15.33,
+      "perf6mAt": "2026-08-20",
+      "perf1mBefore": 0.54,
+      "upside": 31,
+      "pe": 47.7,
+      "eps": 1.23,
+      "div": 2.61,
+      "enrichAt": "2026-08-20",
+      "sektorPsi": 0.0138,
+      "sektorPsiAtAdd": 0.025,
+      "recheckAt": "2026-08-20",
+      "miss": 0
+    },
+    {
+      "ticker": "4776",
+      "name": "Cybozu Inc.",
+      "yahoo": "4776.T",
+      "sector": "software",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 0,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 1,
+      "strongBuyPct": 0,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-20",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-05",
+      "perf6m": 38.79,
+      "perf6mAt": "2026-08-20",
+      "perf1mBefore": 4.61,
+      "upside": 30,
+      "pe": 18.5,
+      "eps": 166.32,
+      "div": 1.71,
+      "enrichAt": "2026-08-20",
+      "sektorPsi": 0.003,
+      "sektorPsiAtAdd": 0.0052,
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -1198,7 +1198,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-19",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-08-19",
       "perf6m": 55.88,
@@ -1209,8 +1209,10 @@
       "eps": 0.94,
       "div": 0.47,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0168,
-      "sektorPsiAtAdd": 0.0109
+      "sektorPsi": 0.0138,
+      "sektorPsiAtAdd": 0.0109,
+      "recheckAt": "2026-08-20",
+      "miss": 0
     },
     {
       "ticker": "6701",
@@ -1262,7 +1264,7 @@
       "strongBuyPct": 60,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-06-14",
       "perf6m": 44.95,
@@ -1273,9 +1275,9 @@
       "eps": 1.88,
       "div": 0.83,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0168,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0229,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -1295,7 +1297,7 @@
       "strongBuyPct": 0,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "yahoo",
       "seen": "2026-08-05",
       "perf6m": 3.91,
@@ -1306,9 +1308,9 @@
       "eps": 157.22,
       "div": 2.75,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.0052,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -1328,7 +1330,7 @@
       "strongBuyPct": 86,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-15",
       "perf6m": 13.92,
@@ -1339,9 +1341,9 @@
       "eps": 3.04,
       "div": 2.67,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0116,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0029,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -1394,7 +1396,7 @@
       "strongBuyPct": 100,
       "via": "gemini",
       "source": "yahoo",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-08-20",
       "verifiedSource": "yahoo",
       "seen": "2026-08-12",
       "perf6m": -17.69,
@@ -1407,40 +1409,7 @@
       "enrichAt": "2026-08-17",
       "sektorPsi": 0.0083,
       "sektorPsiAtAdd": 0.0133,
-      "recheckAt": "2026-08-13",
-      "miss": 0
-    },
-    {
-      "ticker": "6701.T",
-      "name": "NEC Corporation",
-      "yahoo": "6701.T",
-      "sector": "software",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 8,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 12,
-      "strongBuyPct": 33,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-13",
-      "verifiedSource": "yahoo",
-      "seen": "2026-06-17",
-      "perf6m": 21.68,
-      "perf6mAt": "2026-08-16",
-      "perf1mBefore": -7.48,
-      "upside": 15,
-      "pe": 25.4,
-      "eps": 203.1,
-      "div": 0.77,
-      "enrichAt": "2026-08-16",
-      "sektorPsi": 0.0033,
-      "sektorPsiAtAdd": 0.0106,
-      "recheckAt": "2026-08-13",
+      "recheckAt": "2026-08-20",
       "miss": 0
     },
     {
@@ -1470,7 +1439,7 @@
       "pe": null,
       "div": 3.09,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0168,
+      "sektorPsi": 0.0138,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1503,7 +1472,7 @@
       "eps": 0.5,
       "div": 4.88,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0116,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0071,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1536,7 +1505,7 @@
       "eps": 10.27,
       "div": 4.2,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.0043,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1634,7 +1603,7 @@
       "eps": 5,
       "div": 4.82,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.0015,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -1666,7 +1635,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0833,
+      "sektorPsi": 0.0239,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1698,7 +1667,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.0256,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1730,7 +1699,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0033,
+      "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.0035,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1758,7 +1727,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-19",
       "div": null,
-      "sektorPsi": 0.0833,
+      "sektorPsi": 0.0239,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1786,7 +1755,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-17",
       "div": null,
-      "sektorPsi": 0.1021,
+      "sektorPsi": 0.1018,
       "sektorPsiAtAdd": 0.0214,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -2085,8 +2054,8 @@
       "date": "2026-08-19"
     },
     "comm": {
-      "text": "Medien & Kommunikation leiden unter Konjunktursorgen und dem Zinsumfeld. KI-Investitionen und geopolitische Unsicherheiten belasten den Sektor.",
-      "date": "2026-08-07"
+      "text": "Der Sektor \"Kommunikation & Medien\" verharrt stagniert, belastet von Zinsanstieg und KI-Unsicherheit, während YOC und INTD als Ausreißer auffallen.",
+      "date": "2026-08-20"
     },
     "cons_cycl": {
       "text": "Der Konsum-Zykliker-Sektor schwächelt seit sechs Monaten leicht, trotz starker kurzfristiger Gewinne. Wahrscheinlich bremsen hohe Zinsen und eine unsichere Konjunktur die Ausgaben.",
@@ -2151,46 +2120,41 @@
       "date": "2026-08-19"
     },
     "world": {
-      "text": "Die Weltwirtschaft zeigt sich stark, angetrieben von robustem Wachstum und positiven Zinsaussichten. Die 30-Tage-Performance übertrifft das Normalniveau deutlich.",
-      "date": "2026-08-10"
+      "text": "Weltweit steigen die Märkte stark an, übertreffen das Normalniveau deutlich. Dies ist vor allem auf die robuste Konjunktur und positive Erwartungen zurückzuführen.",
+      "date": "2026-08-20"
     }
   },
   "news": {
     "items": [
       {
-        "text": "Moderna: Neues Krebsmedikament lässt Aktie explodieren.",
-        "stamp": "19.08.26"
+        "text": "US-Staatsverschuldung übersteigt 40 Billionen Dollar.",
+        "stamp": "20.08.26"
       },
       {
-        "text": "BioNTech Aktie mit kräftigem Kursplus.",
-        "stamp": "19.08.26"
+        "text": "Trump droht Iran mit \"wirtschaftlichem D-Day\".",
+        "stamp": "20.08.26"
       },
       {
-        "text": "Nvidia-Zahlen: Spannung steigt vor Veröffentlichung.",
-        "stamp": "19.08.26"
+        "text": "Deutsche Firmen drosseln USA-Investitionen drastisch.",
+        "stamp": "20.08.26"
       },
       {
-        "text": "SpaceX: Analyst sieht nur geringen Wert.",
-        "stamp": "19.08.26"
+        "text": "Australiens Arbeitslosenquote steigt auf 4,5 Prozent.",
+        "stamp": "20.08.26"
       },
       {
-        "text": "Gold legt Basis für neuen Trendschub.",
-        "stamp": "19.08.26"
-      },
-      {
-        "text": "US-Bundesstaaten verklagen Meta.",
-        "stamp": "19.08.26"
+        "text": "DAX startet mit moderaten Verlusten, MDAX gewinnt.",
+        "stamp": "20.08.26"
       }
     ],
-    "date": "2026-08-19"
+    "date": "2026-08-20"
   },
   "scan": {
     "universe": 8858,
     "scanned": 8858,
-    "lastCursor": 7309,
-    "candCursor": 100,
+    "lastCursor": 7609,
+    "candCursor": 108,
     "candidates": [
-      "Origin Materials, Inc.",
       "The Beauty Health Company",
       "Turning Point Brands, Inc.",
       "Kulicke & Soffa Industries, Inc.",
@@ -2589,45 +2553,46 @@
       "Cue Biopharma, Inc.",
       "Xometry, Inc.",
       "Biomea Fusion, Inc.",
-      "Deutsche Boerse AG"
+      "Deutsche Boerse AG",
+      "Ottobock SE & Co. KGaA"
     ],
-    "noteCursor": 3,
-    "focusCursor": 0,
+    "noteCursor": 4,
+    "focusCursor": 1,
     "recheckCursor": 16,
-    "regionNoteCursor": 9,
-    "notesDay": "2026-08-19",
+    "regionNoteCursor": 0,
+    "notesDay": "2026-08-20",
     "seenBySector": {
-      "cons_cycl": 1679,
-      "cons_def": 885,
-      "materials": 1197,
-      "health": 4928,
-      "finance": 3319,
-      "energy": 1541,
-      "hardware": 1113,
-      "software": 3309,
-      "industrial": 1432,
-      "utilities": 608,
-      "comm": 717,
-      "ai_semi": 664,
-      "realestate": 310
+      "cons_cycl": 1686,
+      "cons_def": 891,
+      "materials": 1199,
+      "health": 4946,
+      "finance": 3329,
+      "energy": 1547,
+      "hardware": 1116,
+      "software": 3322,
+      "industrial": 1438,
+      "utilities": 611,
+      "comm": 721,
+      "ai_semi": 666,
+      "realestate": 311
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1682,
-      "cons_def": 887,
-      "materials": 1197,
-      "health": 4931,
-      "finance": 3323,
-      "energy": 1543,
-      "hardware": 1119,
-      "software": 3320,
-      "industrial": 1440,
-      "utilities": 610,
-      "comm": 720,
-      "ai_semi": 664,
-      "realestate": 312
+      "cons_cycl": 1689,
+      "cons_def": 893,
+      "materials": 1199,
+      "health": 4949,
+      "finance": 3333,
+      "energy": 1549,
+      "hardware": 1122,
+      "software": 3332,
+      "industrial": 1446,
+      "utilities": 613,
+      "comm": 724,
+      "ai_semi": 666,
+      "realestate": 313
     },
-    "heavyAt": "2026-08-19T20:58:33.093Z",
+    "heavyAt": "2026-08-20T09:15:03.077Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2638,6 +2603,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-20T09:00:36.314Z"
+  }
 }
