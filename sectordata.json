@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-21",
-  "updatedAt": "2026-08-21T18:00:26.382Z",
+  "updatedAt": "2026-08-21T19:00:26.372Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -153,15 +153,15 @@
     },
     {
       "id": "ai_semi",
-      "perf": -5.95,
+      "perf": -5.86,
       "avg30": 7.7,
-      "perf6m": 45.22
+      "perf6m": 45.36
     },
     {
       "id": "hardware",
-      "perf": 1.63,
+      "perf": 1.73,
       "avg30": 3.15,
-      "perf6m": 30.05
+      "perf6m": 30.17
     },
     {
       "id": "comm",
@@ -171,39 +171,39 @@
     },
     {
       "id": "health",
-      "perf": 9.04,
+      "perf": 9.1,
       "avg30": 1.82,
-      "perf6m": 11.12
+      "perf6m": 11.17
     },
     {
       "id": "finance",
-      "perf": 2.4,
+      "perf": 2.55,
       "avg30": 0.71,
-      "perf6m": 9.34
+      "perf6m": 9.51
     },
     {
       "id": "cons_cycl",
-      "perf": 3.45,
+      "perf": 3.62,
       "avg30": -0.06,
-      "perf6m": 0.79
+      "perf6m": 0.97
     },
     {
       "id": "cons_def",
-      "perf": 2.08,
+      "perf": 2.14,
       "avg30": 0.62,
-      "perf6m": -2.37
+      "perf6m": -2.32
     },
     {
       "id": "industrial",
-      "perf": 0.84,
+      "perf": 1.01,
       "avg30": 1.81,
-      "perf6m": 2.27
+      "perf6m": 2.44
     },
     {
       "id": "energy",
-      "perf": 7.42,
+      "perf": 7.69,
       "avg30": 2.99,
-      "perf6m": 15.88
+      "perf6m": 16.16
     },
     {
       "id": "materials",
@@ -219,17 +219,17 @@
     },
     {
       "id": "realestate",
-      "perf": 0,
+      "perf": 0.16,
       "avg30": 0.71,
-      "perf6m": 3.83
+      "perf6m": 3.99
     }
   ],
   "bars30Region": [
     {
       "id": "usa",
-      "perf": 2.41,
+      "perf": 2.52,
       "avg30": 1.49,
-      "perf6m": 11.53
+      "perf6m": 11.66
     },
     {
       "id": "europe",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 2.8,
+      "perf": 2.96,
       "avg30": 1.46,
-      "perf6m": 9.66
+      "perf6m": 9.83
     }
   ],
   "topStocks": [
@@ -2567,5 +2567,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-21T18:00:26.382Z"
+  "yahooAt": "2026-08-21T19:00:26.372Z"
 }
