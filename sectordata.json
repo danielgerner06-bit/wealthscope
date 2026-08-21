@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-20",
-  "updatedAt": "2026-08-21T02:00:26.377Z",
+  "updated": "2026-08-21",
+  "updatedAt": "2026-08-21T02:44:05.377Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -165,9 +165,9 @@
     },
     {
       "id": "comm",
-      "perf": 0.59,
-      "avg30": -0.3,
-      "perf6m": -3.41
+      "perf": -0.11,
+      "avg30": -0.29,
+      "perf6m": -3.4
     },
     {
       "id": "health",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": 1.81,
+      "perf": 1.07,
       "avg30": -0.08,
-      "perf6m": 0.38
+      "perf6m": 0.47
     },
     {
       "id": "cons_def",
@@ -195,9 +195,9 @@
     },
     {
       "id": "industrial",
-      "perf": 1.84,
-      "avg30": 1.81,
-      "perf6m": 3.92
+      "perf": 1.05,
+      "avg30": 1.83,
+      "perf6m": 4.47
     },
     {
       "id": "energy",
@@ -207,8 +207,8 @@
     },
     {
       "id": "materials",
-      "perf": 4.63,
-      "avg30": 1.29,
+      "perf": 3.74,
+      "avg30": 1.3,
       "perf6m": -0.78
     },
     {
@@ -219,9 +219,9 @@
     },
     {
       "id": "realestate",
-      "perf": -0.46,
-      "avg30": 0.71,
-      "perf6m": 3.78
+      "perf": -0.95,
+      "avg30": 0.72,
+      "perf6m": 3.43
     }
   ],
   "bars30Region": [
@@ -233,15 +233,15 @@
     },
     {
       "id": "europe",
-      "perf": 3.66,
+      "perf": 3.63,
       "avg30": 1.37,
-      "perf6m": 3.12
+      "perf6m": 3.67
     },
     {
       "id": "germany",
-      "perf": 6.32,
-      "avg30": 0.43,
-      "perf6m": -0.27
+      "perf": 6.5,
+      "avg30": 0.41,
+      "perf6m": -0.11
     },
     {
       "id": "japan",
@@ -251,39 +251,39 @@
     },
     {
       "id": "china",
-      "perf": 2.57,
-      "avg30": -1.04,
-      "perf6m": -8.78
+      "perf": 2.31,
+      "avg30": -1.07,
+      "perf6m": -8.57
     },
     {
       "id": "em",
-      "perf": 1.72,
+      "perf": 4.01,
       "avg30": 2.38,
-      "perf6m": 8.31
+      "perf6m": 8.16
     },
     {
       "id": "apac",
-      "perf": 2.92,
-      "avg30": 2.42,
-      "perf6m": 8.36
+      "perf": 4.19,
+      "avg30": 2.43,
+      "perf6m": 7.02
     },
     {
       "id": "india",
-      "perf": 2.04,
-      "avg30": -0.55,
-      "perf6m": -7
+      "perf": 1.75,
+      "avg30": -0.56,
+      "perf6m": -6.72
     },
     {
       "id": "latam",
-      "perf": -2.94,
+      "perf": -1.29,
       "avg30": 2.3,
-      "perf6m": -6.89
+      "perf6m": -7.65
     },
     {
       "id": "world",
-      "perf": 2.78,
-      "avg30": 1.45,
-      "perf6m": 9.93
+      "perf": 2.53,
+      "avg30": 1.46,
+      "perf6m": 10.21
     }
   ],
   "topStocks": [
@@ -310,11 +310,11 @@
       "perf6m": 4.56,
       "perf6mAt": "2026-08-21",
       "perf1mBefore": -9.44,
-      "upside": 99,
-      "pe": 10.1,
+      "upside": 92,
+      "pe": 10.5,
       "eps": 0.67,
       "div": 0,
-      "enrichAt": "2026-08-16",
+      "enrichAt": "2026-08-21",
       "sektorPsi": 0.003,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-08-17",
@@ -384,7 +384,7 @@
       "eps": 4.6,
       "div": 2.93,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0147,
+      "sektorPsi": 0.0157,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -417,7 +417,7 @@
       "eps": 0.04,
       "div": 2.81,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0147,
+      "sektorPsi": 0.0157,
       "sektorPsiAtAdd": 0.0082,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -519,7 +519,7 @@
       "eps": -0.1,
       "div": 8.98,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0225,
+      "sektorPsi": 0.0233,
       "sektorPsiAtAdd": 0.0076,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -551,7 +551,7 @@
       "pe": null,
       "div": 0.14,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0116,
+      "sektorPsi": 0.0127,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -584,7 +584,7 @@
       "eps": -0.33,
       "div": 0,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0053,
+      "sektorPsi": 0.0054,
       "sektorPsiAtAdd": 0.0037,
       "recheckAt": "2026-08-17",
       "miss": 0
@@ -677,12 +677,12 @@
       "perf6m": 6.31,
       "perf6mAt": "2026-08-21",
       "perf1mBefore": -4.55,
-      "upside": 57,
-      "pe": 16.3,
+      "upside": 63,
+      "pe": 15.7,
       "eps": 8.02,
       "div": 0.69,
-      "enrichAt": "2026-08-16",
-      "sektorPsi": 0.0121,
+      "enrichAt": "2026-08-21",
+      "sektorPsi": 0.01,
       "sektorPsiAtAdd": 0.0112,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -715,7 +715,7 @@
       "eps": 1.64,
       "div": 3.02,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0053,
+      "sektorPsi": 0.0054,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -846,7 +846,7 @@
       "eps": 2.17,
       "div": 1.73,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0121,
+      "sektorPsi": 0.01,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -1077,7 +1077,7 @@
       "eps": 22.82,
       "div": 4.31,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0042,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1165,20 +1165,20 @@
       "strongBuyPct": 80,
       "via": "gemini",
       "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-14",
+      "verifiedAt": "2026-08-21",
       "verifiedSource": "stockanalysis+yahoo",
       "seen": "2026-07-02",
       "perf6m": 57.31,
       "perf6mAt": "2026-08-21",
       "perf1mBefore": -10.76,
-      "upside": 30,
-      "pe": null,
-      "eps": -0.06,
+      "upside": 36,
+      "pe": 56.8,
+      "eps": 0.36,
       "div": 0,
-      "enrichAt": "2026-08-16",
+      "enrichAt": "2026-08-21",
       "sektorPsi": 0.0015,
       "sektorPsiAtAdd": 0.0045,
-      "recheckAt": "2026-08-14",
+      "recheckAt": "2026-08-21",
       "miss": 0
     },
     {
@@ -1212,39 +1212,6 @@
       "sektorPsi": 0.0139,
       "sektorPsiAtAdd": 0.0109,
       "recheckAt": "2026-08-20",
-      "miss": 0
-    },
-    {
-      "ticker": "6701",
-      "name": "NEC Corporation",
-      "yahoo": "6701.T",
-      "sector": "hardware",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 8,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 12,
-      "strongBuyPct": 33,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-14",
-      "verifiedSource": "yahoo",
-      "seen": "2026-07-23",
-      "perf6m": 21.68,
-      "perf6mAt": "2026-08-17",
-      "perf1mBefore": 16.72,
-      "upside": 24,
-      "pe": 23.5,
-      "eps": 203.1,
-      "div": 0.77,
-      "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0121,
-      "sektorPsiAtAdd": 0.01,
-      "recheckAt": "2026-08-14",
       "miss": 0
     },
     {
@@ -1341,7 +1308,7 @@
       "eps": 3.04,
       "div": 2.67,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0042,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1374,7 +1341,7 @@
       "eps": 0.64,
       "div": 1.33,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0121,
+      "sektorPsi": 0.01,
       "sektorPsiAtAdd": 0.005,
       "recheckAt": "2026-08-17",
       "miss": 0
@@ -1407,7 +1374,7 @@
       "eps": 253.43,
       "div": 0.26,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0121,
+      "sektorPsi": 0.01,
       "sektorPsiAtAdd": 0.0133,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1472,7 +1439,7 @@
       "eps": 0.5,
       "div": 4.88,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0042,
+      "sektorPsi": 0.0045,
       "sektorPsiAtAdd": 0.0071,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1533,12 +1500,12 @@
       "perf6m": 0.52,
       "perf6mAt": "2026-08-21",
       "perf1mBefore": -0.52,
-      "upside": 1,
-      "pe": 18.4,
+      "upside": 4,
+      "pe": 17.8,
       "eps": 0.65,
-      "div": 2.13,
-      "enrichAt": "2026-08-16",
-      "sektorPsi": 0.0121,
+      "div": 2.17,
+      "enrichAt": "2026-08-21",
+      "sektorPsi": 0.01,
       "sektorPsiAtAdd": 0.0112,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1635,7 +1602,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0116,
+      "sektorPsi": 0.0127,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1727,7 +1694,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-19",
       "div": null,
-      "sektorPsi": 0.0116,
+      "sektorPsi": 0.0127,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1755,7 +1722,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-17",
       "div": null,
-      "sektorPsi": 0.0225,
+      "sektorPsi": 0.0233,
       "sektorPsiAtAdd": 0.0214,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -2034,8 +2001,8 @@
       "date": "2026-08-17"
     },
     "health": {
-      "text": "Gesundheit & Pharma zeigt moderate 30-Tage-Performance, getrieben von spezifischen Werten wie 300760.SZ, MEDI und PHN. Die allgemeine Konjunktur und Zinsentwicklung beeinflussen den Sektor.",
-      "date": "2026-08-08"
+      "text": "Gesundheit & Pharma legt stark zu (+8.13% in 30 Tagen) dank starker Nachfrage, während KI-Entwicklungen und Medizintechnik-Innovationen die Sektoren MEDI und PHN antreiben.",
+      "date": "2026-08-21"
     },
     "cons_def": {
       "text": "Defensiver Konsum stagniert trotz leichter 30-Tage-Erholung, da unsichere Konjunkturaussichten und höhere Zinsen die Nachfrage dämpfen. Auffällige Werte wie HIGH.DE könnten auf spezifische Branchenentwicklungen hindeuten.",
@@ -2096,8 +2063,8 @@
       "date": "2026-08-14"
     },
     "usa": {
-      "text": "USA: Starke Konjunktur und KI-Boom treiben Märkte. Die 30-Tage-Performance übertrifft das Normalniveau deutlich.",
-      "date": "2026-08-11"
+      "text": "US-Aktien steigen trotz normaler Konjunktur weiter stark. Positive KI-Entwicklung treibt die Kurse über das erwartete Niveau.",
+      "date": "2026-08-21"
     },
     "europe": {
       "text": "Europas Konjunktur brummt: 30-Tage-Wachstum übertrifft Normalniveau deutlich. Dies deutet auf eine robuste wirtschaftliche Erholung hin.",
@@ -2127,43 +2094,30 @@
   "news": {
     "items": [
       {
-        "text": "US-Staatsverschuldung übersteigt 40 Billionen Dollar.",
+        "text": "US-Arbeitslosenhilfe sinkt, Konjunkturoptimismus steigt",
         "stamp": "20.08.26"
       },
       {
-        "text": "Trump droht Iran mit \"wirtschaftlichem D-Day\".",
-        "stamp": "20.08.26"
+        "text": "US-Rohöllagerbestände steigen unerwartet stark",
+        "stamp": "19.08.26"
       },
       {
-        "text": "Deutsche Firmen drosseln USA-Investitionen drastisch.",
-        "stamp": "20.08.26"
+        "text": "US-Anleiherenditen brechen ein nach Aufstockung der Rückkäufe",
+        "stamp": "19.08.26"
       },
       {
-        "text": "Australiens Arbeitslosenquote steigt auf 4,5 Prozent.",
-        "stamp": "20.08.26"
-      },
-      {
-        "text": "DAX startet mit moderaten Verlusten, MDAX gewinnt.",
-        "stamp": "20.08.26"
+        "text": "USA und Kanada nähern sich Handelsabkommen",
+        "stamp": "19.08.26"
       }
     ],
-    "date": "2026-08-20"
+    "date": "2026-08-21"
   },
   "scan": {
-    "universe": 8858,
-    "scanned": 8858,
-    "lastCursor": 7609,
-    "candCursor": 108,
+    "universe": 8855,
+    "scanned": 8855,
+    "lastCursor": 7909,
+    "candCursor": 116,
     "candidates": [
-      "The Beauty Health Company",
-      "Turning Point Brands, Inc.",
-      "Kulicke & Soffa Industries, Inc.",
-      "LSB Industries, Inc.",
-      "Commercial Vehicle Group, Inc.",
-      "Tigo Energy, Inc.",
-      "Seanergy Maritime Holdings Corp.",
-      "Diana Shipping Inc.",
-      "Innovative Aerosystems, Inc.",
       "Koppers Holdings Inc.",
       "Tredegar Corporation",
       "Enliven Therapeutics, Inc.",
@@ -2554,45 +2508,54 @@
       "Xometry, Inc.",
       "Biomea Fusion, Inc.",
       "Deutsche Boerse AG",
-      "Ottobock SE & Co. KGaA"
+      "Ottobock SE & Co. KGaA",
+      "Scandinavian Astor Group AB",
+      "Esmecc S.p.A.",
+      "Lindbergh S.p.A.",
+      "Casta Diva Group S.p.A.",
+      "Yakkyo S.P.A.",
+      "Porto Aviation Group S.P.A.",
+      "Banco di Desio e della Brianza S.p.A.",
+      "Energy Time S.P.A.",
+      "Salvatore Ferragamo S.p.A."
     ],
-    "noteCursor": 4,
-    "focusCursor": 1,
+    "noteCursor": 5,
+    "focusCursor": 2,
     "recheckCursor": 16,
-    "regionNoteCursor": 0,
-    "notesDay": "2026-08-20",
+    "regionNoteCursor": 1,
+    "notesDay": "2026-08-21",
     "seenBySector": {
-      "cons_cycl": 1686,
-      "cons_def": 891,
-      "materials": 1199,
-      "health": 4946,
-      "finance": 3329,
-      "energy": 1547,
-      "hardware": 1116,
-      "software": 3322,
-      "industrial": 1438,
-      "utilities": 611,
-      "comm": 721,
-      "ai_semi": 666,
+      "cons_cycl": 1690,
+      "cons_def": 892,
+      "materials": 1206,
+      "health": 4967,
+      "finance": 3343,
+      "energy": 1557,
+      "hardware": 1119,
+      "software": 3336,
+      "industrial": 1444,
+      "utilities": 612,
+      "comm": 724,
+      "ai_semi": 667,
       "realestate": 311
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1689,
-      "cons_def": 893,
-      "materials": 1199,
-      "health": 4949,
-      "finance": 3333,
-      "energy": 1549,
-      "hardware": 1122,
-      "software": 3332,
-      "industrial": 1446,
-      "utilities": 613,
-      "comm": 724,
-      "ai_semi": 666,
+      "cons_cycl": 1693,
+      "cons_def": 894,
+      "materials": 1206,
+      "health": 4970,
+      "finance": 3347,
+      "energy": 1559,
+      "hardware": 1124,
+      "software": 3346,
+      "industrial": 1452,
+      "utilities": 614,
+      "comm": 727,
+      "ai_semi": 667,
       "realestate": 313
     },
-    "heavyAt": "2026-08-20T09:15:03.077Z",
+    "heavyAt": "2026-08-21T02:36:51.226Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2603,6 +2566,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-21T02:00:26.377Z"
+  }
 }

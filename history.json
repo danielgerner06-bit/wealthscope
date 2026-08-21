@@ -8321,8 +8321,8 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 80,
-      "upside": 30,
-      "pe": null,
+      "upside": 36,
+      "pe": 56.8,
       "perf6mAtAdd": 57.31,
       "perf1mBefore": -10.76,
       "sektorPsiAtAdd": 0.0045,
@@ -8393,8 +8393,8 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 99,
-      "pe": 10.1,
+      "upside": 92,
+      "pe": 10.5,
       "perf6mAtAdd": 4.56,
       "perf1mBefore": -9.44,
       "sektorPsiAtAdd": 0.0344,
@@ -8741,8 +8741,8 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 83,
-      "upside": 57,
-      "pe": 16.3,
+      "upside": 63,
+      "pe": 15.7,
       "perf6mAtAdd": 6.31,
       "perf1mBefore": -4.55,
       "sektorPsiAtAdd": 0.0112,
@@ -8762,13 +8762,13 @@
       "region": "europe",
       "buyPct": 100,
       "strongBuyPct": 100,
-      "upside": 1,
-      "pe": 18.4,
+      "upside": 4,
+      "pe": 17.8,
       "perf6mAtAdd": 0.52,
       "perf1mBefore": -0.52,
       "sektorPsiAtAdd": 0.0112,
       "analysts": 1,
-      "div": 2.13,
+      "div": 2.17,
       "seen": "2026-08-11",
       "seenMs": 1786406400000,
       "startPrice": 11.440000057220459,
@@ -8857,7 +8857,7 @@
       },
       {
         "name": "KGV",
-        "spread": 6.6,
+        "spread": 6.5,
         "best": {
           "k": "<15",
           "avg": 6.1,
@@ -8865,8 +8865,8 @@
         },
         "worst": {
           "k": "40+",
-          "avg": -0.5,
-          "n": 46
+          "avg": -0.4,
+          "n": 47
         }
       }
     ],
@@ -8876,10 +8876,10 @@
     "provisional": false
   },
   "kiAnalysis": {
-    "text": "\"Strong Buy\" mit <70% war mit 8,3% die beste Ausprägung. \"Dividende\" hatte mit 9,4% die größte Streuung, aber kaum klaren Einfluss.",
-    "date": "2026-08-20",
+    "text": "\"Strong Buy\" mit <70% K-Faktor lief mit 8,3% am besten. Dividende hatte kaum Einfluss.",
+    "date": "2026-08-21",
     "stage": "real",
     "months": 2
   },
-  "kiDay": "2026-08-20"
+  "kiDay": "2026-08-21"
 }
