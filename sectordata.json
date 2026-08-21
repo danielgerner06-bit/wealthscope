@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-21",
-  "updatedAt": "2026-08-21T15:00:26.384Z",
+  "updatedAt": "2026-08-21T15:14:15.047Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -171,9 +171,9 @@
     },
     {
       "id": "health",
-      "perf": 9.51,
+      "perf": 9.54,
       "avg30": 1.82,
-      "perf6m": 11.6
+      "perf6m": 11.62
     },
     {
       "id": "finance",
@@ -183,9 +183,9 @@
     },
     {
       "id": "cons_cycl",
-      "perf": 3.69,
+      "perf": 3.82,
       "avg30": -0.06,
-      "perf6m": 1.03
+      "perf6m": 1.16
     },
     {
       "id": "cons_def",
@@ -195,15 +195,15 @@
     },
     {
       "id": "industrial",
-      "perf": 0.68,
+      "perf": 0.65,
       "avg30": 1.8,
-      "perf6m": 2.11
+      "perf6m": 2.09
     },
     {
       "id": "energy",
-      "perf": 7.56,
+      "perf": 7.4,
       "avg30": 2.99,
-      "perf6m": 16.03
+      "perf6m": 15.85
     },
     {
       "id": "materials",
@@ -227,9 +227,9 @@
   "bars30Region": [
     {
       "id": "usa",
-      "perf": 2.48,
+      "perf": 2.52,
       "avg30": 1.49,
-      "perf6m": 11.6
+      "perf6m": 11.65
     },
     {
       "id": "europe",
@@ -281,9 +281,9 @@
     },
     {
       "id": "world",
-      "perf": 2.84,
+      "perf": 2.86,
       "avg30": 1.46,
-      "perf6m": 9.7
+      "perf6m": 9.71
     }
   ],
   "topStocks": [
@@ -351,7 +351,7 @@
       "eps": 4.6,
       "div": 2.93,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0651,
+      "sektorPsi": 0.0549,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 0.04,
       "div": 2.81,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0651,
+      "sektorPsi": 0.0549,
       "sektorPsiAtAdd": 0.0082,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -551,7 +551,7 @@
       "pe": null,
       "div": 0.14,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0114,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -584,7 +584,7 @@
       "eps": -0.33,
       "div": 0,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.0037,
       "recheckAt": "2026-08-17",
       "miss": 0
@@ -617,7 +617,7 @@
       "eps": 8.02,
       "div": 0.69,
       "enrichAt": "2026-08-21",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0126,
       "sektorPsiAtAdd": 0.0112,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -649,7 +649,7 @@
       "pe": null,
       "div": null,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.017,
+      "sektorPsi": 0.0178,
       "sektorPsiAtAdd": 0.015,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -715,7 +715,7 @@
       "eps": 1.64,
       "div": 3.02,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0062,
+      "sektorPsi": 0.0058,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -747,7 +747,7 @@
       "pe": null,
       "div": 1.36,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.017,
+      "sektorPsi": 0.0178,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -780,7 +780,7 @@
       "eps": 6.46,
       "div": 4.11,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0009,
+      "sektorPsi": 0.0008,
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -846,7 +846,7 @@
       "eps": 2.17,
       "div": 1.73,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0126,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -912,7 +912,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.017,
+      "sektorPsi": 0.0178,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -945,7 +945,7 @@
       "eps": -0.06,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0021,
       "sektorPsiAtAdd": 0.0016,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -978,7 +978,7 @@
       "eps": 0.36,
       "div": 0,
       "enrichAt": "2026-08-21",
-      "sektorPsi": 0.0019,
+      "sektorPsi": 0.0021,
       "sektorPsiAtAdd": 0.0045,
       "recheckAt": "2026-08-21",
       "miss": 0
@@ -1011,7 +1011,7 @@
       "eps": 1.23,
       "div": 2.71,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.017,
+      "sektorPsi": 0.0178,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1077,7 +1077,7 @@
       "eps": 8.53,
       "div": 3.35,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0009,
+      "sektorPsi": 0.0008,
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -1110,7 +1110,7 @@
       "eps": 22.82,
       "div": 4.31,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0043,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.004,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1143,7 +1143,7 @@
       "eps": 1.23,
       "div": 2.61,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.017,
+      "sektorPsi": 0.0178,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1209,7 +1209,7 @@
       "eps": 0.94,
       "div": 0.47,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.017,
+      "sektorPsi": 0.0178,
       "sektorPsiAtAdd": 0.0109,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1242,7 +1242,7 @@
       "eps": 1.88,
       "div": 0.83,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.017,
+      "sektorPsi": 0.0178,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1308,7 +1308,7 @@
       "eps": 3.04,
       "div": 2.67,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0043,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0029,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1341,7 +1341,7 @@
       "eps": 0.64,
       "div": 1.33,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0126,
       "sektorPsiAtAdd": 0.005,
       "recheckAt": "2026-08-17",
       "miss": 0
@@ -1374,7 +1374,7 @@
       "eps": 253.43,
       "div": 0.26,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0126,
       "sektorPsiAtAdd": 0.0133,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1406,7 +1406,7 @@
       "pe": null,
       "div": 3.09,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.017,
+      "sektorPsi": 0.0178,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1439,7 +1439,7 @@
       "eps": 0.5,
       "div": 4.88,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0043,
+      "sektorPsi": 0.0039,
       "sektorPsiAtAdd": 0.0071,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1472,7 +1472,7 @@
       "eps": 0.65,
       "div": 2.17,
       "enrichAt": "2026-08-21",
-      "sektorPsi": 0.0125,
+      "sektorPsi": 0.0126,
       "sektorPsiAtAdd": 0.0112,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1538,7 +1538,7 @@
       "eps": 2.2,
       "div": 1.45,
       "enrichAt": "2026-08-17",
-      "sektorPsi": 0.0009,
+      "sektorPsi": 0.0008,
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-15",
       "miss": 0
@@ -1602,7 +1602,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0114,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1694,7 +1694,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-19",
       "div": null,
-      "sektorPsi": 0.0114,
+      "sektorPsi": 0.0111,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -2094,20 +2094,20 @@
   "news": {
     "items": [
       {
-        "text": "US-Arbeitslosenhilfe sinkt, Konjunkturoptimismus steigt",
+        "text": "Bitcoin springt über 79.000-Dollar-Marke – Kryptoaktien profitieren",
+        "stamp": "21.08.26"
+      },
+      {
+        "text": "DAX aktuell: Steigende Renditen für US-Anleihen bringen Unruhe",
+        "stamp": "21.08.26"
+      },
+      {
+        "text": "Fed-Protokoll: Drei Notenbanker wollten Zinserhöhung im Juli",
         "stamp": "20.08.26"
       },
       {
-        "text": "US-Rohöllagerbestände steigen unerwartet stark",
-        "stamp": "19.08.26"
-      },
-      {
-        "text": "US-Anleiherenditen brechen ein nach Aufstockung der Rückkäufe",
-        "stamp": "19.08.26"
-      },
-      {
-        "text": "USA und Kanada nähern sich Handelsabkommen",
-        "stamp": "19.08.26"
+        "text": "US-Staatsverschuldung übersteigt 40 Billionen Dollar-Marke",
+        "stamp": "20.08.26"
       }
     ],
     "date": "2026-08-21"
@@ -2115,10 +2115,9 @@
   "scan": {
     "universe": 8855,
     "scanned": 8855,
-    "lastCursor": 7909,
-    "candCursor": 116,
+    "lastCursor": 8209,
+    "candCursor": 124,
     "candidates": [
-      "Koppers Holdings Inc.",
       "Tredegar Corporation",
       "Enliven Therapeutics, Inc.",
       "Navitas Semiconductor Corporation",
@@ -2517,45 +2516,46 @@
       "Porto Aviation Group S.P.A.",
       "Banco di Desio e della Brianza S.p.A.",
       "Energy Time S.P.A.",
-      "Salvatore Ferragamo S.p.A."
+      "Salvatore Ferragamo S.p.A.",
+      "Everbridge Inc."
     ],
     "noteCursor": 5,
-    "focusCursor": 2,
+    "focusCursor": 3,
     "recheckCursor": 16,
     "regionNoteCursor": 1,
     "notesDay": "2026-08-21",
     "seenBySector": {
-      "cons_cycl": 1690,
-      "cons_def": 892,
-      "materials": 1206,
-      "health": 4967,
-      "finance": 3343,
-      "energy": 1557,
-      "hardware": 1119,
-      "software": 3336,
-      "industrial": 1444,
-      "utilities": 612,
-      "comm": 724,
-      "ai_semi": 667,
+      "cons_cycl": 1699,
+      "cons_def": 896,
+      "materials": 1212,
+      "health": 4983,
+      "finance": 3362,
+      "energy": 1560,
+      "hardware": 1126,
+      "software": 3348,
+      "industrial": 1447,
+      "utilities": 614,
+      "comm": 730,
+      "ai_semi": 670,
       "realestate": 311
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1693,
-      "cons_def": 894,
-      "materials": 1206,
-      "health": 4970,
-      "finance": 3347,
-      "energy": 1559,
-      "hardware": 1124,
-      "software": 3346,
-      "industrial": 1452,
-      "utilities": 614,
-      "comm": 727,
-      "ai_semi": 667,
+      "cons_cycl": 1702,
+      "cons_def": 898,
+      "materials": 1212,
+      "health": 4986,
+      "finance": 3366,
+      "energy": 1562,
+      "hardware": 1131,
+      "software": 3358,
+      "industrial": 1455,
+      "utilities": 616,
+      "comm": 733,
+      "ai_semi": 670,
       "realestate": 313
     },
-    "heavyAt": "2026-08-21T02:36:51.226Z",
+    "heavyAt": "2026-08-21T15:06:44.577Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2566,6 +2566,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-21T15:00:26.384Z"
+  }
 }
