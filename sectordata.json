@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-22",
-  "updatedAt": "2026-08-22T20:00:26.363Z",
+  "updatedAt": "2026-08-22T20:56:18.240Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -1314,6 +1314,37 @@
       "miss": 0
     },
     {
+      "ticker": "6080",
+      "name": "M&A Capital Partners Co., Ltd.",
+      "yahoo": "6080.T",
+      "sector": "finance",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 1,
+        "outperform": 2,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 33,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-22",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-22",
+      "perf6m": 16.67,
+      "perf6mAt": "2026-08-22",
+      "perf1mBefore": 10.98,
+      "upside": 19,
+      "pe": 22.6,
+      "eps": 182.96,
+      "div": 3.51,
+      "enrichAt": "2026-08-22",
+      "sektorPsi": 0.0037,
+      "sektorPsiAtAdd": 0.0037
+    },
+    {
       "ticker": "SL",
       "name": "Sanlorenzo S.p.A.",
       "yahoo": "SL.MI",
@@ -1542,37 +1573,6 @@
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-22",
       "miss": 0
-    },
-    {
-      "ticker": "6080",
-      "name": "M&A Capital Partners Co., Ltd.",
-      "yahoo": "6080.T",
-      "sector": "finance",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 1,
-        "outperform": 2,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 3,
-      "strongBuyPct": 33,
-      "via": "gemini",
-      "source": "yahoo",
-      "verifiedAt": "2026-08-22",
-      "verifiedSource": "yahoo",
-      "seen": "2026-08-22",
-      "perf6m": 16.67,
-      "perf6mAt": "2026-08-22",
-      "perf1mBefore": 10.98,
-      "upside": 19,
-      "pe": 22.6,
-      "eps": 182.96,
-      "div": 3.51,
-      "enrichAt": "2026-08-22",
-      "sektorPsi": 0.0037,
-      "sektorPsiAtAdd": 0.0037
     },
     {
       "ticker": "1INN.DE",
@@ -2610,6 +2610,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-22T20:00:26.363Z"
+  }
 }
