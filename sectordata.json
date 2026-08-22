@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-22",
-  "updatedAt": "2026-08-22T19:00:26.373Z",
+  "updatedAt": "2026-08-22T19:42:08.841Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -315,7 +315,7 @@
       "eps": 4.62,
       "div": 2.97,
       "enrichAt": "2026-08-22",
-      "sektorPsi": 0.0572,
+      "sektorPsi": 0.0569,
       "sektorPsiAtAdd": 0.0031,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -351,7 +351,7 @@
       "eps": -0.63,
       "div": 0,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.003,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-08-22",
       "miss": 0
@@ -384,7 +384,7 @@
       "eps": 0.04,
       "div": 2.81,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0572,
+      "sektorPsi": 0.0569,
       "sektorPsiAtAdd": 0.0082,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -420,7 +420,7 @@
       "eps": 4.29,
       "div": 0,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.003,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0085,
       "recheckAt": "2026-08-22",
       "miss": 0
@@ -551,7 +551,7 @@
       "pe": null,
       "div": 0.14,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0111,
+      "sektorPsi": 0.011,
       "sektorPsiAtAdd": 0.0039,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -617,7 +617,7 @@
       "eps": 8.02,
       "div": 0.69,
       "enrichAt": "2026-08-21",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.0112,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -649,7 +649,7 @@
       "pe": null,
       "div": null,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0175,
+      "sektorPsi": 0.0174,
       "sektorPsiAtAdd": 0.015,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -747,7 +747,7 @@
       "pe": null,
       "div": 1.36,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0175,
+      "sektorPsi": 0.0174,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -813,7 +813,7 @@
       "eps": 0.48,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.003,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0019,
       "recheckAt": "2026-08-16",
       "miss": 0
@@ -846,7 +846,7 @@
       "eps": 2.17,
       "div": 1.73,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.0078,
       "recheckAt": "2026-08-22",
       "miss": 0
@@ -879,7 +879,7 @@
       "eps": 2.06,
       "div": 6.33,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.003,
+      "sektorPsi": 0.0037,
       "sektorPsiAtAdd": 0.0047,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -912,7 +912,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0175,
+      "sektorPsi": 0.0174,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1011,7 +1011,7 @@
       "eps": 1.23,
       "div": 2.71,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0175,
+      "sektorPsi": 0.0174,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1077,7 +1077,7 @@
       "eps": 253.59,
       "div": 0.28,
       "enrichAt": "2026-08-22",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.0133,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1143,7 +1143,7 @@
       "eps": 1.23,
       "div": 2.61,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0175,
+      "sektorPsi": 0.0174,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1242,7 +1242,7 @@
       "eps": 0.94,
       "div": 0.47,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0175,
+      "sektorPsi": 0.0174,
       "sektorPsiAtAdd": 0.0109,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1275,7 +1275,7 @@
       "eps": 1.88,
       "div": 0.83,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0175,
+      "sektorPsi": 0.0174,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1374,7 +1374,7 @@
       "eps": 0.64,
       "div": 1.33,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.005,
       "recheckAt": "2026-08-17",
       "miss": 0
@@ -1406,7 +1406,7 @@
       "pe": null,
       "div": 3.09,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0175,
+      "sektorPsi": 0.0174,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1472,7 +1472,7 @@
       "eps": 0.65,
       "div": 2.17,
       "enrichAt": "2026-08-21",
-      "sektorPsi": 0.0124,
+      "sektorPsi": 0.0123,
       "sektorPsiAtAdd": 0.0112,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1544,6 +1544,37 @@
       "miss": 0
     },
     {
+      "ticker": "6080",
+      "name": "M&A Capital Partners Co., Ltd.",
+      "yahoo": "6080.T",
+      "sector": "finance",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 1,
+        "outperform": 2,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 3,
+      "strongBuyPct": 33,
+      "via": "gemini",
+      "source": "yahoo",
+      "verifiedAt": "2026-08-22",
+      "verifiedSource": "yahoo",
+      "seen": "2026-08-22",
+      "perf6m": 16.67,
+      "perf6mAt": "2026-08-22",
+      "perf1mBefore": 10.98,
+      "upside": 19,
+      "pe": 22.6,
+      "eps": 182.96,
+      "div": 3.51,
+      "enrichAt": "2026-08-22",
+      "sektorPsi": 0.0037,
+      "sektorPsiAtAdd": 0.0037
+    },
+    {
       "ticker": "1INN.DE",
       "name": "innoscripta SE",
       "yahoo": "1INN.DE",
@@ -1602,7 +1633,7 @@
       "eps": -0.12,
       "div": 0,
       "enrichAt": "2026-08-18",
-      "sektorPsi": 0.0111,
+      "sektorPsi": 0.011,
       "sektorPsiAtAdd": 0.0224,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1694,7 +1725,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-19",
       "div": null,
-      "sektorPsi": 0.0111,
+      "sektorPsi": 0.011,
       "sektorPsiAtAdd": 0.0052,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1782,6 +1813,11 @@
     {
       "t": "HIGH.DE",
       "d": "2026-08-02",
+      "v": 0.0037
+    },
+    {
+      "t": "6080",
+      "d": "2026-08-22",
       "v": 0.0037
     },
     {
@@ -2094,40 +2130,38 @@
   "news": {
     "items": [
       {
-        "text": "DAX schließt fester, Öl, Gold und Bitcoin legen zu",
+        "text": "Microsoft, Amazon, Meta bauen KI-Infrastruktur für Billionen Dollar.",
+        "stamp": "22.08.26"
+      },
+      {
+        "text": "Eli Lilly zahlt bis zu 7 Milliarden für Zelltherapie-Deal.",
+        "stamp": "22.08.26"
+      },
+      {
+        "text": "Deutsche Firmen erhalten Erstattungen für US-Zölle von fast 1 Mrd. Euro.",
         "stamp": "21.08.26"
       },
       {
-        "text": "Goldman Sachs warnt vor Verdrängungseffekten durch KI-Investitionen",
+        "text": "EZB: Anstieg der Tariflöhne im 2. Quartal verlangsamt.",
         "stamp": "21.08.26"
       },
       {
-        "text": "Broadcom plant Milliardenfinanzierung für KI-Chips",
+        "text": "KI-Rally erreicht neue Sektoren, Softwaretitel melden sich zurück.",
         "stamp": "21.08.26"
       },
       {
-        "text": "Bitcoin über 75.000 USD: Top 10 Crypto ETP profitiert",
-        "stamp": "21.08.26"
-      },
-      {
-        "text": "Euro verteidigt jüngste Kursaufschläge bei 1,1682 USD",
-        "stamp": "21.08.26"
-      },
-      {
-        "text": "US-Anleihenrenditen im Fokus: DAX erobert 26.000er-Marke zurück",
+        "text": "Polen führt neue Gold-Kaufwelle der Zentralbanken an.",
         "stamp": "21.08.26"
       }
     ],
     "date": "2026-08-22"
   },
   "scan": {
-    "universe": 8855,
-    "scanned": 8855,
-    "lastCursor": 8509,
-    "candCursor": 132,
+    "universe": 8859,
+    "scanned": 8859,
+    "lastCursor": 8809,
+    "candCursor": 140,
     "candidates": [
-      "TPG RE Finance Trust, Inc.",
-      "Franklin BSP Realty Trust, Inc.",
       "Stewart Information Services Corporation",
       "Munters Group AB",
       "Thule Group AB",
@@ -2525,45 +2559,47 @@
       "Everbridge Inc.",
       "Brighton-Best International Taiwan",
       "E2E Networks",
-      "Jayati Vyas"
+      "Jayati Vyas",
+      "Payoneer Global Inc.",
+      "Intest Corporation"
     ],
     "noteCursor": 6,
-    "focusCursor": 4,
+    "focusCursor": 5,
     "recheckCursor": 16,
     "regionNoteCursor": 2,
     "notesDay": "2026-08-22",
     "seenBySector": {
-      "cons_cycl": 1706,
-      "cons_def": 898,
-      "materials": 1218,
-      "health": 5007,
-      "finance": 3372,
-      "energy": 1568,
-      "hardware": 1134,
-      "software": 3361,
-      "industrial": 1451,
-      "utilities": 616,
-      "comm": 736,
-      "ai_semi": 673,
+      "cons_cycl": 1717,
+      "cons_def": 900,
+      "materials": 1223,
+      "health": 5020,
+      "finance": 3382,
+      "energy": 1576,
+      "hardware": 1137,
+      "software": 3377,
+      "industrial": 1462,
+      "utilities": 620,
+      "comm": 738,
+      "ai_semi": 674,
       "realestate": 311
     },
     "pendingReject": [],
     "evaluatedBySector": {
-      "cons_cycl": 1709,
-      "cons_def": 900,
-      "materials": 1218,
-      "health": 5010,
-      "finance": 3376,
-      "energy": 1570,
-      "hardware": 1139,
-      "software": 3371,
-      "industrial": 1459,
-      "utilities": 618,
-      "comm": 739,
-      "ai_semi": 673,
+      "cons_cycl": 1720,
+      "cons_def": 902,
+      "materials": 1223,
+      "health": 5023,
+      "finance": 3387,
+      "energy": 1578,
+      "hardware": 1142,
+      "software": 3387,
+      "industrial": 1470,
+      "utilities": 622,
+      "comm": 741,
+      "ai_semi": 674,
       "realestate": 313
     },
-    "heavyAt": "2026-08-22T03:23:22.552Z",
+    "heavyAt": "2026-08-22T19:34:27.258Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
@@ -2574,6 +2610,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-22T19:00:26.373Z"
+  }
 }

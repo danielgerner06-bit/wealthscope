@@ -134,6 +134,26 @@
       "perf": [],
       "outperformPct": null
     },
+    "6080": {
+      "ticker": "6080",
+      "name": "M&A Capital Partners Co., Ltd.",
+      "yahoo": "6080.T",
+      "sector": "finance",
+      "region": "japan",
+      "buyPct": 100,
+      "strongBuyPct": 33,
+      "upside": 19,
+      "pe": 22.6,
+      "perf6mAtAdd": 16.67,
+      "perf1mBefore": 10.98,
+      "sektorPsiAtAdd": null,
+      "analysts": 3,
+      "div": 3.51,
+      "seen": "2026-08-22",
+      "seenMs": 1787356800000,
+      "startPrice": 4145,
+      "perf": []
+    },
     "6701": {
       "ticker": "6701",
       "name": "NEC Corporation",
