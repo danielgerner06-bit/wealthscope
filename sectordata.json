@@ -519,7 +519,7 @@
       "eps": -0.1,
       "div": 9.07,
       "enrichAt": "2026-08-23",
-      "sektorPsi": 0.0225,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0076,
       "recheckAt": "2026-08-22",
       "miss": 0
@@ -584,7 +584,7 @@
       "eps": -0.33,
       "div": 0,
       "enrichAt": "2026-08-22",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.0037,
       "recheckAt": "2026-08-17",
       "miss": 0
@@ -649,7 +649,7 @@
       "pe": null,
       "div": null,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0174,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.015,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -748,7 +748,7 @@
       "eps": 1.64,
       "div": 3.13,
       "enrichAt": "2026-08-23",
-      "sektorPsi": 0.0058,
+      "sektorPsi": 0.0057,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -780,7 +780,7 @@
       "pe": null,
       "div": 1.36,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0174,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.0102,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -813,7 +813,7 @@
       "eps": 6.46,
       "div": 4.11,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0009,
+      "sektorPsi": 0.0008,
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -978,7 +978,7 @@
       "eps": 0.11,
       "div": 0,
       "enrichAt": "2026-08-23",
-      "sektorPsi": 0.0174,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1077,7 +1077,7 @@
       "eps": 1.23,
       "div": 2.61,
       "enrichAt": "2026-08-20",
-      "sektorPsi": 0.0174,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.025,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1176,7 +1176,7 @@
       "eps": 8.55,
       "div": 3.43,
       "enrichAt": "2026-08-22",
-      "sektorPsi": 0.0009,
+      "sektorPsi": 0.0008,
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-22",
       "miss": 0
@@ -1209,7 +1209,7 @@
       "eps": 1.23,
       "div": 2.47,
       "enrichAt": "2026-08-23",
-      "sektorPsi": 0.0174,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.008,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -1241,7 +1241,7 @@
       "pe": null,
       "div": 3.96,
       "enrichAt": "2026-08-23",
-      "sektorPsi": 0.0174,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.0123,
       "recheckAt": "2026-08-19",
       "miss": 0
@@ -1274,7 +1274,7 @@
       "eps": 1.88,
       "div": 0.84,
       "enrichAt": "2026-08-23",
-      "sektorPsi": 0.0174,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.0229,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1307,7 +1307,7 @@
       "eps": 0.94,
       "div": 0.47,
       "enrichAt": "2026-08-19",
-      "sektorPsi": 0.0174,
+      "sektorPsi": 0.0173,
       "sektorPsiAtAdd": 0.0109,
       "recheckAt": "2026-08-20",
       "miss": 0
@@ -1571,7 +1571,7 @@
       "eps": 2.2,
       "div": 1.48,
       "enrichAt": "2026-08-22",
-      "sektorPsi": 0.0009,
+      "sektorPsi": 0.0008,
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-22",
       "miss": 0
@@ -1755,7 +1755,7 @@
       "perf1mBefore": null,
       "enrichAt": "2026-08-22",
       "div": null,
-      "sektorPsi": 0.0225,
+      "sektorPsi": 0.0224,
       "sektorPsiAtAdd": 0.0214,
       "recheckAt": "2026-08-18",
       "miss": 0
@@ -2132,12 +2132,16 @@
   "news": {
     "items": [
       {
-        "text": "Gold-Silber-Bitcoin explosion: US-Regierung sorgt für Kursfeuerwerk.",
-        "stamp": "22.08.26"
+        "text": "Sinopec erzielt solide Ergebnisse im ersten Halbjahr 2026",
+        "stamp": "23.08.26"
       },
       {
-        "text": "DAX mit Schwung ins Wochenende: RWE vor wichtigen Entscheidungen.",
-        "stamp": "22.08.26"
+        "text": "Geheime Kupferaktie: Kupfer auf Rekordhoch",
+        "stamp": "23.08.26"
+      },
+      {
+        "text": "US-Notenbank zwischen Inflation und Marktstabilität eingeklemmt",
+        "stamp": "21.08.26"
       }
     ],
     "date": "2026-08-23"
@@ -2145,17 +2149,9 @@
   "scan": {
     "universe": 8859,
     "scanned": 8859,
-    "lastCursor": 250,
-    "candCursor": 148,
+    "lastCursor": 550,
+    "candCursor": 156,
     "candidates": [
-      "Munters Group AB",
-      "Thule Group AB",
-      "Interroll Holding AG",
-      "Belimo Holding AG",
-      "Arcadis N.V.",
-      "Redcare Pharmacy N.V.",
-      "Sixt SE",
-      "Shibaura Machine Co., Ltd.",
       "Kansai Kogyo Co., Ltd.",
       "DAIKIN INDUSTRIES, LTD.",
       "MinebeaMitsumi Inc.",
@@ -2547,45 +2543,66 @@
       "Jayati Vyas",
       "Payoneer Global Inc.",
       "Intest Corporation",
-      "Neurocrine Biosciences, Inc."
+      "Neurocrine Biosciences, Inc.",
+      "L.B. Foster Company",
+      "Karat Packaging Inc.",
+      "MillerKnoll, Inc.",
+      "Genco Shipping & Trading Limited",
+      "Deluxe Corporation",
+      "Sylvamo Corporation",
+      "Westlake Chemical Partners LP",
+      "Galiano Gold Inc."
     ],
     "noteCursor": 7,
-    "focusCursor": 6,
+    "focusCursor": 7,
     "recheckCursor": 16,
     "regionNoteCursor": 3,
     "notesDay": "2026-08-23",
     "seenBySector": {
-      "cons_cycl": 1723,
-      "cons_def": 902,
-      "materials": 1224,
-      "health": 5050,
-      "finance": 3393,
-      "energy": 1578,
-      "hardware": 1140,
-      "software": 3391,
-      "industrial": 1466,
-      "utilities": 624,
-      "comm": 741,
-      "ai_semi": 678,
-      "realestate": 312
-    },
-    "pendingReject": [],
-    "evaluatedBySector": {
-      "cons_cycl": 1726,
-      "cons_def": 904,
-      "materials": 1224,
-      "health": 5053,
-      "finance": 3398,
-      "energy": 1580,
-      "hardware": 1145,
-      "software": 3401,
+      "cons_cycl": 1729,
+      "cons_def": 905,
+      "materials": 1232,
+      "health": 5074,
+      "finance": 3404,
+      "energy": 1582,
+      "hardware": 1144,
+      "software": 3409,
       "industrial": 1474,
-      "utilities": 626,
-      "comm": 744,
-      "ai_semi": 678,
-      "realestate": 314
+      "utilities": 624,
+      "comm": 743,
+      "ai_semi": 688,
+      "realestate": 313
     },
-    "heavyAt": "2026-08-23T07:47:05.092Z",
+    "pendingReject": [
+      "APLD",
+      "APLM",
+      "APO",
+      "APOG",
+      "APP",
+      "APPF",
+      "APPN",
+      "APPS",
+      "APRE",
+      "APT",
+      "APTV",
+      "APVO"
+    ],
+    "evaluatedBySector": {
+      "cons_cycl": 1732,
+      "cons_def": 907,
+      "materials": 1232,
+      "health": 5077,
+      "finance": 3409,
+      "energy": 1584,
+      "hardware": 1149,
+      "software": 3419,
+      "industrial": 1482,
+      "utilities": 626,
+      "comm": 746,
+      "ai_semi": 688,
+      "realestate": 315
+    },
+    "heavyAt": "2026-08-23T20:55:50.000Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix"
   },
