@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-25",
-  "updatedAt": "2026-08-25T15:35:35.447Z",
+  "updatedAt": "2026-08-25T16:00:58.130Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,21 +147,21 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 16.45,
+      "perf": 16.49,
       "avg30": -0.53,
-      "perf6m": 30.66
+      "perf6m": 30.71
     },
     {
       "id": "ai_semi",
-      "perf": -2.5,
+      "perf": -2.55,
       "avg30": 7.58,
-      "perf6m": 42.96
+      "perf6m": 42.89
     },
     {
       "id": "hardware",
-      "perf": 3.17,
+      "perf": 3.26,
       "avg30": 3.12,
-      "perf6m": 29.31
+      "perf6m": 29.43
     },
     {
       "id": "comm",
@@ -177,27 +177,27 @@
     },
     {
       "id": "finance",
-      "perf": 3.25,
+      "perf": 3.32,
       "avg30": 0.72,
-      "perf6m": 14.04
+      "perf6m": 14.12
     },
     {
       "id": "cons_cycl",
-      "perf": 7.87,
+      "perf": 8.04,
       "avg30": -0.02,
-      "perf6m": 1.1
+      "perf6m": 1.26
     },
     {
       "id": "cons_def",
-      "perf": 2.78,
+      "perf": 2.64,
       "avg30": 0.68,
-      "perf6m": -2.81
+      "perf6m": -2.94
     },
     {
       "id": "industrial",
       "perf": -2,
       "avg30": 1.79,
-      "perf6m": 1.14
+      "perf6m": 1.15
     },
     {
       "id": "energy",
@@ -227,9 +227,9 @@
   "bars30Region": [
     {
       "id": "usa",
-      "perf": 3.5,
+      "perf": 3.6,
       "avg30": 1.49,
-      "perf6m": 11.27
+      "perf6m": 11.38
     },
     {
       "id": "europe",
@@ -251,15 +251,15 @@
     },
     {
       "id": "china",
-      "perf": 3.04,
+      "perf": 3.22,
       "avg30": -1.03,
-      "perf6m": -9.53
+      "perf6m": -9.36
     },
     {
       "id": "em",
-      "perf": 5.22,
+      "perf": 5.39,
       "avg30": 2.36,
-      "perf6m": 7.38
+      "perf6m": 7.56
     },
     {
       "id": "apac",
@@ -275,15 +275,15 @@
     },
     {
       "id": "latam",
-      "perf": -0.26,
+      "perf": -0.11,
       "avg30": 2.21,
-      "perf6m": -6.29
+      "perf6m": -6.15
     },
     {
       "id": "world",
-      "perf": 3.99,
-      "avg30": 1.46,
-      "perf6m": 9.51
+      "perf": 4.03,
+      "avg30": 1.47,
+      "perf6m": 9.54
     }
   ],
   "topStocks": [
@@ -2649,5 +2649,6 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  }
+  },
+  "yahooAt": "2026-08-25T16:00:58.130Z"
 }
