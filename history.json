@@ -8825,6 +8825,26 @@
       "startPrice": 23.40000057220459,
       "perf": [],
       "outperformPct": null
+    },
+    "DR0G": {
+      "ticker": "DR0G",
+      "name": "Deutsche Rohstoff AG",
+      "yahoo": "DR0.DE",
+      "sector": "materials",
+      "region": "europe",
+      "buyPct": 100,
+      "strongBuyPct": 0,
+      "upside": 40,
+      "pe": 2.6,
+      "perf6mAtAdd": 33.92,
+      "perf1mBefore": 12.41,
+      "sektorPsiAtAdd": null,
+      "analysts": 2,
+      "div": 2.58,
+      "seen": "2026-08-25",
+      "seenMs": 1787616000000,
+      "startPrice": 89.25,
+      "perf": []
     }
   },
   "findings": {
