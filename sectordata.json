@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-26",
-  "updatedAt": "2026-08-26T07:00:57.817Z",
+  "updatedAt": "2026-08-26T07:59:17.995Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -390,39 +390,6 @@
       "miss": 0
     },
     {
-      "ticker": "ADXR",
-      "name": "Audax Renovables, S.A.",
-      "yahoo": "ADX.MC",
-      "sector": "utilities",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 2,
-        "outperform": 0,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 2,
-      "strongBuyPct": 100,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-26",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-08-04",
-      "perf6m": -7.72,
-      "perf6mAt": "2026-08-24",
-      "perf1mBefore": -3.95,
-      "upside": 96,
-      "pe": 29.9,
-      "eps": 0.04,
-      "div": 2.83,
-      "enrichAt": "2026-08-24",
-      "sektorPsi": 0.0631,
-      "sektorPsiAtAdd": 0.0082,
-      "recheckAt": "2026-08-26",
-      "miss": 0
-    },
-    {
       "ticker": "CSH.DE",
       "name": "Cenit AG",
       "yahoo": "CSH.DE",
@@ -453,6 +420,39 @@
       "sektorPsi": 0.0029,
       "sektorPsiAtAdd": 0.0344,
       "recheckAt": "2026-08-24",
+      "miss": 0
+    },
+    {
+      "ticker": "ADXR",
+      "name": "Audax Renovables, S.A.",
+      "yahoo": "ADX.MC",
+      "sector": "utilities",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-26",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-08-04",
+      "perf6m": -7.72,
+      "perf6mAt": "2026-08-24",
+      "perf1mBefore": -3.95,
+      "upside": 96,
+      "pe": 29.9,
+      "eps": 0.04,
+      "div": 2.83,
+      "enrichAt": "2026-08-24",
+      "sektorPsi": 0.0631,
+      "sektorPsiAtAdd": 0.0082,
+      "recheckAt": "2026-08-26",
       "miss": 0
     },
     {
@@ -655,39 +655,6 @@
       "miss": 0
     },
     {
-      "ticker": "VU",
-      "name": "VusionGroup",
-      "yahoo": "VU.PA",
-      "sector": "hardware",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 5,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 6,
-      "strongBuyPct": 83,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-26",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-08-11",
-      "perf6m": 6.41,
-      "perf6mAt": "2026-08-26",
-      "perf1mBefore": -4.55,
-      "upside": 58,
-      "pe": 16.2,
-      "eps": 8.02,
-      "div": 0.69,
-      "enrichAt": "2026-08-26",
-      "sektorPsi": 0.01,
-      "sektorPsiAtAdd": 0.0112,
-      "recheckAt": "2026-08-26",
-      "miss": 0
-    },
-    {
       "ticker": "EQS",
       "name": "Equasens Société anonyme",
       "yahoo": "EQS.PA",
@@ -751,6 +718,39 @@
       "sektorPsi": 0.0033,
       "sektorPsiAtAdd": 0.0019,
       "recheckAt": "2026-08-23",
+      "miss": 0
+    },
+    {
+      "ticker": "VU",
+      "name": "VusionGroup",
+      "yahoo": "VU.PA",
+      "sector": "hardware",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 5,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 6,
+      "strongBuyPct": 83,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-26",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-08-11",
+      "perf6m": 6.41,
+      "perf6mAt": "2026-08-26",
+      "perf1mBefore": -4.55,
+      "upside": 58,
+      "pe": 16.2,
+      "eps": 8.02,
+      "div": 0.69,
+      "enrichAt": "2026-08-26",
+      "sektorPsi": 0.01,
+      "sektorPsiAtAdd": 0.0112,
+      "recheckAt": "2026-08-26",
       "miss": 0
     },
     {
@@ -918,6 +918,39 @@
       "miss": 0
     },
     {
+      "ticker": "F3C.DE",
+      "name": "SFC Energy AG",
+      "yahoo": "F3C.DE",
+      "sector": "energy",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 4,
+        "outperform": 1,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 5,
+      "strongBuyPct": 80,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-08-21",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-07-02",
+      "perf6m": 35.61,
+      "perf6mAt": "2026-08-26",
+      "perf1mBefore": -10.76,
+      "upside": 39,
+      "pe": 55.7,
+      "eps": 0.36,
+      "div": 0,
+      "enrichAt": "2026-08-26",
+      "sektorPsi": 0.0023,
+      "sektorPsiAtAdd": 0.0045,
+      "recheckAt": "2026-08-21",
+      "miss": 0
+    },
+    {
       "ticker": "GF",
       "name": "Generalfinance S.p.A.",
       "yahoo": "GF.MI",
@@ -981,39 +1014,6 @@
       "sektorPsi": 0.0023,
       "sektorPsiAtAdd": 0.0016,
       "recheckAt": "2026-08-22",
-      "miss": 0
-    },
-    {
-      "ticker": "F3C.DE",
-      "name": "SFC Energy AG",
-      "yahoo": "F3C.DE",
-      "sector": "energy",
-      "buyPct": 100,
-      "ratingCounts": {
-        "buy": 4,
-        "outperform": 1,
-        "hold": 0,
-        "underperform": 0,
-        "sell": 0
-      },
-      "analysts": 5,
-      "strongBuyPct": 80,
-      "via": "gemini",
-      "source": "stockanalysis+yahoo",
-      "verifiedAt": "2026-08-21",
-      "verifiedSource": "stockanalysis+yahoo",
-      "seen": "2026-07-02",
-      "perf6m": 35.61,
-      "perf6mAt": "2026-08-26",
-      "perf1mBefore": -10.76,
-      "upside": 39,
-      "pe": 55.7,
-      "eps": 0.36,
-      "div": 0,
-      "enrichAt": "2026-08-26",
-      "sektorPsi": 0.0023,
-      "sektorPsiAtAdd": 0.0045,
-      "recheckAt": "2026-08-21",
       "miss": 0
     },
     {
@@ -2635,6 +2635,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-26T07:00:57.817Z"
+  }
 }
