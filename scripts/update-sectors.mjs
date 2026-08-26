@@ -13,7 +13,8 @@
 
 import fs from 'node:fs';
 import { SECTORS, REGIONS, sectorForFinnhub } from './sectors.mjs';
-import { buildNotes, buildNews, buildFactorInsight } from './insight.mjs';
+import { buildNews } from './insight.mjs';
+import { fetchInflationForecast, inflationDue } from './inflation.mjs';
 import { scanAnalystStocks } from './finnhub.mjs';
 import { fetchSectorPerformance, fetchRegionPerformance, fetchStockPerf6m, enrichStock, fetchSectorOf, perfBetween } from './prices.mjs';
 import { checkCandidates, discoverNew, verifyNoHold, MIN_BUY_PCT } from './gemini-stocks.mjs';
@@ -165,7 +166,26 @@ const today = () => new Date().toISOString().slice(0, 10);
   // Die limitierten Quellen Gemini + Finnhub nur, wenn seit dem letzten "schweren" Lauf
   // >= HEAVY_GAP_H Stunden vergangen sind (Default 6h). Spart das Gemini-Free-Tier-Kontingent.
   const HEAVY_GAP_MS = Number(process.env.HEAVY_GAP_H || 6) * 3600000 - 5 * 60000; // 5 min Toleranz für Cron-Jitter
-  const heavyDue = !scan.heavyAt || (nowMs - Date.parse(scan.heavyAt)) >= HEAVY_GAP_MS;
+  const gapPassed = !scan.heavyAt || (nowMs - Date.parse(scan.heavyAt)) >= HEAVY_GAP_MS;
+
+  // Gemini/Finnhub laufen nur noch EINMAL PRO WERKTAG (Mo-Fr).
+  // Begruendung: an Wochenenden bewegen sich Kurse nicht, und die 30-Tage-Fenster
+  // rechnet das System ohnehin selbst weiter — ein Wochenendlauf brachte also
+  // nichts, kostete aber Kontingent. Alles, was uebrig bleibt, geht in die
+  // Perlensuche. FORCE_HEAVY (bzw. HEAVY_GAP_H=0) ueberbrueckt beides manuell.
+  const nowUtc = new Date(nowMs);
+  const dow = nowUtc.getUTCDay();            // 0 = So, 6 = Sa
+  const isWeekday = dow >= 1 && dow <= 5;
+  const heavyDayStr = nowUtc.toISOString().slice(0, 10);
+  const alreadyHeavyToday = scan.heavyDay === heavyDayStr;
+  const forceHeavy = Number(process.env.HEAVY_GAP_H || 6) === 0;
+  const heavyDue =
+      forceHeavy || (isWeekday && !alreadyHeavyToday && gapPassed);
+  if (!heavyDue && !isWeekday) {
+    console.log('Wochenende: kein Gemini/Finnhub-Lauf (nur Yahoo-Kurse).');
+  } else if (!heavyDue && alreadyHeavyToday) {
+    console.log('Heute bereits ein voller Lauf erfolgt -> nur Yahoo-Kurse.');
+  }
 
   // Mehrere Cron-Slots pro Stunde (gegen GitHubs unzuverlässige :00-Zustellung) könnten
   // kurz hintereinander feuern. Ein NICHT-schwerer Lauf, dessen letzter Lauf < MIN_GAP_MIN
@@ -180,7 +200,10 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
 
   console.log(heavyDue ? 'Lauf-Typ: VOLL (Yahoo + Gemini + Finnhub).' : 'Lauf-Typ: leicht (nur Yahoo-Kurse/Performance).');
-  if (heavyDue) scan.heavyAt = new Date(nowMs).toISOString();   // Zeitstempel für die 6h-Taktung
+  if (heavyDue) {
+    scan.heavyAt = new Date(nowMs).toISOString();
+    scan.heavyDay = heavyDayStr;   // sperrt weitere volle Laeufe an diesem Tag
+  }
 
   /* 1) Sektor- & Regions-Performance (30T + 360T-Schnitt + 6M) via Yahoo (kein Key) -- */
   let bars30 = prev?.bars30 || [];
@@ -230,6 +253,24 @@ const today = () => new Date().toISOString().slice(0, 10);
       // ohne klaren Sektor: verwerfen (nicht zurück in die Queue, sonst Endlosschleife)
     }
     if (batch.length) console.log(`Sektor-Auflösung: ${resolved}/${batch.length} abgelehnte Aktien zugeordnet.`);
+  }
+
+  /* 1c) Inflationsprognose Deutschland - EINMAL PRO MONAT.
+     Billig (1 Call/Monat) und ersetzt die schlechte Schaetzung in der App, die
+     das laufende Jahr aus dem Mittel der letzten drei Jahre abgeleitet hat. */
+  let inflation = prev?.inflation || null;
+  {
+    const inflYear = new Date().getFullYear();
+    if (GEMINI_KEY && heavyDue && geminiBudgetLeft() && inflationDue(prev, inflYear)) {
+      useGemini();
+      try {
+        inflation = await fetchInflationForecast(GEMINI_KEY, inflYear);
+        console.log(`Inflationsprognose ${inflYear}: ${inflation.rate}% (${inflation.sources}).`);
+      } catch (e) {
+        noteGeminiError(e);
+        console.error('Inflationsprognose fehlgeschlagen, behalte alte:', e.message);
+      }
+    }
   }
 
   /* 2c) Gemini: neue unbekannte Werte entdecken (1 Fokus/Lauf, rotierend) -- */
@@ -488,33 +529,12 @@ const today = () => new Date().toISOString().slice(0, 10);
     if (!regionNotes[id]) regionNotes[id] = { text: SEED_REGION_NOTES[id], date: null, seed: true };
   }
   const todayStr = today();
-  const notesDoneToday = scan.notesDay === todayStr;
-  if (GEMINI_KEY && heavyDue && !notesDoneToday) {
-    let ok = false;   // mind. EIN Lagetext erfolgreich -> erst dann "heute erledigt"
-    if (geminiBudgetLeft()) {
-      useGemini();
-      try {
-        const ids = SECTORS.map(s => s.id);
-        const id = ids[(scan.noteCursor || 0) % ids.length];
-        scan.noteCursor = ((scan.noteCursor || 0) + 1) % ids.length;
-        const fresh = await buildNotes(GEMINI_KEY, [id], bars30, topStocks, 'Sektor');
-        sectorNotes = { ...sectorNotes, ...fresh };
-        console.log(`Sektor-Lage: ${Object.keys(fresh).length}/1 (${id}).`); ok = true;
-      } catch (e) { noteGeminiError(e); console.error('Sektor-Lage fehlgeschlagen:', e.message); }
-    }
-    if (geminiBudgetLeft()) {
-      useGemini();
-      try {
-        const rids = REGIONS.map(r => r.id);
-        const rid = rids[(scan.regionNoteCursor || 0) % rids.length];
-        scan.regionNoteCursor = ((scan.regionNoteCursor || 0) + 1) % rids.length;
-        const rfresh = await buildNotes(GEMINI_KEY, [rid], bars30Region, topStocks, 'Region');
-        regionNotes = { ...regionNotes, ...rfresh };
-        console.log(`Region-Lage: ${Object.keys(rfresh).length}/1 (${rid}).`); ok = true;
-      } catch (e) { noteGeminiError(e); console.error('Region-Lage fehlgeschlagen:', e.message); }
-    }
-    if (ok) scan.notesDay = todayStr;   // nur bei Erfolg "heute erledigt" -> bei 429 erneut versuchen
-  }
+  // Sektor-/Regions-Lagetexte werden NICHT mehr von Gemini erzeugt.
+  // Die Performance-Zahlen selbst kommen ohnehin aus Yahoo (ETF-Kurse in
+  // prices.mjs), Gemini hat hier nur beschreibenden Text geliefert. Die
+  // gepflegten SEED-Texte oben bleiben als Beschreibung stehen; Geminis
+  // Kontingent gehört jetzt vollstaendig der Perlensuche.
+  void todayStr;
 
   /* 6) Backtest-Historie pflegen (Snapshots + Monats-Performance; Yahoo, kein Kontingent) */
   try {
@@ -529,11 +549,12 @@ const today = () => new Date().toISOString().slice(0, 10);
     // KI-Analyse der stärksten Faktoren — 1× pro Tag (Budget-schonend)
     const findings = computeFindings(hist);
     hist.findings = findings;
-    if (GEMINI_KEY && heavyDue && geminiBudgetLeft() && hist.kiDay !== today() && findings.factors.length) {
-      useGemini();
-      try { hist.kiAnalysis = await buildFactorInsight(GEMINI_KEY, findings); hist.kiDay = today(); console.log('Faktor-KI-Analyse aktualisiert.'); }
-      catch (e) { noteGeminiError(e); console.error('Faktor-KI fehlgeschlagen:', e.message); }
-    }
+    // Keine Gemini-KI-Analyse mehr im Analysen-Bereich: die Faktor-Auswertung
+    // (computeFindings) ist reine Mathematik ueber die eigene Historie und
+    // laeuft weiter. Ein evtl. alter kiAnalysis-Text wird entfernt, damit die
+    // App keinen veralteten KI-Text mehr anzeigt.
+    delete hist.kiAnalysis;
+    delete hist.kiDay;
     saveHistory(hist);
   } catch (e) { console.error('Historie fehlgeschlagen:', e.message); }
 
@@ -605,6 +626,7 @@ const today = () => new Date().toISOString().slice(0, 10);
     sectorNotes,
     regionNotes,
     news,
+    inflation,
     scan,
     blacklist,
   };

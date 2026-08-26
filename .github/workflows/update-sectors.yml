@@ -2,12 +2,15 @@ name: Sektordaten aktualisieren
 
 on:
   schedule:
-    # Yahoo-Kurse macht jetzt der Cloudflare-Worker STÜNDLICH (pünktlich). Diese Action
-    # ist nur noch für Gemini (News/Discovery/Lage) + Finnhub-Scan zuständig — die laufen
-    # ohnehin nur alle ~6h (heavyAt-Gating). Daher 4 Slots/Tag; GitHubs Cron-Jitter
-    # (1-2h Verspätung) ist beim 6h-Takt unkritisch. Mehrere Zeiten = höhere Trefferchance.
-    - cron: '13 1,7,13,19 * * *'
-    - cron: '43 2,8,14,20 * * *'
+    # Yahoo-Kurse macht der Cloudflare-Worker STÜNDLICH. Diese Action ist nur
+    # noch für Gemini (Perlensuche + News + Inflationsprognose) und den
+    # Finnhub-Scan zuständig, und die laufen ab jetzt nur noch EINMAL PRO
+    # WERKTAG (Mo–Fr). Am Wochenende bewegen sich keine Kurse, und die
+    # 30-Tage-Fenster rechnet das System selbst weiter.
+    # Zwei Slots nur als Absicherung gegen GitHubs Cron-Jitter — das Skript
+    # selbst lässt über scan.heavyDay pro Tag ohnehin nur einen vollen Lauf zu.
+    - cron: '13 6 * * 1-5'
+    - cron: '43 9 * * 1-5'
   workflow_dispatch:         # manueller Start möglich
     inputs:
       force_heavy:
@@ -32,14 +35,13 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Sektordaten aktualisieren (Finnhub + Gemini)
+      - name: Sektordaten aktualisieren (Yahoo + Finnhub + Gemini)
         env:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # Gemini halbiert: schwere (Gemini-)Läufe nur noch alle 12h statt 6h
-          # -> ~2 statt ~4 Voll-Läufe/Tag, also rund halbe Gemini-Nutzung/-Kosten.
-          # Jeder Voll-Lauf behält sein volles Budget (keine abgewürgten Batches).
-          # Bei manuellem "force_heavy" das Gating überbrücken (0 -> immer voll).
+          # Ein voller Lauf pro Werktag. Das Skript setzt scan.heavyDay und
+          # lehnt weitere volle Läufe am selben Tag ab; HEAVY_GAP_H ist nur noch
+          # die Untergrenze zwischen zwei Läufen. 0 = manuell erzwingen.
           HEAVY_GAP_H: ${{ (github.event_name == 'workflow_dispatch' && inputs.force_heavy) && '0' || '12' }}
           GEMINI_DEBUG: ${{ (github.event_name == 'workflow_dispatch' && inputs.debug) && '1' || '' }}
         run: node scripts/update-sectors.mjs
