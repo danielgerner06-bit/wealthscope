@@ -170,13 +170,13 @@ const today = () => new Date().toISOString().slice(0, 10);
 
   // ZWEI getrennte Takte:
   //
-  //  pearlDue  -> die PERLENSUCHE (Discovery, Kandidatenpruefung, Re-Validierung).
-  //               Laeuft wie frueher rund alle 12 h, auch am Wochenende. Sie ist
-  //               der eigentliche Zweck des Gemini-Kontingents und soll NICHT
-  //               ausgeduennt werden.
+  //  pearlDue  -> die PERLENSUCHE (Discovery, Kandidatenpruefung, Re-Validierung)
+  //               und die Markt-News. Laeuft wie frueher rund alle 12 h, auch am
+  //               Wochenende. Die Perlensuche ist der eigentliche Zweck des
+  //               Gemini-Kontingents und soll NICHT ausgeduennt werden.
   //
-  //  heavyDue  -> die KURSABHAENGIGEN Schritte (Finnhub-Scan, Markt-News) und die
-  //               monatliche Inflationsprognose. Nur EINMAL PRO WERKTAG: am
+  //  heavyDue  -> der KURSABHAENGIGE Finnhub-Scan und die monatliche
+  //               Inflationsprognose. Nur EINMAL PRO WERKTAG: am
   //               Wochenende bewegen sich keine Kurse, und die 30-Tage-Fenster
   //               rechnet das System selbst weiter.
   //
@@ -197,8 +197,8 @@ const today = () => new Date().toISOString().slice(0, 10);
   }
   if (pearlDue && !heavyDue) {
     console.log(isWeekday
-      ? 'Heute bereits ein Kurs-/News-Lauf erfolgt -> nur Perlensuche.'
-      : 'Wochenende: kein Finnhub-/News-Lauf -> nur Perlensuche.');
+      ? 'Heute bereits ein Finnhub-Lauf erfolgt -> nur Perlensuche + News.'
+      : 'Wochenende: kein Finnhub-Lauf -> nur Perlensuche + News.');
   }
 
   // Mehrere Cron-Slots pro Stunde (gegen GitHubs unzuverlässige :00-Zustellung) könnten
@@ -213,7 +213,7 @@ const today = () => new Date().toISOString().slice(0, 10);
     return;   // nichts schreiben -> Git-Diff leer -> kein Commit
   }
 
-  console.log(`Lauf-Typ: Yahoo${pearlDue ? ' + Perlensuche' : ''}${heavyDue ? ' + Finnhub/News' : ''}.`);
+  console.log(`Lauf-Typ: Yahoo${pearlDue ? ' + Perlensuche/News' : ''}${heavyDue ? ' + Finnhub' : ''}.`);
   // heavyAt taktet die Perlensuche (12 h), heavyDay sperrt den Kurs-/News-Teil
   // auf einen Lauf pro Werktag.
   if (pearlDue) scan.heavyAt = new Date(nowMs).toISOString();
@@ -227,9 +227,12 @@ const today = () => new Date().toISOString().slice(0, 10);
   try { bars30Region = await fetchRegionPerformance(); console.log('Regions-Performance aktualisiert.'); }
   catch (e) { console.error('Regions-Performance fehlgeschlagen, behalte alte:', e.message); }
 
-  /* 1b) Markt-News ZUERST (höchste Priorität im Gemini-Budget) */
+  /* 1b) Markt-News ZUERST (höchste Priorität im Gemini-Budget).
+     Laeuft auf dem PERLEN-Takt (~2x taeglich, auch am Wochenende): Schlagzeilen
+     veralten schnell, und am Wochenende passiert weiterhin genug, das die App
+     im Cockpit anzeigen soll. */
   let news = prev?.news || null;
-  if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
+  if (GEMINI_KEY && pearlDue && geminiBudgetLeft()) {
     useGemini();
     try { news = await buildNews(GEMINI_KEY); console.log(`News: ${news.items.length} Schlagzeilen.`); }
     catch (e) { noteGeminiError(e); console.error('News fehlgeschlagen, behalte alte:', e.message); }
