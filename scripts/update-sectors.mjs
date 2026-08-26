@@ -325,6 +325,20 @@ const today = () => new Date().toISOString().slice(0, 10);
     .replace(/\b(se|ag|nv|sa|corp|corporation|inc|incorporated|ltd|limited|plc|co|kgaa|group|holding|holdings|company|the)\b/g, '')
     .replace(/[^a-z0-9]/g, '');
 
+  /* Eine geprüfte, aber NICHT aufgenommene Aktie für die Trefferquote zählen.
+     Zählt je Ticker genau einmal (scan.rejectedTickers), damit wiederholte
+     Prüfungen desselben Titels den Nenner nicht aufblähen. */
+  const noteRejected = (stock) => {
+    const sector = stock && stock.sector;
+    const tk = stock && stock.ticker;
+    if (!sector || !tk) return;
+    scan.rejectedTickers = scan.rejectedTickers || {};
+    const key = String(tk).toUpperCase();
+    if (scan.rejectedTickers[key]) return;
+    scan.rejectedTickers[key] = sector;
+    scan.seenBySector[sector] = (scan.seenBySector[sector] || 0) + 1;
+  };
+
   /* 2b) Kandidaten prüfen (rollierend) ----------------------------------
      Gemini liefert NUR Metadaten (Ticker/Name/Sektor/Yahoo-Symbol). Die eigentliche
      Aufnahme-Entscheidung trifft IMMER der Multi-Quellen-Konsens (stockanalysis/Yahoo/
@@ -363,12 +377,23 @@ const today = () => new Date().toISOString().slice(0, 10);
         tried++;
         const v = await verifyStock(probe);
         if (process.env.GEMINI_DEBUG) console.log(`  [verify] ${probe.ticker}: ${v.ok ? 'OK ('+v.verifiedSource+')' : 'raus ('+v.reason+')'}`);
-        if (!v.ok) continue;
-        // Sektor sicherstellen (für Anzeige/Trefferquote) — aus Gemini-Meta oder via Yahoo.
-        // Bei US-Tickern (kein Suffix) ist der Ticker selbst das Yahoo-Symbol.
+
+        // Sektor IMMER bestimmen — auch für abgelehnte Kandidaten.
+        // Bisher wurde bei !v.ok sofort abgebrochen, sodass geprüfte, aber nicht
+        // 100 % Buy bewertete Titel NIRGENDS gezählt wurden. Damit fehlten sie im
+        // Nenner der Trefferquote: nur Finnhubs Ablehnungen landeten dort, Geminis
+        // nicht. Die Quote war dadurch systematisch zu hoch.
         let sector = meta.sector;
         const symForSector = yahoo || (/^[A-Z]{1,5}$/.test(ticker) ? ticker : null);
         if (!sector && symForSector) { const info = await fetchSectorOf(symForSector); sector = info ? sectorForFinnhub(info.industry || info.sector) : null; }
+
+        if (!v.ok) {
+          // Geprüft und durchgefallen -> als geprüfte Aktie des Sektors zählen.
+          // Je Ticker nur EINMAL, damit wiederholte Prüfungen desselben Kandidaten
+          // die Quote nicht verwässern.
+          noteRejected({ ticker: probe.ticker, sector });
+          continue;
+        }
         if (!sector) continue;   // ohne Sektor nicht aufnehmen
         const counts = v.counts || meta.ratingCounts;
         const analysts = v.analysts ?? meta.analysts;
@@ -423,11 +448,12 @@ const today = () => new Date().toISOString().slice(0, 10);
             // miss nur zählen; geschützte Perlen (in der Schutzwoche bestätigt) NIE löschen,
             // sonst gingen sie bei einem reinen Quellen-Aussetzer verloren.
             const m = (db[b.ticker].miss || 0) + 1;
-            if (m >= MAX_MISS && !isProtected(db[b.ticker])) { delete db[b.ticker]; dropped++; }
+            if (m >= MAX_MISS && !isProtected(db[b.ticker])) { noteRejected(db[b.ticker]); delete db[b.ticker]; dropped++; }
             else db[b.ticker].miss = m;
           } else {
             // eine seriöse Quelle fand AKTIV Hold/Sell -> ECHTES Signal, raus (auch geschützte:
             // ein belegter Hold ist ein echter Grund, anders als ein Aussetzer).
+            noteRejected(db[b.ticker]);
             delete db[b.ticker]; dropped++;
           }
           checked++;
