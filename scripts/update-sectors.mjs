@@ -168,23 +168,37 @@ const today = () => new Date().toISOString().slice(0, 10);
   const HEAVY_GAP_MS = Number(process.env.HEAVY_GAP_H || 6) * 3600000 - 5 * 60000; // 5 min Toleranz für Cron-Jitter
   const gapPassed = !scan.heavyAt || (nowMs - Date.parse(scan.heavyAt)) >= HEAVY_GAP_MS;
 
-  // Gemini/Finnhub laufen nur noch EINMAL PRO WERKTAG (Mo-Fr).
-  // Begruendung: an Wochenenden bewegen sich Kurse nicht, und die 30-Tage-Fenster
-  // rechnet das System ohnehin selbst weiter — ein Wochenendlauf brachte also
-  // nichts, kostete aber Kontingent. Alles, was uebrig bleibt, geht in die
-  // Perlensuche. FORCE_HEAVY (bzw. HEAVY_GAP_H=0) ueberbrueckt beides manuell.
+  // ZWEI getrennte Takte:
+  //
+  //  pearlDue  -> die PERLENSUCHE (Discovery, Kandidatenpruefung, Re-Validierung).
+  //               Laeuft wie frueher rund alle 12 h, auch am Wochenende. Sie ist
+  //               der eigentliche Zweck des Gemini-Kontingents und soll NICHT
+  //               ausgeduennt werden.
+  //
+  //  heavyDue  -> die KURSABHAENGIGEN Schritte (Finnhub-Scan, Markt-News) und die
+  //               monatliche Inflationsprognose. Nur EINMAL PRO WERKTAG: am
+  //               Wochenende bewegen sich keine Kurse, und die 30-Tage-Fenster
+  //               rechnet das System selbst weiter.
+  //
+  // HEAVY_GAP_H=0 (manuelles force_heavy) ueberbrueckt beide Sperren.
   const nowUtc = new Date(nowMs);
   const dow = nowUtc.getUTCDay();            // 0 = So, 6 = Sa
   const isWeekday = dow >= 1 && dow <= 5;
   const heavyDayStr = nowUtc.toISOString().slice(0, 10);
   const alreadyHeavyToday = scan.heavyDay === heavyDayStr;
   const forceHeavy = Number(process.env.HEAVY_GAP_H || 6) === 0;
+
+  const pearlDue = forceHeavy || gapPassed;
   const heavyDue =
       forceHeavy || (isWeekday && !alreadyHeavyToday && gapPassed);
-  if (!heavyDue && !isWeekday) {
-    console.log('Wochenende: kein Gemini/Finnhub-Lauf (nur Yahoo-Kurse).');
-  } else if (!heavyDue && alreadyHeavyToday) {
-    console.log('Heute bereits ein voller Lauf erfolgt -> nur Yahoo-Kurse.');
+
+  if (!pearlDue) {
+    console.log(`Perlensuche: noch nicht faellig (Takt ${process.env.HEAVY_GAP_H || 6} h).`);
+  }
+  if (pearlDue && !heavyDue) {
+    console.log(isWeekday
+      ? 'Heute bereits ein Kurs-/News-Lauf erfolgt -> nur Perlensuche.'
+      : 'Wochenende: kein Finnhub-/News-Lauf -> nur Perlensuche.');
   }
 
   // Mehrere Cron-Slots pro Stunde (gegen GitHubs unzuverlässige :00-Zustellung) könnten
@@ -193,17 +207,17 @@ const today = () => new Date().toISOString().slice(0, 10);
   const MIN_GAP_MIN = Number(process.env.MIN_GAP_MIN || 50);
   const lastRunMs = prev?.updatedAt ? Date.parse(prev.updatedAt) : 0;
   const tooSoon = lastRunMs && (nowMs - lastRunMs) < MIN_GAP_MIN * 60000;
-  if (tooSoon && !heavyDue && !process.env.FORCE_RUN) {
+  if (tooSoon && !pearlDue && !heavyDue && !process.env.FORCE_RUN) {
     const mins = Math.round((nowMs - lastRunMs) / 60000);
     console.log(`Übersprungen: letzter Lauf vor ${mins} min (< ${MIN_GAP_MIN} min), kein schwerer Lauf fällig.`);
     return;   // nichts schreiben -> Git-Diff leer -> kein Commit
   }
 
-  console.log(heavyDue ? 'Lauf-Typ: VOLL (Yahoo + Gemini + Finnhub).' : 'Lauf-Typ: leicht (nur Yahoo-Kurse/Performance).');
-  if (heavyDue) {
-    scan.heavyAt = new Date(nowMs).toISOString();
-    scan.heavyDay = heavyDayStr;   // sperrt weitere volle Laeufe an diesem Tag
-  }
+  console.log(`Lauf-Typ: Yahoo${pearlDue ? ' + Perlensuche' : ''}${heavyDue ? ' + Finnhub/News' : ''}.`);
+  // heavyAt taktet die Perlensuche (12 h), heavyDay sperrt den Kurs-/News-Teil
+  // auf einen Lauf pro Werktag.
+  if (pearlDue) scan.heavyAt = new Date(nowMs).toISOString();
+  if (heavyDue) scan.heavyDay = heavyDayStr;
 
   /* 1) Sektor- & Regions-Performance (30T + 360T-Schnitt + 6M) via Yahoo (kein Key) -- */
   let bars30 = prev?.bars30 || [];
@@ -284,7 +298,7 @@ const today = () => new Date().toISOString().slice(0, 10);
     'Industrie, Energie und Rohstoffe weltweit',
     'Finanzwerte und Versorger weltweit',
   ];
-  if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
+  if (GEMINI_KEY && pearlDue && geminiBudgetLeft()) {
     useGemini();
     const focus = FOCI[(scan.focusCursor || 0) % FOCI.length];
     scan.focusCursor = ((scan.focusCursor || 0) + 1) % FOCI.length;
@@ -345,7 +359,7 @@ const today = () => new Date().toISOString().slice(0, 10);
      Finnhub) — auch wenn Gemini gerade ausfällt (503). So hängt keine echte Perle an
      Geminis Verfügbarkeit. Gemini-Counts dienen nur als Fallback, falls keine harte
      Quelle die Aktie kennt. */
-  if (heavyDue && candidates.length) {
+  if (pearlDue && candidates.length) {
     try {
       const n = candidates.length;
       const start = (scan.candCursor || 0) % n;
@@ -416,7 +430,7 @@ const today = () => new Date().toISOString().slice(0, 10);
      Analysten-Kaufempfehlungen ändern sich langsam; häufiger zu prüfen wäre
      verschwendetes Kontingent. Nur Perlen ohne/mit >7 Tage altem recheckAt. */
   const RECHECK_AGE = 7 * 86400000;
-  if (GEMINI_KEY && heavyDue && geminiBudgetLeft()) {
+  if (GEMINI_KEY && pearlDue && geminiBudgetLeft()) {
     const allDue = Object.values(db)
       .filter(s => s.via && s.via.startsWith('gemini'))
       // GERADE in diesem Lauf gegengeprüfte (verifiedAt = heute) NICHT erneut prüfen —

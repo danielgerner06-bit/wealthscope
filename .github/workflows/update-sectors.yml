@@ -2,15 +2,16 @@ name: Sektordaten aktualisieren
 
 on:
   schedule:
-    # Yahoo-Kurse macht der Cloudflare-Worker STÜNDLICH. Diese Action ist nur
-    # noch für Gemini (Perlensuche + News + Inflationsprognose) und den
-    # Finnhub-Scan zuständig, und die laufen ab jetzt nur noch EINMAL PRO
-    # WERKTAG (Mo–Fr). Am Wochenende bewegen sich keine Kurse, und die
-    # 30-Tage-Fenster rechnet das System selbst weiter.
-    # Zwei Slots nur als Absicherung gegen GitHubs Cron-Jitter — das Skript
-    # selbst lässt über scan.heavyDay pro Tag ohnehin nur einen vollen Lauf zu.
-    - cron: '13 6 * * 1-5'
-    - cron: '43 9 * * 1-5'
+    # Yahoo-Kurse macht der Cloudflare-Worker STÜNDLICH. Diese Action deckt
+    # zwei getrennte Takte ab (Details in scripts/update-sectors.mjs):
+    #   • PERLENSUCHE  — rund alle 12 h, AUCH am Wochenende (wie früher).
+    #   • Finnhub-Scan, Markt-News, Inflationsprognose — nur 1× pro WERKTAG,
+    #     da sich am Wochenende keine Kurse bewegen.
+    # Daher wieder Slots an allen sieben Tagen; welcher Teil tatsächlich läuft,
+    # entscheidet das Skript über scan.heavyAt (12 h) bzw. scan.heavyDay (Tag).
+    # Je Zeitfenster zwei Slots als Reserve gegen GitHubs Cron-Jitter.
+    - cron: '13 6,18 * * *'
+    - cron: '43 9,21 * * *'
   workflow_dispatch:         # manueller Start möglich
     inputs:
       force_heavy:
@@ -39,9 +40,9 @@ jobs:
         env:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # Ein voller Lauf pro Werktag. Das Skript setzt scan.heavyDay und
-          # lehnt weitere volle Läufe am selben Tag ab; HEAVY_GAP_H ist nur noch
-          # die Untergrenze zwischen zwei Läufen. 0 = manuell erzwingen.
+          # Taktet die PERLENSUCHE (~2×/Tag). Der Kurs-/News-Teil hängt
+          # zusätzlich an scan.heavyDay und läuft nur 1× pro Werktag.
+          # 0 = beides manuell erzwingen.
           HEAVY_GAP_H: ${{ (github.event_name == 'workflow_dispatch' && inputs.force_heavy) && '0' || '12' }}
           GEMINI_DEBUG: ${{ (github.event_name == 'workflow_dispatch' && inputs.debug) && '1' || '' }}
         run: node scripts/update-sectors.mjs
