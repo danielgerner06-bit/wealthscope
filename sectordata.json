@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-27",
-  "updatedAt": "2026-08-27T17:45:30.322Z",
+  "updatedAt": "2026-08-27T18:00:02.718Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -195,15 +195,15 @@
     },
     {
       "id": "industrial",
-      "perf": -1.78,
+      "perf": -1.87,
       "avg30": 1.77,
-      "perf6m": 1.44
+      "perf6m": 1.35
     },
     {
       "id": "energy",
-      "perf": 6.73,
+      "perf": 6.97,
       "avg30": 3.07,
-      "perf6m": 13.15
+      "perf6m": 13.41
     },
     {
       "id": "materials",
@@ -263,9 +263,9 @@
     },
     {
       "id": "apac",
-      "perf": 8.55,
+      "perf": 8.41,
       "avg30": 2.49,
-      "perf6m": 6.47
+      "perf6m": 6.33
     },
     {
       "id": "india",
@@ -2887,5 +2887,6 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  }
+  },
+  "yahooAt": "2026-08-27T18:00:02.718Z"
 }
