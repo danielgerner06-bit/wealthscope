@@ -9002,7 +9002,8 @@
       "seenMs": 1782604800000,
       "startPrice": 24.949999809265137,
       "perf": [
-        -4.46
+        -4.46,
+        6.3
       ],
       "outperformPct": null,
       "prov": false,
@@ -10407,7 +10408,7 @@
     "factors": [
       {
         "name": "Strong Buy",
-        "spread": 14.7,
+        "spread": 13.9,
         "best": {
           "k": "<70%",
           "avg": 8.5,
@@ -10415,13 +10416,13 @@
         },
         "worst": {
           "k": "95%+",
-          "avg": -6.2,
+          "avg": -5.4,
           "n": 13
         }
       },
       {
         "name": "Dividende",
-        "spread": 9.3,
+        "spread": 9.2,
         "best": {
           "k": "2-4%",
           "avg": 5,
@@ -10429,16 +10430,16 @@
         },
         "worst": {
           "k": "<2%",
-          "avg": -4.3,
+          "avg": -4.2,
           "n": 86
         }
       },
       {
         "name": "Kursziel",
-        "spread": 8,
+        "spread": 8.1,
         "best": {
           "k": "40%+",
-          "avg": 3.3,
+          "avg": 3.4,
           "n": 149
         },
         "worst": {
@@ -10449,7 +10450,7 @@
       },
       {
         "name": "Analysten",
-        "spread": 7.8,
+        "spread": 7.7,
         "best": {
           "k": "15+",
           "avg": 2.3,
@@ -10457,7 +10458,7 @@
         },
         "worst": {
           "k": "1-4",
-          "avg": -5.5,
+          "avg": -5.4,
           "n": 96
         }
       },
@@ -10485,12 +10486,5 @@
     "sampleSize": 366,
     "maxMonths": 2,
     "provisional": false
-  },
-  "kiAnalysis": {
-    "text": "\"Strong Buy <70%\" lieferte mit 8,5% die beste Performance. Das KGV hatte mit 6,4% die geringste Streuung.",
-    "date": "2026-08-26",
-    "stage": "real",
-    "months": 2
-  },
-  "kiDay": "2026-08-26"
+  }
 }
