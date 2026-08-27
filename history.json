@@ -120,7 +120,13 @@
       "vol60": 30.51,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "JPY"
+      "marketCapSource": "JPY",
+      "perf12mBefore": -23.63,
+      "vol12m": 28.66,
+      "hitRate24m": 48,
+      "maxDd24m": -41.86,
+      "distTo3yHigh": -44.56,
+      "trendR2_24m": 0.33
     },
     "4502": {
       "ticker": "4502",
@@ -197,7 +203,13 @@
       "vol60": 52.24,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "JPY"
+      "marketCapSource": "JPY",
+      "perf12mBefore": -32.7,
+      "vol12m": 42.28,
+      "hitRate24m": 60,
+      "maxDd24m": -52.65,
+      "distTo3yHigh": -34.24,
+      "trendR2_24m": 0.04
     },
     "6080": {
       "ticker": "6080",
@@ -252,7 +264,13 @@
       "vol60": 23.2,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "JPY"
+      "marketCapSource": "JPY",
+      "perf12mBefore": 36.53,
+      "vol12m": 30.99,
+      "hitRate24m": 72,
+      "maxDd24m": -22.46,
+      "distTo3yHigh": -0.72,
+      "trendR2_24m": 0.86
     },
     "6701": {
       "ticker": "6701",
@@ -310,7 +328,13 @@
       "vol60": 46.51,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "JPY"
+      "marketCapSource": "JPY",
+      "perf12mBefore": 6.05,
+      "vol12m": 48.54,
+      "hitRate24m": 68,
+      "maxDd24m": -39.53,
+      "distTo3yHigh": -30.19,
+      "trendR2_24m": 0.63
     },
     "6723": {
       "ticker": "6723",
@@ -388,7 +412,13 @@
       "vol60": 73.86,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "JPY"
+      "marketCapSource": "JPY",
+      "perf12mBefore": 22.95,
+      "vol12m": 70.99,
+      "hitRate24m": 72,
+      "maxDd24m": -47.84,
+      "distTo3yHigh": -33.71,
+      "trendR2_24m": 0.82
     },
     "7203": {
       "ticker": "7203",
@@ -469,7 +499,13 @@
       "vol60": 34.28,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "TWD"
+      "marketCapSource": "TWD",
+      "perf12mBefore": -12.12,
+      "vol12m": 36.96,
+      "hitRate24m": 48,
+      "maxDd24m": -42.7,
+      "distTo3yHigh": -30.16,
+      "trendR2_24m": 0.42
     },
     "9958": {
       "ticker": "9958",
@@ -527,7 +563,13 @@
       "vol60": 44.13,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "TWD"
+      "marketCapSource": "TWD",
+      "perf12mBefore": -43.51,
+      "vol12m": 40.09,
+      "hitRate24m": 28,
+      "maxDd24m": -59.11,
+      "distTo3yHigh": -69.59,
+      "trendR2_24m": 0.71
     },
     "402340": {
       "ticker": "402340",
@@ -585,7 +627,13 @@
       "vol60": 99.04,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "KRW"
+      "marketCapSource": "KRW",
+      "perf12mBefore": 815.63,
+      "vol12m": 80.43,
+      "hitRate24m": 72,
+      "maxDd24m": -34.02,
+      "distTo3yHigh": -13.08,
+      "trendR2_24m": 0.83
     },
     "CRBU": {
       "ticker": "CRBU",
@@ -8163,7 +8211,13 @@
       "vol60": 41.81,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -9.22,
+      "vol12m": 48.86,
+      "hitRate24m": 35.71,
+      "maxDd24m": -52.79,
+      "distTo3yHigh": -34.59,
+      "trendR2_24m": 0.55
     },
     "HYQ.DE": {
       "ticker": "HYQ.DE",
@@ -8222,7 +8276,13 @@
       "vol60": 62.02,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -61.36,
+      "vol12m": 52.28,
+      "hitRate24m": 32,
+      "maxDd24m": -79.62,
+      "distTo3yHigh": -76.56,
+      "trendR2_24m": 0.88
     },
     "SB1": {
       "ticker": "SB1",
@@ -8278,7 +8338,13 @@
       "vol60": 27.99,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -6.27,
+      "vol12m": 34.82,
+      "hitRate24m": 56,
+      "maxDd24m": -25.08,
+      "distTo3yHigh": -22.15,
+      "trendR2_24m": 0.76
     },
     "A1OS.DE": {
       "ticker": "A1OS.DE",
@@ -8334,7 +8400,13 @@
       "vol60": 78.92,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -40.51,
+      "vol12m": 51.6,
+      "hitRate24m": 48,
+      "maxDd24m": -53,
+      "distTo3yHigh": -48.58,
+      "trendR2_24m": 0.66
     },
     "IXX.DE": {
       "ticker": "IXX.DE",
@@ -8393,7 +8465,13 @@
       "vol60": 46.6,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 30.54,
+      "vol12m": 35.57,
+      "hitRate24m": 52,
+      "maxDd24m": -25.94,
+      "distTo3yHigh": -2.39,
+      "trendR2_24m": 0.57
     },
     "034730": {
       "ticker": "034730",
@@ -8451,7 +8529,13 @@
       "vol60": 70.8,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "KRW"
+      "marketCapSource": "KRW",
+      "perf12mBefore": 208.47,
+      "vol12m": 59.7,
+      "hitRate24m": 60,
+      "maxDd24m": -38.81,
+      "distTo3yHigh": -14.85,
+      "trendR2_24m": 0.75
     },
     "LUVE": {
       "ticker": "LUVE",
@@ -8509,7 +8593,13 @@
       "vol60": 47.9,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 131.45,
+      "vol12m": 34.56,
+      "hitRate24m": 72,
+      "maxDd24m": -18.81,
+      "distTo3yHigh": -5.05,
+      "trendR2_24m": 0.8
     },
     "ORS": {
       "ticker": "ORS",
@@ -8567,7 +8657,13 @@
       "vol60": 34.73,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 9,
+      "vol12m": 30.83,
+      "hitRate24m": 52,
+      "maxDd24m": -29.55,
+      "distTo3yHigh": -20.9,
+      "trendR2_24m": 0.65
     },
     "GF": {
       "ticker": "GF",
@@ -8624,7 +8720,13 @@
       "vol60": 36.63,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 77.63,
+      "vol12m": 28.94,
+      "hitRate24m": 64,
+      "maxDd24m": -15.86,
+      "distTo3yHigh": -12.62,
+      "trendR2_24m": 0.96
     },
     "SIT": {
       "ticker": "SIT",
@@ -8680,7 +8782,13 @@
       "vol60": 35.37,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 66.41,
+      "vol12m": 47.25,
+      "hitRate24m": 52,
+      "maxDd24m": -55.21,
+      "distTo3yHigh": -48.1,
+      "trendR2_24m": 0.6
     },
     "GFT": {
       "ticker": "GFT",
@@ -8738,7 +8846,13 @@
       "vol60": 55.53,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -5.41,
+      "vol12m": 47.37,
+      "hitRate24m": 56,
+      "maxDd24m": -46.97,
+      "distTo3yHigh": -34.5,
+      "trendR2_24m": 0.37
     },
     "ADMCM.HE": {
       "ticker": "ADMCM.HE",
@@ -8796,7 +8910,13 @@
       "vol60": 44.2,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -46.8,
+      "vol12m": 36.41,
+      "hitRate24m": 40,
+      "maxDd24m": -51.99,
+      "distTo3yHigh": -50.54,
+      "trendR2_24m": 0.55
     },
     "JST.DE": {
       "ticker": "JST.DE",
@@ -8855,7 +8975,13 @@
       "vol60": 47.03,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 7.09,
+      "vol12m": 35.72,
+      "hitRate24m": 52,
+      "maxDd24m": -26.52,
+      "distTo3yHigh": -16.94,
+      "trendR2_24m": 0.7
     },
     "EXL.DE": {
       "ticker": "EXL.DE",
@@ -8912,7 +9038,13 @@
       "vol60": 79.72,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -21.61,
+      "vol12m": 58.59,
+      "hitRate24m": 40,
+      "maxDd24m": -45.71,
+      "distTo3yHigh": -32.12,
+      "trendR2_24m": 0.02
     },
     "6701.T": {
       "ticker": "6701.T",
@@ -8971,7 +9103,13 @@
       "vol60": 46.15,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "JPY"
+      "marketCapSource": "JPY",
+      "perf12mBefore": -6.39,
+      "vol12m": 46.76,
+      "hitRate24m": 68,
+      "maxDd24m": -39.53,
+      "distTo3yHigh": -36.58,
+      "trendR2_24m": 0.7
     },
     "300760.SZ": {
       "ticker": "300760.SZ",
@@ -9029,7 +9167,13 @@
       "vol60": 29.7,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "CNY"
+      "marketCapSource": "CNY",
+      "perf12mBefore": -38,
+      "vol12m": 25.59,
+      "hitRate24m": 24,
+      "maxDd24m": -56.85,
+      "distTo3yHigh": -56.85,
+      "trendR2_24m": 0.8
     },
     "ADMCM": {
       "ticker": "ADMCM",
@@ -9087,7 +9231,13 @@
       "vol60": 45.38,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -51.62,
+      "vol12m": 36.71,
+      "hitRate24m": 40,
+      "maxDd24m": -56.5,
+      "distTo3yHigh": -54.24,
+      "trendR2_24m": 0.58
     },
     "JST": {
       "ticker": "JST",
@@ -9145,7 +9295,13 @@
       "vol60": 44.04,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -4.84,
+      "vol12m": 36.09,
+      "hitRate24m": 54.17,
+      "maxDd24m": -26.52,
+      "distTo3yHigh": -24.07,
+      "trendR2_24m": 0.69
     },
     "YOC": {
       "ticker": "YOC",
@@ -9199,7 +9355,13 @@
       "vol60": 75.35,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -62.19,
+      "vol12m": 59.78,
+      "hitRate24m": 33.33,
+      "maxDd24m": -74.75,
+      "distTo3yHigh": -71.2,
+      "trendR2_24m": 0.76
     },
     "EXL": {
       "ticker": "EXL",
@@ -9255,7 +9417,13 @@
       "vol60": 83.53,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -29.69,
+      "vol12m": 60.71,
+      "hitRate24m": 41.67,
+      "maxDd24m": -45.71,
+      "distTo3yHigh": -42.46,
+      "trendR2_24m": 0.01
     },
     "F3C.DE": {
       "ticker": "F3C.DE",
@@ -9311,7 +9479,13 @@
       "vol60": 55.55,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -8.01,
+      "vol12m": 52.13,
+      "hitRate24m": 52,
+      "maxDd24m": -55.95,
+      "distTo3yHigh": -24.58,
+      "trendR2_24m": 0.15
     },
     "JDC": {
       "ticker": "JDC",
@@ -9368,7 +9542,13 @@
       "vol60": 30.98,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -4.58,
+      "vol12m": 39.27,
+      "hitRate24m": 52,
+      "maxDd24m": -36.25,
+      "distTo3yHigh": -28.44,
+      "trendR2_24m": 0.07
     },
     "KALN.NS": {
       "ticker": "KALN.NS",
@@ -9422,7 +9602,13 @@
       "vol60": 60.22,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "INR"
+      "marketCapSource": "INR",
+      "perf12mBefore": -24.63,
+      "vol12m": 45.76,
+      "hitRate24m": 56,
+      "maxDd24m": -58.01,
+      "distTo3yHigh": -43.77,
+      "trendR2_24m": 0.65
     },
     "CSH.DE": {
       "ticker": "CSH.DE",
@@ -9478,7 +9664,13 @@
       "vol60": 57.28,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -10.49,
+      "vol12m": 41.04,
+      "hitRate24m": 40,
+      "maxDd24m": -55.7,
+      "distTo3yHigh": -51.39,
+      "trendR2_24m": 0.54
     },
     "NEAG": {
       "ticker": "NEAG",
@@ -9534,7 +9726,13 @@
       "vol60": 14.41,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "CHF"
+      "marketCapSource": "CHF",
+      "perf12mBefore": 4.03,
+      "vol12m": 20.66,
+      "hitRate24m": 36,
+      "maxDd24m": -28.72,
+      "distTo3yHigh": -29.86,
+      "trendR2_24m": 0.37
     },
     "001740": {
       "ticker": "001740",
@@ -9591,7 +9789,13 @@
       "vol60": 138.54,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "KRW"
+      "marketCapSource": "KRW",
+      "perf12mBefore": 65.9,
+      "vol12m": 78.51,
+      "hitRate24m": 52,
+      "maxDd24m": -44.16,
+      "distTo3yHigh": -44.16,
+      "trendR2_24m": 0.32
     },
     "YOC.DE": {
       "ticker": "YOC.DE",
@@ -9645,7 +9849,13 @@
       "vol60": 47.42,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -62.98,
+      "vol12m": 60.43,
+      "hitRate24m": 32,
+      "maxDd24m": -73.44,
+      "distTo3yHigh": -72.41,
+      "trendR2_24m": 0.78
     },
     "F3C": {
       "ticker": "F3C",
@@ -9701,7 +9911,13 @@
       "vol60": 59.1,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -11.46,
+      "vol12m": 53.47,
+      "hitRate24m": 48,
+      "maxDd24m": -55.95,
+      "distTo3yHigh": -26.08,
+      "trendR2_24m": 0.11
     },
     "HABA": {
       "ticker": "HABA",
@@ -9757,7 +9973,13 @@
       "vol60": 25.03,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -22.85,
+      "vol12m": 22.9,
+      "hitRate24m": 44,
+      "maxDd24m": -35.98,
+      "distTo3yHigh": -37.07,
+      "trendR2_24m": 0.82
     },
     "KALYANKJIL": {
       "ticker": "KALYANKJIL",
@@ -9808,7 +10030,13 @@
       "vol60": 66.83,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "INR"
+      "marketCapSource": "INR",
+      "perf12mBefore": 5.1,
+      "vol12m": 48.26,
+      "hitRate24m": 54.17,
+      "maxDd24m": -58.01,
+      "distTo3yHigh": -22.25,
+      "trendR2_24m": 0.57
     },
     "HIGH.DE": {
       "ticker": "HIGH.DE",
@@ -9857,7 +10085,13 @@
       "vol60": 34.36,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 42.29,
+      "vol12m": 57.86,
+      "hitRate24m": 45.83,
+      "maxDd24m": -63.98,
+      "distTo3yHigh": -51.28,
+      "trendR2_24m": 0
     },
     "NOHO": {
       "ticker": "NOHO",
@@ -9911,7 +10145,13 @@
       "vol60": 20.31,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -17.03,
+      "vol12m": 21,
+      "hitRate24m": 45.83,
+      "maxDd24m": -27.63,
+      "distTo3yHigh": -21.65,
+      "trendR2_24m": 0.02
     },
     "ATEA": {
       "ticker": "ATEA",
@@ -9965,7 +10205,13 @@
       "vol60": 24.93,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "NOK"
+      "marketCapSource": "NOK",
+      "perf12mBefore": 22.29,
+      "vol12m": 22.34,
+      "hitRate24m": 54.17,
+      "maxDd24m": -16.22,
+      "distTo3yHigh": -1.95,
+      "trendR2_24m": 0.46
     },
     "ADXR": {
       "ticker": "ADXR",
@@ -10019,7 +10265,13 @@
       "vol60": 19.85,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -15.87,
+      "vol12m": 24.95,
+      "hitRate24m": 36,
+      "maxDd24m": -37.99,
+      "distTo3yHigh": -39.68,
+      "trendR2_24m": 0.78
     },
     "089970": {
       "ticker": "089970",
@@ -10070,7 +10322,13 @@
       "vol60": 162.94,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "KRW"
+      "marketCapSource": "KRW",
+      "perf12mBefore": 539.77,
+      "vol12m": 105.76,
+      "hitRate24m": 76,
+      "maxDd24m": -57.73,
+      "distTo3yHigh": -43.02,
+      "trendR2_24m": 0.86
     },
     "MEDI": {
       "ticker": "MEDI",
@@ -10125,7 +10383,13 @@
       "vol60": 27.2,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "NOK"
+      "marketCapSource": "NOK",
+      "perf12mBefore": 0,
+      "vol12m": 39.3,
+      "hitRate24m": 56,
+      "maxDd24m": -33.8,
+      "distTo3yHigh": -20.77,
+      "trendR2_24m": 0.6
     },
     "PHN": {
       "ticker": "PHN",
@@ -10179,7 +10443,13 @@
       "vol60": 24.08,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 76.84,
+      "vol12m": 39.28,
+      "hitRate24m": 56,
+      "maxDd24m": -34.97,
+      "distTo3yHigh": -9.58,
+      "trendR2_24m": 0.4
     },
     "EQS": {
       "ticker": "EQS",
@@ -10233,7 +10503,13 @@
       "vol60": 25.85,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -32.1,
+      "vol12m": 33.58,
+      "hitRate24m": 44,
+      "maxDd24m": -42.18,
+      "distTo3yHigh": -57.3,
+      "trendR2_24m": 0.27
     },
     "LBIRD": {
       "ticker": "LBIRD",
@@ -10287,7 +10563,13 @@
       "vol60": 39.78,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 45.95,
+      "vol12m": 42.3,
+      "hitRate24m": 64,
+      "maxDd24m": -37.9,
+      "distTo3yHigh": -3.91,
+      "trendR2_24m": 0.86
     },
     "VU": {
       "ticker": "VU",
@@ -10339,7 +10621,13 @@
       "vol60": 50.38,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": -43.46,
+      "vol12m": 52.98,
+      "hitRate24m": 44,
+      "maxDd24m": -63.23,
+      "distTo3yHigh": -53.49,
+      "trendR2_24m": 0.05
     },
     "SCANFL": {
       "ticker": "SCANFL",
@@ -10393,7 +10681,13 @@
       "vol60": 34.3,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 3.07,
+      "vol12m": 31.13,
+      "hitRate24m": 60,
+      "maxDd24m": -18.2,
+      "distTo3yHigh": -15.53,
+      "trendR2_24m": 0.88
     },
     "BSL": {
       "ticker": "BSL",
@@ -10448,7 +10742,13 @@
       "vol60": 60.12,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 53.74,
+      "vol12m": 54.45,
+      "hitRate24m": 44,
+      "maxDd24m": -50.1,
+      "distTo3yHigh": -27.9,
+      "trendR2_24m": 0.8
     },
     "DR0G": {
       "ticker": "DR0G",
@@ -10503,7 +10803,13 @@
       "vol60": 57.72,
       "priceFactorsAtAdd": true,
       "marketCapCurrency": "EUR",
-      "marketCapSource": "EUR"
+      "marketCapSource": "EUR",
+      "perf12mBefore": 120.79,
+      "vol12m": 52.26,
+      "hitRate24m": 68,
+      "maxDd24m": -33.84,
+      "distTo3yHigh": -22.23,
+      "trendR2_24m": 0.79
     }
   },
   "findings": {

@@ -4,6 +4,7 @@
 // in den aktuellen Perlen ist.
 import fs from 'node:fs';
 import { priceAtDate, perfBetween } from './prices.mjs';
+import { chartRows, historyFactors } from './histfactors.mjs';
 
 const FILE = 'history.json';
 const MS_DAY = 86400000;
@@ -78,7 +79,18 @@ export async function snapshotStocks(hist, topStocks, budget = 30) {
     const startMs = dayMs(seenStr);
     const startPrice = await priceAtDate(sym, startMs);
     if (startPrice == null) continue;
-    e[s.ticker] = { ...metaFrom(s, sym), seen: seenStr, seenMs: startMs, startPrice, perf: [] };
+    // Vorgeschichte der Aktie EINMALIG beim Aufnehmen festhalten — danach
+    // aendert sie sich nie wieder, denn sie liegt vor dem Aufnahmetag.
+    let hist = null;
+    try {
+      const DAY = 86400000;
+      const rows = await chartRows(sym, startMs - 1200 * DAY, startMs + 2 * DAY);
+      if (rows) hist = historyFactors(rows, startMs);
+    } catch { /* ohne Vorgeschichte ist die Perle trotzdem brauchbar */ }
+    e[s.ticker] = {
+      ...metaFrom(s, sym), ...(hist || {}),
+      seen: seenStr, seenMs: startMs, startPrice, perf: [],
+    };
     added++;
   }
   return added;
