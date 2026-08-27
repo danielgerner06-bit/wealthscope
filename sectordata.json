@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-27",
-  "updatedAt": "2026-08-27T20:00:02.658Z",
+  "updatedAt": "2026-08-27T21:00:02.719Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -201,9 +201,9 @@
     },
     {
       "id": "energy",
-      "perf": 6.7,
+      "perf": 6.73,
       "avg30": 3.07,
-      "perf6m": 13.12
+      "perf6m": 13.15
     },
     {
       "id": "materials",
@@ -2869,5 +2869,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-27T20:00:02.658Z"
+  "yahooAt": "2026-08-27T21:00:02.719Z"
 }
