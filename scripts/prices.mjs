@@ -197,7 +197,13 @@ export async function enrichStock(symbol) {
       forwardPe: f2(sd.forwardPE) ?? f2(ks.forwardPE),
       priceToBook: f2(ks.priceToBook),
       priceToSales: f2(sd.priceToSalesTrailing12Months),
-      evEbitda: f2(ks.enterpriseToEbitda),
+      // Negatives EV/EBITDA entsteht bei negativem EBITDA und ist genauso
+      // bedeutungslos wie ein negatives KGV — dann lieber kein Wert. Absurd
+      // hohe Werte (> 200) kommen aus fast null EBITDA und sind ebenso Muell.
+      evEbitda: (() => {
+        const v = f2(ks.enterpriseToEbitda);
+        return (v != null && v > 0 && v <= 200) ? v : null;
+      })(),
       evRevenue: f2(ks.enterpriseToRevenue),
       grossMargin: p2(fd.grossMargins),
       operatingMargin: p2(fd.operatingMargins),
