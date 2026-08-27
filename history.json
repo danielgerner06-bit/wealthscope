@@ -108,7 +108,7 @@
       "payoutRatio": 39.42,
       "heldInsiders": 57.88,
       "heldInstitutions": 6.48,
-      "marketCap": 60674486272,
+      "marketCap": 326707854,
       "beta": 0.04,
       "targetSpread": 0,
       "factorsAsOf": "2026-08-27",
@@ -118,7 +118,9 @@
       "distTo50dma": -5.71,
       "distTo200dma": -8.5,
       "vol60": 30.51,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "JPY"
     },
     "4502": {
       "ticker": "4502",
@@ -183,7 +185,7 @@
       "payoutRatio": 24.04,
       "heldInsiders": 45.85,
       "heldInstitutions": 10.38,
-      "marketCap": 140134973440,
+      "marketCap": 754570814,
       "beta": 0.55,
       "targetSpread": 0,
       "factorsAsOf": "2026-08-27",
@@ -193,7 +195,9 @@
       "distTo50dma": 9.96,
       "distTo200dma": 7.58,
       "vol60": 52.24,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "JPY"
     },
     "6080": {
       "ticker": "6080",
@@ -235,7 +239,7 @@
       "payoutRatio": 28.45,
       "heldInsiders": 51.1,
       "heldInstitutions": 20.69,
-      "marketCap": 135217856512,
+      "marketCap": 728094105,
       "beta": 0.75,
       "recMean": 1.33,
       "targetSpread": 20.4,
@@ -246,7 +250,9 @@
       "distTo50dma": 10.79,
       "distTo200dma": 20.58,
       "vol60": 23.2,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "JPY"
     },
     "6701": {
       "ticker": "6701",
@@ -291,7 +297,7 @@
       "payoutRatio": 18.72,
       "heldInsiders": 4.96,
       "heldInstitutions": 54.98,
-      "marketCap": 6280239382528,
+      "marketCap": 33816578585,
       "beta": 0.34,
       "recMean": 1.5,
       "targetSpread": 48.5,
@@ -302,7 +308,9 @@
       "distTo50dma": 2.87,
       "distTo200dma": -10.03,
       "vol60": 46.51,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "JPY"
     },
     "6723": {
       "ticker": "6723",
@@ -367,7 +375,7 @@
       "payoutRatio": 3.94,
       "heldInsiders": 46.94,
       "heldInstitutions": 13.25,
-      "marketCap": 84887789568,
+      "marketCap": 457086813,
       "beta": 0.58,
       "recMean": 2,
       "targetSpread": 0,
@@ -378,7 +386,9 @@
       "distTo50dma": 11.87,
       "distTo200dma": 2.19,
       "vol60": 73.86,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "JPY"
     },
     "7203": {
       "ticker": "7203",
@@ -446,7 +456,7 @@
       "payoutRatio": 70.09,
       "heldInsiders": 44.82,
       "heldInstitutions": 36.31,
-      "marketCap": 107977940992,
+      "marketCap": 2920911274,
       "beta": 0.79,
       "recMean": 1.4,
       "targetSpread": 34.3,
@@ -457,7 +467,9 @@
       "distTo50dma": 5.51,
       "distTo200dma": -4.14,
       "vol60": 34.28,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "TWD"
     },
     "9958": {
       "ticker": "9958",
@@ -502,7 +514,7 @@
       "payoutRatio": 59.04,
       "heldInsiders": 31.84,
       "heldInstitutions": 11.68,
-      "marketCap": 23483514880,
+      "marketCap": 635252559,
       "beta": 0.46,
       "recMean": 2,
       "targetSpread": 76.8,
@@ -513,7 +525,9 @@
       "distTo50dma": -0.37,
       "distTo200dma": -14.83,
       "vol60": 44.13,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "TWD"
     },
     "402340": {
       "ticker": "402340",
@@ -558,7 +572,7 @@
       "payoutRatio": 0.62,
       "heldInsiders": 32.23,
       "heldInstitutions": 38.8,
-      "marketCap": 140771462217728,
+      "marketCap": 87390925470,
       "beta": 2.47,
       "recMean": 1.4,
       "targetSpread": 53.7,
@@ -569,7 +583,9 @@
       "distTo50dma": 31.27,
       "distTo200dma": 143.26,
       "vol60": 99.04,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "KRW"
     },
     "CRBU": {
       "ticker": "CRBU",
@@ -8136,7 +8152,7 @@
       "payoutRatio": 78.02,
       "heldInsiders": 84.7,
       "heldInstitutions": 6.68,
-      "marketCap": 766000000,
+      "marketCap": 767000000,
       "targetSpread": 12,
       "factorsAsOf": "2026-08-27",
       "factorsBackfilled": true,
@@ -8145,7 +8161,9 @@
       "distTo50dma": 19.03,
       "distTo200dma": -5.22,
       "vol60": 41.81,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "HYQ.DE": {
       "ticker": "HYQ.DE",
@@ -8191,7 +8209,7 @@
       "payoutRatio": 0,
       "heldInsiders": 41.66,
       "heldInstitutions": 42.54,
-      "marketCap": 580558528,
+      "marketCap": 581882560,
       "beta": 2.31,
       "recMean": 1.25,
       "targetSpread": 32.8,
@@ -8202,7 +8220,9 @@
       "distTo50dma": 0.03,
       "distTo200dma": -26.65,
       "vol60": 62.02,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "SB1": {
       "ticker": "SB1",
@@ -8246,7 +8266,7 @@
       "payoutRatio": 0,
       "heldInsiders": 64,
       "heldInstitutions": 5,
-      "marketCap": 142640640,
+      "marketCap": 141298144,
       "beta": 0.82,
       "targetSpread": 9,
       "factorsAsOf": "2026-08-27",
@@ -8256,7 +8276,9 @@
       "distTo50dma": -3.12,
       "distTo200dma": -4.98,
       "vol60": 27.99,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "A1OS.DE": {
       "ticker": "A1OS.DE",
@@ -8310,7 +8332,9 @@
       "distTo50dma": -4.86,
       "distTo200dma": -17.3,
       "vol60": 78.92,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "IXX.DE": {
       "ticker": "IXX.DE",
@@ -8356,7 +8380,7 @@
       "payoutRatio": 36.87,
       "heldInsiders": 40.07,
       "heldInstitutions": 13.76,
-      "marketCap": 497915136,
+      "marketCap": 496275488,
       "beta": 1.47,
       "recMean": 1,
       "targetSpread": 12.3,
@@ -8367,7 +8391,9 @@
       "distTo50dma": 11.51,
       "distTo200dma": 13.21,
       "vol60": 46.6,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "034730": {
       "ticker": "034730",
@@ -8412,7 +8438,7 @@
       "payoutRatio": 5.21,
       "heldInsiders": 25.4,
       "heldInstitutions": 21.96,
-      "marketCap": 30325289779200,
+      "marketCap": 18825940267,
       "beta": 1.61,
       "recMean": 1.55,
       "targetSpread": 58.5,
@@ -8423,7 +8449,9 @@
       "distTo50dma": 22.53,
       "distTo200dma": 81.12,
       "vol60": 70.8,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "KRW"
     },
     "LUVE": {
       "ticker": "LUVE",
@@ -8468,7 +8496,7 @@
       "payoutRatio": 22.35,
       "heldInsiders": 56.9,
       "heldInstitutions": 21.68,
-      "marketCap": 1285747072,
+      "marketCap": 1279085184,
       "beta": 0.91,
       "recMean": 1.4,
       "targetSpread": 7.1,
@@ -8479,7 +8507,9 @@
       "distTo50dma": 18.26,
       "distTo200dma": 59.09,
       "vol60": 47.9,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "ORS": {
       "ticker": "ORS",
@@ -8525,7 +8555,7 @@
       "payoutRatio": 30.38,
       "heldInsiders": 40.27,
       "heldInstitutions": 28.56,
-      "marketCap": 285841504,
+      "marketCap": 284127808,
       "beta": 0.51,
       "targetSpread": 9.1,
       "factorsAsOf": "2026-08-27",
@@ -8535,7 +8565,9 @@
       "distTo50dma": -1.05,
       "distTo200dma": -10.06,
       "vol60": 34.73,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "GF": {
       "ticker": "GF",
@@ -8590,7 +8622,9 @@
       "distTo50dma": -4.49,
       "distTo200dma": 14.24,
       "vol60": 36.63,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "SIT": {
       "ticker": "SIT",
@@ -8644,7 +8678,9 @@
       "distTo50dma": -13.74,
       "distTo200dma": -11.81,
       "vol60": 35.37,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "GFT": {
       "ticker": "GFT",
@@ -8690,7 +8726,7 @@
       "payoutRatio": 34.97,
       "heldInsiders": 35.86,
       "heldInstitutions": 18.29,
-      "marketCap": 658293824,
+      "marketCap": 663406784,
       "beta": 0.88,
       "targetSpread": 36.9,
       "factorsAsOf": "2026-08-27",
@@ -8700,7 +8736,9 @@
       "distTo50dma": 7.6,
       "distTo200dma": 17.81,
       "vol60": 55.53,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "ADMCM.HE": {
       "ticker": "ADMCM.HE",
@@ -8746,7 +8784,7 @@
       "payoutRatio": 35.96,
       "heldInsiders": 5.14,
       "heldInstitutions": 55.52,
-      "marketCap": 135509344,
+      "marketCap": 135264736,
       "beta": 0.63,
       "targetSpread": 42.9,
       "factorsAsOf": "2026-08-27",
@@ -8756,7 +8794,9 @@
       "distTo50dma": -8.69,
       "distTo200dma": -29.47,
       "vol60": 44.2,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "JST.DE": {
       "ticker": "JST.DE",
@@ -8813,7 +8853,9 @@
       "distTo50dma": 3.49,
       "distTo200dma": 1.79,
       "vol60": 47.03,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "EXL.DE": {
       "ticker": "EXL.DE",
@@ -8868,7 +8910,9 @@
       "distTo50dma": 6,
       "distTo200dma": -5.97,
       "vol60": 79.72,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "6701.T": {
       "ticker": "6701.T",
@@ -8914,7 +8958,7 @@
       "payoutRatio": 18.72,
       "heldInsiders": 4.96,
       "heldInstitutions": 54.98,
-      "marketCap": 6280239382528,
+      "marketCap": 33816578585,
       "beta": 0.34,
       "recMean": 1.5,
       "targetSpread": 48.5,
@@ -8925,7 +8969,9 @@
       "distTo50dma": -7.25,
       "distTo200dma": -19.15,
       "vol60": 46.15,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "JPY"
     },
     "300760.SZ": {
       "ticker": "300760.SZ",
@@ -8971,7 +9017,7 @@
       "payoutRatio": 71.59,
       "heldInsiders": 55.96,
       "heldInstitutions": 13.49,
-      "marketCap": 196347854848,
+      "marketCap": 25063802239,
       "beta": 0.18,
       "targetSpread": 47.3,
       "factorsAsOf": "2026-08-27",
@@ -8981,7 +9027,9 @@
       "distTo50dma": -10.18,
       "distTo200dma": -27.62,
       "vol60": 29.7,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "CNY"
     },
     "ADMCM": {
       "ticker": "ADMCM",
@@ -9027,7 +9075,7 @@
       "payoutRatio": 35.96,
       "heldInsiders": 5.14,
       "heldInstitutions": 55.52,
-      "marketCap": 135509344,
+      "marketCap": 135264736,
       "beta": 0.63,
       "targetSpread": 42.9,
       "factorsAsOf": "2026-08-27",
@@ -9037,7 +9085,9 @@
       "distTo50dma": -13.55,
       "distTo200dma": -33.23,
       "vol60": 45.38,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "JST": {
       "ticker": "JST",
@@ -9093,7 +9143,9 @@
       "distTo50dma": -6.01,
       "distTo200dma": -7.2,
       "vol60": 44.04,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "YOC": {
       "ticker": "YOC",
@@ -9134,7 +9186,7 @@
       "payoutRatio": 0,
       "heldInsiders": 43.43,
       "heldInstitutions": 11.67,
-      "marketCap": 17208570,
+      "marketCap": 17139040,
       "beta": 1.18,
       "recMean": 1,
       "targetSpread": 0,
@@ -9145,7 +9197,9 @@
       "distTo50dma": -7.14,
       "distTo200dma": -31.83,
       "vol60": 75.35,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "EXL": {
       "ticker": "EXL",
@@ -9199,7 +9253,9 @@
       "distTo50dma": -12.67,
       "distTo200dma": -18.96,
       "vol60": 83.53,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "F3C.DE": {
       "ticker": "F3C.DE",
@@ -9253,7 +9309,9 @@
       "distTo50dma": -2.78,
       "distTo200dma": 25.19,
       "vol60": 55.55,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "JDC": {
       "ticker": "JDC",
@@ -9297,7 +9355,7 @@
       "payoutRatio": 0,
       "heldInsiders": 17.2,
       "heldInstitutions": 54.23,
-      "marketCap": 293413248,
+      "marketCap": 289356832,
       "beta": 0.59,
       "recMean": 1,
       "targetSpread": 15.4,
@@ -9308,7 +9366,9 @@
       "distTo50dma": 5.7,
       "distTo200dma": -7.95,
       "vol60": 30.98,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "KALN.NS": {
       "ticker": "KALN.NS",
@@ -9349,7 +9409,7 @@
       "payoutRatio": 10.82,
       "heldInsiders": 62.86,
       "heldInstitutions": 19.57,
-      "marketCap": 649910157312,
+      "marketCap": 5836842928,
       "beta": -0.22,
       "recMean": 1.2,
       "targetSpread": 31.5,
@@ -9360,7 +9420,9 @@
       "distTo50dma": 19.14,
       "distTo200dma": 2.73,
       "vol60": 60.22,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "INR"
     },
     "CSH.DE": {
       "ticker": "CSH.DE",
@@ -9403,7 +9465,7 @@
       "payoutRatio": 0,
       "heldInsiders": 0.62,
       "heldInstitutions": 41.55,
-      "marketCap": 59896504,
+      "marketCap": 60068128,
       "beta": 0.67,
       "recMean": 1,
       "targetSpread": 12.9,
@@ -9414,7 +9476,9 @@
       "distTo50dma": -7.73,
       "distTo200dma": 2.45,
       "vol60": 57.28,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "NEAG": {
       "ticker": "NEAG",
@@ -9458,7 +9522,7 @@
       "payoutRatio": 19.84,
       "heldInsiders": 81.76,
       "heldInstitutions": 0.96,
-      "marketCap": 1020718272,
+      "marketCap": 1088800162,
       "beta": 0.23,
       "targetSpread": 0,
       "factorsAsOf": "2026-08-27",
@@ -9468,7 +9532,9 @@
       "distTo50dma": -3.91,
       "distTo200dma": -5.41,
       "vol60": 14.41,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "CHF"
     },
     "001740": {
       "ticker": "001740",
@@ -9512,7 +9578,7 @@
       "payoutRatio": 43.4,
       "heldInsiders": 49.01,
       "heldInstitutions": 14.01,
-      "marketCap": 1472550535168,
+      "marketCap": 914159390,
       "beta": 1.24,
       "recMean": 1.5,
       "targetSpread": 53.3,
@@ -9523,7 +9589,9 @@
       "distTo50dma": -17.81,
       "distTo200dma": 30.7,
       "vol60": 138.54,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "KRW"
     },
     "YOC.DE": {
       "ticker": "YOC.DE",
@@ -9564,7 +9632,7 @@
       "payoutRatio": 0,
       "heldInsiders": 43.43,
       "heldInstitutions": 11.67,
-      "marketCap": 17208570,
+      "marketCap": 17139040,
       "beta": 1.18,
       "recMean": 1,
       "targetSpread": 0,
@@ -9575,7 +9643,9 @@
       "distTo50dma": -7.6,
       "distTo200dma": -29.7,
       "vol60": 47.42,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "F3C": {
       "ticker": "F3C",
@@ -9629,7 +9699,9 @@
       "distTo50dma": -6.75,
       "distTo200dma": 21.19,
       "vol60": 59.1,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "HABA": {
       "ticker": "HABA",
@@ -9672,7 +9744,7 @@
       "payoutRatio": 320,
       "heldInsiders": 12.2,
       "heldInstitutions": 8.59,
-      "marketCap": 352216672,
+      "marketCap": 352623392,
       "beta": 0.66,
       "recMean": 1.2,
       "targetSpread": 43.5,
@@ -9683,7 +9755,9 @@
       "distTo50dma": -5.58,
       "distTo200dma": -6.58,
       "vol60": 25.03,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "KALYANKJIL": {
       "ticker": "KALYANKJIL",
@@ -9721,7 +9795,7 @@
       "payoutRatio": 10.82,
       "heldInsiders": 62.86,
       "heldInstitutions": 19.57,
-      "marketCap": 649910157312,
+      "marketCap": 5836842928,
       "beta": -0.22,
       "recMean": 1.2,
       "targetSpread": 31.5,
@@ -9732,7 +9806,9 @@
       "distTo50dma": 41.23,
       "distTo200dma": 39.68,
       "vol60": 66.83,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "INR"
     },
     "HIGH.DE": {
       "ticker": "HIGH.DE",
@@ -9768,7 +9844,7 @@
       "payoutRatio": 0,
       "heldInsiders": 0,
       "heldInstitutions": 0.68,
-      "marketCap": 70425224,
+      "marketCap": 70664760,
       "beta": -0.08,
       "recMean": 1.33,
       "targetSpread": 9.5,
@@ -9779,7 +9855,9 @@
       "distTo50dma": -4.95,
       "distTo200dma": 24.56,
       "vol60": 34.36,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "NOHO": {
       "ticker": "NOHO",
@@ -9831,7 +9909,9 @@
       "distTo50dma": 2.41,
       "distTo200dma": -1.88,
       "vol60": 20.31,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "ATEA": {
       "ticker": "ATEA",
@@ -9873,7 +9953,7 @@
       "payoutRatio": 70.59,
       "heldInsiders": 29.54,
       "heldInstitutions": 54.04,
-      "marketCap": 19723808768,
+      "marketCap": 1814984834,
       "beta": 0.71,
       "targetSpread": 5.6,
       "factorsAsOf": "2026-08-27",
@@ -9883,7 +9963,9 @@
       "distTo50dma": 2.96,
       "distTo200dma": 11.35,
       "vol60": 24.93,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "NOK"
     },
     "ADXR": {
       "ticker": "ADXR",
@@ -9925,7 +10007,7 @@
       "payoutRatio": 83.22,
       "heldInsiders": 83.31,
       "heldInstitutions": 1.43,
-      "marketCap": 540146176,
+      "marketCap": 541037504,
       "beta": 1.15,
       "targetSpread": 4.3,
       "factorsAsOf": "2026-08-27",
@@ -9935,7 +10017,9 @@
       "distTo50dma": -6.08,
       "distTo200dma": -9.72,
       "vol60": 19.85,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "089970": {
       "ticker": "089970",
@@ -9975,7 +10059,7 @@
       "payoutRatio": 0,
       "heldInsiders": 20.47,
       "heldInstitutions": 22.61,
-      "marketCap": 1476907630592,
+      "marketCap": 916864275,
       "targetSpread": 94.7,
       "factorsAsOf": "2026-08-27",
       "factorsBackfilled": true,
@@ -9984,7 +10068,9 @@
       "distTo50dma": -18.95,
       "distTo200dma": 42.82,
       "vol60": 162.94,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "KRW"
     },
     "MEDI": {
       "ticker": "MEDI",
@@ -10026,7 +10112,7 @@
       "payoutRatio": 88.5,
       "heldInsiders": 30.36,
       "heldInstitutions": 62.8,
-      "marketCap": 4753540608,
+      "marketCap": 437420795,
       "beta": 0.99,
       "recMean": 1,
       "targetSpread": 4.5,
@@ -10037,7 +10123,9 @@
       "distTo50dma": -1.33,
       "distTo200dma": -3.33,
       "vol60": 27.2,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "NOK"
     },
     "PHN": {
       "ticker": "PHN",
@@ -10079,7 +10167,7 @@
       "payoutRatio": 45.45,
       "heldInsiders": 65.02,
       "heldInstitutions": 16.25,
-      "marketCap": 782292416,
+      "marketCap": 784207488,
       "beta": 0.17,
       "targetSpread": 12.3,
       "factorsAsOf": "2026-08-27",
@@ -10089,7 +10177,9 @@
       "distTo50dma": -3.84,
       "distTo200dma": 18.72,
       "vol60": 24.08,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "EQS": {
       "ticker": "EQS",
@@ -10131,7 +10221,7 @@
       "payoutRatio": 48.26,
       "heldInsiders": 67.09,
       "heldInstitutions": 13.54,
-      "marketCap": 501699744,
+      "marketCap": 499069120,
       "beta": 0.56,
       "targetSpread": 23.2,
       "factorsAsOf": "2026-08-27",
@@ -10141,7 +10231,9 @@
       "distTo50dma": -3.52,
       "distTo200dma": -11.36,
       "vol60": 25.85,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "LBIRD": {
       "ticker": "LBIRD",
@@ -10183,7 +10275,7 @@
       "payoutRatio": 0,
       "heldInsiders": 53.58,
       "heldInstitutions": 17.71,
-      "marketCap": 557157120,
+      "marketCap": 559363648,
       "beta": 0.94,
       "targetSpread": 15.5,
       "factorsAsOf": "2026-08-27",
@@ -10193,7 +10285,9 @@
       "distTo50dma": 4.71,
       "distTo200dma": 17.56,
       "vol60": 39.78,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "VU": {
       "ticker": "VU",
@@ -10233,7 +10327,7 @@
       "payoutRatio": 7.48,
       "heldInsiders": 40.57,
       "heldInstitutions": 26.46,
-      "marketCap": 2161848576,
+      "marketCap": 2155113984,
       "beta": 0.57,
       "targetSpread": 39,
       "factorsAsOf": "2026-08-27",
@@ -10243,7 +10337,9 @@
       "distTo50dma": -1.44,
       "distTo200dma": -13.13,
       "vol60": 50.38,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "SCANFL": {
       "ticker": "SCANFL",
@@ -10295,7 +10391,9 @@
       "distTo50dma": -7.23,
       "distTo200dma": -0.74,
       "vol60": 34.3,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "BSL": {
       "ticker": "BSL",
@@ -10337,7 +10435,7 @@
       "payoutRatio": 11.7,
       "heldInsiders": 57.44,
       "heldInstitutions": 22.82,
-      "marketCap": 745870080,
+      "marketCap": 748945856,
       "beta": 2.52,
       "recMean": 1,
       "targetSpread": 6.7,
@@ -10348,7 +10446,9 @@
       "distTo50dma": -13.56,
       "distTo200dma": 17.07,
       "vol60": 60.12,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     },
     "DR0G": {
       "ticker": "DR0G",
@@ -10390,7 +10490,7 @@
       "payoutRatio": 7.27,
       "heldInsiders": 10,
       "heldInstitutions": 5.78,
-      "marketCap": 405716448,
+      "marketCap": 411464544,
       "beta": 0.13,
       "recMean": 2,
       "targetSpread": 2.4,
@@ -10401,7 +10501,9 @@
       "distTo50dma": 5.61,
       "distTo200dma": 16.61,
       "vol60": 57.72,
-      "priceFactorsAtAdd": true
+      "priceFactorsAtAdd": true,
+      "marketCapCurrency": "EUR",
+      "marketCapSource": "EUR"
     }
   },
   "findings": {

@@ -103,6 +103,21 @@ async function ensureCrumb() {
   else throw new Error('kein Yahoo-Crumb');
 }
 
+// Wechselkurs in EUR, einmal je Waehrung und Lauf gecacht.
+const _fx = { EUR: 1 };
+async function fxToEur(cur) {
+  if (!cur) return null;
+  if (_fx[cur] !== undefined) return _fx[cur];
+  try {
+    const u = `https://query1.finance.yahoo.com/v8/finance/chart/${cur}EUR=X?range=5d&interval=1d`;
+    const res = await fetch(u, { headers: { 'User-Agent': UA } });
+    const j = await res.json();
+    const cl = (j?.chart?.result?.[0]?.indicators?.quote?.[0]?.close || []).filter(x => x != null);
+    _fx[cur] = cl.length ? cl[cl.length - 1] : null;
+  } catch { _fx[cur] = null; }
+  return _fx[cur];
+}
+
 // Nur der Yahoo-Sektor/-Branche einer Aktie (für Trefferquoten-Zählung; kein Kontingent).
 export async function fetchSectorOf(symbol) {
   try {
@@ -171,6 +186,13 @@ export async function enrichStock(symbol) {
     const hi52 = n(sd.fiftyTwoWeekHigh), lo52 = n(sd.fiftyTwoWeekLow);
     const tH = n(fd.targetHighPrice), tL = n(fd.targetLowPrice), tM = n(fd.targetMeanPrice);
     const rel = (a, b) => (a != null && b) ? +(((a / b) - 1) * 100).toFixed(2) : null;
+    // Marktkapitalisierung IMMER in EUR — Yahoo liefert sie in der
+    // Notierungswaehrung, wodurch eine koreanische Aktie sonst mit dem
+    // 1400-fachen einer deutschen dastand.
+    const mcRaw = n(sd.marketCap) ?? n(pr.marketCap);
+    const mcCur = pr.currency || fd.financialCurrency || null;
+    const fx = mcRaw != null ? await fxToEur(mcCur) : null;
+    const mcEur = (mcRaw != null && fx != null) ? Math.round(mcRaw * fx) : null;
     const factors = {
       forwardPe: f2(sd.forwardPE) ?? f2(ks.forwardPE),
       priceToBook: f2(ks.priceToBook),
@@ -192,7 +214,7 @@ export async function enrichStock(symbol) {
       payoutRatio: p2(sd.payoutRatio),
       heldInsiders: p2(ks.heldPercentInsiders),
       heldInstitutions: p2(ks.heldPercentInstitutions),
-      marketCap: n(sd.marketCap) ?? n(pr.marketCap),
+      marketCap: mcEur,
       beta: f2(sd.beta),
       distTo52High: rel(price, hi52),
       pos52Band: (price != null && hi52 != null && lo52 != null && hi52 > lo52)
