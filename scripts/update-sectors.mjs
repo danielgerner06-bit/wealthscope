@@ -553,9 +553,12 @@ const today = () => new Date().toISOString().slice(0, 10);
       const hasMsCounts = s.ratingCounts && !('strongBuy' in s.ratingCounts);
       if (e.analysts != null && !hasMsCounts) s.analysts = e.analysts;
       s.div = e.divYield;   // Dividendenrendite in % (null = keine Dividende)
+      // Breiter Faktor-Satz aus demselben Yahoo-Call — wandert ueber
+      // history.mjs::factorsFrom EINMALIG in den Aufnahme-Snapshot.
+      if (e.factors) s.factors = e.factors;
       s.enrichAt = today();
       if (s.pe != null) peCount++;
-      db[s.ticker] = { ...db[s.ticker], upside: s.upside, pe: s.pe, eps: s.eps, analysts: s.analysts, div: s.div, yahoo: s.yahoo, enrichAt: s.enrichAt };
+      db[s.ticker] = { ...db[s.ticker], upside: s.upside, pe: s.pe, eps: s.eps, analysts: s.analysts, div: s.div, yahoo: s.yahoo, enrichAt: s.enrichAt, factors: s.factors ?? db[s.ticker]?.factors ?? null };
     }
     if (needEnrich.length) console.log(`Yahoo-Anreicherung: ${needEnrich.length} Aktien, ${upCount} mit Kursziel, ${peCount} mit KGV.`);
   }

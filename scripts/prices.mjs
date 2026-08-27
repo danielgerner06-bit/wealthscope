@@ -162,6 +162,48 @@ export async function enrichStock(symbol) {
     // Dividendenrendite in % (Yahoo liefert Dezimal, z. B. 0.0258 -> 2.58)
     let divYield = sd.dividendYield?.raw ?? sd.trailingAnnualDividendYield?.raw ?? null;
     divYield = (divYield != null && isFinite(divYield) && divYield >= 0 && divYield < 1) ? +(divYield * 100).toFixed(2) : null;
+    // ── Faktoren fuer die Trendscope-Analyse ────────────────────────────
+    // Kommen aus DEMSELBEN Call, kosten also kein zusaetzliches Kontingent.
+    // Werden in history.mjs EINMALIG beim Aufnehmen einer Perle eingefroren.
+    const n = (x) => (x && typeof x.raw === 'number' && isFinite(x.raw) ? x.raw : null);
+    const p2 = (x) => { const v = n(x); return v == null ? null : +(v * 100).toFixed(2); };
+    const f2 = (x) => { const v = n(x); return v == null ? null : +v.toFixed(2); };
+    const hi52 = n(sd.fiftyTwoWeekHigh), lo52 = n(sd.fiftyTwoWeekLow);
+    const tH = n(fd.targetHighPrice), tL = n(fd.targetLowPrice), tM = n(fd.targetMeanPrice);
+    const rel = (a, b) => (a != null && b) ? +(((a / b) - 1) * 100).toFixed(2) : null;
+    const factors = {
+      forwardPe: f2(sd.forwardPE) ?? f2(ks.forwardPE),
+      priceToBook: f2(ks.priceToBook),
+      priceToSales: f2(sd.priceToSalesTrailing12Months),
+      evEbitda: f2(ks.enterpriseToEbitda),
+      evRevenue: f2(ks.enterpriseToRevenue),
+      grossMargin: p2(fd.grossMargins),
+      operatingMargin: p2(fd.operatingMargins),
+      profitMargin: p2(fd.profitMargins) ?? p2(ks.profitMargins),
+      ebitdaMargin: p2(fd.ebitdaMargins),
+      roe: p2(fd.returnOnEquity),
+      roa: p2(fd.returnOnAssets),
+      revenueGrowth: p2(fd.revenueGrowth),
+      earningsGrowth: p2(fd.earningsGrowth),
+      earningsQGrowth: p2(ks.earningsQuarterlyGrowth),
+      debtToEquity: f2(fd.debtToEquity),
+      currentRatio: f2(fd.currentRatio),
+      quickRatio: f2(fd.quickRatio),
+      payoutRatio: p2(sd.payoutRatio),
+      heldInsiders: p2(ks.heldPercentInsiders),
+      heldInstitutions: p2(ks.heldPercentInstitutions),
+      marketCap: n(sd.marketCap) ?? n(pr.marketCap),
+      beta: f2(sd.beta),
+      distTo52High: rel(price, hi52),
+      pos52Band: (price != null && hi52 != null && lo52 != null && hi52 > lo52)
+        ? +(((price - lo52) / (hi52 - lo52)) * 100).toFixed(1) : null,
+      distTo50dma: rel(price, n(sd.fiftyDayAverage)),
+      distTo200dma: rel(price, n(sd.twoHundredDayAverage)),
+      recMean: f2(fd.recommendationMean),
+      targetSpread: (tH != null && tL != null && tM)
+        ? +(((tH - tL) / tM) * 100).toFixed(1) : null,
+    };
+
     return {
       price, target,
       // Kursziel-Potenzial plausibel begrenzen (extreme Werte = oft Datenfehler/Penny-Stocks)
@@ -169,6 +211,7 @@ export async function enrichStock(symbol) {
       pe, eps: (eps != null && isFinite(eps)) ? +eps.toFixed(2) : null,
       analysts: analysts || null,
       divYield,
+      factors,
     };
   } catch {
     return null;

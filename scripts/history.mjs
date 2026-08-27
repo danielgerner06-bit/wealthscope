@@ -27,15 +27,36 @@ function regionOf(sym) {
 }
 
 // gemeinsame Kennzahlen-Felder aus einer aktuellen Perle übernehmen
-function metaFrom(s, sym) {
+// Reine Identitaetsfelder — die duerfen mitwandern (Umbenennung, Sektorwechsel).
+function identityFrom(s, sym) {
+  return { ticker: s.ticker, name: s.name, yahoo: sym, sector: s.sector, region: regionOf(sym) };
+}
+
+// Kennzahlen zum Zeitpunkt der Aufnahme. Werden EINMALIG geschrieben und
+// danach nie wieder ueberschrieben — sonst korreliert die Analyse spaeter die
+// HEUTIGEN Kennzahlen mit der VERGANGENEN Rendite, und das Ergebnis ist wertlos.
+function factorsFrom(s) {
   return {
-    ticker: s.ticker, name: s.name, yahoo: sym,
-    sector: s.sector, region: regionOf(sym),
     buyPct: s.buyPct ?? null, strongBuyPct: s.strongBuyPct ?? null,
     upside: s.upside ?? null, pe: s.pe ?? null, perf6mAtAdd: s.perf6m ?? null,
     perf1mBefore: s.perf1mBefore ?? null, sektorPsiAtAdd: s.sektorPsiAtAdd ?? null,
     analysts: s.analysts ?? null, div: s.div ?? null,
+    ...(s.factors || {}),   // die breiten Yahoo-Faktoren aus enrichStock
   };
+}
+
+function metaFrom(s, sym) {
+  return { ...identityFrom(s, sym), ...factorsFrom(s) };
+}
+
+// Fuellt NUR Felder, die noch fehlen (null/undefined). Bestehende Werte bleiben
+// stehen — so bekommen alte Eintraege neu eingefuehrte Faktoren nachtraeglich,
+// ohne dass der Aufnahme-Stand der alten Faktoren verfaelscht wird.
+function fillMissing(target, src) {
+  for (const [k, v] of Object.entries(src)) {
+    if (v == null) continue;
+    if (target[k] == null) target[k] = v;
+  }
 }
 
 // Snapshot je aktueller Perle anlegen/auffrischen (mit Aufnahmekurs + leerem perf-Array).
@@ -45,7 +66,10 @@ export async function snapshotStocks(hist, topStocks, budget = 30) {
   for (const s of topStocks) {
     if (e[s.ticker]) {
       const x = e[s.ticker];
-      Object.assign(x, metaFrom(s, x.yahoo || s.yahoo || s.ticker));   // Kennzahlen auffrischen, Aufnahmedaten bleiben
+      // Identitaet darf sich aendern, Kennzahlen NICHT — die sind der
+      // Aufnahme-Snapshot. Neue Faktor-Felder werden nur nachgefuellt.
+      Object.assign(x, identityFrom(s, x.yahoo || s.yahoo || s.ticker));
+      fillMissing(x, factorsFrom(s));
       continue;
     }
     if (added >= budget) continue;
