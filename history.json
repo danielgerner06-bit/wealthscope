@@ -9226,7 +9226,8 @@
       "hitRate24m": 24,
       "maxDd24m": -56.85,
       "distTo3yHigh": -56.85,
-      "trendR2_24m": 0.8
+      "trendR2_24m": 0.8,
+      "recMean": 1.19
     },
     "ADMCM": {
       "ticker": "ADMCM",
