@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-30",
-  "updatedAt": "2026-08-30T23:00:15.256Z",
+  "updatedAt": "2026-08-30T23:53:01.163Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -3439,28 +3439,24 @@
   "news": {
     "items": [
       {
-        "text": "TCL Electronics meldet starkes Wachstum in Halbjahresergebnissen 2026.",
-        "stamp": "30.08.26"
-      },
-      {
-        "text": "INTCO Medical meldet 40,6% Umsatzwachstum im ersten Halbjahr 2026.",
-        "stamp": "30.08.26"
-      },
-      {
-        "text": "Falke für 1,5 Mio. AED auf Auktion in Abu Dhabi verkauft.",
-        "stamp": "30.08.26"
-      },
-      {
-        "text": "VW-Belegschaft pfeift Konzernchef Blume aus.",
+        "text": "US-Notenbank hält Leitzins stabil, aber Zinsanhebung möglich.",
         "stamp": "29.08.26"
       },
       {
-        "text": "Siemens-Vorstandschef warnt vor pauschalen Zöllen gegen China.",
-        "stamp": "29.08.26"
+        "text": "Fed-Chef Warsh signalisiert Bereitschaft für straffere Geldpolitik.",
+        "stamp": "28.08.26"
       },
       {
-        "text": "KI-Firma Anthropic gewinnt Gerichtsverfahren gegen Pentagon.",
-        "stamp": "29.08.26"
+        "text": "Geopolitik und Inflation prägen Finanzmärkte; DAX auf Rekordhoch.",
+        "stamp": "28.08.26"
+      },
+      {
+        "text": "Iran-Krieg und Energiekrise beeinflussen US-Inflationsrate.",
+        "stamp": "28.08.26"
+      },
+      {
+        "text": "Deutsche Wirtschaft: Anzeichen der Besserung trotz anhaltender Krise.",
+        "stamp": "28.08.26"
       }
     ],
     "date": "2026-08-30"
@@ -3476,9 +3472,8 @@
     "universe": 8859,
     "scanned": 8859,
     "lastCursor": 2650,
-    "candCursor": 236,
+    "candCursor": 244,
     "candidates": [
-      "KWS Saat SE & Co. KGaA",
       "Elmos Semiconductor SE",
       "Ambu A/S",
       "Demant A/S",
@@ -3877,10 +3872,11 @@
       "Plug Power Inc.",
       "Verbund AG",
       "Encavis AG",
-      "Siemens Energy AG"
+      "Siemens Energy AG",
+      "Tenax International S.p.A."
     ],
     "noteCursor": 10,
-    "focusCursor": 1,
+    "focusCursor": 2,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-08-26",
@@ -3890,13 +3886,13 @@
       "materials": 1269,
       "health": 5233,
       "finance": 3510,
-      "energy": 1629,
-      "hardware": 1183,
+      "energy": 1630,
+      "hardware": 1184,
       "software": 3508,
       "industrial": 1521,
       "utilities": 647,
       "comm": 768,
-      "ai_semi": 700,
+      "ai_semi": 701,
       "realestate": 323
     },
     "pendingReject": [],
@@ -3906,16 +3902,16 @@
       "materials": 1270,
       "health": 5236,
       "finance": 3515,
-      "energy": 1631,
-      "hardware": 1188,
+      "energy": 1632,
+      "hardware": 1189,
       "software": 3518,
       "industrial": 1530,
       "utilities": 649,
       "comm": 771,
-      "ai_semi": 700,
+      "ai_semi": 701,
       "realestate": 325
     },
-    "heavyAt": "2026-08-30T11:50:22.129Z",
+    "heavyAt": "2026-08-30T23:51:24.428Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix",
     "heavyDay": "2026-08-28",
@@ -3926,7 +3922,10 @@
       "APG": "industrial",
       "CPG": "energy",
       "VST": "utilities",
-      "PRT": "hardware"
+      "PRT": "hardware",
+      "EVLV": "ai_semi",
+      "UMAC": "hardware",
+      "AMPY": "energy"
     }
   },
   "blacklist": {
@@ -3936,6 +3935,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-08-30T23:00:15.256Z"
+  }
 }
