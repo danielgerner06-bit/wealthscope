@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-31",
-  "updatedAt": "2026-08-31T14:00:13.991Z",
+  "updatedAt": "2026-08-31T15:00:16.279Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -147,27 +147,27 @@
   "bars30": [
     {
       "id": "software",
-      "perf": 17.35,
+      "perf": 17.47,
       "avg30": -0.43,
-      "perf6m": 32.57
+      "perf6m": 32.7
     },
     {
       "id": "ai_semi",
-      "perf": 1.48,
+      "perf": 0.96,
       "avg30": 7.49,
-      "perf6m": 45.33
+      "perf6m": 44.59
     },
     {
       "id": "hardware",
-      "perf": 6.08,
+      "perf": 5.93,
       "avg30": 3.11,
-      "perf6m": 33.3
+      "perf6m": 33.12
     },
     {
       "id": "comm",
-      "perf": 2.96,
+      "perf": 3.11,
       "avg30": -0.38,
-      "perf6m": -5.46
+      "perf6m": -5.31
     },
     {
       "id": "health",
@@ -183,15 +183,15 @@
     },
     {
       "id": "cons_cycl",
-      "perf": 3.73,
+      "perf": 3.96,
       "avg30": 0,
-      "perf6m": -0.24
+      "perf6m": -0.02
     },
     {
       "id": "cons_def",
-      "perf": -0.46,
+      "perf": -0.36,
       "avg30": 0.75,
-      "perf6m": -4.25
+      "perf6m": -4.16
     },
     {
       "id": "industrial",
@@ -251,21 +251,21 @@
     },
     {
       "id": "china",
-      "perf": -1.06,
+      "perf": -0.99,
       "avg30": -1.17,
-      "perf6m": -7.03
+      "perf6m": -6.96
     },
     {
       "id": "em",
-      "perf": 5.85,
+      "perf": 5.62,
       "avg30": 2.36,
-      "perf6m": 7.56
+      "perf6m": 7.33
     },
     {
       "id": "apac",
-      "perf": 6.18,
+      "perf": 6.1,
       "avg30": 2.54,
-      "perf6m": 6.41
+      "perf6m": 6.32
     },
     {
       "id": "india",
@@ -275,9 +275,9 @@
     },
     {
       "id": "latam",
-      "perf": -1.72,
+      "perf": -1.92,
       "avg30": 2.07,
-      "perf6m": -4.71
+      "perf6m": -4.91
     },
     {
       "id": "world",
@@ -4060,5 +4060,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-08-31T14:00:13.991Z"
+  "yahooAt": "2026-08-31T15:00:16.279Z"
 }
