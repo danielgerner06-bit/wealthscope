@@ -19,7 +19,8 @@
       "startPrice": 305.25,
       "perf": [
         -20.56,
-        -20.4
+        -20.4,
+        -16.09
       ],
       "prov": false
     },
@@ -65,7 +66,8 @@
       "startPrice": 1392,
       "perf": [
         2.85,
-        6.46
+        6.46,
+        -4.43
       ],
       "prov": false
     },
@@ -147,7 +149,8 @@
       "startPrice": 4865.5,
       "perf": [
         10.01,
-        15.78
+        15.78,
+        19.69
       ],
       "prov": false
     },
@@ -355,7 +358,8 @@
       "startPrice": 4639.5,
       "perf": [
         -0.38,
-        -31.2
+        -31.2,
+        -30.49
       ],
       "prov": false
     },
@@ -439,7 +443,8 @@
       "startPrice": 2874.75,
       "perf": [
         -0.98,
-        8.88
+        8.88,
+        12.5
       ],
       "prov": false
     },
@@ -966,7 +971,8 @@
       "startPrice": 28.65999984741211,
       "perf": [
         4.73,
-        13.29
+        13.29,
+        -10.75
       ],
       "prov": false
     },
@@ -989,7 +995,8 @@
       "startPrice": 13.5,
       "perf": [
         31.63,
-        35.74
+        35.74,
+        28
       ],
       "prov": false
     },
@@ -1060,7 +1067,8 @@
       "startPrice": 38.209999084472656,
       "perf": [
         23.83,
-        -12.33
+        -12.33,
+        -22.34
       ],
       "prov": false
     },
@@ -1370,7 +1378,8 @@
       "startPrice": 6.650000095367432,
       "perf": [
         10.02,
-        -11.16
+        -11.16,
+        -11.31
       ],
       "prov": false
     },
@@ -1752,7 +1761,8 @@
       "startPrice": 10.460000038146973,
       "perf": [
         -4.31,
-        -15.45
+        -15.45,
+        -20.99
       ],
       "prov": false
     },
@@ -1775,7 +1785,8 @@
       "startPrice": 18.610000610351562,
       "perf": [
         11.59,
-        8.54
+        8.54,
+        3.27
       ],
       "prov": false
     },
@@ -1798,7 +1809,8 @@
       "startPrice": 14,
       "perf": [
         46.07,
-        64.04
+        64.04,
+        50.82
       ],
       "prov": false
     },
@@ -1821,7 +1833,8 @@
       "startPrice": 55.529998779296875,
       "perf": [
         27.8,
-        29.86
+        29.86,
+        38.82
       ],
       "prov": false
     },
@@ -1844,7 +1857,8 @@
       "startPrice": 7.710000038146973,
       "perf": [
         -3.5,
-        -5.45
+        -5.45,
+        -8.04
       ],
       "prov": false
     },
@@ -1867,7 +1881,8 @@
       "startPrice": 52.02000045776367,
       "perf": [
         5.76,
-        -7.42
+        -7.42,
+        11.7
       ],
       "prov": false
     },
@@ -1890,7 +1905,8 @@
       "startPrice": 71.29000091552734,
       "perf": [
         56.31,
-        43.7
+        43.7,
+        63.26
       ],
       "prov": false
     },
@@ -1913,7 +1929,8 @@
       "startPrice": 23.579999923706055,
       "perf": [
         9.8,
-        22.45
+        22.45,
+        3.77
       ],
       "prov": false
     },
@@ -1936,7 +1953,8 @@
       "startPrice": 92.16999816894531,
       "perf": [
         28.85,
-        18.55
+        18.55,
+        7.3
       ],
       "prov": false
     },
@@ -1959,7 +1977,8 @@
       "startPrice": 40.36000061035156,
       "perf": [
         13.64,
-        -6
+        -6,
+        -13.12
       ],
       "prov": false
     },
@@ -1982,7 +2001,8 @@
       "startPrice": 1.3300000429153442,
       "perf": [
         4.14,
-        -24.36
+        -24.36,
+        -4.14
       ],
       "prov": false
     },
@@ -2005,7 +2025,8 @@
       "startPrice": 163.60000610351562,
       "perf": [
         14.74,
-        53.94
+        53.94,
+        61.87
       ],
       "prov": false
     },
@@ -2028,7 +2049,8 @@
       "startPrice": 57.7400016784668,
       "perf": [
         -5.19,
-        2.01
+        2.01,
+        9.05
       ],
       "prov": false
     },
@@ -2051,7 +2073,8 @@
       "startPrice": 29.940000534057617,
       "perf": [
         13.58,
-        16.13
+        16.13,
+        31.12
       ],
       "prov": false
     },
@@ -2074,7 +2097,8 @@
       "startPrice": 15.4399995803833,
       "perf": [
         25.23,
-        32.3
+        32.3,
+        83.87
       ],
       "prov": false
     },
@@ -2097,7 +2121,8 @@
       "startPrice": 2.5,
       "perf": [
         -20.24,
-        -20.85
+        -20.85,
+        16.19
       ],
       "prov": false
     },
@@ -2120,7 +2145,8 @@
       "startPrice": 15.8100004196167,
       "perf": [
         2.65,
-        -15.44
+        -15.44,
+        3.06
       ],
       "prov": false
     },
@@ -2143,7 +2169,8 @@
       "startPrice": 33,
       "perf": [
         6.74,
-        -1.47
+        -1.47,
+        -1.82
       ],
       "prov": false
     },
@@ -2166,7 +2193,8 @@
       "startPrice": 6.429999828338623,
       "perf": [
         -18.11,
-        -34.01
+        -34.01,
+        -5.53
       ],
       "prov": false
     },
@@ -2189,7 +2217,8 @@
       "startPrice": 33.709999084472656,
       "perf": [
         16.51,
-        15.01
+        15.01,
+        0.67
       ],
       "prov": false
     },
@@ -2212,7 +2241,8 @@
       "startPrice": 42.209999084472656,
       "perf": [
         -2.51,
-        6.96
+        6.96,
+        8.4
       ],
       "prov": false
     },
@@ -2235,7 +2265,8 @@
       "startPrice": 29.809999465942383,
       "perf": [
         -4.21,
-        -12.28
+        -12.28,
+        28.51
       ],
       "prov": false
     },
@@ -2258,7 +2289,8 @@
       "startPrice": 34.099998474121094,
       "perf": [
         44.7,
-        39.03
+        39.03,
+        41.33
       ],
       "prov": false
     },
@@ -2281,7 +2313,8 @@
       "startPrice": 81.19999694824219,
       "perf": [
         -9.73,
-        4.56
+        4.56,
+        25.12
       ],
       "prov": false
     },
@@ -2304,7 +2337,8 @@
       "startPrice": 6.260000228881836,
       "perf": [
         -15.06,
-        -18.6
+        -18.6,
+        -4.75
       ],
       "prov": false
     },
@@ -2327,7 +2361,8 @@
       "startPrice": 3.380000114440918,
       "perf": [
         11.69,
-        17.75
+        17.75,
+        -32.4
       ],
       "prov": false
     },
@@ -2350,7 +2385,8 @@
       "startPrice": 17.3799991607666,
       "perf": [
         13.23,
-        15.65
+        15.65,
+        34.38
       ],
       "prov": false
     },
@@ -2373,7 +2409,8 @@
       "startPrice": 8.329999923706055,
       "perf": [
         -19.66,
-        -18.67
+        -18.67,
+        19.04
       ],
       "prov": false
     },
@@ -2396,7 +2433,8 @@
       "startPrice": 23.899999618530273,
       "perf": [
         -0.21,
-        -6.67
+        -6.67,
+        -17.5
       ],
       "prov": false
     },
@@ -2419,7 +2457,8 @@
       "startPrice": 12.649999618530273,
       "perf": [
         8.09,
-        10.29
+        10.29,
+        7.5
       ],
       "prov": false
     },
@@ -2442,7 +2481,8 @@
       "startPrice": 157.97000122070312,
       "perf": [
         -1.1,
-        -3.51
+        -3.51,
+        -10.77
       ],
       "prov": false
     },
@@ -10962,6 +11002,168 @@
       "startPrice": 12.230000019073486,
       "perf": [],
       "outperformPct": null
+    },
+    "093520.KQ": {
+      "ticker": "093520.KQ",
+      "name": "Makus Inc.",
+      "yahoo": "093520.KQ",
+      "sector": "ai_semi",
+      "region": "world",
+      "buyPct": 100,
+      "strongBuyPct": 0,
+      "upside": 24,
+      "pe": null,
+      "perf6mAtAdd": -5,
+      "perf1mBefore": 26.48,
+      "sektorPsiAtAdd": null,
+      "analysts": 1,
+      "div": null,
+      "forwardPe": null,
+      "priceToBook": null,
+      "priceToSales": null,
+      "evEbitda": null,
+      "evRevenue": null,
+      "grossMargin": null,
+      "operatingMargin": null,
+      "profitMargin": null,
+      "ebitdaMargin": null,
+      "roe": null,
+      "roa": null,
+      "revenueGrowth": null,
+      "earningsGrowth": null,
+      "earningsQGrowth": null,
+      "debtToEquity": null,
+      "currentRatio": null,
+      "quickRatio": null,
+      "payoutRatio": null,
+      "heldInsiders": null,
+      "heldInstitutions": null,
+      "marketCap": 140601851,
+      "beta": null,
+      "distTo52High": -21.42,
+      "pos52Band": 59.4,
+      "distTo50dma": 27.53,
+      "distTo200dma": 16.56,
+      "recMean": null,
+      "targetSpread": 0,
+      "perf12mBefore": 12.24,
+      "vol12m": 70.87,
+      "hitRate24m": 60,
+      "maxDd24m": -51.05,
+      "distTo3yHigh": -20.12,
+      "trendR2_24m": 0.71,
+      "seen": "2026-09-01",
+      "seenMs": 1788220800000,
+      "startPrice": 26750,
+      "perf": []
+    },
+    "6531.TW": {
+      "ticker": "6531.TW",
+      "name": "AP Memory Technology Corp.",
+      "yahoo": "6531.TW",
+      "sector": "ai_semi",
+      "region": "apac",
+      "buyPct": 100,
+      "strongBuyPct": 67,
+      "upside": 52,
+      "pe": 55.3,
+      "perf6mAtAdd": 119.67,
+      "perf1mBefore": 28.58,
+      "sektorPsiAtAdd": null,
+      "analysts": 3,
+      "div": 0.75,
+      "forwardPe": 27.4,
+      "priceToBook": 12.43,
+      "priceToSales": 19.97,
+      "evEbitda": 59.82,
+      "evRevenue": 17.79,
+      "grossMargin": 47.9,
+      "operatingMargin": 30.71,
+      "profitMargin": 36.18,
+      "ebitdaMargin": 29.74,
+      "roe": 23.53,
+      "roa": 9.42,
+      "revenueGrowth": 77.8,
+      "earningsGrowth": null,
+      "earningsQGrowth": null,
+      "debtToEquity": 0.56,
+      "currentRatio": 3.74,
+      "quickRatio": 3.33,
+      "payoutRatio": 40.29,
+      "heldInsiders": 35.15,
+      "heldInstitutions": 12.69,
+      "marketCap": 4246894920,
+      "beta": 2.03,
+      "distTo52High": -26.59,
+      "pos52Band": 65.5,
+      "distTo50dma": 7.9,
+      "distTo200dma": 43.74,
+      "recMean": null,
+      "targetSpread": 39.3,
+      "perf12mBefore": 198.07,
+      "vol12m": 75.18,
+      "hitRate24m": 62.5,
+      "maxDd24m": -48.99,
+      "distTo3yHigh": -22.1,
+      "trendR2_24m": 0.7,
+      "seen": "2026-09-01",
+      "seenMs": 1788220800000,
+      "startPrice": 942.5,
+      "perf": []
+    },
+    "6139.TW": {
+      "ticker": "6139.TW",
+      "name": "L & K Engineering Co., Ltd.",
+      "yahoo": "6139.TW",
+      "sector": "industrial",
+      "region": "apac",
+      "buyPct": 100,
+      "strongBuyPct": 0,
+      "upside": 95,
+      "pe": 15.5,
+      "perf6mAtAdd": 42.86,
+      "perf1mBefore": -0.33,
+      "sektorPsiAtAdd": null,
+      "analysts": 1,
+      "div": 3.05,
+      "forwardPe": 8.73,
+      "priceToBook": 8.76,
+      "priceToSales": 1.88,
+      "evEbitda": 9.18,
+      "evRevenue": 1.56,
+      "grossMargin": 19.47,
+      "operatingMargin": 18.97,
+      "profitMargin": 12.14,
+      "ebitdaMargin": 16.95,
+      "roe": 64.2,
+      "roa": 10.62,
+      "revenueGrowth": 70.5,
+      "earningsGrowth": 475.5,
+      "earningsQGrowth": 478.2,
+      "debtToEquity": 10.2,
+      "currentRatio": 1.25,
+      "quickRatio": 1.14,
+      "payoutRatio": 27.91,
+      "heldInsiders": 33.86,
+      "heldInstitutions": 18.34,
+      "marketCap": 4928824656,
+      "beta": 1.04,
+      "distTo52High": -21.99,
+      "pos52Band": 66.3,
+      "distTo50dma": -6.03,
+      "distTo200dma": 16.99,
+      "recMean": null,
+      "targetSpread": 0,
+      "perf12mBefore": 99.47,
+      "vol12m": 61.6,
+      "hitRate24m": 54.17,
+      "maxDd24m": -36.58,
+      "distTo3yHigh": -20.94,
+      "trendR2_24m": 0.93,
+      "seen": "2026-09-01",
+      "seenMs": 1788220800000,
+      "startPrice": 762.5,
+      "perf": []
     }
   },
   "findings": {
@@ -10981,25 +11183,11 @@
         }
       },
       {
-        "name": "Dividende",
-        "spread": 9.5,
-        "best": {
-          "k": "2-4%",
-          "avg": 5.4,
-          "n": 58
-        },
-        "worst": {
-          "k": "<2%",
-          "avg": -4.1,
-          "n": 86
-        }
-      },
-      {
         "name": "Kursziel",
-        "spread": 9.3,
+        "spread": 10.5,
         "best": {
           "k": "40%+",
-          "avg": 4.6,
+          "avg": 5.8,
           "n": 148
         },
         "worst": {
@@ -11009,25 +11197,25 @@
         }
       },
       {
-        "name": "Analysten",
-        "spread": 7.7,
+        "name": "Dividende",
+        "spread": 10,
         "best": {
-          "k": "15+",
-          "avg": 2.6,
-          "n": 116
+          "k": "2-4%",
+          "avg": 5.7,
+          "n": 58
         },
         "worst": {
-          "k": "1-4",
-          "avg": -5.1,
-          "n": 96
+          "k": "<2%",
+          "avg": -4.3,
+          "n": 86
         }
       },
       {
         "name": "KGV",
-        "spread": 7,
+        "spread": 9,
         "best": {
           "k": "<15",
-          "avg": 6.6,
+          "avg": 8.6,
           "n": 66
         },
         "worst": {
@@ -11035,13 +11223,27 @@
           "avg": -0.4,
           "n": 48
         }
+      },
+      {
+        "name": "Analysten",
+        "spread": 6.5,
+        "best": {
+          "k": "15+",
+          "avg": 2.8,
+          "n": 116
+        },
+        "worst": {
+          "k": "1-4",
+          "avg": -3.7,
+          "n": 96
+        }
       }
     ],
     "combo": {
       "f1": "Strong Buy <70%",
-      "f2": "Dividende 2-4%",
-      "avg": 3,
-      "n": 3
+      "f2": "Kursziel 40%+",
+      "avg": -11.6,
+      "n": 4
     },
     "sampleSize": 366,
     "maxMonths": 3,
