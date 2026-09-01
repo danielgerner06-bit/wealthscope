@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-01",
-  "updatedAt": "2026-09-01T19:00:45.882Z",
+  "updatedAt": "2026-09-01T20:00:45.881Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -213,9 +213,9 @@
     },
     {
       "id": "utilities",
-      "perf": -5.02,
+      "perf": -4.67,
       "avg30": 0.34,
-      "perf6m": -10.45
+      "perf6m": -10.12
     },
     {
       "id": "realestate",
@@ -269,9 +269,9 @@
     },
     {
       "id": "india",
-      "perf": -0.28,
+      "perf": -0.23,
       "avg30": -0.48,
-      "perf6m": -5.18
+      "perf6m": -5.14
     },
     {
       "id": "latam",
@@ -4257,5 +4257,5 @@
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
   },
-  "yahooAt": "2026-09-01T19:00:45.882Z"
+  "yahooAt": "2026-09-01T20:00:45.881Z"
 }
