@@ -8824,7 +8824,7 @@
       "strongBuyPct": 100,
       "upside": 52,
       "pe": 10.1,
-      "perf6mAtAdd": -16.29,
+      "perf6mAtAdd": -9.29,
       "perf1mBefore": 0.26,
       "sektorPsiAtAdd": 0.008,
       "analysts": 3,
@@ -9714,7 +9714,7 @@
       "strongBuyPct": 100,
       "upside": 56,
       "pe": 46.5,
-      "perf6mAtAdd": -14.57,
+      "perf6mAtAdd": -14.46,
       "perf1mBefore": 11.41,
       "sektorPsiAtAdd": 0.0019,
       "analysts": 2,
@@ -10146,7 +10146,7 @@
       "strongBuyPct": 80,
       "upside": 86,
       "pe": null,
-      "perf6mAtAdd": -9.33,
+      "perf6mAtAdd": -7.07,
       "perf1mBefore": -1.51,
       "sektorPsiAtAdd": 0.0076,
       "analysts": 5,
@@ -11300,7 +11300,8 @@
       "seen": "2026-09-01",
       "seenMs": 1788220800000,
       "startPrice": 11.100000381469727,
-      "perf": []
+      "perf": [],
+      "outperformPct": null
     }
   },
   "findings": {
