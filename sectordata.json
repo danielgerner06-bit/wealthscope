@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-03",
-  "updatedAt": "2026-09-03T23:00:42.621Z",
+  "updatedAt": "2026-09-03T23:33:16.710Z",
   "source": "Finnhub · Gemini (Websuche & Analyse)",
   "sectors": [
     {
@@ -918,7 +918,7 @@
         "targetSpread": 42.9
       },
       "enrichAt": "2026-09-01",
-      "sektorPsi": 0.001,
+      "sektorPsi": 0.0012,
       "sektorPsiAtAdd": 0.0016,
       "recheckAt": "2026-09-02",
       "miss": 0
@@ -1704,7 +1704,7 @@
       "eps": 6.47,
       "div": 3.77,
       "enrichAt": "2026-08-30",
-      "sektorPsi": 0.001,
+      "sektorPsi": 0.0012,
       "sektorPsiAtAdd": 0.0009,
       "recheckAt": "2026-09-03",
       "miss": 0,
@@ -2081,7 +2081,7 @@
       "eps": 9.04,
       "div": 3.13,
       "enrichAt": "2026-09-01",
-      "sektorPsi": 0.001,
+      "sektorPsi": 0.0012,
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-29",
       "miss": 0,
@@ -3088,7 +3088,7 @@
       "eps": 2.2,
       "div": 1.46,
       "enrichAt": "2026-09-01",
-      "sektorPsi": 0.001,
+      "sektorPsi": 0.0012,
       "sektorPsiAtAdd": 0.0013,
       "recheckAt": "2026-08-29",
       "miss": 0,
@@ -3364,6 +3364,66 @@
       "sektorPsiAtAdd": 0.0214,
       "recheckAt": "2026-09-01",
       "miss": 0
+    },
+    {
+      "ticker": "LTRN",
+      "name": "Lantern Pharma Inc.",
+      "yahoo": "LTRN",
+      "sector": "health",
+      "buyPct": 100,
+      "ratingCounts": {
+        "buy": 2,
+        "outperform": 0,
+        "hold": 0,
+        "underperform": 0,
+        "sell": 0
+      },
+      "analysts": 2,
+      "strongBuyPct": 100,
+      "via": "gemini",
+      "source": "stockanalysis+yahoo",
+      "verifiedAt": "2026-09-03",
+      "verifiedSource": "stockanalysis+yahoo",
+      "seen": "2026-09-03",
+      "perf6m": -29.3,
+      "perf6mAt": "2026-09-03",
+      "perf1mBefore": -30.91,
+      "pe": null,
+      "eps": -1.63,
+      "div": 0,
+      "factors": {
+        "forwardPe": -0.93,
+        "priceToBook": null,
+        "priceToSales": null,
+        "evEbitda": null,
+        "evRevenue": null,
+        "grossMargin": 0,
+        "operatingMargin": 0,
+        "profitMargin": 0,
+        "ebitdaMargin": 0,
+        "roe": -400.92,
+        "roa": -74.29,
+        "revenueGrowth": null,
+        "earningsGrowth": null,
+        "earningsQGrowth": null,
+        "debtToEquity": null,
+        "currentRatio": 1.96,
+        "quickRatio": 1.71,
+        "payoutRatio": 0,
+        "heldInsiders": 20.28,
+        "heldInstitutions": 22.57,
+        "marketCap": 20557074,
+        "beta": 2.33,
+        "distTo52High": -60.24,
+        "pos52Band": 21.2,
+        "distTo50dma": -35.27,
+        "distTo200dma": -36.36,
+        "recMean": null,
+        "targetSpread": 85.7
+      },
+      "enrichAt": "2026-09-03",
+      "sektorPsi": 0.0012,
+      "sektorPsiAtAdd": 0.0012
     }
   ],
   "psiHistory": [
@@ -3371,6 +3431,11 @@
       "t": "300760.SZ",
       "d": "2026-06-21",
       "v": 0.0009
+    },
+    {
+      "t": "LTRN",
+      "d": "2026-09-03",
+      "v": 0.0012
     },
     {
       "t": "MEDI",
@@ -3767,28 +3832,16 @@
   "news": {
     "items": [
       {
-        "text": "Broadcom übertrifft Erwartungen, Aktie reagiert dennoch",
+        "text": "VW-Aufsichtsrat stimmt umstrittenem Sanierungsplan zu, 50.000 Jobs betroffen.",
         "stamp": "03.09.26"
       },
       {
-        "text": "Elliott drängt auf Fusion bei Deutscher Telekom",
+        "text": "Sinkende Ölpreise sorgen für Entspannung am deutschen Aktienmarkt.",
         "stamp": "03.09.26"
       },
       {
-        "text": "Nvidia verdoppelt Umsatz: \"Rechenleistung ist das neue Öl\"",
-        "stamp": "03.09.26"
-      },
-      {
-        "text": "Goldman Sachs stuft Deutsche Bank hoch",
+        "text": "Globale Märkte: Geopolitik, Ölpreise und Zinssorgen belasten Anleger.",
         "stamp": "02.09.26"
-      },
-      {
-        "text": "Niederländische Notenbank verlagert Goldreserven",
-        "stamp": "02.09.26"
-      },
-      {
-        "text": "US-Anleihen: Renditen steigen, Aktien geben nach",
-        "stamp": "01.09.26"
       }
     ],
     "date": "2026-09-03"
@@ -3804,9 +3857,8 @@
     "universe": 8857,
     "scanned": 8857,
     "lastCursor": 3550,
-    "candCursor": 284,
+    "candCursor": 292,
     "candidates": [
-      "Spire Global, Inc.",
       "Powerfleet, Inc.",
       "Turtle Beach Corporation",
       "IMAX Corporation",
@@ -4205,10 +4257,11 @@
       "SELLAS Life Sciences Group, Inc.",
       "Summit Therapeutics Inc.",
       "COVISTA INC",
-      "VivoPower International PLC"
+      "VivoPower International PLC",
+      "Shenandoah Telecommunications Co"
     ],
     "noteCursor": 10,
-    "focusCursor": 7,
+    "focusCursor": 0,
     "recheckCursor": 16,
     "regionNoteCursor": 6,
     "notesDay": "2026-08-26",
@@ -4232,7 +4285,7 @@
       "cons_cycl": 1811,
       "cons_def": 942,
       "materials": 1285,
-      "health": 5274,
+      "health": 5275,
       "finance": 3573,
       "energy": 1650,
       "hardware": 1200,
@@ -4243,7 +4296,7 @@
       "ai_semi": 708,
       "realestate": 331
     },
-    "heavyAt": "2026-09-03T11:08:31.553Z",
+    "heavyAt": "2026-09-03T23:31:12.475Z",
     "revalidateTag": "multi-source-v9",
     "fmpRetryTag": "grades-summary-fix",
     "heavyDay": "2026-09-03",
@@ -4272,6 +4325,5 @@
     "HEI.DE": "2026-09-04",
     "AOF": "2026-09-05",
     "TPE": "2026-09-05"
-  },
-  "yahooAt": "2026-09-03T23:00:42.621Z"
+  }
 }
