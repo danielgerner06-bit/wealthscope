@@ -8339,7 +8339,8 @@
       "startPrice": 50.71500015258789,
       "perf": [
         -6.05,
-        -0.1
+        -0.1,
+        5.12
       ],
       "prov": false
     },
@@ -8362,7 +8363,8 @@
       "startPrice": 38.60000038146973,
       "perf": [
         -5.65,
-        -1.25
+        -1.25,
+        -2.81
       ],
       "prov": false
     },
@@ -8385,7 +8387,8 @@
       "startPrice": 22.175000190734863,
       "perf": [
         0.9,
-        -7.24
+        -7.24,
+        -10.05
       ],
       "prov": false
     },
@@ -8408,7 +8411,8 @@
       "startPrice": 12.099999904632568,
       "perf": [
         -18.16,
-        -27.78
+        -27.78,
+        -29.71
       ],
       "prov": false
     },
@@ -8431,7 +8435,8 @@
       "startPrice": 86.79999923706055,
       "perf": [
         -9.62,
-        -12.69
+        -12.69,
+        -5.43
       ],
       "strongBuyPct": 100,
       "sektorPsiAtAdd": 0.0015,
@@ -8483,7 +8488,8 @@
       "startPrice": 43.279998779296875,
       "perf": [
         -4.54,
-        -21.08
+        -21.08,
+        -29.55
       ],
       "prov": false
     },
@@ -8506,7 +8512,8 @@
       "startPrice": 32.89999961853027,
       "perf": [
         -4.77,
-        108.31
+        108.31,
+        107.38
       ],
       "prov": false
     },
@@ -8529,7 +8536,8 @@
       "startPrice": 1.3349999785423279,
       "perf": [
         15,
-        -4.62
+        -4.62,
+        2.31
       ],
       "prov": false
     },
@@ -8552,7 +8560,8 @@
       "startPrice": 86.5999984741211,
       "perf": [
         -8.76,
-        -10.85
+        -10.85,
+        -3.64
       ],
       "prov": false,
       "forwardPe": 10.33,
@@ -8612,7 +8621,8 @@
       "startPrice": 80.36249923706055,
       "perf": [
         14.84,
-        7.37
+        7.37,
+        4.71
       ],
       "outperformPct": null,
       "sektorPsiAtAdd": 0.0085,
@@ -8677,7 +8687,8 @@
       "startPrice": 11.924999713897705,
       "perf": [
         -16.77,
-        -24.26
+        -24.26,
+        -29.11
       ],
       "outperformPct": null,
       "sektorPsiAtAdd": 0.0085,
@@ -8739,7 +8750,8 @@
       "startPrice": 32.599998474121094,
       "perf": [
         -5.06,
-        107.98
+        107.98,
+        106.75
       ],
       "outperformPct": null,
       "sektorPsiAtAdd": 0.0078,
@@ -8801,7 +8813,8 @@
       "startPrice": 52.75,
       "perf": [
         -6.37,
-        -7.2
+        -7.2,
+        -15.13
       ],
       "outperformPct": null,
       "sektorPsiAtAdd": 0.0078,
@@ -9822,7 +9835,8 @@
       "seenMs": 1782950400000,
       "startPrice": 19.945000648498535,
       "perf": [
-        1.88
+        1.88,
+        6.96
       ],
       "outperformPct": null,
       "prov": false,
@@ -9884,7 +9898,8 @@
       "seenMs": 1783123200000,
       "startPrice": 22.949999809265137,
       "perf": [
-        2.44
+        2.44,
+        -10.22
       ],
       "outperformPct": null,
       "prov": false,
@@ -10377,7 +10392,9 @@
       "seen": "2026-08-01",
       "seenMs": 1785542400000,
       "startPrice": 623.5999755859375,
-      "perf": [],
+      "perf": [
+        -1.15
+      ],
       "outperformPct": null,
       "forwardPe": 33.01,
       "priceToBook": 10.29,
@@ -10414,7 +10431,8 @@
       "hitRate24m": 54.17,
       "maxDd24m": -58.01,
       "distTo3yHigh": -22.25,
-      "trendR2_24m": 0.57
+      "trendR2_24m": 0.57,
+      "prov": false
     },
     "HIGH.DE": {
       "ticker": "HIGH.DE",
@@ -10434,7 +10452,9 @@
       "seen": "2026-08-02",
       "seenMs": 1785628800000,
       "startPrice": 5.679999828338623,
-      "perf": [],
+      "perf": [
+        3.9
+      ],
       "outperformPct": null,
       "forwardPe": 17.29,
       "priceToSales": 18.03,
@@ -10469,7 +10489,8 @@
       "hitRate24m": 45.83,
       "maxDd24m": -63.98,
       "distTo3yHigh": -51.28,
-      "trendR2_24m": 0
+      "trendR2_24m": 0,
+      "prov": false
     },
     "NOHO": {
       "ticker": "NOHO",
@@ -10489,7 +10510,9 @@
       "seen": "2026-08-03",
       "seenMs": 1785715200000,
       "startPrice": 7.599999904632568,
-      "perf": [],
+      "perf": [
+        2.5
+      ],
       "outperformPct": null,
       "forwardPe": 10.26,
       "priceToBook": 1.67,
@@ -10529,7 +10552,8 @@
       "hitRate24m": 45.83,
       "maxDd24m": -27.63,
       "distTo3yHigh": -21.65,
-      "trendR2_24m": 0.02
+      "trendR2_24m": 0.02,
+      "prov": false
     },
     "ATEA": {
       "ticker": "ATEA",
@@ -10549,7 +10573,9 @@
       "seen": "2026-08-03",
       "seenMs": 1785715200000,
       "startPrice": 171.79999542236328,
-      "perf": [],
+      "perf": [
+        -0.35
+      ],
       "outperformPct": null,
       "forwardPe": 15.25,
       "priceToBook": 4.92,
@@ -10590,7 +10616,8 @@
       "maxDd24m": -16.22,
       "distTo3yHigh": -1.95,
       "trendR2_24m": 0.46,
-      "recMean": 1
+      "recMean": 1,
+      "prov": false
     },
     "ADXR": {
       "ticker": "ADXR",
@@ -10610,7 +10637,9 @@
       "seen": "2026-08-04",
       "seenMs": 1785801600000,
       "startPrice": 1.1929999589920044,
-      "perf": [],
+      "perf": [
+        -1.34
+      ],
       "outperformPct": null,
       "forwardPe": 10.54,
       "priceToBook": 2.45,
@@ -10650,7 +10679,8 @@
       "hitRate24m": 36,
       "maxDd24m": -37.99,
       "distTo3yHigh": -39.68,
-      "trendR2_24m": 0.78
+      "trendR2_24m": 0.78,
+      "prov": false
     },
     "089970": {
       "ticker": "089970",
@@ -11470,30 +11500,30 @@
     "factors": [
       {
         "name": "Strong Buy",
-        "spread": 12.8,
+        "spread": 12.4,
         "best": {
           "k": "<70%",
-          "avg": 7.9,
-          "n": 15
+          "avg": 6.4,
+          "n": 19
         },
         "worst": {
           "k": "95%+",
-          "avg": -4.9,
-          "n": 13
+          "avg": -6,
+          "n": 14
         }
       },
       {
         "name": "Kursziel",
-        "spread": 12.5,
+        "spread": 12.2,
         "best": {
           "k": "40%+",
-          "avg": 7.9,
-          "n": 149
+          "avg": 7.6,
+          "n": 151
         },
         "worst": {
           "k": "<10%",
           "avg": -4.6,
-          "n": 38
+          "n": 39
         }
       },
       {
@@ -11501,51 +11531,51 @@
         "spread": 9.7,
         "best": {
           "k": "2-4%",
-          "avg": 6.4,
-          "n": 56
+          "avg": 6.3,
+          "n": 57
         },
         "worst": {
           "k": "<2%",
-          "avg": -3.3,
-          "n": 87
+          "avg": -3.4,
+          "n": 88
         }
       },
       {
         "name": "KGV",
-        "spread": 8.2,
+        "spread": 8.5,
         "best": {
           "k": "<15",
-          "avg": 8.7,
+          "avg": 8.6,
           "n": 66
         },
         "worst": {
           "k": "40+",
-          "avg": 0.5,
-          "n": 48
+          "avg": 0.1,
+          "n": 49
         }
       },
       {
         "name": "Analysten",
-        "spread": 7.2,
+        "spread": 7.4,
         "best": {
           "k": "5-14",
           "avg": 4.7,
-          "n": 154
+          "n": 155
         },
         "worst": {
           "k": "1-4",
-          "avg": -2.5,
-          "n": 96
+          "avg": -2.7,
+          "n": 100
         }
       }
     ],
     "combo": {
       "f1": "Strong Buy <70%",
       "f2": "Kursziel 40%+",
-      "avg": -11.6,
-      "n": 4
+      "avg": -8.5,
+      "n": 5
     },
-    "sampleSize": 366,
+    "sampleSize": 371,
     "maxMonths": 3,
     "provisional": false
   }
