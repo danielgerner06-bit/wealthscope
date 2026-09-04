@@ -90,7 +90,9 @@
       "seen": "2026-08-05",
       "seenMs": 1785888000000,
       "startPrice": 2211,
-      "perf": [],
+      "perf": [
+        10.34
+      ],
       "outperformPct": null,
       "forwardPe": 30.94,
       "priceToBook": 4.85,
@@ -129,7 +131,8 @@
       "hitRate24m": 48,
       "maxDd24m": -41.86,
       "distTo3yHigh": -44.56,
-      "trendR2_24m": 0.33
+      "trendR2_24m": 0.33,
+      "prov": false
     },
     "4502": {
       "ticker": "4502",
@@ -173,7 +176,9 @@
       "seen": "2026-08-05",
       "seenMs": 1785888000000,
       "startPrice": 2699,
-      "perf": [],
+      "perf": [
+        13.84
+      ],
       "outperformPct": null,
       "forwardPe": 49.84,
       "priceToBook": 8.05,
@@ -213,7 +218,8 @@
       "hitRate24m": 60,
       "maxDd24m": -52.65,
       "distTo3yHigh": -34.24,
-      "trendR2_24m": 0.04
+      "trendR2_24m": 0.04,
+      "prov": false
     },
     "6080": {
       "ticker": "6080",
@@ -10700,7 +10706,9 @@
       "seen": "2026-08-05",
       "seenMs": 1785888000000,
       "startPrice": 65450,
-      "perf": [],
+      "perf": [
+        -21.75
+      ],
       "outperformPct": null,
       "forwardPe": 14.24,
       "priceToSales": 25.57,
@@ -10737,7 +10745,8 @@
       "hitRate24m": 76,
       "maxDd24m": -57.73,
       "distTo3yHigh": -43.02,
-      "trendR2_24m": 0.86
+      "trendR2_24m": 0.86,
+      "prov": false
     },
     "MEDI": {
       "ticker": "MEDI",
@@ -11554,26 +11563,12 @@
   "findings": {
     "factors": [
       {
-        "name": "Strong Buy",
-        "spread": 12.4,
-        "best": {
-          "k": "<70%",
-          "avg": 6.4,
-          "n": 19
-        },
-        "worst": {
-          "k": "95%+",
-          "avg": -6,
-          "n": 14
-        }
-      },
-      {
         "name": "Kursziel",
-        "spread": 12.2,
+        "spread": 12,
         "best": {
           "k": "40%+",
-          "avg": 7.6,
-          "n": 151
+          "avg": 7.4,
+          "n": 152
         },
         "worst": {
           "k": "<10%",
@@ -11582,17 +11577,31 @@
         }
       },
       {
+        "name": "Strong Buy",
+        "spread": 11.6,
+        "best": {
+          "k": "<70%",
+          "avg": 5.6,
+          "n": 22
+        },
+        "worst": {
+          "k": "95%+",
+          "avg": -6,
+          "n": 14
+        }
+      },
+      {
         "name": "Dividende",
-        "spread": 9.7,
+        "spread": 9.5,
         "best": {
           "k": "2-4%",
           "avg": 6.3,
-          "n": 57
+          "n": 58
         },
         "worst": {
           "k": "<2%",
-          "avg": -3.4,
-          "n": 88
+          "avg": -3.2,
+          "n": 89
         }
       },
       {
@@ -11611,7 +11620,7 @@
       },
       {
         "name": "Analysten",
-        "spread": 7.4,
+        "spread": 7.3,
         "best": {
           "k": "5-14",
           "avg": 4.7,
@@ -11619,18 +11628,18 @@
         },
         "worst": {
           "k": "1-4",
-          "avg": -2.7,
-          "n": 100
+          "avg": -2.6,
+          "n": 103
         }
       }
     ],
     "combo": {
-      "f1": "Strong Buy <70%",
-      "f2": "Kursziel 40%+",
-      "avg": -8.5,
-      "n": 5
+      "f1": "Kursziel 40%+",
+      "f2": "Strong Buy <70%",
+      "avg": -10.7,
+      "n": 6
     },
-    "sampleSize": 371,
+    "sampleSize": 374,
     "maxMonths": 3,
     "provisional": false
   }
